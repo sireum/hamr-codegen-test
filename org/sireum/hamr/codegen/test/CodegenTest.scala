@@ -222,7 +222,7 @@ class CodeGenTest extends TestSuite {
 
     assert(allEqual, s"Mismatches in ${rdir.canon.toUri}")
     
-    assert(!testFail, "test fail")
+    assert(!testFail, s"test fail in ${rdir.canon.toUri}")
   }
 
   def getModel(s: String): Option[Aadl] = {
