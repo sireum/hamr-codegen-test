@@ -126,6 +126,28 @@ class CodeGenTest extends TestSuite {
       }
     }
 
+    { // Event port micro example
+      {
+        val name = "testevent_MultQueue"
+        val modelDir = modelsDir / name
+        val model = modelDir / ".slang" / "testevent_top_impl_Instance.json"
+        val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testevent")
+
+        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+        test(s"$name--${platform}", modelDir, model,
+          baseOptions(platform = platform),
+          Some("Event port micro-example - Trusted Build profile"), uri
+        )
+
+        platform = CodeGenPlatform.SeL4_Only
+        val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-monitor"
+        test(s"$name--${platform}", modelDir, model,
+          baseOptions(platform = platform),
+          Some(s"Event port micro-example - Ihor aadl-event-monitor: ${ihorUri}"), uri
+        )
+      }
+    }
+  
     { // Shared Data micro example
       {
         val name = "testshare"
