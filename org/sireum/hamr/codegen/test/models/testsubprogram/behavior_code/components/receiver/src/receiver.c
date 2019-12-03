@@ -2,12 +2,12 @@
 
 #include <camkes.h>
 #include <sb_proc_types.h>
-#include "../includes/sb_receiver.h"
+#include "../includes/sb_receiver_impl.h"
 
-void operation_add(uint32_t A, uint32_t B, uint32_t *result) {
+void operations_add(uint32_t A, uint32_t B, uint32_t *result) {
 	*result = A + B;
 }
 
-void operation_subtract(uint32_t A, uint32_t B, uint32_t *result) {
+void operations_subtract(uint32_t A, uint32_t B, uint32_t *result) {
 	*result = A - B;
 }

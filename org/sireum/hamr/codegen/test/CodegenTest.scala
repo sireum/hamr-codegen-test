@@ -31,6 +31,10 @@ class CodeGenTest extends TestSuite {
       platform = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform))
+
+      platform = CodeGenPlatform.SeL4_Only
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform))      
     }
     
     { // UAV_ALT_DOMAINS
@@ -288,10 +292,18 @@ class CodeGenTest extends TestSuite {
         Os.path(s"${rdir.value}/expected/${r._1}").writeOver(e.content)
       }
     }
-
-    val camkesTestDir = Os.path("/home/sireum/devel/sel4/home/tests")
-    for(r <- resultMap.map.entries) {
-      Os.path(s"${camkesTestDir.value}/${r._1}").writeOver(r._2.content)
+    
+    Os.env(CodeGenTest.CAMKES_APPS_DIR) match {
+      case Some(x) =>
+        val dir = Os.path(x)
+        if(dir.exists){
+          for(r <- resultMap.map.entries) {
+            Os.path(s"${dir.value}/hamr_${r._1}").writeOver(r._2.content)
+          }
+        } else {
+          Console.err.println(s"${CodeGenTest.CAMKES_APPS_DIR}: ${x} does not exist")
+        }
+      case _ =>
     }
     
     if(allEqual && delResultDirIfEqual) rdir.removeAll()
@@ -326,6 +338,8 @@ class CodeGenTest extends TestSuite {
 
 object CodeGenTest {
 
+  val CAMKES_APPS_DIR = "CAMKES_APPS_DIR"
+  
   val outputFormat = "json" 
     
   val rootDir = Os.path("./hamr/codegen/jvm/src/test")

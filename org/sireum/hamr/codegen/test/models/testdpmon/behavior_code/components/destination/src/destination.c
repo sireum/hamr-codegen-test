@@ -8,9 +8,6 @@
 void testdpmon_destination_component_init(const int64_t *in_arg)
 {
     printf("testdpmon_destination_component_init called\n");
-        printf("dest: the value is now %i\n", deq->data);
-        deq->data = 42;
-        printf("dest: the value is now %i\n", deq->data);
 }
 
 
