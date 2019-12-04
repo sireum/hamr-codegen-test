@@ -20,48 +20,60 @@ class CodeGenTest extends TestSuite {
       val name = "uav_alt"
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
+      val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/tool-eval-2/ACT_Demo_Dec2018_alt")
       
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-      test(s"$name--${platform}", modelDir, model, baseOptions(platform = platform))
+      test(s"$name--${platform}", modelDir, model, 
+        baseOptions(platform = platform),
+        None(), uri)
 
       platform = CodeGenPlatform.MacOS
       test(s"$name--${platform}", modelDir, model, 
-        baseOptions(platform = platform))
+        baseOptions(platform = platform),
+        None(), uri)
 
       platform = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform))
+        baseOptions(platform = platform),
+        None(), uri)
 
       platform = CodeGenPlatform.SeL4_Only
       test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform))      
+        baseOptions(platform = platform),
+        None(), uri)      
     }
     
     { // UAV_ALT_DOMAINS
       val name = "uav_alt_domains"
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
-
+      val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/experiments/Simple_UAV_Example_domains")
+      val description: Option[String] = Some("Incomplete - need to introduce pacer component for seL4_Only profile")
+      
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform))
+        baseOptions(platform = platform),
+        description, uri)
 
       platform = CodeGenPlatform.SeL4_Only
       test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform))
+        baseOptions(platform = platform),
+        description, uri)
     }
     
     { // UAV extern
       val name = "uav_alt_extern"
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
-
+      val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/ksu-proprietary/simple-uav-slang-example/uav-project-extern/src/aadl/ACT_Demo_Dec2018")
+      
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
           platform = platform,
           camkesAuxCodeDirs = ISZ((modelDir / "aux_code").value)
-        ))
+        ),
+        None(), uri)
     }
 
     { // Data port micro example
@@ -180,10 +192,12 @@ class CodeGenTest extends TestSuite {
         val name = "testshare"
         val modelDir = modelsDir / name
         val model = modelDir / ".slang" / "testshare_top_impl_Instance.json"
+        val modelUri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testshare")
 
         var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform)
+          baseOptions(platform = platform),
+          None(), modelUri
         )
       }
     }
@@ -193,10 +207,12 @@ class CodeGenTest extends TestSuite {
         val name = "testsubprogram"
         val modelDir = modelsDir / name
         val model = modelDir / ".slang" / "testsubprogram_top_impl_Instance.json"
-
+        val modelUri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testsubprogram")
+        
         var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform)
+          baseOptions(platform = platform),
+          None(), modelUri
         )
       }
     }
@@ -224,12 +240,12 @@ class CodeGenTest extends TestSuite {
     test(testName, modelDir, airFile, ops, None(), None())
   }
 
-  def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig, description: Option[String], uri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
-    registerTest(s"${testName} L${position.lineNumber}" )(testAir(testName, modelDir, airFile, ops, description, uri))
+  def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig, description: Option[String], modelUri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
+    registerTest(s"${testName} L${position.lineNumber}" )(testAir(testName, modelDir, airFile, ops, description, modelUri))
   }
 
   def testAir(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,
-              description: Option[String], uri: Option[String]): Unit = {
+              description: Option[String], modelUri: Option[String]): Unit = {
 
     if(description.nonEmpty) {
       println(st"""Test Description: ${description.get}
@@ -331,8 +347,8 @@ class CodeGenTest extends TestSuite {
     
     if(allEqual && delResultDirIfEqual) rdir.removeAll()
 
-    if(uri.nonEmpty) {
-      println(uri.get)
+    if(modelUri.nonEmpty) {
+      println(s"Model URI: ${modelUri.get}")
     }
     
     assert(allEqual, s"Mismatches in ${rdir.canon.toUri}")

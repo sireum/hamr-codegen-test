@@ -2,11 +2,11 @@
 #include <sb_PROC_HW_types.h>
 #include <sb_RadioDriver_Impl.h>
 #include <assert.h>
-
+ 
 void init(const int64_t * in_arg) {
 
   printf("RDIO: initialise entry point called\n");
-
+  
   SW__Command_Impl command = {
     .Map = {{ .lat = 0, .longitude = 1, .alt = 2 },
             { .lat = 1, .longitude = 2, .alt = 3 },

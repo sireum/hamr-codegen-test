@@ -23,9 +23,9 @@ void recv_map(const SW__Command_Impl * command) {
 
   	printf("FPLN:< Command.\n");
   	printCommand(command);
-
+  	
   	if(!missioncommand_sent) {
-
+  	    
   	    // simulate the creation of a new mission
   		sb_SW__Mission_container mission = { .f = {{ .lat = 0, .longitude = 1, .alt = 2},
    		                                           { .lat = 1, .longitude = 2, .alt = 3},
@@ -37,12 +37,12 @@ void recv_map(const SW__Command_Impl * command) {
   		                                           { .lat = 7, .longitude = 8, .alt = 9},
   		                                           { .lat = 8, .longitude = 9, .alt = 10},
   		                                           { .lat = 9, .longitude = 10, .alt = 11}}};
-
+  		
   		printf("FPLN:> new mission notification.\n");
-
+  		
   		// send the flight plan to WMP
   		assert(sb_flight_plan_enqueue(&mission) == true);
-
+  		
     	missioncommand_sent = true;
   	}
 }

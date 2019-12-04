@@ -27,22 +27,22 @@ void sendWin(int i) {
            _mission.f[(i + 2) % 10],
            _mission.f[(i + 3) % 10]} 
   };
-
+  
   // send mission window to UART  
   assert(sb_mission_window_enqueue(&missionWindow) == true);
-
+  
   printf("WM:> Sent mission window\n");
 }
 
 void flight_plan(const sb_SW__Mission_container * mission){
   printf("WM:< Received flight plan\n");
-
+  
   memcpy(&_mission, mission, sizeof(struct sb_SW__Mission_container));
-
+  
   printMission(&_mission);
-
+  
   sendWin(0);
-
+  
   // send receipt confirmation back to FPLN
   bool dummy = true;
   assert(sb_mission_rcv_enqueue(&dummy) == true);
@@ -50,6 +50,6 @@ void flight_plan(const sb_SW__Mission_container * mission){
 
 void tracking_id(const int64_t * nid) {
   printf("WM:< Received %lu as the next id.\n", *nid);
-
+		
   sendWin(*nid);
 }

@@ -19,13 +19,13 @@ void printMissionWindow(const sb_SW__MissionWindow_container * missionWindow){
 void mission_window(const sb_SW__MissionWindow_container * missionWindow){
   printf("UART:< Received mission window\n");
   printMissionWindow(missionWindow);
-
+    		
   for(unsigned int j = 0; j < 100000000; j++){}
 
   i++;
-
+  
   printf("UART:> Sending %lu as the next id.\n", i);
-
+  
   // send tracking id to WPM
   assert(sb_tracking_id_enqueue(&i) == true);
 }
