@@ -19,7 +19,7 @@ void run_receiver(const int64_t *in_arg)
      */
     int8_t value;
 
-    if(sb_deq_read(&value)){
+    if(sb_read_port_read(&value)){
         printf("[destination] value {%d}\n", value);
     }
 }

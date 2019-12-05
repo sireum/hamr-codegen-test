@@ -76,7 +76,7 @@ class CodeGenTest extends TestSuite {
           baseOptions(platform = platform),
           Some("Data port micro-example - Trusted Build profile"), uri
         )
-        
+
         platform = CodeGenPlatform.SeL4_Only
         val jimUri = "https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/experiments/Simple_UAV_Example_domains/CAmkES"
         test(s"$name--${platform}", modelDir, model,
@@ -85,6 +85,29 @@ class CodeGenTest extends TestSuite {
         )
       }
     }
+
+    { // Data port micro example
+      {
+        val name = "testdpmon-periodic"
+        val modelDir = modelsDir / name
+        val model = modelDir / ".slang" / "testdpmon_top_impl_Instance.json"
+        val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testdpmon-periodic")
+
+        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+        test(s"$name--${platform}", modelDir, model,
+          baseOptions(platform = platform),
+          Some("Data port micro-example with periodic threads - Trusted Build profile"), uri
+        )
+
+        platform = CodeGenPlatform.SeL4_Only
+        val jimUri = "https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/experiments/Simple_UAV_Example_domains/CAmkES"
+        test(s"$name--${platform}", modelDir, model,
+          baseOptions(platform = platform),
+          Some(s"Data port micro-example with periodic threads - New Adventium translation profile: ${jimUri}"), uri
+        )
+      }
+    }
+    
 
     { // Event Data port micro example
       {
