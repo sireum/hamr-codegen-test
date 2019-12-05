@@ -121,10 +121,10 @@ class CodeGenTest extends TestSuite {
           )
 
           platform = CodeGenPlatform.SeL4_Only
-          val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-monitor"
+          val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-direct"
           test(s"$name--${platform}", modelDir, model,
             baseOptions(platform = platform),
-            Some(s"Event port micro-example - Ihor aadl-event-monitor: ${ihorUri}"), uri
+            Some(s"Event port micro-example - Ihor aadl-event-direct: ${ihorUri}"), uri
           )
         }
       }
@@ -144,10 +144,10 @@ class CodeGenTest extends TestSuite {
         )
 
         platform = CodeGenPlatform.SeL4_Only
-        val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-monitor"
+        val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-direct"
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
-          Some(s"Event port micro-example - Ihor aadl-event-monitor: ${ihorUri}"), uri
+          Some(s"Event port micro-example - Ihor aadl-event-direct: ${ihorUri}"), uri
         )
       }
     }
