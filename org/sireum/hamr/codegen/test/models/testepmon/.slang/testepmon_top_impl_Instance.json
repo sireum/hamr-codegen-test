@@ -16,10 +16,10 @@
             },
             "beginLine" : 53,
             "beginColumn" : 2,
-            "endLine" : 62,
+            "endLine" : 63,
             "endColumn" : 15,
-            "offset" : 1268,
-            "length" : 264
+            "offset" : 1246,
+            "length" : 307
           }
         }
       },
@@ -50,7 +50,7 @@
                 "beginColumn" : 4,
                 "endLine" : 56,
                 "endColumn" : 40,
-                "offset" : 1348,
+                "offset" : 1326,
                 "length" : 36
               }
             }
@@ -86,7 +86,7 @@
                     "beginColumn" : 4,
                     "endLine" : 44,
                     "endColumn" : 31,
-                    "offset" : 1107,
+                    "offset" : 1085,
                     "length" : 27
                   }
                 }
@@ -120,7 +120,7 @@
                         "beginColumn" : 4,
                         "endLine" : 8,
                         "endColumn" : 51,
-                        "offset" : 91,
+                        "offset" : 89,
                         "length" : 47
                       }
                     }
@@ -413,21 +413,21 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "testepmon", "src", "SB_SYS::Compute_Entrypoint_Source_Text"],
+                    "name" : ["top_impl_Instance", "testepmon", "src", "Programming_Properties::Compute_Entrypoint_Source_Text"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.sireum.aadl.osate.hamr\/resources\/SB_SYS.aadl"
+                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                         },
-                        "beginLine" : 3,
-                        "beginColumn" : 5,
-                        "endLine" : 3,
-                        "endColumn" : 144,
-                        "offset" : 28,
-                        "length" : 139
+                        "beginLine" : 71,
+                        "beginColumn" : 2,
+                        "endLine" : 72,
+                        "endColumn" : 79,
+                        "offset" : 5356,
+                        "length" : 121
                       }
                     }
                   },
@@ -492,7 +492,7 @@
                     "beginColumn" : 4,
                     "endLine" : 45,
                     "endColumn" : 33,
-                    "offset" : 1138,
+                    "offset" : 1116,
                     "length" : 29
                   }
                 }
@@ -526,8 +526,8 @@
                         "beginColumn" : 4,
                         "endLine" : 23,
                         "endColumn" : 6,
-                        "offset" : 509,
-                        "length" : 139
+                        "offset" : 497,
+                        "length" : 129
                       }
                     }
                   },
@@ -582,21 +582,21 @@
                       "type" : "Property",
                       "name" : {
                         "type" : "Name",
-                        "name" : ["top_impl_Instance", "testepmon", "dest", "deq", "SB_SYS::Compute_Entrypoint_Source_Text"],
+                        "name" : ["top_impl_Instance", "testepmon", "dest", "deq", "Programming_Properties::Compute_Entrypoint_Source_Text"],
                         "pos" : {
                           "type" : "Some",
                           "value" : {
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.sireum.aadl.osate.hamr\/resources\/SB_SYS.aadl"
+                              "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                             },
-                            "beginLine" : 3,
-                            "beginColumn" : 5,
-                            "endLine" : 3,
-                            "endColumn" : 144,
-                            "offset" : 28,
-                            "length" : 139
+                            "beginLine" : 71,
+                            "beginColumn" : 2,
+                            "endLine" : 72,
+                            "endColumn" : 79,
+                            "offset" : 5356,
+                            "length" : 121
                           }
                         }
                       },
@@ -900,7 +900,7 @@
                     "beginColumn" : 5,
                     "endLine" : 47,
                     "endColumn" : 37,
-                    "offset" : 1186,
+                    "offset" : 1164,
                     "length" : 32
                   }
                 }
@@ -923,7 +923,7 @@
                         "beginColumn" : 4,
                         "endLine" : 44,
                         "endColumn" : 31,
-                        "offset" : 1107,
+                        "offset" : 1085,
                         "length" : 27
                       }
                     }
@@ -945,7 +945,7 @@
                           "beginColumn" : 4,
                           "endLine" : 8,
                           "endColumn" : 51,
-                          "offset" : 91,
+                          "offset" : 89,
                           "length" : 47
                         }
                       }
@@ -978,7 +978,7 @@
                         "beginColumn" : 4,
                         "endLine" : 45,
                         "endColumn" : 33,
-                        "offset" : 1138,
+                        "offset" : 1116,
                         "length" : 29
                       }
                     }
@@ -1000,8 +1000,8 @@
                           "beginColumn" : 4,
                           "endLine" : 23,
                           "endColumn" : 6,
-                          "offset" : 509,
-                          "length" : 139
+                          "offset" : 497,
+                          "length" : 129
                         }
                       }
                     }
@@ -1051,7 +1051,7 @@
                     "beginColumn" : 5,
                     "endLine" : 47,
                     "endColumn" : 37,
-                    "offset" : 1186,
+                    "offset" : 1164,
                     "length" : 32
                   }
                 }
@@ -1073,7 +1073,7 @@
                       "beginColumn" : 4,
                       "endLine" : 44,
                       "endColumn" : 31,
-                      "offset" : 1107,
+                      "offset" : 1085,
                       "length" : 27
                     }
                   }
@@ -1095,7 +1095,7 @@
                         "beginColumn" : 4,
                         "endLine" : 8,
                         "endColumn" : 51,
-                        "offset" : 91,
+                        "offset" : 89,
                         "length" : 47
                       }
                     }
@@ -1126,7 +1126,7 @@
                       "beginColumn" : 4,
                       "endLine" : 45,
                       "endColumn" : 33,
-                      "offset" : 1138,
+                      "offset" : 1116,
                       "length" : 29
                     }
                   }
@@ -1148,8 +1148,8 @@
                         "beginColumn" : 4,
                         "endLine" : 23,
                         "endColumn" : 6,
-                        "offset" : 509,
-                        "length" : 139
+                        "offset" : 497,
+                        "length" : 129
                       }
                     }
                   }
@@ -1184,7 +1184,7 @@
                         "beginColumn" : 5,
                         "endLine" : 47,
                         "endColumn" : 37,
-                        "offset" : 1186,
+                        "offset" : 1164,
                         "length" : 32
                       }
                     }
@@ -1204,7 +1204,7 @@
                         "beginColumn" : 4,
                         "endLine" : 56,
                         "endColumn" : 40,
-                        "offset" : 1348,
+                        "offset" : 1326,
                         "length" : 36
                       }
                     }
@@ -1306,7 +1306,7 @@
                 "beginColumn" : 4,
                 "endLine" : 55,
                 "endColumn" : 30,
-                "offset" : 1318,
+                "offset" : 1296,
                 "length" : 26
               }
             }
@@ -1372,6 +1372,41 @@
       "connectionInstances" : [
       ],
       "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_impl_Instance", "HAMR::Platform"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "platform:\/plugin\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
+                },
+                "beginLine" : 2,
+                "beginColumn" : 3,
+                "endLine" : 2,
+                "endColumn" : 153,
+                "offset" : 23,
+                "length" : 150
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "seL4_TB"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "seL4_Only"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
       ],
       "flows" : [
       ],

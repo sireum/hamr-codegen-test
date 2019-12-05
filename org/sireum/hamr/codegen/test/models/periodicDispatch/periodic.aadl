@@ -1,7 +1,7 @@
 package Periodic
 public
     with Base_Types;
-    with SB_Sys;
+    with HAMR;
     
 	system Critical
 	end Critical;
@@ -11,6 +11,7 @@ public
 			PROC : processor HW_Proc.Impl;
 			SW : process SW.Impl;
 		properties
+			HAMR::Platform => (seL4_TB);
 			Actual_Processor_Binding => (reference (PROC)) applies to SW;
 	end Critical.Impl;
 		
@@ -38,7 +39,7 @@ public
 			Dispatch_Protocol => Periodic;
 			Period => 1sec;
 			Source_Text => ("behavior/comp_a.c");	
-			SB_SYS::Compute_Entrypoint_Source_Text => ("Comp_A_time_triggered"); 
+			Compute_Entrypoint_Source_Text => "Comp_A_time_triggered"; 
 	end Comp_A;
 	
 	thread implementation Comp_A.Impl
@@ -47,7 +48,7 @@ public
 	thread Comp_B
 		features
 			input: in event data port Base_Types::Integer_32 {
-			  SB_SYS::Compute_Entrypoint_Source_Text => ("Comp_B_input"); 
+			  Compute_Entrypoint_Source_Text => "Comp_B_input"; 
 			};
 		properties
 			Dispatch_Protocol => Sporadic;

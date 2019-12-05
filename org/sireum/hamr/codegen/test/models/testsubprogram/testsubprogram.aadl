@@ -1,7 +1,7 @@
 package testsubprogram
 public 
 	with Base_Types;
-	with SB_SYS;
+	with HAMR;
 
 	subprogram add_uint32
 		features
@@ -32,7 +32,7 @@ public
 		properties 
 			Source_Text => ("behavior_code/components/sender/src/sender.c");
 			Initialize_Entrypoint_Source_Text => "sender_init";
-			SB_SYS::Compute_Entrypoint_Source_Text => ("run_sender");
+			Compute_Entrypoint_Source_Text => "run_sender";
 	end sender.impl;
  
 	thread receiver
@@ -75,7 +75,11 @@ public
 			proc : processor proc.impl;
 			testsubprogram: process top_process.impl;
 		properties
-			Actual_Processor_Binding => (reference (proc)) applies to testsubprogram; 
+			Actual_Processor_Binding => (reference (proc)) applies to testsubprogram;
+			HAMR::Platform => (seL4_TB);
+		annex resolute {**
+			check CASE_Tools
+		**};			
 	end top.impl;
 
 end testsubprogram;

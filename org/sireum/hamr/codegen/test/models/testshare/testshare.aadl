@@ -1,6 +1,7 @@
 package testshare
 public
-	with SB_SYS;
+	with HAMR;
+	with SB_Sys;
 	with Base_Types;
 	
 	data Thing_t
@@ -20,7 +21,7 @@ public
 	    properties
             Initialize_Entrypoint_Source_Text => "testshare_publisher_component_init";
             Source_Text => ("behavior_code/components/publisher/src/publisher.c");
-            SB_SYS::Compute_Entrypoint_Source_Text => ("run_publisher");
+            Compute_Entrypoint_Source_Text => "run_publisher";
 	end publisher;
 
 	thread implementation publisher.impl
@@ -32,7 +33,7 @@ public
 	    properties
             Initialize_Entrypoint_Source_Text => "testshare_subscriber_component_init";
             Source_Text => ("behavior_code/components/subscriber/src/subscriber.c");
-            SB_SYS::Compute_Entrypoint_Source_Text => ("run_subscriber");
+            Compute_Entrypoint_Source_Text => "run_subscriber";
 	end subscriber;
 
 	thread implementation subscriber.impl
@@ -70,6 +71,10 @@ public
 			proc: processor proc.impl;
 			testshare: process top_process.impl;
 		properties
-			Actual_Processor_Binding => (reference (proc)) applies to testshare; 
+			Actual_Processor_Binding => (reference (proc)) applies to testshare;
+			HAMR::Platform => (seL4_TB);
+		annex resolute {**
+			check CASE_Tools
+		**};			
 	end top.impl;	
 end testshare;

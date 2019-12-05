@@ -1,6 +1,6 @@
 package testevent
 public
-	with SB_SYS;
+	with HAMR;
 		
 	thread emitter
 		features
@@ -9,7 +9,7 @@ public
 			Dispatch_Protocol => Sporadic;
 			Initialize_Entrypoint_Source_Text => "testevent_emitter_component_init";
 			Source_Text => ("behavior_code/components/Emitter/src/emitter.c");
-			SB_SYS::Compute_Entrypoint_Source_Text => ("run_emitter");
+			Compute_Entrypoint_Source_Text => "run_emitter";
 	end emitter;
 	
 	thread implementation emitter.impl
@@ -18,7 +18,7 @@ public
 	thread consumer
 		features
 			s: in event port {
-				SB_SYS::Compute_Entrypoint_Source_Text => ("testevent_consumer_s_event_handler");
+				Compute_Entrypoint_Source_Text => "testevent_consumer_s_event_handler";
 			};
 		properties
 			Dispatch_Protocol => Sporadic;
@@ -55,6 +55,7 @@ public
 			testevent: process top_process.impl;
 		properties
 			Actual_Processor_Binding => (reference (proc)) applies to testevent;
+			HAMR::Platform => (seL4_TB, seL4_Only);
 		annex resolute {**
 			check CASE_Tools
 		**};

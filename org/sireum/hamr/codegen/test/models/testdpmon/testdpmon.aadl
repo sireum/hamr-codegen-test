@@ -1,7 +1,7 @@
 package testdpmon
 public
-	with SB_SYS;
 	with Base_Types;
+	with HAMR;
 
 	thread source_t
 		features
@@ -10,7 +10,7 @@ public
 			Dispatch_Protocol => Sporadic;
 			Source_Text => ("behavior_code/components/source/src/source.c");
 			Initialize_Entrypoint_Source_Text => "testdpmon_source_component_init";
-			SB_SYS::Compute_Entrypoint_Source_Text => ("run_sender");
+			Compute_Entrypoint_Source_Text => "run_sender";
 	end source_t;
 	
 	thread implementation source_t.impl
@@ -22,7 +22,7 @@ public
 		properties
 			Dispatch_Protocol => Sporadic;
 			Source_Text => ("behavior_code/components/destination/src/destination.c");
-			SB_SYS::Compute_Entrypoint_Source_Text => ("run_receiver");
+			Compute_Entrypoint_Source_Text => "run_receiver";
 	end destination_t;
 	
 	thread implementation destination_t.impl
@@ -54,6 +54,7 @@ public
 			testdpmon: process top_process.impl;
 		properties
 			Actual_Processor_Binding => (reference (proc)) applies to testdpmon;
+			HAMR::PLatform => (seL4_TB, seL4_Only);
 		annex resolute {**
 			check CASE_Tools
 		**};

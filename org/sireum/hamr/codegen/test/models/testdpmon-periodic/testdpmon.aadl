@@ -1,6 +1,6 @@
 package testdpmon
 public
-	with SB_SYS;
+	with HAMR;
 	with Base_Types;
 	
 	thread source_t
@@ -11,7 +11,7 @@ public
 			Period => 1sec;
 			Source_Text => ("behavior_code/components/source/src/source.c");
 			Initialize_Entrypoint_Source_Text => "testdpmon_source_component_init";
-			SB_SYS::Compute_Entrypoint_Source_Text => ("testdpmon_source_component_time_triggered");
+			Compute_Entrypoint_Source_Text => "testdpmon_source_component_time_triggered";
 	end source_t;
 	
 	thread implementation source_t.impl
@@ -24,7 +24,7 @@ public
 			Dispatch_Protocol => Periodic;
 			Period => 2sec;
 			Source_Text => ("behavior_code/components/destination/src/destination.c");
-			SB_SYS::Compute_Entrypoint_Source_Text => ("testdpmon_destination_component_time_triggered");
+			Compute_Entrypoint_Source_Text => "testdpmon_destination_component_time_triggered";
 	end destination_t;
 	
 	thread implementation destination_t.impl
@@ -56,6 +56,7 @@ public
 			testdpmon: process top_process.impl;
 		properties
 			Actual_Processor_Binding => (reference (proc)) applies to testdpmon;
+			HAMR::Platform => (seL4_TB, seL4_Only);
 		annex resolute {**
 			check CASE_Tools
 		**};
