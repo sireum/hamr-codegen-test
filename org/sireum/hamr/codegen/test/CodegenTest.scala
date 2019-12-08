@@ -322,27 +322,29 @@ class CodeGenTest extends TestSuite {
 
     // could limit emitted files to only non-matching results
     for(r <- resultMap.map.entries) {
-      Os.path(s"${rdir.value}/actual/${r._1}").writeOver(r._2.content)
+      Os.path(s"${rdir.value}/actual/${r._1}").canon.writeOver(r._2.content)
       
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= r._2 == e
 
-        Os.path(s"${rdir.value}/expected/${r._1}").writeOver(e.content)
+        Os.path(s"${rdir.value}/expected/${r._1}").canon.writeOver(e.content)
       }
     }
     
-    Os.env(CodeGenTest.CAMKES_APPS_DIR) match {
-      case Some(x) =>
-        val dir = Os.path(x)
-        if(dir.exists){
-          for(r <- resultMap.map.entries) {
-            Os.path(s"${dir.value}/hamr_${r._1}").writeOver(r._2.content)
+    if(isSeL4(ops)) {
+      Os.env(CodeGenTest.CAMKES_APPS_DIR) match {
+        case Some(x) =>
+          val dir = Os.path(x)
+          if (dir.exists) {
+            for (r <- resultMap.map.entries) {
+              Os.path(s"${dir.value}/hamr_${r._1}").writeOver(r._2.content)
+            }
+          } else {
+            Console.err.println(s"${CodeGenTest.CAMKES_APPS_DIR}: ${x} does not exist")
           }
-        } else {
-          Console.err.println(s"${CodeGenTest.CAMKES_APPS_DIR}: ${x} does not exist")
-        }
-      case _ =>
+        case _ =>
+      }
     }
     
     if(allEqual && delResultDirIfEqual) rdir.removeAll()
