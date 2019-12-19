@@ -12,7 +12,7 @@
             "type" : "Position",
             "uriOpt" : {
               "type" : "Some",
-              "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+              "value" : "\/testdpmon\/testdpmon.aadl"
             },
             "beginLine" : 51,
             "beginColumn" : 2,
@@ -44,7 +44,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                  "value" : "\/testdpmon\/testdpmon.aadl"
                 },
                 "beginLine" : 54,
                 "beginColumn" : 4,
@@ -80,7 +80,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                      "value" : "\/testdpmon\/testdpmon.aadl"
                     },
                     "beginLine" : 42,
                     "beginColumn" : 4,
@@ -114,7 +114,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                          "value" : "\/testdpmon\/testdpmon.aadl"
                         },
                         "beginLine" : 8,
                         "beginColumn" : 4,
@@ -152,7 +152,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                              "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                             },
                             "beginLine" : 234,
                             "beginColumn" : 2,
@@ -183,7 +183,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
                             "beginLine" : 78,
                             "beginColumn" : 4,
@@ -214,7 +214,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                              "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
                             "beginLine" : 91,
                             "beginColumn" : 2,
@@ -249,7 +249,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
                             "beginLine" : 26,
                             "beginColumn" : 4,
@@ -290,7 +290,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                         },
                         "beginLine" : 46,
                         "beginColumn" : 2,
@@ -327,7 +327,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
                         },
                         "beginLine" : 12,
                         "beginColumn" : 2,
@@ -358,7 +358,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                         },
                         "beginLine" : 234,
                         "beginColumn" : 2,
@@ -389,7 +389,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                         },
                         "beginLine" : 159,
                         "beginColumn" : 2,
@@ -420,7 +420,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                         },
                         "beginLine" : 71,
                         "beginColumn" : 2,
@@ -486,7 +486,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                      "value" : "\/testdpmon\/testdpmon.aadl"
                     },
                     "beginLine" : 43,
                     "beginColumn" : 4,
@@ -520,7 +520,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                          "value" : "\/testdpmon\/testdpmon.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -558,7 +558,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                              "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                             },
                             "beginLine" : 234,
                             "beginColumn" : 2,
@@ -589,7 +589,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
                             "beginLine" : 78,
                             "beginColumn" : 4,
@@ -620,7 +620,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                              "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
                             "beginLine" : 91,
                             "beginColumn" : 2,
@@ -655,7 +655,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
                             "beginLine" : 26,
                             "beginColumn" : 4,
@@ -696,7 +696,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                         },
                         "beginLine" : 46,
                         "beginColumn" : 2,
@@ -733,7 +733,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
                         },
                         "beginLine" : 12,
                         "beginColumn" : 2,
@@ -764,7 +764,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                         },
                         "beginLine" : 234,
                         "beginColumn" : 2,
@@ -795,7 +795,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
                         },
                         "beginLine" : 71,
                         "beginColumn" : 2,
@@ -863,7 +863,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                      "value" : "\/testdpmon\/testdpmon.aadl"
                     },
                     "beginLine" : 45,
                     "beginColumn" : 5,
@@ -886,7 +886,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                          "value" : "\/testdpmon\/testdpmon.aadl"
                         },
                         "beginLine" : 42,
                         "beginColumn" : 4,
@@ -908,7 +908,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                            "value" : "\/testdpmon\/testdpmon.aadl"
                           },
                           "beginLine" : 8,
                           "beginColumn" : 4,
@@ -941,7 +941,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                          "value" : "\/testdpmon\/testdpmon.aadl"
                         },
                         "beginLine" : 43,
                         "beginColumn" : 4,
@@ -963,7 +963,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                            "value" : "\/testdpmon\/testdpmon.aadl"
                           },
                           "beginLine" : 21,
                           "beginColumn" : 4,
@@ -1014,7 +1014,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                      "value" : "\/testdpmon\/testdpmon.aadl"
                     },
                     "beginLine" : 45,
                     "beginColumn" : 5,
@@ -1036,7 +1036,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                        "value" : "\/testdpmon\/testdpmon.aadl"
                       },
                       "beginLine" : 42,
                       "beginColumn" : 4,
@@ -1058,7 +1058,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                          "value" : "\/testdpmon\/testdpmon.aadl"
                         },
                         "beginLine" : 8,
                         "beginColumn" : 4,
@@ -1089,7 +1089,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                        "value" : "\/testdpmon\/testdpmon.aadl"
                       },
                       "beginLine" : 43,
                       "beginColumn" : 4,
@@ -1111,7 +1111,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                          "value" : "\/testdpmon\/testdpmon.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -1147,7 +1147,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                          "value" : "\/testdpmon\/testdpmon.aadl"
                         },
                         "beginLine" : 45,
                         "beginColumn" : 5,
@@ -1167,7 +1167,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                          "value" : "\/testdpmon\/testdpmon.aadl"
                         },
                         "beginLine" : 54,
                         "beginColumn" : 4,
@@ -1197,7 +1197,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                      "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                     },
                     "beginLine" : 46,
                     "beginColumn" : 2,
@@ -1269,7 +1269,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "platform:\/resource\/testdpmon\/testdpmon.aadl"
+                  "value" : "\/testdpmon\/testdpmon.aadl"
                 },
                 "beginLine" : 53,
                 "beginColumn" : 4,
@@ -1352,13 +1352,13 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "platform:\/plugin\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
+                  "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 2,
+                "beginLine" : 28,
                 "beginColumn" : 3,
-                "endLine" : 2,
+                "endLine" : 28,
                 "endColumn" : 153,
-                "offset" : 23,
+                "offset" : 1125,
                 "length" : 150
               }
             }
@@ -1455,7 +1455,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
                 "beginLine" : 78,
                 "beginColumn" : 4,
@@ -1486,7 +1486,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "platform:\/plugin\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                  "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                 },
                 "beginLine" : 91,
                 "beginColumn" : 2,

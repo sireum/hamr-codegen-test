@@ -1,6 +1,5 @@
 package org.sireum.hamr.codegen.test
 
-
 import org.sireum._
 import org.sireum.test.TestSuite
 import org.sireum.hamr.codegen.{CodeGen, CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform}
@@ -14,6 +13,9 @@ class CodeGenTest extends TestSuite {
   val generateExpected = F
   val delResultDirIfEqual = F
 
+  val filter: B = F
+  val filters: ISZ[String] = ISZ("uav_alt_ext")
+  
   val tests = Tests {
 
     { // UAV_ALT tests
@@ -241,7 +243,9 @@ class CodeGenTest extends TestSuite {
   }
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig, description: Option[String], modelUri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
-    registerTest(s"${testName} L${position.lineNumber}" )(testAir(testName, modelDir, airFile, ops, description, modelUri))
+    if(!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).startsWith(elem))) {
+      registerTest(s"${testName} L${position.lineNumber}")(testAir(testName, modelDir, airFile, ops, description, modelUri))
+    }
   }
 
   def testAir(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,

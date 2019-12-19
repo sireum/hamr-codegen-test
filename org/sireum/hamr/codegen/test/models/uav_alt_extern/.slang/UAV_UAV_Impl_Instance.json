@@ -6925,27 +6925,7 @@
                   }
                 },
                 "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["UAV_Impl_Instance", "MCMP", "BUS_HW"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 4,
-                        "endLine" : 79,
-                        "endColumn" : 28,
-                        "offset" : 1902,
-                        "length" : 24
-                      }
-                    }
-                  }
+                  "type" : "None"
                 },
                 "direction" : {
                   "type" : "None"
@@ -7102,27 +7082,7 @@
                   }
                 },
                 "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["UAV_Impl_Instance", "MCMP", "BUS_HW"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 4,
-                        "endLine" : 79,
-                        "endColumn" : 28,
-                        "offset" : 1902,
-                        "length" : 24
-                      }
-                    }
-                  }
+                  "type" : "None"
                 },
                 "direction" : {
                   "type" : "None"
@@ -7279,27 +7239,7 @@
                   }
                 },
                 "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["UAV_Impl_Instance", "MCMP", "BUS_HW"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 4,
-                        "endLine" : 79,
-                        "endColumn" : 28,
-                        "offset" : 1902,
-                        "length" : 24
-                      }
-                    }
-                  }
+                  "type" : "None"
                 },
                 "direction" : {
                   "type" : "None"
@@ -7456,27 +7396,7 @@
                   }
                 },
                 "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["UAV_Impl_Instance", "MCMP", "BUS_HW"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 4,
-                        "endLine" : 79,
-                        "endColumn" : 28,
-                        "offset" : 1902,
-                        "length" : 24
-                      }
-                    }
-                  }
+                  "type" : "None"
                 },
                 "direction" : {
                   "type" : "None"
@@ -7686,27 +7606,7 @@
                   }
                 },
                 "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["UAV_Impl_Instance", "MCMP", "BUS_HW"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 4,
-                        "endLine" : 79,
-                        "endColumn" : 28,
-                        "offset" : 1902,
-                        "length" : 24
-                      }
-                    }
-                  }
+                  "type" : "None"
                 },
                 "direction" : {
                   "type" : "None"
@@ -7863,27 +7763,7 @@
                   }
                 },
                 "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["UAV_Impl_Instance", "MCMP", "BUS_HW"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 4,
-                        "endLine" : 79,
-                        "endColumn" : 28,
-                        "offset" : 1902,
-                        "length" : 24
-                      }
-                    }
-                  }
+                  "type" : "None"
                 },
                 "direction" : {
                   "type" : "None"
@@ -8040,27 +7920,7 @@
                   }
                 },
                 "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["UAV_Impl_Instance", "MCMP", "BUS_HW"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 4,
-                        "endLine" : 79,
-                        "endColumn" : 28,
-                        "offset" : 1902,
-                        "length" : 24
-                      }
-                    }
-                  }
+                  "type" : "None"
                 },
                 "direction" : {
                   "type" : "None"
@@ -8217,27 +8077,7 @@
                   }
                 },
                 "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["UAV_Impl_Instance", "MCMP", "BUS_HW"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 4,
-                        "endLine" : 79,
-                        "endColumn" : 28,
-                        "offset" : 1902,
-                        "length" : 24
-                      }
-                    }
-                  }
+                  "type" : "None"
                 },
                 "direction" : {
                   "type" : "None"
@@ -9136,27 +8976,7 @@
               }
             },
             "feature" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Name",
-                "name" : ["UAV_Impl_Instance", "SBUS"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
-                    },
-                    "beginLine" : 23,
-                    "beginColumn" : 4,
-                    "endLine" : 23,
-                    "endColumn" : 26,
-                    "offset" : 352,
-                    "length" : 22
-                  }
-                }
-              }
+              "type" : "None"
             },
             "direction" : {
               "type" : "None"
@@ -9357,27 +9177,7 @@
               }
             },
             "feature" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Name",
-                "name" : ["UAV_Impl_Instance", "SBUS"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
-                    },
-                    "beginLine" : 23,
-                    "beginColumn" : 4,
-                    "endLine" : 23,
-                    "endColumn" : 26,
-                    "offset" : 352,
-                    "length" : 22
-                  }
-                }
-              }
+              "type" : "None"
             },
             "direction" : {
               "type" : "None"
@@ -9587,27 +9387,7 @@
               }
             },
             "feature" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Name",
-                "name" : ["UAV_Impl_Instance", "SBUS"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
-                    },
-                    "beginLine" : 23,
-                    "beginColumn" : 4,
-                    "endLine" : 23,
-                    "endColumn" : 26,
-                    "offset" : 352,
-                    "length" : 22
-                  }
-                }
-              }
+              "type" : "None"
             },
             "direction" : {
               "type" : "None"
@@ -9808,27 +9588,7 @@
               }
             },
             "feature" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Name",
-                "name" : ["UAV_Impl_Instance", "SBUS"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
-                    },
-                    "beginLine" : 23,
-                    "beginColumn" : 4,
-                    "endLine" : 23,
-                    "endColumn" : 26,
-                    "offset" : 352,
-                    "length" : 22
-                  }
-                }
-              }
+              "type" : "None"
             },
             "direction" : {
               "type" : "None"
@@ -9902,11 +9662,11 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 2,
+                "beginLine" : 28,
                 "beginColumn" : 3,
-                "endLine" : 2,
+                "endLine" : 28,
                 "endColumn" : 153,
-                "offset" : 23,
+                "offset" : 1125,
                 "length" : 150
               }
             }
@@ -9941,11 +9701,11 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 3,
+                "beginLine" : 53,
                 "beginColumn" : 3,
-                "endLine" : 3,
+                "endLine" : 53,
                 "endColumn" : 124,
-                "offset" : 176,
+                "offset" : 2136,
                 "length" : 121
               }
             }
@@ -9976,11 +9736,11 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 11,
+                "beginLine" : 34,
                 "beginColumn" : 3,
-                "endLine" : 11,
+                "endLine" : 34,
                 "endColumn" : 101,
-                "offset" : 604,
+                "offset" : 1431,
                 "length" : 98
               }
             }
@@ -10010,11 +9770,11 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 13,
+                "beginLine" : 46,
                 "beginColumn" : 3,
-                "endLine" : 13,
+                "endLine" : 46,
                 "endColumn" : 98,
-                "offset" : 813,
+                "offset" : 1921,
                 "length" : 95
               }
             }
