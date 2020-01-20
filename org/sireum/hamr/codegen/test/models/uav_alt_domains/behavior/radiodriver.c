@@ -1,9 +1,9 @@
-##include <camkes.h>
+#include <camkes.h>
 #include <sb_PROC_HW_types.h>
 #include <sb_RadioDriver_Impl.h>
 #include <assert.h>
  
-void init(const uintmax_t * in_arg) {
+void init(const int64_t * in_arg) {
 
   printf("RDIO: initialise entry point called\n");
   
@@ -19,5 +19,5 @@ void init(const uintmax_t * in_arg) {
   printf("RDIO:> Sending command.\n");
 
   // send command to FPLN  
-  assert(sb_recv_map_out_enqueue(&command)==true);
+  assert(sb_recv_map_out_write(&command)==true);
 }

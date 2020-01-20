@@ -50,7 +50,8 @@ class CodeGenTest extends TestSuite {
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
       val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/experiments/Simple_UAV_Example_domains")
-      val description: Option[String] = Some("Incomplete - need to introduce pacer component for seL4_Only profile")
+      val description: Option[String] = Some("""Incomplete - Need to introduce pacer component for seL4_Only profile
+                                               |           - Entrypoints not defined in AADL model so CAmkES components will not be dispatched""".stripMargin)
       
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
@@ -68,7 +69,7 @@ class CodeGenTest extends TestSuite {
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
       val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/ksu-proprietary/simple-uav-slang-example/uav-project-extern/src/aadl/ACT_Demo_Dec2018")
-      
+      val description: Option[String] = Some("Using dummy transpiler")
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
@@ -250,12 +251,6 @@ class CodeGenTest extends TestSuite {
 
   def testAir(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,
               description: Option[String], modelUri: Option[String]): Unit = {
-
-    if(description.nonEmpty) {
-      println(st"""Test Description: ${description.get}
-                  |----------------""".render)
-    }
-    
     var _ops = ops(
       slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some(testName)
     )
@@ -307,13 +302,14 @@ class CodeGenTest extends TestSuite {
       if (missingEkeys.nonEmpty) {
         for(k <- missingEkeys) {
           println(s"Expected missing entry ${k}")
-          println(resultMap.map.get(k).get)
+          println(s"  - ${resultMap.map.get(k).get}")
         }
       } else {
         for(k <- missingRkeys) {
-          println(s"Expected missing entry ${k}")
-          println(expectedMap.map.get(k))
+          println(s"Results missing entry ${k}")
+          println(s"  - ${expectedMap.map.get(k)}")
         }
+        rkeys.elements.foreach(f => println(f))
       }
       testFail = T
     }
@@ -331,19 +327,23 @@ class CodeGenTest extends TestSuite {
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= r._2 == e
-
-        Os.path(s"${rdir.value}/expected/${r._1}").canon.writeOver(e.content)
       }
     }
-    
+
+    for(e <- expectedMap.map.entries) {
+      Os.path(s"${rdir.value}/expected/${e._1}").canon.writeOver(e._2.content)      
+    }    
+      
     if(isSeL4(ops)) {
       Os.env(CodeGenTest.CAMKES_APPS_DIR) match {
         case Some(x) =>
           val dir = Os.path(x)
           if (dir.exists) {
             for (r <- resultMap.map.entries) {
-              Os.path(s"${dir.value}/hamr_${r._1}").writeOver(r._2.content)
+              val p = Os.path(s"${dir.value}/hamr_${r._1}").canon
+              p.writeOver(r._2.content)
             }
+            println(s"Copied CAmkES code to ${dir.value}")
           } else {
             Console.err.println(s"${CodeGenTest.CAMKES_APPS_DIR}: ${x} does not exist")
           }
@@ -356,7 +356,12 @@ class CodeGenTest extends TestSuite {
     if(modelUri.nonEmpty) {
       println(s"Model URI: ${modelUri.get}")
     }
-    
+
+    if(description.nonEmpty) {
+      println(st"""Test Description: ${description.get}
+                  |----------------""".render)
+    }
+
     assert(allEqual, s"Mismatches in ${rdir.canon.toUri}")
     
     assert(!testFail, s"test fail in ${rdir.canon.toUri}")

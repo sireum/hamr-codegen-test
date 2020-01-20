@@ -5,7 +5,7 @@
 
 static bool missioncommand_sent = false;
 
-void init(const uintmax_t *arg){
+void init(const int64_t *arg){
 }
 
 void printCommand(const SW__Command_Impl * command) {
@@ -41,7 +41,7 @@ void recv_map(const SW__Command_Impl * command) {
   		printf("FPLN:> new mission notification.\n");
   		
   		// send the flight plan to WMP
-  		assert(sb_flight_plan_enqueue(&mission) == true);
+  		assert(sb_flight_plan_write(&mission) == true);
   		
     	missioncommand_sent = true;
   	}

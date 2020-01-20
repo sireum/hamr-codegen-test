@@ -5,7 +5,7 @@
 
 static uintmax_t i = 0;
 
-void init(const uintmax_t * in_arg) {
+void init(const int64_t * in_arg) {
 }
 
 void printMissionWindow(const sb_SW__MissionWindow_container * missionWindow){
@@ -27,5 +27,5 @@ void mission_window(const sb_SW__MissionWindow_container * missionWindow){
   printf("UART:> Sending %" PRIu64 " as the next id.\n", i);
   
   // send tracking id to WPM
-  assert(sb_tracking_id_enqueue(&i) == true);
+  assert(sb_tracking_id_write(&i) == true);
 }

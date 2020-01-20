@@ -7,7 +7,7 @@
 
 sb_SW__Mission_container _mission;
 
-void init(const uintmax_t * __unused__) {
+void init(const int64_t * __unused__) {
 }
 
 void printMission(const sb_SW__Mission_container * mission){
@@ -29,7 +29,7 @@ void sendWin(int i) {
   };
   
   // send mission window to UART  
-  assert(sb_mission_window_enqueue(&missionWindow) == true);
+  assert(sb_mission_window_write(&missionWindow) == true);
   
   printf("WM:> Sent mission window\n");
 }
@@ -45,7 +45,7 @@ void flight_plan(const sb_SW__Mission_container * mission){
   
   // send receipt confirmation back to FPLN
   bool dummy = true;
-  assert(sb_mission_rcv_enqueue(&dummy) == true);
+  assert(sb_mission_rcv_write(&dummy) == true);
 }
 
 void tracking_id(const uintmax_t * nid) {
