@@ -10,11 +10,13 @@ import org.sireum.hamr.codegen.test.util.TestResult
 
 class CodeGenTest extends TestSuite {
 
+  import CodeGenTest._
+  
   val generateExpected = F
   val delResultDirIfEqual = F
 
-  val filter: B = F
-  val filters: ISZ[String] = ISZ("uav_alt_ext")
+  val filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
+  val filters: ISZ[String] = ISZ("urgency")
   
   val tests = Tests {
 
@@ -278,19 +280,20 @@ class CodeGenTest extends TestSuite {
     val resultMap = util.TestResult(Map.empty ++ (results.resources.map(m => (m.path, util.Resource(m.content.render)))))
     val expected = expectedDir / s"${testName}.${CodeGenTest.outputFormat}"
 
+    var testFail = F
     val expectedMap: util.TestResult = if(generateExpected) {
       CodeGenTest.writeExpected(resultMap, expected)
       println(s"Wrote: ${expected}")
       resultMap
     }
-    else if(expected.exists){
+    else if(expected.exists) {
       CodeGenTest.readExpected(expected)
     }
     else {
-      throw new RuntimeException(s"Expected does not exist: ${expected}")
+      testFail = T
+      Console.err.println(s"Expected does not exist: ${expected}")      
+      TestResult(Map.empty)
     }
-
-    var testFail = F
     
     if(resultMap.map.size != expectedMap.map.size) {
       val ekeys = expectedMap.map.keySet
@@ -316,13 +319,13 @@ class CodeGenTest extends TestSuite {
 
     var allEqual = T
     
-    val rdir = resultDir / testName
+    val rdir = rootResultDir / testName
     rdir.removeAll()
     rdir.mkdirAll()
 
     // could limit emitted files to only non-matching results
     for(r <- resultMap.map.entries) {
-      Os.path(s"${rdir.value}/actual/${r._1}").canon.writeOver(r._2.content)
+      Os.path(s"${rdir.value}/results/${r._1}").canon.writeOver(r._2.content)
       
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
@@ -335,7 +338,7 @@ class CodeGenTest extends TestSuite {
     }    
       
     if(isSeL4(ops)) {
-      Os.env(CodeGenTest.CAMKES_APPS_DIR) match {
+      camkesAppsDir() match {
         case Some(x) =>
           val dir = Os.path(x)
           if (dir.exists) {
@@ -389,16 +392,18 @@ class CodeGenTest extends TestSuite {
 object CodeGenTest {
 
   val CAMKES_APPS_DIR = "CAMKES_APPS_DIR"
+  val FILTER = "FILTER"
   
   val outputFormat = "json" 
     
   val rootDir = Os.path("./hamr/codegen/jvm/src/test")
-  val resultDir = rootDir / "results"
+  val rootResultDir = rootDir / "results"
   val testDir = rootDir / "scala" / "org" / "sireum" / "hamr" / "codegen" / "test"
   val modelsDir = rootDir / "scala" / "org" / "sireum" / "hamr" / "codegen" / "test" / "models"
+  
   val expectedDir = testDir / "expected"
 
-  resultDir.mkdirAll()
+  rootResultDir.mkdirAll()
 
   val baseOptions = CodeGenConfig (
     verbose = T,
@@ -441,5 +446,13 @@ object CodeGenTest {
     else {
       throw new RuntimeException("Unexpected " + outputFormat)
     }
+  }
+  
+  def filterTestsSet(): Option[B] = {
+    return if(Os.env(FILTER).nonEmpty) return Some(Os.env(FILTER).get.native.toBoolean) else None()
+  }
+  
+  def camkesAppsDir(): Option[String] = {
+    return Os.env(CodeGenTest.CAMKES_APPS_DIR)
   }
 }
