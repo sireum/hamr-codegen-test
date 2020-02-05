@@ -8,232 +8,16 @@ import org.sireum.message._
 import CodeGenTest._
 import org.sireum.hamr.codegen.test.util.TestResult
 
-class CodeGenTest extends TestSuite {
+trait CodeGenTest extends TestSuite {
 
   import CodeGenTest._
   
-  val generateExpected = F
-  val delResultDirIfEqual = F
+  def generateExpected: B = F
+  def delResultDirIfEqual: B = F
 
-  val filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  val filters: ISZ[String] = ISZ("urgency")
+  def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
+  def filters: ISZ[String] = ISZ("testshare")
   
-  val tests = Tests {
-
-    { // UAV_ALT tests
-      val name = "uav_alt"
-      val modelDir = modelsDir / name
-      val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
-      val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/tool-eval-2/ACT_Demo_Dec2018_alt")
-      
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-      test(s"$name--${platform}", modelDir, model, 
-        baseOptions(platform = platform),
-        None(), uri)
-
-      platform = CodeGenPlatform.MacOS
-      test(s"$name--${platform}", modelDir, model, 
-        baseOptions(platform = platform),
-        None(), uri)
-
-      platform = CodeGenPlatform.SeL4_TB
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform),
-        None(), uri)
-
-      platform = CodeGenPlatform.SeL4_Only
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform),
-        None(), uri)      
-    }
-    
-    { // UAV_ALT_DOMAINS
-      val name = "uav_alt_domains"
-      val modelDir = modelsDir / name
-      val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
-      val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/experiments/Simple_UAV_Example_domains")
-      val description: Option[String] = Some("""Incomplete - Need to introduce pacer component for seL4_Only profile
-                                               |           - Entrypoints not defined in AADL model so CAmkES components will not be dispatched""".stripMargin)
-      
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform),
-        description, uri)
-
-      platform = CodeGenPlatform.SeL4_Only
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform),
-        description, uri)
-    }
-    
-    { // UAV extern
-      val name = "uav_alt_extern"
-      val modelDir = modelsDir / name
-      val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
-      val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/ksu-proprietary/simple-uav-slang-example/uav-project-extern/src/aadl/ACT_Demo_Dec2018")
-      val description: Option[String] = Some("Using dummy transpiler")
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(
-          platform = platform,
-          camkesAuxCodeDirs = ISZ((modelDir / "aux_code").value)
-        ),
-        None(), uri)
-    }
-
-    { // Data port micro example
-      {
-        val name = "testdpmon"
-        val modelDir = modelsDir / name
-        val model = modelDir / ".slang" / "testdpmon_top_impl_Instance.json"
-        val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testdpmon")
-
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          Some("Data port micro-example - Trusted Build profile"), uri
-        )
-
-        platform = CodeGenPlatform.SeL4_Only
-        val jimUri = "https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/experiments/Simple_UAV_Example_domains/CAmkES"
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          Some(s"Data port micro-example - New Adventium translation profile: ${jimUri}"), uri
-        )
-      }
-    }
-
-    { // Data port micro example
-      {
-        val name = "testdpmon-periodic"
-        val modelDir = modelsDir / name
-        val model = modelDir / ".slang" / "testdpmon_top_impl_Instance.json"
-        val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testdpmon-periodic")
-
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          Some("Data port micro-example with periodic threads - Trusted Build profile"), uri
-        )
-
-        platform = CodeGenPlatform.SeL4_Only
-        val jimUri = "https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/experiments/Simple_UAV_Example_domains/CAmkES"
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          Some(s"Data port micro-example with periodic threads - New Adventium translation profile: ${jimUri}"), uri
-        )
-      }
-    }
-    
-
-    { // Event Data port micro example
-      {
-        val name = "testepmon"
-        val modelDir = modelsDir / name
-        val model = modelDir / ".slang" / "testepmon_top_impl_Instance.json"
-        val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testepmon")
-
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          Some(s"Event Data port micro-example - Trusted Build profile"), uri
-        )
-
-        platform = CodeGenPlatform.SeL4_Only
-        val ihorUri ="https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-eventdata-monitor"
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          Some(s"Event Data port micro-example - Ihor aadl-eventdata-monitor profile: ${ihorUri}"), uri
-        )
-      }
-
-      { // Event port micro example
-        {
-          val name = "testevent"
-          val modelDir = modelsDir / name
-          val model = modelDir / ".slang" / "testevent_top_impl_Instance.json"
-          val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testevent")
-
-          var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-          test(s"$name--${platform}", modelDir, model,
-            baseOptions(platform = platform),
-            Some("Event port micro-example - Trusted Build profile"), uri
-          )
-
-          platform = CodeGenPlatform.SeL4_Only
-          val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-direct"
-          test(s"$name--${platform}", modelDir, model,
-            baseOptions(platform = platform),
-            Some(s"Event port micro-example - Ihor aadl-event-direct: ${ihorUri}"), uri
-          )
-        }
-      }
-    }
-
-    { // Event port micro example
-      {
-        val name = "testevent_MultQueue"
-        val modelDir = modelsDir / name
-        val model = modelDir / ".slang" / "testevent_top_impl_Instance.json"
-        val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testevent")
-
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          Some("Event port micro-example - Trusted Build profile"), uri
-        )
-
-        platform = CodeGenPlatform.SeL4_Only
-        val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-direct"
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          Some(s"Event port micro-example - Ihor aadl-event-direct: ${ihorUri}"), uri
-        )
-      }
-    }
-  
-    { // Shared Data micro example
-      {
-        val name = "testshare"
-        val modelDir = modelsDir / name
-        val model = modelDir / ".slang" / "testshare_top_impl_Instance.json"
-        val modelUri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testshare")
-
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          None(), modelUri
-        )
-      }
-    }
-
-    { // Subprogram micro example
-      {
-        val name = "testsubprogram"
-        val modelDir = modelsDir / name
-        val model = modelDir / ".slang" / "testsubprogram_top_impl_Instance.json"
-        val modelUri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testsubprogram")
-        
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-        test(s"$name--${platform}", modelDir, model,
-          baseOptions(platform = platform),
-          None(), modelUri
-        )
-      }
-    }
-
-    { // Periodic dispatch
-      val name = "periodicDispatch"
-      val modelDir = modelsDir / name
-      val model = modelDir / ".slang" / "periodic_Critical_Impl_Instance.json"
-
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform)
-      )
-    }
-  }
-
   /*
   val models: scala.collection.Map[String, String] = {
     val r = RC.text(Vector("models")) { (p, f) => p.last.endsWith(".json") }
@@ -242,17 +26,22 @@ class CodeGenTest extends TestSuite {
  */
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
-    test(testName, modelDir, airFile, ops, None(), None())
+    test(testName, modelDir, airFile, ops, None(), None(), None())
   }
 
-  def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig, description: Option[String], modelUri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
+  def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,
+           resultDir:Option[String],        
+           description: Option[String], modelUri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
     if(!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).startsWith(elem))) {
-      registerTest(s"${testName} L${position.lineNumber}")(testAir(testName, modelDir, airFile, ops, description, modelUri))
+      registerTest(s"${testName} L${position.lineNumber}")(testAir(testName, modelDir, airFile, ops, 
+        resultDir, description, modelUri))
     }
   }
 
   def testAir(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,
-              description: Option[String], modelUri: Option[String]): Unit = {
+              resultDir: Option[String],
+              description: Option[String], modelUri: Option[String],
+              ): Unit = {
     var _ops = ops(
       slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some(testName)
     )
@@ -319,23 +108,33 @@ class CodeGenTest extends TestSuite {
 
     var allEqual = T
     
-    val rdir = rootResultDir / testName
+    val rdir = if(resultDir.nonEmpty) rootResultDir / resultDir.get / testName else rootResultDir / testName 
     rdir.removeAll()
     rdir.mkdirAll()
 
     // could limit emitted files to only non-matching results
     for(r <- resultMap.map.entries) {
-      Os.path(s"${rdir.value}/results/${r._1}").canon.writeOver(r._2.content)
+      val output = Os.path(s"${rdir.value}/results/${r._1}")
+      output.canon.writeOver(r._2.content)
       
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= r._2 == e
       }
+      
+      if(r._1.native.endsWith("graph.dot")) {
+        val dot = r._2.content
+        val dotOutput = Os.path(s"${output.value}.pdf")
+        
+        val proc:ISZ[String] = ISZ("dot", "-Tpdf", output.canon.value, "-o", dotOutput.canon.value)
+        println(proc)
+        Os.proc(proc).run()
+      }
     }
 
     for(e <- expectedMap.map.entries) {
       Os.path(s"${rdir.value}/expected/${e._1}").canon.writeOver(e._2.content)      
-    }    
+    }
       
     if(isSeL4(ops)) {
       camkesAppsDir() match {
@@ -364,7 +163,7 @@ class CodeGenTest extends TestSuite {
       println(st"""Test Description: ${description.get}
                   |----------------""".render)
     }
-
+    
     assert(allEqual, s"Mismatches in ${rdir.canon.toUri}")
     
     assert(!testFail, s"test fail in ${rdir.canon.toUri}")
