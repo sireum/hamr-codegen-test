@@ -18,8 +18,12 @@ class CodeGenTest_Base extends CodeGenTest {
       val model = modelDir / ".slang" / "BuildingControl_BuildingControlDemo_i_Instance.json"
       
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-      test(s"$name--${platform}", modelDir, model,
+      test(s"$name--${platform}-Embed-Art", modelDir, model,
         baseOptions(platform = platform),
+        resultDir, None(), None())
+      test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
+        baseOptions(platform = platform,
+          embedArt = F),
         resultDir, None(), None())
     }
     
