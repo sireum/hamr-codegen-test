@@ -2,7 +2,7 @@ package org.sireum.hamr.codegen.test
 
 import org.sireum._
 import org.sireum.test.TestSuite
-import org.sireum.hamr.codegen.{CodeGen, CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform}
+import org.sireum.hamr.codegen.{CodeGen, CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
 import org.sireum.hamr.ir._
 import org.sireum.message._
 import CodeGenTest._
@@ -59,7 +59,7 @@ trait CodeGenTest extends TestSuite {
 
     val model = getModel(airFile.read)
     
-    val results = CodeGen.codeGen(model.get, _ops, reporter, (TranspilerConfig) => { println(s"Dummy transpiler"); 0 })
+    val results: CodeGenResults = CodeGen.codeGen(model.get, _ops, reporter, (TranspilerConfig) => { println(s"Dummy transpiler"); 0 })
 
     if(reporter.hasError) {
       reporter.printMessages()

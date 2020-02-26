@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test
 
 import org.sireum._
-import org.sireum.hamr.codegen.CodeGenPlatform
+import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.test.CodeGenTest.{baseOptions, modelsDir}
 
 class CodeGenTest_Base extends CodeGenTest {
@@ -21,9 +21,24 @@ class CodeGenTest_Base extends CodeGenTest {
       test(s"$name--${platform}-Embed-Art", modelDir, model,
         baseOptions(platform = platform),
         resultDir, None(), None())
+      
       test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
         baseOptions(platform = platform,
           embedArt = F),
+        resultDir, None(), None())
+
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}-Embed-Art-SharedMemory", modelDir, model,
+        baseOptions(platform = platform),
+
+        resultDir, None(), None())
+      
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}-Embed-Art-MessageQueue", modelDir, model,
+        baseOptions(platform = platform,
+          ipc = CodeGenIpcMechanism.MessageQueue
+        ),
+
         resultDir, None(), None())
     }
     
