@@ -263,6 +263,12 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform),
         resultDir, None(), None()
       )
+      
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform),
+        resultDir, None(), None()
+      )
     }
   }
 }
