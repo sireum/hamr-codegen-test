@@ -2,7 +2,7 @@ package org.sireum.hamr.codegen.test
 
 import org.sireum._
 import org.sireum.test.TestSuite
-import org.sireum.hamr.codegen.{CodeGen, CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
+import org.sireum.hamr.codegen.{CodeGen, CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults, TranspilerConfig}
 import org.sireum.hamr.ir._
 import org.sireum.message._
 import CodeGenTest._
@@ -42,8 +42,16 @@ trait CodeGenTest extends TestSuite {
               resultDir: Option[String],
               description: Option[String], modelUri: Option[String],
               ): Unit = {
+    
+    val expectedJson = expectedJsonDir / s"${testName}.${CodeGenTest.outputFormat}"
+    
+    val rootTestOutputDir = if(resultDir.nonEmpty) rootResultDir / resultDir.get / testName else rootResultDir / testName
+    val expectedDir = rootTestOutputDir / "expected" 
+    val resultsDir = rootTestOutputDir / "results"
+
     var _ops = ops(
-      slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some(testName)
+      slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some((resultsDir / testName).canon.value),
+      writeOutResources = T
     )
     
     if(isSeL4(ops)) {
@@ -58,29 +66,64 @@ trait CodeGenTest extends TestSuite {
     val reporter = Reporter.create
 
     val model = getModel(airFile.read)
+
+    println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
     
-    val results: CodeGenResults = CodeGen.codeGen(model.get, _ops, reporter, (TranspilerConfig) => { println(s"Dummy transpiler"); 0 })
+    val results: CodeGenResults = CodeGen.codeGen(model.get, _ops, reporter, 
+      (tc: TranspilerConfig) => {
+        var args: ISZ[String] = ISZ()
+
+        def addKey(key: String): Unit = { args = args :+ key }
+        def add(key: String, value: String): Unit = { args = args :+ key :+ value }
+
+        args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, ":")}""".render
+        tc.output.map(s => add("--output-dir", s))
+        tc.projectName.map(s => add("--name", s))
+        add("--apps", st"""${(tc.apps, ",")}""".render)
+        add("--fingerprint", tc.fingerprint.string)
+        add("--bits", tc.bitWidth.string)
+        add("--string-size", tc.maxStringSize.string)
+        add("--sequence-size", tc.maxArraySize.string)
+        add("--sequence", st"""${(tc.customArraySizes, ";")}""".render)
+        add("--constants", st"""${(tc.customConstants, ";")}""".render)
+        add("--forward", st"""${(tc.forwarding, ",")}""".render)
+        tc.stackSize.map(s => add("--stack-size", s))
+        if(tc.stableTypeId) addKey("--stable-type-id")
+        add("--exts", st"""${(tc.exts, ":")}""".render)
+        if(tc.verbose) addKey("--verbose")
+
+        val sireum = Os.path(Os.env("PWD").get) / "bin" / "sireum"
+        
+        args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
+        
+        val results = Os.proc(args).console.run()
+        
+        results.exitCode 
+      })
+
 
     if(reporter.hasError) {
       reporter.printMessages()
       assert(F)
     }
 
-    val resultMap = util.TestResult(Map.empty ++ (results.resources.map(m => (m.path, util.Resource(m.content.render)))))
-    val expected = expectedDir / s"${testName}.${CodeGenTest.outputFormat}"
+    val resultMap = util.TestResult(Map.empty ++ (results.resources.map(m => {
+      val key = resultsDir.relativize(Os.path(m.path)).value
+      (key, util.Resource(m.content.render))
+    })))
 
     var testFail = F
     val expectedMap: util.TestResult = if(generateExpected) {
-      CodeGenTest.writeExpected(resultMap, expected)
-      println(s"Wrote: ${expected}")
+      CodeGenTest.writeExpected(resultMap, expectedJson)
+      println(s"Wrote: ${expectedJson}")
       resultMap
     }
-    else if(expected.exists) {
-      CodeGenTest.readExpected(expected)
+    else if(expectedJson.exists) {
+      CodeGenTest.readExpected(expectedJson)
     }
     else {
       testFail = T
-      Console.err.println(s"Expected does not exist: ${expected}")      
+      Console.err.println(s"Expected does not exist: ${expectedJson}")      
       TestResult(Map.empty)
     }
     
@@ -108,18 +151,21 @@ trait CodeGenTest extends TestSuite {
 
     var allEqual = T
     
-    val rdir = if(resultDir.nonEmpty) rootResultDir / resultDir.get / testName else rootResultDir / testName 
-    rdir.removeAll()
-    rdir.mkdirAll()
+    rootTestOutputDir.removeAll()
+    rootTestOutputDir.mkdirAll()
 
     // could limit emitted files to only non-matching results
     for(r <- resultMap.map.entries) {
-      val output = Os.path(s"${rdir.value}/results/${r._1}")
+      val output = resultsDir / r._1
       output.canon.writeOver(r._2.content)
       
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= r._2 == e
+      } else if(!generateExpected) {
+        allEqual = F
+        expectedMap.map.keySet.elements.foreach(p => println(p))
+        println(s"Expected missing: ${r._1}")
       }
       
       if(r._1.native.endsWith("graph.dot")) {
@@ -133,7 +179,7 @@ trait CodeGenTest extends TestSuite {
     }
 
     for(e <- expectedMap.map.entries) {
-      Os.path(s"${rdir.value}/expected/${e._1}").canon.writeOver(e._2.content)      
+      (expectedDir / e._1).canon.writeOver(e._2.content)      
     }
       
     if(isSeL4(ops)) {
@@ -153,7 +199,7 @@ trait CodeGenTest extends TestSuite {
       }
     }
     
-    if(allEqual && delResultDirIfEqual) rdir.removeAll()
+    if(allEqual && delResultDirIfEqual) rootTestOutputDir.removeAll()
 
     if(modelUri.nonEmpty) {
       println(s"Model URI: ${modelUri.get}")
@@ -163,10 +209,10 @@ trait CodeGenTest extends TestSuite {
       println(st"""Test Description: ${description.get}
                   |----------------""".render)
     }
+
+    assert(allEqual, s"Mismatches in ${rootTestOutputDir.canon.toUri}")
     
-    assert(allEqual, s"Mismatches in ${rdir.canon.toUri}")
-    
-    assert(!testFail, s"test fail in ${rdir.canon.toUri}")
+    assert(!testFail, s"test fail in ${rootTestOutputDir.canon.toUri}")
   }
 
   def getModel(s: String): Option[Aadl] = {
@@ -200,7 +246,7 @@ object CodeGenTest {
   val testDir = rootDir / "scala" / "org" / "sireum" / "hamr" / "codegen" / "test"
   val modelsDir = rootDir / "scala" / "org" / "sireum" / "hamr" / "codegen" / "test" / "models"
   
-  val expectedDir = testDir / "expected"
+  val expectedJsonDir = testDir / "expected"
 
   rootResultDir.mkdirAll()
 
