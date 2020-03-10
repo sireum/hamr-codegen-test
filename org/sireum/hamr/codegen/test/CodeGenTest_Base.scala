@@ -53,11 +53,18 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform),
         resultDir, None(), uri)
 
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform,
+        maxStringSize = 300),
+        resultDir, None(), uri)
+      
       platform = CodeGenPlatform.MacOS
       test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform),
+        baseOptions(platform = platform,
+        maxStringSize = 300),
         resultDir, None(), uri)
-
+      
       platform = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
@@ -98,7 +105,9 @@ class CodeGenTest_Base extends CodeGenTest {
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
           platform = platform,
-          camkesAuxCodeDirs = ISZ((modelDir / "aux_code").value)
+          packageName = Some("uav_project_extern"),
+          camkesAuxCodeDirs = ISZ((modelDir / "aux_code").value),
+          devicesAsThreads = F
         ),
         resultDir, None(), uri)
     }

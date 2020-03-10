@@ -30,6 +30,8 @@ object MsgPack {
     def writeResource(o: Resource): Unit = {
       writer.writeZ(Constants.Resource)
       writer.writeString(o.content)
+      writer.writeB(o.overwrite)
+      writer.writeB(o.makeExecutable)
     }
 
     def writeTestResult(o: TestResult): Unit = {
@@ -67,7 +69,9 @@ object MsgPack {
         reader.expectZ(Constants.Resource)
       }
       val content = reader.readString()
-      return Resource(content)
+      val overwrite = reader.readB()
+      val makeExecutable = reader.readB()
+      return Resource(content, overwrite, makeExecutable)
     }
 
     def readTestResult(): TestResult = {

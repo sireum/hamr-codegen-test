@@ -24,19 +24,6 @@ exit /B %errorlevel%
 // #Sireum
 import org.sireum._
 
-
-def usage(): Unit = {
-  println("Test Util")
-  println("Usage: ( sergen )+")
-}
-
-
-if (Os.cliArgs.isEmpty) {
-  usage()
-  Os.exit(0)
-}
-
-
 val homeBin = Os.slashDir
 val home = homeBin.up
 val sireumJar = Os.path(Os.env("SIREUM_HOME").get) / "bin" / "sireum.jar"
@@ -47,12 +34,5 @@ def sergen(): Unit = {
   println()
 }
 
-for (i <- 0 until Os.cliArgs.size) {
-  Os.cliArgs(i) match {
-    case string"sergen" => sergen()
-    case cmd =>
-      usage()
-      eprintln(s"Unrecognized command: $cmd")
-      Os.exit(-1)
-  }
-}
+
+sergen()

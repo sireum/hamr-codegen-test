@@ -2,6 +2,7 @@ package SW
 public
 	with Data_Model;
 	with Base_Types;
+	with UAV_Property_Set;
 
 -- This is the structure to hold the lat/long/alt values of a coordinate
 	data Coordinate
@@ -78,6 +79,7 @@ public
 			Source_Text => ("behavior/radiodriver.c");
 			Dispatch_Protocol => Sporadic;
 			Initialize_Entrypoint_Source_Text => "init";
+			Stack_Size => UAV_Property_Set::Stack_Size;
 	end RadioDriver;
 
 	thread implementation RadioDriver.Impl
@@ -96,6 +98,7 @@ public
 			Source_Text => ("behavior/flightplanner.c");
 			Dispatch_Protocol => Sporadic;
 			Initialize_Entrypoint_Source_Text => "init";
+			Stack_Size => UAV_Property_Set::Stack_Size;			
 	end FlightPlanner;
 
 	thread implementation FlightPlanner.Impl
@@ -116,6 +119,7 @@ public
 				"behavior/waypointmanager.c");
 			Dispatch_Protocol => Sporadic;
 			Initialize_Entrypoint_Source_Text => "init";
+			Stack_Size => UAV_Property_Set::Stack_Size;
 	end WaypointManager;
 
 	thread implementation WaypointManager.Impl
@@ -132,6 +136,7 @@ public
 			Source_Text => ("behavior/uartdriver.c");
 			Dispatch_Protocol => Sporadic;
 			Initialize_Entrypoint_Source_Text => "init";
+			Stack_Size => UAV_Property_Set::Stack_Size;			
 	end UARTDriver;
 
 	thread implementation UARTDriver.Impl

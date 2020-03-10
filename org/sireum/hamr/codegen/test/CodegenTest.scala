@@ -14,16 +14,11 @@ trait CodeGenTest extends TestSuite {
   
   def generateExpected: B = F
   def delResultDirIfEqual: B = F
+  def alwaysRunTranspiler: B = F
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("testshare")
   
-  /*
-  val models: scala.collection.Map[String, String] = {
-    val r = RC.text(Vector("models")) { (p, f) => p.last.endsWith(".json") }
-    r.map(e => (org.sireum.String(e._1.mkString("/")), org.sireum.String(e._2)))
-  }
- */
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
     test(testName, modelDir, airFile, ops, None(), None(), None())
@@ -63,44 +58,17 @@ trait CodeGenTest extends TestSuite {
       )
     }
 
+    rootTestOutputDir.removeAll()
+    rootTestOutputDir.mkdirAll()
+    
     val reporter = Reporter.create
 
     val model = getModel(airFile.read)
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
-    
-    val results: CodeGenResults = CodeGen.codeGen(model.get, _ops, reporter, 
-      (tc: TranspilerConfig) => {
-        var args: ISZ[String] = ISZ()
-
-        def addKey(key: String): Unit = { args = args :+ key }
-        def add(key: String, value: String): Unit = { args = args :+ key :+ value }
-
-        args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, ":")}""".render
-        tc.output.map(s => add("--output-dir", s))
-        tc.projectName.map(s => add("--name", s))
-        add("--apps", st"""${(tc.apps, ",")}""".render)
-        add("--fingerprint", tc.fingerprint.string)
-        add("--bits", tc.bitWidth.string)
-        add("--string-size", tc.maxStringSize.string)
-        add("--sequence-size", tc.maxArraySize.string)
-        add("--sequence", st"""${(tc.customArraySizes, ";")}""".render)
-        add("--constants", st"""${(tc.customConstants, ";")}""".render)
-        add("--forward", st"""${(tc.forwarding, ",")}""".render)
-        tc.stackSize.map(s => add("--stack-size", s))
-        if(tc.stableTypeId) addKey("--stable-type-id")
-        add("--exts", st"""${(tc.exts, ":")}""".render)
-        if(tc.verbose) addKey("--verbose")
-
-        val sireum = Os.path(Os.env("PWD").get) / "bin" / "sireum"
-        
-        args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
-        
-        val results = Os.proc(args).console.run()
-        
-        results.exitCode 
-      })
-
+      
+    val results: CodeGenResults = CodeGen.codeGen(model.get, _ops, reporter,
+      if(shouldTranspile(_ops)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
 
     if(reporter.hasError) {
       reporter.printMessages()
@@ -109,7 +77,7 @@ trait CodeGenTest extends TestSuite {
 
     val resultMap = util.TestResult(Map.empty ++ (results.resources.map(m => {
       val key = resultsDir.relativize(Os.path(m.path)).value
-      (key, util.Resource(m.content.render))
+      (key, util.Resource(m.content.render, m.overwrite, m.makeExecutable))
     })))
 
     var testFail = F
@@ -158,6 +126,9 @@ trait CodeGenTest extends TestSuite {
     for(r <- resultMap.map.entries) {
       val output = resultsDir / r._1
       output.canon.writeOver(r._2.content)
+      if(r._2.makeExecutable) {
+        output.canon.chmod("700")
+      }
       
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
@@ -232,6 +203,10 @@ trait CodeGenTest extends TestSuite {
       case _ => F
     }
   }
+  
+  def shouldTranspile(ops: CodeGenConfig): B = {
+    return alwaysRunTranspiler || ops.platform == CodeGenPlatform.SeL4
+  }
 }
 
 object CodeGenTest {
@@ -299,5 +274,37 @@ object CodeGenTest {
   
   def camkesAppsDir(): Option[String] = {
     return Os.env(CodeGenTest.CAMKES_APPS_DIR)
+  }
+
+  def transpile(tc: TranspilerConfig): Z = {
+    var args: ISZ[String] = ISZ()
+
+    def addKey(key: String): Unit = { args = args :+ key }
+    def add(key: String, value: String): Unit = { args = args :+ key :+ value }
+
+    args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, ":")}""".render
+    tc.output.map(s => add("--output-dir", s))
+    tc.projectName.map(s => add("--name", s))
+    add("--apps", st"""${(tc.apps, ",")}""".render)
+    add("--fingerprint", tc.fingerprint.string)
+    add("--bits", tc.bitWidth.string)
+    add("--string-size", tc.maxStringSize.string)
+    add("--sequence-size", tc.maxArraySize.string)
+    add("--sequence", st"""${(tc.customArraySizes, ";")}""".render)
+    add("--constants", st"""${(tc.customConstants, ";")}""".render)
+    add("--forward", st"""${(tc.forwarding, ",")}""".render)
+    tc.stackSize.map(s => add("--stack-size", s))
+    if(tc.stableTypeId) addKey("--stable-type-id")
+    add("--exts", st"""${(tc.exts, ":")}""".render)
+    if(tc.libOnly) addKey("--lib-only")
+    if(tc.verbose) addKey("--verbose")
+
+    val sireum = Os.path(Os.env("PWD").get) / "bin" / "sireum"
+
+    args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
+
+    val results = Os.proc(args).console.run()
+
+    results.exitCode
   }
 }

@@ -15,7 +15,9 @@ object JSON {
     @pure def printResource(o: Resource): ST = {
       return printObject(ISZ(
         ("type", st""""Resource""""),
-        ("content", printString(o.content))
+        ("content", printString(o.content)),
+        ("overwrite", printB(o.overwrite)),
+        ("makeExecutable", printB(o.makeExecutable))
       ))
     }
 
@@ -47,7 +49,13 @@ object JSON {
       parser.parseObjectKey("content")
       val content = parser.parseString()
       parser.parseObjectNext()
-      return Resource(content)
+      parser.parseObjectKey("overwrite")
+      val overwrite = parser.parseB()
+      parser.parseObjectNext()
+      parser.parseObjectKey("makeExecutable")
+      val makeExecutable = parser.parseB()
+      parser.parseObjectNext()
+      return Resource(content, overwrite, makeExecutable)
     }
 
     def parseTestResult(): TestResult = {
