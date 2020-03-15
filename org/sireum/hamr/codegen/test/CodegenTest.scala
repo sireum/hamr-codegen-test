@@ -8,6 +8,9 @@ import org.sireum.message._
 import CodeGenTest._
 import org.sireum.hamr.codegen.test.util.TestResult
 
+/** Can regenerate AIR JSON files via 
+* https://github.com/sireum/osate-plugin/blob/d0015531e9d2039f7f186c4fa7a124521ee664b6/org.sireum.aadl.osate.tests/src/org/sireum/aadl/osate/tests/extras/AirUpdater.java#L46-L54
+*/
 trait CodeGenTest extends TestSuite {
 
   import CodeGenTest._
@@ -17,7 +20,7 @@ trait CodeGenTest extends TestSuite {
   def alwaysRunTranspiler: B = F
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("testshare")
+  def filters: ISZ[String] = ISZ("uav_alt_extern--SeL4")
   
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
@@ -161,6 +164,9 @@ trait CodeGenTest extends TestSuite {
             for (r <- resultMap.map.entries) {
               val p = Os.path(s"${dir.value}/hamr_${r._1}").canon
               p.writeOver(r._2.content)
+              if(r._2.makeExecutable){
+                p.chmod("700")
+              }
             }
             println(s"Copied CAmkES code to ${dir.value}")
           } else {
@@ -239,7 +245,7 @@ object CodeGenTest {
     excludeComponentImpl = F,
     bitWidth = 64,
     maxStringSize = 256,
-    maxArraySize = 16,
+    maxArraySize = 1,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     aadlRootDir = None()
@@ -290,15 +296,17 @@ object CodeGenTest {
     add("--bits", tc.bitWidth.string)
     add("--string-size", tc.maxStringSize.string)
     add("--sequence-size", tc.maxArraySize.string)
-    add("--sequence", st"""${(tc.customArraySizes, ";")}""".render)
-    add("--constants", st"""${(tc.customConstants, ";")}""".render)
-    add("--forward", st"""${(tc.forwarding, ",")}""".render)
+    if(tc.customArraySizes.nonEmpty) add("--sequence", st"""${(tc.customArraySizes, ";")}""".render)
+    if(tc.customConstants.nonEmpty) add("--constants", st"""${(tc.customConstants, ";")}""".render)
+    if(tc.forwarding.nonEmpty) add("--forward", st"""${(tc.forwarding, ",")}""".render)
     tc.stackSize.map(s => add("--stack-size", s))
     if(tc.stableTypeId) addKey("--stable-type-id")
-    add("--exts", st"""${(tc.exts, ":")}""".render)
+    if(tc.exts.nonEmpty) add("--exts", st"""${(tc.exts, ":")}""".render)
     if(tc.libOnly) addKey("--lib-only")
     if(tc.verbose) addKey("--verbose")
 
+    //args.foreach(p => println(p))
+    
     val sireum = Os.path(Os.env("PWD").get) / "bin" / "sireum"
 
     args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args

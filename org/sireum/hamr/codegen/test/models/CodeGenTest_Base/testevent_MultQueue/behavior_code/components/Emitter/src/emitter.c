@@ -17,7 +17,7 @@ void testevent_emitter_component_init(const int64_t *in_arg)
 void run_emitter(const int64_t *in_arg){
   int numEvents = counter % 7; // send 0 - 6 events per dispatch, consumer's queue size is 5
   for(int32_t i = 0; i < numEvents; i++) {
-    sb_e_write();
+    sb_e_enqueue();
   }
   printf("[Emitter] Sent %i events.\n", numEvents);
    

@@ -22,6 +22,7 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform),
         resultDir, None(), None())
       
+      platform = CodeGenPlatform.JVM
       test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
         baseOptions(platform = platform,
           embedArt = F),
@@ -32,14 +33,29 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform),
 
         resultDir, None(), None())
+
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}-Embed-Art-SharedMemory-Excludes", modelDir, model,
+        baseOptions(platform = platform,
+          excludeComponentImpl = T),
+        resultDir, None(), None())
       
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}-Embed-Art-MessageQueue", modelDir, model,
         baseOptions(platform = platform,
           ipc = CodeGenIpcMechanism.MessageQueue
         ),
-
         resultDir, None(), None())
+
+      platform = CodeGenPlatform.SeL4
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform,
+          excludeComponentImpl = T,
+          devicesAsThreads = F,
+          packageName = Some("building_control_gen_mixed")
+        ),
+        resultDir, None(), None())
+      
     }
     
     { // UAV_ALT tests
@@ -56,7 +72,7 @@ class CodeGenTest_Base extends CodeGenTest {
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform,
-        maxStringSize = 300),
+          maxStringSize = 300),
         resultDir, None(), uri)
       
       platform = CodeGenPlatform.MacOS
@@ -100,13 +116,12 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
       val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/ksu-proprietary/simple-uav-slang-example/uav-project-extern/src/aadl/ACT_Demo_Dec2018")
-      val description: Option[String] = Some("Using dummy transpiler")
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
           platform = platform,
           packageName = Some("uav_project_extern"),
-          camkesAuxCodeDirs = ISZ((modelDir / "aux_code").value),
+          maxStringSize = 300,
           devicesAsThreads = F
         ),
         resultDir, None(), uri)

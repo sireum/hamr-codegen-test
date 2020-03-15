@@ -14,6 +14,6 @@ void testevent_emitter_component_init(const int64_t *in_arg)
  */
 void run_emitter(const int64_t *in_arg)
 {
-    sb_e_write();
+    sb_e_enqueue();
     printf("[Emitter] Sent event.\n");
 }

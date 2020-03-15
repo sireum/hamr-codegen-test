@@ -13,8 +13,8 @@ void testevent_consumer_component_init(const int64_t *in_arg) {
 }
 
 void testevent_consumer_s_event_handler() {
-  int32_t receivedEvents = 0;
-  while(sb_s_read()) {
+  int32_t receivedEvents = 1; // 1 for the event that caused handler to be invoked
+  while(sb_s_dequeue()) {
     receivedEvents++;
   }
   
