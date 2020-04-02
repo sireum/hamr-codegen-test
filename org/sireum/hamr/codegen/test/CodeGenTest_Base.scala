@@ -117,6 +117,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
       val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/ksu-proprietary/simple-uav-slang-example/uav-project-extern/src/aadl/ACT_Demo_Dec2018")
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
           platform = platform,
@@ -125,6 +126,17 @@ class CodeGenTest_Base extends CodeGenTest {
           devicesAsThreads = F
         ),
         resultDir, None(), uri)
+
+      test(s"$name--${platform}-excludesImpl", modelDir, model,
+        baseOptions(
+          platform = platform,
+          packageName = Some("uav_project_extern"),
+          maxStringSize = 300,
+          devicesAsThreads = F,
+          excludeComponentImpl = T
+        ),
+        resultDir, None(), uri)
+      
     }
 
     { // Data port micro example
