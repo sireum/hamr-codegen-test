@@ -1,6 +1,5 @@
 #include <camkes.h>
 #include <stdio.h>
-#include <sb_proc_types.h>
 #include <sb_emitter_impl.h>
 
 int32_t counter = 0;

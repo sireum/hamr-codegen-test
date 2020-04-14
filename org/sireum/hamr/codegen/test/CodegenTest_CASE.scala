@@ -23,6 +23,7 @@ class CodegenTest_CASE extends CodeGenTest {
       gen("simple_uav", "UAV_UAV_Impl_Instance.json"),
       gen("test_data_port_periodic_fan_out", "test_data_port_periodic_fan_out_top_impl_Instance.json"),
       gen("test_data_port_periodic", "test_data_port_periodic_top_impl_Instance.json"),
+      gen("test_data_port_periodic_domains", "test_data_port_periodic_domains_top_impl_Instance.json"),
       gen("test_data_port", "test_data_port_top_impl_Instance.json"),
       gen("test_event_data_port_fan_out", "test_event_data_port_fan_out_top_impl_Instance.json"),
       gen("test_event_data_port", "test_event_data_port_top_impl_Instance.json"),

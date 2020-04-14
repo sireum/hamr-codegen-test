@@ -20,7 +20,7 @@ trait CodeGenTest extends TestSuite {
   def alwaysRunTranspiler: B = F
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("uav_alt_extern--SeL4")
+  def filters: ISZ[String] = ISZ("test_data")
   
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
