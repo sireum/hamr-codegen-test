@@ -12,14 +12,14 @@
             "type" : "Position",
             "uriOpt" : {
               "type" : "Some",
-              "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+              "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
             },
-            "beginLine" : 99,
+            "beginLine" : 86,
             "beginColumn" : 2,
-            "endLine" : 113,
+            "endLine" : 100,
             "endColumn" : 15,
-            "offset" : 3700,
-            "length" : 627
+            "offset" : 2409,
+            "length" : 515
           }
         }
       },
@@ -37,21 +37,21 @@
           "type" : "Component",
           "identifier" : {
             "type" : "Name",
-            "name" : ["top_impl_Instance", "source_process_component"],
+            "name" : ["top_impl_Instance", "src_process"],
             "pos" : {
               "type" : "Some",
               "value" : {
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                  "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                 },
-                "beginLine" : 102,
+                "beginLine" : 89,
                 "beginColumn" : 4,
-                "endLine" : 102,
-                "endColumn" : 58,
-                "offset" : 3780,
-                "length" : 54
+                "endLine" : 89,
+                "endColumn" : 41,
+                "offset" : 2489,
+                "length" : 37
               }
             }
           },
@@ -63,7 +63,7 @@
             "type" : "Some",
             "value" : {
               "type" : "Classifier",
-              "name" : "test_data_port_periodic_domains::source_process.impl"
+              "name" : "test_event_port_periodic_domains::emitter_p.impl"
             }
           },
           "features" : [
@@ -71,21 +71,21 @@
               "type" : "FeatureEnd",
               "identifier" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component", "write_port"],
+                "name" : ["top_impl_Instance", "src_process", "emit"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 36,
+                    "beginLine" : 29,
                     "beginColumn" : 4,
-                    "endLine" : 36,
-                    "endColumn" : 52,
-                    "offset" : 1404,
-                    "length" : 48
+                    "endLine" : 29,
+                    "endColumn" : 26,
+                    "offset" : 873,
+                    "length" : 22
                   }
                 }
               },
@@ -95,113 +95,12 @@
               },
               "category" : {
                 "type" : "FeatureCategory",
-                "value" : "DataPort"
+                "value" : "EventPort"
               },
               "classifier" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Classifier",
-                  "name" : "Base_Types::Integer_8"
-                }
+                "type" : "None"
               },
               "properties" : [
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "write_port", "Data_Model::Number_Representation"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 78,
-                        "beginColumn" : 4,
-                        "endLine" : 78,
-                        "endColumn" : 88,
-                        "offset" : 3653,
-                        "length" : 84
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ValueProp",
-                      "value" : "Signed"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "write_port", "Memory_Properties::Data_Size"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
-                        },
-                        "beginLine" : 91,
-                        "beginColumn" : 2,
-                        "endLine" : 92,
-                        "endColumn" : 137,
-                        "offset" : 4757,
-                        "length" : 152
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "UnitProp",
-                      "value" : "8.0",
-                      "unit" : {
-                        "type" : "Some",
-                        "value" : "bits"
-                      }
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "write_port", "Data_Model::Data_Representation"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 26,
-                        "beginColumn" : 4,
-                        "endLine" : 29,
-                        "endColumn" : 36,
-                        "offset" : 1108,
-                        "length" : 162
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ValueProp",
-                      "value" : "Integer"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                }
               ]
             }
           ],
@@ -210,21 +109,21 @@
               "type" : "Component",
               "identifier" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component", "source_thread_component"],
+                "name" : ["top_impl_Instance", "src_process", "src_thread"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 43,
+                    "beginLine" : 36,
                     "beginColumn" : 4,
-                    "endLine" : 43,
-                    "endColumn" : 55,
-                    "offset" : 1620,
-                    "length" : 51
+                    "endLine" : 36,
+                    "endColumn" : 39,
+                    "offset" : 1052,
+                    "length" : 35
                   }
                 }
               },
@@ -236,7 +135,7 @@
                 "type" : "Some",
                 "value" : {
                   "type" : "Classifier",
-                  "name" : "test_data_port_periodic_domains::source_thread.impl"
+                  "name" : "test_event_port_periodic_domains::emitter_t.impl"
                 }
               },
               "features" : [
@@ -244,21 +143,21 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port"],
+                    "name" : ["top_impl_Instance", "src_process", "src_thread", "emit"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                          "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                         },
-                        "beginLine" : 20,
+                        "beginLine" : 14,
                         "beginColumn" : 4,
-                        "endLine" : 20,
-                        "endColumn" : 52,
-                        "offset" : 793,
-                        "length" : 48
+                        "endLine" : 14,
+                        "endColumn" : 25,
+                        "offset" : 424,
+                        "length" : 21
                       }
                     }
                   },
@@ -268,118 +167,17 @@
                   },
                   "category" : {
                     "type" : "FeatureCategory",
-                    "value" : "DataPort"
+                    "value" : "EventPort"
                   },
                   "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::Integer_8"
-                    }
+                    "type" : "None"
                   },
                   "properties" : [
                     {
                       "type" : "Property",
                       "name" : {
                         "type" : "Name",
-                        "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port", "Data_Model::Number_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 78,
-                            "beginColumn" : 4,
-                            "endLine" : 78,
-                            "endColumn" : 88,
-                            "offset" : 3653,
-                            "length" : 84
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Signed"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port", "Memory_Properties::Data_Size"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
-                            },
-                            "beginLine" : 91,
-                            "beginColumn" : 2,
-                            "endLine" : 92,
-                            "endColumn" : 137,
-                            "offset" : 4757,
-                            "length" : 152
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "UnitProp",
-                          "value" : "8.0",
-                          "unit" : {
-                            "type" : "Some",
-                            "value" : "bits"
-                          }
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 26,
-                            "beginColumn" : 4,
-                            "endLine" : 29,
-                            "endColumn" : 36,
-                            "offset" : 1108,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Integer"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port", "Programming_Properties::Source_Text"],
+                        "name" : ["top_impl_Instance", "src_process", "src_thread", "emit", "Programming_Properties::Source_Text"],
                         "pos" : {
                           "type" : "Some",
                           "value" : {
@@ -400,7 +198,7 @@
                       "propertyValues" : [
                         {
                           "type" : "ValueProp",
-                          "value" : "behavior_code\/components\/source\/src\/source.c"
+                          "value" : "behavior_code\/components\/Emitter\/src\/emitter.c"
                         }
                       ],
                       "appliesTo" : [
@@ -420,7 +218,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "Deployment_Properties::Actual_Processor_Binding"],
+                    "name" : ["top_impl_Instance", "src_process", "src_thread", "Deployment_Properties::Actual_Processor_Binding"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -457,7 +255,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "Thread_Properties::Dispatch_Protocol"],
+                    "name" : ["top_impl_Instance", "src_process", "src_thread", "Thread_Properties::Dispatch_Protocol"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -488,7 +286,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "Timing_Properties::Period"],
+                    "name" : ["top_impl_Instance", "src_process", "src_thread", "Timing_Properties::Period"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -523,7 +321,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "Timing_Properties::Compute_Execution_Time"],
+                    "name" : ["top_impl_Instance", "src_process", "src_thread", "Timing_Properties::Compute_Execution_Time"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -569,38 +367,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "Programming_Properties::Source_Text"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
-                        },
-                        "beginLine" : 234,
-                        "beginColumn" : 2,
-                        "endLine" : 236,
-                        "endColumn" : 76,
-                        "offset" : 17037,
-                        "length" : 224
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ValueProp",
-                      "value" : "behavior_code\/components\/source\/src\/source.c"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "Programming_Properties::Initialize_Entrypoint_Source_Text"],
+                    "name" : ["top_impl_Instance", "src_process", "src_thread", "Programming_Properties::Initialize_Entrypoint_Source_Text"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -621,7 +388,7 @@
                   "propertyValues" : [
                     {
                       "type" : "ValueProp",
-                      "value" : "test_data_port_periodic_domains_source_component_init"
+                      "value" : "test_event_port_emitter_component_init"
                     }
                   ],
                   "appliesTo" : [
@@ -631,7 +398,38 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "Programming_Properties::Compute_Entrypoint_Source_Text"],
+                    "name" : ["top_impl_Instance", "src_process", "src_thread", "Programming_Properties::Source_Text"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                        },
+                        "beginLine" : 234,
+                        "beginColumn" : 2,
+                        "endLine" : 236,
+                        "endColumn" : 76,
+                        "offset" : 17037,
+                        "length" : 224
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "behavior_code\/components\/Emitter\/src\/emitter.c"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_impl_Instance", "src_process", "src_thread", "Programming_Properties::Compute_Entrypoint_Source_Text"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -652,7 +450,7 @@
                   "propertyValues" : [
                     {
                       "type" : "ValueProp",
-                      "value" : "test_data_port_periodic_domains_source_component_time_triggered"
+                      "value" : "run_emitter"
                     }
                   ],
                   "appliesTo" : [
@@ -710,21 +508,21 @@
               "type" : "Connection",
               "name" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component", "write_connection"],
+                "name" : ["top_impl_Instance", "src_process", "write_connection"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 45,
+                    "beginLine" : 38,
                     "beginColumn" : 4,
-                    "endLine" : 45,
-                    "endColumn" : 76,
-                    "offset" : 1689,
-                    "length" : 72
+                    "endLine" : 38,
+                    "endColumn" : 52,
+                    "offset" : 1105,
+                    "length" : 48
                   }
                 }
               },
@@ -733,21 +531,21 @@
                   "type" : "EndPoint",
                   "component" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component", "source_thread_component"],
+                    "name" : ["top_impl_Instance", "src_process", "src_thread"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                          "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                         },
-                        "beginLine" : 43,
+                        "beginLine" : 36,
                         "beginColumn" : 4,
-                        "endLine" : 43,
-                        "endColumn" : 55,
-                        "offset" : 1620,
-                        "length" : 51
+                        "endLine" : 36,
+                        "endColumn" : 39,
+                        "offset" : 1052,
+                        "length" : 35
                       }
                     }
                   },
@@ -755,21 +553,21 @@
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port"],
+                      "name" : ["top_impl_Instance", "src_process", "src_thread", "emit"],
                       "pos" : {
                         "type" : "Some",
                         "value" : {
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                            "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                           },
-                          "beginLine" : 20,
+                          "beginLine" : 14,
                           "beginColumn" : 4,
-                          "endLine" : 20,
-                          "endColumn" : 52,
-                          "offset" : 793,
-                          "length" : 48
+                          "endLine" : 14,
+                          "endColumn" : 25,
+                          "offset" : 424,
+                          "length" : 21
                         }
                       }
                     }
@@ -788,7 +586,7 @@
                   "type" : "EndPoint",
                   "component" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "source_process_component"],
+                    "name" : ["top_impl_Instance", "src_process"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -797,21 +595,21 @@
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["top_impl_Instance", "source_process_component", "write_port"],
+                      "name" : ["top_impl_Instance", "src_process", "emit"],
                       "pos" : {
                         "type" : "Some",
                         "value" : {
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                            "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                           },
-                          "beginLine" : 36,
+                          "beginLine" : 29,
                           "beginColumn" : 4,
-                          "endLine" : 36,
-                          "endColumn" : 52,
-                          "offset" : 1404,
-                          "length" : 48
+                          "endLine" : 29,
+                          "endColumn" : 26,
+                          "offset" : 873,
+                          "length" : 22
                         }
                       }
                     }
@@ -833,7 +631,7 @@
               "connectionInstances" : [
                 {
                   "type" : "Name",
-                  "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port -> destination_process_component", "destination_thread_component", "read_port"],
+                  "name" : ["top_impl_Instance", "src_process", "src_thread", "emit -> dst_process", "dst_thread", "consume"],
                   "pos" : {
                     "type" : "None"
                   }
@@ -850,7 +648,7 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component", "Deployment_Properties::Actual_Processor_Binding"],
+                "name" : ["top_impl_Instance", "src_process", "Deployment_Properties::Actual_Processor_Binding"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
@@ -887,7 +685,7 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component", "CASE_Scheduling::Domain"],
+                "name" : ["top_impl_Instance", "src_process", "CASE_Scheduling::Domain"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
@@ -967,21 +765,21 @@
           "type" : "Component",
           "identifier" : {
             "type" : "Name",
-            "name" : ["top_impl_Instance", "destination_process_component"],
+            "name" : ["top_impl_Instance", "dst_process"],
             "pos" : {
               "type" : "Some",
               "value" : {
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                  "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                 },
-                "beginLine" : 103,
+                "beginLine" : 90,
                 "beginColumn" : 4,
-                "endLine" : 103,
-                "endColumn" : 68,
-                "offset" : 3838,
-                "length" : 64
+                "endLine" : 90,
+                "endColumn" : 42,
+                "offset" : 2530,
+                "length" : 38
               }
             }
           },
@@ -993,7 +791,7 @@
             "type" : "Some",
             "value" : {
               "type" : "Classifier",
-              "name" : "test_data_port_periodic_domains::destination_process.impl"
+              "name" : "test_event_port_periodic_domains::consumer_p.impl"
             }
           },
           "features" : [
@@ -1001,21 +799,21 @@
               "type" : "FeatureEnd",
               "identifier" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component", "read_port"],
+                "name" : ["top_impl_Instance", "dst_process", "consume"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 71,
+                    "beginLine" : 60,
                     "beginColumn" : 4,
-                    "endLine" : 71,
-                    "endColumn" : 50,
-                    "offset" : 2830,
-                    "length" : 46
+                    "endLine" : 60,
+                    "endColumn" : 28,
+                    "offset" : 1784,
+                    "length" : 24
                   }
                 }
               },
@@ -1025,113 +823,12 @@
               },
               "category" : {
                 "type" : "FeatureCategory",
-                "value" : "DataPort"
+                "value" : "EventPort"
               },
               "classifier" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Classifier",
-                  "name" : "Base_Types::Integer_8"
-                }
+                "type" : "None"
               },
               "properties" : [
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "read_port", "Data_Model::Number_Representation"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 78,
-                        "beginColumn" : 4,
-                        "endLine" : 78,
-                        "endColumn" : 88,
-                        "offset" : 3653,
-                        "length" : 84
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ValueProp",
-                      "value" : "Signed"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "read_port", "Memory_Properties::Data_Size"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
-                        },
-                        "beginLine" : 91,
-                        "beginColumn" : 2,
-                        "endLine" : 92,
-                        "endColumn" : 137,
-                        "offset" : 4757,
-                        "length" : 152
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "UnitProp",
-                      "value" : "8.0",
-                      "unit" : {
-                        "type" : "Some",
-                        "value" : "bits"
-                      }
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "read_port", "Data_Model::Data_Representation"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 26,
-                        "beginColumn" : 4,
-                        "endLine" : 29,
-                        "endColumn" : 36,
-                        "offset" : 1108,
-                        "length" : 162
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ValueProp",
-                      "value" : "Integer"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                }
               ]
             }
           ],
@@ -1140,21 +837,21 @@
               "type" : "Component",
               "identifier" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component"],
+                "name" : ["top_impl_Instance", "dst_process", "dst_thread"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 78,
+                    "beginLine" : 67,
                     "beginColumn" : 4,
-                    "endLine" : 78,
-                    "endColumn" : 65,
-                    "offset" : 3054,
-                    "length" : 61
+                    "endLine" : 67,
+                    "endColumn" : 40,
+                    "offset" : 1967,
+                    "length" : 36
                   }
                 }
               },
@@ -1166,7 +863,7 @@
                 "type" : "Some",
                 "value" : {
                   "type" : "Classifier",
-                  "name" : "test_data_port_periodic_domains::destination_thread.impl"
+                  "name" : "test_event_port_periodic_domains::consumer_t.impl"
                 }
               },
               "features" : [
@@ -1174,21 +871,21 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "read_port"],
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread", "consume"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                          "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                         },
-                        "beginLine" : 55,
+                        "beginLine" : 43,
                         "beginColumn" : 4,
-                        "endLine" : 55,
-                        "endColumn" : 50,
-                        "offset" : 2181,
-                        "length" : 46
+                        "endLine" : 45,
+                        "endColumn" : 6,
+                        "offset" : 1209,
+                        "length" : 104
                       }
                     }
                   },
@@ -1198,118 +895,17 @@
                   },
                   "category" : {
                     "type" : "FeatureCategory",
-                    "value" : "DataPort"
+                    "value" : "EventPort"
                   },
                   "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::Integer_8"
-                    }
+                    "type" : "None"
                   },
                   "properties" : [
                     {
                       "type" : "Property",
                       "name" : {
                         "type" : "Name",
-                        "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "read_port", "Data_Model::Number_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 78,
-                            "beginColumn" : 4,
-                            "endLine" : 78,
-                            "endColumn" : 88,
-                            "offset" : 3653,
-                            "length" : 84
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Signed"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "read_port", "Memory_Properties::Data_Size"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
-                            },
-                            "beginLine" : 91,
-                            "beginColumn" : 2,
-                            "endLine" : 92,
-                            "endColumn" : 137,
-                            "offset" : 4757,
-                            "length" : 152
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "UnitProp",
-                          "value" : "8.0",
-                          "unit" : {
-                            "type" : "Some",
-                            "value" : "bits"
-                          }
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "read_port", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 26,
-                            "beginColumn" : 4,
-                            "endLine" : 29,
-                            "endColumn" : 36,
-                            "offset" : 1108,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Integer"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "read_port", "Programming_Properties::Source_Text"],
+                        "name" : ["top_impl_Instance", "dst_process", "dst_thread", "consume", "Programming_Properties::Source_Text"],
                         "pos" : {
                           "type" : "Some",
                           "value" : {
@@ -1330,7 +926,38 @@
                       "propertyValues" : [
                         {
                           "type" : "ValueProp",
-                          "value" : "behavior_code\/components\/destination\/src\/destination.c"
+                          "value" : "behavior_code\/components\/Consumer\/src\/consumer.c"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_impl_Instance", "dst_process", "dst_thread", "consume", "Programming_Properties::Compute_Entrypoint_Source_Text"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                            },
+                            "beginLine" : 71,
+                            "beginColumn" : 2,
+                            "endLine" : 72,
+                            "endColumn" : 79,
+                            "offset" : 5356,
+                            "length" : 121
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "periodic_thread_so_should_ignore"
                         }
                       ],
                       "appliesTo" : [
@@ -1350,7 +977,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "Deployment_Properties::Actual_Processor_Binding"],
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread", "Deployment_Properties::Actual_Processor_Binding"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -1387,7 +1014,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "Thread_Properties::Dispatch_Protocol"],
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread", "Thread_Properties::Dispatch_Protocol"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -1418,7 +1045,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "Timing_Properties::Period"],
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread", "Timing_Properties::Period"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -1453,7 +1080,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "Timing_Properties::Compute_Execution_Time"],
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread", "Timing_Properties::Compute_Execution_Time"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -1499,38 +1126,7 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "Programming_Properties::Source_Text"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
-                        },
-                        "beginLine" : 234,
-                        "beginColumn" : 2,
-                        "endLine" : 236,
-                        "endColumn" : 76,
-                        "offset" : 17037,
-                        "length" : 224
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ValueProp",
-                      "value" : "behavior_code\/components\/destination\/src\/destination.c"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "Programming_Properties::Initialize_Entrypoint_Source_Text"],
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread", "Programming_Properties::Initialize_Entrypoint_Source_Text"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -1551,7 +1147,7 @@
                   "propertyValues" : [
                     {
                       "type" : "ValueProp",
-                      "value" : "test_data_port_periodic_domains_destination_component_init"
+                      "value" : "test_event_port_consumer_component_init"
                     }
                   ],
                   "appliesTo" : [
@@ -1561,7 +1157,38 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "Programming_Properties::Compute_Entrypoint_Source_Text"],
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread", "Programming_Properties::Source_Text"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Programming_Properties.aadl"
+                        },
+                        "beginLine" : 234,
+                        "beginColumn" : 2,
+                        "endLine" : 236,
+                        "endColumn" : 76,
+                        "offset" : 17037,
+                        "length" : 224
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "behavior_code\/components\/Consumer\/src\/consumer.c"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread", "Programming_Properties::Compute_Entrypoint_Source_Text"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
@@ -1582,7 +1209,7 @@
                   "propertyValues" : [
                     {
                       "type" : "ValueProp",
-                      "value" : "test_data_port_periodic_domains_destination_component_time_triggered"
+                      "value" : "test_event_port_consumer_time_triggered_handler"
                     }
                   ],
                   "appliesTo" : [
@@ -1640,21 +1267,21 @@
               "type" : "Connection",
               "name" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component", "read_connection"],
+                "name" : ["top_impl_Instance", "dst_process", "read_connection"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 80,
+                    "beginLine" : 69,
                     "beginColumn" : 4,
-                    "endLine" : 80,
-                    "endColumn" : 78,
-                    "offset" : 3133,
-                    "length" : 74
+                    "endLine" : 69,
+                    "endColumn" : 57,
+                    "offset" : 2021,
+                    "length" : 53
                   }
                 }
               },
@@ -1663,7 +1290,7 @@
                   "type" : "EndPoint",
                   "component" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component"],
+                    "name" : ["top_impl_Instance", "dst_process"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -1672,21 +1299,21 @@
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["top_impl_Instance", "destination_process_component", "read_port"],
+                      "name" : ["top_impl_Instance", "dst_process", "consume"],
                       "pos" : {
                         "type" : "Some",
                         "value" : {
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                            "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                           },
-                          "beginLine" : 71,
+                          "beginLine" : 60,
                           "beginColumn" : 4,
-                          "endLine" : 71,
-                          "endColumn" : 50,
-                          "offset" : 2830,
-                          "length" : 46
+                          "endLine" : 60,
+                          "endColumn" : 28,
+                          "offset" : 1784,
+                          "length" : 24
                         }
                       }
                     }
@@ -1705,21 +1332,21 @@
                   "type" : "EndPoint",
                   "component" : {
                     "type" : "Name",
-                    "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component"],
+                    "name" : ["top_impl_Instance", "dst_process", "dst_thread"],
                     "pos" : {
                       "type" : "Some",
                       "value" : {
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                          "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 67,
                         "beginColumn" : 4,
-                        "endLine" : 78,
-                        "endColumn" : 65,
-                        "offset" : 3054,
-                        "length" : 61
+                        "endLine" : 67,
+                        "endColumn" : 40,
+                        "offset" : 1967,
+                        "length" : 36
                       }
                     }
                   },
@@ -1727,21 +1354,21 @@
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "read_port"],
+                      "name" : ["top_impl_Instance", "dst_process", "dst_thread", "consume"],
                       "pos" : {
                         "type" : "Some",
                         "value" : {
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                            "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                           },
-                          "beginLine" : 55,
+                          "beginLine" : 43,
                           "beginColumn" : 4,
-                          "endLine" : 55,
-                          "endColumn" : 50,
-                          "offset" : 2181,
-                          "length" : 46
+                          "endLine" : 45,
+                          "endColumn" : 6,
+                          "offset" : 1209,
+                          "length" : 104
                         }
                       }
                     }
@@ -1763,7 +1390,7 @@
               "connectionInstances" : [
                 {
                   "type" : "Name",
-                  "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port -> destination_process_component", "destination_thread_component", "read_port"],
+                  "name" : ["top_impl_Instance", "src_process", "src_thread", "emit -> dst_process", "dst_thread", "consume"],
                   "pos" : {
                     "type" : "None"
                   }
@@ -1780,7 +1407,7 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component", "Deployment_Properties::Actual_Processor_Binding"],
+                "name" : ["top_impl_Instance", "dst_process", "Deployment_Properties::Actual_Processor_Binding"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
@@ -1817,7 +1444,7 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component", "CASE_Scheduling::Domain"],
+                "name" : ["top_impl_Instance", "dst_process", "CASE_Scheduling::Domain"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
@@ -1904,13 +1531,13 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                  "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                 },
-                "beginLine" : 101,
+                "beginLine" : 88,
                 "beginColumn" : 4,
-                "endLine" : 101,
+                "endLine" : 88,
                 "endColumn" : 30,
-                "offset" : 3750,
+                "offset" : 2459,
                 "length" : 26
               }
             }
@@ -1923,7 +1550,7 @@
             "type" : "Some",
             "value" : {
               "type" : "Classifier",
-              "name" : "test_data_port_periodic_domains::proc.impl"
+              "name" : "test_event_port_periodic_domains::proc.impl"
             }
           },
           "features" : [
@@ -2129,14 +1756,14 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                  "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                 },
-                "beginLine" : 105,
+                "beginLine" : 92,
                 "beginColumn" : 4,
-                "endLine" : 105,
-                "endColumn" : 107,
-                "offset" : 3920,
-                "length" : 103
+                "endLine" : 92,
+                "endColumn" : 69,
+                "offset" : 2586,
+                "length" : 65
               }
             }
           },
@@ -2145,21 +1772,21 @@
               "type" : "EndPoint",
               "component" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component"],
+                "name" : ["top_impl_Instance", "src_process"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 102,
+                    "beginLine" : 89,
                     "beginColumn" : 4,
-                    "endLine" : 102,
-                    "endColumn" : 58,
-                    "offset" : 3780,
-                    "length" : 54
+                    "endLine" : 89,
+                    "endColumn" : 41,
+                    "offset" : 2489,
+                    "length" : 37
                   }
                 }
               },
@@ -2167,21 +1794,21 @@
                 "type" : "Some",
                 "value" : {
                   "type" : "Name",
-                  "name" : ["top_impl_Instance", "source_process_component", "write_port"],
+                  "name" : ["top_impl_Instance", "src_process", "emit"],
                   "pos" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                        "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                       },
-                      "beginLine" : 36,
+                      "beginLine" : 29,
                       "beginColumn" : 4,
-                      "endLine" : 36,
-                      "endColumn" : 52,
-                      "offset" : 1404,
-                      "length" : 48
+                      "endLine" : 29,
+                      "endColumn" : 26,
+                      "offset" : 873,
+                      "length" : 22
                     }
                   }
                 }
@@ -2200,21 +1827,21 @@
               "type" : "EndPoint",
               "component" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component"],
+                "name" : ["top_impl_Instance", "dst_process"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 103,
+                    "beginLine" : 90,
                     "beginColumn" : 4,
-                    "endLine" : 103,
-                    "endColumn" : 68,
-                    "offset" : 3838,
-                    "length" : 64
+                    "endLine" : 90,
+                    "endColumn" : 42,
+                    "offset" : 2530,
+                    "length" : 38
                   }
                 }
               },
@@ -2222,21 +1849,21 @@
                 "type" : "Some",
                 "value" : {
                   "type" : "Name",
-                  "name" : ["top_impl_Instance", "destination_process_component", "read_port"],
+                  "name" : ["top_impl_Instance", "dst_process", "consume"],
                   "pos" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                        "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                       },
-                      "beginLine" : 71,
+                      "beginLine" : 60,
                       "beginColumn" : 4,
-                      "endLine" : 71,
-                      "endColumn" : 50,
-                      "offset" : 2830,
-                      "length" : 46
+                      "endLine" : 60,
+                      "endColumn" : 28,
+                      "offset" : 1784,
+                      "length" : 24
                     }
                   }
                 }
@@ -2258,7 +1885,7 @@
           "connectionInstances" : [
             {
               "type" : "Name",
-              "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port -> destination_process_component", "destination_thread_component", "read_port"],
+              "name" : ["top_impl_Instance", "src_process", "src_thread", "emit -> dst_process", "dst_thread", "consume"],
               "pos" : {
                 "type" : "None"
               }
@@ -2273,21 +1900,21 @@
           "type" : "ConnectionInstance",
           "name" : {
             "type" : "Name",
-            "name" : ["top_impl_Instance", "source_process_component.source_thread_component.write_port -> destination_process_component.destination_thread_component.read_port"],
+            "name" : ["top_impl_Instance", "src_process.src_thread.emit -> dst_process.dst_thread.consume"],
             "pos" : {
               "type" : "Some",
               "value" : {
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                  "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                 },
-                "beginLine" : 45,
+                "beginLine" : 38,
                 "beginColumn" : 4,
-                "endLine" : 45,
-                "endColumn" : 76,
-                "offset" : 1689,
-                "length" : 72
+                "endLine" : 38,
+                "endColumn" : 52,
+                "offset" : 1105,
+                "length" : 48
               }
             }
           },
@@ -2295,21 +1922,21 @@
             "type" : "EndPoint",
             "component" : {
               "type" : "Name",
-              "name" : ["top_impl_Instance", "source_process_component", "source_thread_component"],
+              "name" : ["top_impl_Instance", "src_process", "src_thread"],
               "pos" : {
                 "type" : "Some",
                 "value" : {
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                    "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                   },
-                  "beginLine" : 43,
+                  "beginLine" : 36,
                   "beginColumn" : 4,
-                  "endLine" : 43,
-                  "endColumn" : 55,
-                  "offset" : 1620,
-                  "length" : 51
+                  "endLine" : 36,
+                  "endColumn" : 39,
+                  "offset" : 1052,
+                  "length" : 35
                 }
               }
             },
@@ -2317,21 +1944,21 @@
               "type" : "Some",
               "value" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component", "source_thread_component", "write_port"],
+                "name" : ["top_impl_Instance", "src_process", "src_thread", "emit"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 20,
+                    "beginLine" : 14,
                     "beginColumn" : 4,
-                    "endLine" : 20,
-                    "endColumn" : 52,
-                    "offset" : 793,
-                    "length" : 48
+                    "endLine" : 14,
+                    "endColumn" : 25,
+                    "offset" : 424,
+                    "length" : 21
                   }
                 }
               }
@@ -2348,21 +1975,21 @@
             "type" : "EndPoint",
             "component" : {
               "type" : "Name",
-              "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component"],
+              "name" : ["top_impl_Instance", "dst_process", "dst_thread"],
               "pos" : {
                 "type" : "Some",
                 "value" : {
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                    "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                   },
-                  "beginLine" : 78,
+                  "beginLine" : 67,
                   "beginColumn" : 4,
-                  "endLine" : 78,
-                  "endColumn" : 65,
-                  "offset" : 3054,
-                  "length" : 61
+                  "endLine" : 67,
+                  "endColumn" : 40,
+                  "offset" : 1967,
+                  "length" : 36
                 }
               }
             },
@@ -2370,21 +1997,21 @@
               "type" : "Some",
               "value" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component", "destination_thread_component", "read_port"],
+                "name" : ["top_impl_Instance", "dst_process", "dst_thread", "consume"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 55,
+                    "beginLine" : 43,
                     "beginColumn" : 4,
-                    "endLine" : 55,
-                    "endColumn" : 50,
-                    "offset" : 2181,
-                    "length" : 46
+                    "endLine" : 45,
+                    "endColumn" : 6,
+                    "offset" : 1209,
+                    "length" : 104
                   }
                 }
               }
@@ -2406,41 +2033,41 @@
               "type" : "ConnectionReference",
               "name" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component", "write_connection"],
+                "name" : ["top_impl_Instance", "src_process", "write_connection"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 45,
+                    "beginLine" : 38,
                     "beginColumn" : 4,
-                    "endLine" : 45,
-                    "endColumn" : 76,
-                    "offset" : 1689,
-                    "length" : 72
+                    "endLine" : 38,
+                    "endColumn" : 52,
+                    "offset" : 1105,
+                    "length" : 48
                   }
                 }
               },
               "context" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "source_process_component"],
+                "name" : ["top_impl_Instance", "src_process"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 102,
+                    "beginLine" : 89,
                     "beginColumn" : 4,
-                    "endLine" : 102,
-                    "endColumn" : 58,
-                    "offset" : 3780,
-                    "length" : 54
+                    "endLine" : 89,
+                    "endColumn" : 41,
+                    "offset" : 2489,
+                    "length" : 37
                   }
                 }
               },
@@ -2457,14 +2084,14 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 105,
+                    "beginLine" : 92,
                     "beginColumn" : 4,
-                    "endLine" : 105,
-                    "endColumn" : 107,
-                    "offset" : 3920,
-                    "length" : 103
+                    "endLine" : 92,
+                    "endColumn" : 69,
+                    "offset" : 2586,
+                    "length" : 65
                   }
                 }
               },
@@ -2477,14 +2104,14 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 99,
+                    "beginLine" : 86,
                     "beginColumn" : 2,
-                    "endLine" : 113,
+                    "endLine" : 100,
                     "endColumn" : 15,
-                    "offset" : 3700,
-                    "length" : 627
+                    "offset" : 2409,
+                    "length" : 515
                   }
                 }
               },
@@ -2494,41 +2121,41 @@
               "type" : "ConnectionReference",
               "name" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component", "read_connection"],
+                "name" : ["top_impl_Instance", "dst_process", "read_connection"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 80,
+                    "beginLine" : 69,
                     "beginColumn" : 4,
-                    "endLine" : 80,
-                    "endColumn" : 78,
-                    "offset" : 3133,
-                    "length" : 74
+                    "endLine" : 69,
+                    "endColumn" : 57,
+                    "offset" : 2021,
+                    "length" : 53
                   }
                 }
               },
               "context" : {
                 "type" : "Name",
-                "name" : ["top_impl_Instance", "destination_process_component"],
+                "name" : ["top_impl_Instance", "dst_process"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/test_data_port_periodic_domains\/test_data_port_periodic_domains.aadl"
+                      "value" : "\/test_event_port_periodic_domains\/test_event_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 103,
+                    "beginLine" : 90,
                     "beginColumn" : 4,
-                    "endLine" : 103,
-                    "endColumn" : 68,
-                    "offset" : 3838,
-                    "length" : 64
+                    "endLine" : 90,
+                    "endColumn" : 42,
+                    "offset" : 2530,
+                    "length" : 38
                   }
                 }
               },
@@ -2625,108 +2252,5 @@
   "annexLib" : [
   ],
   "dataComponents" : [
-    {
-      "type" : "Component",
-      "identifier" : {
-        "type" : "Name",
-        "name" : [],
-        "pos" : {
-          "type" : "None"
-        }
-      },
-      "category" : {
-        "type" : "ComponentCategory",
-        "value" : "Data"
-      },
-      "classifier" : {
-        "type" : "Some",
-        "value" : {
-          "type" : "Classifier",
-          "name" : "Base_Types::Integer_8"
-        }
-      },
-      "features" : [
-      ],
-      "subComponents" : [
-      ],
-      "connections" : [
-      ],
-      "connectionInstances" : [
-      ],
-      "properties" : [
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Data_Model::Number_Representation"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                },
-                "beginLine" : 78,
-                "beginColumn" : 4,
-                "endLine" : 78,
-                "endColumn" : 88,
-                "offset" : 3653,
-                "length" : 84
-              }
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "ValueProp",
-              "value" : "Signed"
-            }
-          ],
-          "appliesTo" : [
-          ]
-        },
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Memory_Properties::Data_Size"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/org.osate.workspace\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
-                },
-                "beginLine" : 91,
-                "beginColumn" : 2,
-                "endLine" : 92,
-                "endColumn" : 137,
-                "offset" : 4757,
-                "length" : 152
-              }
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "UnitProp",
-              "value" : "8.0",
-              "unit" : {
-                "type" : "Some",
-                "value" : "bits"
-              }
-            }
-          ],
-          "appliesTo" : [
-          ]
-        }
-      ],
-      "flows" : [
-      ],
-      "modes" : [
-      ],
-      "annexes" : [
-      ]
-    }
   ]
 }
