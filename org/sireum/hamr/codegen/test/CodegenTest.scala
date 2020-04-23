@@ -19,6 +19,8 @@ trait CodeGenTest extends TestSuite {
   def delResultDirIfEqual: B = F
   def alwaysRunTranspiler: B = F
 
+  def ignoreBuildSbtChanges: B = F
+  
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("test_data")
   
@@ -135,7 +137,7 @@ trait CodeGenTest extends TestSuite {
       
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
-        allEqual &= r._2 == e
+        allEqual &= { if(ignoreBuildSbtChanges && r._1.native.endsWith("build.sbt")) T else r._2 == e }
       } else if(!generateExpected) {
         allEqual = F
         expectedMap.map.keySet.elements.foreach(p => println(p))
