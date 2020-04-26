@@ -1,7 +1,7 @@
 /* testsubprogram/components/sender/src/sender */
 
 #include <camkes.h>
-#include <sb_proc_types.h>
+#include <sb_types.h>
 #include "../includes/sb_sender_impl.h"
 
 void sender_init(const int64_t *arg){

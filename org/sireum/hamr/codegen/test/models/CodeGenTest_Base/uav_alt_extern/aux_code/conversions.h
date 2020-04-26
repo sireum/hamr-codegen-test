@@ -2,7 +2,7 @@
 #define CONVERSION_H
 
 #include <all.h>
-#include <sb_PROC_HW_types.h>
+#include <sb_types.h>
 
 void convertTo_bool(uav_project_extern_Base_Types_Boolean_Payload src, bool* dst);
 void convertTo_SW__Command_Impl(uav_project_extern_SW_Command_Impl_Payload src, SW__Command_Impl* dst);

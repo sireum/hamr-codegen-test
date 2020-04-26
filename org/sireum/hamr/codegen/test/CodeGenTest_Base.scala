@@ -52,6 +52,7 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform,
           excludeComponentImpl = T,
           devicesAsThreads = F,
+          maxStringSize = 300,
           packageName = Some("building_control_gen_mixed")
         ),
         resultDir, None(), None())

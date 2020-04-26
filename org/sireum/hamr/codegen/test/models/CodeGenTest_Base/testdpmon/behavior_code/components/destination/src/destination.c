@@ -2,7 +2,7 @@
 
 #include <camkes.h>
 #include <stdio.h>
-#include <sb_proc_types.h>
+#include <sb_types.h>
 #include <sb_destination_t_impl.h>
 
 void testdpmon_destination_component_init(const int64_t *in_arg)

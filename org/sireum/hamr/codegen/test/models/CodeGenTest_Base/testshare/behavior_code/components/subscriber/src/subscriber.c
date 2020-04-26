@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <camkes.h>
 #include <sb_subscriber_impl.h>
-#include <sb_proc_types.h>
+#include <sb_types.h>
 
 void testshare_subscriber_component_init(const int64_t *arg) {
     printf("testshare_subscriber_component_init called\n");

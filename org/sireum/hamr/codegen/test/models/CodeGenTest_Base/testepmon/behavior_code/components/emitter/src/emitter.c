@@ -2,7 +2,7 @@
 
 #include <camkes.h>
 #include <stdio.h>
-#include <sb_proc_types.h>
+#include <sb_types.h>
 #include <sb_emitter_t_impl.h>
 
 static int8_t _value;

@@ -2,7 +2,7 @@
 
 #include <camkes.h>
 #include <stdio.h>
-#include <sb_proc_types.h>
+#include <sb_types.h>
 #include <sb_consumer_t_impl.h>
 
 void testepmon_consumer_component_init(const int64_t *in_arg)

@@ -19,8 +19,8 @@ trait CodeGenTest extends TestSuite {
   def delResultDirIfEqual: B = F
   def alwaysRunTranspiler: B = F
 
-  def ignoreBuildSbtChanges: B = F
-  
+  def ignoreBuildSbtChanges: B = F // ignore build.sbt changes due to build.properties updates 
+    
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("test_data")
   
@@ -48,9 +48,10 @@ trait CodeGenTest extends TestSuite {
     val rootTestOutputDir = if(resultDir.nonEmpty) rootResultDir / resultDir.get / testName else rootResultDir / testName
     val expectedDir = rootTestOutputDir / "expected" 
     val resultsDir = rootTestOutputDir / "results"
-
+    val slangOutputDir = resultsDir / testName 
+    
     var _ops = ops(
-      slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some((resultsDir / testName).canon.value),
+      slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some(slangOutputDir.canon.value),
       writeOutResources = T
     )
     
@@ -161,19 +162,10 @@ trait CodeGenTest extends TestSuite {
     if(isSeL4(ops)) {
       camkesAppsDir() match {
         case Some(x) =>
-          val dir = Os.path(x)
-          if (dir.exists) {
-            for (r <- resultMap.map.entries) {
-              val p = Os.path(s"${dir.value}/hamr_${r._1}").canon
-              p.writeOver(r._2.content)
-              if(r._2.makeExecutable){
-                p.chmod("700")
-              }
-            }
-            println(s"Copied CAmkES code to ${dir.value}")
-          } else {
-            Console.err.println(s"${CodeGenTest.CAMKES_APPS_DIR}: ${x} does not exist")
-          }
+          val camkesOutDir = Os.path(x) / s"hamr_${testName}"
+          camkesOutDir.removeAll()
+          camkesOutDir.mklink(slangOutputDir)
+          println(s"Created symlink to ${camkesOutDir.value}")
         case _ =>
       }
     }

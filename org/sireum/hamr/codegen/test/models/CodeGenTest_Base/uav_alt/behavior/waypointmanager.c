@@ -1,5 +1,5 @@
 #include <camkes.h>
-#include <sb_PROC_HW_types.h>
+#include <sb_types.h>
 #include <sb_WaypointManager_Impl.h>
 #include <assert.h>
 #include <string.h>

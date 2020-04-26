@@ -1,5 +1,5 @@
 #include <camkes.h>
-#include <sb_PROC_HW_types.h>
+#include <sb_types.h>
 #include <sb_FlightPlanner_Impl.h>
 #include <assert.h>
 
