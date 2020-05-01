@@ -19,8 +19,9 @@ trait CodeGenTest extends TestSuite {
   def delResultDirIfEqual: B = F
   def alwaysRunTranspiler: B = F
 
-  def ignoreBuildSbtChanges: B = F // ignore build.sbt changes due to build.properties updates 
-    
+  def ignoreBuildSbtChanges: B = F // temporarily ignore build.sbt changes due to build.properties updates
+  def ignoreTranspileCmakeChanges: B = T // organization of transpiler generated CMakeLists.txt artifacts can differ
+
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("test_data")
   
@@ -138,7 +139,11 @@ trait CodeGenTest extends TestSuite {
       
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
-        allEqual &= { if(ignoreBuildSbtChanges && r._1.native.endsWith("build.sbt")) T else r._2 == e }
+        allEqual &= {
+          var ignoreFile = ignoreBuildSbtChanges && r._1.native.endsWith("build.sbt")
+          ignoreFile |= ignoreTranspileCmakeChanges && r._1.native.endsWith("CMakeLists.txt") && r._2.content.native.contains("HAMR_LIB_")
+          ignoreFile || r._2 == e
+        }
       } else if(!generateExpected) {
         allEqual = F
         expectedMap.map.keySet.elements.foreach(p => println(p))
@@ -247,7 +252,7 @@ object CodeGenTest {
 
   def writeExpected(resultMap: TestResult, expected: Os.Path) = {
     if(outputFormat == "json") {
-      expected.writeOver(util.JSON.fromTestResult(resultMap, T))
+      expected.writeOver(util.JSON.fromTestResult(resultMap, F))
     } 
     else if(outputFormat == "msgpack") {
       val r = util.MsgPack.fromTestResult(resultMap, T)
