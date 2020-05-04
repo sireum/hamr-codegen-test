@@ -322,5 +322,61 @@ class CodeGenTest_Base extends CodeGenTest {
         resultDir, None(), None()
       )
     }
+
+    { // producer filter consumer periodic
+      val name = "producer_filter_consumer_periodic"
+      val modelDir = modelsDir / name
+      val model = modelDir / ".slang" / "PFC_PFC_Sys_Impl_Instance.json"
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      val packageName: Option[String] = Some("pfc_project")
+
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(
+          platform = platform,
+          packageName = packageName,
+          maxStringSize = 300,
+          devicesAsThreads = F
+        ),
+        resultDir, None(), None())
+
+      test(s"$name--${platform}-excludesImpl", modelDir, model,
+        baseOptions(
+          platform = platform,
+          packageName = packageName,
+          maxStringSize = 300,
+          devicesAsThreads = F,
+          excludeComponentImpl = T
+        ),
+        resultDir, None(), None())
+    }
+
+    { // producer filter consumer periodic
+      val name = "producer_filter_consumer_sporadic"
+      val modelDir = modelsDir / name
+      val model = modelDir / ".slang" / "PFC_PFC_Sys_Impl_Instance.json"
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      val packageName: Option[String] = Some("pfc_project")
+
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(
+          platform = platform,
+          packageName = packageName,
+          maxStringSize = 300,
+          devicesAsThreads = F
+        ),
+        resultDir, None(), None())
+
+      test(s"$name--${platform}-excludesImpl", modelDir, model,
+        baseOptions(
+          platform = platform,
+          packageName = packageName,
+          maxStringSize = 300,
+          devicesAsThreads = F,
+          excludeComponentImpl = T
+        ),
+        resultDir, None(), None())
+    }
   }
 }
