@@ -12,14 +12,14 @@
             "type" : "Position",
             "uriOpt" : {
               "type" : "Some",
-              "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+              "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
             },
-            "beginLine" : 27,
+            "beginLine" : 28,
             "beginColumn" : 2,
-            "endLine" : 39,
+            "endLine" : 40,
             "endColumn" : 19,
-            "offset" : 576,
-            "length" : 365
+            "offset" : 612,
+            "length" : 359
           }
         }
       },
@@ -44,13 +44,13 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                  "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                 },
-                "beginLine" : 29,
+                "beginLine" : 30,
                 "beginColumn" : 4,
-                "endLine" : 29,
+                "endLine" : 30,
                 "endColumn" : 32,
-                "offset" : 630,
+                "offset" : 666,
                 "length" : 28
               }
             }
@@ -80,13 +80,13 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                      "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                     },
-                    "beginLine" : 46,
+                    "beginLine" : 47,
                     "beginColumn" : 4,
-                    "endLine" : 46,
+                    "endLine" : 47,
                     "endColumn" : 30,
-                    "offset" : 1034,
+                    "offset" : 1064,
                     "length" : 26
                   }
                 }
@@ -114,13 +114,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 56,
+                        "beginLine" : 57,
                         "beginColumn" : 4,
-                        "endLine" : 56,
+                        "endLine" : 57,
                         "endColumn" : 43,
-                        "offset" : 1295,
+                        "offset" : 1325,
                         "length" : 39
                       }
                     }
@@ -405,13 +405,13 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                      "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                     },
-                    "beginLine" : 47,
+                    "beginLine" : 48,
                     "beginColumn" : 4,
-                    "endLine" : 47,
+                    "endLine" : 48,
                     "endColumn" : 26,
-                    "offset" : 1064,
+                    "offset" : 1094,
                     "length" : 22
                   }
                 }
@@ -439,13 +439,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 66,
+                        "beginLine" : 67,
                         "beginColumn" : 4,
-                        "endLine" : 68,
+                        "endLine" : 69,
                         "endColumn" : 6,
-                        "offset" : 1537,
+                        "offset" : 1564,
                         "length" : 96
                       }
                     }
@@ -609,13 +609,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 69,
+                        "beginLine" : 70,
                         "beginColumn" : 4,
-                        "endLine" : 69,
+                        "endLine" : 70,
                         "endColumn" : 45,
-                        "offset" : 1637,
+                        "offset" : 1664,
                         "length" : 41
                       }
                     }
@@ -865,13 +865,13 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                      "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                     },
-                    "beginLine" : 48,
+                    "beginLine" : 49,
                     "beginColumn" : 4,
-                    "endLine" : 48,
+                    "endLine" : 49,
                     "endColumn" : 30,
-                    "offset" : 1090,
+                    "offset" : 1120,
                     "length" : 26
                   }
                 }
@@ -899,13 +899,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 80,
+                        "endLine" : 81,
                         "endColumn" : 6,
-                        "offset" : 1825,
+                        "offset" : 1846,
                         "length" : 94
                       }
                     }
@@ -1191,13 +1191,13 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                      "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                     },
-                    "beginLine" : 50,
+                    "beginLine" : 51,
                     "beginColumn" : 4,
-                    "endLine" : 50,
+                    "endLine" : 51,
                     "endColumn" : 56,
-                    "offset" : 1134,
+                    "offset" : 1164,
                     "length" : 52
                   }
                 }
@@ -1214,13 +1214,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 46,
+                        "beginLine" : 47,
                         "beginColumn" : 4,
-                        "endLine" : 46,
+                        "endLine" : 47,
                         "endColumn" : 30,
-                        "offset" : 1034,
+                        "offset" : 1064,
                         "length" : 26
                       }
                     }
@@ -1236,13 +1236,13 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                            "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                           },
-                          "beginLine" : 56,
+                          "beginLine" : 57,
                           "beginColumn" : 4,
-                          "endLine" : 56,
+                          "endLine" : 57,
                           "endColumn" : 43,
-                          "offset" : 1295,
+                          "offset" : 1325,
                           "length" : 39
                         }
                       }
@@ -1269,13 +1269,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 47,
+                        "beginLine" : 48,
                         "beginColumn" : 4,
-                        "endLine" : 47,
+                        "endLine" : 48,
                         "endColumn" : 26,
-                        "offset" : 1064,
+                        "offset" : 1094,
                         "length" : 22
                       }
                     }
@@ -1291,13 +1291,13 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                            "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                           },
-                          "beginLine" : 66,
+                          "beginLine" : 67,
                           "beginColumn" : 4,
-                          "endLine" : 68,
+                          "endLine" : 69,
                           "endColumn" : 6,
-                          "offset" : 1537,
+                          "offset" : 1564,
                           "length" : 96
                         }
                       }
@@ -1340,13 +1340,13 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                      "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                     },
-                    "beginLine" : 51,
+                    "beginLine" : 52,
                     "beginColumn" : 4,
-                    "endLine" : 51,
+                    "endLine" : 52,
                     "endColumn" : 56,
-                    "offset" : 1190,
+                    "offset" : 1220,
                     "length" : 52
                   }
                 }
@@ -1363,13 +1363,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 47,
+                        "beginLine" : 48,
                         "beginColumn" : 4,
-                        "endLine" : 47,
+                        "endLine" : 48,
                         "endColumn" : 26,
-                        "offset" : 1064,
+                        "offset" : 1094,
                         "length" : 22
                       }
                     }
@@ -1385,13 +1385,13 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                            "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                           },
-                          "beginLine" : 69,
+                          "beginLine" : 70,
                           "beginColumn" : 4,
-                          "endLine" : 69,
+                          "endLine" : 70,
                           "endColumn" : 45,
-                          "offset" : 1637,
+                          "offset" : 1664,
                           "length" : 41
                         }
                       }
@@ -1418,13 +1418,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 48,
+                        "beginLine" : 49,
                         "beginColumn" : 4,
-                        "endLine" : 48,
+                        "endLine" : 49,
                         "endColumn" : 30,
-                        "offset" : 1090,
+                        "offset" : 1120,
                         "length" : 26
                       }
                     }
@@ -1440,13 +1440,13 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                            "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                           },
-                          "beginLine" : 78,
+                          "beginLine" : 79,
                           "beginColumn" : 4,
-                          "endLine" : 80,
+                          "endLine" : 81,
                           "endColumn" : 6,
-                          "offset" : 1825,
+                          "offset" : 1846,
                           "length" : 94
                         }
                       }
@@ -1491,13 +1491,13 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                      "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                     },
-                    "beginLine" : 50,
+                    "beginLine" : 51,
                     "beginColumn" : 4,
-                    "endLine" : 50,
+                    "endLine" : 51,
                     "endColumn" : 56,
-                    "offset" : 1134,
+                    "offset" : 1164,
                     "length" : 52
                   }
                 }
@@ -1513,13 +1513,13 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                        "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                       },
-                      "beginLine" : 46,
+                      "beginLine" : 47,
                       "beginColumn" : 4,
-                      "endLine" : 46,
+                      "endLine" : 47,
                       "endColumn" : 30,
-                      "offset" : 1034,
+                      "offset" : 1064,
                       "length" : 26
                     }
                   }
@@ -1535,13 +1535,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 56,
+                        "beginLine" : 57,
                         "beginColumn" : 4,
-                        "endLine" : 56,
+                        "endLine" : 57,
                         "endColumn" : 43,
-                        "offset" : 1295,
+                        "offset" : 1325,
                         "length" : 39
                       }
                     }
@@ -1566,13 +1566,13 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                        "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                       },
-                      "beginLine" : 47,
+                      "beginLine" : 48,
                       "beginColumn" : 4,
-                      "endLine" : 47,
+                      "endLine" : 48,
                       "endColumn" : 26,
-                      "offset" : 1064,
+                      "offset" : 1094,
                       "length" : 22
                     }
                   }
@@ -1588,13 +1588,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 66,
+                        "beginLine" : 67,
                         "beginColumn" : 4,
-                        "endLine" : 68,
+                        "endLine" : 69,
                         "endColumn" : 6,
-                        "offset" : 1537,
+                        "offset" : 1564,
                         "length" : 96
                       }
                     }
@@ -1624,13 +1624,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 50,
+                        "beginLine" : 51,
                         "beginColumn" : 4,
-                        "endLine" : 50,
+                        "endLine" : 51,
                         "endColumn" : 56,
-                        "offset" : 1134,
+                        "offset" : 1164,
                         "length" : 52
                       }
                     }
@@ -1644,13 +1644,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 29,
+                        "beginLine" : 30,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 32,
-                        "offset" : 630,
+                        "offset" : 666,
                         "length" : 28
                       }
                     }
@@ -1672,13 +1672,13 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                      "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                     },
-                    "beginLine" : 51,
+                    "beginLine" : 52,
                     "beginColumn" : 4,
-                    "endLine" : 51,
+                    "endLine" : 52,
                     "endColumn" : 56,
-                    "offset" : 1190,
+                    "offset" : 1220,
                     "length" : 52
                   }
                 }
@@ -1694,13 +1694,13 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                        "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                       },
-                      "beginLine" : 47,
+                      "beginLine" : 48,
                       "beginColumn" : 4,
-                      "endLine" : 47,
+                      "endLine" : 48,
                       "endColumn" : 26,
-                      "offset" : 1064,
+                      "offset" : 1094,
                       "length" : 22
                     }
                   }
@@ -1716,13 +1716,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 69,
+                        "beginLine" : 70,
                         "beginColumn" : 4,
-                        "endLine" : 69,
+                        "endLine" : 70,
                         "endColumn" : 45,
-                        "offset" : 1637,
+                        "offset" : 1664,
                         "length" : 41
                       }
                     }
@@ -1747,13 +1747,13 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                        "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                       },
-                      "beginLine" : 48,
+                      "beginLine" : 49,
                       "beginColumn" : 4,
-                      "endLine" : 48,
+                      "endLine" : 49,
                       "endColumn" : 30,
-                      "offset" : 1090,
+                      "offset" : 1120,
                       "length" : 26
                     }
                   }
@@ -1769,13 +1769,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 80,
+                        "endLine" : 81,
                         "endColumn" : 6,
-                        "offset" : 1825,
+                        "offset" : 1846,
                         "length" : 94
                       }
                     }
@@ -1805,13 +1805,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 51,
+                        "beginLine" : 52,
                         "beginColumn" : 4,
-                        "endLine" : 51,
+                        "endLine" : 52,
                         "endColumn" : 56,
-                        "offset" : 1190,
+                        "offset" : 1220,
                         "length" : 52
                       }
                     }
@@ -1825,13 +1825,13 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                          "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                         },
-                        "beginLine" : 29,
+                        "beginLine" : 30,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 32,
-                        "offset" : 630,
+                        "offset" : 666,
                         "length" : 28
                       }
                     }
@@ -2097,11 +2097,11 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 58,
+                "beginLine" : 59,
                 "beginColumn" : 3,
-                "endLine" : 58,
+                "endLine" : 59,
                 "endColumn" : 65,
-                "offset" : 2457,
+                "offset" : 2409,
                 "length" : 62
               }
             }
@@ -2302,13 +2302,13 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                  "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                 },
                 "beginLine" : 10,
                 "beginColumn" : 4,
                 "endLine" : 10,
                 "endColumn" : 42,
-                "offset" : 171,
+                "offset" : 165,
                 "length" : 38
               }
             }
@@ -2418,13 +2418,13 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                  "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                 },
                 "beginLine" : 11,
                 "beginColumn" : 4,
                 "endLine" : 11,
                 "endColumn" : 43,
-                "offset" : 213,
+                "offset" : 207,
                 "length" : 39
               }
             }
@@ -2534,13 +2534,13 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Producer-Filter-Consumer\/PFC.aadl"
+                  "value" : "\/Producer-Filter-Consumer-sporadic\/PFC.aadl"
                 },
                 "beginLine" : 12,
                 "beginColumn" : 4,
                 "endLine" : 12,
                 "endColumn" : 42,
-                "offset" : 256,
+                "offset" : 250,
                 "length" : 38
               }
             }
@@ -2782,6 +2782,37 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
+            "name" : ["HAMR::Bit_Codec_Spec"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
+                },
+                "beginLine" : 71,
+                "beginColumn" : 3,
+                "endLine" : 71,
+                "endColumn" : 63,
+                "offset" : 2840,
+                "length" : 60
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "data\/Mission.sc"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
             "name" : ["HAMR::Bit_Codec_Max_Size"],
             "pos" : {
               "type" : "Some",
@@ -2791,12 +2822,12 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 57,
+                "beginLine" : 64,
                 "beginColumn" : 3,
-                "endLine" : 57,
-                "endColumn" : 68,
-                "offset" : 2389,
-                "length" : 65
+                "endLine" : 64,
+                "endColumn" : 61,
+                "offset" : 2600,
+                "length" : 58
               }
             }
           },
@@ -2805,7 +2836,8 @@
               "type" : "UnitProp",
               "value" : "288.0",
               "unit" : {
-                "type" : "None"
+                "type" : "Some",
+                "value" : "bits"
               }
             }
           ],

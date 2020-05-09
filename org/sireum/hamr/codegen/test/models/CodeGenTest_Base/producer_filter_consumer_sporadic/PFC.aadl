@@ -1,7 +1,7 @@
 package PFC
 public
 	with Base_Types, Data_Model, HAMR, PFC_Property_Set;
-      
+
 	data Coordinate
 	end Coordinate;
 
@@ -13,12 +13,13 @@ public
 	end Coordinate.Impl;
 
 	data Mission
-	    properties
-		    Data_Model::Data_Representation => Array;
+		properties
+			Data_Model::Data_Representation => Array;
 			Data_Model::Base_Type => (classifier (Coordinate.Impl));
 			Data_Model::Dimension => (3);
 
-			HAMR::Bit_Codec_Max_Size => 288;			
+			HAMR::Bit_Codec_Spec => "data/Mission.sc";
+			HAMR::Bit_Codec_Max_Size => 288 Bits;
 	end Mission;
 
 	system PFC_Sys
@@ -30,11 +31,11 @@ public
 		properties
 			HAMR::Platform => (JVM, Cygwin, Linux, macOS, seL4);
 			HAMR::HW => (x86, amd64, QEMU);
-			
+
 			HAMR::Default_Bit_Width => 32;
 			HAMR::Default_Max_Sequence_Size => 1;
 			HAMR::Max_String_Size => 256;
-			
+
 			HAMR::Bit_Codec_Raw_Connections => true;
 	end PFC_Sys.Impl;
 
@@ -57,7 +58,7 @@ public
 		properties
 			Thread_Properties::Dispatch_Protocol => Periodic;
 			Timing_Properties::Period => 1000ms;
-			
+
 			Stack_Size => PFC_Property_Set::Stack_Size;
 	end Producer;
 
@@ -69,8 +70,8 @@ public
 			to_consumer: out event data port Mission;
 		properties
 			Dispatch_Protocol => Sporadic;
-			
-			Stack_Size => PFC_Property_Set::Stack_Size;			
+
+			Stack_Size => PFC_Property_Set::Stack_Size;
 	end Filter;
 
 	thread Consumer
@@ -80,7 +81,7 @@ public
 			};
 		properties
 			Dispatch_Protocol => Sporadic;
-			
+
 			Stack_Size => PFC_Property_Set::Stack_Size;
 	end Consumer;
 end PFC;
