@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ACT_Demo_Dec2018_alt_slang_extern</name>
+	<name>uav_alt_extern</name>
 	<comment></comment>
 	<projects>
 		<project>Plugin_Resources</project>

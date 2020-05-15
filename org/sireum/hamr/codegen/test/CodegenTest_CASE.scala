@@ -11,43 +11,49 @@ class CodegenTest_CASE extends CodeGenTest {
   val tests = Tests {
     val id = "case_tool_evaluation"
 
+    val(sel4, sel4_tb, sel4_only) = (CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
+
     val case_tool_evaluation_dir = CodeGenTest.modelsDir / getClass.getSimpleName
     val resultDir: Option[String] = Some(getClass.getSimpleName)
 
-    def gen(name: String, json: String): (String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type]) = {
-      genPlatforms(name, json, ISZ())
-    }
-
-    def genPlatforms(name: String, json: String, platforms: ISZ[CodeGenPlatform.Type]): (String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type]) = {
-      val _platforms: Set[CodeGenPlatform.Type] =
-        Set.empty[CodeGenPlatform.Type] ++ ISZ(CodeGenPlatform.SeL4_Only, CodeGenPlatform.SeL4_TB) ++ platforms
-
+    def gen(name: String, json: String, platforms: ISZ[CodeGenPlatform.Type]): (String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type]) = {
       val modelDir = case_tool_evaluation_dir / name
-      return (name, modelDir, modelDir / ".slang" / json, _platforms.elements)
+      val testName = name.native.replaceAll("/", "__")
+      return (testName, modelDir, modelDir / ".slang" / json, platforms)
     }
 
     val tests: ISZ[(String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type])] = ISZ(
-      gen("simple_uav", "UAV_UAV_Impl_Instance.json"),
 
-      gen("test_data_port", "test_data_port_top_impl_Instance.json"),
-      gen("test_data_port_periodic", "test_data_port_periodic_top_impl_Instance.json"),
-      gen("test_data_port_periodic_fan_out", "test_data_port_periodic_fan_out_top_impl_Instance.json"),
+      gen("simple_uav", "UAV_UAV_Impl_Instance.json", ISZ(sel4_tb, sel4_only)),
 
-      gen("test_event_data_port", "test_event_data_port_top_impl_Instance.json"),
-      gen("test_event_data_port_fan_out", "test_event_data_port_fan_out_top_impl_Instance.json"),
+      gen("test_data_port", "test_data_port_top_impl_Instance.json", ISZ(sel4_tb, sel4_only)),
+      gen("test_data_port_periodic", "test_data_port_periodic_top_impl_Instance.json", ISZ(sel4_tb, sel4_only)),
+      gen("test_data_port_periodic_fan_out", "test_data_port_periodic_fan_out_top_impl_Instance.json", ISZ(sel4_tb, sel4_only)),
 
-      gen("test_event_port", "test_event_port_top_impl_Instance.json"),
-      gen("test_event_port_fan_out", "test_event_port_fan_out_top_impl_Instance.json"),
+      gen("test_event_data_port", "test_event_data_port_top_impl_Instance.json", ISZ(sel4_tb, sel4_only)),
+      gen("test_event_data_port_fan_out", "test_event_data_port_fan_out_top_impl_Instance.json", ISZ(sel4_tb, sel4_only)),
 
-      gen("test_data_port_periodic_domains", "test_data_port_periodic_domains_top_impl_Instance.json"),
-      gen("test_event_data_port_periodic_domains", "test_event_data_port_periodic_domains_top_impl_Instance.json"),
-      gen("test_event_port_periodic_domains", "test_event_port_periodic_domains_top_impl_Instance.json"),
+      gen("test_event_port", "test_event_port_top_impl_Instance.json", ISZ(sel4_tb, sel4_only)),
+      gen("test_event_port_fan_out", "test_event_port_fan_out_top_impl_Instance.json", ISZ(sel4_tb, sel4_only)),
+
+      gen("test_data_port_periodic_domains", "test_data_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_tb, sel4_only, sel4)),
+      gen("test_event_data_port_periodic_domains", "test_event_data_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_tb, sel4_only, sel4)),
+      gen("test_event_port_periodic_domains", "test_event_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_tb, sel4_only, sel4)),
+
+      // VMs
+      gen("test_data-port-periodic_domains_VM/both_vm", "test_data_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_only, sel4)),
+      gen("test_data-port-periodic_domains_VM/receiver_vm", "test_data_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_only, sel4)),
+      gen("test_data-port-periodic_domains_VM/sender_vm", "test_data_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_only, sel4)),
+
+      gen("test_event_data_port_periodic_domains_VM/both_vm", "test_event_data_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_only, sel4)),
+      gen("test_event_data_port_periodic_domains_VM/receiver_vm", "test_event_data_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_only, sel4)),
+      gen("test_event_data_port_periodic_domains_VM/sender_vm", "test_event_data_port_periodic_domains_top_impl_Instance.json", ISZ(sel4_only, sel4)),
+
     )
 
     for (proj <- tests) {
-      val xplatforms = proj._4 ++ { if(proj._1.native.endsWith("domains")) ISZ(CodeGenPlatform.SeL4) else ISZ() }
-      
-      for (platform <- xplatforms) {
+
+      for (platform <- proj._4) {
         test(s"${proj._1}--${platform}", proj._2, proj._3,
           baseOptions(
             platform = platform,

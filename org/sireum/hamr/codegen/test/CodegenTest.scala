@@ -18,13 +18,17 @@ trait CodeGenTest extends TestSuite {
   def generateExpected: B = F
   def delResultDirIfEqual: B = F
   def alwaysRunTranspiler: B = F
+  def runThroughCamkes: B = T
 
   def ignoreBuildSbtChanges: B = F // temporarily ignore build.sbt changes due to build.properties updates
   def ignoreTranspileCmakeChanges: B = T // organization of transpiler generated CMakeLists.txt artifacts can differ
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("test_data")
-  
+  def filters: ISZ[String] = ISZ("uav_alt_extern--SeL4")
+
+  def ignores: ISZ[String] = ISZ(
+    "uav_alt_extern--SeL4" // ignoring as has sel4 dataport with 512 elems so bigger than 4096
+  )
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
     test(testName, modelDir, airFile, ops, None(), None(), None())
@@ -33,9 +37,15 @@ trait CodeGenTest extends TestSuite {
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,
            resultDir:Option[String],        
            description: Option[String], modelUri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
-    if(!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).startsWith(elem))) {
-      registerTest(s"${testName} L${position.lineNumber}")(testAir(testName, modelDir, airFile, ops, 
-        resultDir, description, modelUri))
+    var tags: ISZ[org.scalatest.Tag] = ISZ()
+
+    if(ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).startsWith(elem))){
+      registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements:_*)(
+        testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri))
+    }
+    else if(!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).startsWith(elem))) {
+      registerTest(s"${testName} L${position.lineNumber}", tags.elements:_*)(
+        testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri))
     }
   }
 
@@ -51,17 +61,17 @@ trait CodeGenTest extends TestSuite {
     val resultsDir = rootTestOutputDir / "results"
     val slangOutputDir = resultsDir / testName 
     
-    var _ops = ops(
+    var testOps = ops(
       slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some(slangOutputDir.canon.value),
       writeOutResources = T
     )
     
-    if(isSeL4(ops)) {
-      _ops = _ops(
-        slangOutputDir = Some(s"${_ops.slangOutputDir.get}/slang-embedded"),
+    if(isSeL4(testOps)) {
+      testOps = testOps(
+        slangOutputDir = Some(s"${testOps.slangOutputDir.get}/slang-embedded"),
           
-        camkesOutputDir = if(_ops.camkesOutputDir.nonEmpty) _ops.camkesOutputDir  else _ops.slangOutputDir,
-        aadlRootDir = if(_ops.aadlRootDir.nonEmpty) _ops.aadlRootDir else Some(modelDir.canon.value),
+        camkesOutputDir = if(testOps.camkesOutputDir.nonEmpty) testOps.camkesOutputDir  else testOps.slangOutputDir,
+        aadlRootDir = if(testOps.aadlRootDir.nonEmpty) testOps.aadlRootDir else Some(modelDir.canon.value),
       )
     }
 
@@ -74,12 +84,31 @@ trait CodeGenTest extends TestSuite {
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
       
-    val results: CodeGenResults = CodeGen.codeGen(model.get, _ops, reporter,
-      if(shouldTranspile(_ops)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
+    val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
+      if(shouldTranspile(testOps)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
 
     if(reporter.hasError) {
       reporter.printMessages()
       assert(F)
+    }
+
+    if(runThroughCamkes && isSeL4(testOps)) {
+      val rootCamkesDir: Option[Os.Path] =
+        if(testName.native.toLowerCase().contains("vm")) { camkesArmVMDir() }
+        else { camkesDir() }
+
+      rootCamkesDir match {
+        case Some(camkesDir) => {
+          val name = s"hamr_${testName}"
+          val camkesAppsDir = camkesDir / s"projects/camkes/apps/${name}"
+          camkesAppsDir.removeAll()
+          camkesAppsDir.mklink(slangOutputDir)
+          println(s"Created symlink to ${camkesAppsDir.value}")
+
+          Os.proc(ISZ(s"${camkesDir.value}/test-no-run.sh", name)).console.runCheck()
+        }
+        case _ =>
+      }
     }
 
     val resultMap = util.TestResult(Map.empty ++ (results.resources.map(m => {
@@ -163,7 +192,8 @@ trait CodeGenTest extends TestSuite {
     for(e <- expectedMap.map.entries) {
       (expectedDir / e._1).canon.writeOver(e._2.content)      
     }
-      
+
+    /*
     if(isSeL4(ops)) {
       camkesAppsDir() match {
         case Some(x) =>
@@ -171,10 +201,22 @@ trait CodeGenTest extends TestSuite {
           camkesOutDir.removeAll()
           camkesOutDir.mklink(slangOutputDir)
           println(s"Created symlink to ${camkesOutDir.value}")
+
+          val camkesroot = Os.path(x).up.up.up
+
+          if(ops.platform == CodeGenPlatform.SeL4) {
+            val transpileloc = camkesOutDir / "slang-embedded/bin/transpile-sel4.sh"
+            if(transpileloc.exists) {
+              Os.proc(ISZ(transpileloc.value)).console.runCheck()
+            }
+          }
+
+          Os.proc(ISZ(s"${camkesroot.value}/test-no-run.sh", testName)).console.runCheck()
         case _ =>
       }
     }
-    
+    */
+
     if(allEqual && delResultDirIfEqual) rootTestOutputDir.removeAll()
 
     if(modelUri.nonEmpty) {
@@ -216,7 +258,9 @@ trait CodeGenTest extends TestSuite {
 
 object CodeGenTest {
 
-  val CAMKES_APPS_DIR = "CAMKES_APPS_DIR"
+  val CAMKES_DIR = "CAMKES_DIR"
+  val CAMKES_ARM_VM_DIR = "CAMKES_ARM_VM_DIR"
+
   val FILTER = "FILTER"
   
   val outputFormat = "json" 
@@ -276,10 +320,37 @@ object CodeGenTest {
   def filterTestsSet(): Option[B] = {
     return if(Os.env(FILTER).nonEmpty) return Some(Os.env(FILTER).get.native.toBoolean) else None()
   }
-  
-  def camkesAppsDir(): Option[String] = {
-    return Os.env(CodeGenTest.CAMKES_APPS_DIR)
+
+  def camkesDir(): Option[Os.Path] = {
+    return Os.env(CodeGenTest.CAMKES_DIR) match {
+      case Some(x) => Some(Os.path(x))
+      case _ =>
+        eprintln(s"${CodeGenTest.CAMKES_DIR} not set !!!!")
+        val candidate = Os.home / "CASE/camkes"
+        if(candidate.exists) {
+          eprintln(s"Found ${candidate} so using that")
+          Some(candidate)
+        } else {
+          None()
+        }
+    }
   }
+
+  def camkesArmVMDir(): Option[Os.Path] = {
+    return Os.env(CodeGenTest.CAMKES_ARM_VM_DIR) match {
+      case Some(x) => Some(Os.path(x))
+      case _ =>
+        eprintln(s"${CodeGenTest.CAMKES_ARM_VM_DIR} nos set!!!")
+        val candidate = Os.home / "CASE/camkes-arm-vm"
+        if(candidate.exists) {
+          eprintln(s"Found ${candidate} so using that")
+          Some(candidate)
+        } else {
+          None()
+        }
+    }
+  }
+
 
   def transpile(tc: TranspilerConfig): Z = {
     var args: ISZ[String] = ISZ()
