@@ -39,14 +39,6 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform,
           excludeComponentImpl = T),
         resultDir, None(), None())
-      
-      platform = CodeGenPlatform.Linux
-      test(s"$name--${platform}-Embed-Art-MessageQueue", modelDir, model,
-        baseOptions(platform = platform,
-          ipc = CodeGenIpcMechanism.MessageQueue
-        ),
-        resultDir, None(), None())
-
       platform = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform,

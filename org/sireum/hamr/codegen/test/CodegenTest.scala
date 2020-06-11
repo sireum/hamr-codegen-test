@@ -18,7 +18,7 @@ trait CodeGenTest extends TestSuite {
   def generateExpected: B = F
   def delResultDirIfEqual: B = F
   def alwaysRunTranspiler: B = F
-  def runThroughCamkes: B = T
+  def runThroughCamkes: B = F
 
   def ignoreBuildSbtChanges: B = F // temporarily ignore build.sbt changes due to build.properties updates
   def ignoreTranspileCmakeChanges: B = T // organization of transpiler generated CMakeLists.txt artifacts can differ
@@ -163,7 +163,9 @@ trait CodeGenTest extends TestSuite {
       val output = resultsDir / r._1
       output.canon.writeOver(r._2.content)
       if(r._2.makeExecutable) {
-        output.canon.chmod("700")
+        println("about to chmod")
+        output.canon.chmodAll("700")
+        println("past chmod")
       }
       
       if(expectedMap.map.contains(r._1)) {
@@ -374,6 +376,7 @@ object CodeGenTest {
     if(tc.exts.nonEmpty) add("--exts", st"""${(tc.exts, ":")}""".render)
     if(tc.libOnly) addKey("--lib-only")
     if(tc.verbose) addKey("--verbose")
+    if(tc.cmakeIncludes.nonEmpty) add("--cmake-includes", st"""${(tc.cmakeIncludes, ",")}""".render)
 
     //args.foreach(p => println(p))
     
