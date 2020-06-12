@@ -6,7 +6,7 @@ import org.sireum.hamr.codegen.{CodeGen, CodeGenConfig, CodeGenIpcMechanism, Cod
 import org.sireum.hamr.ir._
 import org.sireum.message._
 import CodeGenTest._
-import org.sireum.hamr.codegen.test.util.TestResult
+import org.sireum.hamr.codegen.test.util.{TestModes, TestResult}
 
 /** Can regenerate AIR JSON files via 
 * https://github.com/sireum/osate-plugin/blob/d0015531e9d2039f7f186c4fa7a124521ee664b6/org.sireum.aadl.osate.tests/src/org/sireum/aadl/osate/tests/extras/AirUpdater.java#L46-L54
@@ -14,11 +14,12 @@ import org.sireum.hamr.codegen.test.util.TestResult
 trait CodeGenTest extends TestSuite {
 
   import CodeGenTest._
-  
+
   def generateExpected: B = F
   def delResultDirIfEqual: B = F
-  def alwaysRunTranspiler: B = F
-  def runThroughCamkes: B = F
+
+  def testMode: TestModes.Type = TestModes.Base
+  //def testMode: TestModes.Type = TestModes.Base_TranspileNix_Camkes
 
   def ignoreBuildSbtChanges: B = F // temporarily ignore build.sbt changes due to build.properties updates
   def ignoreTranspileCmakeChanges: B = T // organization of transpiler generated CMakeLists.txt artifacts can differ
@@ -66,7 +67,7 @@ trait CodeGenTest extends TestSuite {
       writeOutResources = T
     )
     
-    if(isSeL4(testOps)) {
+    if(isSeL4(testOps.platform)) {
       testOps = testOps(
         slangOutputDir = Some(s"${testOps.slangOutputDir.get}/slang-embedded"),
           
@@ -85,16 +86,18 @@ trait CodeGenTest extends TestSuite {
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
       
     val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
-      if(shouldTranspile(testOps)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
+      if(shouldTranspile(testOps.platform)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
 
     if(reporter.hasError) {
       reporter.printMessages()
       assert(F)
     }
 
-    if(runThroughCamkes && isSeL4(testOps)) {
+    if(runCamkesNinja(testOps.platform)) {
+      val hasVMs: B = testName.native.toLowerCase().contains("vm")
+
       val rootCamkesDir: Option[Os.Path] =
-        if(testName.native.toLowerCase().contains("vm")) { camkesArmVMDir() }
+        if(hasVMs) { camkesArmVMDir() }
         else { camkesDir() }
 
       rootCamkesDir match {
@@ -105,7 +108,17 @@ trait CodeGenTest extends TestSuite {
           camkesAppsDir.mklink(slangOutputDir)
           println(s"Created symlink to ${camkesAppsDir.value}")
 
-          Os.proc(ISZ(s"${camkesDir.value}/test-no-run.sh", name)).console.runCheck()
+          val camkesArgs: ISZ[String] =
+            if(hasVMs) ISZ("../init-build.sh", "-DUSE_CACHED_LINUX_VM=true", "-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON", s"-DCAMKES_APP=${name}")
+            else ISZ("../init-build.sh", s"-DCAMKES_APP=${name}")
+
+          val camkesBuildDir = camkesDir / s"build_${name}"
+          camkesBuildDir.removeAll()
+          camkesBuildDir.mkdir()
+
+          Os.proc(camkesArgs).at(camkesBuildDir).console.runCheck()
+
+          Os.proc(ISZ("ninja")).at(camkesBuildDir).console.runCheck()
         }
         case _ =>
       }
@@ -154,20 +167,10 @@ trait CodeGenTest extends TestSuite {
     }
 
     var allEqual = T
-    
-    rootTestOutputDir.removeAll()
-    rootTestOutputDir.mkdirAll()
 
     // could limit emitted files to only non-matching results
     for(r <- resultMap.map.entries) {
-      val output = resultsDir / r._1
-      output.canon.writeOver(r._2.content)
-      if(r._2.makeExecutable) {
-        println("about to chmod")
-        output.canon.chmodAll("700")
-        println("past chmod")
-      }
-      
+
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= {
@@ -180,7 +183,8 @@ trait CodeGenTest extends TestSuite {
         expectedMap.map.keySet.elements.foreach(p => println(p))
         println(s"Expected missing: ${r._1}")
       }
-      
+
+      /*
       if(r._1.native.endsWith("graph.dot")) {
         val dot = r._2.content
         val dotOutput = Os.path(s"${output.value}.pdf")
@@ -189,35 +193,12 @@ trait CodeGenTest extends TestSuite {
         println(proc)
         Os.proc(proc).run()
       }
+      */
     }
 
     for(e <- expectedMap.map.entries) {
       (expectedDir / e._1).canon.writeOver(e._2.content)      
     }
-
-    /*
-    if(isSeL4(ops)) {
-      camkesAppsDir() match {
-        case Some(x) =>
-          val camkesOutDir = Os.path(x) / s"hamr_${testName}"
-          camkesOutDir.removeAll()
-          camkesOutDir.mklink(slangOutputDir)
-          println(s"Created symlink to ${camkesOutDir.value}")
-
-          val camkesroot = Os.path(x).up.up.up
-
-          if(ops.platform == CodeGenPlatform.SeL4) {
-            val transpileloc = camkesOutDir / "slang-embedded/bin/transpile-sel4.sh"
-            if(transpileloc.exists) {
-              Os.proc(ISZ(transpileloc.value)).console.runCheck()
-            }
-          }
-
-          Os.proc(ISZ(s"${camkesroot.value}/test-no-run.sh", testName)).console.runCheck()
-        case _ =>
-      }
-    }
-    */
 
     if(allEqual && delResultDirIfEqual) rootTestOutputDir.removeAll()
 
@@ -244,17 +225,39 @@ trait CodeGenTest extends TestSuite {
     }
   }
 
-  def isSeL4(ops: CodeGenConfig): Boolean = {
-    return ops.platform match {
+  def isSeL4(platform: CodeGenPlatform.Type): Boolean = {
+    return platform match {
       case CodeGenPlatform.SeL4 => T
       case CodeGenPlatform.SeL4_TB => T
       case CodeGenPlatform.SeL4_Only => T
       case _ => F
     }
   }
-  
-  def shouldTranspile(ops: CodeGenConfig): B = {
-    return alwaysRunTranspiler || ops.platform == CodeGenPlatform.SeL4
+
+  def runCamkesNinja(platform: CodeGenPlatform.Type): B = {
+    val isCamkes: B = testMode match {
+      case TestModes.Base_Camkes => T
+      case TestModes.Base_TranspileNix_Camkes => T
+      case _ => F
+    }
+    return isCamkes && isSeL4(platform)
+  }
+
+  def shouldTranspile(platform: CodeGenPlatform.Type): B = {
+    val shouldRun: B = (testMode, platform) match {
+      case (TestModes.Base, _) => F
+
+      case (TestModes.Base_TranspileNix, CodeGenPlatform.Linux) |
+           (TestModes.Base_TranspileNix, CodeGenPlatform.MacOS) |
+           (TestModes.Base_TranspileNix, CodeGenPlatform.Cygwin) => T
+
+      case (TestModes.Base_Camkes, CodeGenPlatform.SeL4) => T
+
+      case (TestModes.Base_TranspileNix_Camkes, _) => T
+
+      case _ => F
+    }
+    return shouldRun
   }
 }
 
