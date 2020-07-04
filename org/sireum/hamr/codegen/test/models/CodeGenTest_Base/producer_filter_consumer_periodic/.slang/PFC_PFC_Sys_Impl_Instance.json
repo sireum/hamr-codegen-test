@@ -2123,11 +2123,11 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 59,
+                "beginLine" : 64,
                 "beginColumn" : 3,
-                "endLine" : 59,
+                "endLine" : 64,
                 "endColumn" : 65,
-                "offset" : 2409,
+                "offset" : 2907,
                 "length" : 62
               }
             }
@@ -2806,11 +2806,11 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 71,
+                "beginLine" : 76,
                 "beginColumn" : 3,
-                "endLine" : 71,
+                "endLine" : 76,
                 "endColumn" : 63,
-                "offset" : 2840,
+                "offset" : 3338,
                 "length" : 60
               }
             }
@@ -2837,11 +2837,11 @@
                   "type" : "Some",
                   "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
                 },
-                "beginLine" : 64,
+                "beginLine" : 69,
                 "beginColumn" : 3,
-                "endLine" : 64,
+                "endLine" : 69,
                 "endColumn" : 61,
-                "offset" : 2600,
+                "offset" : 3098,
                 "length" : 58
               }
             }

@@ -12,7 +12,7 @@
             "type" : "Position",
             "uriOpt" : {
               "type" : "Some",
-              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+              "value" : "\/uav_alt_extern\/UAV.aadl"
             },
             "beginLine" : 19,
             "beginColumn" : 2,
@@ -42,7 +42,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 16,
                 "beginColumn" : 4,
@@ -88,7 +88,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 23,
                 "beginColumn" : 4,
@@ -165,7 +165,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 21,
                 "beginColumn" : 4,
@@ -199,7 +199,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 69,
                     "beginColumn" : 4,
@@ -243,7 +243,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 70,
                     "beginColumn" : 4,
@@ -287,7 +287,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 65,
                     "beginColumn" : 4,
@@ -327,7 +327,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 66,
                     "beginColumn" : 4,
@@ -367,7 +367,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 67,
                     "beginColumn" : 4,
@@ -407,7 +407,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 68,
                     "beginColumn" : 4,
@@ -449,7 +449,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 79,
                     "beginColumn" : 4,
@@ -526,7 +526,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 75,
                     "beginColumn" : 4,
@@ -560,7 +560,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 20,
                         "beginColumn" : 4,
@@ -600,7 +600,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -640,7 +640,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 22,
                         "beginColumn" : 4,
@@ -680,7 +680,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 23,
                         "beginColumn" : 4,
@@ -720,7 +720,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 18,
                         "beginColumn" : 4,
@@ -764,7 +764,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 19,
                         "beginColumn" : 4,
@@ -851,7 +851,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 76,
                     "beginColumn" : 4,
@@ -885,7 +885,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 33,
                         "beginColumn" : 4,
@@ -925,7 +925,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 34,
                         "beginColumn" : 4,
@@ -965,7 +965,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 35,
                         "beginColumn" : 4,
@@ -1005,7 +1005,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 31,
                         "beginColumn" : 4,
@@ -1049,7 +1049,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 32,
                         "beginColumn" : 4,
@@ -1136,7 +1136,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 78,
                     "beginColumn" : 4,
@@ -1170,7 +1170,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 51,
                         "beginColumn" : 4,
@@ -1257,7 +1257,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 80,
                     "beginColumn" : 4,
@@ -1293,7 +1293,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 150,
                         "beginColumn" : 4,
@@ -1327,7 +1327,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 77,
                             "beginColumn" : 4,
@@ -1680,7 +1680,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 151,
                         "beginColumn" : 4,
@@ -1714,7 +1714,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 90,
                             "beginColumn" : 4,
@@ -1884,7 +1884,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 93,
                             "beginColumn" : 4,
@@ -2023,7 +2023,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 96,
                             "beginColumn" : 4,
@@ -2472,7 +2472,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 152,
                         "beginColumn" : 4,
@@ -2506,7 +2506,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 109,
                             "beginColumn" : 4,
@@ -2741,7 +2741,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 112,
                             "beginColumn" : 4,
@@ -2977,7 +2977,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 115,
                             "beginColumn" : 4,
@@ -3116,7 +3116,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 116,
                             "beginColumn" : 4,
@@ -3565,7 +3565,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 153,
                         "beginColumn" : 4,
@@ -3599,7 +3599,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 130,
                             "beginColumn" : 4,
@@ -3868,7 +3868,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 134,
                             "beginColumn" : 4,
@@ -4320,7 +4320,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 158,
                         "beginColumn" : 4,
@@ -4343,7 +4343,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 150,
                             "beginColumn" : 4,
@@ -4365,7 +4365,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 77,
                               "beginColumn" : 4,
@@ -4398,7 +4398,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 151,
                             "beginColumn" : 4,
@@ -4420,7 +4420,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 93,
                               "beginColumn" : 4,
@@ -4469,7 +4469,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 156,
                         "beginColumn" : 4,
@@ -4492,7 +4492,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 151,
                             "beginColumn" : 4,
@@ -4514,7 +4514,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 96,
                               "beginColumn" : 4,
@@ -4547,7 +4547,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 152,
                             "beginColumn" : 4,
@@ -4569,7 +4569,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 109,
                               "beginColumn" : 4,
@@ -4618,7 +4618,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 157,
                         "beginColumn" : 4,
@@ -4641,7 +4641,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 152,
                             "beginColumn" : 4,
@@ -4663,7 +4663,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 115,
                               "beginColumn" : 4,
@@ -4696,7 +4696,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 151,
                             "beginColumn" : 4,
@@ -4718,7 +4718,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 90,
                               "beginColumn" : 4,
@@ -4767,7 +4767,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 160,
                         "beginColumn" : 4,
@@ -4790,7 +4790,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 152,
                             "beginColumn" : 4,
@@ -4812,7 +4812,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 116,
                               "beginColumn" : 4,
@@ -4845,7 +4845,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 153,
                             "beginColumn" : 4,
@@ -4867,7 +4867,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 130,
                               "beginColumn" : 4,
@@ -4916,7 +4916,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 161,
                         "beginColumn" : 4,
@@ -4939,7 +4939,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 153,
                             "beginColumn" : 4,
@@ -4961,7 +4961,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 134,
                               "beginColumn" : 4,
@@ -4994,7 +4994,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 152,
                             "beginColumn" : 4,
@@ -5016,7 +5016,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                                "value" : "\/uav_alt_extern\/SW.aadl"
                               },
                               "beginLine" : 112,
                               "beginColumn" : 4,
@@ -5067,7 +5067,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 158,
                         "beginColumn" : 4,
@@ -5089,7 +5089,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 150,
                           "beginColumn" : 4,
@@ -5111,7 +5111,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 77,
                             "beginColumn" : 4,
@@ -5142,7 +5142,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 151,
                           "beginColumn" : 4,
@@ -5164,7 +5164,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 93,
                             "beginColumn" : 4,
@@ -5200,7 +5200,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 158,
                             "beginColumn" : 4,
@@ -5220,7 +5220,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                              "value" : "\/uav_alt_extern\/MC.aadl"
                             },
                             "beginLine" : 80,
                             "beginColumn" : 4,
@@ -5248,7 +5248,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 156,
                         "beginColumn" : 4,
@@ -5270,7 +5270,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 151,
                           "beginColumn" : 4,
@@ -5292,7 +5292,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 96,
                             "beginColumn" : 4,
@@ -5323,7 +5323,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 152,
                           "beginColumn" : 4,
@@ -5345,7 +5345,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 109,
                             "beginColumn" : 4,
@@ -5381,7 +5381,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 156,
                             "beginColumn" : 4,
@@ -5401,7 +5401,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                              "value" : "\/uav_alt_extern\/MC.aadl"
                             },
                             "beginLine" : 80,
                             "beginColumn" : 4,
@@ -5429,7 +5429,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 157,
                         "beginColumn" : 4,
@@ -5451,7 +5451,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 152,
                           "beginColumn" : 4,
@@ -5473,7 +5473,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 115,
                             "beginColumn" : 4,
@@ -5504,7 +5504,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 151,
                           "beginColumn" : 4,
@@ -5526,7 +5526,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 90,
                             "beginColumn" : 4,
@@ -5562,7 +5562,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 157,
                             "beginColumn" : 4,
@@ -5582,7 +5582,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                              "value" : "\/uav_alt_extern\/MC.aadl"
                             },
                             "beginLine" : 80,
                             "beginColumn" : 4,
@@ -5610,7 +5610,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 160,
                         "beginColumn" : 4,
@@ -5632,7 +5632,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 152,
                           "beginColumn" : 4,
@@ -5654,7 +5654,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 116,
                             "beginColumn" : 4,
@@ -5685,7 +5685,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 153,
                           "beginColumn" : 4,
@@ -5707,7 +5707,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 130,
                             "beginColumn" : 4,
@@ -5743,7 +5743,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 160,
                             "beginColumn" : 4,
@@ -5763,7 +5763,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                              "value" : "\/uav_alt_extern\/MC.aadl"
                             },
                             "beginLine" : 80,
                             "beginColumn" : 4,
@@ -5791,7 +5791,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                          "value" : "\/uav_alt_extern\/SW.aadl"
                         },
                         "beginLine" : 161,
                         "beginColumn" : 4,
@@ -5813,7 +5813,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 153,
                           "beginColumn" : 4,
@@ -5835,7 +5835,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 134,
                             "beginColumn" : 4,
@@ -5866,7 +5866,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                            "value" : "\/uav_alt_extern\/SW.aadl"
                           },
                           "beginLine" : 152,
                           "beginColumn" : 4,
@@ -5888,7 +5888,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 112,
                             "beginColumn" : 4,
@@ -5924,7 +5924,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                              "value" : "\/uav_alt_extern\/SW.aadl"
                             },
                             "beginLine" : 161,
                             "beginColumn" : 4,
@@ -5944,7 +5944,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                              "value" : "\/uav_alt_extern\/MC.aadl"
                             },
                             "beginLine" : 80,
                             "beginColumn" : 4,
@@ -6083,7 +6083,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 77,
                     "beginColumn" : 4,
@@ -6117,7 +6117,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 43,
                         "beginColumn" : 4,
@@ -6206,7 +6206,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 86,
                     "beginColumn" : 4,
@@ -6229,7 +6229,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -6251,7 +6251,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 70,
                           "beginColumn" : 4,
@@ -6284,7 +6284,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 75,
                         "beginColumn" : 4,
@@ -6306,7 +6306,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 19,
                           "beginColumn" : 4,
@@ -6355,7 +6355,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -6378,7 +6378,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -6400,7 +6400,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 69,
                           "beginColumn" : 4,
@@ -6433,7 +6433,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 76,
                         "beginColumn" : 4,
@@ -6455,7 +6455,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 32,
                           "beginColumn" : 4,
@@ -6511,7 +6511,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -6534,7 +6534,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 76,
                         "beginColumn" : 4,
@@ -6556,7 +6556,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 32,
                           "beginColumn" : 4,
@@ -6589,7 +6589,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -6611,7 +6611,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 69,
                           "beginColumn" : 4,
@@ -6667,7 +6667,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 82,
                     "beginColumn" : 4,
@@ -6690,7 +6690,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 75,
                         "beginColumn" : 4,
@@ -6712,7 +6712,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 18,
                           "beginColumn" : 4,
@@ -6745,7 +6745,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -6803,7 +6803,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 83,
                     "beginColumn" : 4,
@@ -6826,7 +6826,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 76,
                         "beginColumn" : 4,
@@ -6848,7 +6848,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 31,
                           "beginColumn" : 4,
@@ -6881,7 +6881,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -6939,7 +6939,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 84,
                     "beginColumn" : 4,
@@ -6962,7 +6962,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 77,
                         "beginColumn" : 4,
@@ -6984,7 +6984,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 43,
                           "beginColumn" : 4,
@@ -7017,7 +7017,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -7075,7 +7075,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 85,
                     "beginColumn" : 4,
@@ -7098,7 +7098,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 78,
                         "beginColumn" : 4,
@@ -7120,7 +7120,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 51,
                           "beginColumn" : 4,
@@ -7153,7 +7153,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -7211,7 +7211,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 82,
                     "beginColumn" : 4,
@@ -7234,7 +7234,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 75,
                         "beginColumn" : 4,
@@ -7256,7 +7256,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 18,
                           "beginColumn" : 4,
@@ -7289,7 +7289,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -7347,7 +7347,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 83,
                     "beginColumn" : 4,
@@ -7370,7 +7370,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 76,
                         "beginColumn" : 4,
@@ -7392,7 +7392,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 31,
                           "beginColumn" : 4,
@@ -7425,7 +7425,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -7483,7 +7483,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 85,
                     "beginColumn" : 4,
@@ -7506,7 +7506,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 78,
                         "beginColumn" : 4,
@@ -7528,7 +7528,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 51,
                           "beginColumn" : 4,
@@ -7561,7 +7561,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -7619,7 +7619,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 84,
                     "beginColumn" : 4,
@@ -7642,7 +7642,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 77,
                         "beginColumn" : 4,
@@ -7664,7 +7664,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                            "value" : "\/uav_alt_extern\/MC.aadl"
                           },
                           "beginLine" : 43,
                           "beginColumn" : 4,
@@ -7697,7 +7697,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -7757,7 +7757,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 82,
                     "beginColumn" : 4,
@@ -7779,7 +7779,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 79,
                       "beginColumn" : 4,
@@ -7808,7 +7808,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 75,
                       "beginColumn" : 4,
@@ -7830,7 +7830,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 18,
                         "beginColumn" : 4,
@@ -7866,7 +7866,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 82,
                         "beginColumn" : 4,
@@ -7886,7 +7886,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -7914,7 +7914,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 83,
                     "beginColumn" : 4,
@@ -7936,7 +7936,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 79,
                       "beginColumn" : 4,
@@ -7965,7 +7965,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 76,
                       "beginColumn" : 4,
@@ -7987,7 +7987,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 31,
                         "beginColumn" : 4,
@@ -8023,7 +8023,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 83,
                         "beginColumn" : 4,
@@ -8043,7 +8043,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8071,7 +8071,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 84,
                     "beginColumn" : 4,
@@ -8093,7 +8093,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 79,
                       "beginColumn" : 4,
@@ -8122,7 +8122,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 77,
                       "beginColumn" : 4,
@@ -8144,7 +8144,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 43,
                         "beginColumn" : 4,
@@ -8180,7 +8180,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -8200,7 +8200,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8228,7 +8228,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 85,
                     "beginColumn" : 4,
@@ -8250,7 +8250,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 79,
                       "beginColumn" : 4,
@@ -8279,7 +8279,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 78,
                       "beginColumn" : 4,
@@ -8301,7 +8301,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 51,
                         "beginColumn" : 4,
@@ -8337,7 +8337,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 85,
                         "beginColumn" : 4,
@@ -8357,7 +8357,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8385,7 +8385,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 82,
                     "beginColumn" : 4,
@@ -8407,7 +8407,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 75,
                       "beginColumn" : 4,
@@ -8429,7 +8429,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 18,
                         "beginColumn" : 4,
@@ -8460,7 +8460,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 79,
                       "beginColumn" : 4,
@@ -8494,7 +8494,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 82,
                         "beginColumn" : 4,
@@ -8514,7 +8514,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8542,7 +8542,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 83,
                     "beginColumn" : 4,
@@ -8564,7 +8564,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 76,
                       "beginColumn" : 4,
@@ -8586,7 +8586,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 31,
                         "beginColumn" : 4,
@@ -8617,7 +8617,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 79,
                       "beginColumn" : 4,
@@ -8651,7 +8651,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 83,
                         "beginColumn" : 4,
@@ -8671,7 +8671,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8699,7 +8699,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 85,
                     "beginColumn" : 4,
@@ -8721,7 +8721,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 78,
                       "beginColumn" : 4,
@@ -8743,7 +8743,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 51,
                         "beginColumn" : 4,
@@ -8774,7 +8774,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 79,
                       "beginColumn" : 4,
@@ -8808,7 +8808,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 85,
                         "beginColumn" : 4,
@@ -8828,7 +8828,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8856,7 +8856,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 84,
                     "beginColumn" : 4,
@@ -8878,7 +8878,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 77,
                       "beginColumn" : 4,
@@ -8900,7 +8900,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 43,
                         "beginColumn" : 4,
@@ -8931,7 +8931,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 79,
                       "beginColumn" : 4,
@@ -8965,7 +8965,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                          "value" : "\/uav_alt_extern\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -8985,7 +8985,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                          "value" : "\/uav_alt_extern\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -9050,7 +9050,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 22,
                 "beginColumn" : 4,
@@ -9084,7 +9084,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/FC.aadl"
+                      "value" : "\/uav_alt_extern\/FC.aadl"
                     },
                     "beginLine" : 7,
                     "beginColumn" : 4,
@@ -9173,7 +9173,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 27,
                 "beginColumn" : 4,
@@ -9196,7 +9196,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -9218,7 +9218,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                        "value" : "\/uav_alt_extern\/UAV.aadl"
                       },
                       "beginLine" : 16,
                       "beginColumn" : 4,
@@ -9251,7 +9251,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -9273,7 +9273,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 70,
                       "beginColumn" : 4,
@@ -9322,7 +9322,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 25,
                 "beginColumn" : 4,
@@ -9345,7 +9345,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -9380,7 +9380,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -9402,7 +9402,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 69,
                       "beginColumn" : 4,
@@ -9458,7 +9458,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 26,
                 "beginColumn" : 4,
@@ -9481,7 +9481,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -9516,7 +9516,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 22,
                     "beginColumn" : 4,
@@ -9538,7 +9538,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/FC.aadl"
+                        "value" : "\/uav_alt_extern\/FC.aadl"
                       },
                       "beginLine" : 7,
                       "beginColumn" : 4,
@@ -9594,7 +9594,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 25,
                 "beginColumn" : 4,
@@ -9617,7 +9617,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -9652,7 +9652,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -9674,7 +9674,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                        "value" : "\/uav_alt_extern\/MC.aadl"
                       },
                       "beginLine" : 69,
                       "beginColumn" : 4,
@@ -9730,7 +9730,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 26,
                 "beginColumn" : 4,
@@ -9753,7 +9753,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -9788,7 +9788,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 22,
                     "beginColumn" : 4,
@@ -9810,7 +9810,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/FC.aadl"
+                        "value" : "\/uav_alt_extern\/FC.aadl"
                       },
                       "beginLine" : 7,
                       "beginColumn" : 4,
@@ -9868,7 +9868,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 27,
                 "beginColumn" : 4,
@@ -9890,7 +9890,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                    "value" : "\/uav_alt_extern\/UAV.aadl"
                   },
                   "beginLine" : 19,
                   "beginColumn" : 2,
@@ -9912,7 +9912,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 16,
                     "beginColumn" : 4,
@@ -9943,7 +9943,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                    "value" : "\/uav_alt_extern\/MC.aadl"
                   },
                   "beginLine" : 75,
                   "beginColumn" : 4,
@@ -9965,7 +9965,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 4,
@@ -10001,7 +10001,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 27,
                     "beginColumn" : 4,
@@ -10021,7 +10021,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -10045,7 +10045,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 86,
                     "beginColumn" : 4,
@@ -10065,7 +10065,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -10093,7 +10093,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 25,
                 "beginColumn" : 4,
@@ -10115,7 +10115,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                    "value" : "\/uav_alt_extern\/UAV.aadl"
                   },
                   "beginLine" : 23,
                   "beginColumn" : 4,
@@ -10144,7 +10144,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                    "value" : "\/uav_alt_extern\/MC.aadl"
                   },
                   "beginLine" : 76,
                   "beginColumn" : 4,
@@ -10166,7 +10166,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 32,
                     "beginColumn" : 4,
@@ -10202,7 +10202,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 25,
                     "beginColumn" : 4,
@@ -10222,7 +10222,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -10246,7 +10246,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -10266,7 +10266,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -10294,7 +10294,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 26,
                 "beginColumn" : 4,
@@ -10316,7 +10316,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                    "value" : "\/uav_alt_extern\/UAV.aadl"
                   },
                   "beginLine" : 23,
                   "beginColumn" : 4,
@@ -10345,7 +10345,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                    "value" : "\/uav_alt_extern\/UAV.aadl"
                   },
                   "beginLine" : 22,
                   "beginColumn" : 4,
@@ -10367,7 +10367,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/FC.aadl"
+                      "value" : "\/uav_alt_extern\/FC.aadl"
                     },
                     "beginLine" : 7,
                     "beginColumn" : 4,
@@ -10403,7 +10403,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 26,
                     "beginColumn" : 4,
@@ -10423,7 +10423,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -10451,7 +10451,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                  "value" : "\/uav_alt_extern\/MC.aadl"
                 },
                 "beginLine" : 87,
                 "beginColumn" : 4,
@@ -10473,7 +10473,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                    "value" : "\/uav_alt_extern\/MC.aadl"
                   },
                   "beginLine" : 76,
                   "beginColumn" : 4,
@@ -10495,7 +10495,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 32,
                     "beginColumn" : 4,
@@ -10526,7 +10526,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                    "value" : "\/uav_alt_extern\/UAV.aadl"
                   },
                   "beginLine" : 23,
                   "beginColumn" : 4,
@@ -10560,7 +10560,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                      "value" : "\/uav_alt_extern\/MC.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -10580,7 +10580,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -10604,7 +10604,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 25,
                     "beginColumn" : 4,
@@ -10624,7 +10624,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -10652,7 +10652,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                  "value" : "\/uav_alt_extern\/UAV.aadl"
                 },
                 "beginLine" : 26,
                 "beginColumn" : 4,
@@ -10674,7 +10674,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                    "value" : "\/uav_alt_extern\/UAV.aadl"
                   },
                   "beginLine" : 22,
                   "beginColumn" : 4,
@@ -10696,7 +10696,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/FC.aadl"
+                      "value" : "\/uav_alt_extern\/FC.aadl"
                     },
                     "beginLine" : 7,
                     "beginColumn" : 4,
@@ -10727,7 +10727,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                    "value" : "\/uav_alt_extern\/UAV.aadl"
                   },
                   "beginLine" : 23,
                   "beginColumn" : 4,
@@ -10761,7 +10761,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 26,
                     "beginColumn" : 4,
@@ -10781,7 +10781,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/UAV.aadl"
+                      "value" : "\/uav_alt_extern\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -11118,7 +11118,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/MC.aadl"
+                  "value" : "\/uav_alt_extern\/MC.aadl"
                 },
                 "beginLine" : 13,
                 "beginColumn" : 4,
@@ -11271,7 +11271,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                  "value" : "\/uav_alt_extern\/SW.aadl"
                 },
                 "beginLine" : 13,
                 "beginColumn" : 4,
@@ -11387,7 +11387,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                  "value" : "\/uav_alt_extern\/SW.aadl"
                 },
                 "beginLine" : 14,
                 "beginColumn" : 4,
@@ -11503,7 +11503,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                  "value" : "\/uav_alt_extern\/SW.aadl"
                 },
                 "beginLine" : 15,
                 "beginColumn" : 4,
@@ -11964,7 +11964,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                  "value" : "\/uav_alt_extern\/SW.aadl"
                 },
                 "beginLine" : 48,
                 "beginColumn" : 4,
@@ -12110,7 +12110,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                  "value" : "\/uav_alt_extern\/SW.aadl"
                 },
                 "beginLine" : 49,
                 "beginColumn" : 4,
@@ -12230,7 +12230,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt_slang_extern\/SW.aadl"
+                  "value" : "\/uav_alt_extern\/SW.aadl"
                 },
                 "beginLine" : 50,
                 "beginColumn" : 4,

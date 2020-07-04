@@ -12,7 +12,7 @@
             "type" : "Position",
             "uriOpt" : {
               "type" : "Some",
-              "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+              "value" : "\/uav_alt\/UAV.aadl"
             },
             "beginLine" : 19,
             "beginColumn" : 2,
@@ -42,7 +42,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 16,
                 "beginColumn" : 4,
@@ -88,7 +88,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 23,
                 "beginColumn" : 4,
@@ -165,7 +165,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 21,
                 "beginColumn" : 4,
@@ -199,7 +199,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 74,
                     "beginColumn" : 4,
@@ -243,7 +243,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 75,
                     "beginColumn" : 4,
@@ -287,7 +287,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 70,
                     "beginColumn" : 4,
@@ -327,7 +327,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 71,
                     "beginColumn" : 4,
@@ -367,7 +367,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 72,
                     "beginColumn" : 4,
@@ -407,7 +407,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 73,
                     "beginColumn" : 4,
@@ -449,7 +449,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 84,
                     "beginColumn" : 4,
@@ -526,7 +526,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 80,
                     "beginColumn" : 4,
@@ -560,7 +560,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -600,7 +600,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 22,
                         "beginColumn" : 4,
@@ -640,7 +640,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 23,
                         "beginColumn" : 4,
@@ -680,7 +680,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 24,
                         "beginColumn" : 4,
@@ -720,7 +720,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 19,
                         "beginColumn" : 4,
@@ -764,7 +764,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 20,
                         "beginColumn" : 4,
@@ -851,7 +851,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 81,
                     "beginColumn" : 4,
@@ -885,7 +885,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 34,
                         "beginColumn" : 4,
@@ -925,7 +925,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 35,
                         "beginColumn" : 4,
@@ -965,7 +965,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 36,
                         "beginColumn" : 4,
@@ -1005,7 +1005,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 32,
                         "beginColumn" : 4,
@@ -1049,7 +1049,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 33,
                         "beginColumn" : 4,
@@ -1136,7 +1136,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 83,
                     "beginColumn" : 4,
@@ -1170,7 +1170,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 56,
                         "beginColumn" : 4,
@@ -1257,7 +1257,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 85,
                     "beginColumn" : 4,
@@ -1293,7 +1293,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 144,
                         "beginColumn" : 4,
@@ -1327,7 +1327,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 76,
                             "beginColumn" : 4,
@@ -1645,7 +1645,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 145,
                         "beginColumn" : 4,
@@ -1679,7 +1679,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 89,
                             "beginColumn" : 4,
@@ -1883,7 +1883,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 90,
                             "beginColumn" : 4,
@@ -2053,7 +2053,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 93,
                             "beginColumn" : 4,
@@ -2402,7 +2402,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 146,
                         "beginColumn" : 4,
@@ -2436,7 +2436,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 107,
                             "beginColumn" : 4,
@@ -2671,7 +2671,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 110,
                             "beginColumn" : 4,
@@ -2810,7 +2810,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 111,
                             "beginColumn" : 4,
@@ -3014,7 +3014,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 112,
                             "beginColumn" : 4,
@@ -3460,7 +3460,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 147,
                         "beginColumn" : 4,
@@ -3494,7 +3494,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 126,
                             "beginColumn" : 4,
@@ -3729,7 +3729,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 129,
                             "beginColumn" : 4,
@@ -4146,7 +4146,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 151,
                         "beginColumn" : 4,
@@ -4169,7 +4169,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 144,
                             "beginColumn" : 4,
@@ -4191,7 +4191,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 76,
                               "beginColumn" : 4,
@@ -4224,7 +4224,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 145,
                             "beginColumn" : 4,
@@ -4246,7 +4246,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 93,
                               "beginColumn" : 4,
@@ -4295,7 +4295,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 149,
                         "beginColumn" : 4,
@@ -4318,7 +4318,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 145,
                             "beginColumn" : 4,
@@ -4340,7 +4340,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 89,
                               "beginColumn" : 4,
@@ -4373,7 +4373,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 146,
                             "beginColumn" : 4,
@@ -4395,7 +4395,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 107,
                               "beginColumn" : 4,
@@ -4444,7 +4444,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 150,
                         "beginColumn" : 4,
@@ -4467,7 +4467,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 146,
                             "beginColumn" : 4,
@@ -4489,7 +4489,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 110,
                               "beginColumn" : 4,
@@ -4522,7 +4522,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 145,
                             "beginColumn" : 4,
@@ -4544,7 +4544,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 90,
                               "beginColumn" : 4,
@@ -4593,7 +4593,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 152,
                         "beginColumn" : 4,
@@ -4616,7 +4616,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 146,
                             "beginColumn" : 4,
@@ -4638,7 +4638,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 111,
                               "beginColumn" : 4,
@@ -4671,7 +4671,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 147,
                             "beginColumn" : 4,
@@ -4693,7 +4693,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 126,
                               "beginColumn" : 4,
@@ -4742,7 +4742,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 153,
                         "beginColumn" : 4,
@@ -4765,7 +4765,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 147,
                             "beginColumn" : 4,
@@ -4787,7 +4787,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 129,
                               "beginColumn" : 4,
@@ -4820,7 +4820,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 146,
                             "beginColumn" : 4,
@@ -4842,7 +4842,7 @@
                               "type" : "Position",
                               "uriOpt" : {
                                 "type" : "Some",
-                                "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                                "value" : "\/uav_alt\/SW.aadl"
                               },
                               "beginLine" : 112,
                               "beginColumn" : 4,
@@ -4893,7 +4893,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 151,
                         "beginColumn" : 4,
@@ -4915,7 +4915,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 144,
                           "beginColumn" : 4,
@@ -4937,7 +4937,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 76,
                             "beginColumn" : 4,
@@ -4968,7 +4968,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 145,
                           "beginColumn" : 4,
@@ -4990,7 +4990,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 93,
                             "beginColumn" : 4,
@@ -5026,7 +5026,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 151,
                             "beginColumn" : 4,
@@ -5046,7 +5046,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                              "value" : "\/uav_alt\/MC.aadl"
                             },
                             "beginLine" : 85,
                             "beginColumn" : 4,
@@ -5074,7 +5074,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 149,
                         "beginColumn" : 4,
@@ -5096,7 +5096,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 145,
                           "beginColumn" : 4,
@@ -5118,7 +5118,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 89,
                             "beginColumn" : 4,
@@ -5149,7 +5149,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 146,
                           "beginColumn" : 4,
@@ -5171,7 +5171,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 107,
                             "beginColumn" : 4,
@@ -5207,7 +5207,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 149,
                             "beginColumn" : 4,
@@ -5227,7 +5227,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                              "value" : "\/uav_alt\/MC.aadl"
                             },
                             "beginLine" : 85,
                             "beginColumn" : 4,
@@ -5255,7 +5255,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 150,
                         "beginColumn" : 4,
@@ -5277,7 +5277,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 146,
                           "beginColumn" : 4,
@@ -5299,7 +5299,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 110,
                             "beginColumn" : 4,
@@ -5330,7 +5330,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 145,
                           "beginColumn" : 4,
@@ -5352,7 +5352,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 90,
                             "beginColumn" : 4,
@@ -5388,7 +5388,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 150,
                             "beginColumn" : 4,
@@ -5408,7 +5408,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                              "value" : "\/uav_alt\/MC.aadl"
                             },
                             "beginLine" : 85,
                             "beginColumn" : 4,
@@ -5436,7 +5436,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 152,
                         "beginColumn" : 4,
@@ -5458,7 +5458,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 146,
                           "beginColumn" : 4,
@@ -5480,7 +5480,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 111,
                             "beginColumn" : 4,
@@ -5511,7 +5511,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 147,
                           "beginColumn" : 4,
@@ -5533,7 +5533,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 126,
                             "beginColumn" : 4,
@@ -5569,7 +5569,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 152,
                             "beginColumn" : 4,
@@ -5589,7 +5589,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                              "value" : "\/uav_alt\/MC.aadl"
                             },
                             "beginLine" : 85,
                             "beginColumn" : 4,
@@ -5617,7 +5617,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                          "value" : "\/uav_alt\/SW.aadl"
                         },
                         "beginLine" : 153,
                         "beginColumn" : 4,
@@ -5639,7 +5639,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 147,
                           "beginColumn" : 4,
@@ -5661,7 +5661,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 129,
                             "beginColumn" : 4,
@@ -5692,7 +5692,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                            "value" : "\/uav_alt\/SW.aadl"
                           },
                           "beginLine" : 146,
                           "beginColumn" : 4,
@@ -5714,7 +5714,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 112,
                             "beginColumn" : 4,
@@ -5750,7 +5750,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                              "value" : "\/uav_alt\/SW.aadl"
                             },
                             "beginLine" : 153,
                             "beginColumn" : 4,
@@ -5770,7 +5770,7 @@
                             "type" : "Position",
                             "uriOpt" : {
                               "type" : "Some",
-                              "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                              "value" : "\/uav_alt\/MC.aadl"
                             },
                             "beginLine" : 85,
                             "beginColumn" : 4,
@@ -5909,7 +5909,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 82,
                     "beginColumn" : 4,
@@ -5943,7 +5943,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 44,
                         "beginColumn" : 4,
@@ -6125,7 +6125,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 91,
                     "beginColumn" : 4,
@@ -6148,7 +6148,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -6170,7 +6170,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 75,
                           "beginColumn" : 4,
@@ -6203,7 +6203,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 80,
                         "beginColumn" : 4,
@@ -6225,7 +6225,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 20,
                           "beginColumn" : 4,
@@ -6274,7 +6274,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 92,
                     "beginColumn" : 4,
@@ -6297,7 +6297,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -6319,7 +6319,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 74,
                           "beginColumn" : 4,
@@ -6352,7 +6352,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 81,
                         "beginColumn" : 4,
@@ -6374,7 +6374,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 33,
                           "beginColumn" : 4,
@@ -6430,7 +6430,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 92,
                     "beginColumn" : 4,
@@ -6453,7 +6453,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 81,
                         "beginColumn" : 4,
@@ -6475,7 +6475,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 33,
                           "beginColumn" : 4,
@@ -6508,7 +6508,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -6530,7 +6530,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 74,
                           "beginColumn" : 4,
@@ -6586,7 +6586,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -6609,7 +6609,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 80,
                         "beginColumn" : 4,
@@ -6631,7 +6631,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 19,
                           "beginColumn" : 4,
@@ -6664,7 +6664,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -6722,7 +6722,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 88,
                     "beginColumn" : 4,
@@ -6745,7 +6745,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 81,
                         "beginColumn" : 4,
@@ -6767,7 +6767,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 32,
                           "beginColumn" : 4,
@@ -6800,7 +6800,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -6858,7 +6858,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 89,
                     "beginColumn" : 4,
@@ -6881,7 +6881,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 82,
                         "beginColumn" : 4,
@@ -6903,7 +6903,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 44,
                           "beginColumn" : 4,
@@ -6936,7 +6936,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -6994,7 +6994,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 90,
                     "beginColumn" : 4,
@@ -7017,7 +7017,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 83,
                         "beginColumn" : 4,
@@ -7039,7 +7039,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 56,
                           "beginColumn" : 4,
@@ -7072,7 +7072,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -7130,7 +7130,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -7153,7 +7153,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 80,
                         "beginColumn" : 4,
@@ -7175,7 +7175,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 19,
                           "beginColumn" : 4,
@@ -7208,7 +7208,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -7266,7 +7266,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 88,
                     "beginColumn" : 4,
@@ -7289,7 +7289,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 81,
                         "beginColumn" : 4,
@@ -7311,7 +7311,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 32,
                           "beginColumn" : 4,
@@ -7344,7 +7344,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -7402,7 +7402,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 90,
                     "beginColumn" : 4,
@@ -7425,7 +7425,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 83,
                         "beginColumn" : 4,
@@ -7447,7 +7447,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 56,
                           "beginColumn" : 4,
@@ -7480,7 +7480,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -7538,7 +7538,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 89,
                     "beginColumn" : 4,
@@ -7561,7 +7561,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 82,
                         "beginColumn" : 4,
@@ -7583,7 +7583,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                            "value" : "\/uav_alt\/MC.aadl"
                           },
                           "beginLine" : 44,
                           "beginColumn" : 4,
@@ -7616,7 +7616,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 84,
                         "beginColumn" : 4,
@@ -7676,7 +7676,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -7698,7 +7698,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 84,
                       "beginColumn" : 4,
@@ -7727,7 +7727,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 80,
                       "beginColumn" : 4,
@@ -7749,7 +7749,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 19,
                         "beginColumn" : 4,
@@ -7785,7 +7785,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 87,
                         "beginColumn" : 4,
@@ -7805,7 +7805,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -7833,7 +7833,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 88,
                     "beginColumn" : 4,
@@ -7855,7 +7855,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 84,
                       "beginColumn" : 4,
@@ -7884,7 +7884,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 81,
                       "beginColumn" : 4,
@@ -7906,7 +7906,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 32,
                         "beginColumn" : 4,
@@ -7942,7 +7942,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 88,
                         "beginColumn" : 4,
@@ -7962,7 +7962,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -7990,7 +7990,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 89,
                     "beginColumn" : 4,
@@ -8012,7 +8012,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 84,
                       "beginColumn" : 4,
@@ -8041,7 +8041,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 82,
                       "beginColumn" : 4,
@@ -8063,7 +8063,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 44,
                         "beginColumn" : 4,
@@ -8099,7 +8099,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 89,
                         "beginColumn" : 4,
@@ -8119,7 +8119,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8147,7 +8147,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 90,
                     "beginColumn" : 4,
@@ -8169,7 +8169,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 84,
                       "beginColumn" : 4,
@@ -8198,7 +8198,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 83,
                       "beginColumn" : 4,
@@ -8220,7 +8220,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 56,
                         "beginColumn" : 4,
@@ -8256,7 +8256,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 90,
                         "beginColumn" : 4,
@@ -8276,7 +8276,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8304,7 +8304,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -8326,7 +8326,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 80,
                       "beginColumn" : 4,
@@ -8348,7 +8348,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 19,
                         "beginColumn" : 4,
@@ -8379,7 +8379,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 84,
                       "beginColumn" : 4,
@@ -8413,7 +8413,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 87,
                         "beginColumn" : 4,
@@ -8433,7 +8433,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8461,7 +8461,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 88,
                     "beginColumn" : 4,
@@ -8483,7 +8483,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 81,
                       "beginColumn" : 4,
@@ -8505,7 +8505,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 32,
                         "beginColumn" : 4,
@@ -8536,7 +8536,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 84,
                       "beginColumn" : 4,
@@ -8570,7 +8570,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 88,
                         "beginColumn" : 4,
@@ -8590,7 +8590,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8618,7 +8618,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 90,
                     "beginColumn" : 4,
@@ -8640,7 +8640,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 83,
                       "beginColumn" : 4,
@@ -8662,7 +8662,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 56,
                         "beginColumn" : 4,
@@ -8693,7 +8693,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 84,
                       "beginColumn" : 4,
@@ -8727,7 +8727,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 90,
                         "beginColumn" : 4,
@@ -8747,7 +8747,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8775,7 +8775,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 89,
                     "beginColumn" : 4,
@@ -8797,7 +8797,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 82,
                       "beginColumn" : 4,
@@ -8819,7 +8819,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 44,
                         "beginColumn" : 4,
@@ -8850,7 +8850,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 84,
                       "beginColumn" : 4,
@@ -8884,7 +8884,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                          "value" : "\/uav_alt\/MC.aadl"
                         },
                         "beginLine" : 89,
                         "beginColumn" : 4,
@@ -8904,7 +8904,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                          "value" : "\/uav_alt\/UAV.aadl"
                         },
                         "beginLine" : 21,
                         "beginColumn" : 4,
@@ -8969,7 +8969,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 22,
                 "beginColumn" : 4,
@@ -9003,7 +9003,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/FC.aadl"
+                      "value" : "\/uav_alt\/FC.aadl"
                     },
                     "beginLine" : 7,
                     "beginColumn" : 4,
@@ -9092,7 +9092,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 27,
                 "beginColumn" : 4,
@@ -9115,7 +9115,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -9137,7 +9137,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                        "value" : "\/uav_alt\/UAV.aadl"
                       },
                       "beginLine" : 16,
                       "beginColumn" : 4,
@@ -9170,7 +9170,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -9192,7 +9192,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 75,
                       "beginColumn" : 4,
@@ -9241,7 +9241,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 25,
                 "beginColumn" : 4,
@@ -9264,7 +9264,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -9299,7 +9299,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -9321,7 +9321,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 74,
                       "beginColumn" : 4,
@@ -9377,7 +9377,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 26,
                 "beginColumn" : 4,
@@ -9400,7 +9400,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -9435,7 +9435,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 22,
                     "beginColumn" : 4,
@@ -9457,7 +9457,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/FC.aadl"
+                        "value" : "\/uav_alt\/FC.aadl"
                       },
                       "beginLine" : 7,
                       "beginColumn" : 4,
@@ -9513,7 +9513,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 25,
                 "beginColumn" : 4,
@@ -9536,7 +9536,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -9571,7 +9571,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -9593,7 +9593,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                        "value" : "\/uav_alt\/MC.aadl"
                       },
                       "beginLine" : 74,
                       "beginColumn" : 4,
@@ -9649,7 +9649,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 26,
                 "beginColumn" : 4,
@@ -9672,7 +9672,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -9707,7 +9707,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 22,
                     "beginColumn" : 4,
@@ -9729,7 +9729,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/ACT_Demo_Dec2018_alt\/FC.aadl"
+                        "value" : "\/uav_alt\/FC.aadl"
                       },
                       "beginLine" : 7,
                       "beginColumn" : 4,
@@ -9787,7 +9787,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 27,
                 "beginColumn" : 4,
@@ -9809,7 +9809,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                    "value" : "\/uav_alt\/UAV.aadl"
                   },
                   "beginLine" : 19,
                   "beginColumn" : 2,
@@ -9831,7 +9831,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 16,
                     "beginColumn" : 4,
@@ -9862,7 +9862,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                    "value" : "\/uav_alt\/MC.aadl"
                   },
                   "beginLine" : 80,
                   "beginColumn" : 4,
@@ -9884,7 +9884,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 20,
                     "beginColumn" : 4,
@@ -9920,7 +9920,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 27,
                     "beginColumn" : 4,
@@ -9940,7 +9940,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -9964,7 +9964,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 91,
                     "beginColumn" : 4,
@@ -9984,7 +9984,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -10012,7 +10012,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 25,
                 "beginColumn" : 4,
@@ -10034,7 +10034,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                    "value" : "\/uav_alt\/UAV.aadl"
                   },
                   "beginLine" : 23,
                   "beginColumn" : 4,
@@ -10063,7 +10063,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                    "value" : "\/uav_alt\/MC.aadl"
                   },
                   "beginLine" : 81,
                   "beginColumn" : 4,
@@ -10085,7 +10085,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 33,
                     "beginColumn" : 4,
@@ -10121,7 +10121,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 25,
                     "beginColumn" : 4,
@@ -10141,7 +10141,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -10165,7 +10165,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 92,
                     "beginColumn" : 4,
@@ -10185,7 +10185,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -10213,7 +10213,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 26,
                 "beginColumn" : 4,
@@ -10235,7 +10235,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                    "value" : "\/uav_alt\/UAV.aadl"
                   },
                   "beginLine" : 23,
                   "beginColumn" : 4,
@@ -10264,7 +10264,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                    "value" : "\/uav_alt\/UAV.aadl"
                   },
                   "beginLine" : 22,
                   "beginColumn" : 4,
@@ -10286,7 +10286,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/FC.aadl"
+                      "value" : "\/uav_alt\/FC.aadl"
                     },
                     "beginLine" : 7,
                     "beginColumn" : 4,
@@ -10322,7 +10322,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 26,
                     "beginColumn" : 4,
@@ -10342,7 +10342,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -10370,7 +10370,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                  "value" : "\/uav_alt\/MC.aadl"
                 },
                 "beginLine" : 92,
                 "beginColumn" : 4,
@@ -10392,7 +10392,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                    "value" : "\/uav_alt\/MC.aadl"
                   },
                   "beginLine" : 81,
                   "beginColumn" : 4,
@@ -10414,7 +10414,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 33,
                     "beginColumn" : 4,
@@ -10445,7 +10445,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                    "value" : "\/uav_alt\/UAV.aadl"
                   },
                   "beginLine" : 23,
                   "beginColumn" : 4,
@@ -10479,7 +10479,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                      "value" : "\/uav_alt\/MC.aadl"
                     },
                     "beginLine" : 92,
                     "beginColumn" : 4,
@@ -10499,7 +10499,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -10523,7 +10523,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 25,
                     "beginColumn" : 4,
@@ -10543,7 +10543,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -10571,7 +10571,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                  "value" : "\/uav_alt\/UAV.aadl"
                 },
                 "beginLine" : 26,
                 "beginColumn" : 4,
@@ -10593,7 +10593,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                    "value" : "\/uav_alt\/UAV.aadl"
                   },
                   "beginLine" : 22,
                   "beginColumn" : 4,
@@ -10615,7 +10615,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/FC.aadl"
+                      "value" : "\/uav_alt\/FC.aadl"
                     },
                     "beginLine" : 7,
                     "beginColumn" : 4,
@@ -10646,7 +10646,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                    "value" : "\/uav_alt\/UAV.aadl"
                   },
                   "beginLine" : 23,
                   "beginColumn" : 4,
@@ -10680,7 +10680,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 26,
                     "beginColumn" : 4,
@@ -10700,7 +10700,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/ACT_Demo_Dec2018_alt\/UAV.aadl"
+                      "value" : "\/uav_alt\/UAV.aadl"
                     },
                     "beginLine" : 19,
                     "beginColumn" : 2,
@@ -10938,7 +10938,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/MC.aadl"
+                  "value" : "\/uav_alt\/MC.aadl"
                 },
                 "beginLine" : 14,
                 "beginColumn" : 4,
@@ -11091,7 +11091,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                  "value" : "\/uav_alt\/SW.aadl"
                 },
                 "beginLine" : 12,
                 "beginColumn" : 4,
@@ -11207,7 +11207,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                  "value" : "\/uav_alt\/SW.aadl"
                 },
                 "beginLine" : 13,
                 "beginColumn" : 4,
@@ -11323,7 +11323,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                  "value" : "\/uav_alt\/SW.aadl"
                 },
                 "beginLine" : 14,
                 "beginColumn" : 4,
@@ -11784,7 +11784,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                  "value" : "\/uav_alt\/SW.aadl"
                 },
                 "beginLine" : 47,
                 "beginColumn" : 4,
@@ -11930,7 +11930,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                  "value" : "\/uav_alt\/SW.aadl"
                 },
                 "beginLine" : 48,
                 "beginColumn" : 4,
@@ -12050,7 +12050,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/ACT_Demo_Dec2018_alt\/SW.aadl"
+                  "value" : "\/uav_alt\/SW.aadl"
                 },
                 "beginLine" : 49,
                 "beginColumn" : 4,

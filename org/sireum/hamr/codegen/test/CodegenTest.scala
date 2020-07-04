@@ -109,7 +109,7 @@ trait CodeGenTest extends TestSuite {
           println(s"Created symlink to ${camkesAppsDir.value}")
 
           val camkesArgs: ISZ[String] =
-            if(hasVMs) ISZ("../init-build.sh", "-DUSE_CACHED_LINUX_VM=true", "-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON", s"-DCAMKES_APP=${name}")
+            if(hasVMs) ISZ("../init-build.sh", "-DUSE_PRECONFIGURED_ROOTFS=true", "-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON", s"-DCAMKES_APP=${name}")
             else ISZ("../init-build.sh", s"-DCAMKES_APP=${name}")
 
           val camkesBuildDir = camkesDir / s"build_${name}"
@@ -280,20 +280,22 @@ object CodeGenTest {
   rootResultDir.mkdirAll()
 
   val baseOptions = CodeGenConfig (
-    verbose = T,
     writeOutResources = F,
+    ipc = CodeGenIpcMechanism.SharedMemory,
+
+    verbose = T,
     platform = CodeGenPlatform.JVM,
     slangOutputDir = None(),
     packageName = None(),
     embedArt = T,
     devicesAsThreads = T,
-    ipc = CodeGenIpcMechanism.SharedMemory,
     slangAuxCodeDirs = ISZ(),
     slangOutputCDir = None(),
     excludeComponentImpl = F,
     bitWidth = 64,
     maxStringSize = 256,
     maxArraySize = 1,
+    runTranspiler = T,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     aadlRootDir = None()

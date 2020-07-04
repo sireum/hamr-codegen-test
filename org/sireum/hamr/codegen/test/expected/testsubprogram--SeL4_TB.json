@@ -97,7 +97,7 @@
         "testsubprogram--SeL4_TB\/components\/sender_impl\/src\/sb_sender_impl.c",
         {
           "type" : "Resource",
-          "content" : "#include <sb_sender_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n *  sb_entrypoint_sender_impl_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_sender_impl_initializer(const int64_t * in_arg) {\n  sender_init((int64_t *) in_arg);\n}\n\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_sender_impl_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
+          "content" : "#include <sb_sender_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n *  sb_entrypoint_sender_impl_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_sender_impl_initializer(const int64_t * in_arg) {\n  sender_init((int64_t *) in_arg);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_sender_impl_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -115,7 +115,7 @@
         "testsubprogram--SeL4_TB\/components\/receiver_impl\/src\/sb_receiver_impl.c",
         {
           "type" : "Resource",
-          "content" : "#include <sb_receiver_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
+          "content" : "#include <sb_receiver_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
