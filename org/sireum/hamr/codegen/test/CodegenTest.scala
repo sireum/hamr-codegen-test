@@ -1,11 +1,14 @@
 package org.sireum.hamr.codegen.test
 
+import org.sireum.Os.Proc
 import org.sireum._
 import org.sireum.test.TestSuite
 import org.sireum.hamr.codegen.{CodeGen, CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults, TranspilerConfig}
 import org.sireum.hamr.ir._
 import org.sireum.message._
-import CodeGenTest._
+import org.sireum.hamr.act.templates.{CakeMLTemplate, SlangEmbeddedTemplate}
+import org.sireum.hamr.act.utils.CMakeOption
+import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen.test.util.{TestModes, TestResult}
 
 /** Can regenerate AIR JSON files via 
@@ -22,14 +25,15 @@ trait CodeGenTest extends TestSuite {
   //def testMode: TestModes.Type = TestModes.Base_TranspileNix_Camkes
 
   def ignoreBuildSbtChanges: B = F // temporarily ignore build.sbt changes due to build.properties updates
-  def ignoreTranspileCmakeChanges: B = T // organization of transpiler generated CMakeLists.txt artifacts can differ
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("uav_alt_extern--SeL4")
+  def filters: ISZ[String] = ISZ("test_event_data_port_fan_out")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4" // ignoring as has sel4 dataport with 512 elems so bigger than 4096
   )
+
+  def timeout: Z = 10000
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
     test(testName, modelDir, airFile, ops, None(), None(), None())
@@ -108,9 +112,21 @@ trait CodeGenTest extends TestSuite {
           camkesAppsDir.mklink(slangOutputDir)
           println(s"Created symlink to ${camkesAppsDir.value}")
 
-          val camkesArgs: ISZ[String] =
-            if(hasVMs) ISZ("../init-build.sh", "-DUSE_PRECONFIGURED_ROOTFS=true", "-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON", s"-DCAMKES_APP=${name}")
-            else ISZ("../init-build.sh", s"-DCAMKES_APP=${name}")
+          var camkesArgs: ISZ[String] = ISZ("../init-build.sh")
+
+          if(testOps.platform == CodeGenPlatform.SeL4) {
+            val toptions = SlangEmbeddedTemplate.TRANSPILER_OPTIONS.filter(c => c.name != string"NO_PRINT")
+            camkesArgs = camkesArgs ++ onOptions(toptions)
+          }
+
+          if(hasVMs) {
+            camkesArgs = camkesArgs ++ onOptions(VM_Template.VM_CMAKE_OPTIONS) ++
+              ISZ("-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON")
+          }
+
+          camkesArgs = camkesArgs ++ onOptions(CakeMLTemplate.CAKEML_OPTIONS)
+
+          camkesArgs = camkesArgs :+ s"-DCAMKES_APP=${name}"
 
           val camkesBuildDir = camkesDir / s"build_${name}"
           camkesBuildDir.removeAll()
@@ -119,6 +135,10 @@ trait CodeGenTest extends TestSuite {
           Os.proc(camkesArgs).at(camkesBuildDir).console.runCheck()
 
           Os.proc(ISZ("ninja")).at(camkesBuildDir).console.runCheck()
+
+          //val results = Proc(ISZ("simulate"), Os.cwd, Map.empty, T, None(), F, F, F, F, F, timeout, F).at(camkesBuildDir).run()
+          //println(results.out)
+          //println(results.err)
         }
         case _ =>
       }
@@ -154,14 +174,14 @@ trait CodeGenTest extends TestSuite {
       if (missingEkeys.nonEmpty) {
         for(k <- missingEkeys) {
           println(s"Expected missing entry ${k}")
-          println(s"  - ${resultMap.map.get(k).get}")
+          //println(s"  - ${resultMap.map.get(k).get}")
         }
       } else {
         for(k <- missingRkeys) {
           println(s"Results missing entry ${k}")
-          println(s"  - ${expectedMap.map.get(k)}")
+          //println(s"  - ${expectedMap.map.get(k)}")
         }
-        rkeys.elements.foreach(f => println(f))
+        //rkeys.elements.foreach(f => println(f))
       }
       testFail = T
     }
@@ -175,7 +195,6 @@ trait CodeGenTest extends TestSuite {
         val e = expectedMap.map.get(r._1).get
         allEqual &= {
           var ignoreFile = ignoreBuildSbtChanges && r._1.native.endsWith("build.sbt")
-          ignoreFile |= ignoreTranspileCmakeChanges && r._1.native.endsWith("CMakeLists.txt") && r._2.content.native.contains("HAMR_LIB_")
           ignoreFile || r._2 == e
         }
       } else if(!generateExpected) {
@@ -259,6 +278,8 @@ trait CodeGenTest extends TestSuite {
     }
     return shouldRun
   }
+
+  def onOptions(options: ISZ[CMakeOption]): ISZ[String] = { return options.map(o => s"-D${o.name}=ON") }
 }
 
 object CodeGenTest {
@@ -347,7 +368,7 @@ object CodeGenTest {
     return Os.env(CodeGenTest.CAMKES_ARM_VM_DIR) match {
       case Some(x) => Some(Os.path(x))
       case _ =>
-        eprintln(s"${CodeGenTest.CAMKES_ARM_VM_DIR} nos set!!!")
+        eprintln(s"${CodeGenTest.CAMKES_ARM_VM_DIR} not set!!!")
         val candidate = Os.home / "CASE/camkes-arm-vm"
         if(candidate.exists) {
           eprintln(s"Found ${candidate} so using that")
