@@ -97,7 +97,7 @@
         "testdpmon--SeL4_Only\/components\/source_t_impl\/src\/sb_source_t_impl.c",
         {
           "type" : "Resource",
-          "content" : "#include <sb_source_t_impl.h>\n#include <string.h>\n#include <camkes.h>\n\nseqNum_t sb_write_port_seqNum;\n\nbool sb_write_port_write(const int8_t * value) {\n  return write_sp_int8_t(sb_write_port, value, &sb_write_port_seqNum);\n}\n\n\/************************************************************************\n *  sb_entrypoint_source_t_impl_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_source_t_impl_initializer(const int64_t * in_arg) {\n  testdpmon_source_component_init((int64_t *) in_arg);\n}\n\nvoid pre_init(void) {\n  \/\/ initialise data structure for data port write_port\n  init_sp_int8_t(sb_write_port, &sb_write_port_seqNum);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_source_t_impl_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_source_t_impl.h>\n#include <string.h>\n#include <camkes.h>\n\nseqNum_t sb_write_port_seqNum;\n\nbool sb_write_port_write(const int8_t * value) {\n  return write_sp_int8_t(sb_write_port, value, &sb_write_port_seqNum);\n}\n\n\/************************************************************************\n *  sb_entrypoint_source_t_impl_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_source_t_impl_initializer(const int64_t * in_arg) {\n  testdpmon_source_component_init((int64_t *) in_arg);\n}\n\nvoid pre_init(void) {\n  \/\/ initialise data structure for data port write_port\n  init_sp_int8_t(sb_write_port, &sb_write_port_seqNum);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_source_t_impl_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -106,7 +106,7 @@
         "testdpmon--SeL4_Only\/components\/source_t_impl\/includes\/sb_source_t_impl.h",
         {
           "type" : "Resource",
-          "content" : "#ifndef SB_SOURCE_T_IMPL_H\n#define SB_SOURCE_T_IMPL_H\n\n#include <sb_types.h>\n\nbool sb_write_port_write(const int8_t * value);\n\nvoid testdpmon_source_component_init(const int64_t *arg);\n\n#endif \/\/ SB_SOURCE_T_IMPL_H\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\n#ifndef SB_SOURCE_T_IMPL_H\n#define SB_SOURCE_T_IMPL_H\n\n#include <sb_types.h>\n\nbool sb_write_port_write(const int8_t * value);\n\nvoid testdpmon_source_component_init(const int64_t *arg);\n\n#endif \/\/ SB_SOURCE_T_IMPL_H\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -115,7 +115,7 @@
         "testdpmon--SeL4_Only\/components\/destination_t_impl\/src\/sb_destination_t_impl.c",
         {
           "type" : "Resource",
-          "content" : "#include <sb_destination_t_impl.h>\n#include <string.h>\n#include <camkes.h>\n\nseqNum_t sb_read_port_seqNum;\n\n\/*****************************************************************\n * sb_read_port_is_empty:\n *\n * Helper method to determine if the data infrastructure port has\n * received data\n *\n ****************************************************************\/\nbool sb_read_port_is_empty() {\n  return is_empty_sp_int8_t(sb_read_port);\n}\n\nbool sb_read_port_read(int8_t * value) {\n  seqNum_t new_seqNum;\n  if ( read_sp_int8_t(sb_read_port, value, &new_seqNum) ) {\n    sb_read_port_seqNum = new_seqNum;\n    return true;\n  } else {\n    return false;\n  } \n}\n\nvoid pre_init(void) {\n  \/\/ initialise data structure for data port read_port\n  init_sp_int8_t(sb_read_port, &sb_read_port_seqNum);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_destination_t_impl.h>\n#include <string.h>\n#include <camkes.h>\n\nseqNum_t sb_read_port_seqNum;\n\n\/*****************************************************************\n * sb_read_port_is_empty:\n *\n * Helper method to determine if the data infrastructure port has\n * received data\n *\n ****************************************************************\/\nbool sb_read_port_is_empty() {\n  return is_empty_sp_int8_t(sb_read_port);\n}\n\nbool sb_read_port_read(int8_t * value) {\n  seqNum_t new_seqNum;\n  if ( read_sp_int8_t(sb_read_port, value, &new_seqNum) ) {\n    sb_read_port_seqNum = new_seqNum;\n    return true;\n  } else {\n    return false;\n  } \n}\n\nvoid pre_init(void) {\n  \/\/ initialise data structure for data port read_port\n  init_sp_int8_t(sb_read_port, &sb_read_port_seqNum);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -124,7 +124,7 @@
         "testdpmon--SeL4_Only\/components\/destination_t_impl\/includes\/sb_destination_t_impl.h",
         {
           "type" : "Resource",
-          "content" : "#ifndef SB_DESTINATION_T_IMPL_H\n#define SB_DESTINATION_T_IMPL_H\n\n#include <sb_types.h>\n\nbool sb_read_port_read(int8_t * value);\n\n#endif \/\/ SB_DESTINATION_T_IMPL_H\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\n#ifndef SB_DESTINATION_T_IMPL_H\n#define SB_DESTINATION_T_IMPL_H\n\n#include <sb_types.h>\n\nbool sb_read_port_read(int8_t * value);\n\n#endif \/\/ SB_DESTINATION_T_IMPL_H\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
