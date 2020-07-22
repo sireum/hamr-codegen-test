@@ -130,6 +130,15 @@
         }
       ],
       [
+        "test_event_data_port_periodic_domains_VM__sender_vm--SeL4_Only\/bin\/setup-camkes-arm-vm.sh",
+        {
+          "type" : "Resource",
+          "content" : "#!\/usr\/bin\/env bash\n\nset -o errexit -o pipefail -o noclobber\n\nif [ -n \"$1\" ]; then\n    CAMKES_ARM_VM_DIR=$1\nelse\n  CASE_HOME=$HOME\/CASE\n\n  if [[ ! -d \"${CASE_HOME}\" ]]; then\n    echo \"CASE home not found: ${CASE_HOME}\"\n    exit 1\n  fi\n\n  CAMKES_ARM_VM_DIR=${CASE_HOME}\/camkes-arm-vm\nfi\n\nif [[ -d \"${CAMKES_ARM_VM_DIR}\" ]]; then\n  read -p \"The following directory already exists, replace ${CAMKES_ARM_VM_DIR} [Y|y]? \" -n 1 -r; echo\n  if [[ $REPLY =~ ^[Yy]$ ]]; then\n    rm -rf ${CAMKES_ARM_VM_DIR}\n  else\n    exit -1\n  fi\nfi\n\nmkdir $CAMKES_ARM_VM_DIR\ncd $CAMKES_ARM_VM_DIR\n\necho \"Cloning camkes arm\"\nrepo init -u https:\/\/github.com\/SEL4PROJ\/camkes-arm-vm-manifest.git --depth=1\nrepo sync -j8\n\necho \"Cloning Kent's CAmkES\"\n\n(cd projects && rm -rf camkes && git clone https:\/\/github.com\/kent-mcleod\/camkes.git -b kent\/aadl)\n\ncd $CAMKES_ARM_VM_DIR\n\nln -sf projects\/camkes\/easy-settings.cmake\n",
+          "overwrite" : true,
+          "makeExecutable" : true
+        }
+      ],
+      [
         "test_event_data_port_periodic_domains_VM__sender_vm--SeL4_Only\/types\/includes\/sb_event_counter.h",
         {
           "type" : "Resource",
