@@ -115,7 +115,7 @@
         "test_data-port-periodic_domains_VM__receiver_vm--SeL4_Only\/components\/Pacer\/src\/Pacer.c",
         {
           "type" : "Resource",
-          "content" : "\/\/ Copyright 2019 Adventium Labs\n\n#include <camkes.h>\n#include <stdio.h>\n#include <sel4\/sel4.h>\n#include <sb_queue_int8_t_1.h>\n\nvoid send_period_to_vmdst_process(int8_t *data) {\n  sb_queue_int8_t_1_enqueue(period_to_vmdst_process_queue, data);\n  period_to_vmdst_process_notification_emit();\n}\n\nvoid pre_init(void) {\n  sb_queue_int8_t_1_init(period_to_vmdst_process_queue);\n}\n\nint run(void) {\n\n  int8_t tickCount = 0;\n\n  while (1) {\n    \/\/printf(\"%s: Period tick %d\\n\", get_instance_name(), tickCount);\n\n    tickCount++;\n\n    tick_emit();\n\n    send_period_to_vmdst_process(&tickCount);\n    period_emit();\n\n    tock_wait();\n  }\n\n  return 0;\n}",
+          "content" : "\/\/ Copyright 2019 Adventium Labs\n\n#include <camkes.h>\n#include <stdio.h>\n#include <sel4\/sel4.h>\n#include <sb_queue_int8_t_1.h>\n\nextern const char *get_instance_name(void);\n\nvoid send_period_to_vmdst_process(int8_t *data) {\n  sb_queue_int8_t_1_enqueue(period_to_vmdst_process_queue, data);\n  period_to_vmdst_process_notification_emit();\n}\n\nvoid pre_init(void) {\n  sb_queue_int8_t_1_init(period_to_vmdst_process_queue);\n}\n\nint run(void) {\n\n  int8_t tickCount = 0;\n\n  while (1) {\n    \/\/printf(\"%s: Period tick %d\\n\", get_instance_name(), tickCount);\n\n    tickCount++;\n\n    tick_emit();\n\n    send_period_to_vmdst_process(&tickCount);\n    period_emit();\n\n    tock_wait();\n  }\n\n  return 0;\n}",
           "overwrite" : true,
           "makeExecutable" : false
         }

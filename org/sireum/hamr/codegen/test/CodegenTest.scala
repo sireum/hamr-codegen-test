@@ -319,7 +319,8 @@ object CodeGenTest {
     runTranspiler = T,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
-    aadlRootDir = None()
+    aadlRootDir = None(),
+    experimentalOptions = ISZ()
   )
 
   def writeExpected(resultMap: TestResult, expected: Os.Path) = {
