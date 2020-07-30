@@ -39,6 +39,7 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform,
           excludeComponentImpl = T),
         resultDir, None(), None())
+
       platform = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform,

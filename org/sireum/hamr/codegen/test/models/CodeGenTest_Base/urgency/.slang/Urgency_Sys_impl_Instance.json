@@ -137,7 +137,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -173,7 +174,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -209,7 +211,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -317,8 +320,20 @@
                     "properties" : [
                     ]
                   }
+                },
+                {
+                  "type" : "Annex",
+                  "name" : "smf",
+                  "clause" : {
+                    "type" : "SmfClause",
+                    "classification" : [
+                    ],
+                    "declass" : [
+                    ]
+                  }
                 }
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -422,7 +437,8 @@
                       "appliesTo" : [
                       ]
                     }
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -458,7 +474,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -528,7 +545,8 @@
                       "appliesTo" : [
                       ]
                     }
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -564,7 +582,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -600,7 +619,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -636,7 +656,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -709,8 +730,20 @@
                     "properties" : [
                     ]
                   }
+                },
+                {
+                  "type" : "Annex",
+                  "name" : "smf",
+                  "clause" : {
+                    "type" : "SmfClause",
+                    "classification" : [
+                    ],
+                    "declass" : [
+                    ]
+                  }
                 }
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -814,7 +847,8 @@
                       "appliesTo" : [
                       ]
                     }
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -850,7 +884,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -920,7 +955,8 @@
                       "appliesTo" : [
                       ]
                     }
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -956,7 +992,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -992,7 +1029,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1028,7 +1066,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -1148,8 +1187,20 @@
                     "properties" : [
                     ]
                   }
+                },
+                {
+                  "type" : "Annex",
+                  "name" : "smf",
+                  "clause" : {
+                    "type" : "SmfClause",
+                    "classification" : [
+                    ],
+                    "declass" : [
+                    ]
+                  }
                 }
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2"
             },
             {
               "type" : "Component",
@@ -1253,7 +1304,8 @@
                       "appliesTo" : [
                       ]
                     }
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1289,7 +1341,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1359,7 +1412,8 @@
                       "appliesTo" : [
                       ]
                     }
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1395,7 +1449,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1431,7 +1486,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1467,7 +1523,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -1587,8 +1644,20 @@
                     "properties" : [
                     ]
                   }
+                },
+                {
+                  "type" : "Annex",
+                  "name" : "smf",
+                  "clause" : {
+                    "type" : "SmfClause",
+                    "classification" : [
+                    ],
+                    "declass" : [
+                    ]
+                  }
                 }
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3"
             },
             {
               "type" : "Component",
@@ -1692,7 +1761,8 @@
                       "appliesTo" : [
                       ]
                     }
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1728,7 +1798,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1798,7 +1869,8 @@
                       "appliesTo" : [
                       ]
                     }
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1834,7 +1906,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1870,7 +1943,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1906,7 +1980,8 @@
                     "type" : "None"
                   },
                   "properties" : [
-                  ]
+                  ],
+                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -2026,8 +2101,20 @@
                     "properties" : [
                     ]
                   }
+                },
+                {
+                  "type" : "Annex",
+                  "name" : "smf",
+                  "clause" : {
+                    "type" : "SmfClause",
+                    "classification" : [
+                    ],
+                    "declass" : [
+                    ]
+                  }
                 }
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4"
             }
           ],
           "connections" : [
@@ -2178,7 +2265,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2327,7 +2415,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2476,7 +2565,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2625,7 +2715,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2774,7 +2865,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2923,7 +3015,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.5\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3072,7 +3165,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.6\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3221,7 +3315,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.7\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3370,7 +3465,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.8\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3519,7 +3615,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.9\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3668,7 +3765,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.10\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3817,7 +3915,8 @@
                 }
               ],
               "properties" : [
-              ]
+              ],
+              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.11\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -6027,8 +6126,20 @@
                 "properties" : [
                 ]
               }
+            },
+            {
+              "type" : "Annex",
+              "name" : "smf",
+              "clause" : {
+                "type" : "SmfClause",
+                "classification" : [
+                ],
+                "declass" : [
+                ]
+              }
             }
-          ]
+          ],
+          "uriFrag" : "\/\/@componentInstance.0"
         }
       ],
       "connections" : [
@@ -6068,8 +6179,20 @@
             "properties" : [
             ]
           }
+        },
+        {
+          "type" : "Annex",
+          "name" : "smf",
+          "clause" : {
+            "type" : "SmfClause",
+            "classification" : [
+            ],
+            "declass" : [
+            ]
+          }
         }
-      ]
+      ],
+      "uriFrag" : "\/"
     }
   ],
   "annexLib" : [
