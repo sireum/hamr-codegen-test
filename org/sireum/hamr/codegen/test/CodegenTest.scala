@@ -36,16 +36,21 @@ trait CodeGenTest extends TestSuite {
   def timeout: Z = 10000
 
   val (expectedJsonDir, baseModelsDir) = {
-    // TODO: really only need to write to temp dir when running from jar
-
-    val temp = Os.tempDir()
-
-    for(entry <- map) {
-      assert(entry._1.head == "expected" || entry._1.head == "models")
-      val f = temp / entry._1.mkString("/")
-      f.writeOver(entry._2)
+    val intellijTestDir = Os.path("./hamr/codegen/jvm/src/test/scala")
+    val rootResultsDir: Os.Path = if(intellijTestDir.exists) {
+      // use local/intellij copy
+      intellijTestDir
+    } else {
+      // probably running from jar so copy resources to a temp directory
+      val temp: Os.Path = Os.tempDir()
+      for (entry <- testResources()) {
+        assert(entry._1.head == "expected" || entry._1.head == "models")
+        val f = temp / entry._1.mkString("/")
+        f.writeOver(entry._2)
+      }
+      temp
     }
-    (temp / "expected", temp / "models")
+    (rootResultsDir / "expected", rootResultsDir / "models")
   }
 
 
@@ -54,7 +59,7 @@ trait CodeGenTest extends TestSuite {
   }
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,
-           resultDir:Option[String],        
+           resultDir:Option[String],
            description: Option[String], modelUri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
     var tags: ISZ[org.scalatest.Tag] = ISZ()
 
@@ -72,23 +77,23 @@ trait CodeGenTest extends TestSuite {
               resultDir: Option[String],
               description: Option[String], modelUri: Option[String],
               ): Unit = {
-    
+
     val expectedJson = expectedJsonDir / s"${testName}.${CodeGenTest.outputFormat}"
-    
+
     val rootTestOutputDir = if(resultDir.nonEmpty) rootResultDir / resultDir.get / testName else rootResultDir / testName
-    val expectedDir = rootTestOutputDir / "expected" 
+    val expectedDir = rootTestOutputDir / "expected"
     val resultsDir = rootTestOutputDir / "results"
-    val slangOutputDir = resultsDir / testName 
-    
+    val slangOutputDir = resultsDir / testName
+
     var testOps = ops(
       slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some(slangOutputDir.canon.value),
       writeOutResources = T
     )
-    
+
     if(isSeL4(testOps.platform)) {
       testOps = testOps(
         slangOutputDir = Some(s"${testOps.slangOutputDir.get}/slang-embedded"),
-          
+
         camkesOutputDir = if(testOps.camkesOutputDir.nonEmpty) testOps.camkesOutputDir  else testOps.slangOutputDir,
         aadlRootDir = if(testOps.aadlRootDir.nonEmpty) testOps.aadlRootDir else Some(modelDir.canon.value),
       )
@@ -96,13 +101,13 @@ trait CodeGenTest extends TestSuite {
 
     rootTestOutputDir.removeAll()
     rootTestOutputDir.mkdirAll()
-    
+
     val reporter = Reporter.create
 
     val model = getModel(airFile.read)
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
-      
+
     val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
       if(shouldTranspile(testOps.platform)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
 
@@ -174,17 +179,17 @@ trait CodeGenTest extends TestSuite {
     }
     else {
       testFail = T
-      Console.err.println(s"Expected does not exist: ${expectedJson}")      
+      Console.err.println(s"Expected does not exist: ${expectedJson}")
       TestResult(Map.empty)
     }
-    
+
     if(resultMap.map.size != expectedMap.map.size) {
       val ekeys = expectedMap.map.keySet
       val rkeys = resultMap.map.keySet
 
       val missingEkeys = (ekeys.union(rkeys) -- ekeys.elements).elements
       val missingRkeys = (ekeys.union(rkeys) -- rkeys.elements).elements
-      
+
       if (missingEkeys.nonEmpty) {
         for(k <- missingEkeys) {
           println(s"Expected missing entry ${k}")
@@ -221,7 +226,7 @@ trait CodeGenTest extends TestSuite {
       if(r._1.native.endsWith("graph.dot")) {
         val dot = r._2.content
         val dotOutput = Os.path(s"${output.value}.pdf")
-        
+
         val proc:ISZ[String] = ISZ("dot", "-Tpdf", output.canon.value, "-o", dotOutput.canon.value)
         println(proc)
         Os.proc(proc).run()
@@ -230,7 +235,7 @@ trait CodeGenTest extends TestSuite {
     }
 
     for(e <- expectedMap.map.entries) {
-      (expectedDir / e._1).canon.writeOver(e._2.content)      
+      (expectedDir / e._1).canon.writeOver(e._2.content)
     }
 
     if(allEqual && delResultDirIfEqual) rootTestOutputDir.removeAll()
@@ -245,7 +250,7 @@ trait CodeGenTest extends TestSuite {
     }
 
     assert(allEqual, s"Mismatches in ${rootTestOutputDir.canon.toUri}")
-    
+
     assert(!testFail, s"test fail in ${rootTestOutputDir.canon.toUri}")
   }
 
@@ -435,9 +440,14 @@ object CodeGenTest {
     results.exitCode
   }
 
-  def map: scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
+  def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
+    // scala/java 'resources' directories don't play nicely with mill so instead add the contents
+    // of 'expected' and 'models' into the binary via RC.text.  These can then
+    // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
     RC.text(Vector("../../../../../")) { (p, f) =>
       val allowedDirs: ISZ[String] = ISZ("expected", "models")
+
+      // exclude unneeded/binary files
       val excludedResources: ISZ[String] = ISZ("png", "pdf", "md", "dot", "aadl", "aadl_diagram")
 
       val filename = Os.path(p.last)
