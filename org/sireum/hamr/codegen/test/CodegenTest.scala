@@ -1,15 +1,15 @@
 package org.sireum.hamr.codegen.test
 
-import org.sireum.Os.Proc
+import org.sireum.$internal.RC
 import org.sireum._
-import org.sireum.test.TestSuite
-import org.sireum.hamr.codegen.{CodeGen, CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults, TranspilerConfig}
-import org.sireum.hamr.ir._
-import org.sireum.message._
 import org.sireum.hamr.act.templates.{CakeMLTemplate, SlangEmbeddedTemplate}
 import org.sireum.hamr.act.utils.CMakeOption
 import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen.test.util.{TestModes, TestResult}
+import org.sireum.hamr.codegen._
+import org.sireum.hamr.ir._
+import org.sireum.message._
+import org.sireum.test.TestSuite
 
 /** Can regenerate AIR JSON files via 
 * https://github.com/sireum/osate-plugin/blob/d0015531e9d2039f7f186c4fa7a124521ee664b6/org.sireum.aadl.osate.tests/src/org/sireum/aadl/osate/tests/extras/AirUpdater.java#L46-L54
@@ -34,6 +34,20 @@ trait CodeGenTest extends TestSuite {
   )
 
   def timeout: Z = 10000
+
+  val (expectedJsonDir, baseModelsDir) = {
+    // TODO: really only need to write to temp dir when running from jar
+
+    val temp = Os.tempDir()
+
+    for(entry <- map) {
+      assert(entry._1.head == "expected" || entry._1.head == "models")
+      val f = temp / entry._1.mkString("/")
+      f.writeOver(entry._2)
+    }
+    (temp / "expected", temp / "models")
+  }
+
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
     test(testName, modelDir, airFile, ops, None(), None(), None())
@@ -288,19 +302,19 @@ object CodeGenTest {
   val CAMKES_ARM_VM_DIR = "CAMKES_ARM_VM_DIR"
 
   val FILTER = "FILTER"
-  
-  val outputFormat = "json" 
-    
+
+  val outputFormat = "json"
+
   val rootDir = Os.path("./hamr/codegen/jvm/src/test")
-  val rootResultDir = rootDir / "results"
-  val testDir = rootDir / "scala" / "org" / "sireum" / "hamr" / "codegen" / "test"
-  val modelsDir = rootDir / "scala" / "org" / "sireum" / "hamr" / "codegen" / "test" / "models"
-  
-  val expectedJsonDir = testDir / "expected"
+  val rootResultDir: Os.Path = if(rootDir.exists) {
+    rootDir / "results" // probably running inside intellij so emit results locally
+  } else {
+    Os.tempDir() / "results" // probably running from jar
+  }
 
   rootResultDir.mkdirAll()
 
-  val baseOptions = CodeGenConfig (
+  val baseOptions = CodeGenConfig(
     writeOutResources = F,
     ipc = CodeGenIpcMechanism.SharedMemory,
 
@@ -324,20 +338,20 @@ object CodeGenTest {
   )
 
   def writeExpected(resultMap: TestResult, expected: Os.Path) = {
-    if(outputFormat == "json") {
+    if (outputFormat == "json") {
       expected.writeOver(util.JSON.fromTestResult(resultMap, F))
-    } 
-    else if(outputFormat == "msgpack") {
+    }
+    else if (outputFormat == "msgpack") {
       val r = util.MsgPack.fromTestResult(resultMap, T)
       expected.writeOver(org.sireum.conversions.String.toBase64(r).native)
     }
   }
 
   def readExpected(expected: Os.Path): TestResult = {
-    if(outputFormat == "json") {
+    if (outputFormat == "json") {
       util.JSON.toTestResult(expected.read).left
-    } 
-    else if(outputFormat == "msgpack") {
+    }
+    else if (outputFormat == "msgpack") {
       val b64 = org.sireum.conversions.String.fromBase64(expected.read).left
       return util.MsgPack.toTestResult(b64).left
     }
@@ -345,9 +359,9 @@ object CodeGenTest {
       throw new RuntimeException("Unexpected " + outputFormat)
     }
   }
-  
+
   def filterTestsSet(): Option[B] = {
-    return if(Os.env(FILTER).nonEmpty) return Some(Os.env(FILTER).get.native.toBoolean) else None()
+    return if (Os.env(FILTER).nonEmpty) return Some(Os.env(FILTER).get.native.toBoolean) else None()
   }
 
   def camkesDir(): Option[Os.Path] = {
@@ -356,7 +370,7 @@ object CodeGenTest {
       case _ =>
         eprintln(s"${CodeGenTest.CAMKES_DIR} not set !!!!")
         val candidate = Os.home / "CASE/camkes"
-        if(candidate.exists) {
+        if (candidate.exists) {
           eprintln(s"Found ${candidate} so using that")
           Some(candidate)
         } else {
@@ -371,7 +385,7 @@ object CodeGenTest {
       case _ =>
         eprintln(s"${CodeGenTest.CAMKES_ARM_VM_DIR} not set!!!")
         val candidate = Os.home / "CASE/camkes-arm-vm"
-        if(candidate.exists) {
+        if (candidate.exists) {
           eprintln(s"Found ${candidate} so using that")
           Some(candidate)
         } else {
@@ -384,8 +398,13 @@ object CodeGenTest {
   def transpile(tc: TranspilerConfig): Z = {
     var args: ISZ[String] = ISZ()
 
-    def addKey(key: String): Unit = { args = args :+ key }
-    def add(key: String, value: String): Unit = { args = args :+ key :+ value }
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
 
     args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, ":")}""".render
     tc.output.map(s => add("--output-dir", s))
@@ -395,18 +414,18 @@ object CodeGenTest {
     add("--bits", tc.bitWidth.string)
     add("--string-size", tc.maxStringSize.string)
     add("--sequence-size", tc.maxArraySize.string)
-    if(tc.customArraySizes.nonEmpty) add("--sequence", st"""${(tc.customArraySizes, ";")}""".render)
-    if(tc.customConstants.nonEmpty) add("--constants", st"""${(tc.customConstants, ";")}""".render)
-    if(tc.forwarding.nonEmpty) add("--forward", st"""${(tc.forwarding, ",")}""".render)
+    if (tc.customArraySizes.nonEmpty) add("--sequence", st"""${(tc.customArraySizes, ";")}""".render)
+    if (tc.customConstants.nonEmpty) add("--constants", st"""${(tc.customConstants, ";")}""".render)
+    if (tc.forwarding.nonEmpty) add("--forward", st"""${(tc.forwarding, ",")}""".render)
     tc.stackSize.map(s => add("--stack-size", s))
-    if(tc.stableTypeId) addKey("--stable-type-id")
-    if(tc.exts.nonEmpty) add("--exts", st"""${(tc.exts, ":")}""".render)
-    if(tc.libOnly) addKey("--lib-only")
-    if(tc.verbose) addKey("--verbose")
-    if(tc.cmakeIncludes.nonEmpty) add("--cmake-includes", st"""${(tc.cmakeIncludes, ",")}""".render)
+    if (tc.stableTypeId) addKey("--stable-type-id")
+    if (tc.exts.nonEmpty) add("--exts", st"""${(tc.exts, ":")}""".render)
+    if (tc.libOnly) addKey("--lib-only")
+    if (tc.verbose) addKey("--verbose")
+    if (tc.cmakeIncludes.nonEmpty) add("--cmake-includes", st"""${(tc.cmakeIncludes, ",")}""".render)
 
     //args.foreach(p => println(p))
-    
+
     val sireum = Os.path(Os.env("PWD").get) / "bin" / "sireum"
 
     args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
@@ -414,5 +433,23 @@ object CodeGenTest {
     val results = Os.proc(args).console.run()
 
     results.exitCode
+  }
+
+  def map: scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
+    RC.text(Vector("../../../../../")) { (p, f) =>
+      val allowedDirs: ISZ[String] = ISZ("expected", "models")
+      val excludedResources: ISZ[String] = ISZ("png", "pdf", "md", "dot", "aadl", "aadl_diagram")
+
+      val filename = Os.path(p.last)
+
+      val allow = ops.ISZOps(allowedDirs).contains(p.head) &&
+        !ops.ISZOps(excludedResources).contains(filename.ext)
+
+      if(allow) {
+        //println(p)
+      }
+
+      allow
+    }
   }
 }

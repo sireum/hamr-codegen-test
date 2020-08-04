@@ -2,7 +2,7 @@ package org.sireum.hamr.codegen.test
 
 import org.sireum._
 import org.sireum.hamr.codegen.CodeGenPlatform
-import org.sireum.hamr.codegen.test.CodeGenTest.{baseOptions, modelsDir}
+import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
 
 class CodegenTest_CASE extends CodeGenTest {
 
@@ -13,7 +13,7 @@ class CodegenTest_CASE extends CodeGenTest {
 
     val(sel4, sel4_tb, sel4_only) = (CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
 
-    val case_tool_evaluation_dir = CodeGenTest.modelsDir / getClass.getSimpleName
+    val case_tool_evaluation_dir = baseModelsDir / getClass.getSimpleName
     val resultDir: Option[String] = Some(getClass.getSimpleName)
 
     def gen(name: String, json: String, platforms: ISZ[CodeGenPlatform.Type]): (String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type]) = {

@@ -2,7 +2,7 @@ package org.sireum.hamr.codegen.test
 
 import org.sireum._
 import org.sireum.hamr.codegen._
-import org.sireum.hamr.codegen.test.CodeGenTest.{baseOptions, modelsDir}
+import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
 
 class CodeGenTest_Base extends CodeGenTest {
 
@@ -10,7 +10,7 @@ class CodeGenTest_Base extends CodeGenTest {
   
   val tests = Tests {
     val resultDir: Option[String] = Some(getClass.getSimpleName)
-    val modelsDir = CodeGenTest.modelsDir / getClass.getSimpleName
+    val modelsDir = baseModelsDir / getClass.getSimpleName
     
     {
       val name = "building_control_gen_mixed"
