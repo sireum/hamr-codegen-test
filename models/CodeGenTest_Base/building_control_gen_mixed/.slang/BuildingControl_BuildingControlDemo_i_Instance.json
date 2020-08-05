@@ -70,7 +70,7 @@
           },
           "properties" : [
           ],
-          "uriFrag" : "\/\/@featureInstance.0"
+          "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@featureInstance.0"
         }
       ],
       "subComponents" : [
@@ -147,7 +147,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@featureInstance.0"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
             }
           ],
           "subComponents" : [
@@ -224,7 +224,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -261,7 +261,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -454,7 +454,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -529,7 +529,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -636,7 +636,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -677,7 +677,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -784,7 +784,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -821,7 +821,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
                 }
               ],
               "subComponents" : [
@@ -1014,7 +1014,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -1155,7 +1155,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1262,7 +1262,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
+                  "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -1455,7 +1455,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
             }
           ],
           "connections" : [
@@ -1607,7 +1607,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@connectionInstance.0\/@connectionReference.1"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -1757,7 +1757,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1907,7 +1907,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2057,7 +2057,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2207,7 +2207,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -3019,7 +3019,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.0"
+          "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -3108,7 +3108,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.1"
+          "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.1"
         }
       ],
       "connections" : [
@@ -3260,7 +3260,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "\/\/@connectionInstance.0\/@connectionReference.0"
+          "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
         }
       ],
       "connectionInstances" : [
@@ -3536,7 +3536,7 @@
           }
         }
       ],
-      "uriFrag" : "\/"
+      "uriFrag" : "building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [
@@ -3892,7 +3892,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "Base_Types.Float_32"
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Float_32"
         },
         {
           "type" : "Component",
@@ -4013,7 +4013,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "BuildingControl.TempUnit"
+          "uriFrag" : "building-control-mixed\/BuildingControl.aadl#BuildingControl.TempUnit"
         }
       ],
       "connections" : [
@@ -4204,7 +4204,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "Base_Types.Float_32"
+              "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Float_32"
             },
             {
               "type" : "Component",
@@ -4325,7 +4325,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "BuildingControl.TempUnit"
+              "uriFrag" : "building-control-mixed\/BuildingControl.aadl#BuildingControl.TempUnit"
             }
           ],
           "connections" : [
@@ -4340,7 +4340,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "BuildingControl.Temperature.impl"
+          "uriFrag" : "building-control-mixed\/BuildingControl.aadl#BuildingControl.Temperature.impl"
         },
         {
           "type" : "Component",
@@ -4493,7 +4493,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "Base_Types.Float_32"
+              "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Float_32"
             },
             {
               "type" : "Component",
@@ -4614,7 +4614,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "BuildingControl.TempUnit"
+              "uriFrag" : "building-control-mixed\/BuildingControl.aadl#BuildingControl.TempUnit"
             }
           ],
           "connections" : [
@@ -4629,7 +4629,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "BuildingControl.Temperature.impl"
+          "uriFrag" : "building-control-mixed\/BuildingControl.aadl#BuildingControl.Temperature.impl"
         }
       ],
       "connections" : [

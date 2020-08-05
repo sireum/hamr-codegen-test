@@ -203,7 +203,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@featureInstance.0"
+              "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
             }
           ],
           "subComponents" : [
@@ -408,7 +408,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -705,7 +705,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -857,7 +857,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -979,7 +979,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.0"
+          "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -1151,7 +1151,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.1\/@featureInstance.0"
+              "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
             }
           ],
           "subComponents" : [
@@ -1356,7 +1356,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1653,7 +1653,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -1805,7 +1805,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@connectionInstance.0\/@connectionReference.2"
+              "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.2"
             }
           ],
           "connectionInstances" : [
@@ -1958,7 +1958,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.1"
+          "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -2182,7 +2182,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.2"
+          "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@componentInstance.2"
         }
       ],
       "connections" : [
@@ -2334,7 +2334,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "\/\/@connectionInstance.0\/@connectionReference.1"
+          "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
         }
       ],
       "connectionInstances" : [
@@ -2689,7 +2689,7 @@
           }
         }
       ],
-      "uriFrag" : "\/"
+      "uriFrag" : "test_data_port_periodic_domains_receiver_vm\/instances\/test_data_port_periodic_domains_top_impl_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [

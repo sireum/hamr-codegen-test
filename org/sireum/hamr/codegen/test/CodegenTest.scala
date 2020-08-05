@@ -24,7 +24,7 @@ trait CodeGenTest extends TestSuite {
   def testMode: TestModes.Type = TestModes.Base
   //def testMode: TestModes.Type = TestModes.Base_TranspileNix_Camkes
 
-  def ignoreBuildSbtChanges: B = F // temporarily ignore build.sbt changes due to build.properties updates
+  def ignoreBuildSbtChanges: B = T // temporarily ignore build.sbt changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("test_event_data_port_fan_out")

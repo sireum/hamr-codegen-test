@@ -169,7 +169,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -420,7 +420,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -553,7 +553,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -738,7 +738,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -905,7 +905,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1090,7 +1090,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
             },
             {
               "type" : "Component",
@@ -1257,7 +1257,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.0"
+                  "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1442,7 +1442,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.3"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3"
             },
             {
               "type" : "Component",
@@ -1609,7 +1609,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.0"
+                  "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1794,7 +1794,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.4"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.4"
             }
           ],
           "connections" : [
@@ -1946,7 +1946,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2096,7 +2096,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2246,7 +2246,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2396,7 +2396,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -3208,7 +3208,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.0"
+          "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -3297,7 +3297,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.1"
+          "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/\/@componentInstance.1"
         }
       ],
       "connections" : [
@@ -3385,7 +3385,7 @@
           }
         }
       ],
-      "uriFrag" : "\/"
+      "uriFrag" : "test_event_port_fan_out\/instances\/test_event_port_fan_out_top_impl_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [

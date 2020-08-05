@@ -238,7 +238,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -394,7 +394,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -599,7 +599,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -736,7 +736,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -892,7 +892,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -1097,7 +1097,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1253,7 +1253,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
             }
           ],
           "connections" : [
@@ -1405,7 +1405,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1555,7 +1555,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -1968,7 +1968,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.0"
+          "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0"
         }
       ],
       "connections" : [
@@ -2240,7 +2240,7 @@
           }
         }
       ],
-      "uriFrag" : "\/"
+      "uriFrag" : "Producer-Filter-Consumer-periodic\/instances\/PFC_PFC_Sys_Impl_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [
@@ -2488,7 +2488,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "Base_Types.Integer_32"
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
         },
         {
           "type" : "Component",
@@ -2605,7 +2605,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "Base_Types.Integer_32"
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
         },
         {
           "type" : "Component",
@@ -2722,7 +2722,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "Base_Types.Integer_32"
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
         }
       ],
       "connections" : [

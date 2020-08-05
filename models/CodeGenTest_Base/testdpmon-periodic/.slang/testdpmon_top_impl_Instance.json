@@ -270,7 +270,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "testdpmon-periodic\/instances\/testdpmon_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -521,7 +521,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "testdpmon-periodic\/instances\/testdpmon_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -724,7 +724,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "testdpmon-periodic\/instances\/testdpmon_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -944,7 +944,7 @@
                   }
                 }
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "testdpmon-periodic\/instances\/testdpmon_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
             }
           ],
           "connections" : [
@@ -1096,7 +1096,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "testdpmon-periodic\/instances\/testdpmon_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -1365,7 +1365,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.0"
+          "uriFrag" : "testdpmon-periodic\/instances\/testdpmon_top_impl_Instance.aaxl2#\/\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -1454,7 +1454,7 @@
               }
             }
           ],
-          "uriFrag" : "\/\/@componentInstance.1"
+          "uriFrag" : "testdpmon-periodic\/instances\/testdpmon_top_impl_Instance.aaxl2#\/\/@componentInstance.1"
         }
       ],
       "connections" : [
@@ -1542,7 +1542,7 @@
           }
         }
       ],
-      "uriFrag" : "\/"
+      "uriFrag" : "testdpmon-periodic\/instances\/testdpmon_top_impl_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [
