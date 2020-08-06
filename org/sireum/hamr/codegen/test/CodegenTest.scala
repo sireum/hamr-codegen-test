@@ -5,8 +5,10 @@ import org.sireum._
 import org.sireum.hamr.act.templates.{CakeMLTemplate, SlangEmbeddedTemplate}
 import org.sireum.hamr.act.utils.CMakeOption
 import org.sireum.hamr.act.vm.VM_Template
-import org.sireum.hamr.codegen.test.util.{TestModes, TestResult}
 import org.sireum.hamr.codegen._
+import org.sireum.hamr.codegen.common.containers.TranspilerConfig
+import org.sireum.hamr.codegen.common.util.test.{TestJSON, TestMsgPack, TestResource, TestResult}
+import org.sireum.hamr.codegen.test.util.TestModes
 import org.sireum.hamr.ir._
 import org.sireum.message._
 import org.sireum.test.TestSuite
@@ -35,24 +37,7 @@ trait CodeGenTest extends TestSuite {
 
   def timeout: Z = 10000
 
-  val (expectedJsonDir, baseModelsDir) = {
-    val intellijTestDir = Os.path("./hamr/codegen/jvm/src/test/scala")
-    val rootResultsDir: Os.Path = if(intellijTestDir.exists) {
-      // use local/intellij copy
-      intellijTestDir
-    } else {
-      // probably running from jar so copy resources to a temp directory
-      val temp: Os.Path = Os.tempDir()
-      for (entry <- testResources()) {
-        assert(entry._1.head == "expected" || entry._1.head == "models")
-        val f = temp / entry._1.mkString("/")
-        f.writeOver(entry._2)
-      }
-      temp
-    }
-    (rootResultsDir / "expected", rootResultsDir / "models")
-  }
-
+  val (expectedJsonDir, baseModelsDir) = getDirectories()
 
   def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
     test(testName, modelDir, airFile, ops, None(), None(), None())
@@ -163,13 +148,13 @@ trait CodeGenTest extends TestSuite {
       }
     }
 
-    val resultMap = util.TestResult(Map.empty ++ (results.resources.map(m => {
+    val resultMap = TestResult(Map.empty ++ (results.resources.map(m => {
       val key = resultsDir.relativize(Os.path(m.path)).value
-      (key, util.Resource(m.content.render, m.overwrite, m.makeExecutable))
+      (key, TestResource(m.content.render, m.overwrite, m.makeExecutable))
     })))
 
     var testFail = F
-    val expectedMap: util.TestResult = if(generateExpected) {
+    val expectedMap: TestResult = if(generateExpected) {
       CodeGenTest.writeExpected(resultMap, expectedJson)
       println(s"Wrote: ${expectedJson}")
       resultMap
@@ -344,21 +329,21 @@ object CodeGenTest {
 
   def writeExpected(resultMap: TestResult, expected: Os.Path) = {
     if (outputFormat == "json") {
-      expected.writeOver(util.JSON.fromTestResult(resultMap, F))
+      expected.writeOver(TestJSON.fromTestResult(resultMap, F))
     }
     else if (outputFormat == "msgpack") {
-      val r = util.MsgPack.fromTestResult(resultMap, T)
+      val r = TestMsgPack.fromTestResult(resultMap, T)
       expected.writeOver(org.sireum.conversions.String.toBase64(r).native)
     }
   }
 
   def readExpected(expected: Os.Path): TestResult = {
     if (outputFormat == "json") {
-      util.JSON.toTestResult(expected.read).left
+      TestJSON.toTestResult(expected.read).left
     }
     else if (outputFormat == "msgpack") {
       val b64 = org.sireum.conversions.String.fromBase64(expected.read).left
-      return util.MsgPack.toTestResult(b64).left
+      return TestMsgPack.toTestResult(b64).left
     }
     else {
       throw new RuntimeException("Unexpected " + outputFormat)
@@ -438,6 +423,24 @@ object CodeGenTest {
     val results = Os.proc(args).console.run()
 
     results.exitCode
+  }
+
+  def getDirectories(): (Os.Path, Os.Path) = {
+    val intellijTestDir = Os.path("./hamr/codegen/jvm/src/test/scala")
+    val rootResultsDir: Os.Path = if(intellijTestDir.exists) {
+      // use local/intellij copy
+      intellijTestDir
+    } else {
+      // probably running from jar so copy resources to a temp directory
+      val temp: Os.Path = Os.tempDir()
+      for (entry <- testResources()) {
+        assert(entry._1.head == "expected" || entry._1.head == "models")
+        val f = temp / entry._1.mkString("/")
+        f.writeOver(entry._2)
+      }
+      temp
+    }
+    return (rootResultsDir / "expected", rootResultsDir / "models")
   }
 
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
