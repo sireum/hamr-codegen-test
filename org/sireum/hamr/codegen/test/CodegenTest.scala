@@ -198,13 +198,17 @@ trait CodeGenTest extends TestSuite {
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= {
-          var ignoreFile = ignoreBuildSbtChanges && r._1.native.endsWith("build.sbt")
-          ignoreFile || r._2 == e
+          val ignoreFile = ignoreBuildSbtChanges && r._1.native.endsWith("build.sbt")
+          val sameContents = r._2 == e
+          if(!sameContents) {
+            eprintln(s"${r._1} is not the same (NOTE comparing ${e.getClass.getSimpleName} objects)")
+          }
+          ignoreFile || sameContents
         }
       } else if(!generateExpected) {
         allEqual = F
         expectedMap.map.keySet.elements.foreach(p => println(p))
-        println(s"Expected missing: ${r._1}")
+        eprintln(s"Expected missing: ${r._1}")
       }
 
       /*
