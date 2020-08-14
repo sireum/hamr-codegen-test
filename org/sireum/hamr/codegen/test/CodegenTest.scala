@@ -7,7 +7,7 @@ import org.sireum.hamr.act.utils.CMakeOption
 import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.TranspilerConfig
-import org.sireum.hamr.codegen.common.util.test.{TestJSON, TestMsgPack, TestResource, TestResult}
+import org.sireum.hamr.codegen.common.util.test.{TestJSON, TestMsgPack, TestResource, TestResult, TestUtil}
 import org.sireum.hamr.codegen.test.util.TestModes
 import org.sireum.hamr.ir._
 import org.sireum.message._
@@ -63,7 +63,7 @@ trait CodeGenTest extends TestSuite {
               description: Option[String], modelUri: Option[String],
               ): Unit = {
 
-    val expectedJson = expectedJsonDir / s"${testName}.${CodeGenTest.outputFormat}"
+    val expectedJson = expectedJsonDir / s"${testName}.json"
 
     val rootTestOutputDir = if(resultDir.nonEmpty) rootResultDir / resultDir.get / testName else rootResultDir / testName
     val expectedDir = rootTestOutputDir / "expected"
@@ -155,12 +155,12 @@ trait CodeGenTest extends TestSuite {
 
     var testFail = F
     val expectedMap: TestResult = if(generateExpected) {
-      CodeGenTest.writeExpected(resultMap, expectedJson)
+      TestUtil.writeExpected(resultMap, expectedJson)
       println(s"Wrote: ${expectedJson}")
       resultMap
     }
     else if(expectedJson.exists) {
-      CodeGenTest.readExpected(expectedJson)
+      TestUtil.readExpected(expectedJson)
     }
     else {
       testFail = T
@@ -297,8 +297,6 @@ object CodeGenTest {
 
   val FILTER = "FILTER"
 
-  val outputFormat = "json"
-
   val rootDir = Os.path("./hamr/codegen/jvm/src/test")
   val rootResultDir: Os.Path = if(rootDir.exists) {
     rootDir / "results" // probably running inside intellij so emit results locally
@@ -330,29 +328,6 @@ object CodeGenTest {
     aadlRootDir = None(),
     experimentalOptions = ISZ()
   )
-
-  def writeExpected(resultMap: TestResult, expected: Os.Path) = {
-    if (outputFormat == "json") {
-      expected.writeOver(TestJSON.fromTestResult(resultMap, F))
-    }
-    else if (outputFormat == "msgpack") {
-      val r = TestMsgPack.fromTestResult(resultMap, T)
-      expected.writeOver(org.sireum.conversions.String.toBase64(r).native)
-    }
-  }
-
-  def readExpected(expected: Os.Path): TestResult = {
-    if (outputFormat == "json") {
-      TestJSON.toTestResult(expected.read).left
-    }
-    else if (outputFormat == "msgpack") {
-      val b64 = org.sireum.conversions.String.fromBase64(expected.read).left
-      return TestMsgPack.toTestResult(b64).left
-    }
-    else {
-      throw new RuntimeException("Unexpected " + outputFormat)
-    }
-  }
 
   def filterTestsSet(): Option[B] = {
     return if (Os.env(FILTER).nonEmpty) return Some(Os.env(FILTER).get.native.toBoolean) else None()
