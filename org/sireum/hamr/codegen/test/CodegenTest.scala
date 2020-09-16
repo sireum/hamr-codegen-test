@@ -26,7 +26,7 @@ trait CodeGenTest extends TestSuite {
   def testMode: TestModes.Type = TestModes.Base
   //def testMode: TestModes.Type = TestModes.Base_TranspileNix_Camkes
 
-  def ignoreBuildSbtChanges: B = F // temporarily ignore build.sbt changes due to build.properties updates
+  def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("test_event_data_port_fan_out")
@@ -198,7 +198,7 @@ trait CodeGenTest extends TestSuite {
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= {
-          val ignoreFile = ignoreBuildSbtChanges && r._1.native.endsWith("build.sbt")
+          val ignoreFile = ignoreSbtAndMillBuildChanges && (r._1.native.endsWith("build.sbt") || r._1.native.endsWith("build.sc"))
           val sameContents = r._2 == e
           if(!sameContents) {
             eprintln(s"${r._1} is not the same (NOTE comparing ${e.getClass.getSimpleName} objects)")
