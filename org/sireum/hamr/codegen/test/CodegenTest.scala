@@ -3,7 +3,7 @@ package org.sireum.hamr.codegen.test
 import org.sireum.$internal.RC
 import org.sireum._
 import org.sireum.hamr.act.templates.{CakeMLTemplate, SlangEmbeddedTemplate}
-import org.sireum.hamr.act.utils.CMakeOption
+import org.sireum.hamr.act.util.CMakeOption
 import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.TranspilerConfig
