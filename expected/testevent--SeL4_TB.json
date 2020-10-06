@@ -4,19 +4,19 @@
     "type" : "Map",
     "entries" : [
       [
-        "testevent--SeL4_TB\/components\/emitter_impl\/emitter_impl.camkes",
+        "testevent--SeL4_TB\/components\/emitter_impl_testevent_src\/emitter_impl_testevent_src.camkes",
         {
           "type" : "TestResource",
-          "content" : "import \"..\/..\/interfaces\/AADLEvent_Sender.idl4\";\ncomponent emitter_impl {\n  include <sb_types.h>;\n  control;\n  uses AADLEvent_Sender sb_e0;\n  has semaphore sb_dispatch_sem;\n}\n",
+          "content" : "import \"..\/..\/interfaces\/AADLEvent_Sender.idl4\";\ncomponent emitter_impl_testevent_src {\n  include <sb_types.h>;\n  control;\n  uses AADLEvent_Sender sb_e0;\n  has semaphore sb_dispatch_sem;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
       ],
       [
-        "testevent--SeL4_TB\/components\/consumer_impl\/consumer_impl.camkes",
+        "testevent--SeL4_TB\/components\/consumer_impl_testevent_snk\/consumer_impl_testevent_snk.camkes",
         {
           "type" : "TestResource",
-          "content" : "import \"..\/..\/interfaces\/AADLEvent_Receiver.idl4\";\ncomponent consumer_impl {\n  include <sb_types.h>;\n  control;\n  uses AADLEvent_Receiver sb_s;\n  consumes ReceiveEvent sb_s_notification;\n  has semaphore sb_dispatch_sem;\n}\n",
+          "content" : "import \"..\/..\/interfaces\/AADLEvent_Receiver.idl4\";\ncomponent consumer_impl_testevent_snk {\n  include <sb_types.h>;\n  control;\n  uses AADLEvent_Receiver sb_s;\n  consumes ReceiveEvent sb_s_notification;\n  has semaphore sb_dispatch_sem;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -34,13 +34,13 @@
         "testevent--SeL4_TB\/top_impl_Instance.camkes",
         {
           "type" : "TestResource",
-          "content" : "\/\/ This file will be regenerated, do not edit\n\nimport <std_connector.camkes>;\nimport \"components\/emitter_impl\/emitter_impl.camkes\";\nimport \"components\/consumer_impl\/consumer_impl.camkes\";\nimport \"components\/sb_Monitors\/sb_snk_s_Monitor\/sb_snk_s_Monitor.camkes\";\n\nassembly {\n  composition {\n    component emitter_impl src;\n    component consumer_impl snk;\n    component sb_snk_s_Monitor sb_snk_s_monitor;\n\n    connection seL4RPCCall conn1(from src.sb_e0, to sb_snk_s_monitor.mon_send);\n    connection seL4RPCCall conn2(from snk.sb_s, to sb_snk_s_monitor.mon_receive);\n    connection seL4Notification conn3(from sb_snk_s_monitor.monsig, to snk.sb_s_notification);\n  }\n\n  configuration {\n\n  }\n}\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\nimport <std_connector.camkes>;\nimport \"components\/emitter_impl_testevent_src\/emitter_impl_testevent_src.camkes\";\nimport \"components\/consumer_impl_testevent_snk\/consumer_impl_testevent_snk.camkes\";\nimport \"components\/sb_Monitors\/sb_snk_s_Monitor\/sb_snk_s_Monitor.camkes\";\n\nassembly {\n  composition {\n    component emitter_impl_testevent_src testevent_src;\n    component consumer_impl_testevent_snk testevent_snk;\n    component sb_snk_s_Monitor sb_snk_s_monitor;\n\n    connection seL4RPCCall conn1(from testevent_src.sb_e0, to sb_snk_s_monitor.mon_send);\n    connection seL4RPCCall conn2(from testevent_snk.sb_s, to sb_snk_s_monitor.mon_receive);\n    connection seL4Notification conn3(from sb_snk_s_monitor.monsig, to testevent_snk.sb_s_notification);\n  }\n\n  configuration {\n\n  }\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
       ],
       [
-        "testevent--SeL4_TB\/components\/emitter_impl\/src\/emitter.c",
+        "testevent--SeL4_TB\/components\/emitter_impl_testevent_src\/src\/emitter.c",
         {
           "type" : "TestResource",
           "content" : "\/* testevent\/components\/emitter\/src\/emitter.c *\/\n\n#include <camkes.h>\n#include <stdio.h>\n#include <sb_types.h>\n#include <sb_emitter_impl.h>\n\nvoid testevent_emitter_component_init(const int64_t *in_arg)\n{\n    printf(\"testevent_emitter_component_init called\\n\");\n}\n\n\/* control thread: keep calling enqueue for thing\n *\/\nvoid run_emitter(const int64_t *in_arg)\n{\n    sb_e_enqueue();\n    printf(\"[Emitter] Sent event.\\n\");\n}\n",
@@ -49,7 +49,7 @@
         }
       ],
       [
-        "testevent--SeL4_TB\/components\/consumer_impl\/src\/consumer.c",
+        "testevent--SeL4_TB\/components\/consumer_impl_testevent_snk\/src\/consumer.c",
         {
           "type" : "TestResource",
           "content" : "\/* apps\/testevent\/components\/Consumer\/src\/main.c *\/\n\n\/* Similar to the \"helloevent\" example in CAmkES doc,\n * tidied up a bit.\n *\/\n\n#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_impl.h>\n\nstatic int8_t _value;\n\nvoid testevent_consumer_component_init(const int64_t *in_arg) {\n  printf(\"testevent_consumer_component_init called\\n\");\n  _value = 0;\n}\n\nvoid testevent_consumer_s_event_handler() {\n\n  printf(\"[Consumer] Callback %d fired.\\n\", _value);\n  _value = (_value + 1) % 500;\n}\n",
@@ -97,7 +97,7 @@
         "testevent--SeL4_TB\/CMakeLists.txt",
         {
           "type" : "TestResource",
-          "content" : "# This file will be regenerated, do not edit\n\ncmake_minimum_required(VERSION 3.8.2)\n\nproject (top_impl_Instance C)\n\nadd_definitions(-DCAMKES)\n\nif (\"${CMAKE_CXX_COMPILER_ID}\" MATCHES \"(C|c?)lang\")\n  add_compile_options(\"$<$<CONFIG:Release>:-Oz>\")\nelseif (\"${CMAKE_CXX_COMPILER_ID}\" STREQUAL \"GNU\")\n  add_compile_options(-fstack-usage)\n  add_compile_options(\"$<$<CONFIG:Release>:-Os>\")\nendif()\n\nadd_subdirectory(${CMAKE_CURRENT_LIST_DIR}\/types)\n\nDeclareCAmkESComponent(emitter_impl\n  SOURCES components\/emitter_impl\/\/src\/emitter.c components\/emitter_impl\/src\/sb_emitter_impl.c\n  INCLUDES components\/emitter_impl\/includes\/ types\/includes\n)\n\nDeclareCAmkESComponent(consumer_impl\n  SOURCES components\/consumer_impl\/\/src\/consumer.c components\/consumer_impl\/src\/sb_consumer_impl.c\n  INCLUDES components\/consumer_impl\/includes\/ types\/includes\n)\n\nDeclareCAmkESComponent(sb_snk_s_Monitor\n  SOURCES components\/sb_Monitors\/sb_snk_s_Monitor\/src\/sb_snk_s_Monitor.c\n  INCLUDES components\/sb_Monitors\/sb_snk_s_Monitor\/includes\/ types\/includes\n)\n\nDeclareCAmkESRootserver(top_impl_Instance.camkes)\n",
+          "content" : "# This file will be regenerated, do not edit\n\ncmake_minimum_required(VERSION 3.8.2)\n\nproject (top_impl_Instance C)\n\nadd_definitions(-DCAMKES)\n\nif (\"${CMAKE_CXX_COMPILER_ID}\" MATCHES \"(C|c?)lang\")\n  add_compile_options(\"$<$<CONFIG:Release>:-Oz>\")\nelseif (\"${CMAKE_CXX_COMPILER_ID}\" STREQUAL \"GNU\")\n  add_compile_options(-fstack-usage)\n  add_compile_options(\"$<$<CONFIG:Release>:-Os>\")\nendif()\n\nadd_subdirectory(${CMAKE_CURRENT_LIST_DIR}\/types)\n\nDeclareCAmkESComponent(emitter_impl_testevent_src\n  SOURCES components\/emitter_impl_testevent_src\/\/src\/emitter.c components\/emitter_impl_testevent_src\/src\/sb_emitter_impl.c\n  INCLUDES components\/emitter_impl_testevent_src\/includes\/ types\/includes\n)\n\nDeclareCAmkESComponent(consumer_impl_testevent_snk\n  SOURCES components\/consumer_impl_testevent_snk\/\/src\/consumer.c components\/consumer_impl_testevent_snk\/src\/sb_consumer_impl.c\n  INCLUDES components\/consumer_impl_testevent_snk\/includes\/ types\/includes\n)\n\nDeclareCAmkESComponent(sb_snk_s_Monitor\n  SOURCES components\/sb_Monitors\/sb_snk_s_Monitor\/src\/sb_snk_s_Monitor.c\n  INCLUDES components\/sb_Monitors\/sb_snk_s_Monitor\/includes\/ types\/includes\n)\n\nDeclareCAmkESRootserver(top_impl_Instance.camkes)\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -112,16 +112,16 @@
         }
       ],
       [
-        "testevent--SeL4_TB\/components\/emitter_impl\/src\/sb_emitter_impl.c",
+        "testevent--SeL4_TB\/components\/emitter_impl_testevent_src\/src\/sb_emitter_impl.c",
         {
           "type" : "TestResource",
-          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_emitter_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n * sb_e_enqueue\n * Invoked from user code in the local thread.\n *\n * This is the function invoked by the local thread to make a\n * call to send to a remote event port.\n *\n ************************************************************************\/\nbool sb_e_enqueue(void) {\n  sb_e0_enqueue();\n  return true;\n}\n\n\n\/************************************************************************\n *  sb_entrypoint_emitter_impl_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_emitter_impl_initializer(const int64_t * in_arg) {\n  testevent_emitter_component_init((int64_t *) in_arg);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_emitter_impl_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_emitter_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n * sb_e_enqueue\n * Invoked from user code in the local thread.\n *\n * This is the function invoked by the local thread to make a\n * call to send to a remote event port.\n *\n ************************************************************************\/\nbool sb_e_enqueue(void) {\n  sb_e0_enqueue();\n  return true;\n}\n\n\n\/************************************************************************\n *  sb_entrypoint_emitter_impl_testevent_src_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_emitter_impl_testevent_src_initializer(const int64_t * in_arg) {\n  testevent_emitter_component_init((int64_t *) in_arg);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_emitter_impl_testevent_src_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
       ],
       [
-        "testevent--SeL4_TB\/components\/emitter_impl\/includes\/sb_emitter_impl.h",
+        "testevent--SeL4_TB\/components\/emitter_impl_testevent_src\/includes\/sb_emitter_impl.h",
         {
           "type" : "TestResource",
           "content" : "\/\/ This file will be regenerated, do not edit\n\n#ifndef SB_EMITTER_IMPL_H\n#define SB_EMITTER_IMPL_H\n\n#include <sb_types.h>\n\nbool sb_e_enqueue(void);\n\nvoid testevent_emitter_component_init(const int64_t *arg);\n\n#endif \/\/ SB_EMITTER_IMPL_H\n",
@@ -130,16 +130,16 @@
         }
       ],
       [
-        "testevent--SeL4_TB\/components\/consumer_impl\/src\/sb_consumer_impl.c",
+        "testevent--SeL4_TB\/components\/consumer_impl_testevent_snk\/src\/sb_consumer_impl.c",
         {
           "type" : "TestResource",
-          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_consumer_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n * sb_s_handler:\n * Invoked by: seL4 notification callback\n *\n * This is the function invoked by an seL4 notification callback that\n * dispatches the active-thread due to the arrival of an event on\n * its s event port\n *\n ************************************************************************\/\nstatic void sb_s_handler(void *_ UNUSED){\n  MUTEXOP(sb_dispatch_sem_post());\n  CALLBACKOP(sb_s_notification_reg_callback(sb_s_handler, NULL));\n}\n\n\/************************************************************************\n *  sb_entrypoint_consumer_impl_s\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_consumer_impl_s(void){\n  testevent_consumer_s_event_handler();\n}\n\n\/************************************************************************\n *  sb_entrypoint_consumer_impl_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_consumer_impl_initializer(const int64_t * in_arg) {\n  testevent_consumer_component_init((int64_t *) in_arg);\n}\n\nvoid pre_init(void) {\n  CALLBACKOP(sb_s_notification_reg_callback(sb_s_handler, NULL));\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_consumer_impl_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n    while(sb_s_dequeue()){\n      sb_entrypoint_consumer_impl_s();\n    }\n  }\n  return 0;\n}\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_consumer_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n * sb_s_handler:\n * Invoked by: seL4 notification callback\n *\n * This is the function invoked by an seL4 notification callback that\n * dispatches the active-thread due to the arrival of an event on\n * its s event port\n *\n ************************************************************************\/\nstatic void sb_s_handler(void *_ UNUSED){\n  MUTEXOP(sb_dispatch_sem_post());\n  CALLBACKOP(sb_s_notification_reg_callback(sb_s_handler, NULL));\n}\n\n\/************************************************************************\n *  sb_entrypoint_consumer_impl_s\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_consumer_impl_s(void){\n  testevent_consumer_s_event_handler();\n}\n\n\/************************************************************************\n *  sb_entrypoint_consumer_impl_testevent_snk_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_consumer_impl_testevent_snk_initializer(const int64_t * in_arg) {\n  testevent_consumer_component_init((int64_t *) in_arg);\n}\n\nvoid pre_init(void) {\n  CALLBACKOP(sb_s_notification_reg_callback(sb_s_handler, NULL));\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_consumer_impl_testevent_snk_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n    while(sb_s_dequeue()){\n      sb_entrypoint_consumer_impl_s();\n    }\n  }\n  return 0;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
       ],
       [
-        "testevent--SeL4_TB\/components\/consumer_impl\/includes\/sb_consumer_impl.h",
+        "testevent--SeL4_TB\/components\/consumer_impl_testevent_snk\/includes\/sb_consumer_impl.h",
         {
           "type" : "TestResource",
           "content" : "\/\/ This file will be regenerated, do not edit\n\n#ifndef SB_CONSUMER_IMPL_H\n#define SB_CONSUMER_IMPL_H\n\n#include <sb_types.h>\n\nbool sb_s_dequeue(void);\n\nvoid testevent_consumer_s_event_handler(void);\n\nvoid testevent_consumer_component_init(const int64_t *arg);\n\n#endif \/\/ SB_CONSUMER_IMPL_H\n",

@@ -4,19 +4,19 @@
     "type" : "Map",
     "entries" : [
       [
-        "testshare--SeL4_TB\/components\/publisher_impl\/publisher_impl.camkes",
+        "testshare--SeL4_TB\/components\/publisher_impl_testshare_publisher_inst\/publisher_impl_testshare_publisher_inst.camkes",
         {
           "type" : "TestResource",
-          "content" : "import \"..\/..\/interfaces\/sb_testshare__Thing_t_impl_shared_var.idl4\";\ncomponent publisher_impl {\n  include <sb_types.h>;\n  control;\n  dataport testshare__Thing_t_impl b1;\n  has semaphore sb_dispatch_sem;\n}\n",
+          "content" : "import \"..\/..\/interfaces\/sb_testshare__Thing_t_impl_shared_var.idl4\";\ncomponent publisher_impl_testshare_publisher_inst {\n  include <sb_types.h>;\n  control;\n  dataport testshare__Thing_t_impl b1;\n  has semaphore sb_dispatch_sem;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
       ],
       [
-        "testshare--SeL4_TB\/components\/subscriber_impl\/subscriber_impl.camkes",
+        "testshare--SeL4_TB\/components\/subscriber_impl_testshare_subscriber_inst\/subscriber_impl_testshare_subscriber_inst.camkes",
         {
           "type" : "TestResource",
-          "content" : "import \"..\/..\/interfaces\/sb_testshare__Thing_t_impl_shared_var.idl4\";\ncomponent subscriber_impl {\n  include <sb_types.h>;\n  control;\n  dataport testshare__Thing_t_impl b2;\n  has semaphore sb_dispatch_sem;\n}\n",
+          "content" : "import \"..\/..\/interfaces\/sb_testshare__Thing_t_impl_shared_var.idl4\";\ncomponent subscriber_impl_testshare_subscriber_inst {\n  include <sb_types.h>;\n  control;\n  dataport testshare__Thing_t_impl b2;\n  has semaphore sb_dispatch_sem;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -25,7 +25,7 @@
         "testshare--SeL4_TB\/top_impl_Instance.camkes",
         {
           "type" : "TestResource",
-          "content" : "\/\/ This file will be regenerated, do not edit\n\nimport <std_connector.camkes>;\nimport \"components\/publisher_impl\/publisher_impl.camkes\";\nimport \"components\/subscriber_impl\/subscriber_impl.camkes\";\n\nassembly {\n  composition {\n    component publisher_impl publisher_inst;\n    component subscriber_impl subscriber_inst;\n\n    connection seL4SharedData conn1(from subscriber_inst.b2, to publisher_inst.b1);\n  }\n\n  configuration {\n\n  }\n}\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\nimport <std_connector.camkes>;\nimport \"components\/publisher_impl_testshare_publisher_inst\/publisher_impl_testshare_publisher_inst.camkes\";\nimport \"components\/subscriber_impl_testshare_subscriber_inst\/subscriber_impl_testshare_subscriber_inst.camkes\";\n\nassembly {\n  composition {\n    component publisher_impl_testshare_publisher_inst testshare_publisher_inst;\n    component subscriber_impl_testshare_subscriber_inst testshare_subscriber_inst;\n\n    connection seL4SharedData conn1(from testshare_subscriber_inst.b2, to testshare_publisher_inst.b1);\n  }\n\n  configuration {\n\n  }\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -40,7 +40,7 @@
         }
       ],
       [
-        "testshare--SeL4_TB\/components\/publisher_impl\/src\/publisher.c",
+        "testshare--SeL4_TB\/components\/publisher_impl_testshare_publisher_inst\/src\/publisher.c",
         {
           "type" : "TestResource",
           "content" : "\/* testshare\/components\/publisher\/src\/publisher.c *\/\n\n#include <stdio.h>\n#include <camkes.h>\n#include <sb_types.h>\n#include <sb_publisher_impl.h>\n\nstatic int8_t _value;\n\nvoid testshare_publisher_component_init(const int64_t *arg) {\n  printf(\"testshare_publisher_component_init called\\n\");\n  _value = 0;\n}\n\nvoid run_publisher(const int64_t *in_arg)\n{\n    printf(\"[publisher] starting\\n\");\n    b1->lepht = _value;\n    b1->right = _value + 1;\n    b1->top   = _value + 2;\n    b1->bottom = _value + 3;\n    b1_release(); \/* release memory fence *\/\n    printf(\"[publisher] wrote b1={%d,%d,%d,%d}\\n\",\n           b1->lepht, b1->right, b1->top, b1->bottom );\n    _value = (_value + 4) % 500;\n}\n",
@@ -49,7 +49,7 @@
         }
       ],
       [
-        "testshare--SeL4_TB\/components\/subscriber_impl\/src\/subscriber.c",
+        "testshare--SeL4_TB\/components\/subscriber_impl_testshare_subscriber_inst\/src\/subscriber.c",
         {
           "type" : "TestResource",
           "content" : "\/* testshare\/components\/subscriber\/src\/subscriber.c *\/\n\n#include <stdio.h>\n#include <camkes.h>\n#include <sb_subscriber_impl.h>\n#include <sb_types.h>\n\nvoid testshare_subscriber_component_init(const int64_t *arg) {\n    printf(\"testshare_subscriber_component_init called\\n\");\n    printf(\"[subscriber] starting--poll for nonzero thing_t\\n\");\n}\n\nvoid run_subscriber(const int64_t *arg)\n{\n    b2_acquire();  \/* acquire memory fence *\/\n    if (b2->bottom) {\n        printf(\"[subscriber] b2={%d,%d,%d,%d}\\n\",\n               b2->lepht, b2->right, b2->top, b2->bottom );\n    }\n}\n",
@@ -61,7 +61,7 @@
         "testshare--SeL4_TB\/CMakeLists.txt",
         {
           "type" : "TestResource",
-          "content" : "# This file will be regenerated, do not edit\n\ncmake_minimum_required(VERSION 3.8.2)\n\nproject (top_impl_Instance C)\n\nadd_definitions(-DCAMKES)\n\nif (\"${CMAKE_CXX_COMPILER_ID}\" MATCHES \"(C|c?)lang\")\n  add_compile_options(\"$<$<CONFIG:Release>:-Oz>\")\nelseif (\"${CMAKE_CXX_COMPILER_ID}\" STREQUAL \"GNU\")\n  add_compile_options(-fstack-usage)\n  add_compile_options(\"$<$<CONFIG:Release>:-Os>\")\nendif()\n\nadd_subdirectory(${CMAKE_CURRENT_LIST_DIR}\/types)\n\nDeclareCAmkESComponent(publisher_impl\n  SOURCES components\/publisher_impl\/\/src\/publisher.c components\/publisher_impl\/src\/sb_publisher_impl.c\n  INCLUDES components\/publisher_impl\/includes\/ types\/includes\n)\n\nDeclareCAmkESComponent(subscriber_impl\n  SOURCES components\/subscriber_impl\/\/src\/subscriber.c components\/subscriber_impl\/src\/sb_subscriber_impl.c\n  INCLUDES components\/subscriber_impl\/includes\/ types\/includes\n)\n\nDeclareCAmkESRootserver(top_impl_Instance.camkes)\n",
+          "content" : "# This file will be regenerated, do not edit\n\ncmake_minimum_required(VERSION 3.8.2)\n\nproject (top_impl_Instance C)\n\nadd_definitions(-DCAMKES)\n\nif (\"${CMAKE_CXX_COMPILER_ID}\" MATCHES \"(C|c?)lang\")\n  add_compile_options(\"$<$<CONFIG:Release>:-Oz>\")\nelseif (\"${CMAKE_CXX_COMPILER_ID}\" STREQUAL \"GNU\")\n  add_compile_options(-fstack-usage)\n  add_compile_options(\"$<$<CONFIG:Release>:-Os>\")\nendif()\n\nadd_subdirectory(${CMAKE_CURRENT_LIST_DIR}\/types)\n\nDeclareCAmkESComponent(publisher_impl_testshare_publisher_inst\n  SOURCES components\/publisher_impl_testshare_publisher_inst\/\/src\/publisher.c components\/publisher_impl_testshare_publisher_inst\/src\/sb_publisher_impl.c\n  INCLUDES components\/publisher_impl_testshare_publisher_inst\/includes\/ types\/includes\n)\n\nDeclareCAmkESComponent(subscriber_impl_testshare_subscriber_inst\n  SOURCES components\/subscriber_impl_testshare_subscriber_inst\/\/src\/subscriber.c components\/subscriber_impl_testshare_subscriber_inst\/src\/sb_subscriber_impl.c\n  INCLUDES components\/subscriber_impl_testshare_subscriber_inst\/includes\/ types\/includes\n)\n\nDeclareCAmkESRootserver(top_impl_Instance.camkes)\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -76,16 +76,16 @@
         }
       ],
       [
-        "testshare--SeL4_TB\/components\/publisher_impl\/src\/sb_publisher_impl.c",
+        "testshare--SeL4_TB\/components\/publisher_impl_testshare_publisher_inst\/src\/sb_publisher_impl.c",
         {
           "type" : "TestResource",
-          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_publisher_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n *  sb_entrypoint_publisher_impl_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_publisher_impl_initializer(const int64_t * in_arg) {\n  testshare_publisher_component_init((int64_t *) in_arg);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_publisher_impl_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_publisher_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n *  sb_entrypoint_publisher_impl_testshare_publisher_inst_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_publisher_impl_testshare_publisher_inst_initializer(const int64_t * in_arg) {\n  testshare_publisher_component_init((int64_t *) in_arg);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_publisher_impl_testshare_publisher_inst_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
       ],
       [
-        "testshare--SeL4_TB\/components\/publisher_impl\/includes\/sb_publisher_impl.h",
+        "testshare--SeL4_TB\/components\/publisher_impl_testshare_publisher_inst\/includes\/sb_publisher_impl.h",
         {
           "type" : "TestResource",
           "content" : "\/\/ This file will be regenerated, do not edit\n\n#ifndef SB_PUBLISHER_IMPL_H\n#define SB_PUBLISHER_IMPL_H\n\n#include <sb_types.h>\n\nvoid testshare_publisher_component_init(const int64_t *arg);\n\n#endif \/\/ SB_PUBLISHER_IMPL_H\n",
@@ -94,16 +94,16 @@
         }
       ],
       [
-        "testshare--SeL4_TB\/components\/subscriber_impl\/src\/sb_subscriber_impl.c",
+        "testshare--SeL4_TB\/components\/subscriber_impl_testshare_subscriber_inst\/src\/sb_subscriber_impl.c",
         {
           "type" : "TestResource",
-          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_subscriber_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n *  sb_entrypoint_subscriber_impl_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_subscriber_impl_initializer(const int64_t * in_arg) {\n  testshare_subscriber_component_init((int64_t *) in_arg);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_subscriber_impl_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
+          "content" : "\/\/ This file will be regenerated, do not edit\n\n#include <sb_subscriber_impl.h>\n#include <string.h>\n#include <camkes.h>\n\n\/************************************************************************\n *  sb_entrypoint_subscriber_impl_testshare_subscriber_inst_initializer:\n *\n * This is the function invoked by an active thread dispatcher to\n * call to a user-defined entrypoint function.  It sets up the dispatch\n * context for the user-defined entrypoint, then calls it.\n *\n ************************************************************************\/\nvoid sb_entrypoint_subscriber_impl_testshare_subscriber_inst_initializer(const int64_t * in_arg) {\n  testshare_subscriber_component_init((int64_t *) in_arg);\n}\n\n\/************************************************************************\n * int run(void)\n * Main active thread function.\n ************************************************************************\/\nint run(void) {\n  {\n    int64_t sb_dummy;\n    sb_entrypoint_subscriber_impl_testshare_subscriber_inst_initializer(&sb_dummy);\n  }\n  MUTEXOP(sb_dispatch_sem_wait())\n  for(;;) {\n    MUTEXOP(sb_dispatch_sem_wait())\n  }\n  return 0;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
       ],
       [
-        "testshare--SeL4_TB\/components\/subscriber_impl\/includes\/sb_subscriber_impl.h",
+        "testshare--SeL4_TB\/components\/subscriber_impl_testshare_subscriber_inst\/includes\/sb_subscriber_impl.h",
         {
           "type" : "TestResource",
           "content" : "\/\/ This file will be regenerated, do not edit\n\n#ifndef SB_SUBSCRIBER_IMPL_H\n#define SB_SUBSCRIBER_IMPL_H\n\n#include <sb_types.h>\n\nvoid testshare_subscriber_component_init(const int64_t *arg);\n\n#endif \/\/ SB_SUBSCRIBER_IMPL_H\n",
