@@ -11,17 +11,31 @@ class CodeGenTest_Base extends CodeGenTest {
   val tests = Tests {
     val resultDir: Option[String] = Some(getClass.getSimpleName)
     val modelsDir = baseModelsDir / getClass.getSimpleName
-    
+
+    {
+      val name = "pca-pump"
+      val modelDir = modelsDir / name
+      val model = modelDir / "pca" / ".slang" / "PCA_System_wrap_pca_imp_Instance.json"
+
+      val platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(
+          platform = platform,
+          devicesAsThreads = T),
+        resultDir, None(), None())
+
+    }
+
     {
       val name = "building_control_gen_mixed"
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "BuildingControl_BuildingControlDemo_i_Instance.json"
-      
+
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
       test(s"$name--${platform}-Embed-Art", modelDir, model,
         baseOptions(platform = platform),
         resultDir, None(), None())
-      
+
       platform = CodeGenPlatform.JVM
       test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
         baseOptions(platform = platform,
