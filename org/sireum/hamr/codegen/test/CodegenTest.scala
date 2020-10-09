@@ -29,7 +29,7 @@ trait CodeGenTest extends TestSuite {
   def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("pca")
+  def filters: ISZ[String] = ISZ("test_event_data_port_fan_out")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4" // ignoring as has sel4 dataport with 512 elems so bigger than 4096
@@ -405,7 +405,7 @@ object CodeGenTest {
   }
 
   def getDirectories(): (Os.Path, Os.Path) = {
-    val intellijTestDir = Os.path("./hamr/codegen/jvm/src/test")
+    val intellijTestDir = Os.path("./hamr/codegen/jvm/src/test/scala")
     val rootResultsDir: Os.Path = if(intellijTestDir.exists) {
       // use local/intellij copy
       intellijTestDir
