@@ -29,7 +29,7 @@ trait CodeGenTest extends TestSuite {
   def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("test_event_data_port_fan_out")
+  def filters: ISZ[String] = ISZ("pca")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4" // ignoring as has sel4 dataport with 512 elems so bigger than 4096
@@ -414,8 +414,18 @@ object CodeGenTest {
       val temp: Os.Path = Os.tempDir()
       for (entry <- testResources()) {
         assert(entry._1.head == "expected" || entry._1.head == "models")
+
         val f = temp / entry._1.mkString("/")
-        f.writeOver(entry._2)
+
+        f.writeOverU8s(conversions.String.fromBase64(entry._2).left)
+
+        //println(s"Wrote: ${f}")
+
+        if(f.up.name.native == ".slang" && f.ext.native == "zip") {
+          Os.proc(ISZ("unzip", f.value, "-d", f.up.value)).run()//.runCheck()
+
+          //println(s"Unzipped: ${f}")
+        }
       }
       temp
     }
@@ -423,10 +433,10 @@ object CodeGenTest {
   }
 
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
-    // scala/java 'resources' directories don't play nicely with mill so instead add the contents
-    // of 'expected' and 'models' into the binary via RC.text.  These can then
+    // scala/java 'resources' directories don't play nicely with mill so instead embed the contents
+    // of 'expected' and 'models' into this class via the RC macros .  These can then
     // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
-    RC.text(Vector("../../../../../")) { (p, f) =>
+    RC.base64(Vector("../../../../../")) { (p, f) =>
       val allowedDirs: ISZ[String] = ISZ("expected", "models")
 
       // exclude unneeded/binary files
@@ -435,7 +445,8 @@ object CodeGenTest {
       val filename = Os.path(p.last)
 
       val allow = ops.ISZOps(allowedDirs).contains(p.head) &&
-        !ops.ISZOps(excludedResources).contains(filename.ext)
+        !ops.ISZOps(excludedResources).contains(filename.ext) &&
+        ((p.size > 1 && p(p.size - 2) != ".slang") || filename.ext.native != "json") // exclude json files in the .slang directories
 
       if(allow) {
         //println(p)
