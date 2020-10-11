@@ -434,7 +434,7 @@ object CodeGenTest {
 
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
     // scala/java 'resources' directories don't play nicely with mill so instead embed the contents
-    // of 'expected' and 'models' into this class via the RC macros .  These can then
+    // of 'expected' and 'models' into the test class via the RC macros .  These can then
     // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
     RC.base64(Vector("../../../../../")) { (p, f) =>
       val allowedDirs: ISZ[String] = ISZ("expected", "models")

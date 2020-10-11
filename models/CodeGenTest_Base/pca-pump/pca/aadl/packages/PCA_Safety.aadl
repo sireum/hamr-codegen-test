@@ -5,10 +5,11 @@
 package PCA_Safety
   public
   with 
-    Base_Types, EMV2, 
+    Base_Types;
+    --with EMV2, 
     -- ErrorLibrary,
 --    ICE_Types,
-    PCA_Types, PCA_System,
+    with PCA_Types, PCA_System,
     BLESS,
     PCA_Alarm,PCA_System,
     PCA_Pump;
@@ -456,50 +457,50 @@ end fault_logger;
 
 --this represents the device implementation that stores & retrieves fault indications
 device implementation fault_logger.imp
-annex EMV2 
-  {** 
-  use types PCA_Error_Model,ErrorLibrary;
-  --use common behavior fail-subtle, one corrupted log entry doesn't mean the logging stops
-  use behavior PCA_Error_Model::FailCorruptedTruncated;
-  error propagations
-  --this may not get the right value to log, or may have service issues
-    Log_Fault: in propagation {ValueError,EarlyServiceTermination};
-  -- *not* expecting any errors in the command to read the log
-    Get_Log: not in propagation {CommonErrors};
-  -- errors in the value of the log retreived 
-    The_Log: out propagation {LogError};
-  -- errors in signalling hard-ware errors
-    POST_Failure: in propagation {EarlyServiceTermination};  
-    RAM_Failure: in propagation {EarlyServiceTermination};  
-    ROM_Failure: in propagation {EarlyServiceTermination};  
-    CPU_Failure: in propagation {EarlyServiceTermination};  
-    Thread_Monitor_Failure: in propagation {EarlyServiceTermination};  
-    Voltage_OOR: in propagation {EarlyServiceTermination};  
-  flows  --three different log fault behaviors:  complete failure, corruption, and truncation
-  --nothing returned from log when failed
-    died: error source The_Log{DeadLog} when failed;
-  --corrupted log
-    mucked: error source The_Log{CorruptedLog} when corrupted;
-  --truncated log
-    trunc: error source The_Log{TruncatedLog} when truncated;
-  end propagations;
-  component error behavior
-    events  
-      --event representing failure of the log outright
---      ve: error event Log_Fault;
---      erroneous_hardwired_failure_indication_put_in_log: 
-      corrupt: error event
---        when POST_Failure{ItemCommission} or RAM_Failure{ItemCommission}
-        ;
---    transitions  
-      --log dies -> failed
---      hwcrpt: working -[erroneous_hardwired_failure_indication_put_in_log]-> failed;  
-  end component;
-  properties
-  --how often does the log fail completely?
-    EMV2::OccurrenceDistribution => PCA_Properties::FaultLogFailureRate 
-      applies to hardfail;
-  **};  --end of EMV2
+--annex EMV2 
+--  {** 
+--  use types PCA_Error_Model,ErrorLibrary;
+--  --use common behavior fail-subtle, one corrupted log entry doesn't mean the logging stops
+--  use behavior PCA_Error_Model::FailCorruptedTruncated;
+--  error propagations
+--  --this may not get the right value to log, or may have service issues
+--    Log_Fault: in propagation {ValueError,EarlyServiceTermination};
+--  -- *not* expecting any errors in the command to read the log
+--    Get_Log: not in propagation {CommonErrors};
+--  -- errors in the value of the log retreived 
+--    The_Log: out propagation {LogError};
+--  -- errors in signalling hard-ware errors
+--    POST_Failure: in propagation {EarlyServiceTermination};  
+--    RAM_Failure: in propagation {EarlyServiceTermination};  
+--    ROM_Failure: in propagation {EarlyServiceTermination};  
+--    CPU_Failure: in propagation {EarlyServiceTermination};  
+--    Thread_Monitor_Failure: in propagation {EarlyServiceTermination};  
+--    Voltage_OOR: in propagation {EarlyServiceTermination};  
+--  flows  --three different log fault behaviors:  complete failure, corruption, and truncation
+--  --nothing returned from log when failed
+--    died: error source The_Log{DeadLog} when failed;
+--  --corrupted log
+--    mucked: error source The_Log{CorruptedLog} when corrupted;
+--  --truncated log
+--    trunc: error source The_Log{TruncatedLog} when truncated;
+--  end propagations;
+--  component error behavior
+--    events  
+--      --event representing failure of the log outright
+----      ve: error event Log_Fault;
+----      erroneous_hardwired_failure_indication_put_in_log: 
+--      corrupt: error event
+----        when POST_Failure{ItemCommission} or RAM_Failure{ItemCommission}
+--        ;
+----    transitions  
+--      --log dies -> failed
+----      hwcrpt: working -[erroneous_hardwired_failure_indication_put_in_log]-> failed;  
+--  end component;
+--  properties
+--  --how often does the log fail completely?
+--    EMV2::OccurrenceDistribution => PCA_Properties::FaultLogFailureRate 
+--      applies to hardfail;
+--  **};  --end of EMV2
 
 --suggestion for BLESS behavior and proof of correctness
 annex BLESSX

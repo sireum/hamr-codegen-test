@@ -1,6 +1,7 @@
 package PCA_Boss
 public
-with EMV2, PCA_Types, PCA_Properties, BLESS;
+--with EMV2
+with PCA_Types, PCA_Properties, BLESS;
 
 --the boss thread executes Use Case 1:  Normal Operation
 --and ancillary events.  therefore, there really isn't any
@@ -199,14 +200,14 @@ thread implementation Boss_Thread.imp
 	--scan timeouts 
  	  scan_to: UC1_3_do_scan, UC1_5_display_scan_wristband, UC1_7_display_scan_Rx -[on dispatch timeout (Do_Scan) 1 min]-> UC1_19_display_turn_off_pump{};  	  
   **};
-  annex EMV2 {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::FailStop; 	
-
-  properties
-    EMV2::OccurrenceDistribution => PCA_Properties::ThreadFailureRate 
-      applies to fail;	
-  **}; 
+--  annex EMV2 {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::FailStop; 	
+--
+--  properties
+--    EMV2::OccurrenceDistribution => PCA_Properties::ThreadFailureRate 
+--      applies to fail;	
+--  **}; 
   
    --end of EMV2
 end Boss_Thread.imp;

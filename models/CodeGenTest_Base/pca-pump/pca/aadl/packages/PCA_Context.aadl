@@ -5,7 +5,7 @@
 package PCA_Context
 public
   with Base_Types,       --AADL Data Modeling Annex
-    EMV2,  --AADL error model annex, version 2
+    --EMV2,  --AADL error model annex, version 2
     --Timing_Properties,   --predeclared AADL property sets
     ICE, --ICE_Types, --ICE_Display, --packages (types) and property sets common to all ICE apps and devices
    -- Physical_Properties, 
@@ -103,26 +103,26 @@ end Patient;
 abstract implementation Patient.imp
 --drug flow errors may impair function or harm patient
 --third-parties may press the button for the patient
-  annex EMV2
-  {**
-  use types PCA_Error_Model,ErrorLibrary;
-  error propagations
-  --incorrect drug flow, may harm patient
-    Infused_Drug: in propagation {DrugFlowError};
-  --patient button pressed by someone other than patient
-    Button_Press: out propagation {ThirdPartyPress};
-  --must prevent third-party press from becoming drug flow error
-  flows
-  --drug flow error affects patient
-    dfe: error sink Infused_Drug{DrugFlowError};
-  --third party presses patient button
-    tpp: error source Button_Press{ThirdPartyPress};
-  end propagations;
-   properties
-  --how often does a third-party press the button for the patient?
-    EMV2::OccurrenceDistribution => PCA_Properties::ThirdPartyButtonRate 
-      applies to tpp;
-  **};  --end of EMV2
+--  annex EMV2
+--  {**
+--  use types PCA_Error_Model,ErrorLibrary;
+--  error propagations
+--  --incorrect drug flow, may harm patient
+--    Infused_Drug: in propagation {DrugFlowError};
+--  --patient button pressed by someone other than patient
+--    Button_Press: out propagation {ThirdPartyPress};
+--  --must prevent third-party press from becoming drug flow error
+--  flows
+--  --drug flow error affects patient
+--    dfe: error sink Infused_Drug{DrugFlowError};
+--  --third party presses patient button
+--    tpp: error source Button_Press{ThirdPartyPress};
+--  end propagations;
+--   properties
+--  --how often does a third-party press the button for the patient?
+--    EMV2::OccurrenceDistribution => PCA_Properties::ThirdPartyButtonRate 
+--      applies to tpp;
+--  **};  --end of EMV2
 end Patient.imp;
 
 abstract Clinician
@@ -137,29 +137,29 @@ end Clinician;
 
 abstract implementation Clinician.imp
 --clinicians may cause operator errors, or receive erroneous image or sound
-  annex EMV2
-  {**
-  use types PCA_Error_Model,ErrorLibrary;
-  error propagations
-  --incorrect sound, may not alert alarm or warning
-    Sound: in propagation {ItemOmission,AlarmError,ValueError}; 
-  --incorrect visual, wrong data or no alarm symbol
-    LightToEye: in propagation {ItemOmission,AlarmError,ValueError}; 
-  --operator error
-    Finger_Press: out propagation {OperatorError};
-  flows
-  --incorrect sound
-    hear: error sink Sound{ItemOmission,AlarmError,ValueError};
-  --incorrect visual,  
-    see: error sink LightToEye{ItemOmission,AlarmError,ValueError};
-  --operator error
-    oops: error source Finger_Press{OperatorError};
-  end propagations;
-   properties
-  --how often does a clinician make an error?
-    EMV2::OccurrenceDistribution => PCA_Properties::OperatorErrorRate 
-      applies to oops;
-  **};  --end of EMV2
+--  annex EMV2
+--  {**
+--  use types PCA_Error_Model,ErrorLibrary;
+--  error propagations
+--  --incorrect sound, may not alert alarm or warning
+--    Sound: in propagation {ItemOmission,AlarmError,ValueError}; 
+--  --incorrect visual, wrong data or no alarm symbol
+--    LightToEye: in propagation {ItemOmission,AlarmError,ValueError}; 
+--  --operator error
+--    Finger_Press: out propagation {OperatorError};
+--  flows
+--  --incorrect sound
+--    hear: error sink Sound{ItemOmission,AlarmError,ValueError};
+--  --incorrect visual,  
+--    see: error sink LightToEye{ItemOmission,AlarmError,ValueError};
+--  --operator error
+--    oops: error source Finger_Press{OperatorError};
+--  end propagations;
+--   properties
+--  --how often does a clinician make an error?
+--    EMV2::OccurrenceDistribution => PCA_Properties::OperatorErrorRate 
+--      applies to oops;
+--  **};  --end of EMV2
 end Clinician.imp;
 
 --hospital service worker that reads logs, loads drug library, and provisions security
@@ -170,27 +170,27 @@ end Tech_Software;
 
 process implementation Tech_Software.imp
 --technician may get bad logs, but never provides faulty data/signals
-  annex EMV2
-  {**
-  use types PCA_Error_Model,ErrorLibrary;
-  error propagations
-  --fault log
-    to_pca.get_fault_log: not in propagation {CommonErrors}; --no error on request
-    to_pca.the_fault_log: out propagation {LogError};  --log may be dead, corrupted of truncated
-  --event log
-    to_pca.get_event_log: not in propagation {CommonErrors}; --no error on request
-    to_pca.the_event_log: out propagation {LogError};  --log may be dead, corrupted of truncated
-  --drug library
-    to_pca.load_drug_library: not in propagation {CommonErrors}; --no error on loading drug library
-  --provisioning
-    to_pca.security_provisioning: not out propagation {CommonErrors}; --no error when provisioning
-  flows
-  --get bad fault log
-    bad_fault_log: error source to_pca.the_fault_log{LogError};
-  --get bad event log 
-    bad_event_log: error source to_pca.the_event_log{LogError};
-  end propagations;
-  **};  --end of EMV2
+--  annex EMV2
+--  {**
+--  use types PCA_Error_Model,ErrorLibrary;
+--  error propagations
+--  --fault log
+--    to_pca.get_fault_log: not in propagation {CommonErrors}; --no error on request
+--    to_pca.the_fault_log: out propagation {LogError};  --log may be dead, corrupted of truncated
+--  --event log
+--    to_pca.get_event_log: not in propagation {CommonErrors}; --no error on request
+--    to_pca.the_event_log: out propagation {LogError};  --log may be dead, corrupted of truncated
+--  --drug library
+--    to_pca.load_drug_library: not in propagation {CommonErrors}; --no error on loading drug library
+--  --provisioning
+--    to_pca.security_provisioning: not out propagation {CommonErrors}; --no error when provisioning
+--  flows
+--  --get bad fault log
+--    bad_fault_log: error source to_pca.the_fault_log{LogError};
+--  --get bad event log 
+--    bad_event_log: error source to_pca.the_event_log{LogError};
+--  end propagations;
+--  **};  --end of EMV2
 end Tech_Software.imp;
 
 --make ICE app, specialized for PCA

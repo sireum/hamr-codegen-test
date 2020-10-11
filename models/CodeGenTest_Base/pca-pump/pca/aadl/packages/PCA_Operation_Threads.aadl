@@ -4,8 +4,9 @@
 
 package PCA_Operation_Threads
 public
-with --AADL_Project,
-  EMV2,BLESS, PCA_Pump, PCA_Types, Base_Types, ICE_Types, --PCA_Security, 
+--with --AADL_Project,
+  --EMV2,
+  with BLESS, PCA_Pump, PCA_Types, Base_Types, ICE_Types, --PCA_Security, 
   PCA_Properties;
 
 --detects when the maximum drug allowed per hour is reached
@@ -112,66 +113,66 @@ features
 end Rate_Controller;
 
 thread implementation Rate_Controller.imp
-  annex EMV2 
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::FailStop; 	
-  --same error propagations as alarm thread
-  error propagations
-      --calculated flow rate for the pump
-    Infusion_Flow_Rate : out propagation {ItemOmission,ItemCommission,ValueError};
-      --parameters from which flow rate is calculated
-    Begin_Infusion : in propagation {EarlyServiceTermination,ItemCommission};
-    Patient_Bolus_Rate: in propagation {ItemOmission,ItemCommission,ValueError};
-    Square_Bolus_Rate: in propagation {ItemOmission,ItemCommission,ValueError};
-    Basal_Rate: in propagation {ItemOmission,ItemCommission,ValueError};
-    VTBI: in propagation {ItemOmission,ItemCommission,ValueError};
-    HW_Detected_Failure: in propagation {ItemOmission,ItemCommission};
-    Stop_Pump_Completely: in propagation {ItemOmission,ItemCommission};
-    Pump_At_KVO_Rate: in propagation {ItemOmission,ItemCommission};
-    Alarm: in propagation {ItemOmission,ItemCommission,ValueError};
-    Warning: in propagation {ItemOmission,ItemCommission,ValueError};
-    Patient_Request_Not_Too_Soon: in propagation {ItemOmission,ItemCommission};
-    Door_Open: in propagation {ItemOmission,ItemCommission};
-    Pause_Infusion: in propagation {ItemOmission,ItemCommission};
-    Resume_Infusion: in propagation {ItemOmission,ItemCommission};
-    CP_Clinician_Request_Bolus: in propagation {ItemOmission,ItemCommission};
-    CP_Bolus_Duration: in propagation {ItemOmission,ItemCommission};
-    Halt_Infusion: in propagation {ItemOmission,ItemCommission};
---    Begin_Infusion: in propagation {ItemOmission,ItemCommission};
-    Begin_Priming: in propagation {ItemOmission,ItemCommission};
-    End_Priming : in propagation {ItemOmission,ItemCommission};
-    Near_Max_Drug_Per_Hour : in propagation {EarlyServiceTermination};
-    Over_Max_Drug_Per_Hour : in propagation {EarlyServiceTermination};
---  flows
---      --bad flow rate calculation
---    value_error: error source Infusion_Flow_Rate{ItemOmission,ItemCommission,ValueError};
---      --data sources used to calculate flow rate
---    rxo_ifr:  error path Rx_Okay->Infusion_Flow_Rate;
---    sb_ifr:  error path Square_Bolus_Rate->Infusion_Flow_Rate;
---    br_ifr:  error path Basal_Rate->Infusion_Flow_Rate;
---    hw_ifr:  error path HW_Detected_Failure->Infusion_Flow_Rate;
---    spc_ifr:  error path Stop_Pump_Completely->Infusion_Flow_Rate;
---    pak_ifr:  error path Pump_At_KVO_Rate->Infusion_Flow_Rate;
---    a_ift:  error path Alarm->Infusion_Flow_Rate;
---    w_ifr:  error path Warning->Infusion_Flow_Rate;
---    prb_ifr:  error path Patient_Button_Request->Infusion_Flow_Rate;
---    do_ifr:  error path Door_Open->Infusion_Flow_Rate;
---    pi_ifr:  error path Pause_Infusion->Infusion_Flow_Rate;
---    ri_ifr:  error path Resume_Infusion->Infusion_Flow_Rate;
---    crb_ifr:  error path CP_Clinician_Request_Bolus->Infusion_Flow_Rate;
---    bd_ifr:  error path CP_Bolus_Duration->Infusion_Flow_Rate;
---    stop_ifr:  error path Halt_Infusion->Infusion_Flow_Rate;
---    start_ifr:  error path Begin_Infusion->Infusion_Flow_Rate;
---    p_ifr:  error path Begin_Priming->Infusion_Flow_Rate;
---    off_ifr:  error path End_Priming->Infusion_Flow_Rate;
---    near_ifr:  error path Near_Max_Drug_Per_Hour->Infusion_Flow_Rate;
---    over_ifr:  error path Over_Max_Drug_Per_Hour->Infusion_Flow_Rate;
-  end propagations;
-  properties
-    EMV2::OccurrenceDistribution => PCA_Properties::ThreadFailureRate 
-      applies to fail;	
-  **};  --end of EMV2
+--  annex EMV2 
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::FailStop; 	
+--  --same error propagations as alarm thread
+--  error propagations
+--      --calculated flow rate for the pump
+--    Infusion_Flow_Rate : out propagation {ItemOmission,ItemCommission,ValueError};
+--      --parameters from which flow rate is calculated
+--    Begin_Infusion : in propagation {EarlyServiceTermination,ItemCommission};
+--    Patient_Bolus_Rate: in propagation {ItemOmission,ItemCommission,ValueError};
+--    Square_Bolus_Rate: in propagation {ItemOmission,ItemCommission,ValueError};
+--    Basal_Rate: in propagation {ItemOmission,ItemCommission,ValueError};
+--    VTBI: in propagation {ItemOmission,ItemCommission,ValueError};
+--    HW_Detected_Failure: in propagation {ItemOmission,ItemCommission};
+--    Stop_Pump_Completely: in propagation {ItemOmission,ItemCommission};
+--    Pump_At_KVO_Rate: in propagation {ItemOmission,ItemCommission};
+--    Alarm: in propagation {ItemOmission,ItemCommission,ValueError};
+--    Warning: in propagation {ItemOmission,ItemCommission,ValueError};
+--    Patient_Request_Not_Too_Soon: in propagation {ItemOmission,ItemCommission};
+--    Door_Open: in propagation {ItemOmission,ItemCommission};
+--    Pause_Infusion: in propagation {ItemOmission,ItemCommission};
+--    Resume_Infusion: in propagation {ItemOmission,ItemCommission};
+--    CP_Clinician_Request_Bolus: in propagation {ItemOmission,ItemCommission};
+--    CP_Bolus_Duration: in propagation {ItemOmission,ItemCommission};
+--    Halt_Infusion: in propagation {ItemOmission,ItemCommission};
+----    Begin_Infusion: in propagation {ItemOmission,ItemCommission};
+--    Begin_Priming: in propagation {ItemOmission,ItemCommission};
+--    End_Priming : in propagation {ItemOmission,ItemCommission};
+--    Near_Max_Drug_Per_Hour : in propagation {EarlyServiceTermination};
+--    Over_Max_Drug_Per_Hour : in propagation {EarlyServiceTermination};
+----  flows
+----      --bad flow rate calculation
+----    value_error: error source Infusion_Flow_Rate{ItemOmission,ItemCommission,ValueError};
+----      --data sources used to calculate flow rate
+----    rxo_ifr:  error path Rx_Okay->Infusion_Flow_Rate;
+----    sb_ifr:  error path Square_Bolus_Rate->Infusion_Flow_Rate;
+----    br_ifr:  error path Basal_Rate->Infusion_Flow_Rate;
+----    hw_ifr:  error path HW_Detected_Failure->Infusion_Flow_Rate;
+----    spc_ifr:  error path Stop_Pump_Completely->Infusion_Flow_Rate;
+----    pak_ifr:  error path Pump_At_KVO_Rate->Infusion_Flow_Rate;
+----    a_ift:  error path Alarm->Infusion_Flow_Rate;
+----    w_ifr:  error path Warning->Infusion_Flow_Rate;
+----    prb_ifr:  error path Patient_Button_Request->Infusion_Flow_Rate;
+----    do_ifr:  error path Door_Open->Infusion_Flow_Rate;
+----    pi_ifr:  error path Pause_Infusion->Infusion_Flow_Rate;
+----    ri_ifr:  error path Resume_Infusion->Infusion_Flow_Rate;
+----    crb_ifr:  error path CP_Clinician_Request_Bolus->Infusion_Flow_Rate;
+----    bd_ifr:  error path CP_Bolus_Duration->Infusion_Flow_Rate;
+----    stop_ifr:  error path Halt_Infusion->Infusion_Flow_Rate;
+----    start_ifr:  error path Begin_Infusion->Infusion_Flow_Rate;
+----    p_ifr:  error path Begin_Priming->Infusion_Flow_Rate;
+----    off_ifr:  error path End_Priming->Infusion_Flow_Rate;
+----    near_ifr:  error path Near_Max_Drug_Per_Hour->Infusion_Flow_Rate;
+----    over_ifr:  error path Over_Max_Drug_Per_Hour->Infusion_Flow_Rate;
+--  end propagations;
+--  properties
+--    EMV2::OccurrenceDistribution => PCA_Properties::ThreadFailureRate 
+--      applies to fail;	
+--  **};  --end of EMV2
 annex BLESS
 {**
 assert
@@ -385,33 +386,33 @@ thread Prescription_Checker
 end Prescription_Checker;
 
 thread implementation Prescription_Checker.imp
-  annex EMV2 
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::FailStop; 	
-  error propagations
-    Prescription: in propagation {ItemOmission,ItemCommission,ValueError};
-    Rx_Okay : out propagation {EarlyServiceTermination,ItemCommission};
-    VTBI: out propagation {ItemOmission,ItemCommission,ValueError};
-    Square_Bolus_Rate: out propagation {ValueError};
-    Max_Drug_Per_Hour: out propagation {ValueError};
-    Basal_Rate: out propagation {ValueError};
---    CP_Max_Drug_Per_Hour_Exceeded : in propagation {ItemOmission,ItemCommission};
-    Get_Drug_Record : out propagation {ItemOmission,ItemCommission};
-    The_Drug_Record: in propagation {ValueError};
-    Confirm_Soft_Limit_Exception : in propagation {ItemOmission,ItemCommission};
-    Reject_Soft_Limit_Exception : in propagation {ItemOmission,ItemCommission};
-    Soft_Limit_Warning : out propagation {ItemOmission,ItemCommission};
-    Hard_Limit_Violated : out propagation {ItemOmission,ItemCommission};
-
-  flows
-      --fail stop
-    fail_stop: error source Rx_Okay{EarlyServiceTermination} when failed;
- end propagations;
-  properties
-    EMV2::OccurrenceDistribution => PCA_Properties::ThreadFailureRate 
-      applies to fail;	
-  **};  --end of EMV2
+--  annex EMV2 
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::FailStop; 	
+--  error propagations
+--    Prescription: in propagation {ItemOmission,ItemCommission,ValueError};
+--    Rx_Okay : out propagation {EarlyServiceTermination,ItemCommission};
+--    VTBI: out propagation {ItemOmission,ItemCommission,ValueError};
+--    Square_Bolus_Rate: out propagation {ValueError};
+--    Max_Drug_Per_Hour: out propagation {ValueError};
+--    Basal_Rate: out propagation {ValueError};
+----    CP_Max_Drug_Per_Hour_Exceeded : in propagation {ItemOmission,ItemCommission};
+--    Get_Drug_Record : out propagation {ItemOmission,ItemCommission};
+--    The_Drug_Record: in propagation {ValueError};
+--    Confirm_Soft_Limit_Exception : in propagation {ItemOmission,ItemCommission};
+--    Reject_Soft_Limit_Exception : in propagation {ItemOmission,ItemCommission};
+--    Soft_Limit_Warning : out propagation {ItemOmission,ItemCommission};
+--    Hard_Limit_Violated : out propagation {ItemOmission,ItemCommission};
+--
+--  flows
+--      --fail stop
+--    fail_stop: error source Rx_Okay{EarlyServiceTermination} when failed;
+-- end propagations;
+--  properties
+--    EMV2::OccurrenceDistribution => PCA_Properties::ThreadFailureRate 
+--      applies to fail;	
+--  **};  --end of EMV2
 annex BLESS 
 {**
   assert
@@ -594,23 +595,23 @@ end ICE_Thread;
 
 thread implementation ICE_Thread.imp
 --for now, model that no errors on ICE
-  annex EMV2 
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::FailStop; 	
-  error propagations
-    --ICE tells pump to stop
-    ICE_Stop_Pump: out propagation {EarlyServiceTermination};
-  flows
-      --does nothing when failed
-    isp: error source ICE_Stop_Pump{EarlyServiceTermination} when failed;
-      --there are 4*22 possible error flows to ICE
-      --exercise left to student
-  end propagations;
-  properties
-    EMV2::OccurrenceDistribution => PCA_Properties::ThreadFailureRate 
-      applies to fail;	
-  **};  --end of EMV2
+--  annex EMV2 
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::FailStop; 	
+--  error propagations
+--    --ICE tells pump to stop
+--    ICE_Stop_Pump: out propagation {EarlyServiceTermination};
+--  flows
+--      --does nothing when failed
+--    isp: error source ICE_Stop_Pump{EarlyServiceTermination} when failed;
+--      --there are 4*22 possible error flows to ICE
+--      --exercise left to student
+--  end propagations;
+--  properties
+--    EMV2::OccurrenceDistribution => PCA_Properties::ThreadFailureRate 
+--      applies to fail;	
+--  **};  --end of EMV2
 end ICE_Thread.imp;
 
 thread Patient_Bolus_Checker

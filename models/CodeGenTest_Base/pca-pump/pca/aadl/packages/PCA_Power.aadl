@@ -3,7 +3,9 @@
 
 package PCA_Power
   public
-  with BLESS, BLESS_Types, Base_Types, Physical_Types, EMV2, PCA_Properties, PCA_Pump;
+  with BLESS, BLESS_Types, Base_Types, Physical_Types;
+  --with EMV2;
+  with PCA_Properties, PCA_Pump;
   
 
 system power
@@ -45,23 +47,23 @@ system implementation power.imp
     bc: port btty.Battery_Current->pwr.Battery_Current;
     --measure power supply
     psv: port vcc.Power_Voltage->pwr.Power_Voltage;
-  annex EMV2
-  {**
-  --the ui process is working when the ui thread is
-  use types ErrorLibrary, PCA_Error_Model;
-  --when the ui thread fails, it stops
-  use behavior PCA_Error_Model::CompositeFailStop; 
-  --same error propagations as ui thread
-  error propagations
-  end propagations;
-  composite error behavior
-    states 
-    --thread failed -> process failed
-     [pwr.failed or btty.failed]->failed;
-    --thread working -> process working
-     [pwr.working and btty.working]->working;
-  end composite;  
-  **};  --end of EMV2
+--  annex EMV2
+--  {**
+--  --the ui process is working when the ui thread is
+--  use types ErrorLibrary, PCA_Error_Model;
+--  --when the ui thread fails, it stops
+--  use behavior PCA_Error_Model::CompositeFailStop; 
+--  --same error propagations as ui thread
+--  error propagations
+--  end propagations;
+--  composite error behavior
+--    states 
+--    --thread failed -> process failed
+--     [pwr.failed or btty.failed]->failed;
+--    --thread working -> process working
+--     [pwr.working and btty.working]->working;
+--  end composite;  
+--  **};  --end of EMV2
  
  end power.imp;
  
@@ -79,24 +81,24 @@ device battery
 end battery;
 
 device implementation battery.imp
-  annex EMV2
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::FailStop; 
-  error propagations
-    --
-    Battery_Voltage: out propagation {EarlyServiceTermination};
-    Battery_Current: out propagation {EarlyServiceTermination};
-  flows
-  --
-    no_voltage: error source Battery_Voltage{EarlyServiceTermination} when failed;
-    no_current: error source Battery_Current{EarlyServiceTermination} when failed;
-  end propagations;
-  properties
-    EMV2::OccurrenceDistribution => PCA_Properties::BatteryFailureRate 
-      applies to fail;
-  
-  **};  --end of EMV2
+--  annex EMV2
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::FailStop; 
+--  error propagations
+--    --
+--    Battery_Voltage: out propagation {EarlyServiceTermination};
+--    Battery_Current: out propagation {EarlyServiceTermination};
+--  flows
+--  --
+--    no_voltage: error source Battery_Voltage{EarlyServiceTermination} when failed;
+--    no_current: error source Battery_Current{EarlyServiceTermination} when failed;
+--  end propagations;
+--  properties
+--    EMV2::OccurrenceDistribution => PCA_Properties::BatteryFailureRate 
+--      applies to fail;
+--  
+--  **};  --end of EMV2
 end battery.imp;
 
 --power_control represents the battery control logic
@@ -146,15 +148,15 @@ device power_control
 end power_control;
 
 device implementation power_control.imp  
-  annex EMV2
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::FailStop; 
-  error propagations 
-    Battery_Voltage: in propagation {EarlyServiceTermination};
-    Battery_Current: in propagation {EarlyServiceTermination};
-  end propagations;
-  **};  --end of EMV2
+--  annex EMV2
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::FailStop; 
+--  error propagations 
+--    Battery_Voltage: in propagation {EarlyServiceTermination};
+--    Battery_Current: in propagation {EarlyServiceTermination};
+--  end propagations;
+--  **};  --end of EMV2
   
   annex BLESS
   {**

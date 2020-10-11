@@ -2,8 +2,8 @@
 
 package PCA_Operation
   public
-  with EMV2,
-    PCA_Pump,
+  --with EMV2,
+  with PCA_Pump,
     PCA_Mechanical,
     PCA_Security,
     PCA_Control_Panel,
@@ -205,18 +205,18 @@ system implementation operation.imp
   --drug library
     ldl: port Load_Drug_Library -> operation_process.Load_Drug_Library;
     dnil: port operation_process.Drug_Not_In_Library -> Drug_Not_In_Library;
-  annex EMV2
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::CompositeFailStop; 	
-  error propagations
-    Alarm: in propagation {EarlyServiceTermination,ItemCommission};
-    HW_Detected_Failure: in propagation {EarlyServiceTermination};
-    Pump_At_KVO_Rate: in propagation {EarlyServiceTermination};
-    Stop_Pump_Completely: in propagation {EarlyServiceTermination};
-    Warning: in propagation {EarlyServiceTermination,ItemCommission};
-  end propagations;  	
-  **};
+--  annex EMV2
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::CompositeFailStop; 	
+--  error propagations
+--    Alarm: in propagation {EarlyServiceTermination,ItemCommission};
+--    HW_Detected_Failure: in propagation {EarlyServiceTermination};
+--    Pump_At_KVO_Rate: in propagation {EarlyServiceTermination};
+--    Stop_Pump_Completely: in propagation {EarlyServiceTermination};
+--    Warning: in propagation {EarlyServiceTermination,ItemCommission};
+--  end propagations;  	
+--  **};
 end operation.imp;
 
 
@@ -776,44 +776,44 @@ thread implementation event_logger_thread.imp
       The_Event_Log!(log)
       <<AXIOM_LOG() and ELT(event_count)>>};
   **};
-annex EMV2 
-  {** 
-  use types PCA_Error_Model,ErrorLibrary;
-  --use common behavior fail-subtle, one corrupted log entry doesn't mean the logging stops
-  use behavior PCA_Error_Model::FailCorruptedTruncated;
-  error propagations
-  --this may not get the right value to log, or may have service issues
-    Log_Event: in propagation {ValueError,EarlyServiceTermination};
-  -- *not* expecting any errors in the command to read the log
-    Get_Event_Log: not in propagation {CommonErrors};
-  -- errors in the value of the log retreived 
-    The_Event_Log: out propagation {LogError};
-  flows  --three different log fault behaviors:  complete failure, corruption, and truncation
-  --nothing returned from log when failed
-    died: error source The_Event_Log{DeadLog} when failed;
-  --corrupted log
-    mucked: error source The_Event_Log{CorruptedLog} when corrupted;
-  --truncated log
-    trunc: error source The_Event_Log{TruncatedLog} when truncated;
-  end propagations;
-  component error behavior
-    events  
-      --event representing failure of the log outright
---      ve: error event Log_Fault;
---      erroneous_hardwired_failure_indication_put_in_log: 
-      corrupt: error event
---        when POST_Failure{ItemCommission} or RAM_Failure{ItemCommission}
-        ;
---    transitions  
-      --log dies -> failed
---      hwcrpt: working -[erroneous_hardwired_failure_indication_put_in_log]-> failed;  
-
-  end component;
-  properties
---  use thread failure rate for event log
-    EMV2::occurrencedistribution => PCA_Properties::ThreadFailureRate 
-      applies to corrupt;
-  **};  --end of EMV2
+--annex EMV2 
+--  {** 
+--  use types PCA_Error_Model,ErrorLibrary;
+--  --use common behavior fail-subtle, one corrupted log entry doesn't mean the logging stops
+--  use behavior PCA_Error_Model::FailCorruptedTruncated;
+--  error propagations
+--  --this may not get the right value to log, or may have service issues
+--    Log_Event: in propagation {ValueError,EarlyServiceTermination};
+--  -- *not* expecting any errors in the command to read the log
+--    Get_Event_Log: not in propagation {CommonErrors};
+--  -- errors in the value of the log retreived 
+--    The_Event_Log: out propagation {LogError};
+--  flows  --three different log fault behaviors:  complete failure, corruption, and truncation
+--  --nothing returned from log when failed
+--    died: error source The_Event_Log{DeadLog} when failed;
+--  --corrupted log
+--    mucked: error source The_Event_Log{CorruptedLog} when corrupted;
+--  --truncated log
+--    trunc: error source The_Event_Log{TruncatedLog} when truncated;
+--  end propagations;
+--  component error behavior
+--    events  
+--      --event representing failure of the log outright
+----      ve: error event Log_Fault;
+----      erroneous_hardwired_failure_indication_put_in_log: 
+--      corrupt: error event
+----        when POST_Failure{ItemCommission} or RAM_Failure{ItemCommission}
+--        ;
+----    transitions  
+--      --log dies -> failed
+----      hwcrpt: working -[erroneous_hardwired_failure_indication_put_in_log]-> failed;  
+--
+--  end component;
+--  properties
+----  use thread failure rate for event log
+--    EMV2::occurrencedistribution => PCA_Properties::ThreadFailureRate 
+--      applies to corrupt;
+--  **};  --end of EMV2
 end event_logger_thread.imp;
 
 end PCA_Operation;

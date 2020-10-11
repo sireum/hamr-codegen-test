@@ -8,7 +8,9 @@
 package PCA_System
   public
   with
-    PCA_Pump,Physical_Types,PCA_Types,BLESS,ICE,EMV2,PCA_Properties,PCA_Security,PCA_Context,
+    PCA_Pump,Physical_Types,PCA_Types,BLESS,ICE;
+    --with EMV2;
+    with PCA_Properties,PCA_Security,PCA_Context,
     Base_Types;
 
 --wrap_pca is the top-level component for the PCA pump
@@ -98,33 +100,33 @@ system implementation wrap_pca.imp
 --the error model for a system as a whole deems the system "operational"
 --if pca works.  if either ICE or maintenance fails, the pump still works safely
 --  properties 
-  annex EMV2X
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  --when pump still works, it's operational
-  use behavior PCA_Error_Model::CompositeWorkingOperationalFail; 	
-  --same error propagations as ui thread
-  error propagations
-    --sound errors
-    Sound: out propagation {ItemOmission,AlarmError,ValueError}; 
-    --errors seen by clinician
-    LightToEye: out propagation {ItemOmission,AlarmError,ValueError};
-    --errors caused by clinician
-    Finger_Press: in propagation {OperatorError};    
-    --must prevent third-party press from becoming drug flow error
-    Button_Press: in propagation {ThirdPartyPress};
-  end propagations;
-  composite error behavior
-    states 
-    --pca pump failed -> failed 
-     [pump.failed]->failed;
-    --pump working, either ice or maintenence is down -> operational
-     [pump.working and (bus_adaptor.failed or maint.failed)]->operational;
-     --all working -> working
-     [pump.working and bus_adaptor.working and maint.working]->working;
-     
-  end composite;  	
-  **};  --end of EMV2
+--  annex EMV2X
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  --when pump still works, it's operational
+--  use behavior PCA_Error_Model::CompositeWorkingOperationalFail; 	
+--  --same error propagations as ui thread
+--  error propagations
+--    --sound errors
+--    Sound: out propagation {ItemOmission,AlarmError,ValueError}; 
+--    --errors seen by clinician
+--    LightToEye: out propagation {ItemOmission,AlarmError,ValueError};
+--    --errors caused by clinician
+--    Finger_Press: in propagation {OperatorError};    
+--    --must prevent third-party press from becoming drug flow error
+--    Button_Press: in propagation {ThirdPartyPress};
+--  end propagations;
+--  composite error behavior
+--    states 
+--    --pca pump failed -> failed 
+--     [pump.failed]->failed;
+--    --pump working, either ice or maintenence is down -> operational
+--     [pump.working and (bus_adaptor.failed or maint.failed)]->operational;
+--     --all working -> working
+--     [pump.working and bus_adaptor.working and maint.working]->working;
+--     
+--  --end composite;  	
+--  **};  --end of EMV2
 end wrap_pca.imp;
 
 --adapts raw ICE bus traffic to prototype feature groups events & data
@@ -156,25 +158,25 @@ system implementation ice_bus_adaptor.imp
     sta: feature group status_inv<->to_app.status;
     sec: feature group security_inv<->to_app.security;
     alr: feature group alarm_inv<->to_app.alarm;
-  annex EMV2
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::FailStop; 	
-  error propagations
-    --button passes along third-party presses 
-    command_inv: in propagation {ThirdPartyPress};
-    --button may also be broken
---    Request_Bolus: out propagation {ItemOmission,ThirdPartyPress}; 
-  flows
-    --no output when button fails (completely)
-    fail_silent: error sink command_inv{ThirdPartyPress};
-    --flow through errors
---    third_party:  error path Button_Press{ThirdPartyPress}->Request_Bolus(ThirdPartyPress);
-  end propagations;
-  properties 
-    EMV2::OccurrenceDistribution => PCA_Properties::BusAdapterFailureRate 
-      applies to fail;	
-  **}; --end of EMV2
+--  annex EMV2
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::FailStop; 	
+--  error propagations
+--    --button passes along third-party presses 
+--    command_inv: in propagation {ThirdPartyPress};
+--    --button may also be broken
+----    Request_Bolus: out propagation {ItemOmission,ThirdPartyPress}; 
+--  flows
+--    --no output when button fails (completely)
+--    fail_silent: error sink command_inv{ThirdPartyPress};
+--    --flow through errors
+----    third_party:  error path Button_Press{ThirdPartyPress}->Request_Bolus(ThirdPartyPress);
+--  end propagations;
+--  properties 
+--    EMV2::OccurrenceDistribution => PCA_Properties::BusAdapterFailureRate 
+--      applies to fail;	
+--  **}; --end of EMV2
 end ice_bus_adaptor.imp;
 
 --maintenance processor used by technicians to access logs and load drug library
@@ -207,25 +209,25 @@ device maintenance
 end maintenance;
 
 device implementation maintenance.imp
-  annex EMV2
-  {**
-  use types ErrorLibrary, PCA_Error_Model;
-  use behavior PCA_Error_Model::FailStop; 	
---  error propagations
---    --button passes along third-party presses
---    Button_Press: in propagation {ThirdPartyPress};
---    --button may also be broken
---    Request_Bolus: out propagation {ItemOmission,ThirdPartyPress}; 
---  flows
---    --no output when button fails (completely)
---    fail_silent: error source Request_Bolus{EarlyServiceTermination} when failed;
---    --flow through errors
---    third_party:  error path Button_Press{ThirdPartyPress}->Request_Bolus(ThirdPartyPress);
---  end propagations;
-  properties
-    EMV2::OccurrenceDistribution => PCA_Properties::MaintenanceControllerFailureRate 
-      applies to fail;	
-  **}; --end of EMV2 
+--  annex EMV2
+--  {**
+--  use types ErrorLibrary, PCA_Error_Model;
+--  use behavior PCA_Error_Model::FailStop; 	
+----  error propagations
+----    --button passes along third-party presses
+----    Button_Press: in propagation {ThirdPartyPress};
+----    --button may also be broken
+----    Request_Bolus: out propagation {ItemOmission,ThirdPartyPress}; 
+----  flows
+----    --no output when button fails (completely)
+----    fail_silent: error source Request_Bolus{EarlyServiceTermination} when failed;
+----    --flow through errors
+----    third_party:  error path Button_Press{ThirdPartyPress}->Request_Bolus(ThirdPartyPress);
+----  end propagations;
+--  properties
+--    EMV2::OccurrenceDistribution => PCA_Properties::MaintenanceControllerFailureRate 
+--      applies to fail;	
+--  **}; --end of EMV2 
 end maintenance.imp; 
 
 feature group Maintenance_Signals
