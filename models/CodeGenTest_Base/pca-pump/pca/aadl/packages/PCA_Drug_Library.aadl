@@ -5,9 +5,8 @@
 package PCA_Drug_Library
   public
   with
-    PCA_Types, PCA_Properties;
-    --with EMV2
-    with BLESS;
+    PCA_Types, PCA_Properties,
+    EMV2, BLESS;
 
 annex Assertion
 {**  
@@ -47,29 +46,29 @@ process implementation drug_library_process.imp
     dr : port dlt.The_Drug_Record->The_Drug_Record;  
     ndf : port dlt.No_Drug_Found->No_Drug_Found;  
 --the drug library process is working if the drug library thread is working
---annex EMV2
---  {**
---  --the drug library process is working when the drug library thread is
---  use types ErrorLibrary, PCA_Error_Model;
---  --when the drug library thread fails, it stops
---  use behavior PCA_Error_Model::CompositeFailStop; 	
---  --same error propagations as drug library thread
---  error propagations
---  --loading the drug library is priviledged and presumed error-free
---    Load_Drug_Library: not in propagation {CommonErrors};
---  -- *not* expecting any errors in the command to get a drug record
---    Get_Drug_Record: not in propagation {CommonErrors};
---  -- fetched drug record could not be returned at all 
---    The_Drug_Record: out propagation {EarlyServiceTermination,ValueError};
---  -- may fail to indicate when the drug was not found, but this could be checked by looking at the drug record returned
---    No_Drug_Found: out propagation {ItemOmission};  
---  end propagations;
---  composite error behavior
---    states 
---     [dlt.failed]->failed;
---     [dlt.working]->working;
---  end composite;  	
---  **};  --end of EMV2
+annex EMV2
+  {**
+  --the drug library process is working when the drug library thread is
+  use types ErrorLibrary, PCA_Error_Model;
+  --when the drug library thread fails, it stops
+  use behavior PCA_Error_Model::CompositeFailStop; 	
+  --same error propagations as drug library thread
+  error propagations
+  --loading the drug library is priviledged and presumed error-free
+    Load_Drug_Library: not in propagation {CommonErrors};
+  -- *not* expecting any errors in the command to get a drug record
+    Get_Drug_Record: not in propagation {CommonErrors};
+  -- fetched drug record could not be returned at all 
+    The_Drug_Record: out propagation {EarlyServiceTermination,ValueError};
+  -- may fail to indicate when the drug was not found, but this could be checked by looking at the drug record returned
+    No_Drug_Found: out propagation {ItemOmission};  
+  end propagations;
+  composite error behavior
+    states 
+     [dlt.failed]->failed;
+     [dlt.working]->working;
+  end composite;  	
+  **};  --end of EMV2
 end drug_library_process.imp;
 
 --this represents the thread that stores & retrieves drug Library
@@ -94,31 +93,31 @@ thread drug_library_thread
     --Dispatch_Protocol=>Aperiodic;    
     Dispatch_Protocol=>Sporadic;
     Timing_Properties::Period => PCA_Properties::Sireum_Thread_Period;  --update outputs every 5ms
---annex EMV2 
---  {** 
---  use types PCA_Error_Model,ErrorLibrary;
---  --drug library stops upon failure
---  use behavior PCA_Error_Model::FailStop;
---  error propagations
---  --loading the drug library is priviledged and presumed error-free
---    Load_Drug_Library: not in propagation {CommonErrors};
---  -- *not* expecting any errors in the command to get a drug record
---    Get_Drug_Record: not in propagation {CommonErrors};
---  -- fetched drug record could not be returned at all 
---    The_Drug_Record: out propagation {EarlyServiceTermination,ValueError};
---  -- may fail to indicate when the drug was not found, but this could be checked by looking at the drug record returned
---    No_Drug_Found: out propagation {ItemOmission};  
---  flows  --three different log fault behaviors:  complete failure, corruption, and truncation
---  --nothing returned from library when failed
---    no_record_returned: error source The_Drug_Record{EarlyServiceTermination} when failed;
---  --no no drug found
---    no_confirm: error source The_Drug_Record{EarlyServiceTermination} when failed;
---  end propagations;
---  properties
---  --how often does the drug library fail completely?
---    EMV2::OccurrenceDistribution => PCA_Properties::DrugLibraryFailureRate 
---      applies to fail;
---  **};  --end of EMV2
+annex EMV2 
+  {** 
+  use types PCA_Error_Model,ErrorLibrary;
+  --drug library stops upon failure
+  use behavior PCA_Error_Model::FailStop;
+  error propagations
+  --loading the drug library is priviledged and presumed error-free
+    Load_Drug_Library: not in propagation {CommonErrors};
+  -- *not* expecting any errors in the command to get a drug record
+    Get_Drug_Record: not in propagation {CommonErrors};
+  -- fetched drug record could not be returned at all 
+    The_Drug_Record: out propagation {EarlyServiceTermination,ValueError};
+  -- may fail to indicate when the drug was not found, but this could be checked by looking at the drug record returned
+    No_Drug_Found: out propagation {ItemOmission};  
+  flows  --three different log fault behaviors:  complete failure, corruption, and truncation
+  --nothing returned from library when failed
+    no_record_returned: error source The_Drug_Record{EarlyServiceTermination} when failed;
+  --no no drug found
+    no_confirm: error source The_Drug_Record{EarlyServiceTermination} when failed;
+  end propagations;
+  properties
+  --how often does the drug library fail completely?
+    EMV2::OccurrenceDistribution => PCA_Properties::DrugLibraryFailureRate 
+      applies to fail;
+  **};  --end of EMV2
 end drug_library_thread;
 
 --this represents the thread implementation that stores & retreives drug Library

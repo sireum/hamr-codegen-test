@@ -5,9 +5,8 @@
 package PCA_Mechanical
   public
   with 
-    Base_Types;
-    --with EMV2,
-    with Physical_Types,
+    Base_Types, EMV2,
+    Physical_Types,
     BLESS,
     PCA_Types, PCA_Properties,
     --PCA_Constants,
@@ -64,14 +63,14 @@ end stand_alone_switch;
 
 device implementation stand_alone_switch.imp
 --stand-alone switch is error free
---  annex EMV2
---  {**
---  use types ErrorLibrary;
---  error propagations
---    Switch_Position: not in propagation {CommonErrors};
---    Stand_Alone: not out propagation {CommonErrors};
---  end propagations;
---  **}; --end of EMV2
+  annex EMV2
+  {**
+  use types ErrorLibrary;
+  error propagations
+    Switch_Position: not in propagation {CommonErrors};
+    Stand_Alone: not out propagation {CommonErrors};
+  end propagations;
+  **}; --end of EMV2
 end stand_alone_switch.imp;
  
 device drug_reservoir
@@ -108,37 +107,37 @@ device implementation drug_reservoir.imp
 --  **};
 --consider adding upstream occlusion as error type on Drug_Outlet
 --for now, just possible source of bad indications
---  annex EMV2
---  {**
---  use types ErrorLibrary, PCA_Error_Model;
---  use behavior PCA_Error_Model::FailStop; 	
---  error propagations
---    --occlusion in resevoir -> drug flow error
---    Drug_Outlet: out propagation {DrugFlowError};
---    --sensed values
---    Low_Reservoir: out propagation {EarlyServiceTermination};
---    Empty_Reservoir: out propagation {EarlyServiceTermination};
---    Door_Open: out propagation {EarlyServiceTermination};
---  flows
---    --occlusion in resevoir -> drug flow error
---    occlusion: error source Drug_Outlet{DrugFlowError};
---    --no signals when reservoir fails completely
---    fail_silent_lr: error source Low_Reservoir{EarlyServiceTermination} when failed;
---    fail_silent_er: error source Empty_Reservoir{EarlyServiceTermination} when failed;
---    fail_silent_do: error source Door_Open{EarlyServiceTermination} when failed;
---    --random false positives
---    false_lr: error source Low_Reservoir{EarlyServiceTermination};
---    false_er: error source Empty_Reservoir{EarlyServiceTermination};
---    false_do: error source Door_Open{EarlyServiceTermination};
---  end propagations;
---  properties
---    EMV2::OccurrenceDistribution => PCA_Properties::ReservoirOcclusionRate 
---      applies to occlusion;	
---    EMV2::OccurrenceDistribution => PCA_Properties::ReservoirFailureRate 
---      applies to fail;	
---    EMV2::OccurrenceDistribution => PCA_Properties::ReservoirFalsePositiveRate 
---      applies to false_lr,false_er,false_do;	
---  **}; --end of EMV2
+  annex EMV2
+  {**
+  use types ErrorLibrary, PCA_Error_Model;
+  use behavior PCA_Error_Model::FailStop; 	
+  error propagations
+    --occlusion in resevoir -> drug flow error
+    Drug_Outlet: out propagation {DrugFlowError};
+    --sensed values
+    Low_Reservoir: out propagation {EarlyServiceTermination};
+    Empty_Reservoir: out propagation {EarlyServiceTermination};
+    Door_Open: out propagation {EarlyServiceTermination};
+  flows
+    --occlusion in resevoir -> drug flow error
+    occlusion: error source Drug_Outlet{DrugFlowError};
+    --no signals when reservoir fails completely
+    fail_silent_lr: error source Low_Reservoir{EarlyServiceTermination} when failed;
+    fail_silent_er: error source Empty_Reservoir{EarlyServiceTermination} when failed;
+    fail_silent_do: error source Door_Open{EarlyServiceTermination} when failed;
+    --random false positives
+    false_lr: error source Low_Reservoir{EarlyServiceTermination};
+    false_er: error source Empty_Reservoir{EarlyServiceTermination};
+    false_do: error source Door_Open{EarlyServiceTermination};
+  end propagations;
+  properties
+    EMV2::OccurrenceDistribution => PCA_Properties::ReservoirOcclusionRate 
+      applies to occlusion;	
+    EMV2::OccurrenceDistribution => PCA_Properties::ReservoirFailureRate 
+      applies to fail;	
+    EMV2::OccurrenceDistribution => PCA_Properties::ReservoirFalsePositiveRate 
+      applies to false_lr,false_er,false_do;	
+  **}; --end of EMV2
 end drug_reservoir.imp; 
 
 --this is the type for the physical pump that move the drug
@@ -328,25 +327,25 @@ device scanner
 end scanner;
 
 device implementation scanner.imp
---  annex EMV2
---  {**
---  use types ErrorLibrary, PCA_Error_Model;
---  use behavior PCA_Error_Model::FailStop; 	
---  error propagations
---    --errors in scanner data
---    Scan_Data: out propagation {CommonErrors};
---  flows
---    --no signals when scanner fails completely
---    fail_blind: error source Scan_Data{EarlyServiceTermination} when failed;
---    --bad scanning
---    bad_scan: error source Scan_Data{ValueError};
---  end propagations;
---  properties
---    EMV2::OccurrenceDistribution => PCA_Properties::ScannerFailureRate 
---      applies to fail;	
---    EMV2::OccurrenceDistribution => PCA_Properties::FalsePositiveRate 
---      applies to bad_scan;	
---  **}; --end of EMV2
+  annex EMV2
+  {**
+  use types ErrorLibrary, PCA_Error_Model;
+  use behavior PCA_Error_Model::FailStop; 	
+  error propagations
+    --errors in scanner data
+    Scan_Data: out propagation {CommonErrors};
+  flows
+    --no signals when scanner fails completely
+    fail_blind: error source Scan_Data{EarlyServiceTermination} when failed;
+    --bad scanning
+    bad_scan: error source Scan_Data{ValueError};
+  end propagations;
+  properties
+    EMV2::OccurrenceDistribution => PCA_Properties::ScannerFailureRate 
+      applies to fail;	
+    EMV2::OccurrenceDistribution => PCA_Properties::FalsePositiveRate 
+      applies to bad_scan;	
+  **}; --end of EMV2
 end scanner.imp;
 
 

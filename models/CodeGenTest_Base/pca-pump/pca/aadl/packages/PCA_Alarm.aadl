@@ -3,7 +3,7 @@
 package PCA_Alarm
   public
   with
-    --EMV2,		--error model properties
+    EMV2,		--error model properties
     PCA_Error_Model,
 --    Base_Types,	--predeclared AADL data types
     BLESS,		--BLESS property types
@@ -362,112 +362,112 @@ annex BLESS
   quit: normal -[ on dispatch stop ]-> done{};
 **};
 
---annex EMV2 
---{**
---  use types ErrorLibrary, PCA_Error_Model;
---  --when the alarm thread fails, it stops
---  use behavior PCA_Error_Model::FailStop; 	
---  error propagations
---    --no alarm, false alarm to control panel
---    Alarm: out propagation {EarlyServiceTermination};
---    --same thing for warnings
---    Warning: out propagation {EarlyServiceTermination};
---    --bad stop-pump decision, missed-alarm/false-alarm
---    Stop_Pump_Completely: out propagation {EarlyServiceTermination};
---    --bad KVO decision, missed-alarm/false-alarm
---    Pump_At_KVO_Rate: out propagation {EarlyServiceTermination};
---    --incorrect warnings from alarm thread
---    Max_Dose_Warning: in propagation {EarlyServiceTermination};
---    Hard_Limit_Violation: in propagation {EarlyServiceTermination};
---    --incorrect reservoir warnings
---    Empty_Res: in propagation {EarlyServiceTermination};
---    Low_Res: in propagation {EarlyServiceTermination};
---    --incorrect pump fault indication
---    Prime_Failure: in propagation {EarlyServiceTermination};
---    Pump_Hot: in propagation {EarlyServiceTermination};
---    --incorrect drug in library indication
---    Drug_Not_In_Library: in propagation {EarlyServiceTermination};
---    --incorrect battery fault indication    
---    Defective_Btty: in propagation {EarlyServiceTermination};
---    Low_Battery_Warning: in propagation {EarlyServiceTermination};
---    --may send (or miss) bad error log reports
---    Log_Fault: out propagation {EarlyServiceTermination};
---  flows
---    --alarm thread fails-silent
-----    ice_alarm_fail_silent: error source alrm{EarlyServiceTermination} when failed;	
---    panel_alarm_fail_silent: error source Alarm{EarlyServiceTermination} when failed;	
---    panel_warning_fail_silent: error source Warning{EarlyServiceTermination} when failed;	
---    log_fault_fail_silent: error source Log_Fault{EarlyServiceTermination} when failed;	
---    stop_pump_fail_silent: error source Stop_Pump_Completely{EarlyServiceTermination} when failed;	
---    kvo_fail_silent: error source Pump_At_KVO_Rate{EarlyServiceTermination} when failed;	
---    --max dose warning
-----    mdw_ice: error path Over_Max_Drug_Per_Hour->alrm;
---    mdw_cpa: error path Max_Dose_Warning->Alarm;
---    mdw_cpw: error path Max_Dose_Warning->Warning;
---    mdw_spc: error path Max_Dose_Warning->Stop_Pump_Completely;
---    mdw_kvo: error path Max_Dose_Warning->Pump_At_KVO_Rate;
---    mdw_lf: error path Max_Dose_Warning->Log_Fault;
---    --hard limit violated
-----    hlv_ice: error path Hard_Limit_Violated->alrm;
---    hlv_cpa: error path Hard_Limit_Violation->Alarm;
---    hlv_cpw: error path Hard_Limit_Violation->Warning;
---    hlv_spc: error path Hard_Limit_Violation->Stop_Pump_Completely;
---    hlv_kvo: error path Hard_Limit_Violation->Pump_At_KVO_Rate;
---    hlv_lf: error path Hard_Limit_Violation->Log_Fault;
---    --empty reservoir
-----    er_ice: error path Empty_Res->alrm;
---    er_cpa: error path Empty_Res->Alarm;
---    er_cpw: error path Empty_Res->Warning;
---    er_spc: error path Empty_Res->Stop_Pump_Completely;
---    er_kvo: error path Empty_Res->Pump_At_KVO_Rate;
---    er_lf: error path Empty_Res->Log_Fault;
---    --low reservoir
-----    lr_ice: error path Low_Res->alrm;
---    lr_cpa: error path Low_Res->Alarm;
---    lr_cpw: error path Low_Res->Warning;
---    lr_spc: error path Low_Res->Stop_Pump_Completely;
---    lr_kvo: error path Low_Res->Pump_At_KVO_Rate;
---    lr_lf: error path Low_Res->Log_Fault;
---    --priming failure
-----    pf_ice: error path Prime_Failure->alrm;
---    pf_cpa: error path Prime_Failure->Alarm;
---    pf_cpw: error path Prime_Failure->Warning;
---    pf_spc: error path Prime_Failure->Stop_Pump_Completely;
---    pf_kvo: error path Prime_Failure->Pump_At_KVO_Rate;
---    pf_lf: error path Prime_Failure->Log_Fault;
---    --pump too hot
-----    pf_ice: error path Pump_Hot->alrm;
---    ph_cpa: error path Pump_Hot->Alarm;
---    ph_cpw: error path Pump_Hot->Warning;
---    ph_spc: error path Pump_Hot->Stop_Pump_Completely;
---    ph_kvo: error path Pump_Hot->Pump_At_KVO_Rate;
---    ph_lf: error path Pump_Hot->Log_Fault;
---    --drug library
-----    dl_ice: error path Drug_Not_In_Library->alrm;
---    dl_cpa: error path Drug_Not_In_Library->Alarm;
---    dl_cpw: error path Drug_Not_In_Library->Warning;
---    dl_spc: error path Drug_Not_In_Library->Stop_Pump_Completely;
---    dl_kvo: error path Drug_Not_In_Library->Pump_At_KVO_Rate;
---    dl_lf: error path Drug_Not_In_Library->Log_Fault;
---    --defective battery
-----    db_ice: error path Defective_Battery->alrm;
---    db_cpa: error path Defective_Btty->Alarm;
---    db_cpw: error path Defective_Btty->Warning;
---    db_spc: error path Defective_Btty->Stop_Pump_Completely;
---    db_kvo: error path Defective_Btty->Pump_At_KVO_Rate;
---    db_lf: error path Defective_Btty->Log_Fault;
---    --low battery
-----    lb_ice: error path Low_Battery->alrm;
---    lb_cpa: error path Low_Battery_Warning->Alarm;
---    lb_cpw: error path Low_Battery_Warning->Warning;
---    lb_spc: error path Low_Battery_Warning->Stop_Pump_Completely;
---    lb_kvo: error path Low_Battery_Warning->Pump_At_KVO_Rate;
---    lb_lf: error path Low_Battery_Warning->Log_Fault;
---  end propagations;
---  properties
---    EMV2::OccurrenceDistribution => PCA_Properties::AlarmThreadFailureRate 
---      applies to fail;
---**};  --end of EMV2
+annex EMV2 
+{**
+  use types ErrorLibrary, PCA_Error_Model;
+  --when the alarm thread fails, it stops
+  use behavior PCA_Error_Model::FailStop; 	
+  error propagations
+    --no alarm, false alarm to control panel
+    Alarm: out propagation {EarlyServiceTermination};
+    --same thing for warnings
+    Warning: out propagation {EarlyServiceTermination};
+    --bad stop-pump decision, missed-alarm/false-alarm
+    Stop_Pump_Completely: out propagation {EarlyServiceTermination};
+    --bad KVO decision, missed-alarm/false-alarm
+    Pump_At_KVO_Rate: out propagation {EarlyServiceTermination};
+    --incorrect warnings from alarm thread
+    Max_Dose_Warning: in propagation {EarlyServiceTermination};
+    Hard_Limit_Violation: in propagation {EarlyServiceTermination};
+    --incorrect reservoir warnings
+    Empty_Res: in propagation {EarlyServiceTermination};
+    Low_Res: in propagation {EarlyServiceTermination};
+    --incorrect pump fault indication
+    Prime_Failure: in propagation {EarlyServiceTermination};
+    Pump_Hot: in propagation {EarlyServiceTermination};
+    --incorrect drug in library indication
+    Drug_Not_In_Library: in propagation {EarlyServiceTermination};
+    --incorrect battery fault indication    
+    Defective_Btty: in propagation {EarlyServiceTermination};
+    Low_Battery_Warning: in propagation {EarlyServiceTermination};
+    --may send (or miss) bad error log reports
+    Log_Fault: out propagation {EarlyServiceTermination};
+  flows
+    --alarm thread fails-silent
+--    ice_alarm_fail_silent: error source alrm{EarlyServiceTermination} when failed;	
+    panel_alarm_fail_silent: error source Alarm{EarlyServiceTermination} when failed;	
+    panel_warning_fail_silent: error source Warning{EarlyServiceTermination} when failed;	
+    log_fault_fail_silent: error source Log_Fault{EarlyServiceTermination} when failed;	
+    stop_pump_fail_silent: error source Stop_Pump_Completely{EarlyServiceTermination} when failed;	
+    kvo_fail_silent: error source Pump_At_KVO_Rate{EarlyServiceTermination} when failed;	
+    --max dose warning
+--    mdw_ice: error path Over_Max_Drug_Per_Hour->alrm;
+    mdw_cpa: error path Max_Dose_Warning->Alarm;
+    mdw_cpw: error path Max_Dose_Warning->Warning;
+    mdw_spc: error path Max_Dose_Warning->Stop_Pump_Completely;
+    mdw_kvo: error path Max_Dose_Warning->Pump_At_KVO_Rate;
+    mdw_lf: error path Max_Dose_Warning->Log_Fault;
+    --hard limit violated
+--    hlv_ice: error path Hard_Limit_Violated->alrm;
+    hlv_cpa: error path Hard_Limit_Violation->Alarm;
+    hlv_cpw: error path Hard_Limit_Violation->Warning;
+    hlv_spc: error path Hard_Limit_Violation->Stop_Pump_Completely;
+    hlv_kvo: error path Hard_Limit_Violation->Pump_At_KVO_Rate;
+    hlv_lf: error path Hard_Limit_Violation->Log_Fault;
+    --empty reservoir
+--    er_ice: error path Empty_Res->alrm;
+    er_cpa: error path Empty_Res->Alarm;
+    er_cpw: error path Empty_Res->Warning;
+    er_spc: error path Empty_Res->Stop_Pump_Completely;
+    er_kvo: error path Empty_Res->Pump_At_KVO_Rate;
+    er_lf: error path Empty_Res->Log_Fault;
+    --low reservoir
+--    lr_ice: error path Low_Res->alrm;
+    lr_cpa: error path Low_Res->Alarm;
+    lr_cpw: error path Low_Res->Warning;
+    lr_spc: error path Low_Res->Stop_Pump_Completely;
+    lr_kvo: error path Low_Res->Pump_At_KVO_Rate;
+    lr_lf: error path Low_Res->Log_Fault;
+    --priming failure
+--    pf_ice: error path Prime_Failure->alrm;
+    pf_cpa: error path Prime_Failure->Alarm;
+    pf_cpw: error path Prime_Failure->Warning;
+    pf_spc: error path Prime_Failure->Stop_Pump_Completely;
+    pf_kvo: error path Prime_Failure->Pump_At_KVO_Rate;
+    pf_lf: error path Prime_Failure->Log_Fault;
+    --pump too hot
+--    pf_ice: error path Pump_Hot->alrm;
+    ph_cpa: error path Pump_Hot->Alarm;
+    ph_cpw: error path Pump_Hot->Warning;
+    ph_spc: error path Pump_Hot->Stop_Pump_Completely;
+    ph_kvo: error path Pump_Hot->Pump_At_KVO_Rate;
+    ph_lf: error path Pump_Hot->Log_Fault;
+    --drug library
+--    dl_ice: error path Drug_Not_In_Library->alrm;
+    dl_cpa: error path Drug_Not_In_Library->Alarm;
+    dl_cpw: error path Drug_Not_In_Library->Warning;
+    dl_spc: error path Drug_Not_In_Library->Stop_Pump_Completely;
+    dl_kvo: error path Drug_Not_In_Library->Pump_At_KVO_Rate;
+    dl_lf: error path Drug_Not_In_Library->Log_Fault;
+    --defective battery
+--    db_ice: error path Defective_Battery->alrm;
+    db_cpa: error path Defective_Btty->Alarm;
+    db_cpw: error path Defective_Btty->Warning;
+    db_spc: error path Defective_Btty->Stop_Pump_Completely;
+    db_kvo: error path Defective_Btty->Pump_At_KVO_Rate;
+    db_lf: error path Defective_Btty->Log_Fault;
+    --low battery
+--    lb_ice: error path Low_Battery->alrm;
+    lb_cpa: error path Low_Battery_Warning->Alarm;
+    lb_cpw: error path Low_Battery_Warning->Warning;
+    lb_spc: error path Low_Battery_Warning->Stop_Pump_Completely;
+    lb_kvo: error path Low_Battery_Warning->Pump_At_KVO_Rate;
+    lb_lf: error path Low_Battery_Warning->Log_Fault;
+  end propagations;
+  properties
+    EMV2::OccurrenceDistribution => PCA_Properties::AlarmThreadFailureRate 
+      applies to fail;
+**};  --end of EMV2
 end alarm_thread.imp;
 
 --R5.4.0(2) basal over-infusion alarm

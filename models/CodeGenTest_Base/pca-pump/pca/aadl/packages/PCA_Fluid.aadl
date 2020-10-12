@@ -7,7 +7,7 @@ package PCA_Fluid
   with
     Base_Types, 
     --EMV2, 
---    ErrorLibrary,
+    --ErrorLibrary,
     Physical_Types,
     BLESS,
     PCA_Types, 
@@ -87,14 +87,14 @@ system implementation fluid.imp
     dc: port reservoir.Door_Closed->Door_Closed;
 --  flows
 --    Flow_MP_path : flow path reservoir.Drug_Outlet->dri->upstream_mon->dru->mech_pump->drd->downstream_mon->dro->Drug_Outlet;
---  annex EMV2
---  {**
---  use types ErrorLibrary, PCA_Error_Model;
---  use behavior PCA_Error_Model::CompositeFailStop; 	
---  error propagations
---    Halt: in propagation {EarlyServiceTermination};
---  end propagations;  	
---  **};
+  annex EMV2
+  {**
+  use types ErrorLibrary, PCA_Error_Model;
+  use behavior PCA_Error_Model::CompositeFailStop; 	
+  error propagations
+    Halt: in propagation {EarlyServiceTermination};
+  end propagations;  	
+  **};
 end fluid.imp;
 
 end PCA_Fluid;
