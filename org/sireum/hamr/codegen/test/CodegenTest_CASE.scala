@@ -24,6 +24,8 @@ class CodegenTest_CASE extends CodeGenTest {
 
     val tests: ISZ[(String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type])] = ISZ(
 
+      gen("attestation-gate", "SysContext_top_Impl_Instance.json", ISZ(sel4)),
+
       gen("simple_uav", "UAV_UAV_Impl_Instance.json", ISZ(sel4_tb, sel4_only)),
 
       gen("test_data_port", "test_data_port_top_impl_Instance.json", ISZ(sel4_tb, sel4_only)),

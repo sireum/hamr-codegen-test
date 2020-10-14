@@ -29,7 +29,7 @@ trait CodeGenTest extends TestSuite {
   def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("pca")
+  def filters: ISZ[String] = ISZ("att")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4" // ignoring as has sel4 dataport with 512 elems so bigger than 4096
