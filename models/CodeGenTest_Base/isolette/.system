@@ -1,0 +1,3 @@
+projects=.project
+system_impl=isolette.single_sensor
+system_impl_file=packages/Isolette.aadl

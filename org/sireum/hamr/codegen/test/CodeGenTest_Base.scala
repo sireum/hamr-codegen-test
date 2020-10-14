@@ -26,6 +26,27 @@ class CodeGenTest_Base extends CodeGenTest {
     }
 
     {
+      val name = "isolette"
+      val modelDir = modelsDir / name
+      val model = modelDir / ".slang" / "Isolette_isolette_single_sensor_Instance.json"
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform),
+        resultDir, None(), None())
+
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform),
+        resultDir, None(), None())
+
+      platform = CodeGenPlatform.SeL4
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform),
+        resultDir, None(), None())
+    }
+
+    {
       val name = "building_control_gen_mixed"
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "BuildingControl_BuildingControlDemo_i_Instance.json"
