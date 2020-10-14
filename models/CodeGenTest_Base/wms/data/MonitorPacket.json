@@ -1,0 +1,32 @@
+{
+  "type" : "BitCodecGenSpec",
+  "maxSize" : 1,
+  "spec" : {
+    "type" : "Spec.Concat",
+    "name" : "MonitorPacket",
+    "elements" : [
+      {
+        "type" : "Spec.Boolean",
+        "name" : "shouldInflate"
+      }
+    ],
+    "asOpt" : {
+      "type" : "None"
+    }
+  },
+  "enums" : {
+    "type" : "Map",
+    "entries" : [
+    ]
+  },
+  "funs" : {
+    "type" : "Map",
+    "entries" : [
+    ]
+  },
+  "funTexts" : {
+    "type" : "Map",
+    "entries" : [
+    ]
+  }
+}

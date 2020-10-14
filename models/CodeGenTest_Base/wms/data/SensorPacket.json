@@ -1,0 +1,39 @@
+{
+  "type" : "BitCodecGenSpec",
+  "maxSize" : 32,
+  "spec" : {
+    "type" : "Spec.Concat",
+    "name" : "SensorPacket",
+    "elements" : [
+      {
+        "type" : "Spec.Floats",
+        "name" : "pressure",
+        "size" : 1,
+        "minOpt" : {
+          "type" : "None"
+        },
+        "maxOpt" : {
+          "type" : "None"
+        }
+      }
+    ],
+    "asOpt" : {
+      "type" : "None"
+    }
+  },
+  "enums" : {
+    "type" : "Map",
+    "entries" : [
+    ]
+  },
+  "funs" : {
+    "type" : "Map",
+    "entries" : [
+    ]
+  },
+  "funTexts" : {
+    "type" : "Map",
+    "entries" : [
+    ]
+  }
+}

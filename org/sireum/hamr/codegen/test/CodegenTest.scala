@@ -29,7 +29,7 @@ trait CodeGenTest extends TestSuite {
   def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("att")
+  def filters: ISZ[String] = ISZ("wms")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4" // ignoring as has sel4 dataport with 512 elems so bigger than 4096
@@ -440,7 +440,7 @@ object CodeGenTest {
       val allowedDirs: ISZ[String] = ISZ("expected", "models")
 
       // exclude unneeded/binary files
-      val excludedResources: ISZ[String] = ISZ("png", "pdf", "md", "dot", "aadl", "aadl_diagram")
+      val excludedResources: ISZ[String] = ISZ("aadlbin", "aaxl2", "png", "pdf", "md", "dot", "aadl", "aadl_diagram")
 
       val filename = Os.path(p.last)
 
