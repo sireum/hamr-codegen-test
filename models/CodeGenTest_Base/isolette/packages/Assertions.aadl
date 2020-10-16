@@ -3,7 +3,6 @@
 
 package Assertions
   public
-  with Isolette_Properties;
   
 annex Assertion  -- define labels for Assertions used elsewhere 
 {**

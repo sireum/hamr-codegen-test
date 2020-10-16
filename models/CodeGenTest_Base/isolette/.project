@@ -3,9 +3,6 @@
 	<name>isolette</name>
 	<comment></comment>
 	<projects>
-		<project>BLESS_Resources</project>
-		<project>physical</project>
-		<project>AlisaPredefined</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -205,7 +205,7 @@
         "producer_filter_consumer_periodic--SeL4-excludesImpl\/slang-embedded\/src\/c\/ext-c\/Producer_proc_producer\/Producer_proc_producer.h",
         {
           "type" : "TestResource",
-          "content" : "#ifndef PRODUCER_PROC_PRODUCER_H\n#define PRODUCER_PROC_PRODUCER_H\n\n#include <all.h>\n\nUnit pfc_project_PFC_Producer_proc_producer_initialise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Producer_proc_producer_finalise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Producer_proc_producer_timeTriggered_(STACK_FRAME);\n\n#endif\n",
+          "content" : "#ifndef PRODUCER_PROC_PRODUCER_H\n#define PRODUCER_PROC_PRODUCER_H\n\n#include <all.h>\n\nUnit pfc_project_PFC_Producer_proc_producer_initialise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Producer_proc_producer_finalise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Producer_proc_producer_timeTriggered_(STACK_FRAME_ONLY);\n\n#endif\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -214,7 +214,7 @@
         "producer_filter_consumer_periodic--SeL4-excludesImpl\/slang-embedded\/src\/c\/ext-c\/Producer_proc_producer\/Producer_proc_producer.c",
         {
           "type" : "TestResource",
-          "content" : "#include <Producer_proc_producer_api.h>\n#include <Producer_proc_producer.h>\n#include <ext.h>\n\n\/\/ This file will not be overwritten so is safe to edit\n\nUnit pfc_project_PFC_Producer_proc_producer_initialise_(STACK_FRAME_ONLY) {\n DeclNewStackFrame(caller, \"Producer_proc_producer.c\", \"\", \"pfc_project_PFC_Producer_proc_producer_initialise_\", 0);\n\n \/\/ example api usage\n\n api_logInfo__pfc_project_PFC_Producer_proc_producer(SF string(\"Example logInfo\"));\n api_logDebug__pfc_project_PFC_Producer_proc_producer(SF string(\"Example logDebug\"));\n api_logError__pfc_project_PFC_Producer_proc_producer(SF string(\"Example logError\"));\n}\n\nUnit pfc_project_PFC_Producer_proc_producer_finalise_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Producer_proc_producer.c\", \"\", \"pfc_project_PFC_Producer_proc_producer_finalise_\", 0);\n\n  \/\/ example finalise method\n}\n\nUnit pfc_project_PFC_Producer_proc_producer_timeTriggered_(STACK_FRAME) {\n  DeclNewStackFrame(caller, \"Producer_proc_producer.c\", \"\", \"pfc_project_PFC_Producer_proc_producer_timeTriggered_\", 0);\n}\n",
+          "content" : "#include <Producer_proc_producer_api.h>\n#include <Producer_proc_producer.h>\n#include <ext.h>\n\n\/\/ This file will not be overwritten so is safe to edit\n\nUnit pfc_project_PFC_Producer_proc_producer_initialise_(STACK_FRAME_ONLY) {\n DeclNewStackFrame(caller, \"Producer_proc_producer.c\", \"\", \"pfc_project_PFC_Producer_proc_producer_initialise_\", 0);\n\n \/\/ example api usage\n\n api_logInfo__pfc_project_PFC_Producer_proc_producer(SF string(\"Example logInfo\"));\n api_logDebug__pfc_project_PFC_Producer_proc_producer(SF string(\"Example logDebug\"));\n api_logError__pfc_project_PFC_Producer_proc_producer(SF string(\"Example logError\"));\n}\n\nUnit pfc_project_PFC_Producer_proc_producer_finalise_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Producer_proc_producer.c\", \"\", \"pfc_project_PFC_Producer_proc_producer_finalise_\", 0);\n\n  \/\/ example finalise method\n}\n\nUnit pfc_project_PFC_Producer_proc_producer_timeTriggered_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Producer_proc_producer.c\", \"\", \"pfc_project_PFC_Producer_proc_producer_timeTriggered_\", 0);\n}\n",
           "overwrite" : false,
           "makeExecutable" : false
         }
@@ -295,7 +295,7 @@
         "producer_filter_consumer_periodic--SeL4-excludesImpl\/slang-embedded\/src\/c\/ext-c\/Filter_proc_filter\/Filter_proc_filter.h",
         {
           "type" : "TestResource",
-          "content" : "#ifndef FILTER_PROC_FILTER_H\n#define FILTER_PROC_FILTER_H\n\n#include <all.h>\n\nUnit pfc_project_PFC_Filter_proc_filter_initialise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Filter_proc_filter_finalise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Filter_proc_filter_timeTriggered_(STACK_FRAME);\n\n#endif\n",
+          "content" : "#ifndef FILTER_PROC_FILTER_H\n#define FILTER_PROC_FILTER_H\n\n#include <all.h>\n\nUnit pfc_project_PFC_Filter_proc_filter_initialise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Filter_proc_filter_finalise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Filter_proc_filter_timeTriggered_(STACK_FRAME_ONLY);\n\n#endif\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -304,7 +304,7 @@
         "producer_filter_consumer_periodic--SeL4-excludesImpl\/slang-embedded\/src\/c\/ext-c\/Filter_proc_filter\/Filter_proc_filter.c",
         {
           "type" : "TestResource",
-          "content" : "#include <Filter_proc_filter_api.h>\n#include <Filter_proc_filter.h>\n#include <ext.h>\n\n\/\/ This file will not be overwritten so is safe to edit\n\nUnit pfc_project_PFC_Filter_proc_filter_initialise_(STACK_FRAME_ONLY) {\n DeclNewStackFrame(caller, \"Filter_proc_filter.c\", \"\", \"pfc_project_PFC_Filter_proc_filter_initialise_\", 0);\n\n \/\/ example api usage\n\n api_logInfo__pfc_project_PFC_Filter_proc_filter(SF string(\"Example logInfo\"));\n api_logDebug__pfc_project_PFC_Filter_proc_filter(SF string(\"Example logDebug\"));\n api_logError__pfc_project_PFC_Filter_proc_filter(SF string(\"Example logError\"));\n}\n\nUnit pfc_project_PFC_Filter_proc_filter_finalise_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Filter_proc_filter.c\", \"\", \"pfc_project_PFC_Filter_proc_filter_finalise_\", 0);\n\n  \/\/ example finalise method\n}\n\nUnit pfc_project_PFC_Filter_proc_filter_timeTriggered_(STACK_FRAME) {\n  DeclNewStackFrame(caller, \"Filter_proc_filter.c\", \"\", \"pfc_project_PFC_Filter_proc_filter_timeTriggered_\", 0);\n}\n",
+          "content" : "#include <Filter_proc_filter_api.h>\n#include <Filter_proc_filter.h>\n#include <ext.h>\n\n\/\/ This file will not be overwritten so is safe to edit\n\nUnit pfc_project_PFC_Filter_proc_filter_initialise_(STACK_FRAME_ONLY) {\n DeclNewStackFrame(caller, \"Filter_proc_filter.c\", \"\", \"pfc_project_PFC_Filter_proc_filter_initialise_\", 0);\n\n \/\/ example api usage\n\n api_logInfo__pfc_project_PFC_Filter_proc_filter(SF string(\"Example logInfo\"));\n api_logDebug__pfc_project_PFC_Filter_proc_filter(SF string(\"Example logDebug\"));\n api_logError__pfc_project_PFC_Filter_proc_filter(SF string(\"Example logError\"));\n}\n\nUnit pfc_project_PFC_Filter_proc_filter_finalise_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Filter_proc_filter.c\", \"\", \"pfc_project_PFC_Filter_proc_filter_finalise_\", 0);\n\n  \/\/ example finalise method\n}\n\nUnit pfc_project_PFC_Filter_proc_filter_timeTriggered_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Filter_proc_filter.c\", \"\", \"pfc_project_PFC_Filter_proc_filter_timeTriggered_\", 0);\n}\n",
           "overwrite" : false,
           "makeExecutable" : false
         }
@@ -385,7 +385,7 @@
         "producer_filter_consumer_periodic--SeL4-excludesImpl\/slang-embedded\/src\/c\/ext-c\/Consumer_proc_consumer\/Consumer_proc_consumer.h",
         {
           "type" : "TestResource",
-          "content" : "#ifndef CONSUMER_PROC_CONSUMER_H\n#define CONSUMER_PROC_CONSUMER_H\n\n#include <all.h>\n\nUnit pfc_project_PFC_Consumer_proc_consumer_initialise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Consumer_proc_consumer_finalise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Consumer_proc_consumer_timeTriggered_(STACK_FRAME);\n\n#endif\n",
+          "content" : "#ifndef CONSUMER_PROC_CONSUMER_H\n#define CONSUMER_PROC_CONSUMER_H\n\n#include <all.h>\n\nUnit pfc_project_PFC_Consumer_proc_consumer_initialise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Consumer_proc_consumer_finalise_(STACK_FRAME_ONLY);\n\nUnit pfc_project_PFC_Consumer_proc_consumer_timeTriggered_(STACK_FRAME_ONLY);\n\n#endif\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -394,7 +394,7 @@
         "producer_filter_consumer_periodic--SeL4-excludesImpl\/slang-embedded\/src\/c\/ext-c\/Consumer_proc_consumer\/Consumer_proc_consumer.c",
         {
           "type" : "TestResource",
-          "content" : "#include <Consumer_proc_consumer_api.h>\n#include <Consumer_proc_consumer.h>\n#include <ext.h>\n\n\/\/ This file will not be overwritten so is safe to edit\n\nUnit pfc_project_PFC_Consumer_proc_consumer_initialise_(STACK_FRAME_ONLY) {\n DeclNewStackFrame(caller, \"Consumer_proc_consumer.c\", \"\", \"pfc_project_PFC_Consumer_proc_consumer_initialise_\", 0);\n\n \/\/ example api usage\n\n api_logInfo__pfc_project_PFC_Consumer_proc_consumer(SF string(\"Example logInfo\"));\n api_logDebug__pfc_project_PFC_Consumer_proc_consumer(SF string(\"Example logDebug\"));\n api_logError__pfc_project_PFC_Consumer_proc_consumer(SF string(\"Example logError\"));\n}\n\nUnit pfc_project_PFC_Consumer_proc_consumer_finalise_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Consumer_proc_consumer.c\", \"\", \"pfc_project_PFC_Consumer_proc_consumer_finalise_\", 0);\n\n  \/\/ example finalise method\n}\n\nUnit pfc_project_PFC_Consumer_proc_consumer_timeTriggered_(STACK_FRAME) {\n  DeclNewStackFrame(caller, \"Consumer_proc_consumer.c\", \"\", \"pfc_project_PFC_Consumer_proc_consumer_timeTriggered_\", 0);\n}\n",
+          "content" : "#include <Consumer_proc_consumer_api.h>\n#include <Consumer_proc_consumer.h>\n#include <ext.h>\n\n\/\/ This file will not be overwritten so is safe to edit\n\nUnit pfc_project_PFC_Consumer_proc_consumer_initialise_(STACK_FRAME_ONLY) {\n DeclNewStackFrame(caller, \"Consumer_proc_consumer.c\", \"\", \"pfc_project_PFC_Consumer_proc_consumer_initialise_\", 0);\n\n \/\/ example api usage\n\n api_logInfo__pfc_project_PFC_Consumer_proc_consumer(SF string(\"Example logInfo\"));\n api_logDebug__pfc_project_PFC_Consumer_proc_consumer(SF string(\"Example logDebug\"));\n api_logError__pfc_project_PFC_Consumer_proc_consumer(SF string(\"Example logError\"));\n}\n\nUnit pfc_project_PFC_Consumer_proc_consumer_finalise_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Consumer_proc_consumer.c\", \"\", \"pfc_project_PFC_Consumer_proc_consumer_finalise_\", 0);\n\n  \/\/ example finalise method\n}\n\nUnit pfc_project_PFC_Consumer_proc_consumer_timeTriggered_(STACK_FRAME_ONLY) {\n  DeclNewStackFrame(caller, \"Consumer_proc_consumer.c\", \"\", \"pfc_project_PFC_Consumer_proc_consumer_timeTriggered_\", 0);\n}\n",
           "overwrite" : false,
           "makeExecutable" : false
         }
