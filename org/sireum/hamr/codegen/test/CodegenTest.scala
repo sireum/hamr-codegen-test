@@ -32,7 +32,7 @@ trait CodeGenTest extends TestSuite {
   def filters: ISZ[String] = ISZ("wms")
 
   def ignores: ISZ[String] = ISZ(
-    "uav_alt_extern--SeL4" // ignoring as has sel4 dataport with 512 elems so bigger than 4096
+    "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
   )
 
   def timeout: Z = 10000
@@ -201,7 +201,7 @@ trait CodeGenTest extends TestSuite {
           val ignoreFile = ignoreSbtAndMillBuildChanges && (r._1.native.endsWith("build.sbt") || r._1.native.endsWith("build.sc"))
           val sameContents = r._2 == e
           if(!sameContents) {
-            eprintln(s"${r._1} is not the same (NOTE comparing ${e.getClass.getSimpleName} objects)")
+            eprintln(s"${r._1} is not the same (NOTE comparing ${e.getClass.getSimpleName} objects so perhaps something other than the generated code has changed)")
           }
           ignoreFile || sameContents
         }
