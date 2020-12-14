@@ -7,7 +7,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/ICE_Types\/Alarm_Signal.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.ICE_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Alarm_Signal {\n  'On\n  'Alarm_Off\n  'Alarm_Paused\n  'Audio_Off\n  'Audio_Paused\n}\n\nobject Alarm_Signal_Payload {\n  def empty(): Alarm_Signal_Payload = {\n    return Alarm_Signal_Payload(ICE_Types.Alarm_Signal.byOrdinal(0).get)\n  }\n}\n\n@datatype class Alarm_Signal_Payload(value: ICE_Types.Alarm_Signal.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.ICE_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Alarm_Signal {\n  \"On\"\n  \"Alarm_Off\"\n  \"Alarm_Paused\"\n  \"Audio_Off\"\n  \"Audio_Paused\"\n}\n\nobject Alarm_Signal_Payload {\n  def empty(): Alarm_Signal_Payload = {\n    return Alarm_Signal_Payload(ICE_Types.Alarm_Signal.byOrdinal(0).get)\n  }\n}\n\n@datatype class Alarm_Signal_Payload(value: ICE_Types.Alarm_Signal.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -16,7 +16,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Alarm_Type.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Alarm_Type {\n  'Basal_Overinfusion\n  'Bolus_Overinfusion\n  'Square_Bolus_Overinfusion\n  'Air_In_Line\n  'Empty_Reservoir\n  'Pump_Overheated\n  'Downstream_Occlusion\n  'Upstream_Occlusion\n  'POST_Failure\n  'RAM_Failure\n  'ROM_Failure\n  'CPU_Failure\n  'Thread_Monitor_Failure\n  'Defective_Battery\n  'Low_Battery\n  'No_Alarm\n  'Priming_Failure\n}\n\nobject Alarm_Type_Payload {\n  def empty(): Alarm_Type_Payload = {\n    return Alarm_Type_Payload(PCA_Types.Alarm_Type.byOrdinal(0).get)\n  }\n}\n\n@datatype class Alarm_Type_Payload(value: PCA_Types.Alarm_Type.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Alarm_Type {\n  \"Basal_Overinfusion\"\n  \"Bolus_Overinfusion\"\n  \"Square_Bolus_Overinfusion\"\n  \"Air_In_Line\"\n  \"Empty_Reservoir\"\n  \"Pump_Overheated\"\n  \"Downstream_Occlusion\"\n  \"Upstream_Occlusion\"\n  \"POST_Failure\"\n  \"RAM_Failure\"\n  \"ROM_Failure\"\n  \"CPU_Failure\"\n  \"Thread_Monitor_Failure\"\n  \"Defective_Battery\"\n  \"Low_Battery\"\n  \"No_Alarm\"\n  \"Priming_Failure\"\n}\n\nobject Alarm_Type_Payload {\n  def empty(): Alarm_Type_Payload = {\n    return Alarm_Type_Payload(PCA_Types.Alarm_Type.byOrdinal(0).get)\n  }\n}\n\n@datatype class Alarm_Type_Payload(value: PCA_Types.Alarm_Type.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -25,7 +25,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Warning_Type.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Warning_Type {\n  'Voltage_OOR\n  'Over_Max_Drug_Per_Hour\n  'Basal_Underinfusion\n  'Bolus_Underinfusion\n  'Square_Bolus_Underinfusion\n  'Low_Reservoir\n  'Long_Pause\n  'Drug_Not_In_Library\n  'Soft_Limit\n  'Hard_Limit_Violated\n  'Priming_Failure\n  'Input_Needed\n  'No_Warning\n  'Low_Battery\n}\n\nobject Warning_Type_Payload {\n  def empty(): Warning_Type_Payload = {\n    return Warning_Type_Payload(PCA_Types.Warning_Type.byOrdinal(0).get)\n  }\n}\n\n@datatype class Warning_Type_Payload(value: PCA_Types.Warning_Type.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Warning_Type {\n  \"Voltage_OOR\"\n  \"Over_Max_Drug_Per_Hour\"\n  \"Basal_Underinfusion\"\n  \"Bolus_Underinfusion\"\n  \"Square_Bolus_Underinfusion\"\n  \"Low_Reservoir\"\n  \"Long_Pause\"\n  \"Drug_Not_In_Library\"\n  \"Soft_Limit\"\n  \"Hard_Limit_Violated\"\n  \"Priming_Failure\"\n  \"Input_Needed\"\n  \"No_Warning\"\n  \"Low_Battery\"\n}\n\nobject Warning_Type_Payload {\n  def empty(): Warning_Type_Payload = {\n    return Warning_Type_Payload(PCA_Types.Warning_Type.byOrdinal(0).get)\n  }\n}\n\n@datatype class Warning_Type_Payload(value: PCA_Types.Warning_Type.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -34,7 +34,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Status_Type.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Status_Type {\n  'Stopped\n  'Priming\n  'Paused\n  'Bolus\n  'Basal\n  'KVO\n  'Square_Bolus\n}\n\nobject Status_Type_Payload {\n  def empty(): Status_Type_Payload = {\n    return Status_Type_Payload(PCA_Types.Status_Type.byOrdinal(0).get)\n  }\n}\n\n@datatype class Status_Type_Payload(value: PCA_Types.Status_Type.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Status_Type {\n  \"Stopped\"\n  \"Priming\"\n  \"Paused\"\n  \"Bolus\"\n  \"Basal\"\n  \"KVO\"\n  \"Square_Bolus\"\n}\n\nobject Status_Type_Payload {\n  def empty(): Status_Type_Payload = {\n    return Status_Type_Payload(PCA_Types.Status_Type.byOrdinal(0).get)\n  }\n}\n\n@datatype class Status_Type_Payload(value: PCA_Types.Status_Type.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -223,7 +223,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Sound.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Sound {\n  'Silence\n  'Beep\n}\n\nobject Sound_Payload {\n  def empty(): Sound_Payload = {\n    return Sound_Payload(PCA_Types.Sound.byOrdinal(0).get)\n  }\n}\n\n@datatype class Sound_Payload(value: PCA_Types.Sound.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Sound {\n  \"Silence\"\n  \"Beep\"\n}\n\nobject Sound_Payload {\n  def empty(): Sound_Payload = {\n    return Sound_Payload(PCA_Types.Sound.byOrdinal(0).get)\n  }\n}\n\n@datatype class Sound_Payload(value: PCA_Types.Sound.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -268,7 +268,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Message.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Message {\n  'No_Message\n  'POST_fail\n  'Turn_Off\n  'If_Beep_Press_Stop_Button\n  'Scan_Badge\n  'Scan_Wristband\n  'Scan_Rx\n  'Clinician_Not_Authenticated\n  'Patient_Not_Authenticated\n  'Prescription_Not_Authenticated\n  'Hard_Limit_Violated\n  'Soft_Limit_Rejected\n  'Insert_Vial_and_Close_Door\n  'Press_start_to_begin_priming\n  'Press_stop_to_end_priming\n  'Priming_Failure\n  'Insert_Needle_Then_Press_Start\n  'Press_Stop_Again_To_End_Infusion_Press_Start_To_Resume_Infusion\n  'Drug_Not_In_Library\n  'Sound_Failure\n}\n\nobject Message_Payload {\n  def empty(): Message_Payload = {\n    return Message_Payload(PCA_Types.Message.byOrdinal(0).get)\n  }\n}\n\n@datatype class Message_Payload(value: PCA_Types.Message.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Message {\n  \"No_Message\"\n  \"POST_fail\"\n  \"Turn_Off\"\n  \"If_Beep_Press_Stop_Button\"\n  \"Scan_Badge\"\n  \"Scan_Wristband\"\n  \"Scan_Rx\"\n  \"Clinician_Not_Authenticated\"\n  \"Patient_Not_Authenticated\"\n  \"Prescription_Not_Authenticated\"\n  \"Hard_Limit_Violated\"\n  \"Soft_Limit_Rejected\"\n  \"Insert_Vial_and_Close_Door\"\n  \"Press_start_to_begin_priming\"\n  \"Press_stop_to_end_priming\"\n  \"Priming_Failure\"\n  \"Insert_Needle_Then_Press_Start\"\n  \"Press_Stop_Again_To_End_Infusion_Press_Start_To_Resume_Infusion\"\n  \"Drug_Not_In_Library\"\n  \"Sound_Failure\"\n}\n\nobject Message_Payload {\n  def empty(): Message_Payload = {\n    return Message_Payload(PCA_Types.Message.byOrdinal(0).get)\n  }\n}\n\n@datatype class Message_Payload(value: PCA_Types.Message.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }

@@ -34,7 +34,7 @@
         "uav_alt--JVM\/src\/main\/data\/uav_alt__JVM\/SW\/FlightPattern.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object FlightPattern {\n  'ZigZag\n  'StraightLine\n  'Perimeter\n}\n\nobject FlightPattern_Payload {\n  def empty(): FlightPattern_Payload = {\n    return FlightPattern_Payload(SW.FlightPattern.byOrdinal(0).get)\n  }\n}\n\n@datatype class FlightPattern_Payload(value: SW.FlightPattern.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object FlightPattern {\n  \"ZigZag\"\n  \"StraightLine\"\n  \"Perimeter\"\n}\n\nobject FlightPattern_Payload {\n  def empty(): FlightPattern_Payload = {\n    return FlightPattern_Payload(SW.FlightPattern.byOrdinal(0).get)\n  }\n}\n\n@datatype class FlightPattern_Payload(value: SW.FlightPattern.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }

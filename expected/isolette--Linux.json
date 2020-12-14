@@ -7,7 +7,7 @@
         "isolette--Linux\/src\/main\/data\/isolette__Linux\/Isolette_Environment\/Heat.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Environment\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Heat {\n  'Dummy_Head_Enum\n}\n\nobject Heat_Payload {\n  def empty(): Heat_Payload = {\n    return Heat_Payload(Isolette_Environment.Heat.byOrdinal(0).get)\n  }\n}\n\n@datatype class Heat_Payload(value: Isolette_Environment.Heat.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Environment\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Heat {\n  \"Dummy_Head_Enum\"\n}\n\nobject Heat_Payload {\n  def empty(): Heat_Payload = {\n    return Heat_Payload(Isolette_Environment.Heat.byOrdinal(0).get)\n  }\n}\n\n@datatype class Heat_Payload(value: Isolette_Environment.Heat.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -16,7 +16,7 @@
         "isolette--Linux\/src\/main\/data\/isolette__Linux\/Isolette_Environment\/Interface_Interaction.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Environment\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Interface_Interaction {\n  'Dummy_Interface_Interaction_Enum\n}\n\nobject Interface_Interaction_Payload {\n  def empty(): Interface_Interaction_Payload = {\n    return Interface_Interaction_Payload(Isolette_Environment.Interface_Interaction.byOrdinal(0).get)\n  }\n}\n\n@datatype class Interface_Interaction_Payload(value: Isolette_Environment.Interface_Interaction.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Environment\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Interface_Interaction {\n  \"Dummy_Interface_Interaction_Enum\"\n}\n\nobject Interface_Interaction_Payload {\n  def empty(): Interface_Interaction_Payload = {\n    return Interface_Interaction_Payload(Isolette_Environment.Interface_Interaction.byOrdinal(0).get)\n  }\n}\n\n@datatype class Interface_Interaction_Payload(value: Isolette_Environment.Interface_Interaction.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -34,7 +34,7 @@
         "isolette--Linux\/src\/main\/data\/isolette__Linux\/Isolette_Data_Model\/ValueStatus.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object ValueStatus {\n  'Valid\n  'Invalid\n}\n\nobject ValueStatus_Payload {\n  def empty(): ValueStatus_Payload = {\n    return ValueStatus_Payload(Isolette_Data_Model.ValueStatus.byOrdinal(0).get)\n  }\n}\n\n@datatype class ValueStatus_Payload(value: Isolette_Data_Model.ValueStatus.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object ValueStatus {\n  \"Valid\"\n  \"Invalid\"\n}\n\nobject ValueStatus_Payload {\n  def empty(): ValueStatus_Payload = {\n    return ValueStatus_Payload(Isolette_Data_Model.ValueStatus.byOrdinal(0).get)\n  }\n}\n\n@datatype class ValueStatus_Payload(value: Isolette_Data_Model.ValueStatus.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -52,7 +52,7 @@
         "isolette--Linux\/src\/main\/data\/isolette__Linux\/Isolette_Data_Model\/On_Off.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object On_Off {\n  'Onn\n  'Off\n}\n\nobject On_Off_Payload {\n  def empty(): On_Off_Payload = {\n    return On_Off_Payload(Isolette_Data_Model.On_Off.byOrdinal(0).get)\n  }\n}\n\n@datatype class On_Off_Payload(value: Isolette_Data_Model.On_Off.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object On_Off {\n  \"Onn\"\n  \"Off\"\n}\n\nobject On_Off_Payload {\n  def empty(): On_Off_Payload = {\n    return On_Off_Payload(Isolette_Data_Model.On_Off.byOrdinal(0).get)\n  }\n}\n\n@datatype class On_Off_Payload(value: Isolette_Data_Model.On_Off.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -61,7 +61,7 @@
         "isolette--Linux\/src\/main\/data\/isolette__Linux\/Isolette_Data_Model\/Status.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Status {\n  'Init_Status\n  'On_Status\n  'Failed_Status\n}\n\nobject Status_Payload {\n  def empty(): Status_Payload = {\n    return Status_Payload(Isolette_Data_Model.Status.byOrdinal(0).get)\n  }\n}\n\n@datatype class Status_Payload(value: Isolette_Data_Model.Status.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Status {\n  \"Init_Status\"\n  \"On_Status\"\n  \"Failed_Status\"\n}\n\nobject Status_Payload {\n  def empty(): Status_Payload = {\n    return Status_Payload(Isolette_Data_Model.Status.byOrdinal(0).get)\n  }\n}\n\n@datatype class Status_Payload(value: Isolette_Data_Model.Status.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -79,7 +79,7 @@
         "isolette--Linux\/src\/main\/data\/isolette__Linux\/Isolette_Data_Model\/Regulator_Mode.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Regulator_Mode {\n  'Init_Regulator_Mode\n  'Normal_Regulator_Mode\n  'Failed_Regulator_Mode\n}\n\nobject Regulator_Mode_Payload {\n  def empty(): Regulator_Mode_Payload = {\n    return Regulator_Mode_Payload(Isolette_Data_Model.Regulator_Mode.byOrdinal(0).get)\n  }\n}\n\n@datatype class Regulator_Mode_Payload(value: Isolette_Data_Model.Regulator_Mode.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Regulator_Mode {\n  \"Init_Regulator_Mode\"\n  \"Normal_Regulator_Mode\"\n  \"Failed_Regulator_Mode\"\n}\n\nobject Regulator_Mode_Payload {\n  def empty(): Regulator_Mode_Payload = {\n    return Regulator_Mode_Payload(Isolette_Data_Model.Regulator_Mode.byOrdinal(0).get)\n  }\n}\n\n@datatype class Regulator_Mode_Payload(value: Isolette_Data_Model.Regulator_Mode.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -97,7 +97,7 @@
         "isolette--Linux\/src\/main\/data\/isolette__Linux\/Isolette_Data_Model\/Monitor_Mode.scala",
         {
           "type" : "TestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Monitor_Mode {\n  'Init_Monitor_Mode\n  'Normal_Monitor_Mode\n  'Failed_Monitor_Mode\n}\n\nobject Monitor_Mode_Payload {\n  def empty(): Monitor_Mode_Payload = {\n    return Monitor_Mode_Payload(Isolette_Data_Model.Monitor_Mode.byOrdinal(0).get)\n  }\n}\n\n@datatype class Monitor_Mode_Payload(value: Isolette_Data_Model.Monitor_Mode.Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__Linux.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__Linux._\n\n\/\/ This file was auto-generated.  Do not edit\n\n@enum object Monitor_Mode {\n  \"Init_Monitor_Mode\"\n  \"Normal_Monitor_Mode\"\n  \"Failed_Monitor_Mode\"\n}\n\nobject Monitor_Mode_Payload {\n  def empty(): Monitor_Mode_Payload = {\n    return Monitor_Mode_Payload(Isolette_Data_Model.Monitor_Mode.byOrdinal(0).get)\n  }\n}\n\n@datatype class Monitor_Mode_Payload(value: Isolette_Data_Model.Monitor_Mode.Type) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
