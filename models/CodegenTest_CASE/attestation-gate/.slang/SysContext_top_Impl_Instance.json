@@ -106,7 +106,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -147,7 +147,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -188,7 +188,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.2"
             }
           ],
           "subComponents" : [
@@ -265,7 +265,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -306,7 +306,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -347,7 +347,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -527,20 +527,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -692,7 +681,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -842,7 +831,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -992,7 +981,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.2"
             }
           ],
           "connectionInstances" : [
@@ -1101,20 +1090,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -1189,7 +1167,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -1230,7 +1208,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -1271,7 +1249,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.2"
             },
             {
               "type" : "FeatureEnd",
@@ -1312,7 +1290,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.3"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.3"
             }
           ],
           "subComponents" : [
@@ -1389,7 +1367,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1430,7 +1408,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1471,7 +1449,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1512,7 +1490,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
                 }
               ],
               "subComponents" : [
@@ -1769,20 +1747,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -1934,7 +1901,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2084,7 +2051,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2234,7 +2201,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2384,7 +2351,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -2493,20 +2460,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -2581,7 +2537,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -2622,7 +2578,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -2663,7 +2619,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.2"
             },
             {
               "type" : "FeatureEnd",
@@ -2704,7 +2660,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.3"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.3"
             },
             {
               "type" : "FeatureEnd",
@@ -2745,7 +2701,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.4"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.4"
             },
             {
               "type" : "FeatureEnd",
@@ -2786,7 +2742,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.5"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.5"
             },
             {
               "type" : "FeatureEnd",
@@ -2827,7 +2783,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.6"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.6"
             }
           ],
           "subComponents" : [
@@ -2904,7 +2860,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2945,7 +2901,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2986,7 +2942,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -3027,7 +2983,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -3068,7 +3024,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -3109,7 +3065,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.5"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -3150,7 +3106,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.6"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.6"
                 }
               ],
               "subComponents" : [
@@ -3438,20 +3394,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -3603,7 +3548,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -3753,7 +3698,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -3903,7 +3848,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -4053,7 +3998,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -4203,7 +4148,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4353,7 +4298,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4503,7 +4448,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -4612,20 +4557,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.2"
         },
         {
           "type" : "Component",
@@ -4836,20 +4770,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.3"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@componentInstance.3"
         }
       ],
       "connections" : [
@@ -5001,7 +4924,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -5151,7 +5074,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -5301,7 +5224,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -5451,7 +5374,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -5601,7 +5524,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -5751,7 +5674,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -5901,7 +5824,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.1"
         }
       ],
       "connectionInstances" : [
@@ -7955,20 +7878,9 @@
             "properties" : [
             ]
           }
-        },
-        {
-          "type" : "Annex",
-          "name" : "smf",
-          "clause" : {
-            "type" : "SmfClause",
-            "classification" : [
-            ],
-            "declass" : [
-            ]
-          }
         }
       ],
-      "uriFrag" : "AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/AttestationGate\/instances\/SysContext_top_Impl_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [
@@ -9340,7 +9252,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array"
         },
         {
           "type" : "Component",
@@ -9487,7 +9399,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array"
         }
       ],
       "connections" : [
@@ -11034,7 +10946,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.AltitudeType.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.AltitudeType.i"
         }
       ],
       "connections" : [
@@ -12192,7 +12104,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array.i"
         },
         {
           "type" : "Component",
@@ -12456,7 +12368,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.KeyValuePairArray.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.KeyValuePairArray.i"
         },
         {
           "type" : "Component",
@@ -12853,7 +12765,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.WavelengthBand"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.WavelengthBand"
         },
         {
           "type" : "Component",
@@ -13234,7 +13146,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.PointListArray"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.PointListArray"
         },
         {
           "type" : "Component",
@@ -13381,7 +13293,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.WedgeArray"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.WedgeArray"
         },
         {
           "type" : "Component",
@@ -13859,7 +13771,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Address.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Address.i"
         }
       ],
       "connections" : [
@@ -14079,7 +13991,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array"
         }
       ],
       "connections" : [
@@ -15043,7 +14955,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.AltitudeType.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.AltitudeType.i"
         },
         {
           "type" : "Component",
@@ -15511,7 +15423,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.SpeedType.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.SpeedType.i"
         },
         {
           "type" : "Component",
@@ -15745,7 +15657,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.TurnType.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.TurnType.i"
         },
         {
           "type" : "Component",
@@ -15892,7 +15804,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.VehicleActionArray"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.VehicleActionArray"
         },
         {
           "type" : "Component",
@@ -16273,7 +16185,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array"
         }
       ],
       "connections" : [
@@ -16826,7 +16738,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.VehicleActionArray"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.VehicleActionArray"
         },
         {
           "type" : "Component",
@@ -16955,7 +16867,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.CommandStatusType.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.CommandStatusType.i"
         },
         {
           "type" : "Component",
@@ -17102,7 +17014,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.WaypointArray"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.WaypointArray"
         },
         {
           "type" : "Component",
@@ -17838,7 +17750,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.VehicleActionArray"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.VehicleActionArray"
         },
         {
           "type" : "Component",
@@ -17967,7 +17879,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.CommandStatusType.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.CommandStatusType.i"
         }
       ],
       "connections" : [
@@ -18286,7 +18198,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.MissionCommandArray"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.MissionCommandArray"
         },
         {
           "type" : "Component",
@@ -18433,7 +18345,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.VehicleActionCommandArray"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.VehicleActionCommandArray"
         }
       ],
       "connections" : [
@@ -19224,7 +19136,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.AutomationRequest.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.AutomationRequest.i"
         },
         {
           "type" : "Component",
@@ -19524,7 +19436,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array"
             },
             {
               "type" : "Component",
@@ -19671,7 +19583,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array"
             }
           ],
           "connections" : [
@@ -19721,7 +19633,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.OperatingRegion.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.OperatingRegion.i"
         },
         {
           "type" : "Component",
@@ -20103,7 +20015,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array.i"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array.i"
             },
             {
               "type" : "Component",
@@ -20367,7 +20279,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.KeyValuePairArray.i"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.KeyValuePairArray.i"
             },
             {
               "type" : "Component",
@@ -20764,7 +20676,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.WavelengthBand"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.WavelengthBand"
             },
             {
               "type" : "Component",
@@ -21145,7 +21057,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.PointListArray"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.PointListArray"
             },
             {
               "type" : "Component",
@@ -21292,7 +21204,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.WedgeArray"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.WedgeArray"
             },
             {
               "type" : "Component",
@@ -21424,7 +21336,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.LineSearchTask.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.LineSearchTask.i"
         },
         {
           "type" : "Component",
@@ -21607,7 +21519,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.MissionCommandArray"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.MissionCommandArray"
             },
             {
               "type" : "Component",
@@ -21754,7 +21666,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.VehicleActionCommandArray"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.VehicleActionCommandArray"
             }
           ],
           "connections" : [
@@ -21804,7 +21716,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.AutomationResponse.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.AutomationResponse.i"
         }
       ],
       "connections" : [
@@ -22041,7 +21953,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Address.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Address.i"
         },
         {
           "type" : "Component",
@@ -22795,7 +22707,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.AutomationRequest.i"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.AutomationRequest.i"
             },
             {
               "type" : "Component",
@@ -23095,7 +23007,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array"
                 },
                 {
                   "type" : "Component",
@@ -23242,7 +23154,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array"
                 }
               ],
               "connections" : [
@@ -23292,7 +23204,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.OperatingRegion.i"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.OperatingRegion.i"
             },
             {
               "type" : "Component",
@@ -23674,7 +23586,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.Int64Array.i"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.Int64Array.i"
                 },
                 {
                   "type" : "Component",
@@ -23938,7 +23850,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.KeyValuePairArray.i"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.KeyValuePairArray.i"
                 },
                 {
                   "type" : "Component",
@@ -24335,7 +24247,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.WavelengthBand"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.WavelengthBand"
                 },
                 {
                   "type" : "Component",
@@ -24716,7 +24628,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.PointListArray"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.PointListArray"
                 },
                 {
                   "type" : "Component",
@@ -24863,7 +24775,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.WedgeArray"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.WedgeArray"
                 },
                 {
                   "type" : "Component",
@@ -24995,7 +24907,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.LineSearchTask.i"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.LineSearchTask.i"
             },
             {
               "type" : "Component",
@@ -25178,7 +25090,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.MissionCommandArray"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.MissionCommandArray"
                 },
                 {
                   "type" : "Component",
@@ -25325,7 +25237,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.VehicleActionCommandArray"
+                  "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.VehicleActionCommandArray"
                 }
               ],
               "connections" : [
@@ -25375,7 +25287,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.AutomationResponse.i"
+              "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.AutomationResponse.i"
             }
           ],
           "connections" : [
@@ -25421,7 +25333,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "AttestationGate\/CMASI.aadl#CMASI.LMCPObject.i"
+          "uriFrag" : "platform:\/resource\/AttestationGate\/CMASI.aadl#CMASI.LMCPObject.i"
         }
       ],
       "connections" : [

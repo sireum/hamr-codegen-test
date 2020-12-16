@@ -12,7 +12,7 @@
             "type" : "Position",
             "uriOpt" : {
               "type" : "Some",
-              "value" : "\/wms\/wbs.aadl"
+              "value" : "\/wms\/packages\/wbs.aadl"
             },
             "beginLine" : 44,
             "beginColumn" : 2,
@@ -44,7 +44,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 48,
                 "beginColumn" : 4,
@@ -78,7 +78,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 87,
                     "beginColumn" : 4,
@@ -106,7 +106,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -119,7 +119,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 88,
                     "beginColumn" : 4,
@@ -147,7 +147,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -160,7 +160,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 90,
                     "beginColumn" : 4,
@@ -188,7 +188,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.2"
             },
             {
               "type" : "FeatureEnd",
@@ -201,7 +201,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 91,
                     "beginColumn" : 4,
@@ -229,7 +229,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.3"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.3"
             }
           ],
           "subComponents" : [
@@ -244,7 +244,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 96,
                     "beginColumn" : 4,
@@ -278,7 +278,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 106,
                         "beginColumn" : 4,
@@ -306,7 +306,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -319,7 +319,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 107,
                         "beginColumn" : 4,
@@ -347,7 +347,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -360,7 +360,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 109,
                         "beginColumn" : 4,
@@ -388,7 +388,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -401,7 +401,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 110,
                         "beginColumn" : 4,
@@ -429,7 +429,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
                 }
               ],
               "subComponents" : [
@@ -487,7 +487,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/CASE_Properties.aadl"
+                          "value" : "\/wms\/packages\/CASE_Properties.aadl"
                         },
                         "beginLine" : 4,
                         "beginColumn" : 2,
@@ -686,20 +686,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -714,7 +703,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 100,
                     "beginColumn" : 4,
@@ -737,7 +726,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 96,
                         "beginColumn" : 4,
@@ -759,7 +748,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 109,
                           "beginColumn" : 4,
@@ -792,7 +781,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 48,
                         "beginColumn" : 4,
@@ -814,7 +803,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 90,
                           "beginColumn" : 4,
@@ -851,7 +840,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -864,7 +853,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 101,
                     "beginColumn" : 4,
@@ -887,7 +876,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 96,
                         "beginColumn" : 4,
@@ -909,7 +898,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 110,
                           "beginColumn" : 4,
@@ -942,7 +931,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 48,
                         "beginColumn" : 4,
@@ -964,7 +953,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 91,
                           "beginColumn" : 4,
@@ -1001,7 +990,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1014,7 +1003,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 98,
                     "beginColumn" : 4,
@@ -1037,7 +1026,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 48,
                         "beginColumn" : 4,
@@ -1059,7 +1048,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 87,
                           "beginColumn" : 4,
@@ -1092,7 +1081,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 96,
                         "beginColumn" : 4,
@@ -1114,7 +1103,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 106,
                           "beginColumn" : 4,
@@ -1151,7 +1140,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -1164,7 +1153,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 99,
                     "beginColumn" : 4,
@@ -1187,7 +1176,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 48,
                         "beginColumn" : 4,
@@ -1209,7 +1198,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 88,
                           "beginColumn" : 4,
@@ -1242,7 +1231,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 96,
                         "beginColumn" : 4,
@@ -1264,7 +1253,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 107,
                           "beginColumn" : 4,
@@ -1301,7 +1290,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.2"
             }
           ],
           "connectionInstances" : [
@@ -1410,20 +1399,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -1436,7 +1414,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 51,
                 "beginColumn" : 4,
@@ -1470,7 +1448,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 121,
                     "beginColumn" : 4,
@@ -1498,7 +1476,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -1511,7 +1489,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 123,
                     "beginColumn" : 4,
@@ -1539,7 +1517,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
             }
           ],
           "subComponents" : [
@@ -1554,7 +1532,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 128,
                     "beginColumn" : 4,
@@ -1588,7 +1566,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 136,
                         "beginColumn" : 4,
@@ -1616,7 +1594,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1629,7 +1607,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 138,
                         "beginColumn" : 4,
@@ -1657,7 +1635,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -1883,20 +1861,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -1911,7 +1878,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 130,
                     "beginColumn" : 4,
@@ -1934,7 +1901,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 51,
                         "beginColumn" : 4,
@@ -1956,7 +1923,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 121,
                           "beginColumn" : 4,
@@ -1989,7 +1956,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 128,
                         "beginColumn" : 4,
@@ -2011,7 +1978,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 136,
                           "beginColumn" : 4,
@@ -2048,7 +2015,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -2061,7 +2028,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 131,
                     "beginColumn" : 4,
@@ -2084,7 +2051,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 128,
                         "beginColumn" : 4,
@@ -2106,7 +2073,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 138,
                           "beginColumn" : 4,
@@ -2139,7 +2106,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 51,
                         "beginColumn" : 4,
@@ -2161,7 +2128,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 123,
                           "beginColumn" : 4,
@@ -2198,7 +2165,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -2307,20 +2274,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -2333,7 +2289,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 54,
                 "beginColumn" : 4,
@@ -2367,7 +2323,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 121,
                     "beginColumn" : 4,
@@ -2395,7 +2351,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -2408,7 +2364,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 123,
                     "beginColumn" : 4,
@@ -2436,7 +2392,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.1"
             }
           ],
           "subComponents" : [
@@ -2451,7 +2407,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 128,
                     "beginColumn" : 4,
@@ -2485,7 +2441,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 136,
                         "beginColumn" : 4,
@@ -2513,7 +2469,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2526,7 +2482,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 138,
                         "beginColumn" : 4,
@@ -2554,7 +2510,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -2780,20 +2736,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -2808,7 +2753,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 130,
                     "beginColumn" : 4,
@@ -2831,7 +2776,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 54,
                         "beginColumn" : 4,
@@ -2853,7 +2798,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 121,
                           "beginColumn" : 4,
@@ -2886,7 +2831,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 128,
                         "beginColumn" : 4,
@@ -2908,7 +2853,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 136,
                           "beginColumn" : 4,
@@ -2945,7 +2890,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -2958,7 +2903,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 131,
                     "beginColumn" : 4,
@@ -2981,7 +2926,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 128,
                         "beginColumn" : 4,
@@ -3003,7 +2948,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 138,
                           "beginColumn" : 4,
@@ -3036,7 +2981,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/wms\/wbs.aadl"
+                          "value" : "\/wms\/packages\/wbs.aadl"
                         },
                         "beginLine" : 54,
                         "beginColumn" : 4,
@@ -3058,7 +3003,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/wms\/wbs.aadl"
+                            "value" : "\/wms\/packages\/wbs.aadl"
                           },
                           "beginLine" : 123,
                           "beginColumn" : 4,
@@ -3095,7 +3040,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -3204,20 +3149,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2"
+          "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.2"
         },
         {
           "type" : "Component",
@@ -3230,7 +3164,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 46,
                 "beginColumn" : 4,
@@ -3397,20 +3331,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.3"
+          "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@componentInstance.3"
         }
       ],
       "connections" : [
@@ -3425,7 +3348,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 61,
                 "beginColumn" : 4,
@@ -3448,7 +3371,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 48,
                     "beginColumn" : 4,
@@ -3470,7 +3393,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/wms\/wbs.aadl"
+                        "value" : "\/wms\/packages\/wbs.aadl"
                       },
                       "beginLine" : 90,
                       "beginColumn" : 4,
@@ -3503,7 +3426,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 51,
                     "beginColumn" : 4,
@@ -3525,7 +3448,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/wms\/wbs.aadl"
+                        "value" : "\/wms\/packages\/wbs.aadl"
                       },
                       "beginLine" : 121,
                       "beginColumn" : 4,
@@ -3562,7 +3485,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -3575,7 +3498,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 62,
                 "beginColumn" : 4,
@@ -3598,7 +3521,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 48,
                     "beginColumn" : 4,
@@ -3620,7 +3543,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/wms\/wbs.aadl"
+                        "value" : "\/wms\/packages\/wbs.aadl"
                       },
                       "beginLine" : 91,
                       "beginColumn" : 4,
@@ -3653,7 +3576,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 54,
                     "beginColumn" : 4,
@@ -3675,7 +3598,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/wms\/wbs.aadl"
+                        "value" : "\/wms\/packages\/wbs.aadl"
                       },
                       "beginLine" : 121,
                       "beginColumn" : 4,
@@ -3712,7 +3635,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -3725,7 +3648,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 58,
                 "beginColumn" : 4,
@@ -3748,7 +3671,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 51,
                     "beginColumn" : 4,
@@ -3770,7 +3693,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/wms\/wbs.aadl"
+                        "value" : "\/wms\/packages\/wbs.aadl"
                       },
                       "beginLine" : 123,
                       "beginColumn" : 4,
@@ -3803,7 +3726,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 48,
                     "beginColumn" : 4,
@@ -3825,7 +3748,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/wms\/wbs.aadl"
+                        "value" : "\/wms\/packages\/wbs.aadl"
                       },
                       "beginLine" : 87,
                       "beginColumn" : 4,
@@ -3862,7 +3785,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -3875,7 +3798,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 59,
                 "beginColumn" : 4,
@@ -3898,7 +3821,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 54,
                     "beginColumn" : 4,
@@ -3920,7 +3843,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/wms\/wbs.aadl"
+                        "value" : "\/wms\/packages\/wbs.aadl"
                       },
                       "beginLine" : 123,
                       "beginColumn" : 4,
@@ -3953,7 +3876,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 48,
                     "beginColumn" : 4,
@@ -3975,7 +3898,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/wms\/wbs.aadl"
+                        "value" : "\/wms\/packages\/wbs.aadl"
                       },
                       "beginLine" : 88,
                       "beginColumn" : 4,
@@ -4012,7 +3935,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.1"
         }
       ],
       "connectionInstances" : [
@@ -4027,7 +3950,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 100,
                 "beginColumn" : 4,
@@ -4049,7 +3972,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/wms\/wbs.aadl"
+                    "value" : "\/wms\/packages\/wbs.aadl"
                   },
                   "beginLine" : 96,
                   "beginColumn" : 4,
@@ -4071,7 +3994,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 109,
                     "beginColumn" : 4,
@@ -4102,7 +4025,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/wms\/wbs.aadl"
+                    "value" : "\/wms\/packages\/wbs.aadl"
                   },
                   "beginLine" : 128,
                   "beginColumn" : 4,
@@ -4124,7 +4047,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 136,
                     "beginColumn" : 4,
@@ -4160,7 +4083,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 100,
                     "beginColumn" : 4,
@@ -4180,7 +4103,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 48,
                     "beginColumn" : 4,
@@ -4204,7 +4127,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 61,
                     "beginColumn" : 4,
@@ -4224,7 +4147,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 44,
                     "beginColumn" : 2,
@@ -4248,7 +4171,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 130,
                     "beginColumn" : 4,
@@ -4268,7 +4191,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 51,
                     "beginColumn" : 4,
@@ -4296,7 +4219,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 101,
                 "beginColumn" : 4,
@@ -4318,7 +4241,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/wms\/wbs.aadl"
+                    "value" : "\/wms\/packages\/wbs.aadl"
                   },
                   "beginLine" : 96,
                   "beginColumn" : 4,
@@ -4340,7 +4263,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 110,
                     "beginColumn" : 4,
@@ -4371,7 +4294,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/wms\/wbs.aadl"
+                    "value" : "\/wms\/packages\/wbs.aadl"
                   },
                   "beginLine" : 128,
                   "beginColumn" : 4,
@@ -4393,7 +4316,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 136,
                     "beginColumn" : 4,
@@ -4429,7 +4352,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 101,
                     "beginColumn" : 4,
@@ -4449,7 +4372,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 48,
                     "beginColumn" : 4,
@@ -4473,7 +4396,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 62,
                     "beginColumn" : 4,
@@ -4493,7 +4416,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 44,
                     "beginColumn" : 2,
@@ -4517,7 +4440,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 130,
                     "beginColumn" : 4,
@@ -4537,7 +4460,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 54,
                     "beginColumn" : 4,
@@ -4565,7 +4488,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 131,
                 "beginColumn" : 4,
@@ -4587,7 +4510,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/wms\/wbs.aadl"
+                    "value" : "\/wms\/packages\/wbs.aadl"
                   },
                   "beginLine" : 128,
                   "beginColumn" : 4,
@@ -4609,7 +4532,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 138,
                     "beginColumn" : 4,
@@ -4640,7 +4563,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/wms\/wbs.aadl"
+                    "value" : "\/wms\/packages\/wbs.aadl"
                   },
                   "beginLine" : 96,
                   "beginColumn" : 4,
@@ -4662,7 +4585,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 106,
                     "beginColumn" : 4,
@@ -4698,7 +4621,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 131,
                     "beginColumn" : 4,
@@ -4718,7 +4641,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 51,
                     "beginColumn" : 4,
@@ -4742,7 +4665,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 58,
                     "beginColumn" : 4,
@@ -4762,7 +4685,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 44,
                     "beginColumn" : 2,
@@ -4786,7 +4709,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 98,
                     "beginColumn" : 4,
@@ -4806,7 +4729,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 48,
                     "beginColumn" : 4,
@@ -4834,7 +4757,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 131,
                 "beginColumn" : 4,
@@ -4856,7 +4779,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/wms\/wbs.aadl"
+                    "value" : "\/wms\/packages\/wbs.aadl"
                   },
                   "beginLine" : 128,
                   "beginColumn" : 4,
@@ -4878,7 +4801,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 138,
                     "beginColumn" : 4,
@@ -4909,7 +4832,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/wms\/wbs.aadl"
+                    "value" : "\/wms\/packages\/wbs.aadl"
                   },
                   "beginLine" : 96,
                   "beginColumn" : 4,
@@ -4931,7 +4854,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 107,
                     "beginColumn" : 4,
@@ -4967,7 +4890,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 131,
                     "beginColumn" : 4,
@@ -4987,7 +4910,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 54,
                     "beginColumn" : 4,
@@ -5011,7 +4934,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 59,
                     "beginColumn" : 4,
@@ -5031,7 +4954,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 44,
                     "beginColumn" : 2,
@@ -5055,7 +4978,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 99,
                     "beginColumn" : 4,
@@ -5075,7 +4998,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/wms\/wbs.aadl"
+                      "value" : "\/wms\/packages\/wbs.aadl"
                     },
                     "beginLine" : 48,
                     "beginColumn" : 4,
@@ -5298,20 +5221,9 @@
             "properties" : [
             ]
           }
-        },
-        {
-          "type" : "Annex",
-          "name" : "smf",
-          "clause" : {
-            "type" : "SmfClause",
-            "classification" : [
-            ],
-            "declass" : [
-            ]
-          }
         }
       ],
-      "uriFrag" : "wms\/instances\/wbs_wms_impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/wms\/packages\/instances\/wbs_wms_impl_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [
@@ -5455,7 +5367,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 14,
                 "beginColumn" : 4,
@@ -5714,7 +5626,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/wms\/wbs.aadl"
+                  "value" : "\/wms\/packages\/wbs.aadl"
                 },
                 "beginLine" : 24,
                 "beginColumn" : 4,

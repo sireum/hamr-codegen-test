@@ -276,20 +276,9 @@
                         "properties" : [
                         ]
                       }
-                    },
-                    {
-                      "type" : "Annex",
-                      "name" : "smf",
-                      "clause" : {
-                        "type" : "SmfClause",
-                        "classification" : [
-                        ],
-                        "declass" : [
-                        ]
-                      }
                     }
                   ],
-                  "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0"
                 },
                 {
                   "type" : "Component",
@@ -462,20 +451,9 @@
                         "properties" : [
                         ]
                       }
-                    },
-                    {
-                      "type" : "Annex",
-                      "name" : "smf",
-                      "clause" : {
-                        "type" : "SmfClause",
-                        "classification" : [
-                        ],
-                        "declass" : [
-                        ]
-                      }
                     }
                   ],
-                  "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.1"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.1"
                 },
                 {
                   "type" : "Component",
@@ -648,20 +626,9 @@
                         "properties" : [
                         ]
                       }
-                    },
-                    {
-                      "type" : "Annex",
-                      "name" : "smf",
-                      "clause" : {
-                        "type" : "SmfClause",
-                        "classification" : [
-                        ],
-                        "declass" : [
-                        ]
-                      }
                     }
                   ],
-                  "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.2"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.2"
                 },
                 {
                   "type" : "Component",
@@ -834,20 +801,9 @@
                         "properties" : [
                         ]
                       }
-                    },
-                    {
-                      "type" : "Annex",
-                      "name" : "smf",
-                      "clause" : {
-                        "type" : "SmfClause",
-                        "classification" : [
-                        ],
-                        "declass" : [
-                        ]
-                      }
                     }
                   ],
-                  "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.3"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.3"
                 }
               ],
               "connections" : [
@@ -918,20 +874,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -1010,7 +955,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1182,20 +1127,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -1274,7 +1208,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1446,20 +1380,9 @@
                     "properties" : [
                     ]
                   }
-                },
-                {
-                  "type" : "Annex",
-                  "name" : "smf",
-                  "clause" : {
-                    "type" : "SmfClause",
-                    "classification" : [
-                    ],
-                    "declass" : [
-                    ]
-                  }
                 }
               ],
-              "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
             }
           ],
           "connections" : [
@@ -1590,7 +1513,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1719,7 +1642,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -2108,20 +2031,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -2197,20 +2109,9 @@
                 "properties" : [
                 ]
               }
-            },
-            {
-              "type" : "Annex",
-              "name" : "smf",
-              "clause" : {
-                "type" : "SmfClause",
-                "classification" : [
-                ],
-                "declass" : [
-                ]
-              }
             }
           ],
-          "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.1"
         }
       ],
       "connections" : [
@@ -2281,20 +2182,9 @@
             "properties" : [
             ]
           }
-        },
-        {
-          "type" : "Annex",
-          "name" : "smf",
-          "clause" : {
-            "type" : "SmfClause",
-            "classification" : [
-            ],
-            "declass" : [
-            ]
-          }
         }
       ],
-      "uriFrag" : "testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [
