@@ -20,7 +20,7 @@ trait CodeGenTest extends TestSuite {
 
   import CodeGenTest._
 
-  def generateExpected: B = T
+  def generateExpected: B = F
   def delResultDirIfEqual: B = F
 
   def testMode: TestModes.Type = TestModes.Base
