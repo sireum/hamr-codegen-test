@@ -26,7 +26,7 @@ trait CodeGenTest extends TestSuite {
   def testMode: TestModes.Type = TestModes.Base
   //def testMode: TestModes.Type = TestModes.Base_TranspileNix_Camkes
 
-  def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
+  def ignoreSbtAndMillBuildChanges: B = T // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("wms")
