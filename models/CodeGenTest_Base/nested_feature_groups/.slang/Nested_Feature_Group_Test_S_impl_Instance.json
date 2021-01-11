@@ -1,0 +1,2774 @@
+{
+  "type" : "Aadl",
+  "components" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["S_impl_Instance"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+            },
+            "beginLine" : 36,
+            "beginColumn" : 2,
+            "endLine" : 39,
+            "endColumn" : 13,
+            "offset" : 691,
+            "length" : 79
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "System"
+      },
+      "classifier" : {
+        "type" : "None"
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["S_impl_Instance", "p"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                },
+                "beginLine" : 38,
+                "beginColumn" : 4,
+                "endLine" : 38,
+                "endColumn" : 22,
+                "offset" : 739,
+                "length" : 18
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Nested_Feature_Group_Test::P.impl"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["S_impl_Instance", "p", "prod"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                    },
+                    "beginLine" : 46,
+                    "beginColumn" : 4,
+                    "endLine" : 46,
+                    "endColumn" : 31,
+                    "offset" : 842,
+                    "length" : 27
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Nested_Feature_Group_Test::Producer.impl"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureGroup",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod", "fg_A"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 55,
+                        "beginColumn" : 4,
+                        "endLine" : 55,
+                        "endColumn" : 29,
+                        "offset" : 1056,
+                        "length" : 25
+                      }
+                    }
+                  },
+                  "features" : [
+                    {
+                      "type" : "FeatureGroup",
+                      "identifier" : {
+                        "type" : "Name",
+                        "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                            },
+                            "beginLine" : 17,
+                            "beginColumn" : 4,
+                            "endLine" : 17,
+                            "endColumn" : 33,
+                            "offset" : 308,
+                            "length" : 29
+                          }
+                        }
+                      },
+                      "features" : [
+                        {
+                          "type" : "FeatureEnd",
+                          "identifier" : {
+                            "type" : "Name",
+                            "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param1"],
+                            "pos" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                                },
+                                "beginLine" : 23,
+                                "beginColumn" : 4,
+                                "endLine" : 23,
+                                "endColumn" : 55,
+                                "offset" : 417,
+                                "length" : 51
+                              }
+                            }
+                          },
+                          "direction" : {
+                            "type" : "Direction",
+                            "value" : "Out"
+                          },
+                          "category" : {
+                            "type" : "FeatureCategory",
+                            "value" : "EventDataPort"
+                          },
+                          "classifier" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Classifier",
+                              "name" : "Base_Types::Integer_32"
+                            }
+                          },
+                          "properties" : [
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param1", "Data_Model::Number_Representation"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                                    },
+                                    "beginLine" : 78,
+                                    "beginColumn" : 4,
+                                    "endLine" : 78,
+                                    "endColumn" : 88,
+                                    "offset" : 3653,
+                                    "length" : 84
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "ValueProp",
+                                  "value" : "Signed"
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            },
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param1", "Memory_Properties::Data_Size"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                                    },
+                                    "beginLine" : 92,
+                                    "beginColumn" : 2,
+                                    "endLine" : 93,
+                                    "endColumn" : 137,
+                                    "offset" : 4808,
+                                    "length" : 152
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "UnitProp",
+                                  "value" : "32.0",
+                                  "unit" : {
+                                    "type" : "Some",
+                                    "value" : "bits"
+                                  }
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            },
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param1", "Data_Model::Data_Representation"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                                    },
+                                    "beginLine" : 26,
+                                    "beginColumn" : 4,
+                                    "endLine" : 29,
+                                    "endColumn" : 36,
+                                    "offset" : 1108,
+                                    "length" : 162
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "ValueProp",
+                                  "value" : "Integer"
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            }
+                          ],
+                          "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0\/@featureInstance.0\/@featureInstance.0"
+                        },
+                        {
+                          "type" : "FeatureEnd",
+                          "identifier" : {
+                            "type" : "Name",
+                            "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param2"],
+                            "pos" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                                },
+                                "beginLine" : 24,
+                                "beginColumn" : 4,
+                                "endLine" : 24,
+                                "endColumn" : 55,
+                                "offset" : 472,
+                                "length" : 51
+                              }
+                            }
+                          },
+                          "direction" : {
+                            "type" : "Direction",
+                            "value" : "Out"
+                          },
+                          "category" : {
+                            "type" : "FeatureCategory",
+                            "value" : "EventDataPort"
+                          },
+                          "classifier" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Classifier",
+                              "name" : "Base_Types::Integer_32"
+                            }
+                          },
+                          "properties" : [
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param2", "Data_Model::Number_Representation"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                                    },
+                                    "beginLine" : 78,
+                                    "beginColumn" : 4,
+                                    "endLine" : 78,
+                                    "endColumn" : 88,
+                                    "offset" : 3653,
+                                    "length" : 84
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "ValueProp",
+                                  "value" : "Signed"
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            },
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param2", "Memory_Properties::Data_Size"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                                    },
+                                    "beginLine" : 92,
+                                    "beginColumn" : 2,
+                                    "endLine" : 93,
+                                    "endColumn" : 137,
+                                    "offset" : 4808,
+                                    "length" : 152
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "UnitProp",
+                                  "value" : "32.0",
+                                  "unit" : {
+                                    "type" : "Some",
+                                    "value" : "bits"
+                                  }
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            },
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param2", "Data_Model::Data_Representation"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                                    },
+                                    "beginLine" : 26,
+                                    "beginColumn" : 4,
+                                    "endLine" : 29,
+                                    "endColumn" : 36,
+                                    "offset" : 1108,
+                                    "length" : 162
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "ValueProp",
+                                  "value" : "Integer"
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            }
+                          ],
+                          "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0\/@featureInstance.0\/@featureInstance.1"
+                        }
+                      ],
+                      "isInverse" : false,
+                      "category" : {
+                        "type" : "FeatureCategory",
+                        "value" : "FeatureGroup"
+                      },
+                      "properties" : [
+                      ],
+                      "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0\/@featureInstance.0"
+                    },
+                    {
+                      "type" : "FeatureGroup",
+                      "identifier" : {
+                        "type" : "Name",
+                        "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_C"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                            },
+                            "beginLine" : 18,
+                            "beginColumn" : 4,
+                            "endLine" : 18,
+                            "endColumn" : 33,
+                            "offset" : 341,
+                            "length" : 29
+                          }
+                        }
+                      },
+                      "features" : [
+                        {
+                          "type" : "FeatureEnd",
+                          "identifier" : {
+                            "type" : "Name",
+                            "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_C", "result"],
+                            "pos" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                                },
+                                "beginLine" : 29,
+                                "beginColumn" : 4,
+                                "endLine" : 29,
+                                "endColumn" : 44,
+                                "offset" : 570,
+                                "length" : 40
+                              }
+                            }
+                          },
+                          "direction" : {
+                            "type" : "Direction",
+                            "value" : "In"
+                          },
+                          "category" : {
+                            "type" : "FeatureCategory",
+                            "value" : "EventDataPort"
+                          },
+                          "classifier" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Classifier",
+                              "name" : "Nested_Feature_Group_Test::Results.impl"
+                            }
+                          },
+                          "properties" : [
+                          ],
+                          "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0\/@featureInstance.1\/@featureInstance.0"
+                        }
+                      ],
+                      "isInverse" : false,
+                      "category" : {
+                        "type" : "FeatureCategory",
+                        "value" : "FeatureGroup"
+                      },
+                      "properties" : [
+                      ],
+                      "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0\/@featureInstance.1"
+                    }
+                  ],
+                  "isInverse" : false,
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "FeatureGroup"
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 2,
+                        "endLine" : 14,
+                        "endColumn" : 50,
+                        "offset" : 527,
+                        "length" : 97
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 192,
+                        "beginColumn" : 2,
+                        "endLine" : 193,
+                        "endColumn" : 99,
+                        "offset" : 11626,
+                        "length" : 119
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["S_impl_Instance", "p", "calc"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 4,
+                    "endLine" : 47,
+                    "endColumn" : 33,
+                    "offset" : 873,
+                    "length" : 29
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Nested_Feature_Group_Test::Calculator.impl"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureGroup",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "calc", "fg_A"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 4,
+                        "endLine" : 67,
+                        "endColumn" : 40,
+                        "offset" : 1304,
+                        "length" : 36
+                      }
+                    }
+                  },
+                  "features" : [
+                    {
+                      "type" : "FeatureGroup",
+                      "identifier" : {
+                        "type" : "Name",
+                        "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                            },
+                            "beginLine" : 17,
+                            "beginColumn" : 4,
+                            "endLine" : 17,
+                            "endColumn" : 33,
+                            "offset" : 308,
+                            "length" : 29
+                          }
+                        }
+                      },
+                      "features" : [
+                        {
+                          "type" : "FeatureEnd",
+                          "identifier" : {
+                            "type" : "Name",
+                            "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param1"],
+                            "pos" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                                },
+                                "beginLine" : 23,
+                                "beginColumn" : 4,
+                                "endLine" : 23,
+                                "endColumn" : 55,
+                                "offset" : 417,
+                                "length" : 51
+                              }
+                            }
+                          },
+                          "direction" : {
+                            "type" : "Direction",
+                            "value" : "In"
+                          },
+                          "category" : {
+                            "type" : "FeatureCategory",
+                            "value" : "EventDataPort"
+                          },
+                          "classifier" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Classifier",
+                              "name" : "Base_Types::Integer_32"
+                            }
+                          },
+                          "properties" : [
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param1", "Data_Model::Number_Representation"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                                    },
+                                    "beginLine" : 78,
+                                    "beginColumn" : 4,
+                                    "endLine" : 78,
+                                    "endColumn" : 88,
+                                    "offset" : 3653,
+                                    "length" : 84
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "ValueProp",
+                                  "value" : "Signed"
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            },
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param1", "Memory_Properties::Data_Size"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                                    },
+                                    "beginLine" : 92,
+                                    "beginColumn" : 2,
+                                    "endLine" : 93,
+                                    "endColumn" : 137,
+                                    "offset" : 4808,
+                                    "length" : 152
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "UnitProp",
+                                  "value" : "32.0",
+                                  "unit" : {
+                                    "type" : "Some",
+                                    "value" : "bits"
+                                  }
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            },
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param1", "Data_Model::Data_Representation"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                                    },
+                                    "beginLine" : 26,
+                                    "beginColumn" : 4,
+                                    "endLine" : 29,
+                                    "endColumn" : 36,
+                                    "offset" : 1108,
+                                    "length" : 162
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "ValueProp",
+                                  "value" : "Integer"
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            }
+                          ],
+                          "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0\/@featureInstance.0\/@featureInstance.0"
+                        },
+                        {
+                          "type" : "FeatureEnd",
+                          "identifier" : {
+                            "type" : "Name",
+                            "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param2"],
+                            "pos" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                                },
+                                "beginLine" : 24,
+                                "beginColumn" : 4,
+                                "endLine" : 24,
+                                "endColumn" : 55,
+                                "offset" : 472,
+                                "length" : 51
+                              }
+                            }
+                          },
+                          "direction" : {
+                            "type" : "Direction",
+                            "value" : "In"
+                          },
+                          "category" : {
+                            "type" : "FeatureCategory",
+                            "value" : "EventDataPort"
+                          },
+                          "classifier" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Classifier",
+                              "name" : "Base_Types::Integer_32"
+                            }
+                          },
+                          "properties" : [
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param2", "Data_Model::Number_Representation"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                                    },
+                                    "beginLine" : 78,
+                                    "beginColumn" : 4,
+                                    "endLine" : 78,
+                                    "endColumn" : 88,
+                                    "offset" : 3653,
+                                    "length" : 84
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "ValueProp",
+                                  "value" : "Signed"
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            },
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param2", "Memory_Properties::Data_Size"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                                    },
+                                    "beginLine" : 92,
+                                    "beginColumn" : 2,
+                                    "endLine" : 93,
+                                    "endColumn" : 137,
+                                    "offset" : 4808,
+                                    "length" : 152
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "UnitProp",
+                                  "value" : "32.0",
+                                  "unit" : {
+                                    "type" : "Some",
+                                    "value" : "bits"
+                                  }
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            },
+                            {
+                              "type" : "Property",
+                              "name" : {
+                                "type" : "Name",
+                                "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param2", "Data_Model::Data_Representation"],
+                                "pos" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                                    },
+                                    "beginLine" : 26,
+                                    "beginColumn" : 4,
+                                    "endLine" : 29,
+                                    "endColumn" : 36,
+                                    "offset" : 1108,
+                                    "length" : 162
+                                  }
+                                }
+                              },
+                              "propertyValues" : [
+                                {
+                                  "type" : "ValueProp",
+                                  "value" : "Integer"
+                                }
+                              ],
+                              "appliesTo" : [
+                              ]
+                            }
+                          ],
+                          "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0\/@featureInstance.0\/@featureInstance.1"
+                        }
+                      ],
+                      "isInverse" : false,
+                      "category" : {
+                        "type" : "FeatureCategory",
+                        "value" : "FeatureGroup"
+                      },
+                      "properties" : [
+                      ],
+                      "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0\/@featureInstance.0"
+                    },
+                    {
+                      "type" : "FeatureGroup",
+                      "identifier" : {
+                        "type" : "Name",
+                        "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_C"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                            },
+                            "beginLine" : 18,
+                            "beginColumn" : 4,
+                            "endLine" : 18,
+                            "endColumn" : 33,
+                            "offset" : 341,
+                            "length" : 29
+                          }
+                        }
+                      },
+                      "features" : [
+                        {
+                          "type" : "FeatureEnd",
+                          "identifier" : {
+                            "type" : "Name",
+                            "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_C", "result"],
+                            "pos" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                                },
+                                "beginLine" : 29,
+                                "beginColumn" : 4,
+                                "endLine" : 29,
+                                "endColumn" : 44,
+                                "offset" : 570,
+                                "length" : 40
+                              }
+                            }
+                          },
+                          "direction" : {
+                            "type" : "Direction",
+                            "value" : "Out"
+                          },
+                          "category" : {
+                            "type" : "FeatureCategory",
+                            "value" : "EventDataPort"
+                          },
+                          "classifier" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Classifier",
+                              "name" : "Nested_Feature_Group_Test::Results.impl"
+                            }
+                          },
+                          "properties" : [
+                          ],
+                          "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0\/@featureInstance.1\/@featureInstance.0"
+                        }
+                      ],
+                      "isInverse" : false,
+                      "category" : {
+                        "type" : "FeatureCategory",
+                        "value" : "FeatureGroup"
+                      },
+                      "properties" : [
+                      ],
+                      "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0\/@featureInstance.1"
+                    }
+                  ],
+                  "isInverse" : true,
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "FeatureGroup"
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "calc", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 2,
+                        "endLine" : 14,
+                        "endColumn" : 50,
+                        "offset" : 527,
+                        "length" : 97
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["S_impl_Instance", "p", "c1-fg_A_nested_B_param1_fg_A_nested_B_param1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 4,
+                    "endLine" : 49,
+                    "endColumn" : 46,
+                    "offset" : 920,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 46,
+                        "beginColumn" : 4,
+                        "endLine" : 46,
+                        "endColumn" : 31,
+                        "offset" : 842,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["S_impl_Instance", "p", "prod", "fg_A_nested_B_param1"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                          },
+                          "beginLine" : 23,
+                          "beginColumn" : 4,
+                          "endLine" : 23,
+                          "endColumn" : 55,
+                          "offset" : 417,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "calc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 4,
+                        "endLine" : 47,
+                        "endColumn" : 33,
+                        "offset" : 873,
+                        "length" : 29
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["S_impl_Instance", "p", "calc", "fg_A_nested_B_param1"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                          },
+                          "beginLine" : 23,
+                          "beginColumn" : 4,
+                          "endLine" : 23,
+                          "endColumn" : 55,
+                          "offset" : 417,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "FeatureGroup"
+              },
+              "isBiDirectional" : true,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param1 -> calc", "fg_A", "nested_B", "param1"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                },
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param2 -> calc", "fg_A", "nested_B", "param2"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                },
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_C", "result -> prod", "fg_A", "nested_C", "result"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["S_impl_Instance", "p", "c1-fg_A_nested_B_param2_fg_A_nested_B_param2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 4,
+                    "endLine" : 49,
+                    "endColumn" : 46,
+                    "offset" : 920,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 46,
+                        "beginColumn" : 4,
+                        "endLine" : 46,
+                        "endColumn" : 31,
+                        "offset" : 842,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["S_impl_Instance", "p", "prod", "fg_A_nested_B_param2"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                          },
+                          "beginLine" : 24,
+                          "beginColumn" : 4,
+                          "endLine" : 24,
+                          "endColumn" : 55,
+                          "offset" : 472,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "calc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 4,
+                        "endLine" : 47,
+                        "endColumn" : 33,
+                        "offset" : 873,
+                        "length" : 29
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["S_impl_Instance", "p", "calc", "fg_A_nested_B_param2"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                          },
+                          "beginLine" : 24,
+                          "beginColumn" : 4,
+                          "endLine" : 24,
+                          "endColumn" : 55,
+                          "offset" : 472,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "FeatureGroup"
+              },
+              "isBiDirectional" : true,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param1 -> calc", "fg_A", "nested_B", "param1"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                },
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param2 -> calc", "fg_A", "nested_B", "param2"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                },
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_C", "result -> prod", "fg_A", "nested_C", "result"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["S_impl_Instance", "p", "c1-fg_A_nested_C_result_fg_A_nested_C_result"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 4,
+                    "endLine" : 49,
+                    "endColumn" : 46,
+                    "offset" : 920,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "calc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 4,
+                        "endLine" : 47,
+                        "endColumn" : 33,
+                        "offset" : 873,
+                        "length" : 29
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["S_impl_Instance", "p", "calc", "fg_A_nested_C_result"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                          },
+                          "beginLine" : 29,
+                          "beginColumn" : 4,
+                          "endLine" : 29,
+                          "endColumn" : 44,
+                          "offset" : 570,
+                          "length" : 40
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 46,
+                        "beginColumn" : 4,
+                        "endLine" : 46,
+                        "endColumn" : 31,
+                        "offset" : 842,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["S_impl_Instance", "p", "prod", "fg_A_nested_C_result"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                          },
+                          "beginLine" : 29,
+                          "beginColumn" : 4,
+                          "endLine" : 29,
+                          "endColumn" : 44,
+                          "offset" : 570,
+                          "length" : 40
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "FeatureGroup"
+              },
+              "isBiDirectional" : true,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param1 -> calc", "fg_A", "nested_B", "param1"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                },
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param2 -> calc", "fg_A", "nested_B", "param2"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                },
+                {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_C", "result -> prod", "fg_A", "nested_C", "result"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+            }
+          ],
+          "connectionInstances" : [
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["S_impl_Instance", "p", "prod.fg_A.nested_B.param1 -> calc.fg_A.nested_B.param1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 4,
+                    "endLine" : 49,
+                    "endColumn" : 46,
+                    "offset" : 920,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                      },
+                      "beginLine" : 46,
+                      "beginColumn" : 4,
+                      "endLine" : 46,
+                      "endColumn" : 31,
+                      "offset" : 842,
+                      "length" : 27
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 23,
+                        "beginColumn" : 4,
+                        "endLine" : 23,
+                        "endColumn" : 55,
+                        "offset" : 417,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "calc"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                      },
+                      "beginLine" : 47,
+                      "beginColumn" : 4,
+                      "endLine" : 47,
+                      "endColumn" : 33,
+                      "offset" : 873,
+                      "length" : 29
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 23,
+                        "beginColumn" : 4,
+                        "endLine" : 23,
+                        "endColumn" : 55,
+                        "offset" : 417,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "c1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 49,
+                        "beginColumn" : 4,
+                        "endLine" : 49,
+                        "endColumn" : 46,
+                        "offset" : 920,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 38,
+                        "beginColumn" : 4,
+                        "endLine" : 38,
+                        "endColumn" : 22,
+                        "offset" : 739,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["S_impl_Instance", "p", "prod.fg_A.nested_B.param2 -> calc.fg_A.nested_B.param2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 4,
+                    "endLine" : 49,
+                    "endColumn" : 46,
+                    "offset" : 920,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                      },
+                      "beginLine" : 46,
+                      "beginColumn" : 4,
+                      "endLine" : 46,
+                      "endColumn" : 31,
+                      "offset" : 842,
+                      "length" : 27
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_B", "param2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 24,
+                        "beginColumn" : 4,
+                        "endLine" : 24,
+                        "endColumn" : 55,
+                        "offset" : 472,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "calc"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                      },
+                      "beginLine" : 47,
+                      "beginColumn" : 4,
+                      "endLine" : 47,
+                      "endColumn" : 33,
+                      "offset" : 873,
+                      "length" : 29
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_B", "param2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 24,
+                        "beginColumn" : 4,
+                        "endLine" : 24,
+                        "endColumn" : 55,
+                        "offset" : 472,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "c1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 49,
+                        "beginColumn" : 4,
+                        "endLine" : 49,
+                        "endColumn" : 46,
+                        "offset" : 920,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 38,
+                        "beginColumn" : 4,
+                        "endLine" : 38,
+                        "endColumn" : 22,
+                        "offset" : 739,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["S_impl_Instance", "p", "calc.fg_A.nested_C.result -> prod.fg_A.nested_C.result"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 4,
+                    "endLine" : 49,
+                    "endColumn" : 46,
+                    "offset" : 920,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "calc"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                      },
+                      "beginLine" : 47,
+                      "beginColumn" : 4,
+                      "endLine" : 47,
+                      "endColumn" : 33,
+                      "offset" : 873,
+                      "length" : 29
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "calc", "fg_A", "nested_C", "result"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 29,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 44,
+                        "offset" : 570,
+                        "length" : 40
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["S_impl_Instance", "p", "prod"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                      },
+                      "beginLine" : 46,
+                      "beginColumn" : 4,
+                      "endLine" : 46,
+                      "endColumn" : 31,
+                      "offset" : 842,
+                      "length" : 27
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "prod", "fg_A", "nested_C", "result"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 29,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 44,
+                        "offset" : 570,
+                        "length" : 40
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p", "c1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 49,
+                        "beginColumn" : 4,
+                        "endLine" : 49,
+                        "endColumn" : 46,
+                        "offset" : 920,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["S_impl_Instance", "p"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                        },
+                        "beginLine" : 38,
+                        "beginColumn" : 4,
+                        "endLine" : 38,
+                        "endColumn" : 22,
+                        "offset" : 739,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            }
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/\/@componentInstance.0"
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+        {
+          "type" : "Annex",
+          "name" : "Emv2",
+          "clause" : {
+            "type" : "Emv2Clause",
+            "libraries" : [
+            ],
+            "propagations" : [
+            ],
+            "flows" : [
+            ],
+            "componentBehavior" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Emv2BehaviorSection",
+                "events" : [
+                ],
+                "transitions" : [
+                ],
+                "propagations" : [
+                ]
+              }
+            },
+            "properties" : [
+            ]
+          }
+        }
+      ],
+      "uriFrag" : "platform:\/resource\/nested_feature_groups\/instances\/Nested_Feature_Group_Test_S_impl_Instance.aaxl2#\/"
+    }
+  ],
+  "annexLib" : [
+  ],
+  "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Integer_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Number_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 78,
+                "beginColumn" : 4,
+                "endLine" : 78,
+                "endColumn" : 88,
+                "offset" : 3653,
+                "length" : 84
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Signed"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 92,
+                "beginColumn" : 2,
+                "endLine" : 93,
+                "endColumn" : 137,
+                "offset" : 4808,
+                "length" : 152
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "32.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Nested_Feature_Group_Test::Results.impl"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["opA"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                },
+                "beginLine" : 10,
+                "beginColumn" : 4,
+                "endLine" : 10,
+                "endColumn" : 37,
+                "offset" : 142,
+                "length" : 33
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Integer_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Number_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 78,
+                    "beginColumn" : 4,
+                    "endLine" : 78,
+                    "endColumn" : 88,
+                    "offset" : 3653,
+                    "length" : 84
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Signed"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["opB"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                },
+                "beginLine" : 11,
+                "beginColumn" : 4,
+                "endLine" : 11,
+                "endColumn" : 37,
+                "offset" : 179,
+                "length" : 33
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Integer_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Number_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 78,
+                    "beginColumn" : 4,
+                    "endLine" : 78,
+                    "endColumn" : 88,
+                    "offset" : 3653,
+                    "length" : 84
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Signed"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["results"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/nested_feature_groups\/Nested_Feature_Group_Test.aadl"
+                },
+                "beginLine" : 12,
+                "beginColumn" : 4,
+                "endLine" : 12,
+                "endColumn" : 41,
+                "offset" : 216,
+                "length" : 37
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Integer_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Number_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 78,
+                    "beginColumn" : 4,
+                    "endLine" : 78,
+                    "endColumn" : 88,
+                    "offset" : 3653,
+                    "length" : 84
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Signed"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
+  ]
+}

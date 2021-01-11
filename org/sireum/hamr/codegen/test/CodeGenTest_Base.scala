@@ -2,15 +2,29 @@ package org.sireum.hamr.codegen.test
 
 import org.sireum._
 import org.sireum.hamr.codegen._
-import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
+import org.sireum.hamr.codegen.test.CodeGenTest.{baseOptions, filterTestsSet}
 
 class CodeGenTest_Base extends CodeGenTest {
 
   override def generateExpected: B = if(super.generateExpected) T else F
-  
+
+  override def filter: B = if(super.filter) T else F
+  override def filters: ISZ[String] = ISZ("nested_")
+
   val tests = Tests {
     val resultDir: Option[String] = Some(getClass.getSimpleName)
     val modelsDir = baseModelsDir / getClass.getSimpleName
+
+    {
+      val name ="nested_feature_groups"
+      val modelDir = modelsDir / name
+      val model = modelDir / ".slang" / "Nested_Feature_Group_Test_S_impl_Instance.json"
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform),
+        resultDir, None(), None())
+    }
 
     {
       val name = "wms"
