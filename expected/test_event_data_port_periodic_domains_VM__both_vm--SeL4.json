@@ -683,7 +683,7 @@
         {
           "type" : "TestResource",
           "content" : "cmake_minimum_required(VERSION 3.8.2)\n\nproject(vmsrc_process C)\n\nset(CMAKE_C_STANDARD 99)\n\nadd_subdirectory(${SlangTypeLibrary_DIR} SlangTypeLibrary)\n\nadd_subdirectory(${SB_Type_Library_DIR} SB_Type_Library)\n\nadd_executable(vmsrc_process vmsrc_process.c)\n\ntarget_link_libraries(vmsrc_process\n                      SB_Type_Library\n                      SlangTypeLibrary\n                      -static-libgcc -static)",
-          "overwrite" : true,
+          "overwrite" : false,
           "makeExecutable" : false
         }
       ],
@@ -701,7 +701,7 @@
         {
           "type" : "TestResource",
           "content" : "cmake_minimum_required(VERSION 3.8.2)\n\nproject(vmdst_process C)\n\nset(CMAKE_C_STANDARD 99)\n\nadd_subdirectory(${SlangTypeLibrary_DIR} SlangTypeLibrary)\n\nadd_subdirectory(${SB_Type_Library_DIR} SB_Type_Library)\n\nadd_executable(vmdst_process vmdst_process.c)\n\ntarget_link_libraries(vmdst_process\n                      SB_Type_Library\n                      SlangTypeLibrary\n                      -static-libgcc -static)",
-          "overwrite" : true,
+          "overwrite" : false,
           "makeExecutable" : false
         }
       ],
