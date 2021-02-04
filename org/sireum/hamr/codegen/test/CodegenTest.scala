@@ -29,7 +29,7 @@ trait CodeGenTest extends TestSuite {
   def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("wms")
+  def filters: ISZ[String] = ISZ("data", "isolette")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
@@ -48,11 +48,11 @@ trait CodeGenTest extends TestSuite {
            description: Option[String], modelUri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
     var tags: ISZ[org.scalatest.Tag] = ISZ()
 
-    if(ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).startsWith(elem))){
+    if(ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))){
       registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements:_*)(
         testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri))
     }
-    else if(!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).startsWith(elem))) {
+    else if(!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerTest(s"${testName} L${position.lineNumber}", tags.elements:_*)(
         testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri))
     }

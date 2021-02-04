@@ -8,8 +8,8 @@ class CodeGenTest_Base extends CodeGenTest {
 
   override def generateExpected: B = if(super.generateExpected) T else F
 
-  override def filter: B = if(super.filter) T else F
-  override def filters: ISZ[String] = ISZ("nested_")
+  //override def filter: B = if(super.filter) T else F
+  //override def filters: ISZ[String] = ISZ("nested_")
 
   val tests = Tests {
     val resultDir: Option[String] = Some(getClass.getSimpleName)
