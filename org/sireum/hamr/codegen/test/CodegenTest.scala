@@ -314,7 +314,7 @@ object CodeGenTest {
     platform = CodeGenPlatform.JVM,
     slangOutputDir = None(),
     packageName = None(),
-    embedArt = T,
+    noEmbedArt = F,
     devicesAsThreads = T,
     slangAuxCodeDirs = ISZ(),
     slangOutputCDir = None(),

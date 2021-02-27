@@ -88,7 +88,7 @@ class CodeGenTest_Base extends CodeGenTest {
       platform = CodeGenPlatform.JVM
       test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
         baseOptions(platform = platform,
-          embedArt = F),
+          noEmbedArt = T),
         resultDir, None(), None())
 
       platform = CodeGenPlatform.Linux
