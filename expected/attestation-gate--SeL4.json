@@ -853,7 +853,7 @@
         "attestation-gate--SeL4\/settings.cmake",
         {
           "type" : "TestResource",
-          "content" : "# This file will not be overwritten so is safe to edit\n\ncmake_minimum_required(VERSION 3.8.2)\n\nset(KernelDomainSchedule \"${CMAKE_CURRENT_LIST_DIR}\/kernel\/domain_schedule.c\" CACHE INTERNAL \"\")\nset(KernelNumDomains 10 CACHE STRING \"\" FORCE)\n",
+          "content" : "# This file will not be overwritten so is safe to edit\n\ncmake_minimum_required(VERSION 3.8.2)\n\nset(KernelDomainSchedule \"${CMAKE_CURRENT_LIST_DIR}\/kernel\/domain_schedule.c\" CACHE INTERNAL \"\")\nset(KernelNumDomains 16 CACHE STRING \"\" FORCE)\n",
           "overwrite" : false,
           "makeExecutable" : false
         }
