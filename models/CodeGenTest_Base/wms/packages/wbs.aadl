@@ -78,7 +78,7 @@ public
 		properties
 			Frame_Period => 1000ms;
 			Clock_Period => 2ms;
-			CASE_Scheduling::Max_Domain => 3;
+			CASE_Scheduling::Max_Domain => 4;
 	end proc.impl;
 
 	------------------------------------------------

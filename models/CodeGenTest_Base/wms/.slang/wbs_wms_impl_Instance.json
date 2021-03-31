@@ -3290,7 +3290,7 @@
               "propertyValues" : [
                 {
                   "type" : "UnitProp",
-                  "value" : "3.0",
+                  "value" : "4.0",
                   "unit" : {
                     "type" : "None"
                   }
