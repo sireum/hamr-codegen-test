@@ -20,7 +20,7 @@ public
 			LineSearchTask_in: in event data port CMASI::AddressAttributedMessage.i;
 			LineSearchTask_out: out event data port CMASI::LineSearchTask.i;
 		properties
-			CASE_Properties::Component_Type => MONITOR;
+			CASE_Properties::Component_Language => CakeML;
 			CASE_Properties::Component_Spec => ("CASE_AttestationGate_policy");
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;

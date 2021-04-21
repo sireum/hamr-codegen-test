@@ -109,7 +109,7 @@ public
 			front_inflate: out data port MonitorPacket.impl;
 			rear_inflate: out data port MonitorPacket.impl;
 		properties
-			CASE_Properties::Component_Type => MONITOR;
+			CASE_Properties::Component_Language => CakeML;
 	end tire_monitor;
 
 	thread implementation tire_monitor.impl

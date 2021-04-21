@@ -23,8 +23,8 @@ public
 	end RadioDriver_thr;
 
 	thread implementation RadioDriver_thr.Impl
-		properties
-			CASE_Properties::Component_Type => COMM_DRIVER;
+		--properties
+		--	CASE_Properties::Component_Type => COMM_DRIVER;
 	end RadioDriver_thr.Impl;
 
 	process RadioDriver
