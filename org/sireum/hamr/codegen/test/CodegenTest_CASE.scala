@@ -11,7 +11,7 @@ class CodegenTest_CASE extends CodeGenTest {
   val tests = Tests {
     val id = "case_tool_evaluation"
 
-    val(sel4, sel4_tb, sel4_only) = (CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
+    val(linux, sel4, sel4_tb, sel4_only) = (CodeGenPlatform.Linux, CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
 
     val case_tool_evaluation_dir = baseModelsDir / getClass.getSimpleName
     val resultDir: Option[String] = Some(getClass.getSimpleName)
@@ -23,6 +23,8 @@ class CodegenTest_CASE extends CodeGenTest {
     }
 
     val tests: ISZ[(String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type])] = ISZ(
+
+      gen("uav_june_step6", "UAV_UAV_Impl_Instance.json", ISZ(linux, sel4)),
 
       gen("attestation-gate", "SysContext_top_Impl_Instance.json", ISZ(sel4)),
 
