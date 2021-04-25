@@ -1,0 +1,3 @@
+property set Bit_Codec_Property_Set is
+	Stack_Size: constant Size => 131072 Bytes; -- 32 * 4096
+end Bit_Codec_Property_Set;

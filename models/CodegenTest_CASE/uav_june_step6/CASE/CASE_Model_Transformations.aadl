@@ -3,6 +3,7 @@ public
 	
 	with Base_Types;
 	with CASE_Properties;
+	with HAMR;
 	
 	-- COMMUNICATIONS
 	
@@ -25,6 +26,9 @@ public
 		subcomponents
 			header: data CASE_MsgHeader.Impl;
 			payload: data;
+		properties
+			-- FIXME: bit size not specified originally
+			HAMR::Bit_Codec_Max_Size => 1024 bits;
 	end CASE_RF_Msg.Impl;
 	
 	-- UART Message structure
@@ -35,6 +39,9 @@ public
 		subcomponents
 			crc: data Base_Types::Boolean;
 			message: data Base_Types::String;
+		properties
+			-- FIXME: bit size not specified originally
+			HAMR::Bit_Codec_Max_Size => 1024 bits;
 	end CASE_UART_Msg.Impl;
 	
 	-- WIFI Message structure

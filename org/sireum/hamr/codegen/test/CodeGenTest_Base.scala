@@ -379,6 +379,39 @@ class CodeGenTest_Base extends CodeGenTest {
       )
     }
 
+    { // bit_codec
+      val name = "bit_codec"
+      val modelDir = modelsDir / name
+      val model = modelDir / ".slang" / "Bit_Codec_Bit_Codec_Sys_Impl_Instance.json"
+
+      val packageName: Option[String] = Some("bit_codec")
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      val bo = baseOptions(
+        platform = platform,
+        packageName = packageName,
+        maxStringSize = 300,
+        devicesAsThreads = F
+      )
+      test(s"$name--${platform}", modelDir, model, bo, resultDir, None(), None())
+
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}", modelDir, model,
+        bo(platform = platform), resultDir, None(), None())
+
+      test(s"$name--${platform}-excludesImpl", modelDir, model,
+        bo(platform = platform, excludeComponentImpl = T),
+        resultDir, None(), None())
+
+      platform = CodeGenPlatform.SeL4
+      test(s"$name--${platform}", modelDir, model,
+        bo(platform = platform),  resultDir, None(), None())
+
+      test(s"$name--${platform}-excludesImpl", modelDir, model,
+        bo(platform = platform, excludeComponentImpl = T),
+        resultDir, None(), None())
+    }
+
     { // producer filter consumer periodic
       val name = "producer_filter_consumer_periodic"
       val modelDir = modelsDir / name
