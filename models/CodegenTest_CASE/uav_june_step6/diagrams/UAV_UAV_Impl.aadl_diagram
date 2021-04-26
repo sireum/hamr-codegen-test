@@ -7,11 +7,9 @@
         <seg>bac1</seg>
       </bo>
       <bendpoints>
-        <point x="308.0" y="361.44444444444446"/>
-        <point x="314.0" y="361.44444444444446"/>
-        <point x="314.0" y="402.7777777777778"/>
-        <point x="564.0" y="402.7777777777778"/>
-        <point x="564.0" y="607.5555555555557"/>
+        <point x="308.0" y="424.83333333333337"/>
+        <point x="314.0" y="424.8333333333334"/>
+        <point x="314.0" y="466.16666666666674"/>
       </bendpoints>
     </element>
     <element uuid="cee308c9-a4ee-413a-9a2e-184352b7f398" manual="true">
@@ -20,7 +18,7 @@
         <seg>bac2</seg>
       </bo>
       <bendpoints>
-        <point x="304.0" y="349.7777777777778"/>
+        <point x="304.0" y="413.16666666666674"/>
       </bendpoints>
     </element>
     <element uuid="8d89ff62-9727-494e-96b0-1f8939ed3317" manual="true">
@@ -70,6 +68,10 @@
         <seg>connection</seg>
         <seg>c3</seg>
       </bo>
+      <bendpoints>
+        <point x="564.0" y="183.3888888888889"/>
+        <point x="564.0" y="388.16666666666674"/>
+      </bendpoints>
     </element>
     <element uuid="cda74698-3334-44de-bf38-15355d104cbb" manual="true">
       <element uuid="859fbca7-4f6d-4c4f-8902-5672321fa478" manual="true">
@@ -83,8 +85,8 @@
         <seg>c4</seg>
       </bo>
       <bendpoints>
-        <point x="574.0" y="374.7777777777778"/>
-        <point x="574.0" y="466.16666666666674"/>
+        <point x="574.0" y="438.16666666666674"/>
+        <point x="574.0" y="324.7777777777778"/>
       </bendpoints>
     </element>
     <element uuid="de2ed71e-6d13-448d-8d4b-440e38ae3692" manual="true" dockArea="left">
@@ -92,7 +94,7 @@
         <seg>feature</seg>
         <seg>radio_recv</seg>
       </bo>
-      <position y="139.0"/>
+      <position y="564.0"/>
     </element>
     <element uuid="8cacdf42-d1e6-427d-9c05-6c11d7e9791b" manual="true" dockArea="right">
       <bo>
@@ -134,7 +136,7 @@
         <seg>subcomponent</seg>
         <seg>FCTL</seg>
       </bo>
-      <position x="312.0" y="271.0"/>
+      <position x="312.0" y="334.0"/>
       <size width="230.0" height="110.0"/>
     </element>
     <element uuid="82b52ed3-8f97-45b5-99f8-b31006085a7a" manual="true">
@@ -142,7 +144,7 @@
         <seg>subcomponent</seg>
         <seg>FCTL_SBUS</seg>
       </bo>
-      <position x="158.0" y="326.0"/>
+      <position x="158.0" y="390.0"/>
       <size width="134.0" height="35.0"/>
     </element>
     <element uuid="997a3a4a-1f86-4a5e-9f9e-aecd03820412" manual="true">
@@ -151,28 +153,28 @@
           <seg>feature</seg>
           <seg>FC_UART</seg>
         </bo>
-        <position y="526.0"/>
+        <position y="384.0"/>
       </element>
       <element uuid="511cdfea-df95-4b7b-abf8-c615af34f565" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>fc_uart_recv</seg>
         </bo>
-        <position y="384.0"/>
+        <position y="243.0"/>
       </element>
       <element uuid="c1072b30-6c3f-41ea-9eec-ad71d15b1984" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>fc_uart_send</seg>
         </bo>
-        <position y="243.0"/>
+        <position y="101.0"/>
       </element>
       <element uuid="3679427e-0a2d-446c-86ab-accdd945a26f" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>radio_recv</seg>
         </bo>
-        <position y="101.0"/>
+        <position y="526.0"/>
       </element>
       <element uuid="c1ce973e-674e-4777-a409-ea45150a7dc6" manual="true" dockArea="right">
         <bo>
@@ -598,14 +600,14 @@
               <seg>feature</seg>
               <seg>AirVehicleState_WPM</seg>
             </bo>
-            <position x="279.0" y="60.0"/>
+            <position x="279.0" y="110.0"/>
           </element>
           <element uuid="c3a528a9-ec67-4680-9cdd-1ff6c7ef8f73" manual="true" dockArea="right">
             <bo>
               <seg>feature</seg>
               <seg>MissionCommand</seg>
             </bo>
-            <position x="301.0" y="110.0"/>
+            <position x="301.0" y="60.0"/>
           </element>
           <element uuid="8848d3b4-0046-415a-ac38-8539e6028c3e" manual="true" dockArea="left">
             <bo>
@@ -858,7 +860,7 @@
               <seg>feature</seg>
               <seg>AirVehicleState</seg>
             </bo>
-            <position y="10.0"/>
+            <position y="60.0"/>
           </element>
           <element uuid="85cc2883-e259-4942-961a-f08f4de843b7" manual="true" dockArea="left">
             <bo>
@@ -872,7 +874,7 @@
               <seg>feature</seg>
               <seg>MissionCommand</seg>
             </bo>
-            <position y="60.0"/>
+            <position y="10.0"/>
           </element>
           <element uuid="7c252ccb-a30b-459f-9174-538974296859" manual="true" dockArea="left">
             <bo>

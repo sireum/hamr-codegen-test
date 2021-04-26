@@ -302,7 +302,10 @@ public
 		features
 			observed: in event data port CMASI::AutomationResponse.i;
 			reference_1: in event data port CMASI::AutomationRequest.i;
-			alert: out event data port Base_Types::Boolean;
+			
+			-- FIXME: HAMR does not support the use of unbounded base types when using the wire-protocol
+			--        i.e. Boolean is missing Memory_Properties::Data_Size
+			--alert: out event data port Base_Types::Boolean;
 		properties
 			--CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
 			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
@@ -357,7 +360,7 @@ public
 		connections
 			c1: port observed -> CASE_Monitor_Req.observed;
 			c2: port reference_1 -> CASE_Monitor_Req.reference_1;
-			c3: port CASE_Monitor_Req.alert -> alert;
+			--c3: port CASE_Monitor_Req.alert -> alert;
 	end CASE_Monitor_Req.Impl;
 	
 	------------------------

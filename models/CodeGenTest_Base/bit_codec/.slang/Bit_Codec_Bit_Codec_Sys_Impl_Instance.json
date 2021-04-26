@@ -107,78 +107,6 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_bool"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 71,
-                        "beginColumn" : 4,
-                        "endLine" : 71,
-                        "endColumn" : 54,
-                        "offset" : 2063,
-                        "length" : 50
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::Boolean"
-                    }
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_bool", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Boolean"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
                     "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_u32"],
                     "pos" : {
                       "type" : "Some",
@@ -192,7 +120,7 @@
                         "beginColumn" : 4,
                         "endLine" : 72,
                         "endColumn" : 57,
-                        "offset" : 2117,
+                        "offset" : 2127,
                         "length" : 53
                       }
                     }
@@ -213,37 +141,6 @@
                     }
                   },
                   "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_u32", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Integer"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
                     {
                       "type" : "Property",
                       "name" : {
@@ -309,53 +206,12 @@
                       ],
                       "appliesTo" : [
                       ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_string"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 73,
-                        "beginColumn" : 4,
-                        "endLine" : 73,
-                        "endColumn" : 55,
-                        "offset" : 2174,
-                        "length" : 51
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::String"
-                    }
-                  },
-                  "properties" : [
+                    },
                     {
                       "type" : "Property",
                       "name" : {
                         "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_string", "Data_Model::Data_Representation"],
+                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_u32", "Data_Model::Data_Representation"],
                         "pos" : {
                           "type" : "Some",
                           "value" : {
@@ -376,14 +232,14 @@
                       "propertyValues" : [
                         {
                           "type" : "ValueProp",
-                          "value" : "String"
+                          "value" : "Integer"
                         }
                       ],
                       "appliesTo" : [
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -402,7 +258,7 @@
                         "beginColumn" : 4,
                         "endLine" : 70,
                         "endColumn" : 51,
-                        "offset" : 2012,
+                        "offset" : 2020,
                         "length" : 47
                       }
                     }
@@ -520,7 +376,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -539,7 +395,7 @@
                         "beginColumn" : 4,
                         "endLine" : 69,
                         "endColumn" : 36,
-                        "offset" : 1976,
+                        "offset" : 1984,
                         "length" : 32
                       }
                     }
@@ -557,7 +413,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -742,78 +598,6 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_bool"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 85,
-                        "beginColumn" : 4,
-                        "endLine" : 85,
-                        "endColumn" : 57,
-                        "offset" : 2525,
-                        "length" : 53
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::Boolean"
-                    }
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_bool", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Boolean"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
                     "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_u32"],
                     "pos" : {
                       "type" : "Some",
@@ -827,7 +611,7 @@
                         "beginColumn" : 4,
                         "endLine" : 86,
                         "endColumn" : 60,
-                        "offset" : 2582,
+                        "offset" : 2596,
                         "length" : 56
                       }
                     }
@@ -848,37 +632,6 @@
                     }
                   },
                   "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_u32", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Integer"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
                     {
                       "type" : "Property",
                       "name" : {
@@ -944,197 +697,12 @@
                       ],
                       "appliesTo" : [
                       ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_string"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 87,
-                        "beginColumn" : 4,
-                        "endLine" : 87,
-                        "endColumn" : 58,
-                        "offset" : 2642,
-                        "length" : 54
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::String"
-                    }
-                  },
-                  "properties" : [
+                    },
                     {
                       "type" : "Property",
                       "name" : {
                         "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_string", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "String"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_bool"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 91,
-                        "beginColumn" : 4,
-                        "endLine" : 91,
-                        "endColumn" : 56,
-                        "offset" : 2796,
-                        "length" : 52
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::Boolean"
-                    }
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_bool", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Boolean"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_u32"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 92,
-                        "beginColumn" : 4,
-                        "endLine" : 92,
-                        "endColumn" : 59,
-                        "offset" : 2852,
-                        "length" : 55
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::Unsigned_32"
-                    }
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_u32", "Data_Model::Data_Representation"],
+                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_u32", "Data_Model::Data_Representation"],
                         "pos" : {
                           "type" : "Some",
                           "value" : {
@@ -1160,7 +728,48 @@
                       ],
                       "appliesTo" : [
                       ]
-                    },
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_u32"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
+                        },
+                        "beginLine" : 92,
+                        "beginColumn" : 4,
+                        "endLine" : 92,
+                        "endColumn" : 59,
+                        "offset" : 2870,
+                        "length" : 55
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Unsigned_32"
+                    }
+                  },
+                  "properties" : [
                     {
                       "type" : "Property",
                       "name" : {
@@ -1226,53 +835,12 @@
                       ],
                       "appliesTo" : [
                       ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_string"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 93,
-                        "beginColumn" : 4,
-                        "endLine" : 93,
-                        "endColumn" : 57,
-                        "offset" : 2911,
-                        "length" : 53
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::String"
-                    }
-                  },
-                  "properties" : [
+                    },
                     {
                       "type" : "Property",
                       "name" : {
                         "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_string", "Data_Model::Data_Representation"],
+                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_u32", "Data_Model::Data_Representation"],
                         "pos" : {
                           "type" : "Some",
                           "value" : {
@@ -1293,14 +861,14 @@
                       "propertyValues" : [
                         {
                           "type" : "ValueProp",
-                          "value" : "String"
+                          "value" : "Integer"
                         }
                       ],
                       "appliesTo" : [
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1319,7 +887,7 @@
                         "beginColumn" : 4,
                         "endLine" : 84,
                         "endColumn" : 54,
-                        "offset" : 2471,
+                        "offset" : 2483,
                         "length" : 50
                       }
                     }
@@ -1437,7 +1005,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.6"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1456,7 +1024,7 @@
                         "beginColumn" : 4,
                         "endLine" : 90,
                         "endColumn" : 53,
-                        "offset" : 2743,
+                        "offset" : 2759,
                         "length" : 49
                       }
                     }
@@ -1574,7 +1142,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.7"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1593,7 +1161,7 @@
                         "beginColumn" : 4,
                         "endLine" : 83,
                         "endColumn" : 39,
-                        "offset" : 2432,
+                        "offset" : 2444,
                         "length" : 35
                       }
                     }
@@ -1611,7 +1179,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.8"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1630,7 +1198,7 @@
                         "beginColumn" : 4,
                         "endLine" : 89,
                         "endColumn" : 38,
-                        "offset" : 2704,
+                        "offset" : 2720,
                         "length" : 34
                       }
                     }
@@ -1648,7 +1216,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.9"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -1833,78 +1401,6 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_bool"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 105,
-                        "beginColumn" : 4,
-                        "endLine" : 105,
-                        "endColumn" : 55,
-                        "offset" : 3221,
-                        "length" : 51
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::Boolean"
-                    }
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_bool", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Boolean"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
                     "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_u32"],
                     "pos" : {
                       "type" : "Some",
@@ -1918,7 +1414,7 @@
                         "beginColumn" : 4,
                         "endLine" : 106,
                         "endColumn" : 58,
-                        "offset" : 3276,
+                        "offset" : 3298,
                         "length" : 54
                       }
                     }
@@ -1939,37 +1435,6 @@
                     }
                   },
                   "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_u32", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Integer"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
                     {
                       "type" : "Property",
                       "name" : {
@@ -2035,53 +1500,12 @@
                       ],
                       "appliesTo" : [
                       ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_string"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 107,
-                        "beginColumn" : 4,
-                        "endLine" : 107,
-                        "endColumn" : 56,
-                        "offset" : 3334,
-                        "length" : 52
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "DataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Base_Types::String"
-                    }
-                  },
-                  "properties" : [
+                    },
                     {
                       "type" : "Property",
                       "name" : {
                         "type" : "Name",
-                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_string", "Data_Model::Data_Representation"],
+                        "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_u32", "Data_Model::Data_Representation"],
                         "pos" : {
                           "type" : "Some",
                           "value" : {
@@ -2102,14 +1526,14 @@
                       "propertyValues" : [
                         {
                           "type" : "ValueProp",
-                          "value" : "String"
+                          "value" : "Integer"
                         }
                       ],
                       "appliesTo" : [
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2128,7 +1552,7 @@
                         "beginColumn" : 4,
                         "endLine" : 104,
                         "endColumn" : 52,
-                        "offset" : 3169,
+                        "offset" : 3189,
                         "length" : 48
                       }
                     }
@@ -2246,7 +1670,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2265,7 +1689,7 @@
                         "beginColumn" : 4,
                         "endLine" : 103,
                         "endColumn" : 37,
-                        "offset" : 3132,
+                        "offset" : 3152,
                         "length" : 33
                       }
                     }
@@ -2283,7 +1707,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -2436,156 +1860,6 @@
               "type" : "Connection",
               "name" : {
                 "type" : "Name",
-                "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c3"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                    },
-                    "beginLine" : 54,
-                    "beginColumn" : 4,
-                    "endLine" : 54,
-                    "endColumn" : 66,
-                    "offset" : 1372,
-                    "length" : 62
-                  }
-                }
-              },
-              "src" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 47,
-                        "beginColumn" : 4,
-                        "endLine" : 47,
-                        "endColumn" : 30,
-                        "offset" : 1124,
-                        "length" : 26
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_bool"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                          },
-                          "beginLine" : 71,
-                          "beginColumn" : 4,
-                          "endLine" : 71,
-                          "endColumn" : 54,
-                          "offset" : 2063,
-                          "length" : 50
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "Out"
-                    }
-                  }
-                }
-              ],
-              "dst" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 48,
-                        "beginColumn" : 4,
-                        "endLine" : 48,
-                        "endColumn" : 26,
-                        "offset" : 1154,
-                        "length" : 22
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_bool"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                          },
-                          "beginLine" : 85,
-                          "beginColumn" : 4,
-                          "endLine" : 85,
-                          "endColumn" : 57,
-                          "offset" : 2525,
-                          "length" : 53
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "In"
-                    }
-                  }
-                }
-              ],
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "isBiDirectional" : false,
-              "connectionInstances" : [
-                {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_bool -> filter", "from_producer_bool"],
-                  "pos" : {
-                    "type" : "None"
-                  }
-                }
-              ],
-              "properties" : [
-              ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
-            },
-            {
-              "type" : "Connection",
-              "name" : {
-                "type" : "Name",
                 "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c5"],
                 "pos" : {
                   "type" : "Some",
@@ -2599,7 +1873,7 @@
                     "beginColumn" : 4,
                     "endLine" : 57,
                     "endColumn" : 64,
-                    "offset" : 1508,
+                    "offset" : 1512,
                     "length" : 60
                   }
                 }
@@ -2644,7 +1918,7 @@
                           "beginColumn" : 4,
                           "endLine" : 72,
                           "endColumn" : 57,
-                          "offset" : 2117,
+                          "offset" : 2127,
                           "length" : 53
                         }
                       }
@@ -2699,7 +1973,7 @@
                           "beginColumn" : 4,
                           "endLine" : 86,
                           "endColumn" : 60,
-                          "offset" : 2582,
+                          "offset" : 2596,
                           "length" : 56
                         }
                       }
@@ -2730,157 +2004,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
-            },
-            {
-              "type" : "Connection",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c7"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                    },
-                    "beginLine" : 60,
-                    "beginColumn" : 4,
-                    "endLine" : 60,
-                    "endColumn" : 70,
-                    "offset" : 1640,
-                    "length" : 66
-                  }
-                }
-              },
-              "src" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 47,
-                        "beginColumn" : 4,
-                        "endLine" : 47,
-                        "endColumn" : 30,
-                        "offset" : 1124,
-                        "length" : 26
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_string"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                          },
-                          "beginLine" : 73,
-                          "beginColumn" : 4,
-                          "endLine" : 73,
-                          "endColumn" : 55,
-                          "offset" : 2174,
-                          "length" : 51
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "Out"
-                    }
-                  }
-                }
-              ],
-              "dst" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 48,
-                        "beginColumn" : 4,
-                        "endLine" : 48,
-                        "endColumn" : 26,
-                        "offset" : 1154,
-                        "length" : 22
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_string"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                          },
-                          "beginLine" : 87,
-                          "beginColumn" : 4,
-                          "endLine" : 87,
-                          "endColumn" : 58,
-                          "offset" : 2642,
-                          "length" : 54
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "In"
-                    }
-                  }
-                }
-              ],
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "isBiDirectional" : false,
-              "connectionInstances" : [
-                {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_string -> filter", "from_producer_string"],
-                  "pos" : {
-                    "type" : "None"
-                  }
-                }
-              ],
-              "properties" : [
-              ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2944,7 +2068,7 @@
                           "beginColumn" : 4,
                           "endLine" : 70,
                           "endColumn" : 51,
-                          "offset" : 2012,
+                          "offset" : 2020,
                           "length" : 47
                         }
                       }
@@ -2999,7 +2123,7 @@
                           "beginColumn" : 4,
                           "endLine" : 84,
                           "endColumn" : 54,
-                          "offset" : 2471,
+                          "offset" : 2483,
                           "length" : 50
                         }
                       }
@@ -3030,7 +2154,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3049,7 +2173,7 @@
                     "beginColumn" : 4,
                     "endLine" : 63,
                     "endColumn" : 68,
-                    "offset" : 1784,
+                    "offset" : 1792,
                     "length" : 64
                   }
                 }
@@ -3094,7 +2218,7 @@
                           "beginColumn" : 4,
                           "endLine" : 69,
                           "endColumn" : 36,
-                          "offset" : 1976,
+                          "offset" : 1984,
                           "length" : 32
                         }
                       }
@@ -3149,7 +2273,7 @@
                           "beginColumn" : 4,
                           "endLine" : 83,
                           "endColumn" : 39,
-                          "offset" : 2432,
+                          "offset" : 2444,
                           "length" : 35
                         }
                       }
@@ -3180,157 +2304,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
-            },
-            {
-              "type" : "Connection",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c4"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                    },
-                    "beginLine" : 55,
-                    "beginColumn" : 4,
-                    "endLine" : 55,
-                    "endColumn" : 66,
-                    "offset" : 1438,
-                    "length" : 62
-                  }
-                }
-              },
-              "src" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 48,
-                        "beginColumn" : 4,
-                        "endLine" : 48,
-                        "endColumn" : 26,
-                        "offset" : 1154,
-                        "length" : 22
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_bool"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                          },
-                          "beginLine" : 91,
-                          "beginColumn" : 4,
-                          "endLine" : 91,
-                          "endColumn" : 56,
-                          "offset" : 2796,
-                          "length" : 52
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "Out"
-                    }
-                  }
-                }
-              ],
-              "dst" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 49,
-                        "beginColumn" : 4,
-                        "endLine" : 49,
-                        "endColumn" : 30,
-                        "offset" : 1180,
-                        "length" : 26
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_bool"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                          },
-                          "beginLine" : 105,
-                          "beginColumn" : 4,
-                          "endLine" : 105,
-                          "endColumn" : 55,
-                          "offset" : 3221,
-                          "length" : 51
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "In"
-                    }
-                  }
-                }
-              ],
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "isBiDirectional" : false,
-              "connectionInstances" : [
-                {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_bool -> consumer", "from_filter_bool"],
-                  "pos" : {
-                    "type" : "None"
-                  }
-                }
-              ],
-              "properties" : [
-              ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.5\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3349,7 +2323,7 @@
                     "beginColumn" : 4,
                     "endLine" : 58,
                     "endColumn" : 64,
-                    "offset" : 1572,
+                    "offset" : 1576,
                     "length" : 60
                   }
                 }
@@ -3394,7 +2368,7 @@
                           "beginColumn" : 4,
                           "endLine" : 92,
                           "endColumn" : 59,
-                          "offset" : 2852,
+                          "offset" : 2870,
                           "length" : 55
                         }
                       }
@@ -3449,7 +2423,7 @@
                           "beginColumn" : 4,
                           "endLine" : 106,
                           "endColumn" : 58,
-                          "offset" : 3276,
+                          "offset" : 3298,
                           "length" : 54
                         }
                       }
@@ -3480,157 +2454,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.6\/@connectionReference.0"
-            },
-            {
-              "type" : "Connection",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c8"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                    },
-                    "beginLine" : 61,
-                    "beginColumn" : 4,
-                    "endLine" : 61,
-                    "endColumn" : 70,
-                    "offset" : 1710,
-                    "length" : 66
-                  }
-                }
-              },
-              "src" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 48,
-                        "beginColumn" : 4,
-                        "endLine" : 48,
-                        "endColumn" : 26,
-                        "offset" : 1154,
-                        "length" : 22
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_string"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                          },
-                          "beginLine" : 93,
-                          "beginColumn" : 4,
-                          "endLine" : 93,
-                          "endColumn" : 57,
-                          "offset" : 2911,
-                          "length" : 53
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "Out"
-                    }
-                  }
-                }
-              ],
-              "dst" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 49,
-                        "beginColumn" : 4,
-                        "endLine" : 49,
-                        "endColumn" : 30,
-                        "offset" : 1180,
-                        "length" : 26
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_string"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                          },
-                          "beginLine" : 107,
-                          "beginColumn" : 4,
-                          "endLine" : 107,
-                          "endColumn" : 56,
-                          "offset" : 3334,
-                          "length" : 52
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "In"
-                    }
-                  }
-                }
-              ],
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "isBiDirectional" : false,
-              "connectionInstances" : [
-                {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_string -> consumer", "from_filter_string"],
-                  "pos" : {
-                    "type" : "None"
-                  }
-                }
-              ],
-              "properties" : [
-              ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.7\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3694,7 +2518,7 @@
                           "beginColumn" : 4,
                           "endLine" : 90,
                           "endColumn" : 53,
-                          "offset" : 2743,
+                          "offset" : 2759,
                           "length" : 49
                         }
                       }
@@ -3749,7 +2573,7 @@
                           "beginColumn" : 4,
                           "endLine" : 104,
                           "endColumn" : 52,
-                          "offset" : 3169,
+                          "offset" : 3189,
                           "length" : 48
                         }
                       }
@@ -3780,7 +2604,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.8\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3799,7 +2623,7 @@
                     "beginColumn" : 4,
                     "endLine" : 64,
                     "endColumn" : 69,
-                    "offset" : 1852,
+                    "offset" : 1860,
                     "length" : 65
                   }
                 }
@@ -3844,7 +2668,7 @@
                           "beginColumn" : 4,
                           "endLine" : 89,
                           "endColumn" : 38,
-                          "offset" : 2704,
+                          "offset" : 2720,
                           "length" : 34
                         }
                       }
@@ -3899,7 +2723,7 @@
                           "beginColumn" : 4,
                           "endLine" : 103,
                           "endColumn" : 37,
-                          "offset" : 3132,
+                          "offset" : 3152,
                           "length" : 33
                         }
                       }
@@ -3930,191 +2754,10 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.9\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.5\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
-            {
-              "type" : "ConnectionInstance",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer.to_filter_bool -> filter.from_producer_bool"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                    },
-                    "beginLine" : 54,
-                    "beginColumn" : 4,
-                    "endLine" : 54,
-                    "endColumn" : 66,
-                    "offset" : 1372,
-                    "length" : 62
-                  }
-                }
-              },
-              "src" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                      },
-                      "beginLine" : 47,
-                      "beginColumn" : 4,
-                      "endLine" : 47,
-                      "endColumn" : 30,
-                      "offset" : 1124,
-                      "length" : 26
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_bool"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 71,
-                        "beginColumn" : 4,
-                        "endLine" : 71,
-                        "endColumn" : 54,
-                        "offset" : 2063,
-                        "length" : 50
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  }
-                }
-              },
-              "dst" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                      },
-                      "beginLine" : 48,
-                      "beginColumn" : 4,
-                      "endLine" : 48,
-                      "endColumn" : 26,
-                      "offset" : 1154,
-                      "length" : 22
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_bool"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 85,
-                        "beginColumn" : 4,
-                        "endLine" : 85,
-                        "endColumn" : 57,
-                        "offset" : 2525,
-                        "length" : 53
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  }
-                }
-              },
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "connectionRefs" : [
-                {
-                  "type" : "ConnectionReference",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c3"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 54,
-                        "beginColumn" : 4,
-                        "endLine" : 54,
-                        "endColumn" : 66,
-                        "offset" : 1372,
-                        "length" : 62
-                      }
-                    }
-                  },
-                  "context" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 30,
-                        "beginColumn" : 4,
-                        "endLine" : 30,
-                        "endColumn" : 38,
-                        "offset" : 696,
-                        "length" : 34
-                      }
-                    }
-                  },
-                  "isParent" : true
-                }
-              ],
-              "properties" : [
-              ]
-            },
             {
               "type" : "ConnectionInstance",
               "name" : {
@@ -4132,7 +2775,7 @@
                     "beginColumn" : 4,
                     "endLine" : 57,
                     "endColumn" : 64,
-                    "offset" : 1508,
+                    "offset" : 1512,
                     "length" : 60
                   }
                 }
@@ -4176,7 +2819,7 @@
                         "beginColumn" : 4,
                         "endLine" : 72,
                         "endColumn" : 57,
-                        "offset" : 2117,
+                        "offset" : 2127,
                         "length" : 53
                       }
                     }
@@ -4229,7 +2872,7 @@
                         "beginColumn" : 4,
                         "endLine" : 86,
                         "endColumn" : 60,
-                        "offset" : 2582,
+                        "offset" : 2596,
                         "length" : 56
                       }
                     }
@@ -4265,189 +2908,8 @@
                         "beginColumn" : 4,
                         "endLine" : 57,
                         "endColumn" : 64,
-                        "offset" : 1508,
+                        "offset" : 1512,
                         "length" : 60
-                      }
-                    }
-                  },
-                  "context" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 30,
-                        "beginColumn" : 4,
-                        "endLine" : 30,
-                        "endColumn" : 38,
-                        "offset" : 696,
-                        "length" : 34
-                      }
-                    }
-                  },
-                  "isParent" : true
-                }
-              ],
-              "properties" : [
-              ]
-            },
-            {
-              "type" : "ConnectionInstance",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer.to_filter_string -> filter.from_producer_string"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                    },
-                    "beginLine" : 60,
-                    "beginColumn" : 4,
-                    "endLine" : 60,
-                    "endColumn" : 70,
-                    "offset" : 1640,
-                    "length" : 66
-                  }
-                }
-              },
-              "src" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                      },
-                      "beginLine" : 47,
-                      "beginColumn" : 4,
-                      "endLine" : 47,
-                      "endColumn" : 30,
-                      "offset" : 1124,
-                      "length" : 26
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "producer", "to_filter_string"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 73,
-                        "beginColumn" : 4,
-                        "endLine" : 73,
-                        "endColumn" : 55,
-                        "offset" : 2174,
-                        "length" : 51
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  }
-                }
-              },
-              "dst" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                      },
-                      "beginLine" : 48,
-                      "beginColumn" : 4,
-                      "endLine" : 48,
-                      "endColumn" : 26,
-                      "offset" : 1154,
-                      "length" : 22
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "from_producer_string"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 87,
-                        "beginColumn" : 4,
-                        "endLine" : 87,
-                        "endColumn" : 58,
-                        "offset" : 2642,
-                        "length" : 54
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  }
-                }
-              },
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "connectionRefs" : [
-                {
-                  "type" : "ConnectionReference",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c7"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 60,
-                        "beginColumn" : 4,
-                        "endLine" : 60,
-                        "endColumn" : 70,
-                        "offset" : 1640,
-                        "length" : 66
                       }
                     }
                   },
@@ -4538,7 +3000,7 @@
                         "beginColumn" : 4,
                         "endLine" : 70,
                         "endColumn" : 51,
-                        "offset" : 2012,
+                        "offset" : 2020,
                         "length" : 47
                       }
                     }
@@ -4591,7 +3053,7 @@
                         "beginColumn" : 4,
                         "endLine" : 84,
                         "endColumn" : 54,
-                        "offset" : 2471,
+                        "offset" : 2483,
                         "length" : 50
                       }
                     }
@@ -4675,7 +3137,7 @@
                     "beginColumn" : 4,
                     "endLine" : 63,
                     "endColumn" : 68,
-                    "offset" : 1784,
+                    "offset" : 1792,
                     "length" : 64
                   }
                 }
@@ -4719,7 +3181,7 @@
                         "beginColumn" : 4,
                         "endLine" : 69,
                         "endColumn" : 36,
-                        "offset" : 1976,
+                        "offset" : 1984,
                         "length" : 32
                       }
                     }
@@ -4772,7 +3234,7 @@
                         "beginColumn" : 4,
                         "endLine" : 83,
                         "endColumn" : 39,
-                        "offset" : 2432,
+                        "offset" : 2444,
                         "length" : 35
                       }
                     }
@@ -4808,189 +3270,8 @@
                         "beginColumn" : 4,
                         "endLine" : 63,
                         "endColumn" : 68,
-                        "offset" : 1784,
+                        "offset" : 1792,
                         "length" : 64
-                      }
-                    }
-                  },
-                  "context" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 30,
-                        "beginColumn" : 4,
-                        "endLine" : 30,
-                        "endColumn" : 38,
-                        "offset" : 696,
-                        "length" : 34
-                      }
-                    }
-                  },
-                  "isParent" : true
-                }
-              ],
-              "properties" : [
-              ]
-            },
-            {
-              "type" : "ConnectionInstance",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter.to_consumer_bool -> consumer.from_filter_bool"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                    },
-                    "beginLine" : 55,
-                    "beginColumn" : 4,
-                    "endLine" : 55,
-                    "endColumn" : 66,
-                    "offset" : 1438,
-                    "length" : 62
-                  }
-                }
-              },
-              "src" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                      },
-                      "beginLine" : 48,
-                      "beginColumn" : 4,
-                      "endLine" : 48,
-                      "endColumn" : 26,
-                      "offset" : 1154,
-                      "length" : 22
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_bool"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 91,
-                        "beginColumn" : 4,
-                        "endLine" : 91,
-                        "endColumn" : 56,
-                        "offset" : 2796,
-                        "length" : 52
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  }
-                }
-              },
-              "dst" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                      },
-                      "beginLine" : 49,
-                      "beginColumn" : 4,
-                      "endLine" : 49,
-                      "endColumn" : 30,
-                      "offset" : 1180,
-                      "length" : 26
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_bool"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 105,
-                        "beginColumn" : 4,
-                        "endLine" : 105,
-                        "endColumn" : 55,
-                        "offset" : 3221,
-                        "length" : 51
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  }
-                }
-              },
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "connectionRefs" : [
-                {
-                  "type" : "ConnectionReference",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c4"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 55,
-                        "beginColumn" : 4,
-                        "endLine" : 55,
-                        "endColumn" : 66,
-                        "offset" : 1438,
-                        "length" : 62
                       }
                     }
                   },
@@ -5037,7 +3318,7 @@
                     "beginColumn" : 4,
                     "endLine" : 58,
                     "endColumn" : 64,
-                    "offset" : 1572,
+                    "offset" : 1576,
                     "length" : 60
                   }
                 }
@@ -5081,7 +3362,7 @@
                         "beginColumn" : 4,
                         "endLine" : 92,
                         "endColumn" : 59,
-                        "offset" : 2852,
+                        "offset" : 2870,
                         "length" : 55
                       }
                     }
@@ -5134,7 +3415,7 @@
                         "beginColumn" : 4,
                         "endLine" : 106,
                         "endColumn" : 58,
-                        "offset" : 3276,
+                        "offset" : 3298,
                         "length" : 54
                       }
                     }
@@ -5170,189 +3451,8 @@
                         "beginColumn" : 4,
                         "endLine" : 58,
                         "endColumn" : 64,
-                        "offset" : 1572,
+                        "offset" : 1576,
                         "length" : 60
-                      }
-                    }
-                  },
-                  "context" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 30,
-                        "beginColumn" : 4,
-                        "endLine" : 30,
-                        "endColumn" : 38,
-                        "offset" : 696,
-                        "length" : 34
-                      }
-                    }
-                  },
-                  "isParent" : true
-                }
-              ],
-              "properties" : [
-              ]
-            },
-            {
-              "type" : "ConnectionInstance",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter.to_consumer_string -> consumer.from_filter_string"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                    },
-                    "beginLine" : 61,
-                    "beginColumn" : 4,
-                    "endLine" : 61,
-                    "endColumn" : 70,
-                    "offset" : 1710,
-                    "length" : 66
-                  }
-                }
-              },
-              "src" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                      },
-                      "beginLine" : 48,
-                      "beginColumn" : 4,
-                      "endLine" : 48,
-                      "endColumn" : 26,
-                      "offset" : 1154,
-                      "length" : 22
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "filter", "to_consumer_string"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 93,
-                        "beginColumn" : 4,
-                        "endLine" : 93,
-                        "endColumn" : 57,
-                        "offset" : 2911,
-                        "length" : 53
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  }
-                }
-              },
-              "dst" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                      },
-                      "beginLine" : 49,
-                      "beginColumn" : 4,
-                      "endLine" : 49,
-                      "endColumn" : 30,
-                      "offset" : 1180,
-                      "length" : 26
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "consumer", "from_filter_string"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 107,
-                        "beginColumn" : 4,
-                        "endLine" : 107,
-                        "endColumn" : 56,
-                        "offset" : 3334,
-                        "length" : 52
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  }
-                }
-              },
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "connectionRefs" : [
-                {
-                  "type" : "ConnectionReference",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Bit_Codec_Sys_Impl_Instance", "proc", "c8"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/Bit_Codec\/Bit_Codec.aadl"
-                        },
-                        "beginLine" : 61,
-                        "beginColumn" : 4,
-                        "endLine" : 61,
-                        "endColumn" : 70,
-                        "offset" : 1710,
-                        "length" : 66
                       }
                     }
                   },
@@ -5443,7 +3543,7 @@
                         "beginColumn" : 4,
                         "endLine" : 90,
                         "endColumn" : 53,
-                        "offset" : 2743,
+                        "offset" : 2759,
                         "length" : 49
                       }
                     }
@@ -5496,7 +3596,7 @@
                         "beginColumn" : 4,
                         "endLine" : 104,
                         "endColumn" : 52,
-                        "offset" : 3169,
+                        "offset" : 3189,
                         "length" : 48
                       }
                     }
@@ -5580,7 +3680,7 @@
                     "beginColumn" : 4,
                     "endLine" : 64,
                     "endColumn" : 69,
-                    "offset" : 1852,
+                    "offset" : 1860,
                     "length" : 65
                   }
                 }
@@ -5624,7 +3724,7 @@
                         "beginColumn" : 4,
                         "endLine" : 89,
                         "endColumn" : 38,
-                        "offset" : 2704,
+                        "offset" : 2720,
                         "length" : 34
                       }
                     }
@@ -5677,7 +3777,7 @@
                         "beginColumn" : 4,
                         "endLine" : 103,
                         "endColumn" : 37,
-                        "offset" : 3132,
+                        "offset" : 3152,
                         "length" : 33
                       }
                     }
@@ -5713,7 +3813,7 @@
                         "beginColumn" : 4,
                         "endLine" : 64,
                         "endColumn" : 69,
-                        "offset" : 1852,
+                        "offset" : 1860,
                         "length" : 65
                       }
                     }
@@ -6064,75 +4164,6 @@
         "type" : "Some",
         "value" : {
           "type" : "Classifier",
-          "name" : "Base_Types::Boolean"
-        }
-      },
-      "features" : [
-      ],
-      "subComponents" : [
-      ],
-      "connections" : [
-      ],
-      "connectionInstances" : [
-      ],
-      "properties" : [
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Data_Model::Data_Representation"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                },
-                "beginLine" : 27,
-                "beginColumn" : 4,
-                "endLine" : 30,
-                "endColumn" : 36,
-                "offset" : 1165,
-                "length" : 162
-              }
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "ValueProp",
-              "value" : "Boolean"
-            }
-          ],
-          "appliesTo" : [
-          ]
-        }
-      ],
-      "flows" : [
-      ],
-      "modes" : [
-      ],
-      "annexes" : [
-      ],
-      "uriFrag" : ""
-    },
-    {
-      "type" : "Component",
-      "identifier" : {
-        "type" : "Name",
-        "name" : [],
-        "pos" : {
-          "type" : "None"
-        }
-      },
-      "category" : {
-        "type" : "ComponentCategory",
-        "value" : "Data"
-      },
-      "classifier" : {
-        "type" : "Some",
-        "value" : {
-          "type" : "Classifier",
           "name" : "Base_Types::Unsigned_32"
         }
       },
@@ -6206,75 +4237,6 @@
                 "type" : "Some",
                 "value" : "bits"
               }
-            }
-          ],
-          "appliesTo" : [
-          ]
-        }
-      ],
-      "flows" : [
-      ],
-      "modes" : [
-      ],
-      "annexes" : [
-      ],
-      "uriFrag" : ""
-    },
-    {
-      "type" : "Component",
-      "identifier" : {
-        "type" : "Name",
-        "name" : [],
-        "pos" : {
-          "type" : "None"
-        }
-      },
-      "category" : {
-        "type" : "ComponentCategory",
-        "value" : "Data"
-      },
-      "classifier" : {
-        "type" : "Some",
-        "value" : {
-          "type" : "Classifier",
-          "name" : "Base_Types::String"
-        }
-      },
-      "features" : [
-      ],
-      "subComponents" : [
-      ],
-      "connections" : [
-      ],
-      "connectionInstances" : [
-      ],
-      "properties" : [
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Data_Model::Data_Representation"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                },
-                "beginLine" : 27,
-                "beginColumn" : 4,
-                "endLine" : 30,
-                "endColumn" : 36,
-                "offset" : 1165,
-                "length" : 162
-              }
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "ValueProp",
-              "value" : "String"
             }
           ],
           "appliesTo" : [
