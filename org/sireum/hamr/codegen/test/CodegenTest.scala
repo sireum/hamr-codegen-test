@@ -283,8 +283,6 @@ trait CodeGenTest extends TestSuite {
 
       case (TestMode.Camkes, CodeGenPlatform.SeL4) => T
 
-      case (TestMode.Camkes_TranspileNix, _) => T
-
       case _ => F
     }
     return shouldRun

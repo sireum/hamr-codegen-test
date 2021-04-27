@@ -6,11 +6,11 @@ import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
 import org.sireum.hamr.codegen.test.util.TestMode
 
-class TranspileTests extends CodeGenTest {
+class HamrTranspileTests extends CodeGenTest {
 
   override def testMode: TestMode.Type = TestMode.Transpile
 
-  override def generateExpected: B = if (super.generateExpected) T else T
+  override def generateExpected: B = if (super.generateExpected) T else F
 
   val (linux, sel4, sel4_tb, sel4_only) = (CodeGenPlatform.Linux, CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
 
@@ -32,8 +32,8 @@ class TranspileTests extends CodeGenTest {
 
   for (proj <- tests) {
     for (platform <- proj._4) {
-      // append 'tt_' so it doesn't use the expected results from the 'normal' tests
-      test(s"tt_${proj._1}--${platform}", proj._2, proj._3,
+      // append classname so it doesn't use the expected results from the 'normal' tests
+      test(s"${getClass.getSimpleName}_${proj._1}--${platform}", proj._2, proj._3,
         baseOptions(platform = platform, verbose = F), resultDir, None(), None())
     }
   }
