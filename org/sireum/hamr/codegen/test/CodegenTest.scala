@@ -99,7 +99,6 @@ trait CodeGenTest extends TestSuite {
       if(shouldTranspile(testOps.platform)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
 
     if(reporter.hasError) {
-      reporter.printMessages()
       assert(F)
     }
 

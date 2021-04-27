@@ -1,7 +1,8 @@
-package org.sireum.hamr.codegen.test
+package org.sireum.hamr.codegen.test.expensive
 
 import org.sireum._
 import org.sireum.hamr.codegen.CodeGenPlatform
+import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
 import org.sireum.hamr.codegen.test.util.TestMode
 
