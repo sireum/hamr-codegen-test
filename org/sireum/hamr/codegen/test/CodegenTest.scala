@@ -8,7 +8,7 @@ import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.TranspilerConfig
 import org.sireum.hamr.codegen.common.util.test.{TestJSON, TestMsgPack, TestResource, TestResult, TestUtil}
-import org.sireum.hamr.codegen.test.util.TestModes
+import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.hamr.ir._
 import org.sireum.message._
 import org.sireum.test.TestSuite
@@ -23,8 +23,10 @@ trait CodeGenTest extends TestSuite {
   def generateExpected: B = F
   def delResultDirIfEqual: B = F
 
-  def testMode: TestModes.Type = TestModes.Base
-  //def testMode: TestModes.Type = TestModes.Base_TranspileNix_Camkes
+  def testMode: TestMode.Type = Os.env("HamrTestMode") match {
+    case Some(t) => TestMode.byName(t).get
+    case _ => TestMode.Codegen
+  }
 
   def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
@@ -263,8 +265,8 @@ trait CodeGenTest extends TestSuite {
 
   def runCamkesNinja(platform: CodeGenPlatform.Type): B = {
     val isCamkes: B = testMode match {
-      case TestModes.Base_Camkes => T
-      case TestModes.Base_TranspileNix_Camkes => T
+      case TestMode.Camkes => T
+      case TestMode.Camkes_TranspileNix => T
       case _ => F
     }
     return isCamkes && isSeL4(platform)
@@ -272,15 +274,17 @@ trait CodeGenTest extends TestSuite {
 
   def shouldTranspile(platform: CodeGenPlatform.Type): B = {
     val shouldRun: B = (testMode, platform) match {
-      case (TestModes.Base, _) => F
+      case (TestMode.Codegen, _) => F
 
-      case (TestModes.Base_TranspileNix, CodeGenPlatform.Linux) |
-           (TestModes.Base_TranspileNix, CodeGenPlatform.MacOS) |
-           (TestModes.Base_TranspileNix, CodeGenPlatform.Cygwin) => T
+      case (TestMode.Transpile, _) => T
 
-      case (TestModes.Base_Camkes, CodeGenPlatform.SeL4) => T
+      case (TestMode.TranspileNix, CodeGenPlatform.Linux) |
+           (TestMode.TranspileNix, CodeGenPlatform.MacOS) |
+           (TestMode.TranspileNix, CodeGenPlatform.Cygwin) => T
 
-      case (TestModes.Base_TranspileNix_Camkes, _) => T
+      case (TestMode.Camkes, CodeGenPlatform.SeL4) => T
+
+      case (TestMode.Camkes_TranspileNix, _) => T
 
       case _ => F
     }
@@ -378,6 +382,7 @@ object CodeGenTest {
     args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, ":")}""".render
     tc.output.map(s => add("--output-dir", s))
     tc.projectName.map(s => add("--name", s))
+    addKey("--strict-aliasing")
     add("--apps", st"""${(tc.apps, ",")}""".render)
     add("--fingerprint", tc.fingerprint.string)
     add("--bits", tc.bitWidth.string)
