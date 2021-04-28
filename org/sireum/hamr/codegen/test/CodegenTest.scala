@@ -376,7 +376,9 @@ object CodeGenTest {
       args = args :+ key :+ value
     }
 
-    args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, ":")}""".render
+    val pathSep: String = if(Os.isWin) ";" else ":"
+
+    args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, pathSep)}""".render
     tc.output.map(s => add("--output-dir", s))
     tc.projectName.map(s => add("--name", s))
     addKey("--strict-aliasing")
@@ -390,14 +392,14 @@ object CodeGenTest {
     if (tc.forwarding.nonEmpty) add("--forward", st"""${(tc.forwarding, ",")}""".render)
     tc.stackSize.map(s => add("--stack-size", s))
     if (tc.stableTypeId) addKey("--stable-type-id")
-    if (tc.exts.nonEmpty) add("--exts", st"""${(tc.exts, ":")}""".render)
+    if (tc.exts.nonEmpty) add("--exts", st"""${(tc.exts, pathSep)}""".render)
     if (tc.libOnly) addKey("--lib-only")
     if (tc.verbose) addKey("--verbose")
     if (tc.cmakeIncludes.nonEmpty) add("--cmake-includes", st"""${(tc.cmakeIncludes, ",")}""".render)
 
     //args.foreach(p => println(p))
 
-    val sireum = Os.path(Os.env("PWD").get) / "bin" / "sireum"
+    val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
 
     args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
 
