@@ -1,0 +1,3 @@
+system_impl_file=Physical_Components/VPM/VPM.aadl
+system_impl=VPM_8600B_Ext.impl
+projects=.
