@@ -27,6 +27,8 @@ class CodegenTest_CASE extends CodeGenTest {
 
       gen("uav_june_step6", "UAV_UAV_Impl_Instance.json", ISZ(linux, sel4)),
 
+      gen("VPM_ben", "VPM_VPM_8600B_Ext_impl_Instance.json", ISZ(linux, sel4)),
+
       gen("attestation-gate", "SysContext_top_Impl_Instance.json", ISZ(sel4)),
 
       gen("simple_uav", "UAV_UAV_Impl_Instance.json", ISZ(sel4_tb, sel4_only)),

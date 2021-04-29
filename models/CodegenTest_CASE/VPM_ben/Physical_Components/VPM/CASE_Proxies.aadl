@@ -1,0 +1,212 @@
+--Copyright � 2021 Rockwell Collins, Inc., a part of Collins Aerospace
+package CASE_Proxies
+public
+
+	with DTU_Types;
+	with ADSB_Types;
+	with Base_Types;
+	with Data_Model;
+	with VPM;
+	with HAMR;
+
+	process Proxy_High
+		features
+			ADSB_Heartbeat_In: in event data port ADSB_Types::HeartBeat_Message.impl;
+			ADSB_Ownship_In: in event data port ADSB_Types::TrafficReport.impl;
+			ADSB_Traffic_In: in event data port ADSB_Types::TrafficReport.impl {Acceptable_Array_Size => (0 .. 150);};
+
+			SHM_QUEUE_ADSB_Heartbeat_Out: out event data port shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_Out: out event data port shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_Out: out event data port shm_queue_adsb_traffic.impl;
+
+			Response_In: in event data port DTU_Types::Response_Message.impl;
+			SHM_QUEUE_Request_In: in event data port shm_queue_vdtu_request.impl;
+
+			Request_Out: out event data port DTU_Types::Request_Message.impl;
+			SHM_QUEUE_Response_Out: out event data port shm_queue_vdtu_response.impl;
+	end Proxy_High;
+
+	process implementation Proxy_High.impl
+	end Proxy_High.impl;
+
+	process Proxy_Low
+		features
+			SHM_QUEUE_ADSB_Heartbeat_In: in event data port shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_In: in event data port shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_In: in event data port shm_queue_adsb_traffic.impl;
+
+			ADSB_Heartbeat_Out: out event data port ADSB_Types::HeartBeat_Message.impl;
+			ADSB_Ownship_Out: out event data port ADSB_Types::TrafficReport.impl;
+			ADSB_Traffic_Out: out event data port ADSB_Types::TrafficReport.impl {Acceptable_Array_Size => (0 .. 150);};
+
+			SHM_QUEUE_Suspect_Traffic_In1: in event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			SHM_QUEUE_Suspect_Traffic_In2: in event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			SHM_QUEUE_Suspect_Traffic_In3: in event data port CASE_Proxies::shm_queue_monitor_report.impl;
+
+			Suspect_Traffic_Out1: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			Suspect_Traffic_Out2: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			Suspect_Traffic_Out3: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+
+			Request_In: in event data port DTU_Types::Request_Message.impl;
+			AttestationResponse: in event data port VPM::CASE_AttestationResponseMsg.impl;
+			SHM_QUEUE_Response_In: in event data port shm_queue_vdtu_response.impl;
+			SHM_QUEUE_AttestationRequest: in event data port shm_queue_attestation_request.impl;
+
+			Response_Out: out event data port DTU_Types::Response_Message.impl;
+			AttestationRequest: out event data port VPM::CASE_AttestationRequestMsg.impl;
+			SHM_QUEUE_Request_Out: out event data port shm_queue_vdtu_request.impl;
+			SHM_QUEUE_AttestationResponse: out event data port shm_queue_attestation_response.impl;
+	end Proxy_Low;
+
+	process implementation Proxy_Low.impl
+
+	end Proxy_Low.impl;
+
+	----------------------------------------------------------------------
+	-- Message Definitions
+	----------------------------------------------------------------------
+	-- list of indexes in the protocol table corresponding to  remote computer connections that have passed attestation
+	data WhiteList
+		properties
+			Data_Model::Data_Representation => Array;
+			Data_Model::Base_Type => (classifier (Base_Types::Unsigned_32));
+			Data_Model::Dimension => (4);
+			Data_Size => 16 Bytes;
+	end WhiteList;
+
+	data implementation WhiteList.impl
+		properties
+			HAMR::Bit_Codec_Max_Size => 16 Bytes;
+	end WhiteList.impl;
+
+	data shm_queue_element
+		properties
+			Data_Model::Data_Representation => Struct;
+	end shm_queue_element;
+
+	data shm_queue_header
+		properties
+			Data_Model::Data_Representation => Struct;
+	end shm_queue_header;
+
+	data implementation shm_queue_header.impl
+		subcomponents
+			length: data Base_Types::Unsigned_32;
+			tag: data Base_Types::Unsigned_32;
+			command: data Base_Types::Unsigned_8;
+			protocol_index: data Base_Types::Unsigned_32; --index in the protocol table corresponding to the remote computer connection
+		properties
+			HAMR::Bit_Codec_Max_Size => 32 Bytes;
+	end shm_queue_header.impl;
+
+	data implementation shm_queue_element.impl
+		subcomponents
+			header: data shm_queue_header.impl;
+			payload: data;
+	end shm_queue_element.impl;
+
+	data connection_command
+		properties
+			Data_Model::Data_Representation => Struct;
+	end connection_command;
+
+	data implementation connection_command.impl
+		subcomponents
+			tag: data Base_Types::Unsigned_32;
+			command: data Base_Types::Unsigned_8;
+			protocol_index: data Base_Types::Unsigned_32;
+		properties
+			HAMR::Bit_Codec_Max_Size => 24 Bytes;
+	end connection_command.impl;
+
+	-- Tagged ADS-B Message Definitions
+	data shm_queue_adsb_Heartbeat extends shm_queue_element
+	end shm_queue_adsb_Heartbeat;
+
+	data implementation shm_queue_adsb_Heartbeat.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data ADSB_Types::HeartBeat_Message.impl;
+	end shm_queue_adsb_Heartbeat.impl;
+
+	data shm_queue_adsb_ownship extends shm_queue_element
+	end shm_queue_adsb_ownship;
+
+	data implementation shm_queue_adsb_ownship.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data ADSB_Types::TrafficReport.impl;
+	end shm_queue_adsb_ownship.impl;
+
+	data shm_queue_adsb_traffic extends shm_queue_element
+	end shm_queue_adsb_traffic;
+
+	data implementation shm_queue_adsb_traffic.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data ADSB_Types::TrafficReport.impl {Acceptable_Array_Size => (0 .. 150);};
+	end shm_queue_adsb_traffic.impl;
+
+	data shm_queue_monitor_report extends shm_queue_element
+	end shm_queue_monitor_report;
+
+	data implementation shm_queue_monitor_report.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data ADSB_Types::MonitorReport.impl;
+	end shm_queue_monitor_report.impl;
+
+	-- Tagged VDTU Message Definitions
+	data shm_queue_vdtu_request extends shm_queue_element
+	end shm_queue_vdtu_request;
+
+	data implementation shm_queue_vdtu_request.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data DTU_Types::Request_Message.impl;
+	end shm_queue_vdtu_request.impl;
+
+	data shm_queue_request_array extends shm_queue_element
+	end shm_queue_request_array;
+
+	data implementation shm_queue_request_array.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data RequestArray.impl;
+		properties
+			HAMR::Bit_Codec_Max_Size => 8224 Bytes; -- 2048 * 4 + 32 bytes
+	end shm_queue_request_array.impl;
+
+	data shm_queue_vdtu_response extends shm_queue_element
+	end shm_queue_vdtu_response;
+
+	data implementation shm_queue_vdtu_response.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data DTU_Types::Response_Message.impl;
+	end shm_queue_vdtu_response.impl;
+
+	-- Tagged Attestation Message Definitions
+	data shm_queue_attestation_request extends shm_queue_element
+	end shm_queue_attestation_request;
+
+	data implementation shm_queue_attestation_request.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data VPM::CASE_AttestationRequestMsg.impl;
+	end shm_queue_attestation_request.impl;
+
+	data shm_queue_attestation_response extends shm_queue_element
+	end shm_queue_attestation_response;
+
+	data implementation shm_queue_attestation_response.impl extends shm_queue_element.impl
+		subcomponents
+			payload: refined to data VPM::CASE_AttestationResponseMsg.impl;
+	end shm_queue_attestation_response.impl;
+
+	data RequestArray
+		properties
+			Data_Model::Data_Representation => Array;
+			Data_Model::Base_Type => (classifier (DTU_Types::Request_Message));
+			Data_Model::Dimension => (4);
+			Data_Size => 8192 Bytes;
+	end RequestArray;
+
+	data implementation RequestArray.impl
+		properties
+			HAMR::Bit_Codec_Max_Size => 8192 Bytes; -- 2048 * 4 bytes
+	end RequestArray.impl;
+
+end CASE_Proxies;

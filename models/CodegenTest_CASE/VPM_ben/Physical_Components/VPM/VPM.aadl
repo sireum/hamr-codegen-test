@@ -1,0 +1,837 @@
+--Copyright © 2021 Rockwell Collins, Inc., a part of Collins Aerospace
+package VPM
+public
+
+	with LRUs,Processors,Memories;
+	with Busses;
+	with DTU_Types;
+	with ADSB_Types;
+	with CASE_Proxies;
+	with Base_Types;
+	with Common_Types;
+	with Data_Model;
+	with CASE_Properties;
+	with CASE_AGREE; renames CASE_AGREE::all;
+	with HAMR;
+	with CASE_Scheduling;
+	
+	thread adapter_high
+		-- automagically generated
+		features
+			-- high to low messages
+			SHM_QUEUE_ADSB_Heartbeat_In: in event data port CASE_Proxies::shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_In: in event data port CASE_Proxies::shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_In: in event data port CASE_Proxies::shm_queue_adsb_traffic.impl;
+			SHM_QUEUE_Response_In: in event data port CASE_Proxies::shm_queue_vdtu_response.impl;
+			
+			Response_Out: out event data port DTU_Types::Response_Message.impl;
+			ADSB_Messages_Out: out event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			
+			SHM_HEADER_adsb_to_ptab: out event data port CASE_Proxies::shm_queue_header.impl;
+            Connection_Command_Out: out event data port CASE_Proxies::connection_command.impl;
+            
+            -- low to high messages
+			Request_In: in event data port CASE_Proxies::shm_queue_request_array.impl;
+			
+			SHM_QUEUE_Request_Out: out event data port CASE_Proxies::shm_queue_vdtu_request.impl;
+			
+			Connection_Command_In: in event data port CASE_Proxies::connection_command.impl;
+    	properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 10ms .. 50ms;
+			Period => 250ms;
+	end adapter_high;
+	
+	thread implementation adapter_high.impl
+		
+	end adapter_high.impl;
+	
+	thread adapter_low
+		-- automagically generated
+		features
+			-- high to low messages
+			ADSB_Messages_In: in event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			Response_In: in event data port DTU_Types::Response_Message.impl;
+			AttestationRequest: in event data port CASE_AttestationRequestMsg.impl;
+			
+			SHM_QUEUE_ADSB_Heartbeat_Out: out event data port CASE_Proxies::shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_Out: out event data port CASE_Proxies::shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_Out: out event data port CASE_Proxies::shm_queue_adsb_traffic.impl;
+			SHM_QUEUE_Response_Out: out event data port CASE_Proxies::shm_queue_vdtu_response.impl;
+			SHM_QUEUE_AttestationRequest: out event data port CASE_Proxies::shm_queue_attestation_request.impl;
+			
+			SHM_HEADER_adsb_to_ptab: in event data port CASE_Proxies::shm_queue_header.impl;
+            Connection_Command_In: in event data port CASE_Proxies::connection_command.impl;
+            
+            Suspect_Traffic_In1: in event data port ADSB_Types::MonitorReport.impl;
+			SHM_QUEUE_Suspect_Traffic_Out1: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			Suspect_Traffic_In2: in event data port ADSB_Types::MonitorReport.impl;
+			SHM_QUEUE_Suspect_Traffic_Out2: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			Suspect_Traffic_In3: in event data port ADSB_Types::MonitorReport.impl;
+			SHM_QUEUE_Suspect_Traffic_Out3: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+            
+            -- low to high messages
+			SHM_QUEUE_Request_In: in event data port CASE_Proxies::shm_queue_vdtu_request.impl;
+			SHM_QUEUE_AttestationResponse: in event data port CASE_Proxies::shm_queue_attestation_response.impl;
+			
+			SHM_QUEUE_Request_Out: out event data port CASE_Proxies::shm_queue_request_array.impl;
+			AttestationResponse: out event data port CASE_AttestationResponseMsg.impl;
+			
+			Connection_Command_Out: out event data port CASE_Proxies::connection_command.impl;
+			
+			InitiateAttestation: out event data port Common_Types::Unsigned_32;
+			TerminateAttestation: in event data port Common_Types::Unsigned_32;
+    	properties
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 10ms .. 50ms;
+			Period => 500ms;
+	end adapter_low;
+	
+	thread implementation adapter_low.impl
+		
+	end adapter_low.impl;
+	
+	--------------------------------------------------
+	-- Expected Position Monitor
+	--------------------------------------------------
+	thread CASE_Monitor1
+		features
+			Observed: in event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			Suspect_Traffic_Out: out event data port ADSB_Types::MonitorReport.impl;
+		properties
+			CASE_Properties::Monitoring => 100;
+			CASE_Properties::Component_Language => CakeML;
+			CASE_Properties::Component_Spec => ("CASE_Monitor1_Suspect_Traffic_Out");
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 10ms .. 50ms;
+			Period => 500ms;
+		annex agree {**
+			const is_latched : bool = false;
+			const MONITOR_ID : int = 1;
+			
+			eq IDs : ADSB_Types::TargetIdentityArray = flatmap i in indices(Observed.Traffic), [| (Observed.Traffic[i]).TargetIdentity |];
+			eq prev_IDs : ADSB_Types::TargetIdentityArray = prev(IDs, flatmap i2 in indices(Observed.Traffic), [| DISTINCT |]);
+			eq lat : ADSB_Types::LatitudeArray = flatmap i3 in indices(Observed.Traffic), [| (Observed.Traffic[i3]).Latitude |];
+			eq prev_lat : ADSB_Types::LatitudeArray = prev(lat, flatmap i4 in indices(Observed.Traffic), [| 0 |]);
+			eq long : ADSB_Types::LongitudeArray = flatmap i5 in indices(Observed.Traffic), [| (Observed.Traffic[i5]).Longitude |];
+			eq prev_long : ADSB_Types::LongitudeArray = prev(long, flatmap i6 in indices(Observed.Traffic), [| 0 |]);
+			eq alt : ADSB_Types::AltitudeArray = flatmap i7 in indices(Observed.Traffic), [| (Observed.Traffic[i7]).Altitude |];
+			eq prev_alt : ADSB_Types::AltitudeArray = prev(alt, flatmap i8 in indices(Observed.Traffic), [| 0 |]);
+			
+			fun PREV_IN_REPORT (msg : ADSB_Types::ADSB_Aggregated_Message.impl, index : int) : bool =
+				exists ID in prev_IDs, 
+					(msg.Traffic[index]).TargetIdentity = ID;
+			
+			fun GET_PREV_INDEX (msg : ADSB_Types::ADSB_Aggregated_Message.impl, index : int) : int =
+				foldl i in indices(prev_IDs) into index2 = 0, if prev_IDs[i] = (msg.Traffic[index]).TargetIdentity then i else 0;
+			
+			fun ANAMOLY_IN_REPORT (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : bool = 
+				exists index in indices(msg.Traffic), IS_ANAMALOUS_TRAFFIC1(msg, index);
+
+			fun IS_ANAMALOUS_TRAFFIC1 (msg : ADSB_Types::ADSB_Aggregated_Message.impl, index : int) : bool =
+				PREV_IN_REPORT(msg, index) and ANAMALOUS_STATE(msg.Traffic[index], GET_PREV_INDEX(msg, index));
+			
+			fun UPDATE_SUSPECT_IDS (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : ADSB_Types::SuspectTrafficArray = 
+				flatmap i in indices(msg.Traffic), 
+					[| if IS_ANAMALOUS_TRAFFIC1(msg, i) then 
+					      GET_TARGET_ID(msg.Traffic, i) 
+					   else DISTINCT2 |];
+			
+			fun UPDATE_OUTPUT_REPORT (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : ADSB_Types::MonitorReport.impl =
+				ADSB_Types::MonitorReport.impl {MessageID = MONITOR_MSG_ID; MonitorID = MONITOR_ID; Spare = 0; SuspectTraffic = UPDATE_SUSPECT_IDS(msg)};
+				
+			-- Uninterpreted function
+			type state_bounds = struct {v_horz_lb: real, v_horz_ub: real, orientation_lb: real, orientation_ub: real, v_vert_lb: int, v_vert_ub: int};
+			
+			uninterpreted calculateBoundaries(prev_lat: real, curr_lat: real, prev_long: real, curr_long: real, prev_alt: int, curr_alt: int) : state_bounds;
+						
+			fun GET_BOUNDS (curr_traffic : ADSB_Types::TrafficReport.impl, prev_index : int) : state_bounds =
+				calculateBoundaries(LAT_LONG_TO_DEG(prev_lat[prev_index]), LAT_LONG_TO_DEG(curr_traffic.Latitude), LAT_LONG_TO_DEG(prev_long[prev_index]), LAT_LONG_TO_DEG(curr_traffic.Longitude), ALTITUDE_TO_FT(prev_alt[prev_index]), ALTITUDE_TO_FT(curr_traffic.Altitude));
+				
+			fun ANAMALOUS_STATE (curr_traffic : ADSB_Types::TrafficReport.impl, prev_index : int) : bool =
+				(real(curr_traffic.HorizontalVelocity) >= GET_BOUNDS(curr_traffic,prev_index).v_horz_lb) and
+				(real(curr_traffic.HorizontalVelocity) <= GET_BOUNDS(curr_traffic,prev_index).v_horz_ub) and
+				(ORIENTATION_TO_DEG(curr_traffic.TrackHeading) >= GET_BOUNDS(curr_traffic,prev_index).orientation_lb) and
+				(ORIENTATION_TO_DEG(curr_traffic.TrackHeading) <= GET_BOUNDS(curr_traffic,prev_index).orientation_ub) and
+				(VERT_VEL_TO_FPM(curr_traffic.VerticalVelocity) >= GET_BOUNDS(curr_traffic,prev_index).v_vert_lb) and
+				(VERT_VEL_TO_FPM(curr_traffic.VerticalVelocity) <= GET_BOUNDS(curr_traffic,prev_index).v_vert_ub);
+			
+			guarantee CASE_Monitor1_Suspect_Traffic_Out
+			  "Output duplicated IDs in traffic reports" : 
+			     if event(Observed) and ANAMOLY_IN_REPORT(Observed) then 
+			        event (Suspect_Traffic_Out) and (Suspect_Traffic_Out = UPDATE_OUTPUT_REPORT(Observed))
+			     else not(event(Suspect_Traffic_Out));
+			
+			**};
+	end CASE_Monitor1;
+
+	thread implementation CASE_Monitor1.Impl
+
+	end CASE_Monitor1.Impl;
+	
+	--------------------------------------------------
+	-- Duplicate Entity Monitor
+	--------------------------------------------------
+	thread CASE_Monitor2
+		features
+			Observed: in event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			Suspect_Traffic_Out: out event data port ADSB_Types::MonitorReport.impl;
+		properties
+			CASE_Properties::Monitoring => 100;
+			CASE_Properties::Component_Language => CakeML;
+			CASE_Properties::Component_Spec => ("CASE_Monitor2_Suspect_Traffic_Out");
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 10ms .. 50ms;
+			Period => 500ms;
+		annex agree {**
+			const is_latched : bool = false;
+			const MONITOR_ID : int = 2; 
+			
+			fun IS_DUPLICATE_ID (traffic1 : ADSB_Types::TrafficReport.impl, traffic2 : ADSB_Types::TrafficReport.impl) : bool =
+				traffic1.TargetIdentity = traffic2.TargetIdentity and
+				not(traffic1.TargetIdentity = DISTINCT);
+						
+			fun IS_DUPLICATE_TRAFFIC (msg : ADSB_Types::ADSB_Aggregated_Message.impl, index : int) : bool =
+				exists dup_index in indices(msg.Traffic), 
+					not(dup_index = index) and
+					IS_DUPLICATE_ID(msg.Traffic[index], msg.Traffic[dup_index]);
+					
+			fun IS_DUPLICATE_OWNSHIP (msg : ADSB_Types::ADSB_Aggregated_Message.impl, index : int) : bool =
+				IS_DUPLICATE_ID(msg.Ownship, msg.Traffic[index]);
+				
+			fun DUPLICATE_IN_REPORT (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : bool = 
+				exists index in indices(msg.Traffic), IS_DUPLICATE_TRAFFIC(msg, index) or IS_DUPLICATE_OWNSHIP(msg, index);
+				
+			fun UPDATE_SUSPECT_IDS (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : ADSB_Types::SuspectTrafficArray = 
+				flatmap i in indices(msg.Traffic), 
+					[| if IS_DUPLICATE_TRAFFIC(msg, i) or IS_DUPLICATE_OWNSHIP(msg, i) then 
+					      GET_TARGET_ID(msg.Traffic, i) 
+					   else DISTINCT2 |];
+				
+			fun UPDATE_OUTPUT_REPORT (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : ADSB_Types::MonitorReport.impl =
+				ADSB_Types::MonitorReport.impl {MessageID = MONITOR_MSG_ID; MonitorID = MONITOR_ID; Spare = 0; SuspectTraffic = UPDATE_SUSPECT_IDS(msg)};
+				
+			guarantee CASE_Monitor2_Suspect_Traffic_Out
+			  "Output duplicated IDs in traffic reports" : 
+			     if event(Observed) and DUPLICATE_IN_REPORT(Observed) then 
+			        event (Suspect_Traffic_Out) and (Suspect_Traffic_Out = UPDATE_OUTPUT_REPORT(Observed))
+			     else not(event(Suspect_Traffic_Out));
+
+			**};
+	end CASE_Monitor2;
+
+	thread implementation CASE_Monitor2.Impl
+	
+	end CASE_Monitor2.Impl;
+	
+	--------------------------------------------------
+	-- Teleport Monitor
+	--------------------------------------------------
+	thread CASE_Monitor3
+		features
+			Observed: in event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			Suspect_Traffic_Out: out event data port ADSB_Types::MonitorReport.impl;
+		properties
+			CASE_Properties::Monitoring => 100;
+			CASE_Properties::Component_Language => CakeML;
+			CASE_Properties::Component_Spec => ("CASE_Monitor3_Suspect_Traffic_Out");
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 10ms .. 50ms;
+			Period => 500ms;
+		annex agree {**
+			const is_latched : bool = false;
+			const MONITOR_ID : int = 3; 
+					
+			const LATITUDE_DELTA : real = 1.0; -- degree
+			const LONGITUDE_DELTA : real = 1.0; -- degree
+			const ALTITUDE_DELTA : ADSB_Types::Altitude_Type = 2000; -- feet
+			
+			eq IDs : ADSB_Types::TargetIdentityArray = flatmap i in indices(Observed.Traffic), [| (Observed.Traffic[i]).TargetIdentity |];	
+			eq prev_IDs : ADSB_Types::TargetIdentityArray = prev(IDs, flatmap i2 in indices(Observed.Traffic), [| DISTINCT |]);
+				
+			fun PREV_IN_REPORT (msg : ADSB_Types::ADSB_Aggregated_Message.impl, index : int) : bool =
+				exists ID in prev_IDs, 
+					(msg.Traffic[index]).TargetIdentity = ID;
+			
+			fun IN_ZONE_A_REALS (t_lat : real, t_long : real, t_alt : int, o_lat : real, o_long : real, o_alt : int) : bool =
+				(t_lat >= ( o_lat - LATITUDE_DELTA) ) and
+				(t_lat <= ( o_lat + LATITUDE_DELTA) ) and
+				(t_long >= ( o_long - LONGITUDE_DELTA) ) and
+				(t_long <= ( o_long + LONGITUDE_DELTA) ) and
+				(t_alt >= ( o_alt - ALTITUDE_DELTA) ) and
+				(t_alt <= ( o_alt + ALTITUDE_DELTA));
+			
+			fun IN_ZONE_A (ownship : ADSB_Types::TrafficReport.impl, traffic : ADSB_Types::TrafficReport.impl) : bool =
+				IN_ZONE_A_REALS(LAT_LONG_TO_DEG(traffic.Latitude), LAT_LONG_TO_DEG(traffic.Longitude), ALTITUDE_TO_FT(traffic.Altitude), LAT_LONG_TO_DEG(ownship.Latitude), LAT_LONG_TO_DEG(ownship.Longitude), ALTITUDE_TO_FT(ownship.Altitude));
+			
+			fun IS_TELEPORTING_TRAFFIC (msg : ADSB_Types::ADSB_Aggregated_Message.impl, index : int) : bool =
+				not(PREV_IN_REPORT(msg, index)) and IN_ZONE_A(msg.Ownship, msg.Traffic[index]);
+				
+			fun TELEPORT_IN_REPORT (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : bool = 
+				exists index in indices(msg.Traffic), IS_TELEPORTING_TRAFFIC(msg, index);
+				
+			fun UPDATE_SUSPECT_IDS (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : ADSB_Types::SuspectTrafficArray = 
+				flatmap i in indices(msg.Traffic), 
+					[| if IS_TELEPORTING_TRAFFIC(msg, i) then 
+					      GET_TARGET_ID(msg.Traffic, i) 
+					   else DISTINCT2 |];
+			
+			fun UPDATE_OUTPUT_REPORT (msg : ADSB_Types::ADSB_Aggregated_Message.impl) : ADSB_Types::MonitorReport.impl =
+				ADSB_Types::MonitorReport.impl {MessageID = MONITOR_MSG_ID; MonitorID = MONITOR_ID; Spare = 0; SuspectTraffic = UPDATE_SUSPECT_IDS(msg)};
+				
+			guarantee CASE_Monitor_Suspect_Traffic_Out 
+			  "Output duplicated IDs in traffic reports" : 
+			     if event(Observed) and TELEPORT_IN_REPORT(Observed) then 
+			        event (Suspect_Traffic_Out) and (Suspect_Traffic_Out = UPDATE_OUTPUT_REPORT(Observed))
+			     else not(event(Suspect_Traffic_Out));
+	
+			**};
+	end CASE_Monitor3;
+
+	thread implementation CASE_Monitor3.Impl
+	
+	end CASE_Monitor3.Impl;
+	
+	-- generic array definition of arbitrary size
+	data CASE_AttestationRequestMsg
+		properties
+            Data_Model::Data_Representation => Array;
+            Data_Model::Base_Type => (classifier (Base_Types::Unsigned_8));
+            Data_Model::Dimension => (32);
+            Data_Size => 32 Bytes;
+	end CASE_AttestationRequestMsg;
+	
+	data implementation CASE_AttestationRequestMsg.impl
+		properties
+			HAMR::Bit_Codec_Max_Size => 32 Bytes;
+	end CASE_AttestationRequestMsg.impl;
+	
+	-- generic array definition of arbitrary size
+	data CASE_AttestationResponseMsg
+		properties
+            Data_Model::Data_Representation => Array;
+            Data_Model::Base_Type => (classifier (Base_Types::Unsigned_8));
+            Data_Model::Dimension => (2048);
+            Data_Size => 2048 Bytes;
+	end CASE_AttestationResponseMsg;
+	
+	data implementation CASE_AttestationResponseMsg.impl
+		properties
+			HAMR::Bit_Codec_Max_Size => 2048 Bytes;
+	end CASE_AttestationResponseMsg.impl;
+	
+	--------------------------------------------------
+	-- Attestation Manager
+	--------------------------------------------------
+	thread CASE_AttestationManager
+		features
+			AttestationRequest: out event data port CASE_AttestationRequestMsg.impl;
+			AttestationResponse: in event data port CASE_AttestationResponseMsg.impl;
+			TrustedIds: out event data port CASE_Proxies::WhiteList.impl;
+			
+			InitiateAttestation: in event data port Common_Types::Unsigned_32;
+			TerminateAttestation: out event data port Common_Types::Unsigned_32;
+		properties
+			CASE_Properties::Attesting => 100;
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 10ms .. 50ms;
+			Period => 500ms;
+	end CASE_AttestationManager;
+
+	thread implementation CASE_AttestationManager.Impl
+		properties
+			CASE_Properties::Cache_Timeout => 5 min;
+			CASE_Properties::Cache_Size => 4;
+	end CASE_AttestationManager.Impl;
+	
+	--------------------------------------------------
+	-- Attestation Gate
+	--------------------------------------------------
+	thread CASE_AttestationGate
+		features
+			SHM_QUEUE_Request_In: in event data port CASE_Proxies::shm_queue_request_array.impl;
+			SHM_QUEUE_Request_Out: out event data port CASE_Proxies::shm_queue_request_array.impl;
+			Connection_Command_In: in event data port CASE_Proxies::connection_command.impl;
+			Connection_Command_Out: out event data port CASE_Proxies::connection_command.impl;
+
+			TrustedIds: in event data port CASE_Proxies::WhiteList.impl;
+		properties
+			CASE_Properties::Gating => 100;
+			CASE_Properties::Component_Language => CakeML;
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 10ms .. 50ms;
+			Period => 500ms;
+	end CASE_AttestationGate;
+
+	thread implementation CASE_AttestationGate.Impl
+		
+	end CASE_AttestationGate.Impl;
+	
+	process SW
+		features
+			SHM_QUEUE_ADSB_Heartbeat_In: in event data port CASE_Proxies::shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_In: in event data port CASE_Proxies::shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_In: in event data port CASE_Proxies::shm_queue_adsb_traffic.impl;
+			SHM_QUEUE_Request_In: in event data port CASE_Proxies::shm_queue_vdtu_request.impl;
+			SHM_QUEUE_Response_In: in event data port CASE_Proxies::shm_queue_vdtu_response.impl;
+			SHM_QUEUE_AttestationResponse: in event data port CASE_Proxies::shm_queue_attestation_response.impl;
+			
+			SHM_QUEUE_Request_Out: out event data port CASE_Proxies::shm_queue_vdtu_request.impl;
+			SHM_QUEUE_Response_Out: out event data port CASE_Proxies::shm_queue_vdtu_response.impl;
+			SHM_QUEUE_AttestationRequest: out event data port CASE_Proxies::shm_queue_attestation_request.impl;
+			SHM_QUEUE_ADSB_Heartbeat_Out: out event data port CASE_Proxies::shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_Out: out event data port CASE_Proxies::shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_Out: out event data port CASE_Proxies::shm_queue_adsb_traffic.impl;
+			SHM_QUEUE_Suspect_Traffic_Out1: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			SHM_QUEUE_Suspect_Traffic_Out2: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			SHM_QUEUE_Suspect_Traffic_Out3: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+	end SW;
+	
+	process implementation SW.impl
+		subcomponents
+			adapter_high: thread adapter_high.impl;
+			adapter_low: thread adapter_low.impl;
+			
+			Expected_Position_Monitor: thread CASE_Monitor1.impl;
+			Duplicate_Entity_Monitor: thread CASE_Monitor2.impl;
+			Teleport_Monitor: thread CASE_Monitor3.impl;
+			Attestation_Manager: thread CASE_AttestationManager.impl;
+			Attestation_Gate: thread CASE_AttestationGate.impl;
+		connections
+			c2: port SHM_QUEUE_Request_In -> adapter_low.SHM_QUEUE_Request_In;
+			c3: port SHM_QUEUE_AttestationResponse -> adapter_low.SHM_QUEUE_AttestationResponse;
+			c5: port SHM_QUEUE_Response_In -> adapter_high.SHM_QUEUE_Response_In;
+			
+			c7: port adapter_high.SHM_QUEUE_Request_Out -> SHM_QUEUE_Request_Out;
+			c8: port adapter_low.SHM_QUEUE_AttestationRequest -> SHM_QUEUE_AttestationRequest;
+			c10: port adapter_low.SHM_QUEUE_Response_Out -> SHM_QUEUE_Response_Out;
+			
+			c11: port adapter_low.AttestationResponse -> Attestation_Manager.AttestationResponse;
+			c21: port Attestation_Manager.AttestationRequest -> adapter_low.AttestationRequest;
+			c12: port Attestation_Manager.TrustedIds -> Attestation_Gate.TrustedIds;
+			
+			c14: port adapter_low.SHM_QUEUE_Request_Out -> Attestation_Gate.SHM_QUEUE_Request_In;
+			c16: port adapter_high.Response_Out -> adapter_low.Response_In;
+			c18: port Attestation_Gate.SHM_QUEUE_Request_Out -> adapter_high.Request_In;
+			c19: port adapter_high.SHM_HEADER_adsb_to_ptab -> adapter_low.SHM_HEADER_adsb_to_ptab;
+			
+			c25: port adapter_low.Connection_Command_Out -> Attestation_Gate.Connection_Command_In;
+			c45: port Attestation_Gate.Connection_Command_Out -> adapter_high.Connection_Command_In;
+			c26: port adapter_high.Connection_Command_Out -> adapter_low.Connection_Command_In;
+			
+			c27: port adapter_low.InitiateAttestation -> Attestation_Manager.InitiateAttestation;
+			c28: port Attestation_Manager.TerminateAttestation -> adapter_low.TerminateAttestation;
+			
+			c29: port SHM_QUEUE_ADSB_Heartbeat_In -> adapter_high.SHM_QUEUE_ADSB_Heartbeat_In;
+			c30: port SHM_QUEUE_ADSB_Ownship_In -> adapter_high.SHM_QUEUE_ADSB_Ownship_In;
+			c31: port SHM_QUEUE_ADSB_Traffic_In -> adapter_high.SHM_QUEUE_ADSB_Traffic_In;
+			
+			c32: port adapter_high.ADSB_Messages_Out -> Expected_Position_Monitor.Observed;
+			c33: port adapter_high.ADSB_Messages_Out -> Duplicate_Entity_Monitor.Observed;
+			c34: port adapter_high.ADSB_Messages_Out -> Teleport_Monitor.Observed;
+			
+			c35: port Expected_Position_Monitor.Suspect_Traffic_Out -> adapter_low.Suspect_Traffic_In1;
+			c36: port Duplicate_Entity_Monitor.Suspect_Traffic_Out -> adapter_low.Suspect_Traffic_In2;
+			c37: port Teleport_Monitor.Suspect_Traffic_Out -> adapter_low.Suspect_Traffic_In3;
+			
+			c38: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out1 -> SHM_QUEUE_Suspect_Traffic_Out1;
+			c39: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out2 -> SHM_QUEUE_Suspect_Traffic_Out2;
+			c40: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out3 -> SHM_QUEUE_Suspect_Traffic_Out3;
+			
+			c41: port adapter_high.ADSB_Messages_Out -> adapter_low.ADSB_Messages_In;
+			c42: port adapter_low.SHM_QUEUE_ADSB_Heartbeat_Out -> SHM_QUEUE_ADSB_Heartbeat_Out;
+			c43: port adapter_low.SHM_QUEUE_ADSB_Ownship_Out -> SHM_QUEUE_ADSB_Ownship_Out;
+			c44: port adapter_low.SHM_QUEUE_ADSB_Traffic_Out -> SHM_QUEUE_ADSB_Traffic_Out;
+			
+	end SW.impl;
+	
+	
+	system VPM_8600B_Ext extends LRUs::VPM_8600B
+		features
+			Eth_Conn: requires bus access Busses::IEEE_802_3.impl;
+			
+			ADSB_Heartbeat_In: in event data port ADSB_Types::HeartBeat_Message.impl;
+			ADSB_Ownship_In: in event data port ADSB_Types::TrafficReport.impl;
+			ADSB_Traffic_In: in event data port ADSB_Types::TrafficReport.impl {Acceptable_Array_Size => (0 .. 150);};
+			
+			ADSB_Heartbeat_Out: out event data port ADSB_Types::HeartBeat_Message.impl;
+			ADSB_Ownship_Out: out event data port ADSB_Types::TrafficReport.impl;
+			ADSB_Traffic_Out: out event data port ADSB_Types::TrafficReport.impl {Acceptable_Array_Size => (0 .. 150);};
+			
+			Suspect_Traffic_Out1: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			Suspect_Traffic_Out2: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			Suspect_Traffic_Out3: out event data port CASE_Proxies::shm_queue_monitor_report.impl;		
+			
+			Request_In: in event data port DTU_Types::Request_Message.impl;
+			Response_In: in event data port DTU_Types::Response_Message.impl;
+			
+			Request_Out: out event data port DTU_Types::Request_Message.impl;
+			Response_Out: out event data port DTU_Types::Response_Message.impl;
+			
+			AttestationResponse: in event data port CASE_AttestationResponseMsg.impl;
+			AttestationRequest: out event data port CASE_AttestationRequestMsg.impl;
+	end VPM_8600B_Ext;
+
+	system implementation VPM_8600B_Ext.impl extends LRUs::VPM_8600B.impl
+		subcomponents
+			NAND_Flash: memory Memories::Flash_Memory;
+			Memory_Bus: bus Memories::Memory_Bus;
+			
+			Proxy_Low: process CASE_Proxies::Proxy_Low.impl;
+			Proxy_High: process CASE_Proxies::Proxy_High.impl;
+
+			SW: system SW_seL4.Impl;
+		connections
+			
+			c3: port Request_In -> Proxy_Low.Request_In;
+			c4: port Response_In -> Proxy_High.Response_In;
+			
+			c7: port Proxy_High.Request_Out -> Request_Out;
+			c8: port Proxy_Low.Response_Out -> Response_Out;
+			
+			c9: port AttestationResponse -> Proxy_Low.AttestationResponse;
+			c10: port Proxy_Low.AttestationRequest -> AttestationRequest;
+			
+			c13: port Proxy_Low.SHM_QUEUE_Request_Out -> SW.SHM_QUEUE_Request_In;
+			c14: port Proxy_High.SHM_QUEUE_Response_Out -> SW.SHM_QUEUE_Response_In;
+			c15: port Proxy_Low.SHM_QUEUE_AttestationResponse -> SW.SHM_QUEUE_AttestationResponse;
+			c18: port SW.SHM_QUEUE_Request_Out -> Proxy_High.SHM_QUEUE_Request_In;
+			c19: port SW.SHM_QUEUE_Response_Out -> Proxy_Low.SHM_QUEUE_Response_In;
+			c20: port SW.SHM_QUEUE_AttestationRequest -> Proxy_Low.SHM_QUEUE_AttestationRequest;
+			c21: port ADSB_Heartbeat_In -> Proxy_High.ADSB_Heartbeat_In;
+			c22: port ADSB_Ownship_In -> Proxy_High.ADSB_Ownship_In;
+			c23: port ADSB_Traffic_In -> Proxy_High.ADSB_Traffic_In;
+			c24: port Proxy_High.SHM_QUEUE_ADSB_Heartbeat_Out -> SW.SHM_QUEUE_ADSB_Heartbeat_In;
+			c25: port Proxy_High.SHM_QUEUE_ADSB_Ownship_Out -> SW.SHM_QUEUE_ADSB_Ownship_In;
+			c26: port Proxy_High.SHM_QUEUE_ADSB_Traffic_Out -> SW.SHM_QUEUE_ADSB_Traffic_In;
+			c27: port SW.SHM_QUEUE_ADSB_Heartbeat_Out -> Proxy_Low.SHM_QUEUE_ADSB_Heartbeat_In;
+			c28: port SW.SHM_QUEUE_ADSB_Ownship_Out -> Proxy_Low.SHM_QUEUE_ADSB_Ownship_In;
+			c29: port SW.SHM_QUEUE_ADSB_Traffic_Out -> Proxy_Low.SHM_QUEUE_ADSB_Traffic_In;
+			c30: port Proxy_Low.ADSB_Heartbeat_Out -> ADSB_Heartbeat_Out;
+			c31: port Proxy_Low.ADSB_Ownship_Out -> ADSB_Ownship_Out;
+			c32: port Proxy_Low.ADSB_Traffic_Out -> ADSB_Traffic_Out;
+			c33: port SW.SHM_QUEUE_Suspect_Traffic_Out1 -> Proxy_Low.SHM_QUEUE_Suspect_Traffic_In1;
+			c34: port SW.SHM_QUEUE_Suspect_Traffic_Out2 -> Proxy_Low.SHM_QUEUE_Suspect_Traffic_In2;
+			c35: port SW.SHM_QUEUE_Suspect_Traffic_Out3 -> Proxy_Low.SHM_QUEUE_Suspect_Traffic_In3;
+			c36: port Proxy_Low.Suspect_Traffic_Out1 -> Suspect_Traffic_Out1;
+			c37: port Proxy_Low.Suspect_Traffic_Out2 -> Suspect_Traffic_Out2;
+			c38: port Proxy_Low.Suspect_Traffic_Out3 -> Suspect_Traffic_Out3;
+			
+			A1_Basecard_mem: bus access A1_Basecard.Memory_Access <-> Memory_Bus;
+			A1_Mez_mem: bus access A1_Mezz.Memory_Access <-> Memory_Bus;
+			A2_Basecard_mem: bus access A2_Basecard.Memory_Access <-> Memory_Bus;
+			A2_Mez_mem: bus access A2_Mezz.Memory_Access <-> Memory_Bus;
+			A3_Basecard_mem: bus access A3_Basecard.Memory_Access <-> Memory_Bus;
+			mem_card: bus access NAND_Flash.Flash_Data_Bus <-> Memory_Bus;
+			
+			A1_Basecard_Eth: bus access A1_Basecard.Eth_Conn <-> Eth_Conn;
+			A1_Mez_Eth: bus access A1_Mezz.Eth_Conn <-> Eth_Conn;
+			A2_Basecard_Eth: bus access A2_Basecard.Eth_Conn <-> Eth_Conn;
+			A2_Mez_Eth: bus access A2_Mezz.Eth_Conn <-> Eth_Conn;
+			A3_Basecard_Eth: bus access A3_Basecard.Eth_Conn <-> Eth_Conn;
+		properties
+			Actual_Memory_Binding => (
+				reference (NAND_Flash)) applies to A1_Basecard.application_proc, A1_Mezz.application_proc, 
+					A2_Basecard.application_proc, A2_Mezz.application_proc, A3_Basecard.application_proc;
+			
+			-- proxies running on separate R5 cores
+			Actual_Processor_Binding => (reference(A1_Basecard.real_time_proc.Core0)) applies to Proxy_Low;
+			
+			Actual_Processor_Binding => (reference(A1_Basecard.real_time_proc.Core1)) applies to Proxy_High;
+			
+			-- new process runs on A53
+			Actual_Processor_Binding => (reference(A1_Basecard.application_proc.Core0)) applies to SW;
+			CASE_Properties::OS => seL4 applies to A1_Basecard.application_proc.Core0;
+			Frame_Period => 500 ms applies to A1_Basecard.application_proc.Core0;
+			Clock_Period => 2 ms applies to A1_Basecard.application_proc.Core0;
+			CASE_Scheduling::Max_Domain => 8 applies to A1_Basecard.application_proc.Core0;
+
+			HAMR::Bit_Codec_Raw_Connections => true;
+		annex resolute {**
+			check(HAMR_Guidelines)
+		**};
+						
+	end VPM_8600B_Ext.impl;
+	
+	process adapter_high_seL4
+		features
+			SHM_QUEUE_ADSB_Heartbeat_In: in event data port CASE_Proxies::shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_In: in event data port CASE_Proxies::shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_In: in event data port CASE_Proxies::shm_queue_adsb_traffic.impl;
+			SHM_QUEUE_Response_In: in event data port CASE_Proxies::shm_queue_vdtu_response.impl;
+			Response_Out: out event data port DTU_Types::Response_Message.impl;
+			ADSB_Messages_Out: out event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			SHM_HEADER_adsb_to_ptab: out event data port CASE_Proxies::shm_queue_header.impl;
+			Connection_Command_Out: out event data port CASE_Proxies::connection_command.impl;
+			Request_In: in event data port CASE_Proxies::shm_queue_request_array.impl;
+			SHM_QUEUE_Request_Out: out event data port CASE_Proxies::shm_queue_vdtu_request.impl;
+			Connection_Command_In: in event data port CASE_Proxies::connection_command.impl;
+		properties
+			Period => 250ms;
+			CASE_Scheduling::Domain => 2;	
+	end adapter_high_seL4;
+
+	process implementation adapter_high_seL4.Impl
+		subcomponents
+			adapter_high: thread adapter_high.impl;
+		connections
+			c1: port adapter_high.Connection_Command_Out -> Connection_Command_Out;
+			c2: port SHM_QUEUE_ADSB_Ownship_In -> adapter_high.SHM_QUEUE_ADSB_Ownship_In;
+			c3: port adapter_high.ADSB_Messages_Out -> ADSB_Messages_Out;
+			c4: port SHM_QUEUE_ADSB_Traffic_In -> adapter_high.SHM_QUEUE_ADSB_Traffic_In;
+			c5: port SHM_QUEUE_Response_In -> adapter_high.SHM_QUEUE_Response_In;
+			c6: port Connection_Command_In -> adapter_high.Connection_Command_In;
+			c7: port SHM_QUEUE_ADSB_Heartbeat_In -> adapter_high.SHM_QUEUE_ADSB_Heartbeat_In;
+			c8: port Request_In -> adapter_high.Request_In;
+			c9: port adapter_high.SHM_HEADER_adsb_to_ptab -> SHM_HEADER_adsb_to_ptab;
+			c10: port adapter_high.SHM_QUEUE_Request_Out -> SHM_QUEUE_Request_Out;
+			c11: port adapter_high.Response_Out -> Response_Out;
+	end adapter_high_seL4.Impl;
+
+	process adapter_low_seL4
+		features
+			ADSB_Messages_In: in event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			Response_In: in event data port DTU_Types::Response_Message.impl;
+			AttestationRequest: in event data port CASE_AttestationRequestMsg.impl;
+			SHM_QUEUE_ADSB_Heartbeat_Out: out event data port CASE_Proxies::shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_Out: out event data port CASE_Proxies::shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_Out: out event data port CASE_Proxies::shm_queue_adsb_traffic.impl;
+			SHM_QUEUE_Response_Out: out event data port CASE_Proxies::shm_queue_vdtu_response.impl;
+			SHM_QUEUE_AttestationRequest: out event data port CASE_Proxies::shm_queue_attestation_request.impl;
+			SHM_HEADER_adsb_to_ptab: in event data port CASE_Proxies::shm_queue_header.impl;
+			Connection_Command_In: in event data port CASE_Proxies::connection_command.impl;
+			Suspect_Traffic_In1: in event data port ADSB_Types::MonitorReport.impl;
+			SHM_QUEUE_Suspect_Traffic_Out1: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			Suspect_Traffic_In2: in event data port ADSB_Types::MonitorReport.impl;
+			SHM_QUEUE_Suspect_Traffic_Out2: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			Suspect_Traffic_In3: in event data port ADSB_Types::MonitorReport.impl;
+			SHM_QUEUE_Suspect_Traffic_Out3: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			SHM_QUEUE_Request_In: in event data port CASE_Proxies::shm_queue_vdtu_request.impl;
+			SHM_QUEUE_AttestationResponse: in event data port CASE_Proxies::shm_queue_attestation_response.impl;
+			SHM_QUEUE_Request_Out: out event data port CASE_Proxies::shm_queue_request_array.impl;
+			AttestationResponse: out event data port CASE_AttestationResponseMsg.impl;
+			Connection_Command_Out: out event data port CASE_Proxies::connection_command.impl;
+			InitiateAttestation: out event data port Common_Types::Unsigned_32;
+			TerminateAttestation: in event data port Common_Types::Unsigned_32;
+		properties
+			Period => 500ms;
+			CASE_Scheduling::Domain => 3;
+	end adapter_low_seL4;
+
+	process implementation adapter_low_seL4.Impl
+		subcomponents
+			adapter_low: thread adapter_low.impl;
+		connections
+			c1: port adapter_low.SHM_QUEUE_AttestationRequest -> SHM_QUEUE_AttestationRequest;
+			c2: port Connection_Command_In -> adapter_low.Connection_Command_In;
+			c3: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out1 -> SHM_QUEUE_Suspect_Traffic_Out1;
+			c4: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out2 -> SHM_QUEUE_Suspect_Traffic_Out2;
+			c5: port AttestationRequest -> adapter_low.AttestationRequest;
+			c6: port SHM_HEADER_adsb_to_ptab -> adapter_low.SHM_HEADER_adsb_to_ptab;
+			c7: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out3 -> SHM_QUEUE_Suspect_Traffic_Out3;
+			c8: port adapter_low.SHM_QUEUE_ADSB_Traffic_Out -> SHM_QUEUE_ADSB_Traffic_Out;
+			c9: port Suspect_Traffic_In3 -> adapter_low.Suspect_Traffic_In3;
+			c10: port adapter_low.SHM_QUEUE_Request_Out -> SHM_QUEUE_Request_Out;
+			c11: port ADSB_Messages_In -> adapter_low.ADSB_Messages_In;
+			c12: port TerminateAttestation -> adapter_low.TerminateAttestation;
+			c13: port Suspect_Traffic_In2 -> adapter_low.Suspect_Traffic_In2;
+			c14: port adapter_low.AttestationResponse -> AttestationResponse;
+			c15: port adapter_low.SHM_QUEUE_ADSB_Heartbeat_Out -> SHM_QUEUE_ADSB_Heartbeat_Out;
+			c16: port adapter_low.Connection_Command_Out -> Connection_Command_Out;
+			c17: port adapter_low.SHM_QUEUE_ADSB_Ownship_Out -> SHM_QUEUE_ADSB_Ownship_Out;
+			c18: port adapter_low.SHM_QUEUE_Response_Out -> SHM_QUEUE_Response_Out;
+			c19: port Response_In -> adapter_low.Response_In;
+			c20: port SHM_QUEUE_Request_In -> adapter_low.SHM_QUEUE_Request_In;
+			c21: port adapter_low.InitiateAttestation -> InitiateAttestation;
+			c22: port SHM_QUEUE_AttestationResponse -> adapter_low.SHM_QUEUE_AttestationResponse;
+			c23: port Suspect_Traffic_In1 -> adapter_low.Suspect_Traffic_In1;
+	end adapter_low_seL4.Impl;
+
+	process CASE_Monitor1_seL4
+		features
+			Observed: in event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			Suspect_Traffic_Out: out event data port ADSB_Types::MonitorReport.impl;
+		properties
+			CASE_Properties::Monitoring => 100;
+			CASE_Properties::Component_Language => CakeML;
+			CASE_Properties::Component_Spec => ("CASE_Monitor1_Suspect_Traffic_Out");
+			Period => 500ms;
+			CASE_Scheduling::Domain => 4;
+	end CASE_Monitor1_seL4;
+
+	process implementation CASE_Monitor1_seL4.Impl
+		subcomponents
+			CASE_Monitor1: thread CASE_Monitor1.Impl;
+		connections
+			c1: port Observed -> CASE_Monitor1.Observed;
+			c2: port CASE_Monitor1.Suspect_Traffic_Out -> Suspect_Traffic_Out;
+		annex agree {**
+			lift contract;
+			**};
+	end CASE_Monitor1_seL4.Impl;
+
+	process CASE_Monitor2_seL4
+		features
+			Observed: in event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			Suspect_Traffic_Out: out event data port ADSB_Types::MonitorReport.impl;
+		properties
+			CASE_Properties::Monitoring => 100;
+			CASE_Properties::Component_Language => CakeML;
+			CASE_Properties::Component_Spec => ("CASE_Monitor2_Suspect_Traffic_Out");
+			Period => 500ms;
+			CASE_Scheduling::Domain => 5;
+	end CASE_Monitor2_seL4;
+
+	process implementation CASE_Monitor2_seL4.Impl
+		subcomponents
+			CASE_Monitor2: thread CASE_Monitor2.Impl;
+		connections
+			c1: port Observed -> CASE_Monitor2.Observed;
+			c2: port CASE_Monitor2.Suspect_Traffic_Out -> Suspect_Traffic_Out;
+		annex agree {**
+			lift contract;
+			**};
+	end CASE_Monitor2_seL4.Impl;
+
+	process CASE_Monitor3_seL4
+		features
+			Observed: in event data port ADSB_Types::ADSB_Aggregated_Message.impl;
+			Suspect_Traffic_Out: out event data port ADSB_Types::MonitorReport.impl;
+		properties
+			CASE_Properties::Monitoring => 100;
+			CASE_Properties::Component_Language => CakeML;
+			CASE_Properties::Component_Spec => ("CASE_Monitor3_Suspect_Traffic_Out");
+			Period => 500ms;
+			CASE_Scheduling::Domain => 6;
+	end CASE_Monitor3_seL4;
+
+	process implementation CASE_Monitor3_seL4.Impl
+		subcomponents
+			CASE_Monitor3: thread CASE_Monitor3.Impl;
+		connections
+			c1: port CASE_Monitor3.Suspect_Traffic_Out -> Suspect_Traffic_Out;
+			c2: port Observed -> CASE_Monitor3.Observed;
+		annex agree {**
+			lift contract;
+			**};
+	end CASE_Monitor3_seL4.Impl;
+
+	process CASE_AttestationManager_seL4
+		features
+			AttestationRequest: out event data port CASE_AttestationRequestMsg.impl;
+			AttestationResponse: in event data port CASE_AttestationResponseMsg.impl;
+			TrustedIds: out event data port CASE_Proxies::WhiteList.impl;
+			InitiateAttestation: in event data port Common_Types::Unsigned_32;
+			TerminateAttestation: out event data port Common_Types::Unsigned_32;
+		properties
+			CASE_Properties::Attesting => 100;
+			Period => 500ms;
+			CASE_Scheduling::Domain => 7;
+	end CASE_AttestationManager_seL4;
+
+	process implementation CASE_AttestationManager_seL4.Impl
+		subcomponents
+			CASE_AttestationManager: thread CASE_AttestationManager.Impl;
+		connections
+			c1: port AttestationResponse -> CASE_AttestationManager.AttestationResponse;
+			c2: port CASE_AttestationManager.AttestationRequest -> AttestationRequest;
+			c3: port CASE_AttestationManager.TrustedIds -> TrustedIds;
+			c4: port CASE_AttestationManager.TerminateAttestation -> TerminateAttestation;
+			c5: port InitiateAttestation -> CASE_AttestationManager.InitiateAttestation;
+		properties
+			CASE_Properties::Cache_Timeout => 5 min;
+			CASE_Properties::Cache_Size => 4;
+	end CASE_AttestationManager_seL4.Impl;
+
+	process CASE_AttestationGate_seL4
+		features
+			SHM_QUEUE_Request_In: in event data port CASE_Proxies::shm_queue_request_array.impl;
+			SHM_QUEUE_Request_Out: out event data port CASE_Proxies::shm_queue_request_array.impl;
+			Connection_Command_In: in event data port CASE_Proxies::connection_command.impl;
+			Connection_Command_Out: out event data port CASE_Proxies::connection_command.impl;
+			TrustedIds: in event data port CASE_Proxies::WhiteList.impl;
+		properties
+			CASE_Properties::Gating => 100;
+			CASE_Properties::Component_Language => CakeML;
+			Period => 500ms;
+			CASE_Scheduling::Domain => 8;
+	end CASE_AttestationGate_seL4;
+
+	process implementation CASE_AttestationGate_seL4.Impl
+		subcomponents
+			CASE_AttestationGate: thread CASE_AttestationGate.Impl;
+		connections
+			c1: port CASE_AttestationGate.Connection_Command_Out -> Connection_Command_Out;
+			c2: port TrustedIds -> CASE_AttestationGate.TrustedIds;
+			c3: port SHM_QUEUE_Request_In -> CASE_AttestationGate.SHM_QUEUE_Request_In;
+			c4: port CASE_AttestationGate.SHM_QUEUE_Request_Out -> SHM_QUEUE_Request_Out;
+			c5: port Connection_Command_In -> CASE_AttestationGate.Connection_Command_In;
+	end CASE_AttestationGate_seL4.Impl;
+
+	system SW_seL4
+		features
+			SHM_QUEUE_ADSB_Heartbeat_In: in event data port CASE_Proxies::shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_In: in event data port CASE_Proxies::shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_In: in event data port CASE_Proxies::shm_queue_adsb_traffic.impl;
+			SHM_QUEUE_Request_In: in event data port CASE_Proxies::shm_queue_vdtu_request.impl;
+			SHM_QUEUE_Response_In: in event data port CASE_Proxies::shm_queue_vdtu_response.impl;
+			SHM_QUEUE_AttestationResponse: in event data port CASE_Proxies::shm_queue_attestation_response.impl;
+			SHM_QUEUE_Request_Out: out event data port CASE_Proxies::shm_queue_vdtu_request.impl;
+			SHM_QUEUE_Response_Out: out event data port CASE_Proxies::shm_queue_vdtu_response.impl;
+			SHM_QUEUE_AttestationRequest: out event data port CASE_Proxies::shm_queue_attestation_request.impl;
+			SHM_QUEUE_ADSB_Heartbeat_Out: out event data port CASE_Proxies::shm_queue_adsb_Heartbeat.impl;
+			SHM_QUEUE_ADSB_Ownship_Out: out event data port CASE_Proxies::shm_queue_adsb_ownship.impl;
+			SHM_QUEUE_ADSB_Traffic_Out: out event data port CASE_Proxies::shm_queue_adsb_traffic.impl;
+			SHM_QUEUE_Suspect_Traffic_Out1: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			SHM_QUEUE_Suspect_Traffic_Out2: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+			SHM_QUEUE_Suspect_Traffic_Out3: out event data port CASE_Proxies::shm_queue_monitor_report.impl;
+	end SW_seL4;
+
+	system implementation SW_seL4.Impl
+		subcomponents
+			Attestation_Manager: process CASE_AttestationManager_seL4.Impl;
+			Attestation_Gate: process CASE_AttestationGate_seL4.Impl;
+			Expected_Position_Monitor: process CASE_Monitor1_seL4.Impl;
+			Duplicate_Entity_Monitor: process CASE_Monitor2_seL4.Impl;
+			adapter_low: process adapter_low_seL4.Impl;
+			adapter_high: process adapter_high_seL4.Impl;
+			Teleport_Monitor: process CASE_Monitor3_seL4.Impl;
+		connections
+			c1: port SHM_QUEUE_Request_In -> adapter_low.SHM_QUEUE_Request_In;
+			c2: port SHM_QUEUE_AttestationResponse -> adapter_low.SHM_QUEUE_AttestationResponse;
+			c3: port SHM_QUEUE_Response_In -> adapter_high.SHM_QUEUE_Response_In;
+			c4: port adapter_high.SHM_QUEUE_Request_Out -> SHM_QUEUE_Request_Out;
+			c5: port adapter_low.SHM_QUEUE_AttestationRequest -> SHM_QUEUE_AttestationRequest;
+			c6: port adapter_low.SHM_QUEUE_Response_Out -> SHM_QUEUE_Response_Out;
+			c7: port adapter_low.AttestationResponse -> Attestation_Manager.AttestationResponse;
+			c8: port Attestation_Manager.AttestationRequest -> adapter_low.AttestationRequest;
+			c9: port Attestation_Manager.TrustedIds -> Attestation_Gate.TrustedIds;
+			c10: port adapter_low.SHM_QUEUE_Request_Out -> Attestation_Gate.SHM_QUEUE_Request_In;
+			c11: port adapter_high.Response_Out -> adapter_low.Response_In;
+			c12: port Attestation_Gate.SHM_QUEUE_Request_Out -> adapter_high.Request_In;
+			c13: port adapter_high.SHM_HEADER_adsb_to_ptab -> adapter_low.SHM_HEADER_adsb_to_ptab;
+			c14: port adapter_low.Connection_Command_Out -> Attestation_Gate.Connection_Command_In;
+			c15: port Attestation_Gate.Connection_Command_Out -> adapter_high.Connection_Command_In;
+			c16: port adapter_high.Connection_Command_Out -> adapter_low.Connection_Command_In;
+			c17: port adapter_low.InitiateAttestation -> Attestation_Manager.InitiateAttestation;
+			c18: port Attestation_Manager.TerminateAttestation -> adapter_low.TerminateAttestation;
+			c19: port SHM_QUEUE_ADSB_Heartbeat_In -> adapter_high.SHM_QUEUE_ADSB_Heartbeat_In;
+			c20: port SHM_QUEUE_ADSB_Ownship_In -> adapter_high.SHM_QUEUE_ADSB_Ownship_In;
+			c21: port SHM_QUEUE_ADSB_Traffic_In -> adapter_high.SHM_QUEUE_ADSB_Traffic_In;
+			c22: port adapter_high.ADSB_Messages_Out -> Expected_Position_Monitor.Observed;
+			c23: port adapter_high.ADSB_Messages_Out -> Duplicate_Entity_Monitor.Observed;
+			c24: port adapter_high.ADSB_Messages_Out -> Teleport_Monitor.Observed;
+			c25: port Expected_Position_Monitor.Suspect_Traffic_Out -> adapter_low.Suspect_Traffic_In1;
+			c26: port Duplicate_Entity_Monitor.Suspect_Traffic_Out -> adapter_low.Suspect_Traffic_In2;
+			c27: port Teleport_Monitor.Suspect_Traffic_Out -> adapter_low.Suspect_Traffic_In3;
+			c28: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out1 -> SHM_QUEUE_Suspect_Traffic_Out1;
+			c29: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out2 -> SHM_QUEUE_Suspect_Traffic_Out2;
+			c30: port adapter_low.SHM_QUEUE_Suspect_Traffic_Out3 -> SHM_QUEUE_Suspect_Traffic_Out3;
+			c31: port adapter_high.ADSB_Messages_Out -> adapter_low.ADSB_Messages_In;
+			c32: port adapter_low.SHM_QUEUE_ADSB_Heartbeat_Out -> SHM_QUEUE_ADSB_Heartbeat_Out;
+			c33: port adapter_low.SHM_QUEUE_ADSB_Ownship_Out -> SHM_QUEUE_ADSB_Ownship_Out;
+			c34: port adapter_low.SHM_QUEUE_ADSB_Traffic_Out -> SHM_QUEUE_ADSB_Traffic_Out;
+		properties
+			HAMR::Bit_Codec_Raw_Connections => true;
+	end SW_seL4.Impl;
+end VPM;
