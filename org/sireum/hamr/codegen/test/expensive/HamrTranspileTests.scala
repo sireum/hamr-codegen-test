@@ -34,7 +34,7 @@ class HamrTranspileTests extends CodeGenTest {
     for (platform <- proj._4) {
       // append classname so it doesn't use the expected results from the 'normal' tests
       test(s"${getClass.getSimpleName}_${proj._1}--${platform}", proj._2, proj._3,
-        baseOptions(platform = platform, verbose = F), resultDir, None(), None())
+        baseOptions(platform = platform), resultDir, None(), None())
     }
   }
 }
