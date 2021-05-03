@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test.expensive
 
 import org.sireum._
-import org.sireum.hamr.codegen.CodeGenPlatform
+import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
 import org.sireum.hamr.codegen.test.util.TestMode
@@ -33,8 +33,15 @@ class HamrTranspileTests extends CodeGenTest {
   for (proj <- tests) {
     for (platform <- proj._4) {
       // append classname so it doesn't use the expected results from the 'normal' tests
-      test(s"${getClass.getSimpleName}_${proj._1}--${platform}", proj._2, proj._3,
-        baseOptions(platform = platform), resultDir, None(), None())
+      test(
+        testName = s"${getClass.getSimpleName}_${proj._1}--${platform}",
+        modelDir = proj._2,
+        airFile = proj._3,
+        ops = baseOptions(platform = platform),
+        resultDir = resultDir,
+        description = None(),
+        modelUri = None(),
+        expectedErrorReasons = ISZ())
     }
   }
 }

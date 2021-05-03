@@ -1,12 +1,13 @@
 package org.sireum.hamr.codegen.test
 
-import org.sireum.$internal.RC
 import org.sireum._
+import org.sireum.$internal.RC
 import org.sireum.hamr.act.templates.{CakeMLTemplate, SlangEmbeddedTemplate}
 import org.sireum.hamr.act.util.CMakeOption
 import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.TranspilerConfig
+import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
 import org.sireum.hamr.codegen.common.util.test.{TestJSON, TestMsgPack, TestResource, TestResult, TestUtil}
 import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.hamr.ir._
@@ -41,28 +42,43 @@ trait CodeGenTest extends TestSuite {
 
   val (expectedJsonDir, baseModelsDir) = getDirectories()
 
-  def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
-    test(testName, modelDir, airFile, ops, None(), None(), None())
-  }
+  //def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
+  //  test(testName, modelDir, airFile, ops, T)
+  //}
 
-  def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,
+  //def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig, shouldPass: B)(implicit position: org.scalactic.source.Position) : Unit = {
+  //  test(testName, modelDir, airFile, ops, None(), None(), None(), shouldPass)
+  //}
+
+  def test(testName: String,
+           modelDir: Os.Path,
+           airFile: Os.Path,
+           ops: CodeGenConfig,
            resultDir:Option[String],
-           description: Option[String], modelUri: Option[String])(implicit position: org.scalactic.source.Position) : Unit = {
+           description: Option[String],
+           modelUri: Option[String],
+           expectedErrorReasons: ISZ[String] // empty if errors not expected
+          )(implicit position: org.scalactic.source.Position) : Unit = {
     var tags: ISZ[org.scalatest.Tag] = ISZ()
 
     if(ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))){
       registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements:_*)(
-        testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri))
+        testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri, expectedErrorReasons))
     }
     else if(!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerTest(s"${testName} L${position.lineNumber}", tags.elements:_*)(
-        testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri))
+        testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri, expectedErrorReasons))
     }
   }
 
-  def testAir(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig,
+  def testAir(testName: String,
+              modelDir: Os.Path,
+              airFile: Os.Path,
+              ops: CodeGenConfig,
               resultDir: Option[String],
-              description: Option[String], modelUri: Option[String],
+              description: Option[String],
+              modelUri: Option[String],
+              expectedErrorReasons: ISZ[String] // empty if errors not expected
               ): Unit = {
 
     val expectedJson = expectedJsonDir / s"${testName}.json"
@@ -98,8 +114,16 @@ trait CodeGenTest extends TestSuite {
     val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
       if(shouldTranspile(testOps.platform)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
 
-    if(reporter.hasError) {
-      assert(F)
+    if(expectedErrorReasons.isEmpty) assert(!reporter.hasError)
+    else {
+      assert(reporter.hasError, "Expecting errors but codegen completed successfully")
+      assert(reporter.errors.size == expectedErrorReasons.size)
+
+      for(m <- reporter.errors) {
+        assert(org.sireum.ops.ISZOps(expectedErrorReasons).contains(m.text), s"Expected errors doesn't contain ${m.text}")
+      }
+
+      return
     }
 
     if(runCamkesNinja(testOps.platform)) {

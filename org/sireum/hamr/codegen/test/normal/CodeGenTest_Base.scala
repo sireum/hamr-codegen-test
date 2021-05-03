@@ -2,6 +2,7 @@ package org.sireum.hamr.codegen.test.normal
 
 import org.sireum._
 import org.sireum.hamr.codegen._
+import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
 
@@ -24,7 +25,7 @@ class CodeGenTest_Base extends CodeGenTest {
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
     }
 
     {
@@ -39,7 +40,7 @@ class CodeGenTest_Base extends CodeGenTest {
           devicesAsThreads = F,
           excludeComponentImpl = T,
           bitWidth = 32),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
     }
 
     {
@@ -52,7 +53,7 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(
           platform = platform,
           devicesAsThreads = T),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
     }
 
     {
@@ -63,17 +64,17 @@ class CodeGenTest_Base extends CodeGenTest {
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       platform = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
     }
 
     {
@@ -84,25 +85,24 @@ class CodeGenTest_Base extends CodeGenTest {
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
       test(s"$name--${platform}-Embed-Art", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
       
       platform = CodeGenPlatform.JVM
       test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
         baseOptions(platform = platform,
           noEmbedArt = T),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}-Embed-Art-SharedMemory", modelDir, model,
         baseOptions(platform = platform),
-
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}-Embed-Art-SharedMemory-Excludes", modelDir, model,
         baseOptions(platform = platform,
           excludeComponentImpl = T),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       platform = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
@@ -112,7 +112,7 @@ class CodeGenTest_Base extends CodeGenTest {
           maxStringSize = 300,
           packageName = Some("building_control_gen_mixed")
         ),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
       
     }
     
@@ -125,29 +125,29 @@ class CodeGenTest_Base extends CodeGenTest {
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), uri)
+        resultDir, None(), uri, ISZ())
 
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform,
           maxStringSize = 300),
-        resultDir, None(), uri)
+        resultDir, None(), uri, ISZ())
       
       platform = CodeGenPlatform.MacOS
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform,
         maxStringSize = 300),
-        resultDir, None(), uri)
+        resultDir, None(), uri, ISZ())
       
       platform = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), uri)
+        resultDir, None(), uri, ISZ())
 
       platform = CodeGenPlatform.SeL4_Only
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), uri)
+        resultDir, None(), uri, ISZ())
     }
 
     { // UAV_ALT_DOMAINS
@@ -161,12 +161,12 @@ class CodeGenTest_Base extends CodeGenTest {
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, description, uri)
+        resultDir, description, uri, ISZ())
 
       platform = CodeGenPlatform.SeL4_Only
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, description, uri)
+        resultDir, description, uri, ISZ())
     }
 
     { // UAV extern
@@ -174,7 +174,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
       val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/ksu-proprietary/simple-uav-slang-example/uav-project-extern/src/aadl/ACT_Demo_Dec2018")
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      val platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
 
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
@@ -183,7 +183,7 @@ class CodeGenTest_Base extends CodeGenTest {
           maxStringSize = 300,
           devicesAsThreads = F
         ),
-        resultDir, None(), uri)
+        resultDir, None(), uri, ISZ())
 
       test(s"$name--${platform}-excludesImpl", modelDir, model,
         baseOptions(
@@ -193,7 +193,7 @@ class CodeGenTest_Base extends CodeGenTest {
           devicesAsThreads = F,
           excludeComponentImpl = T
         ),
-        resultDir, None(), uri)
+        resultDir, None(), uri, ISZ())
       
     }
 
@@ -208,7 +208,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir, 
-          Some("Data port micro-example - Trusted Build profile"), uri
+          Some("Data port micro-example - Trusted Build profile"), uri, ISZ()
         )
 
         platform = CodeGenPlatform.SeL4_Only
@@ -216,7 +216,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          Some(s"Data port micro-example - New Adventium translation profile: ${jimUri}"), uri
+          Some(s"Data port micro-example - New Adventium translation profile: ${jimUri}"), uri, ISZ()
         )
       }
     }
@@ -232,7 +232,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          Some("Data port micro-example with periodic threads - Trusted Build profile"), uri
+          Some("Data port micro-example with periodic threads - Trusted Build profile"), uri, ISZ()
         )
 
         platform = CodeGenPlatform.SeL4_Only
@@ -240,7 +240,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          Some(s"Data port micro-example with periodic threads - New Adventium translation profile: ${jimUri}"), uri
+          Some(s"Data port micro-example with periodic threads - New Adventium translation profile: ${jimUri}"), uri, ISZ()
         )
       }
     }
@@ -257,7 +257,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          Some(s"Event Data port micro-example - Trusted Build profile"), uri
+          Some(s"Event Data port micro-example - Trusted Build profile"), uri, ISZ()
         )
 
         platform = CodeGenPlatform.SeL4_Only
@@ -265,7 +265,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          Some(s"Event Data port micro-example - Ihor aadl-eventdata-monitor profile: ${ihorUri}"), uri
+          Some(s"Event Data port micro-example - Ihor aadl-eventdata-monitor profile: ${ihorUri}"), uri, ISZ()
         )
       }
 
@@ -280,7 +280,7 @@ class CodeGenTest_Base extends CodeGenTest {
           test(s"$name--${platform}", modelDir, model,
             baseOptions(platform = platform),
             resultDir,
-            Some("Event port micro-example - Trusted Build profile"), uri
+            Some("Event port micro-example - Trusted Build profile"), uri, ISZ()
           )
 
           platform = CodeGenPlatform.SeL4_Only
@@ -288,7 +288,7 @@ class CodeGenTest_Base extends CodeGenTest {
           test(s"$name--${platform}", modelDir, model,
             baseOptions(platform = platform),
             resultDir,
-            Some(s"Event port micro-example - Ihor aadl-event-direct: ${ihorUri}"), uri
+            Some(s"Event port micro-example - Ihor aadl-event-direct: ${ihorUri}"), uri, ISZ()
           )
         }
       }
@@ -305,7 +305,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          Some("Event port micro-example - Trusted Build profile"), uri
+          Some("Event port micro-example - Trusted Build profile"), uri, ISZ()
         )
 
         platform = CodeGenPlatform.SeL4_Only
@@ -313,7 +313,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          Some(s"Event port micro-example - Ihor aadl-event-direct: ${ihorUri}"), uri
+          Some(s"Event port micro-example - Ihor aadl-event-direct: ${ihorUri}"), uri, ISZ()
         )
       }
     }
@@ -329,7 +329,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          None(), modelUri
+          None(), modelUri, ISZ()
         )
       }
     }
@@ -345,7 +345,7 @@ class CodeGenTest_Base extends CodeGenTest {
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
-          None(), modelUri
+          None(), modelUri, ISZ()
         )
       }
     }
@@ -358,7 +358,7 @@ class CodeGenTest_Base extends CodeGenTest {
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), None()
+        resultDir, None(), None(), ISZ()
       )
     }
 
@@ -370,13 +370,13 @@ class CodeGenTest_Base extends CodeGenTest {
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), None()
+        resultDir, None(), None(), ISZ()
       )
       
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
-        resultDir, None(), None()
+        resultDir, None(), None(), ISZ()
       )
     }
 
@@ -394,23 +394,23 @@ class CodeGenTest_Base extends CodeGenTest {
         maxStringSize = 300,
         devicesAsThreads = F
       )
-      test(s"$name--${platform}", modelDir, model, bo, resultDir, None(), None())
+      test(s"$name--${platform}", modelDir, model, bo, resultDir, None(), None(), ISZ())
 
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
-        bo(platform = platform), resultDir, None(), None())
+        bo(platform = platform), resultDir, None(), None(), ISZ())
 
       test(s"$name--${platform}-excludesImpl", modelDir, model,
         bo(platform = platform, excludeComponentImpl = T),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       platform = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
-        bo(platform = platform),  resultDir, None(), None())
+        bo(platform = platform),  resultDir, None(), None(), ISZ())
 
       test(s"$name--${platform}-excludesImpl", modelDir, model,
         bo(platform = platform, excludeComponentImpl = T),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
     }
 
     { // producer filter consumer periodic
@@ -418,7 +418,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "PFC_PFC_Sys_Impl_Instance.json"
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      val platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
       val packageName: Option[String] = Some("pfc_project")
 
       test(s"$name--${platform}", modelDir, model,
@@ -428,7 +428,7 @@ class CodeGenTest_Base extends CodeGenTest {
           maxStringSize = 300,
           devicesAsThreads = F
         ),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       test(s"$name--${platform}-excludesImpl", modelDir, model,
         baseOptions(
@@ -438,7 +438,7 @@ class CodeGenTest_Base extends CodeGenTest {
           devicesAsThreads = F,
           excludeComponentImpl = T
         ),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
     }
 
     { // producer filter consumer periodic
@@ -456,7 +456,7 @@ class CodeGenTest_Base extends CodeGenTest {
           maxStringSize = 300,
           devicesAsThreads = F
         ),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       test(s"$name--${platform}-excludesImpl", modelDir, model,
         baseOptions(
@@ -466,7 +466,7 @@ class CodeGenTest_Base extends CodeGenTest {
           devicesAsThreads = F,
           excludeComponentImpl = T
         ),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
     }
 
     { // producer filter consumer mixed
@@ -484,7 +484,7 @@ class CodeGenTest_Base extends CodeGenTest {
           maxStringSize = 300,
           devicesAsThreads = F
         ),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
 
       test(s"$name--${platform}-excludesImpl", modelDir, model,
         baseOptions(
@@ -494,7 +494,7 @@ class CodeGenTest_Base extends CodeGenTest {
           devicesAsThreads = F,
           excludeComponentImpl = T
         ),
-        resultDir, None(), None())
+        resultDir, None(), None(), ISZ())
     }
   }
 }
