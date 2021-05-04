@@ -10892,6 +10892,41 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 92,
+                "beginColumn" : 2,
+                "endLine" : 93,
+                "endColumn" : 137,
+                "offset" : 4808,
+                "length" : 152
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "32.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
             "name" : ["Data_Model::Number_Representation"],
             "pos" : {
               "type" : "Some",
@@ -10923,32 +10958,28 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Memory_Properties::Data_Size"],
+            "name" : ["Data_Model::Data_Representation"],
             "pos" : {
               "type" : "Some",
               "value" : {
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 92,
-                "beginColumn" : 2,
-                "endLine" : 93,
-                "endColumn" : 137,
-                "offset" : 4808,
-                "length" : 152
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
               }
             }
           },
           "propertyValues" : [
             {
-              "type" : "UnitProp",
-              "value" : "32.0",
-              "unit" : {
-                "type" : "Some",
-                "value" : "bits"
-              }
+              "type" : "ValueProp",
+              "value" : "Integer"
             }
           ],
           "appliesTo" : [
@@ -11032,6 +11063,41 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
                 "name" : ["Data_Model::Number_Representation"],
                 "pos" : {
                   "type" : "Some",
@@ -11063,32 +11129,28 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["Memory_Properties::Data_Size"],
+                "name" : ["Data_Model::Data_Representation"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 27,
+                    "beginColumn" : 4,
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
                   }
                 }
               },
               "propertyValues" : [
                 {
-                  "type" : "UnitProp",
-                  "value" : "32.0",
-                  "unit" : {
-                    "type" : "Some",
-                    "value" : "bits"
-                  }
+                  "type" : "ValueProp",
+                  "value" : "Integer"
                 }
               ],
               "appliesTo" : [
@@ -11187,6 +11249,41 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
                 "name" : ["Data_Model::Number_Representation"],
                 "pos" : {
                   "type" : "Some",
@@ -11218,32 +11315,28 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["Memory_Properties::Data_Size"],
+                "name" : ["Data_Model::Data_Representation"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 27,
+                    "beginColumn" : 4,
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
                   }
                 }
               },
               "propertyValues" : [
                 {
-                  "type" : "UnitProp",
-                  "value" : "32.0",
-                  "unit" : {
-                    "type" : "Some",
-                    "value" : "bits"
-                  }
+                  "type" : "ValueProp",
+                  "value" : "Integer"
                 }
               ],
               "appliesTo" : [
@@ -11304,6 +11397,41 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
                 "name" : ["Data_Model::Number_Representation"],
                 "pos" : {
                   "type" : "Some",
@@ -11335,32 +11463,28 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["Memory_Properties::Data_Size"],
+                "name" : ["Data_Model::Data_Representation"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 27,
+                    "beginColumn" : 4,
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
                   }
                 }
               },
               "propertyValues" : [
                 {
-                  "type" : "UnitProp",
-                  "value" : "32.0",
-                  "unit" : {
-                    "type" : "Some",
-                    "value" : "bits"
-                  }
+                  "type" : "ValueProp",
+                  "value" : "Integer"
                 }
               ],
               "appliesTo" : [
@@ -11421,6 +11545,41 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
                 "name" : ["Data_Model::Number_Representation"],
                 "pos" : {
                   "type" : "Some",
@@ -11452,32 +11611,28 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["Memory_Properties::Data_Size"],
+                "name" : ["Data_Model::Data_Representation"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 27,
+                    "beginColumn" : 4,
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
                   }
                 }
               },
               "propertyValues" : [
                 {
-                  "type" : "UnitProp",
-                  "value" : "32.0",
-                  "unit" : {
-                    "type" : "Some",
-                    "value" : "bits"
-                  }
+                  "type" : "ValueProp",
+                  "value" : "Integer"
                 }
               ],
               "appliesTo" : [
@@ -11540,7 +11695,7 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Data_Model::Data_Representation"],
+            "name" : ["Data_Model::Dimension"],
             "pos" : {
               "type" : "Some",
               "value" : {
@@ -11549,19 +11704,22 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 27,
+                "beginLine" : 39,
                 "beginColumn" : 4,
-                "endLine" : 30,
-                "endColumn" : 36,
-                "offset" : 1165,
-                "length" : 162
+                "endLine" : 39,
+                "endColumn" : 97,
+                "offset" : 1668,
+                "length" : 93
               }
             }
           },
           "propertyValues" : [
             {
-              "type" : "ValueProp",
-              "value" : "Array"
+              "type" : "UnitProp",
+              "value" : "4.0",
+              "unit" : {
+                "type" : "None"
+              }
             }
           ],
           "appliesTo" : [
@@ -11602,7 +11760,7 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Data_Model::Dimension"],
+            "name" : ["Data_Model::Data_Representation"],
             "pos" : {
               "type" : "Some",
               "value" : {
@@ -11611,22 +11769,19 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 39,
+                "beginLine" : 27,
                 "beginColumn" : 4,
-                "endLine" : 39,
-                "endColumn" : 97,
-                "offset" : 1668,
-                "length" : 93
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
               }
             }
           },
           "propertyValues" : [
             {
-              "type" : "UnitProp",
-              "value" : "4.0",
-              "unit" : {
-                "type" : "None"
-              }
+              "type" : "ValueProp",
+              "value" : "Array"
             }
           ],
           "appliesTo" : [
@@ -11674,37 +11829,6 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Data_Model::Data_Representation"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                },
-                "beginLine" : 27,
-                "beginColumn" : 4,
-                "endLine" : 30,
-                "endColumn" : 36,
-                "offset" : 1165,
-                "length" : 162
-              }
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "ValueProp",
-              "value" : "Enum"
-            }
-          ],
-          "appliesTo" : [
-          ]
-        },
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
             "name" : ["Data_Model::Enumerators"],
             "pos" : {
               "type" : "Some",
@@ -11735,6 +11859,37 @@
             {
               "type" : "ValueProp",
               "value" : "Perimeter"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
             }
           ],
           "appliesTo" : [
@@ -11887,7 +12042,7 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["Data_Model::Data_Representation"],
+                "name" : ["Data_Model::Dimension"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
@@ -11896,19 +12051,22 @@
                       "type" : "Some",
                       "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                     },
-                    "beginLine" : 27,
+                    "beginLine" : 39,
                     "beginColumn" : 4,
-                    "endLine" : 30,
-                    "endColumn" : 36,
-                    "offset" : 1165,
-                    "length" : 162
+                    "endLine" : 39,
+                    "endColumn" : 97,
+                    "offset" : 1668,
+                    "length" : 93
                   }
                 }
               },
               "propertyValues" : [
                 {
-                  "type" : "ValueProp",
-                  "value" : "Array"
+                  "type" : "UnitProp",
+                  "value" : "4.0",
+                  "unit" : {
+                    "type" : "None"
+                  }
                 }
               ],
               "appliesTo" : [
@@ -11949,7 +12107,7 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["Data_Model::Dimension"],
+                "name" : ["Data_Model::Data_Representation"],
                 "pos" : {
                   "type" : "Some",
                   "value" : {
@@ -11958,22 +12116,19 @@
                       "type" : "Some",
                       "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                     },
-                    "beginLine" : 39,
+                    "beginLine" : 27,
                     "beginColumn" : 4,
-                    "endLine" : 39,
-                    "endColumn" : 97,
-                    "offset" : 1668,
-                    "length" : 93
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
                   }
                 }
               },
               "propertyValues" : [
                 {
-                  "type" : "UnitProp",
-                  "value" : "4.0",
-                  "unit" : {
-                    "type" : "None"
-                  }
+                  "type" : "ValueProp",
+                  "value" : "Array"
                 }
               ],
               "appliesTo" : [
@@ -12034,37 +12189,6 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
-                "name" : ["Data_Model::Data_Representation"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                    },
-                    "beginLine" : 27,
-                    "beginColumn" : 4,
-                    "endLine" : 30,
-                    "endColumn" : 36,
-                    "offset" : 1165,
-                    "length" : 162
-                  }
-                }
-              },
-              "propertyValues" : [
-                {
-                  "type" : "ValueProp",
-                  "value" : "Enum"
-                }
-              ],
-              "appliesTo" : [
-              ]
-            },
-            {
-              "type" : "Property",
-              "name" : {
-                "type" : "Name",
                 "name" : ["Data_Model::Enumerators"],
                 "pos" : {
                   "type" : "Some",
@@ -12095,6 +12219,37 @@
                 {
                   "type" : "ValueProp",
                   "value" : "Perimeter"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 27,
+                    "beginColumn" : 4,
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Enum"
                 }
               ],
               "appliesTo" : [
@@ -12239,7 +12394,7 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Data_Model::Data_Representation"],
+            "name" : ["Data_Model::Dimension"],
             "pos" : {
               "type" : "Some",
               "value" : {
@@ -12248,19 +12403,22 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 27,
+                "beginLine" : 39,
                 "beginColumn" : 4,
-                "endLine" : 30,
-                "endColumn" : 36,
-                "offset" : 1165,
-                "length" : 162
+                "endLine" : 39,
+                "endColumn" : 97,
+                "offset" : 1668,
+                "length" : 93
               }
             }
           },
           "propertyValues" : [
             {
-              "type" : "ValueProp",
-              "value" : "Array"
+              "type" : "UnitProp",
+              "value" : "10.0",
+              "unit" : {
+                "type" : "None"
+              }
             }
           ],
           "appliesTo" : [
@@ -12301,7 +12459,7 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Data_Model::Dimension"],
+            "name" : ["Data_Model::Data_Representation"],
             "pos" : {
               "type" : "Some",
               "value" : {
@@ -12310,22 +12468,19 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 39,
+                "beginLine" : 27,
                 "beginColumn" : 4,
-                "endLine" : 39,
-                "endColumn" : 97,
-                "offset" : 1668,
-                "length" : 93
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
               }
             }
           },
           "propertyValues" : [
             {
-              "type" : "UnitProp",
-              "value" : "10.0",
-              "unit" : {
-                "type" : "None"
-              }
+              "type" : "ValueProp",
+              "value" : "Array"
             }
           ],
           "appliesTo" : [
@@ -12373,7 +12528,7 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Data_Model::Data_Representation"],
+            "name" : ["Data_Model::Dimension"],
             "pos" : {
               "type" : "Some",
               "value" : {
@@ -12382,19 +12537,22 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 27,
+                "beginLine" : 39,
                 "beginColumn" : 4,
-                "endLine" : 30,
-                "endColumn" : 36,
-                "offset" : 1165,
-                "length" : 162
+                "endLine" : 39,
+                "endColumn" : 97,
+                "offset" : 1668,
+                "length" : 93
               }
             }
           },
           "propertyValues" : [
             {
-              "type" : "ValueProp",
-              "value" : "Array"
+              "type" : "UnitProp",
+              "value" : "4.0",
+              "unit" : {
+                "type" : "None"
+              }
             }
           ],
           "appliesTo" : [
@@ -12435,7 +12593,7 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Data_Model::Dimension"],
+            "name" : ["Data_Model::Data_Representation"],
             "pos" : {
               "type" : "Some",
               "value" : {
@@ -12444,22 +12602,19 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 39,
+                "beginLine" : 27,
                 "beginColumn" : 4,
-                "endLine" : 39,
-                "endColumn" : 97,
-                "offset" : 1668,
-                "length" : 93
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
               }
             }
           },
           "propertyValues" : [
             {
-              "type" : "UnitProp",
-              "value" : "4.0",
-              "unit" : {
-                "type" : "None"
-              }
+              "type" : "ValueProp",
+              "value" : "Array"
             }
           ],
           "appliesTo" : [
@@ -12507,6 +12662,41 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 92,
+                "beginColumn" : 2,
+                "endLine" : 93,
+                "endColumn" : 137,
+                "offset" : 4808,
+                "length" : 152
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "64.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
             "name" : ["Data_Model::Number_Representation"],
             "pos" : {
               "type" : "Some",
@@ -12538,32 +12728,28 @@
           "type" : "Property",
           "name" : {
             "type" : "Name",
-            "name" : ["Memory_Properties::Data_Size"],
+            "name" : ["Data_Model::Data_Representation"],
             "pos" : {
               "type" : "Some",
               "value" : {
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 92,
-                "beginColumn" : 2,
-                "endLine" : 93,
-                "endColumn" : 137,
-                "offset" : 4808,
-                "length" : 152
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
               }
             }
           },
           "propertyValues" : [
             {
-              "type" : "UnitProp",
-              "value" : "64.0",
-              "unit" : {
-                "type" : "Some",
-                "value" : "bits"
-              }
+              "type" : "ValueProp",
+              "value" : "Integer"
             }
           ],
           "appliesTo" : [
