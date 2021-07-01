@@ -226,7 +226,11 @@ trait CodeGenTest extends TestSuite {
           val ignoreFile = ignoreSbtAndMillBuildChanges && (r._1.native.endsWith("build.sbt") || r._1.native.endsWith("build.sc"))
           val sameContents = r._2 == e
           if(!sameContents) {
-            eprintln(s"${r._1} is not the same (NOTE comparing ${e.getClass.getSimpleName} objects so perhaps something other than the generated code has changed)")
+            var reason: ISZ[String] = ISZ()
+            if(r._2.content != e.content) reason = reason :+ "content is not the same"
+            if(r._2.overwrite != e.overwrite) reason = reason :+ "overwrite flag is not the same"
+            if(r._2.makeExecutable != e.makeExecutable) reason = reason :+ "makeExecutable flag is not the same"
+            eprintln(st"${r._1} ${(reason, ", ")}".render)
           }
           ignoreFile || sameContents
         }
