@@ -223,7 +223,7 @@ trait CodeGenTest extends TestSuite {
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= {
-          val ignoreFile = ignoreSbtAndMillBuildChanges && (r._1.native.endsWith("build.sbt") || r._1.native.endsWith("build.sc"))
+          val ignoreFile = ignoreSbtAndMillBuildChanges && (r._1.native.endsWith("build.sbt") || r._1.native.endsWith("build.sc") || r._1.native.endsWith("versions.properties"))
           val sameContents = r._2 == e
           if(!sameContents) {
             var reason: ISZ[String] = ISZ()
