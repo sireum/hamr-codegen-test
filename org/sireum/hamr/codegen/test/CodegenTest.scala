@@ -12,6 +12,7 @@ import org.sireum.hamr.codegen.common.util.test.{TestJSON, TestMsgPack, TestReso
 import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.hamr.ir._
 import org.sireum.message._
+import org.sireum.ops.ISZOps
 import org.sireum.test.TestSuite
 
 /** Can regenerate AIR JSON files via 
@@ -29,7 +30,7 @@ trait CodeGenTest extends TestSuite {
     case _ => TestMode.Codegen
   }
 
-  def ignoreSbtAndMillBuildChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
+  def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("uav", "bit_codec")
@@ -223,7 +224,8 @@ trait CodeGenTest extends TestSuite {
       if(expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= {
-          val ignoreFile = ignoreSbtAndMillBuildChanges && (r._1.native.endsWith("build.sbt") || r._1.native.endsWith("build.sc") || r._1.native.endsWith("versions.properties"))
+          val ignores = ISZOps(ISZ("build.sbt", "build.sc", "versions.properties", "project.cmd"))
+          val ignoreFile = ignoreBuildDefChanges && ignores.exists(p => r._1.native.endsWith(p))
           val sameContents = r._2 == e
           if(!sameContents) {
             var reason: ISZ[String] = ISZ()
