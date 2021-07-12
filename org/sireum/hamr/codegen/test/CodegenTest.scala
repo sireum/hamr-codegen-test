@@ -113,7 +113,9 @@ trait CodeGenTest extends TestSuite {
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
     val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
-      if(shouldTranspile(testOps.platform)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 })
+      if(shouldTranspile(testOps.platform)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 },
+      (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
+    )
 
     if(expectedErrorReasons.isEmpty) assert(!reporter.hasError)
     else {
@@ -345,6 +347,7 @@ object CodeGenTest {
     platform = CodeGenPlatform.JVM,
     slangOutputDir = None(),
     packageName = None(),
+    noProyekIve = T,
     noEmbedArt = F,
     devicesAsThreads = T,
     slangAuxCodeDirs = ISZ(),
