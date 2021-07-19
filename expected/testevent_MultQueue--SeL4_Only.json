@@ -43,7 +43,7 @@
         "testevent_MultQueue--SeL4_Only\/components\/emitter_impl_testevent_src\/src\/emitter.c",
         {
           "type" : "TestResource",
-          "content" : "\/* testevent\/components\/emitter\/src\/emitter.c *\/\n\n#include <camkes.h>\n#include <stdio.h>\n#include <sb_types.h>\n#include <sb_emitter_impl.h>\n\nstatic int32_t counter = 0;\n\nvoid testevent_emitter_component_init(const int64_t *in_arg)\n{\n    printf(\"testevent_emitter_component_init called\\n\");\n}\n\n\/* control thread: keep calling enqueue for thing\n *\/\nvoid run_emitter(const int64_t *in_arg){\n  int numEvents = counter % 7; \/\/ send 0 - 6 events per dispatch, consumer's queue size is 5\n  for(int32_t i = 0; i < numEvents; i++) {\n    sb_e_enqueue();\n  }\n  printf(\"[Emitter] Sent %i events.\\n\", numEvents);\n   \n  counter++;\n}\n",
+          "content" : "\/* testevent\/components\/emitter\/src\/emitter.c *\/\n\n#include <camkes.h>\n#include <stdio.h>\n#include <sb_types.h>\n#include <sb_emitter_impl.h>\n\nstatic int32_t counter = 0;\n\nvoid testevent_emitter_component_init(const int64_t *in_arg)\n{\n    printf(\"testevent_emitter_component_init called\\n\");\n}\n\n\/* control thread: keep calling enqueue for thing\n *\/\nvoid run_emitter(const int64_t *in_arg){\n  int numEvents = counter % 7; \/\/ send 0 - 6 events per dispatch, consumer's queue size is 5\n  for(int32_t i = 0; i < numEvents; i++) {\n    sb_e_enqueue();\n  }\n  printf(\"[Emitter] Sent %i events.\\n\", numEvents);\n\n  counter++;\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -52,7 +52,7 @@
         "testevent_MultQueue--SeL4_Only\/components\/consumer_impl_testevent_snk\/src\/consumer.c",
         {
           "type" : "TestResource",
-          "content" : "\/* apps\/testevent\/components\/Consumer\/src\/main.c *\/\n\n\/* Similar to the \"helloevent\" example in CAmkES doc,\n * tidied up a bit.\n *\/\n\n#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_impl.h>\n\nvoid testevent_consumer_component_init(const int64_t *in_arg) {\n  printf(\"testevent_consumer_component_init called\\n\");\n}\n\nvoid testevent_consumer_s_event_handler() {\n  int32_t receivedEvents = 1; \/\/ 1 for the event that caused handler to be invoked\n  while(sb_s_dequeue()) {\n    receivedEvents++;\n  }\n  \n  printf(\"[Consumer] received %i events\\n\\n\", receivedEvents);\n}\n",
+          "content" : "\/* apps\/testevent\/components\/Consumer\/src\/main.c *\/\n\n\/* Similar to the \"helloevent\" example in CAmkES doc,\n * tidied up a bit.\n *\/\n\n#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_impl.h>\n\nvoid testevent_consumer_component_init(const int64_t *in_arg) {\n  printf(\"testevent_consumer_component_init called\\n\");\n}\n\nvoid testevent_consumer_s_event_handler() {\n  int32_t receivedEvents = 1; \/\/ 1 for the event that caused handler to be invoked\n  while(sb_s_dequeue()) {\n    receivedEvents++;\n  }\n\n  printf(\"[Consumer] received %i events\\n\\n\", receivedEvents);\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }

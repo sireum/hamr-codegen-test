@@ -43,7 +43,7 @@
         "test_event_port--SeL4_Only\/components\/consumer_impl_test_event_port_snk\/src\/consumer.c",
         {
           "type" : "TestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_impl.h>\n\nstatic int8_t _value;\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n  _value = 0;\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n  int8_t old_value = _value;\n  while(sb_s_dequeue()) {\n    _value = (_value + 1) % 500;\n  }\n  \n  printf(\"[%s] Callback fired.  Received %i events this dispatch, %i total\\n\", get_instance_name(), (_value - old_value), _value);\n}\n",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_impl.h>\n\nstatic int8_t _value;\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n  _value = 0;\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n  int8_t old_value = _value;\n  while(sb_s_dequeue()) {\n    _value = (_value + 1) % 500;\n  }\n\n  printf(\"[%s] Callback fired.  Received %i events this dispatch, %i total\\n\", get_instance_name(), (_value - old_value), _value);\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
