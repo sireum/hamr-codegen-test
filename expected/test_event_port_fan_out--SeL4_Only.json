@@ -70,7 +70,7 @@
         "test_event_port_fan_out--SeL4_Only\/components\/emitter_impl_test_event_port_src\/src\/emitter.c",
         {
           "type" : "TestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_emitter_impl.h>\n\nint32_t counter = 0;\n\nvoid test_event_port_emitter_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_emitter_component_init called\\n\", get_instance_name());\n}\n\nvoid run_emitter(const int64_t *in_arg) {\n  for(int32_t i = 0; i < counter; i++) {\n    sb_e_enqueue();\n  }\n  printf(\"---------------------------------------\\n\");\n  printf(\"[%s] Sent %i events.\\n\", get_instance_name(), counter);\n\n  counter = (counter + 1) % 7; \/\/ send b\/w 0 to 6 events per dispatch\n}\n",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_emitter_impl.h>\n\nint32_t counter = 0;\n\nvoid test_event_port_emitter_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_emitter_component_init called\\n\", get_instance_name());\n}\n\nvoid run_emitter(const int64_t *in_arg) {\n  for(int32_t i = 0; i < counter; i++) {\n    sb_e_enqueue();\n  }\n  printf(\"---------------------------------------\\n\");\n  printf(\"[%s] Sent %i events.\\n\", get_instance_name(), counter);\n  \n  counter = (counter + 1) % 7; \/\/ send b\/w 0 to 6 events per dispatch\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -79,7 +79,7 @@
         "test_event_port_fan_out--SeL4_Only\/components\/consumer_queue_default_impl_test_event_port_snkDefault\/src\/consumer_queue_default.c",
         {
           "type" : "TestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_queue_default_impl.h>\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n int32_t counter = 1; \/\/ 1 for the event that triggered the handler\n  while(sb_s_dequeue()) {\n    counter++;\n  }\n\n  printf(\"[%s] Received %i events\\n\", get_instance_name(), counter);\n}\n\n",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_queue_default_impl.h>\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n int32_t counter = 1; \/\/ 1 for the event that triggered the handler\n  while(sb_s_dequeue()) {\n    counter++;\n  }\n  \n  printf(\"[%s] Received %i events\\n\", get_instance_name(), counter);\n}\n\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -88,7 +88,7 @@
         "test_event_port_fan_out--SeL4_Only\/components\/consumer_queue_2_impl_test_event_port_snkQueue2_A\/src\/consumer_queue_2.c",
         {
           "type" : "TestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_queue_2_impl.h>\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n int32_t counter = 1; \/\/ 1 for the event that triggered the handler\n  while(sb_s_dequeue()) {\n    counter++;\n  }\n\n  printf(\"[%s] Received %i events\\n\", get_instance_name(), counter);\n}\n",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_queue_2_impl.h>\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n int32_t counter = 1; \/\/ 1 for the event that triggered the handler\n  while(sb_s_dequeue()) {\n    counter++;\n  }\n  \n  printf(\"[%s] Received %i events\\n\", get_instance_name(), counter);\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -97,7 +97,7 @@
         "test_event_port_fan_out--SeL4_Only\/components\/consumer_queue_2_impl_test_event_port_snkQueue2_B\/src\/consumer_queue_2.c",
         {
           "type" : "TestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_queue_2_impl.h>\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n int32_t counter = 1; \/\/ 1 for the event that triggered the handler\n  while(sb_s_dequeue()) {\n    counter++;\n  }\n\n  printf(\"[%s] Received %i events\\n\", get_instance_name(), counter);\n}\n",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_queue_2_impl.h>\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n int32_t counter = 1; \/\/ 1 for the event that triggered the handler\n  while(sb_s_dequeue()) {\n    counter++;\n  }\n  \n  printf(\"[%s] Received %i events\\n\", get_instance_name(), counter);\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
@@ -106,7 +106,7 @@
         "test_event_port_fan_out--SeL4_Only\/components\/consumer_queue_5_impl_test_event_port_snkQueue5\/src\/consumer_queue_5.c",
         {
           "type" : "TestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_queue_5_impl.h>\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n int32_t counter = 1; \/\/ 1 for the event that triggered the handler\n  while(sb_s_dequeue()) {\n    counter++;\n  }\n\n  printf(\"[%s] Received %i events\\n\", get_instance_name(), counter);\n}\n",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_queue_5_impl.h>\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_port_consumer_s_event_handler() {\n int32_t counter = 1; \/\/ 1 for the event that triggered the handler\n  while(sb_s_dequeue()) {\n    counter++;\n  }\n  \n  printf(\"[%s] Received %i events\\n\", get_instance_name(), counter);\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }

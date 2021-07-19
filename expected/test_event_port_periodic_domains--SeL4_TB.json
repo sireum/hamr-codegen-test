@@ -61,7 +61,7 @@
         "test_event_port_periodic_domains--SeL4_TB\/components\/consumer_t_impl_dst_process_dst_thread\/src\/consumer.c",
         {
           "type" : "TestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_t_impl.h>\n\nstatic int8_t _value;\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n  _value = 0;\n}\n\nvoid test_event_port_consumer_time_triggered_handler(const int64_t *unused) {\n  int8_t old_value = _value;\n  while(sb_consume_dequeue()) {\n    _value = (_value + 1) % 500;\n  }\n\n  printf(\"[%s] Callback fired.  Received %i events this dispatch, %i total\\n\", get_instance_name(), (_value - old_value), _value);\n}\n",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_consumer_t_impl.h>\n\nstatic int8_t _value;\n\nvoid test_event_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_port_consumer_component_init called\\n\", get_instance_name());\n  _value = 0;\n}\n\nvoid test_event_port_consumer_time_triggered_handler(const int64_t *unused) {\n  int8_t old_value = _value;\n  while(sb_consume_dequeue()) {\n    _value = (_value + 1) % 500;\n  }\n  \n  printf(\"[%s] Callback fired.  Received %i events this dispatch, %i total\\n\", get_instance_name(), (_value - old_value), _value);\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }

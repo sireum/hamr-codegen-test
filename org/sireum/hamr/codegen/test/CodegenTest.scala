@@ -178,7 +178,7 @@ trait CodeGenTest extends TestSuite {
 
     val resultMap = TestResult(Map.empty ++ (results.resources.map(m => {
       val key = resultsDir.relativize(Os.path(m.path)).value
-      (key, TestResource(m.content.render, m.overwrite, m.makeExecutable))
+      (key, TestResource(m.content, m.overwrite, m.makeExecutable))
     })))
 
     var testFail = F

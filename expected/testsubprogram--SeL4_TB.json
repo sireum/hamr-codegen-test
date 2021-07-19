@@ -61,7 +61,7 @@
         "testsubprogram--SeL4_TB\/components\/sender_impl_testsubprogram_source_inst\/src\/sender.c",
         {
           "type" : "TestResource",
-          "content" : "\/* testsubprogram\/components\/sender\/src\/sender *\/\n\n#include <camkes.h>\n#include <sb_types.h>\n#include \"..\/includes\/sb_sender_impl.h\"\n\nvoid sender_init(const int64_t *arg){\n   printf(\"Initializer method for sender invoked\\n\");\n}\n\nvoid run_sender(int64_t * arg) {\n   uint32_t result;\n\n   operations_add(10, 5, &result);\n   printf(\"Result of 'add' call to receiver with arguments 10, 5 : (%d) \\n\", result);\n\n   operations_subtract(10, 5, &result);  \n   printf(\"Result of 'subtract' call to receiver with arguments 10, 5 : (%d) \\n\", result);\n}\n",
+          "content" : "\/* testsubprogram\/components\/sender\/src\/sender *\/\n\n#include <camkes.h>\n#include <sb_types.h>\n#include \"..\/includes\/sb_sender_impl.h\"\n\nvoid sender_init(const int64_t *arg){\n   printf(\"Initializer method for sender invoked\\n\");\n}\n\nvoid run_sender(int64_t * arg) {\n   uint32_t result;\n\n   operations_add(10, 5, &result);\n   printf(\"Result of 'add' call to receiver with arguments 10, 5 : (%d) \\n\", result);\n   \n   operations_subtract(10, 5, &result);  \n   printf(\"Result of 'subtract' call to receiver with arguments 10, 5 : (%d) \\n\", result);\n}\n",
           "overwrite" : true,
           "makeExecutable" : false
         }
