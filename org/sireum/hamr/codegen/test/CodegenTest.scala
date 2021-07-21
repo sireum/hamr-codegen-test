@@ -438,7 +438,7 @@ object CodeGenTest {
 
     val results = Os.proc(args).console.run()
 
-    return results
+    return results.exitCode
   }
 
   def getDirectories(): (Os.Path, Os.Path) = {
