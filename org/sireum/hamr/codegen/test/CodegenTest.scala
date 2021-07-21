@@ -409,7 +409,7 @@ object CodeGenTest {
       args = args :+ key :+ value
     }
 
-    val pathSep: String = if(Os.isWin) ";" else ":"
+    val pathSep: String = Os.pathSep
 
     args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, pathSep)}""".render
     tc.output.map(s => add("--output-dir", s))
@@ -438,7 +438,7 @@ object CodeGenTest {
 
     val results = Os.proc(args).console.run()
 
-    results.exitCode
+    return results
   }
 
   def getDirectories(): (Os.Path, Os.Path) = {
