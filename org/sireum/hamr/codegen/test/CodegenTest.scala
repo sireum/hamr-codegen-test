@@ -91,7 +91,6 @@ trait CodeGenTest extends TestSuite {
 
     var testOps = ops(
       slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some(slangOutputDir.canon.value),
-      writeOutResources = T
     )
 
     if(isSeL4(testOps.platform)) {
@@ -176,10 +175,7 @@ trait CodeGenTest extends TestSuite {
       }
     }
 
-    val resultMap = TestResult(Map.empty ++ (results.resources.map(m => {
-      val key = resultsDir.relativize(Os.path(m.path)).value
-      (key, TestResource(m.content.render, m.overwrite, m.makeExecutable))
-    })))
+    val resultMap = TestUtil.convertToTestResult(results.resources, resultsDir)
 
     var testFail = F
     val expectedMap: TestResult = if(generateExpected) {
@@ -234,6 +230,7 @@ trait CodeGenTest extends TestSuite {
             if(r._2.content != e.content) reason = reason :+ "content is not the same"
             if(r._2.overwrite != e.overwrite) reason = reason :+ "overwrite flag is not the same"
             if(r._2.makeExecutable != e.makeExecutable) reason = reason :+ "makeExecutable flag is not the same"
+            if(r._2.makeCRLF != e.makeCRLF) reason = reason :+ "makeCRLF flag is not the same"
             eprintln(st"${r._1} ${(reason, ", ")}".render)
           }
           ignoreFile || sameContents
@@ -340,7 +337,7 @@ object CodeGenTest {
   rootResultDir.mkdirAll()
 
   val baseOptions = CodeGenConfig(
-    writeOutResources = F,
+    writeOutResources = T,
     ipc = CodeGenIpcMechanism.SharedMemory,
 
     verbose = F,
