@@ -1,14 +1,14 @@
 package org.sireum.hamr.codegen.test.normal
 
 import org.sireum._
-import org.sireum.hamr.codegen._
+import org.sireum.$internal.RC
 import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
 
 class CodeGenTest_Base extends CodeGenTest {
 
-  override def generateExpected: B = if(super.generateExpected) T else F
+  override def generateExpected: B = if (super.generateExpected) T else F
 
   //override def filter: B = if(super.filter) T else F
   //override def filters: ISZ[String] = ISZ("nested_")
@@ -18,7 +18,7 @@ class CodeGenTest_Base extends CodeGenTest {
     val modelsDir = baseModelsDir / getClass.getSimpleName
 
     {
-      val name ="nested_feature_groups"
+      val name = "nested_feature_groups"
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "Nested_Feature_Group_Test_S_impl_Instance.json"
 
@@ -81,12 +81,12 @@ class CodeGenTest_Base extends CodeGenTest {
       val name = "building_control_gen_mixed"
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "BuildingControl_BuildingControlDemo_i_Instance.json"
-      
+
       var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
       test(s"$name--${platform}-Embed-Art", modelDir, model,
         baseOptions(platform = platform),
         resultDir, None(), None(), ISZ())
-      
+
       platform = CodeGenPlatform.JVM
       test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
         baseOptions(platform = platform,
@@ -113,9 +113,9 @@ class CodeGenTest_Base extends CodeGenTest {
           packageName = Some("building_control_gen_mixed")
         ),
         resultDir, None(), None(), ISZ())
-      
+
     }
-    
+
     { // UAV_ALT tests
       val name = "uav_alt"
       val modelDir = modelsDir / name
@@ -132,13 +132,7 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform,
           maxStringSize = 300),
         resultDir, None(), uri, ISZ())
-      
-      platform = CodeGenPlatform.MacOS
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform,
-        maxStringSize = 300),
-        resultDir, None(), uri, ISZ())
-      
+
       platform = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
@@ -155,8 +149,9 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = modelDir / ".slang" / "UAV_UAV_Impl_Instance.json"
       val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/experiments/Simple_UAV_Example_domains")
-      val description: Option[String] = Some("""Incomplete - Need to introduce pacer component for seL4_Only profile
-                                               |           - Entrypoints not defined in AADL model so CAmkES components will not be dispatched""".stripMargin)
+      val description: Option[String] = Some(
+        """Incomplete - Need to introduce pacer component for seL4_Only profile
+          |           - Entrypoints not defined in AADL model so CAmkES components will not be dispatched""".stripMargin)
 
       var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
@@ -194,7 +189,7 @@ class CodeGenTest_Base extends CodeGenTest {
           excludeComponentImpl = T
         ),
         resultDir, None(), uri, ISZ())
-      
+
     }
 
     { // Data port micro example
@@ -207,7 +202,7 @@ class CodeGenTest_Base extends CodeGenTest {
         var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
-          resultDir, 
+          resultDir,
           Some("Data port micro-example - Trusted Build profile"), uri, ISZ()
         )
 
@@ -261,7 +256,7 @@ class CodeGenTest_Base extends CodeGenTest {
         )
 
         platform = CodeGenPlatform.SeL4_Only
-        val ihorUri ="https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-eventdata-monitor"
+        val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-eventdata-monitor"
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           resultDir,
@@ -372,7 +367,7 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform),
         resultDir, None(), None(), ISZ()
       )
-      
+
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
@@ -406,7 +401,7 @@ class CodeGenTest_Base extends CodeGenTest {
 
       platform = CodeGenPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
-        bo(platform = platform),  resultDir, None(), None(), ISZ())
+        bo(platform = platform), resultDir, None(), None(), ISZ())
 
       test(s"$name--${platform}-excludesImpl", modelDir, model,
         bo(platform = platform, excludeComponentImpl = T),
@@ -495,6 +490,48 @@ class CodeGenTest_Base extends CodeGenTest {
           excludeComponentImpl = T
         ),
         resultDir, None(), None(), ISZ())
+    }
+  }
+
+  def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
+    // scala/java 'resources' directories don't play nicely with mill so instead embed the contents
+    // of 'expected' and 'models' into the test class via the RC macros .  These can then
+    // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
+
+    return RC.base64(Vector("../../../../../../")) { (p, f) =>
+      val cname = "CodeGenTest_Base"
+      val allowedDirs: ISZ[Predef.String] = ISZ(s"expected/${cname}", s"models/${cname}")
+
+      val dirAllowed: B = {
+        var matched: B = F
+        for(allowedDir <- allowedDirs if !matched) {
+          val split: Array[Predef.String] = allowedDir.split("/")
+          var index: Int = 0
+          while(index < split.length && index < p.length && split(index) == p(index)) { index = index + 1 }
+          matched = index == split.length
+        }
+        matched
+      }
+
+      // exclude unneeded files by their extension
+      val excludedResources: ISZ[org.sireum.String] =
+        ISZ("aadlbin", "aaxl2", "png", "pdf", "md", "dot", "aadl", "aadl_diagram", "reqspec",
+          "alisa", "project", "system", "org", "cat", "verify", "methodregistry", "gitignore", "goals", "xassure")
+
+      val filename = Os.path(p.last)
+
+      val allow = dirAllowed &&
+        !ops.ISZOps(excludedResources).contains(filename.ext) &&
+        ((p.size > 1 && p(p.size - 2) != ".slang") || filename.ext.native != "json") // exclude json files in the .slang directories
+
+      if(allow) {
+        //println(s"allowed: ${p} - ${f.length()}")
+        //println(f.length())
+      } else {
+        //println(s"NOT allowed: ${p} - ${f.length()}")
+      }
+
+      allow
     }
   }
 }

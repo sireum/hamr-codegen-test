@@ -1,14 +1,13 @@
 package org.sireum.hamr.codegen.test
 
 import org.sireum._
-import org.sireum.$internal.RC
 import org.sireum.hamr.act.templates.{CakeMLTemplate, SlangEmbeddedTemplate}
 import org.sireum.hamr.act.util.CMakeOption
 import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.TranspilerConfig
 import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
-import org.sireum.hamr.codegen.common.util.test.{TestJSON, TestMsgPack, TestResource, TestResult, TestUtil}
+import org.sireum.hamr.codegen.common.util.test.{TestResult, TestUtil}
 import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.hamr.ir._
 import org.sireum.message._
@@ -30,10 +29,12 @@ trait CodeGenTest extends TestSuite {
     case _ => TestMode.Codegen
   }
 
+  def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String]
+
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("uav", "bit_codec")
+  def filters: ISZ[String] = ISZ("test_event_data_port_periodic_domains--SeL4")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
@@ -41,7 +42,7 @@ trait CodeGenTest extends TestSuite {
 
   def timeout: Z = 10000
 
-  val (expectedJsonDir, baseModelsDir) = getDirectories()
+  val (expectedJsonDir, baseModelsDir) = getDirectories(testResources())
 
   //def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
   //  test(testName, modelDir, airFile, ops, T)
@@ -82,7 +83,7 @@ trait CodeGenTest extends TestSuite {
               expectedErrorReasons: ISZ[String] // empty if errors not expected
               ): Unit = {
 
-    val expectedJson = expectedJsonDir / s"${testName}.json"
+    val expectedJson = expectedJsonDir / getClass.getSimpleName / s"${testName}.json"
 
     val rootTestOutputDir = if(resultDir.nonEmpty) rootResultDir / resultDir.get / testName else rootResultDir / testName
     val expectedDir = rootTestOutputDir / "expected"
@@ -438,7 +439,7 @@ object CodeGenTest {
     return results.exitCode
   }
 
-  def getDirectories(): (Os.Path, Os.Path) = {
+  def getDirectories(testResources : scala.collection.Map[scala.Vector[Predef.String], Predef.String]): (Os.Path, Os.Path) = {
     val intellijTestDir = Os.path("./hamr/codegen/jvm/src/test/scala")
     val rootResultsDir: Os.Path = if(intellijTestDir.exists) {
       // use local/intellij copy
@@ -446,7 +447,7 @@ object CodeGenTest {
     } else {
       // probably running from jar so copy resources to a temp directory
       val temp: Os.Path = Os.tempDir()
-      for (entry <- testResources()) {
+      for (entry <- testResources) {
         assert(entry._1.head == "expected" || entry._1.head == "models")
 
         val f = temp / entry._1.mkString("/")
@@ -464,29 +465,5 @@ object CodeGenTest {
       temp
     }
     return (rootResultsDir / "expected", rootResultsDir / "models")
-  }
-
-  def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
-    // scala/java 'resources' directories don't play nicely with mill so instead embed the contents
-    // of 'expected' and 'models' into the test class via the RC macros .  These can then
-    // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
-    RC.base64(Vector("../../../../../")) { (p, f) =>
-      val allowedDirs: ISZ[String] = ISZ("expected", "models")
-
-      // exclude unneeded/binary files
-      val excludedResources: ISZ[String] = ISZ("aadlbin", "aaxl2", "png", "pdf", "md", "dot", "aadl", "aadl_diagram")
-
-      val filename = Os.path(p.last)
-
-      val allow = ops.ISZOps(allowedDirs).contains(p.head) &&
-        !ops.ISZOps(excludedResources).contains(filename.ext) &&
-        ((p.size > 1 && p(p.size - 2) != ".slang") || filename.ext.native != "json") // exclude json files in the .slang directories
-
-      if(allow) {
-        //println(p)
-      }
-
-      allow
-    }
   }
 }
