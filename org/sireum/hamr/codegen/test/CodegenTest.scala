@@ -24,14 +24,14 @@ trait CodeGenTest extends TestSuite {
   def generateExpected: B = F
   def delResultDirIfEqual: B = F
 
+  def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
+
   def testMode: TestMode.Type = Os.env("HamrTestMode") match {
     case Some(t) => TestMode.byName(t).get
     case _ => TestMode.Codegen
   }
 
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String]
-
-  def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("test_event_data_port_periodic_domains--SeL4")
