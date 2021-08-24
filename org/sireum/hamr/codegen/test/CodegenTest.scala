@@ -130,7 +130,8 @@ trait CodeGenTest extends TestSuite {
     }
 
     if(runCamkesNinja(testOps.platform)) {
-      val hasVMs: B = testName.native.toLowerCase().contains("vm")
+      val hasVMs: B = reporter.messages.filter(m => org.sireum.ops.StringOps(m.text)
+        .contains("Execute the following to install the CAmkES-ARM-VM project:")).nonEmpty
 
       val rootCamkesDir: Option[Os.Path] =
         if(hasVMs) { camkesArmVMDir() }
@@ -156,7 +157,10 @@ trait CodeGenTest extends TestSuite {
               ISZ("-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON")
           }
 
-          camkesArgs = camkesArgs ++ onOptions(CakeMLTemplate.CAKEML_OPTIONS)
+          // would only want to enable cakeml assemblies if they are built ahead of time
+          // which would mean the CI would need to do that as too expensive/large to
+          // check the binaries into git
+          //camkesArgs = camkesArgs ++ onOptions(CakeMLTemplate.CAKEML_OPTIONS)
 
           camkesArgs = camkesArgs :+ s"-DCAMKES_APP=${name}"
 
@@ -312,6 +316,8 @@ trait CodeGenTest extends TestSuite {
            (TestMode.TranspileNix, CodeGenPlatform.Cygwin) => T
 
       case (TestMode.Camkes, CodeGenPlatform.SeL4) => T
+
+      case (TestMode.Camkes_TranspileNix, _) => T
 
       case _ => F
     }
