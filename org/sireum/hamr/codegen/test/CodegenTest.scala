@@ -177,6 +177,7 @@ trait CodeGenTest extends TestSuite {
           //println(results.err)
         }
         case _ =>
+          assert(F, "CAmkES directory not found")
       }
     }
 
@@ -375,8 +376,8 @@ object CodeGenTest {
     return Os.env(CodeGenTest.CAMKES_DIR) match {
       case Some(x) => Some(Os.path(x))
       case _ =>
-        eprintln(s"${CodeGenTest.CAMKES_DIR} not set !!!!")
-        val candidate = Os.home / "CASE/camkes"
+        eprintln(s"${CodeGenTest.CAMKES_DIR} environment variable not set !!!!")
+        val candidate = Os.home / "CASE" / "camkes"
         if (candidate.exists) {
           eprintln(s"Found ${candidate} so using that")
           Some(candidate)
@@ -390,8 +391,8 @@ object CodeGenTest {
     return Os.env(CodeGenTest.CAMKES_ARM_VM_DIR) match {
       case Some(x) => Some(Os.path(x))
       case _ =>
-        eprintln(s"${CodeGenTest.CAMKES_ARM_VM_DIR} not set!!!")
-        val candidate = Os.home / "CASE/camkes-arm-vm"
+        eprintln(s"${CodeGenTest.CAMKES_ARM_VM_DIR} environment variable not set!!!")
+        val candidate = Os.home / "CASE" / "camkes-arm-vm"
         if (candidate.exists) {
           eprintln(s"Found ${candidate} so using that")
           Some(candidate)
