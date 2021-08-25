@@ -12,4 +12,6 @@ import org.sireum._
 
   "Camkes" // gen source files + run CAmkES/ninja (will run transpiler for sel4 projects)
   "Camkes_TranspileNix" // gen source files + run transpiler for nix projects + run CAmkES/ninja for sel4 projects
+
+  "All" // gen source files + proyek compile JVM projects + run transpiler for nix project + compile nix/seL4 projects + run ninja for seL4 projects
 }

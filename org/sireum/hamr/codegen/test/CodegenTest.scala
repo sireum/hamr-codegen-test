@@ -117,6 +117,26 @@ trait CodeGenTest extends TestSuite {
       (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
     )
 
+    assert(!reporter.hasError, "Reporter has errors")
+
+    if(shouldCompile(testOps.platform)) {
+      println("Compiling JVM")
+      val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+      val slangDir = Os.path(testOps.slangOutputDir.get)
+
+      println(s"Calling proyek compile on ${sireum.string} at ${slangDir.string}")
+
+      val proyekResults = proc"${sireum.string} proyek compile --par ${slangDir.string}".at(slangDir).console.run()
+      assert(proyekResults.ok, "Proyek compilation failed")
+
+      if(isLinux(testOps.platform)) {
+        println("Compiling C")
+        val compileScript = Os.path(testOps.slangOutputCDir.get) / "bin" / "compile.cmd"
+        val cCompileResults = proc"bash -c ${compileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.string))).at(compileScript.up).console.run()
+        assert(cCompileResults.ok, "C Compilation failed")
+      }
+    }
+
     if(expectedErrorReasons.isEmpty) assert(!reporter.hasError)
     else {
       assert(reporter.hasError, "Expecting errors but codegen completed successfully")
@@ -288,6 +308,15 @@ trait CodeGenTest extends TestSuite {
     }
   }
 
+  def isLinux(platform: CodeGenPlatform.Type): Boolean = {
+    return platform match {
+      case CodeGenPlatform.Linux => T
+      case CodeGenPlatform.MacOS => T
+      case CodeGenPlatform.Cygwin => T
+      case _ => F
+    }
+  }
+
   def isSeL4(platform: CodeGenPlatform.Type): Boolean = {
     return platform match {
       case CodeGenPlatform.SeL4 => T
@@ -301,9 +330,25 @@ trait CodeGenTest extends TestSuite {
     val isCamkes: B = testMode match {
       case TestMode.Camkes => T
       case TestMode.Camkes_TranspileNix => T
+      case TestMode.All => T
       case _ => F
     }
     return isCamkes && isSeL4(platform)
+  }
+
+  def shouldCompile(platform: CodeGenPlatform.Type): B = {
+    val should: B = testMode match {
+      case TestMode.All =>
+        platform match {
+          case CodeGenPlatform.JVM |
+            CodeGenPlatform.Cygwin |
+            CodeGenPlatform.MacOS |
+            CodeGenPlatform.Linux => T
+          case _ => F
+        }
+      case _ => F
+    }
+    return should
   }
 
   def shouldTranspile(platform: CodeGenPlatform.Type): B = {
@@ -319,6 +364,8 @@ trait CodeGenTest extends TestSuite {
       case (TestMode.Camkes, CodeGenPlatform.SeL4) => T
 
       case (TestMode.Camkes_TranspileNix, _) => T
+
+      case (TestMode.All, _) => T
 
       case _ => F
     }
