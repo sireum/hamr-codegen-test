@@ -117,27 +117,9 @@ trait CodeGenTest extends TestSuite {
       (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
     )
 
-    assert(!reporter.hasError, "Reporter has errors")
-
-    if(shouldCompile(testOps.platform)) {
-      println("Compiling JVM")
-      val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
-      val slangDir = Os.path(testOps.slangOutputDir.get)
-
-      println(s"Calling proyek compile on ${sireum.string} at ${slangDir.string}")
-
-      val proyekResults = proc"${sireum.string} proyek compile --par ${slangDir.string}".at(slangDir).console.run()
-      assert(proyekResults.ok, "Proyek compilation failed")
-
-      if(isLinux(testOps.platform)) {
-        println("Compiling C")
-        val compileScript = Os.path(testOps.slangOutputCDir.get) / "bin" / "compile.cmd"
-        val cCompileResults = proc"bash -c ${compileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.string))).at(compileScript.up).console.run()
-        assert(cCompileResults.ok, "C Compilation failed")
-      }
+    if(expectedErrorReasons.isEmpty) {
+      assert(!reporter.hasError, "Expecting no errors but codegen did not complete successfully")
     }
-
-    if(expectedErrorReasons.isEmpty) assert(!reporter.hasError)
     else {
       assert(reporter.hasError, "Expecting errors but codegen completed successfully")
       assert(reporter.errors.size == expectedErrorReasons.size)
@@ -149,7 +131,26 @@ trait CodeGenTest extends TestSuite {
       return
     }
 
-    if(runCamkesNinja(testOps.platform)) {
+    if(shouldCompile(testOps.platform) && !reporter.hasError) {
+      println("Compiling JVM")
+      val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+      val slangDir = Os.path(testOps.slangOutputDir.get)
+
+      val proyekResults = proc"${sireum.string} proyek compile --par ${slangDir.string}".at(slangDir).console.run()
+      assert(proyekResults.ok, "Proyek compilation failed")
+
+      if(isLinux(testOps.platform)) {
+        println("Compiling C")
+        val compileScript = testOps.slangOutputCDir match {
+          case Some(d) => Os.path(d) / "bin" / "compile.cmd"
+          case _ => slangDir / "src" / "c" / "bin" / "compile.cmd"
+        }
+        val cCompileResults = proc"bash -c ${compileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4"))).at(compileScript.up).console.run()
+        assert(cCompileResults.ok, "C Compilation failed")
+      }
+    }
+
+    if(runCamkesNinja(testOps.platform) && !reporter.hasError) {
       val hasVMs: B = reporter.messages.filter(m => org.sireum.ops.StringOps(m.text)
         .contains("Execute the following to install the CAmkES-ARM-VM project:")).nonEmpty
 
