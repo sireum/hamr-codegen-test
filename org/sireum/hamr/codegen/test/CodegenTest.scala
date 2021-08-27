@@ -139,6 +139,11 @@ trait CodeGenTest extends TestSuite {
       val proyekResults = proc"${sireum.string} proyek compile --par ${slangDir.string}".at(slangDir).console.run()
       assert(proyekResults.ok, "Proyek compilation failed")
 
+      if(shouldRunGeneratedUnitTests(testOps.platform)) {
+        val proyekResults = proc"${sireum.string} proyek test --par ${slangDir.string}".at(slangDir).console.run()
+        assert(proyekResults.ok, "Proyek test failed")
+      }
+
       if(isLinux(testOps.platform)) {
         println("Compiling C")
         val compileScript = testOps.slangOutputCDir match {
@@ -350,6 +355,10 @@ trait CodeGenTest extends TestSuite {
       case _ => F
     }
     return should
+  }
+
+  def shouldRunGeneratedUnitTests(platform: CodeGenPlatform.Type): B = {
+    return testMode == TestMode.All_plus_generated_unit_tests
   }
 
   def shouldTranspile(platform: CodeGenPlatform.Type): B = {
