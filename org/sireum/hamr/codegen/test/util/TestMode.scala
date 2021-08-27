@@ -14,4 +14,6 @@ import org.sireum._
   "Camkes_TranspileNix" // gen source files + run transpiler for nix projects + run CAmkES/ninja for sel4 projects
 
   "All" // gen source files + proyek compile JVM projects + run transpiler for nix project + compile nix/seL4 projects + run ninja for seL4 projects
+
+  "All_plus_generated_unit_tests" // everything from All plus run unit test on generated projects
 }
