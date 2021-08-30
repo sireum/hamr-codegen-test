@@ -48,7 +48,7 @@ public
 			LineSearchTask: out event data port CMASI::AddressAttributedMessage.i;
 		properties
 			CASE_Scheduling::Domain => CM_Property_Set::RadioDriver_Attestation_Domain;
-			HAMR::Component_Type => VIRTUAL_MACHINE;
+			--HAMR::Component_Type => VIRTUAL_MACHINE;
 	end RadioDriver_Attestation;
 	
 	process implementation RadioDriver_Attestation.Impl
@@ -278,7 +278,7 @@ public
 			AutomationResponse_MON_REQ : out event data port CMASI::AutomationResponse.i;
 		properties
 			CASE_Scheduling::Domain => CM_Property_Set::UxAS_Domain;
-			HAMR::Component_Type => VIRTUAL_MACHINE;
+			--HAMR::Component_Type => VIRTUAL_MACHINE;
 	end UxAS;
 	
 	process implementation UxAS.Impl

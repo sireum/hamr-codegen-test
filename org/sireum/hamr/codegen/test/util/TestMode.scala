@@ -5,15 +5,15 @@ package org.sireum.hamr.codegen.test.util
 import org.sireum._
 
 @enum object TestMode {
-  "Codegen" // gen source files
+  "codegen" // implied so doesn't need to be added
 
-  "Transpile"    // gen source files + run transpiler for nix and sel4 projects
-  "TranspileNix" // gen source files + run transpiler only for nix projects
+  "transpile" // transpile linux and sel4 projects
 
-  "Camkes" // gen source files + run CAmkES/ninja (will run transpiler for sel4 projects)
-  "Camkes_TranspileNix" // gen source files + run transpiler for nix projects + run CAmkES/ninja for sel4 projects
+  "compile" // compile Slang and Linux projects
 
-  "All" // gen source files + proyek compile JVM projects + run transpiler for nix project + compile nix/seL4 projects + run ninja for seL4 projects
+  "camkes" // run CAmkES/ninja, also transpiles seL4 projects
 
-  "All_plus_generated_unit_tests" // everything from All plus run unit test on generated projects
+  "generated_unit_tests" // run unit tests on generated Slang projects
+
+  // all = generated_unit_tests, compile, camkes
 }

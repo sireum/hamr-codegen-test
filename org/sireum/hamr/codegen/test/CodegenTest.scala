@@ -26,9 +26,11 @@ trait CodeGenTest extends TestSuite {
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
-  def testMode: TestMode.Type = Os.env("HamrTestMode") match {
-    case Some(t) => TestMode.byName(t).get
-    case _ => TestMode.Codegen
+  // e.g. from command line:
+  //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
+  def testModes: ISZ[TestMode.Type] = Os.env("HamrTestModes") match {
+    case Some(list) => ops.StringOps(list).split((c: C) => c ==C(',')).map((m: String) => TestMode.byName(m).get)
+    case _ => ISZ(TestMode.codegen)
   }
 
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String]
@@ -131,20 +133,15 @@ trait CodeGenTest extends TestSuite {
       return
     }
 
+    val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+    val slangDir = Os.path(testOps.slangOutputDir.get)
+
     if(shouldCompile(testOps.platform) && !reporter.hasError) {
       println("Compiling JVM")
-      val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
-      val slangDir = Os.path(testOps.slangOutputDir.get)
-
       val proyekResults = proc"${sireum.string} proyek compile --par ${slangDir.string}".at(slangDir).console.run()
       assert(proyekResults.ok, "Proyek compilation failed")
 
-      if(shouldRunGeneratedUnitTests(testOps.platform)) {
-        val proyekResults = proc"${sireum.string} proyek test --par ${slangDir.string}".at(slangDir).console.run()
-        assert(proyekResults.ok, "Proyek test failed")
-      }
-
-      if(isLinux(testOps.platform)) {
+      if(isLinux(testOps.platform) && !reporter.hasError) {
         println("Compiling C")
         val compileScript = testOps.slangOutputCDir match {
           case Some(d) => Os.path(d) / "bin" / "compile.cmd"
@@ -155,7 +152,13 @@ trait CodeGenTest extends TestSuite {
       }
     }
 
-    if(runCamkesNinja(testOps.platform) && !reporter.hasError) {
+    if (shouldRunGeneratedUnitTests(testOps.platform) && !reporter.hasError) {
+      println("Running generated unit tests")
+      val proyekResults = proc"${sireum.string} proyek test --par ${slangDir.string}".at(slangDir).console.run()
+      assert(proyekResults.ok, "Proyek test failed")
+    }
+
+    if(shouldCamkes(testOps.platform) && !reporter.hasError) {
       val hasVMs: B = reporter.messages.filter(m => org.sireum.ops.StringOps(m.text)
         .contains("Execute the following to install the CAmkES-ARM-VM project:")).nonEmpty
 
@@ -332,54 +335,27 @@ trait CodeGenTest extends TestSuite {
     }
   }
 
-  def runCamkesNinja(platform: CodeGenPlatform.Type): B = {
-    val isCamkes: B = testMode match {
-      case TestMode.Camkes => T
-      case TestMode.Camkes_TranspileNix => T
-      case TestMode.All => T
-      case _ => F
-    }
-    return isCamkes && isSeL4(platform)
+  def isSlangProject(platform: CodeGenPlatform.Type): B = {
+    return isLinux(platform) || platform == CodeGenPlatform.JVM || platform == CodeGenPlatform.SeL4
+  }
+
+  def shouldCamkes(platform: CodeGenPlatform.Type): B = {
+    return isSeL4(platform) && ops.ISZOps(testModes).contains(TestMode.camkes)
   }
 
   def shouldCompile(platform: CodeGenPlatform.Type): B = {
-    val should: B = testMode match {
-      case TestMode.All =>
-        platform match {
-          case CodeGenPlatform.JVM |
-            CodeGenPlatform.Cygwin |
-            CodeGenPlatform.MacOS |
-            CodeGenPlatform.Linux => T
-          case _ => F
-        }
-      case _ => F
-    }
-    return should
+    return isSlangProject(platform) && ops.ISZOps(testModes).contains(TestMode.compile)
   }
 
   def shouldRunGeneratedUnitTests(platform: CodeGenPlatform.Type): B = {
-    return testMode == TestMode.All_plus_generated_unit_tests
+    return isSlangProject(platform) && ops.ISZOps(testModes).contains(TestMode.generated_unit_tests)
   }
 
   def shouldTranspile(platform: CodeGenPlatform.Type): B = {
-    val shouldRun: B = (testMode, platform) match {
-      case (TestMode.Codegen, _) => F
-
-      case (TestMode.Transpile, _) => T
-
-      case (TestMode.TranspileNix, CodeGenPlatform.Linux) |
-           (TestMode.TranspileNix, CodeGenPlatform.MacOS) |
-           (TestMode.TranspileNix, CodeGenPlatform.Cygwin) => T
-
-      case (TestMode.Camkes, CodeGenPlatform.SeL4) => T
-
-      case (TestMode.Camkes_TranspileNix, _) => T
-
-      case (TestMode.All, _) => T
-
-      case _ => F
-    }
-    return shouldRun
+    val _ops = ops.ISZOps(testModes)
+    return _ops.contains(TestMode.transpile) ||
+      (_ops.contains(TestMode.compile) && isLinux(platform)) ||
+      (_ops.contains(TestMode.camkes) && platform == CodeGenPlatform.SeL4)
   }
 
   def onOptions(options: ISZ[CMakeOption]): ISZ[String] = { return options.map(o => s"-D${o.name}=ON") }

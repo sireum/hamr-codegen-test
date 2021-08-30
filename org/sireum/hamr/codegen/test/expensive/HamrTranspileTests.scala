@@ -9,7 +9,7 @@ import org.sireum.hamr.codegen.test.util.TestMode
 
 class HamrTranspileTests extends CodeGenTest {
 
-  override def testMode: TestMode.Type = TestMode.Transpile
+  override def testModes: ISZ[TestMode.Type] = ISZ(TestMode.transpile)
 
   override def generateExpected: B = if (super.generateExpected) T else F
 
