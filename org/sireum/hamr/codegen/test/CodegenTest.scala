@@ -7,7 +7,7 @@ import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.TranspilerConfig
 import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
-import org.sireum.hamr.codegen.common.util.test.{TestResult, TestUtil}
+import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil}
 import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.hamr.ir._
 import org.sireum.message._
@@ -262,10 +262,18 @@ trait CodeGenTest extends TestSuite {
           val sameContents = r._2 == e
           if(!sameContents) {
             var reason: ISZ[String] = ISZ()
-            if(r._2.content != e.content) reason = reason :+ "content is not the same"
-            if(r._2.overwrite != e.overwrite) reason = reason :+ "overwrite flag is not the same"
-            if(r._2.makeExecutable != e.makeExecutable) reason = reason :+ "makeExecutable flag is not the same"
-            if(r._2.makeCRLF != e.makeCRLF) reason = reason :+ "makeCRLF flag is not the same"
+            ((r._2, e)) match {
+              case ((ri: ITestResource, ei: ITestResource)) =>
+                if(ri.content != ei.content) reason = reason :+ "content is not the same"
+                if(ri.overwrite != ei.overwrite) reason = reason :+ "overwrite flag is not the same"
+                if(ri.makeExecutable != ei.makeExecutable) reason = reason :+ "makeExecutable flag is not the same"
+                if(ri.makeCRLF != ei.makeCRLF) reason = reason :+ "makeCRLF flag is not the same"
+              case ((re: ETestResource, ee: ETestResource)) =>
+                if(re.content != ee.content) reason = reason :+ "content is not the same"
+                if(re.symlink != ee.symlink) reason = reason :+ "symLink flag is not the same"
+
+              case _ => halt("Infeasible: TestResource types not the same")
+            }
             eprintln(st"${r._1} ${(reason, ", ")}".render)
           }
           ignoreFile || sameContents
