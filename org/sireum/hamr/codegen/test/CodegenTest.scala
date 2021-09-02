@@ -147,7 +147,7 @@ trait CodeGenTest extends TestSuite {
           case Some(d) => Os.path(d) / "bin" / "compile.cmd"
           case _ => slangDir / "src" / "c" / "bin" / "compile.cmd"
         }
-        val cCompileResults = proc"bash -c ${compileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4"))).at(compileScript.up).console.run()
+        val cCompileResults = proc"bash -c ${compileScript.string} -b -r -l".env(ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4"))).at(compileScript.up).console.run()
         assert(cCompileResults.ok, "C Compilation failed")
       }
     }
