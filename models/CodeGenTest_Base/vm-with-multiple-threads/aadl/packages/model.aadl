@@ -1,0 +1,86 @@
+package model
+public
+
+	with CASE_Properties;
+	with Base_Types;
+
+	system m
+	end m;
+
+	system implementation m.impl
+		subcomponents
+			virt_processor: virtual processor virt_processor;
+			virt_process: process virt_process.impl;
+
+			norm_processor: processor norm_processor;
+			norm_process: process norm_process.impl;
+		connections
+			c1: port norm_process.out_port -> virt_process.in_port;
+			c2: port virt_process.out_port -> norm_process.in_port;
+		properties
+			Actual_Processor_Binding => (reference (virt_processor)) applies to virt_process;
+			Actual_Processor_Binding => (reference (norm_processor)) applies to norm_process, virt_processor;
+	end m.impl;
+
+	--------------------------------------------------------------
+	virtual processor virt_processor
+		properties
+			CASE_Properties::OS => Linux;
+	end virt_processor;
+
+	process virt_process
+		features
+			in_port: in event data port Base_Types::Integer_32;
+			out_port: out event data port Base_Types::Integer_32;
+	end virt_process;
+
+	process implementation virt_process.impl
+		subcomponents
+			virt_thread_1: thread virt_thread_1;
+			virt_thread_2: thread virt_thread_2;
+		connections
+			c1: port in_port -> virt_thread_1.in_port;
+			c2: port virt_thread_2.out_port -> out_port;
+			c3: port virt_thread_1.out_port -> virt_thread_2.in_port;
+	end virt_process.impl;
+
+	thread virt_thread_1
+		features
+			in_port: in event data port Base_Types::Integer_32;
+			out_port: out event data port Base_Types::Integer_32;
+		properties
+			Dispatch_Protocol => Periodic;
+	end virt_thread_1;
+
+	thread virt_thread_2
+		features
+			in_port: in event data port Base_Types::Integer_32;
+			out_port: out event data port Base_Types::Integer_32;
+	end virt_thread_2;
+
+	--------------------------------------------------------------
+	processor norm_processor
+	end norm_processor;
+
+	process norm_process
+		features
+			in_port: in event data port Base_Types::Integer_32;
+			out_port: out event data port Base_Types::Integer_32;
+	end norm_process;
+
+	process implementation norm_process.impl
+		subcomponents
+			norm_thread_1: thread norm_thread;
+			norm_thread_2: thread norm_thread;
+		connections
+			c1: port in_port -> norm_thread_1.in_port;
+			c2: port norm_thread_1.out_port -> out_port;
+	end norm_process.impl;
+
+	thread norm_thread
+		features
+			in_port: in event data port Base_Types::Integer_32;
+			out_port: out event data port Base_Types::Integer_32;
+	end norm_thread;
+
+end model;

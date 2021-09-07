@@ -1,0 +1,4557 @@
+{
+  "type" : "Aadl",
+  "components" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["m_impl_Instance"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+            },
+            "beginLine" : 10,
+            "beginColumn" : 2,
+            "endLine" : 23,
+            "endColumn" : 13,
+            "offset" : 84,
+            "length" : 575
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "System"
+      },
+      "classifier" : {
+        "type" : "None"
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["m_impl_Instance", "virt_process"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                },
+                "beginLine" : 13,
+                "beginColumn" : 4,
+                "endLine" : 13,
+                "endColumn" : 44,
+                "offset" : 185,
+                "length" : 40
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "model::virt_process.impl"
+            }
+          },
+          "features" : [
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "in_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 33,
+                    "beginColumn" : 4,
+                    "endLine" : 33,
+                    "endColumn" : 55,
+                    "offset" : 863,
+                    "length" : 51
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "In"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "EventDataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "in_port", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 78,
+                        "beginColumn" : 4,
+                        "endLine" : 78,
+                        "endColumn" : 88,
+                        "offset" : 3653,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "in_port", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 92,
+                        "beginColumn" : 2,
+                        "endLine" : 93,
+                        "endColumn" : 137,
+                        "offset" : 4808,
+                        "length" : 152
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "in_port", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 26,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 36,
+                        "offset" : 1108,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
+            },
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "out_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 34,
+                    "beginColumn" : 4,
+                    "endLine" : 34,
+                    "endColumn" : 57,
+                    "offset" : 918,
+                    "length" : 53
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "Out"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "EventDataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "out_port", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 78,
+                        "beginColumn" : 4,
+                        "endLine" : 78,
+                        "endColumn" : 88,
+                        "offset" : 3653,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "out_port", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 92,
+                        "beginColumn" : 2,
+                        "endLine" : 93,
+                        "endColumn" : 137,
+                        "offset" : 4808,
+                        "length" : 152
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "out_port", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 26,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 36,
+                        "offset" : 1108,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.1"
+            }
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "virt_thread_1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 39,
+                    "beginColumn" : 4,
+                    "endLine" : 39,
+                    "endColumn" : 40,
+                    "offset" : 1053,
+                    "length" : 36
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "model::virt_thread_1"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "in_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 49,
+                        "beginColumn" : 4,
+                        "endLine" : 49,
+                        "endColumn" : 55,
+                        "offset" : 1360,
+                        "length" : 51
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "in_port", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 78,
+                            "beginColumn" : 4,
+                            "endLine" : 78,
+                            "endColumn" : 88,
+                            "offset" : 3653,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "in_port", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 92,
+                            "beginColumn" : 2,
+                            "endLine" : 93,
+                            "endColumn" : 137,
+                            "offset" : 4808,
+                            "length" : 152
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "in_port", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "out_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 50,
+                        "beginColumn" : 4,
+                        "endLine" : 50,
+                        "endColumn" : 57,
+                        "offset" : 1415,
+                        "length" : 53
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "out_port", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 78,
+                            "beginColumn" : 4,
+                            "endLine" : 78,
+                            "endColumn" : 88,
+                            "offset" : 3653,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "out_port", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 92,
+                            "beginColumn" : 2,
+                            "endLine" : 93,
+                            "endColumn" : 137,
+                            "offset" : 4808,
+                            "length" : 152
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "out_port", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "Deployment_Properties::Actual_Processor_Binding"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 2,
+                        "endLine" : 48,
+                        "endColumn" : 81,
+                        "offset" : 3130,
+                        "length" : 189
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ReferenceProp",
+                      "value" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_processor"],
+                        "pos" : {
+                          "type" : "None"
+                        }
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "virt_thread_2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 40,
+                    "beginColumn" : 4,
+                    "endLine" : 40,
+                    "endColumn" : 40,
+                    "offset" : 1093,
+                    "length" : 36
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "model::virt_thread_2"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "in_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 55,
+                        "beginColumn" : 4,
+                        "endLine" : 55,
+                        "endColumn" : 55,
+                        "offset" : 1526,
+                        "length" : 51
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "in_port", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 78,
+                            "beginColumn" : 4,
+                            "endLine" : 78,
+                            "endColumn" : 88,
+                            "offset" : 3653,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "in_port", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 92,
+                            "beginColumn" : 2,
+                            "endLine" : 93,
+                            "endColumn" : 137,
+                            "offset" : 4808,
+                            "length" : 152
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "in_port", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 56,
+                        "beginColumn" : 4,
+                        "endLine" : 56,
+                        "endColumn" : 57,
+                        "offset" : 1581,
+                        "length" : 53
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 78,
+                            "beginColumn" : 4,
+                            "endLine" : 78,
+                            "endColumn" : 88,
+                            "offset" : 3653,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 92,
+                            "beginColumn" : 2,
+                            "endLine" : 93,
+                            "endColumn" : 137,
+                            "offset" : 4808,
+                            "length" : 152
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "Deployment_Properties::Actual_Processor_Binding"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 2,
+                        "endLine" : 48,
+                        "endColumn" : 81,
+                        "offset" : 3130,
+                        "length" : 189
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ReferenceProp",
+                      "value" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "virt_processor"],
+                        "pos" : {
+                          "type" : "None"
+                        }
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "c2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 43,
+                    "beginColumn" : 4,
+                    "endLine" : 43,
+                    "endColumn" : 48,
+                    "offset" : 1193,
+                    "length" : 44
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 40,
+                        "beginColumn" : 4,
+                        "endLine" : 40,
+                        "endColumn" : 40,
+                        "offset" : 1093,
+                        "length" : 36
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 56,
+                          "beginColumn" : 4,
+                          "endLine" : 56,
+                          "endColumn" : 57,
+                          "offset" : 1581,
+                          "length" : 53
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 4,
+                        "endLine" : 13,
+                        "endColumn" : 44,
+                        "offset" : 185,
+                        "length" : 40
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "virt_process", "out_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 34,
+                          "beginColumn" : 4,
+                          "endLine" : 34,
+                          "endColumn" : 57,
+                          "offset" : 918,
+                          "length" : 53
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port -> norm_process", "norm_thread_1", "in_port"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "c1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 42,
+                    "beginColumn" : 4,
+                    "endLine" : 42,
+                    "endColumn" : 46,
+                    "offset" : 1147,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 4,
+                        "endLine" : 13,
+                        "endColumn" : 44,
+                        "offset" : 185,
+                        "length" : 40
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "virt_process", "in_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 33,
+                          "beginColumn" : 4,
+                          "endLine" : 33,
+                          "endColumn" : 55,
+                          "offset" : 863,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 39,
+                        "beginColumn" : 4,
+                        "endLine" : 39,
+                        "endColumn" : 40,
+                        "offset" : 1053,
+                        "length" : 36
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "in_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 49,
+                          "beginColumn" : 4,
+                          "endLine" : 49,
+                          "endColumn" : 55,
+                          "offset" : 1360,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port -> virt_process", "virt_thread_1", "in_port"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.2"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "c3"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 44,
+                    "beginColumn" : 4,
+                    "endLine" : 44,
+                    "endColumn" : 61,
+                    "offset" : 1241,
+                    "length" : 57
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 39,
+                        "beginColumn" : 4,
+                        "endLine" : 39,
+                        "endColumn" : 40,
+                        "offset" : 1053,
+                        "length" : 36
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "out_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 50,
+                          "beginColumn" : 4,
+                          "endLine" : 50,
+                          "endColumn" : 57,
+                          "offset" : 1415,
+                          "length" : 53
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 40,
+                        "beginColumn" : 4,
+                        "endLine" : 40,
+                        "endColumn" : 40,
+                        "offset" : 1093,
+                        "length" : 36
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "in_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 55,
+                          "beginColumn" : 4,
+                          "endLine" : 55,
+                          "endColumn" : 55,
+                          "offset" : 1526,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "out_port -> virt_thread_2", "in_port"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+            }
+          ],
+          "connectionInstances" : [
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "virt_thread_1.out_port -> virt_thread_2.in_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 44,
+                    "beginColumn" : 4,
+                    "endLine" : 44,
+                    "endColumn" : 61,
+                    "offset" : 1241,
+                    "length" : 57
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "virt_process", "virt_thread_1"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                      },
+                      "beginLine" : 39,
+                      "beginColumn" : 4,
+                      "endLine" : 39,
+                      "endColumn" : 40,
+                      "offset" : 1053,
+                      "length" : 36
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "out_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 50,
+                        "beginColumn" : 4,
+                        "endLine" : 50,
+                        "endColumn" : 57,
+                        "offset" : 1415,
+                        "length" : 53
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "virt_process", "virt_thread_2"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                      },
+                      "beginLine" : 40,
+                      "beginColumn" : 4,
+                      "endLine" : 40,
+                      "endColumn" : 40,
+                      "offset" : 1093,
+                      "length" : 36
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "in_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 55,
+                        "beginColumn" : 4,
+                        "endLine" : 55,
+                        "endColumn" : 55,
+                        "offset" : 1526,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "c3"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 44,
+                        "beginColumn" : 4,
+                        "endLine" : 44,
+                        "endColumn" : 61,
+                        "offset" : 1241,
+                        "length" : 57
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 4,
+                        "endLine" : 13,
+                        "endColumn" : 44,
+                        "offset" : 185,
+                        "length" : 40
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            }
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "Deployment_Properties::Actual_Processor_Binding"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 2,
+                    "endLine" : 48,
+                    "endColumn" : 81,
+                    "offset" : 3130,
+                    "length" : 189
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ReferenceProp",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_processor"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["m_impl_Instance", "norm_process"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                },
+                "beginLine" : 16,
+                "beginColumn" : 4,
+                "endLine" : 16,
+                "endColumn" : 44,
+                "offset" : 275,
+                "length" : 40
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "model::norm_process.impl"
+            }
+          },
+          "features" : [
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "in_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 65,
+                    "beginColumn" : 4,
+                    "endLine" : 65,
+                    "endColumn" : 55,
+                    "offset" : 1804,
+                    "length" : 51
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "In"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "EventDataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "in_port", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 78,
+                        "beginColumn" : 4,
+                        "endLine" : 78,
+                        "endColumn" : 88,
+                        "offset" : 3653,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "in_port", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 92,
+                        "beginColumn" : 2,
+                        "endLine" : 93,
+                        "endColumn" : 137,
+                        "offset" : 4808,
+                        "length" : 152
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "in_port", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 26,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 36,
+                        "offset" : 1108,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
+            },
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "out_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 66,
+                    "beginColumn" : 4,
+                    "endLine" : 66,
+                    "endColumn" : 57,
+                    "offset" : 1859,
+                    "length" : 53
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "Out"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "EventDataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "out_port", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 78,
+                        "beginColumn" : 4,
+                        "endLine" : 78,
+                        "endColumn" : 88,
+                        "offset" : 3653,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "out_port", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 92,
+                        "beginColumn" : 2,
+                        "endLine" : 93,
+                        "endColumn" : 137,
+                        "offset" : 4808,
+                        "length" : 152
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "out_port", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 26,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 36,
+                        "offset" : 1108,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
+            }
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "norm_thread_1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 71,
+                    "beginColumn" : 4,
+                    "endLine" : 71,
+                    "endColumn" : 38,
+                    "offset" : 1994,
+                    "length" : 34
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "model::norm_thread"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "in_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 80,
+                        "beginColumn" : 4,
+                        "endLine" : 80,
+                        "endColumn" : 55,
+                        "offset" : 2234,
+                        "length" : 51
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "in_port", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 78,
+                            "beginColumn" : 4,
+                            "endLine" : 78,
+                            "endColumn" : 88,
+                            "offset" : 3653,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "in_port", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 92,
+                            "beginColumn" : 2,
+                            "endLine" : 93,
+                            "endColumn" : 137,
+                            "offset" : 4808,
+                            "length" : 152
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "in_port", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 81,
+                        "beginColumn" : 4,
+                        "endLine" : 81,
+                        "endColumn" : 57,
+                        "offset" : 2289,
+                        "length" : 53
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 78,
+                            "beginColumn" : 4,
+                            "endLine" : 78,
+                            "endColumn" : 88,
+                            "offset" : 3653,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 92,
+                            "beginColumn" : 2,
+                            "endLine" : 93,
+                            "endColumn" : 137,
+                            "offset" : 4808,
+                            "length" : 152
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "Deployment_Properties::Actual_Processor_Binding"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 2,
+                        "endLine" : 48,
+                        "endColumn" : 81,
+                        "offset" : 3130,
+                        "length" : 189
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ReferenceProp",
+                      "value" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_processor"],
+                        "pos" : {
+                          "type" : "None"
+                        }
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "norm_thread_2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 72,
+                    "beginColumn" : 4,
+                    "endLine" : 72,
+                    "endColumn" : 38,
+                    "offset" : 2032,
+                    "length" : 34
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "model::norm_thread"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "in_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 80,
+                        "beginColumn" : 4,
+                        "endLine" : 80,
+                        "endColumn" : 55,
+                        "offset" : 2234,
+                        "length" : 51
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "in_port", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 78,
+                            "beginColumn" : 4,
+                            "endLine" : 78,
+                            "endColumn" : 88,
+                            "offset" : 3653,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "in_port", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 92,
+                            "beginColumn" : 2,
+                            "endLine" : 93,
+                            "endColumn" : 137,
+                            "offset" : 4808,
+                            "length" : 152
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "in_port", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "out_port"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 81,
+                        "beginColumn" : 4,
+                        "endLine" : 81,
+                        "endColumn" : 57,
+                        "offset" : 2289,
+                        "length" : 53
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "out_port", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 78,
+                            "beginColumn" : 4,
+                            "endLine" : 78,
+                            "endColumn" : 88,
+                            "offset" : 3653,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "out_port", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 92,
+                            "beginColumn" : 2,
+                            "endLine" : 93,
+                            "endColumn" : 137,
+                            "offset" : 4808,
+                            "length" : 152
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "out_port", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "norm_thread_2", "Deployment_Properties::Actual_Processor_Binding"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 2,
+                        "endLine" : 48,
+                        "endColumn" : 81,
+                        "offset" : 3130,
+                        "length" : 189
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ReferenceProp",
+                      "value" : {
+                        "type" : "Name",
+                        "name" : ["m_impl_Instance", "norm_processor"],
+                        "pos" : {
+                          "type" : "None"
+                        }
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1"
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "c1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 74,
+                    "beginColumn" : 4,
+                    "endLine" : 74,
+                    "endColumn" : 46,
+                    "offset" : 2084,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 16,
+                        "beginColumn" : 4,
+                        "endLine" : 16,
+                        "endColumn" : 44,
+                        "offset" : 275,
+                        "length" : 40
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "norm_process", "in_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 65,
+                          "beginColumn" : 4,
+                          "endLine" : 65,
+                          "endColumn" : 55,
+                          "offset" : 1804,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "norm_thread_1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 71,
+                        "beginColumn" : 4,
+                        "endLine" : 71,
+                        "endColumn" : 38,
+                        "offset" : 1994,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "in_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 80,
+                          "beginColumn" : 4,
+                          "endLine" : 80,
+                          "endColumn" : 55,
+                          "offset" : 2234,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port -> norm_process", "norm_thread_1", "in_port"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.2"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "c2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 75,
+                    "beginColumn" : 4,
+                    "endLine" : 75,
+                    "endColumn" : 48,
+                    "offset" : 2130,
+                    "length" : 44
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process", "norm_thread_1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 71,
+                        "beginColumn" : 4,
+                        "endLine" : 71,
+                        "endColumn" : 38,
+                        "offset" : 1994,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 81,
+                          "beginColumn" : 4,
+                          "endLine" : 81,
+                          "endColumn" : 57,
+                          "offset" : 2289,
+                          "length" : 53
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_process"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                        },
+                        "beginLine" : 16,
+                        "beginColumn" : 4,
+                        "endLine" : 16,
+                        "endColumn" : 44,
+                        "offset" : 275,
+                        "length" : 40
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["m_impl_Instance", "norm_process", "out_port"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                          },
+                          "beginLine" : 66,
+                          "beginColumn" : 4,
+                          "endLine" : 66,
+                          "endColumn" : 57,
+                          "offset" : 1859,
+                          "length" : 53
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port -> virt_process", "virt_thread_1", "in_port"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
+            }
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "Deployment_Properties::Actual_Processor_Binding"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 2,
+                    "endLine" : 48,
+                    "endColumn" : 81,
+                    "offset" : 3130,
+                    "length" : 189
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ReferenceProp",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_processor"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["m_impl_Instance", "norm_processor"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                },
+                "beginLine" : 15,
+                "beginColumn" : 4,
+                "endLine" : 15,
+                "endColumn" : 45,
+                "offset" : 230,
+                "length" : 41
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Processor"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "model::norm_processor"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.2"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["m_impl_Instance", "virt_processor"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                },
+                "beginLine" : 12,
+                "beginColumn" : 4,
+                "endLine" : 12,
+                "endColumn" : 53,
+                "offset" : 132,
+                "length" : 49
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "VirtualProcessor"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "model::virt_processor"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_processor", "Deployment_Properties::Actual_Processor_Binding"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 2,
+                    "endLine" : 48,
+                    "endColumn" : 81,
+                    "offset" : 3130,
+                    "length" : 189
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ReferenceProp",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "norm_processor"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_processor", "CASE_Properties::OS"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/com.collins.trustedsystems.briefcase.staircase\/resources\/CASE_Properties.aadl"
+                    },
+                    "beginLine" : 25,
+                    "beginColumn" : 2,
+                    "endLine" : 26,
+                    "endColumn" : 22,
+                    "offset" : 1080,
+                    "length" : 99
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Linux"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.3"
+        }
+      ],
+      "connections" : [
+        {
+          "type" : "Connection",
+          "name" : {
+            "type" : "Name",
+            "name" : ["m_impl_Instance", "c2"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                },
+                "beginLine" : 19,
+                "beginColumn" : 4,
+                "endLine" : 19,
+                "endColumn" : 59,
+                "offset" : 392,
+                "length" : 55
+              }
+            }
+          },
+          "src" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 13,
+                    "beginColumn" : 4,
+                    "endLine" : 13,
+                    "endColumn" : 44,
+                    "offset" : 185,
+                    "length" : 40
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "virt_process", "out_port"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                      },
+                      "beginLine" : 34,
+                      "beginColumn" : 4,
+                      "endLine" : 34,
+                      "endColumn" : 57,
+                      "offset" : 918,
+                      "length" : 53
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "Out"
+                }
+              }
+            }
+          ],
+          "dst" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 16,
+                    "beginColumn" : 4,
+                    "endLine" : 16,
+                    "endColumn" : 44,
+                    "offset" : 275,
+                    "length" : 40
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "norm_process", "in_port"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                      },
+                      "beginLine" : 65,
+                      "beginColumn" : 4,
+                      "endLine" : 65,
+                      "endColumn" : 55,
+                      "offset" : 1804,
+                      "length" : 51
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "In"
+                }
+              }
+            }
+          ],
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "isBiDirectional" : false,
+          "connectionInstances" : [
+            {
+              "type" : "Name",
+              "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port -> norm_process", "norm_thread_1", "in_port"],
+              "pos" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "properties" : [
+          ],
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
+        },
+        {
+          "type" : "Connection",
+          "name" : {
+            "type" : "Name",
+            "name" : ["m_impl_Instance", "c1"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                },
+                "beginLine" : 18,
+                "beginColumn" : 4,
+                "endLine" : 18,
+                "endColumn" : 59,
+                "offset" : 333,
+                "length" : 55
+              }
+            }
+          },
+          "src" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 16,
+                    "beginColumn" : 4,
+                    "endLine" : 16,
+                    "endColumn" : 44,
+                    "offset" : 275,
+                    "length" : 40
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "norm_process", "out_port"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                      },
+                      "beginLine" : 66,
+                      "beginColumn" : 4,
+                      "endLine" : 66,
+                      "endColumn" : 57,
+                      "offset" : 1859,
+                      "length" : 53
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "Out"
+                }
+              }
+            }
+          ],
+          "dst" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 13,
+                    "beginColumn" : 4,
+                    "endLine" : 13,
+                    "endColumn" : 44,
+                    "offset" : 185,
+                    "length" : 40
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["m_impl_Instance", "virt_process", "in_port"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                      },
+                      "beginLine" : 33,
+                      "beginColumn" : 4,
+                      "endLine" : 33,
+                      "endColumn" : 55,
+                      "offset" : 863,
+                      "length" : 51
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "In"
+                }
+              }
+            }
+          ],
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "isBiDirectional" : false,
+          "connectionInstances" : [
+            {
+              "type" : "Name",
+              "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port -> virt_process", "virt_thread_1", "in_port"],
+              "pos" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "properties" : [
+          ],
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
+        }
+      ],
+      "connectionInstances" : [
+        {
+          "type" : "ConnectionInstance",
+          "name" : {
+            "type" : "Name",
+            "name" : ["m_impl_Instance", "virt_process.virt_thread_2.out_port -> norm_process.norm_thread_1.in_port"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                },
+                "beginLine" : 43,
+                "beginColumn" : 4,
+                "endLine" : 43,
+                "endColumn" : 48,
+                "offset" : 1193,
+                "length" : 44
+              }
+            }
+          },
+          "src" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["m_impl_Instance", "virt_process", "virt_thread_2"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                  },
+                  "beginLine" : 40,
+                  "beginColumn" : 4,
+                  "endLine" : 40,
+                  "endColumn" : 40,
+                  "offset" : 1093,
+                  "length" : 36
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "virt_thread_2", "out_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 56,
+                    "beginColumn" : 4,
+                    "endLine" : 56,
+                    "endColumn" : 57,
+                    "offset" : 1581,
+                    "length" : 53
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "Out"
+              }
+            }
+          },
+          "dst" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["m_impl_Instance", "norm_process", "norm_thread_1"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                  },
+                  "beginLine" : 71,
+                  "beginColumn" : 4,
+                  "endLine" : 71,
+                  "endColumn" : 38,
+                  "offset" : 1994,
+                  "length" : 34
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "in_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 80,
+                    "beginColumn" : 4,
+                    "endLine" : 80,
+                    "endColumn" : 55,
+                    "offset" : 2234,
+                    "length" : 51
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "In"
+              }
+            }
+          },
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "connectionRefs" : [
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "c2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 43,
+                    "beginColumn" : 4,
+                    "endLine" : 43,
+                    "endColumn" : 48,
+                    "offset" : 1193,
+                    "length" : 44
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 13,
+                    "beginColumn" : 4,
+                    "endLine" : 13,
+                    "endColumn" : 44,
+                    "offset" : 185,
+                    "length" : 40
+                  }
+                }
+              },
+              "isParent" : false
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "c2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 19,
+                    "beginColumn" : 4,
+                    "endLine" : 19,
+                    "endColumn" : 59,
+                    "offset" : 392,
+                    "length" : 55
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 10,
+                    "beginColumn" : 2,
+                    "endLine" : 23,
+                    "endColumn" : 13,
+                    "offset" : 84,
+                    "length" : 575
+                  }
+                }
+              },
+              "isParent" : true
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "c1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 74,
+                    "beginColumn" : 4,
+                    "endLine" : 74,
+                    "endColumn" : 46,
+                    "offset" : 2084,
+                    "length" : 42
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 16,
+                    "beginColumn" : 4,
+                    "endLine" : 16,
+                    "endColumn" : 44,
+                    "offset" : 275,
+                    "length" : 40
+                  }
+                }
+              },
+              "isParent" : false
+            }
+          ],
+          "properties" : [
+          ]
+        },
+        {
+          "type" : "ConnectionInstance",
+          "name" : {
+            "type" : "Name",
+            "name" : ["m_impl_Instance", "norm_process.norm_thread_1.out_port -> virt_process.virt_thread_1.in_port"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                },
+                "beginLine" : 75,
+                "beginColumn" : 4,
+                "endLine" : 75,
+                "endColumn" : 48,
+                "offset" : 2130,
+                "length" : 44
+              }
+            }
+          },
+          "src" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["m_impl_Instance", "norm_process", "norm_thread_1"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                  },
+                  "beginLine" : 71,
+                  "beginColumn" : 4,
+                  "endLine" : 71,
+                  "endColumn" : 38,
+                  "offset" : 1994,
+                  "length" : 34
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "norm_thread_1", "out_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 81,
+                    "beginColumn" : 4,
+                    "endLine" : 81,
+                    "endColumn" : 57,
+                    "offset" : 2289,
+                    "length" : 53
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "Out"
+              }
+            }
+          },
+          "dst" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["m_impl_Instance", "virt_process", "virt_thread_1"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                  },
+                  "beginLine" : 39,
+                  "beginColumn" : 4,
+                  "endLine" : 39,
+                  "endColumn" : 40,
+                  "offset" : 1053,
+                  "length" : 36
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "in_port"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 4,
+                    "endLine" : 49,
+                    "endColumn" : 55,
+                    "offset" : 1360,
+                    "length" : 51
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "In"
+              }
+            }
+          },
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "connectionRefs" : [
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process", "c2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 75,
+                    "beginColumn" : 4,
+                    "endLine" : 75,
+                    "endColumn" : 48,
+                    "offset" : 2130,
+                    "length" : 44
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "norm_process"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 16,
+                    "beginColumn" : 4,
+                    "endLine" : 16,
+                    "endColumn" : 44,
+                    "offset" : 275,
+                    "length" : 40
+                  }
+                }
+              },
+              "isParent" : false
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "c1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 18,
+                    "beginColumn" : 4,
+                    "endLine" : 18,
+                    "endColumn" : 59,
+                    "offset" : 333,
+                    "length" : 55
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 10,
+                    "beginColumn" : 2,
+                    "endLine" : 23,
+                    "endColumn" : 13,
+                    "offset" : 84,
+                    "length" : 575
+                  }
+                }
+              },
+              "isParent" : true
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process", "c1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 42,
+                    "beginColumn" : 4,
+                    "endLine" : 42,
+                    "endColumn" : 46,
+                    "offset" : 1147,
+                    "length" : 42
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_process"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
+                    },
+                    "beginLine" : 13,
+                    "beginColumn" : 4,
+                    "endLine" : 13,
+                    "endColumn" : 44,
+                    "offset" : 185,
+                    "length" : 40
+                  }
+                }
+              },
+              "isParent" : false
+            }
+          ],
+          "properties" : [
+          ]
+        }
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+        {
+          "type" : "Annex",
+          "name" : "Emv2",
+          "clause" : {
+            "type" : "Emv2Clause",
+            "libraries" : [
+            ],
+            "propagations" : [
+            ],
+            "flows" : [
+            ],
+            "componentBehavior" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Emv2BehaviorSection",
+                "events" : [
+                ],
+                "transitions" : [
+                ],
+                "propagations" : [
+                ]
+              }
+            },
+            "properties" : [
+            ]
+          }
+        }
+      ],
+      "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/"
+    }
+  ],
+  "annexLib" : [
+  ],
+  "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Integer_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 92,
+                "beginColumn" : 2,
+                "endLine" : 93,
+                "endColumn" : 137,
+                "offset" : 4808,
+                "length" : 152
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "32.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Number_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 78,
+                "beginColumn" : 4,
+                "endLine" : 78,
+                "endColumn" : 88,
+                "offset" : 3653,
+                "length" : 84
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Signed"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 26,
+                "beginColumn" : 4,
+                "endLine" : 29,
+                "endColumn" : 36,
+                "offset" : 1108,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
+  ]
+}
