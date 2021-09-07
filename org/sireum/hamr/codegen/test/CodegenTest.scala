@@ -114,8 +114,15 @@ trait CodeGenTest extends TestSuite {
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
+    /*
     val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
       if(shouldTranspile(testOps.platform)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 },
+      (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
+    )
+    */
+
+    val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
+      (TranspilerConfig) => { println("Dummy transpiler"); 0 },
       (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
     )
 
@@ -135,6 +142,29 @@ trait CodeGenTest extends TestSuite {
 
     val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
     val slangDir = Os.path(testOps.slangOutputDir.get)
+
+    if(shouldTranspile(testOps.platform) && !reporter.hasError) {
+      if(isLinux(testOps.platform)){
+        val transpileScript = testOps.slangOutputCDir match {
+          case Some(d) => Os.path(d) / "bin" / "transpile.cmd"
+          case _ => slangDir / "bin" / "transpile.cmd"
+        }
+        println("Transpiling Linux")
+        val cTranspileResults = proc"bash -c ${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).console.run()
+        assert(cTranspileResults.ok, "C transpiling failed")
+
+      } else {
+        assert (testOps.platform == CodeGenPlatform.SeL4, s"Hmm, ${testOps.platform}")
+        val transpileScript = testOps.slangOutputCDir match {
+          case Some(d) => Os.path(d) / "bin" / "transpile-sel4.cmd"
+          case _ => slangDir / "bin" / "transpile-sel4.cmd"
+        }
+        println("Transpiling seL4")
+        assert(transpileScript.exists, s"${transpileScript}")
+        val cTranspileResults = proc"bash -c ${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).console.run()
+        assert(cTranspileResults.ok, "seL4 transpiling failed")
+      }
+    }
 
     if(shouldCompile(testOps.platform) && !reporter.hasError) {
       println("Compiling JVM")
