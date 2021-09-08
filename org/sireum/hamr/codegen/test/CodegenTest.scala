@@ -150,7 +150,7 @@ trait CodeGenTest extends TestSuite {
           case _ => slangDir / "bin" / "transpile.cmd"
         }
         println("Transpiling Linux")
-        val cTranspileResults = proc"bash -c ${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).console.run()
+        val cTranspileResults = proc"${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).console.run()
         assert(cTranspileResults.ok, "C transpiling failed")
 
       } else {
@@ -161,7 +161,7 @@ trait CodeGenTest extends TestSuite {
         }
         println("Transpiling seL4")
         assert(transpileScript.exists, s"${transpileScript}")
-        val cTranspileResults = proc"bash -c ${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).console.run()
+        val cTranspileResults = proc"${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).console.run()
         assert(cTranspileResults.ok, "seL4 transpiling failed")
       }
     }
@@ -177,7 +177,7 @@ trait CodeGenTest extends TestSuite {
           case Some(d) => Os.path(d) / "bin" / "compile.cmd"
           case _ => slangDir / "src" / "c" / "bin" / "compile.cmd"
         }
-        val cCompileResults = proc"bash -c ${compileScript.string} -b -r -l".env(ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4"))).at(compileScript.up).console.run()
+        val cCompileResults = proc"${compileScript.string} -b -r -l".env(ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4"))).at(compileScript.up).console.run()
         assert(cCompileResults.ok, "C Compilation failed")
       }
     }
@@ -535,8 +535,11 @@ object CodeGenTest {
         //println(s"Wrote: ${f}")
 
         if(f.up.name.native == ".slang" && f.ext.native == "zip") {
-          Os.proc(ISZ("unzip", f.value, "-d", f.up.value)).run()//.runCheck()
-
+          if(Os.isWin) {
+            Os.proc(ISZ("tar", "-xf", f.value)).at(f.up).runCheck()
+          } else {
+            Os.proc(ISZ("unzip", f.value, "-d", f.up.value)).runCheck()
+          }
           //println(s"Unzipped: ${f}")
         }
       }
