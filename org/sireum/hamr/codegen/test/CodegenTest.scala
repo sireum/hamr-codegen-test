@@ -373,7 +373,7 @@ trait CodeGenTest extends TestSuite {
     }
   }
 
-  def isSlangProject(platform: CodeGenPlatform.Type): B = {
+  def isSlang(platform: CodeGenPlatform.Type): B = {
     return isLinux(platform) || platform == CodeGenPlatform.JVM || platform == CodeGenPlatform.SeL4
   }
 
@@ -382,16 +382,16 @@ trait CodeGenTest extends TestSuite {
   }
 
   def shouldCompile(platform: CodeGenPlatform.Type): B = {
-    return isSlangProject(platform) && ops.ISZOps(testModes).contains(TestMode.compile)
+    return isSlang(platform) && ops.ISZOps(testModes).contains(TestMode.compile)
   }
 
   def shouldRunGeneratedUnitTests(platform: CodeGenPlatform.Type): B = {
-    return isSlangProject(platform) && ops.ISZOps(testModes).contains(TestMode.generated_unit_tests)
+    return isSlang(platform) && ops.ISZOps(testModes).contains(TestMode.generated_unit_tests)
   }
 
   def shouldTranspile(platform: CodeGenPlatform.Type): B = {
     val _ops = ops.ISZOps(testModes)
-    return _ops.contains(TestMode.transpile) ||
+    return (_ops.contains(TestMode.transpile) && isSlang(platform)) ||
       (_ops.contains(TestMode.compile) && isLinux(platform)) ||
       (_ops.contains(TestMode.camkes) && platform == CodeGenPlatform.SeL4)
   }
