@@ -399,7 +399,7 @@
                   "propertyValues" : [
                     {
                       "type" : "UnitProp",
-                      "value" : "884736.0",
+                      "value" : "917504.0",
                       "unit" : {
                         "type" : "Some",
                         "value" : "bits"
@@ -948,7 +948,7 @@
                   "propertyValues" : [
                     {
                       "type" : "UnitProp",
-                      "value" : "884736.0",
+                      "value" : "917504.0",
                       "unit" : {
                         "type" : "Some",
                         "value" : "bits"
@@ -1378,7 +1378,7 @@
                   "propertyValues" : [
                     {
                       "type" : "UnitProp",
-                      "value" : "884736.0",
+                      "value" : "917504.0",
                       "unit" : {
                         "type" : "Some",
                         "value" : "bits"

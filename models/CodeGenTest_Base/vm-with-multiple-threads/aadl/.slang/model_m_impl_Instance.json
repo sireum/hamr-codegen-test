@@ -118,11 +118,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -184,11 +184,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -256,11 +256,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -322,11 +322,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -430,11 +430,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -496,11 +496,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -568,11 +568,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -634,11 +634,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -695,6 +695,37 @@
                           "type" : "None"
                         }
                       }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["m_impl_Instance", "virt_process", "virt_thread_1", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 2,
+                        "endLine" : 14,
+                        "endColumn" : 50,
+                        "offset" : 527,
+                        "length" : 97
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
                     }
                   ],
                   "appliesTo" : [
@@ -783,11 +814,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 55,
+                        "beginLine" : 57,
                         "beginColumn" : 4,
-                        "endLine" : 55,
+                        "endLine" : 57,
                         "endColumn" : 55,
-                        "offset" : 1526,
+                        "offset" : 1573,
                         "length" : 51
                       }
                     }
@@ -821,11 +852,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -887,11 +918,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -921,11 +952,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 56,
+                        "beginLine" : 58,
                         "beginColumn" : 4,
-                        "endLine" : 56,
+                        "endLine" : 58,
                         "endColumn" : 57,
-                        "offset" : 1581,
+                        "offset" : 1628,
                         "length" : 53
                       }
                     }
@@ -959,11 +990,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -1025,11 +1056,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -1187,11 +1218,11 @@
                             "type" : "Some",
                             "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                           },
-                          "beginLine" : 56,
+                          "beginLine" : 58,
                           "beginColumn" : 4,
-                          "endLine" : 56,
+                          "endLine" : 58,
                           "endColumn" : 57,
-                          "offset" : 1581,
+                          "offset" : 1628,
                           "length" : 53
                         }
                       }
@@ -1542,11 +1573,11 @@
                             "type" : "Some",
                             "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                           },
-                          "beginLine" : 55,
+                          "beginLine" : 57,
                           "beginColumn" : 4,
-                          "endLine" : 55,
+                          "endLine" : 57,
                           "endColumn" : 55,
-                          "offset" : 1526,
+                          "offset" : 1573,
                           "length" : 51
                         }
                       }
@@ -1691,11 +1722,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 55,
+                        "beginLine" : 57,
                         "beginColumn" : 4,
-                        "endLine" : 55,
+                        "endLine" : 57,
                         "endColumn" : 55,
-                        "offset" : 1526,
+                        "offset" : 1573,
                         "length" : 51
                       }
                     }
@@ -1884,11 +1915,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 65,
+                    "beginLine" : 67,
                     "beginColumn" : 4,
-                    "endLine" : 65,
+                    "endLine" : 67,
                     "endColumn" : 55,
-                    "offset" : 1804,
+                    "offset" : 1851,
                     "length" : 51
                   }
                 }
@@ -1922,11 +1953,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -1988,11 +2019,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -2022,11 +2053,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 66,
+                    "beginLine" : 68,
                     "beginColumn" : 4,
-                    "endLine" : 66,
+                    "endLine" : 68,
                     "endColumn" : 57,
-                    "offset" : 1859,
+                    "offset" : 1906,
                     "length" : 53
                   }
                 }
@@ -2060,11 +2091,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -2126,11 +2157,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -2162,11 +2193,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 71,
+                    "beginLine" : 73,
                     "beginColumn" : 4,
-                    "endLine" : 71,
+                    "endLine" : 73,
                     "endColumn" : 38,
-                    "offset" : 1994,
+                    "offset" : 2041,
                     "length" : 34
                   }
                 }
@@ -2196,11 +2227,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 80,
+                        "beginLine" : 82,
                         "beginColumn" : 4,
-                        "endLine" : 80,
+                        "endLine" : 82,
                         "endColumn" : 55,
-                        "offset" : 2234,
+                        "offset" : 2281,
                         "length" : 51
                       }
                     }
@@ -2234,11 +2265,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -2300,11 +2331,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -2334,11 +2365,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 81,
+                        "beginLine" : 83,
                         "beginColumn" : 4,
-                        "endLine" : 81,
+                        "endLine" : 83,
                         "endColumn" : 57,
-                        "offset" : 2289,
+                        "offset" : 2336,
                         "length" : 53
                       }
                     }
@@ -2372,11 +2403,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -2438,11 +2469,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -2553,11 +2584,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 72,
+                    "beginLine" : 74,
                     "beginColumn" : 4,
-                    "endLine" : 72,
+                    "endLine" : 74,
                     "endColumn" : 38,
-                    "offset" : 2032,
+                    "offset" : 2079,
                     "length" : 34
                   }
                 }
@@ -2587,11 +2618,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 80,
+                        "beginLine" : 82,
                         "beginColumn" : 4,
-                        "endLine" : 80,
+                        "endLine" : 82,
                         "endColumn" : 55,
-                        "offset" : 2234,
+                        "offset" : 2281,
                         "length" : 51
                       }
                     }
@@ -2625,11 +2656,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -2691,11 +2722,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -2725,11 +2756,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 81,
+                        "beginLine" : 83,
                         "beginColumn" : 4,
-                        "endLine" : 81,
+                        "endLine" : 83,
                         "endColumn" : 57,
-                        "offset" : 2289,
+                        "offset" : 2336,
                         "length" : 53
                       }
                     }
@@ -2763,11 +2794,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -2829,11 +2860,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -2946,11 +2977,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 74,
+                    "beginLine" : 76,
                     "beginColumn" : 4,
-                    "endLine" : 74,
+                    "endLine" : 76,
                     "endColumn" : 46,
-                    "offset" : 2084,
+                    "offset" : 2131,
                     "length" : 42
                   }
                 }
@@ -2991,11 +3022,11 @@
                             "type" : "Some",
                             "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                           },
-                          "beginLine" : 65,
+                          "beginLine" : 67,
                           "beginColumn" : 4,
-                          "endLine" : 65,
+                          "endLine" : 67,
                           "endColumn" : 55,
-                          "offset" : 1804,
+                          "offset" : 1851,
                           "length" : 51
                         }
                       }
@@ -3024,11 +3055,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 71,
+                        "beginLine" : 73,
                         "beginColumn" : 4,
-                        "endLine" : 71,
+                        "endLine" : 73,
                         "endColumn" : 38,
-                        "offset" : 1994,
+                        "offset" : 2041,
                         "length" : 34
                       }
                     }
@@ -3046,11 +3077,11 @@
                             "type" : "Some",
                             "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                           },
-                          "beginLine" : 80,
+                          "beginLine" : 82,
                           "beginColumn" : 4,
-                          "endLine" : 80,
+                          "endLine" : 82,
                           "endColumn" : 55,
-                          "offset" : 2234,
+                          "offset" : 2281,
                           "length" : 51
                         }
                       }
@@ -3096,11 +3127,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 75,
+                    "beginLine" : 77,
                     "beginColumn" : 4,
-                    "endLine" : 75,
+                    "endLine" : 77,
                     "endColumn" : 48,
-                    "offset" : 2130,
+                    "offset" : 2177,
                     "length" : 44
                   }
                 }
@@ -3119,11 +3150,11 @@
                           "type" : "Some",
                           "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                         },
-                        "beginLine" : 71,
+                        "beginLine" : 73,
                         "beginColumn" : 4,
-                        "endLine" : 71,
+                        "endLine" : 73,
                         "endColumn" : 38,
-                        "offset" : 1994,
+                        "offset" : 2041,
                         "length" : 34
                       }
                     }
@@ -3141,11 +3172,11 @@
                             "type" : "Some",
                             "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                           },
-                          "beginLine" : 81,
+                          "beginLine" : 83,
                           "beginColumn" : 4,
-                          "endLine" : 81,
+                          "endLine" : 83,
                           "endColumn" : 57,
-                          "offset" : 2289,
+                          "offset" : 2336,
                           "length" : 53
                         }
                       }
@@ -3196,11 +3227,11 @@
                             "type" : "Some",
                             "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                           },
-                          "beginLine" : 66,
+                          "beginLine" : 68,
                           "beginColumn" : 4,
-                          "endLine" : 66,
+                          "endLine" : 68,
                           "endColumn" : 57,
-                          "offset" : 1859,
+                          "offset" : 1906,
                           "length" : 53
                         }
                       }
@@ -3466,37 +3497,6 @@
               ],
               "appliesTo" : [
               ]
-            },
-            {
-              "type" : "Property",
-              "name" : {
-                "type" : "Name",
-                "name" : ["m_impl_Instance", "virt_processor", "CASE_Properties::OS"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/com.collins.trustedsystems.briefcase.staircase\/resources\/CASE_Properties.aadl"
-                    },
-                    "beginLine" : 25,
-                    "beginColumn" : 2,
-                    "endLine" : 26,
-                    "endColumn" : 22,
-                    "offset" : 1080,
-                    "length" : 99
-                  }
-                }
-              },
-              "propertyValues" : [
-                {
-                  "type" : "ValueProp",
-                  "value" : "Linux"
-                }
-              ],
-              "appliesTo" : [
-              ]
             }
           ],
           "flows" : [
@@ -3649,11 +3649,11 @@
                         "type" : "Some",
                         "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                       },
-                      "beginLine" : 65,
+                      "beginLine" : 67,
                       "beginColumn" : 4,
-                      "endLine" : 65,
+                      "endLine" : 67,
                       "endColumn" : 55,
-                      "offset" : 1804,
+                      "offset" : 1851,
                       "length" : 51
                     }
                   }
@@ -3744,11 +3744,11 @@
                         "type" : "Some",
                         "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                       },
-                      "beginLine" : 66,
+                      "beginLine" : 68,
                       "beginColumn" : 4,
-                      "endLine" : 66,
+                      "endLine" : 68,
                       "endColumn" : 57,
-                      "offset" : 1859,
+                      "offset" : 1906,
                       "length" : 53
                     }
                   }
@@ -3895,11 +3895,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 56,
+                    "beginLine" : 58,
                     "beginColumn" : 4,
-                    "endLine" : 56,
+                    "endLine" : 58,
                     "endColumn" : 57,
-                    "offset" : 1581,
+                    "offset" : 1628,
                     "length" : 53
                   }
                 }
@@ -3926,11 +3926,11 @@
                     "type" : "Some",
                     "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                   },
-                  "beginLine" : 71,
+                  "beginLine" : 73,
                   "beginColumn" : 4,
-                  "endLine" : 71,
+                  "endLine" : 73,
                   "endColumn" : 38,
-                  "offset" : 1994,
+                  "offset" : 2041,
                   "length" : 34
                 }
               }
@@ -3948,11 +3948,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 80,
+                    "beginLine" : 82,
                     "beginColumn" : 4,
-                    "endLine" : 80,
+                    "endLine" : 82,
                     "endColumn" : 55,
-                    "offset" : 2234,
+                    "offset" : 2281,
                     "length" : 51
                   }
                 }
@@ -4072,11 +4072,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 74,
+                    "beginLine" : 76,
                     "beginColumn" : 4,
-                    "endLine" : 74,
+                    "endLine" : 76,
                     "endColumn" : 46,
-                    "offset" : 2084,
+                    "offset" : 2131,
                     "length" : 42
                   }
                 }
@@ -4120,11 +4120,11 @@
                   "type" : "Some",
                   "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                 },
-                "beginLine" : 75,
+                "beginLine" : 77,
                 "beginColumn" : 4,
-                "endLine" : 75,
+                "endLine" : 77,
                 "endColumn" : 48,
-                "offset" : 2130,
+                "offset" : 2177,
                 "length" : 44
               }
             }
@@ -4142,11 +4142,11 @@
                     "type" : "Some",
                     "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                   },
-                  "beginLine" : 71,
+                  "beginLine" : 73,
                   "beginColumn" : 4,
-                  "endLine" : 71,
+                  "endLine" : 73,
                   "endColumn" : 38,
-                  "offset" : 1994,
+                  "offset" : 2041,
                   "length" : 34
                 }
               }
@@ -4164,11 +4164,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 81,
+                    "beginLine" : 83,
                     "beginColumn" : 4,
-                    "endLine" : 81,
+                    "endLine" : 83,
                     "endColumn" : 57,
-                    "offset" : 2289,
+                    "offset" : 2336,
                     "length" : 53
                   }
                 }
@@ -4253,11 +4253,11 @@
                       "type" : "Some",
                       "value" : "\/vm-with-multiple-threads\/packages\/model.aadl"
                     },
-                    "beginLine" : 75,
+                    "beginLine" : 77,
                     "beginColumn" : 4,
-                    "endLine" : 75,
+                    "endLine" : 77,
                     "endColumn" : 48,
-                    "offset" : 2130,
+                    "offset" : 2177,
                     "length" : 44
                   }
                 }
@@ -4495,11 +4495,11 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 78,
+                "beginLine" : 79,
                 "beginColumn" : 4,
-                "endLine" : 78,
+                "endLine" : 79,
                 "endColumn" : 88,
-                "offset" : 3653,
+                "offset" : 3710,
                 "length" : 84
               }
             }
@@ -4526,11 +4526,11 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 26,
+                "beginLine" : 27,
                 "beginColumn" : 4,
-                "endLine" : 29,
+                "endLine" : 30,
                 "endColumn" : 36,
-                "offset" : 1108,
+                "offset" : 1165,
                 "length" : 162
               }
             }

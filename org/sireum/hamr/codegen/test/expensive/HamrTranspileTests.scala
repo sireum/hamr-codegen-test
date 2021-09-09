@@ -9,8 +9,6 @@ import org.sireum.hamr.codegen.test.util.TestMode
 
 class HamrTranspileTests extends CodeGenTest {
 
-  override def testModes: ISZ[TestMode.Type] = ISZ(TestMode.transpile)
-
   override def generateExpected: B = if (super.generateExpected) T else F
 
   val (linux, sel4, sel4_tb, sel4_only) = (CodeGenPlatform.Linux, CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
@@ -37,7 +35,9 @@ class HamrTranspileTests extends CodeGenTest {
         testName = s"${getClass.getSimpleName}_${proj._1}--${platform}",
         modelDir = proj._2,
         airFile = proj._3,
-        ops = baseOptions(platform = platform),
+        ops = baseOptions(
+          platform = platform,
+          runTranspiler = T),
         resultDir = resultDir,
         description = None(),
         modelUri = None(),

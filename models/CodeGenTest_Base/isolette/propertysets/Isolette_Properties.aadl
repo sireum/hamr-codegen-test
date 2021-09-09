@@ -95,7 +95,7 @@ property set Isolette_Properties is
     
 --stack size   
   StackSize : constant
-    Size => 217088 Bytes; -- needs to be 4K aligned for seL4
+    Size => 229376 Bytes; -- needs to be 4K aligned for seL4 and 16K aligned for xcode
     
   
   Domain_Operator_Interface       : constant AadlInteger => 2;

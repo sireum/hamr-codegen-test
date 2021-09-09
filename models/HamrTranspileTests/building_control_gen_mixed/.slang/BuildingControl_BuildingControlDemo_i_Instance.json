@@ -12,7 +12,7 @@
             "type" : "Position",
             "uriOpt" : {
               "type" : "Some",
-              "value" : "\/building-control-mixed\/BuildingControl.aadl"
+              "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
             },
             "beginLine" : 10,
             "beginColumn" : 2,
@@ -42,7 +42,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 7,
                 "beginColumn" : 4,
@@ -70,7 +70,7 @@
           },
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@featureInstance.0"
+          "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@featureInstance.0"
         }
       ],
       "subComponents" : [
@@ -85,7 +85,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 13,
                 "beginColumn" : 4,
@@ -119,7 +119,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 32,
                     "beginColumn" : 4,
@@ -147,7 +147,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
             }
           ],
           "subComponents" : [
@@ -162,7 +162,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 37,
                     "beginColumn" : 4,
@@ -196,7 +196,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 50,
                         "beginColumn" : 4,
@@ -224,7 +224,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -237,7 +237,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 51,
                         "beginColumn" : 4,
@@ -261,7 +261,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -399,7 +399,7 @@
                   "propertyValues" : [
                     {
                       "type" : "UnitProp",
-                      "value" : "884736.0",
+                      "value" : "917504.0",
                       "unit" : {
                         "type" : "Some",
                         "value" : "bits"
@@ -443,7 +443,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -456,7 +456,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 38,
                     "beginColumn" : 4,
@@ -490,7 +490,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 76,
                         "beginColumn" : 4,
@@ -518,7 +518,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -531,7 +531,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 78,
                         "beginColumn" : 4,
@@ -625,7 +625,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -638,7 +638,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 79,
                         "beginColumn" : 4,
@@ -666,7 +666,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -679,7 +679,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 80,
                         "beginColumn" : 4,
@@ -773,7 +773,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -786,7 +786,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 77,
                         "beginColumn" : 4,
@@ -810,7 +810,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
                 }
               ],
               "subComponents" : [
@@ -948,7 +948,7 @@
                   "propertyValues" : [
                     {
                       "type" : "UnitProp",
-                      "value" : "884736.0",
+                      "value" : "917504.0",
                       "unit" : {
                         "type" : "Some",
                         "value" : "bits"
@@ -992,7 +992,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -1005,7 +1005,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 39,
                     "beginColumn" : 4,
@@ -1039,7 +1039,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 63,
                         "beginColumn" : 4,
@@ -1133,7 +1133,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1146,7 +1146,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 64,
                         "beginColumn" : 4,
@@ -1240,7 +1240,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -1378,7 +1378,7 @@
                   "propertyValues" : [
                     {
                       "type" : "UnitProp",
-                      "value" : "884736.0",
+                      "value" : "917504.0",
                       "unit" : {
                         "type" : "Some",
                         "value" : "bits"
@@ -1422,7 +1422,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
             }
           ],
           "connections" : [
@@ -1437,7 +1437,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 41,
                     "beginColumn" : 4,
@@ -1460,7 +1460,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 13,
                         "beginColumn" : 4,
@@ -1482,7 +1482,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 32,
                           "beginColumn" : 4,
@@ -1515,7 +1515,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 38,
                         "beginColumn" : 4,
@@ -1537,7 +1537,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 79,
                           "beginColumn" : 4,
@@ -1574,7 +1574,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -1587,7 +1587,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 42,
                     "beginColumn" : 4,
@@ -1610,7 +1610,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 37,
                         "beginColumn" : 4,
@@ -1632,7 +1632,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 50,
                           "beginColumn" : 4,
@@ -1665,7 +1665,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 38,
                         "beginColumn" : 4,
@@ -1687,7 +1687,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 76,
                           "beginColumn" : 4,
@@ -1724,7 +1724,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1737,7 +1737,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 43,
                     "beginColumn" : 4,
@@ -1760,7 +1760,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 37,
                         "beginColumn" : 4,
@@ -1782,7 +1782,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 51,
                           "beginColumn" : 4,
@@ -1815,7 +1815,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 38,
                         "beginColumn" : 4,
@@ -1837,7 +1837,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 77,
                           "beginColumn" : 4,
@@ -1874,7 +1874,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1887,7 +1887,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 44,
                     "beginColumn" : 4,
@@ -1910,7 +1910,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 38,
                         "beginColumn" : 4,
@@ -1932,7 +1932,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 80,
                           "beginColumn" : 4,
@@ -1965,7 +1965,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 39,
                         "beginColumn" : 4,
@@ -1987,7 +1987,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 63,
                           "beginColumn" : 4,
@@ -2024,7 +2024,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -2037,7 +2037,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 45,
                     "beginColumn" : 4,
@@ -2060,7 +2060,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 39,
                         "beginColumn" : 4,
@@ -2082,7 +2082,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 64,
                           "beginColumn" : 4,
@@ -2115,7 +2115,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 38,
                         "beginColumn" : 4,
@@ -2137,7 +2137,7 @@
                           "type" : "Position",
                           "uriOpt" : {
                             "type" : "Some",
-                            "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                            "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                           },
                           "beginLine" : 78,
                           "beginColumn" : 4,
@@ -2174,7 +2174,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -2189,7 +2189,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 42,
                     "beginColumn" : 4,
@@ -2211,7 +2211,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 37,
                       "beginColumn" : 4,
@@ -2233,7 +2233,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 50,
                         "beginColumn" : 4,
@@ -2264,7 +2264,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 38,
                       "beginColumn" : 4,
@@ -2286,7 +2286,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 76,
                         "beginColumn" : 4,
@@ -2322,7 +2322,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 42,
                         "beginColumn" : 4,
@@ -2342,7 +2342,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 13,
                         "beginColumn" : 4,
@@ -2370,7 +2370,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 43,
                     "beginColumn" : 4,
@@ -2392,7 +2392,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 37,
                       "beginColumn" : 4,
@@ -2414,7 +2414,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 51,
                         "beginColumn" : 4,
@@ -2445,7 +2445,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 38,
                       "beginColumn" : 4,
@@ -2467,7 +2467,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 77,
                         "beginColumn" : 4,
@@ -2503,7 +2503,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 43,
                         "beginColumn" : 4,
@@ -2523,7 +2523,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 13,
                         "beginColumn" : 4,
@@ -2551,7 +2551,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 44,
                     "beginColumn" : 4,
@@ -2573,7 +2573,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 38,
                       "beginColumn" : 4,
@@ -2595,7 +2595,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 80,
                         "beginColumn" : 4,
@@ -2626,7 +2626,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 39,
                       "beginColumn" : 4,
@@ -2648,7 +2648,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 63,
                         "beginColumn" : 4,
@@ -2684,7 +2684,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 44,
                         "beginColumn" : 4,
@@ -2704,7 +2704,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 13,
                         "beginColumn" : 4,
@@ -2732,7 +2732,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 45,
                     "beginColumn" : 4,
@@ -2754,7 +2754,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 39,
                       "beginColumn" : 4,
@@ -2776,7 +2776,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 64,
                         "beginColumn" : 4,
@@ -2807,7 +2807,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 38,
                       "beginColumn" : 4,
@@ -2829,7 +2829,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 78,
                         "beginColumn" : 4,
@@ -2865,7 +2865,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 45,
                         "beginColumn" : 4,
@@ -2885,7 +2885,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                          "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                         },
                         "beginLine" : 13,
                         "beginColumn" : 4,
@@ -2975,7 +2975,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -2988,7 +2988,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 12,
                 "beginColumn" : 4,
@@ -3053,7 +3053,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@componentInstance.1"
         }
       ],
       "connections" : [
@@ -3068,7 +3068,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 15,
                 "beginColumn" : 4,
@@ -3091,7 +3091,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 10,
                     "beginColumn" : 2,
@@ -3113,7 +3113,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 7,
                       "beginColumn" : 4,
@@ -3146,7 +3146,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 13,
                     "beginColumn" : 4,
@@ -3168,7 +3168,7 @@
                       "type" : "Position",
                       "uriOpt" : {
                         "type" : "Some",
-                        "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                        "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                       },
                       "beginLine" : 32,
                       "beginColumn" : 4,
@@ -3205,7 +3205,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
         }
       ],
       "connectionInstances" : [
@@ -3220,7 +3220,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 15,
                 "beginColumn" : 4,
@@ -3242,7 +3242,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                    "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                   },
                   "beginLine" : 10,
                   "beginColumn" : 2,
@@ -3264,7 +3264,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 7,
                     "beginColumn" : 4,
@@ -3295,7 +3295,7 @@
                   "type" : "Position",
                   "uriOpt" : {
                     "type" : "Some",
-                    "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                    "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                   },
                   "beginLine" : 38,
                   "beginColumn" : 4,
@@ -3317,7 +3317,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 79,
                     "beginColumn" : 4,
@@ -3353,7 +3353,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 15,
                     "beginColumn" : 4,
@@ -3373,7 +3373,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 10,
                     "beginColumn" : 2,
@@ -3397,7 +3397,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 41,
                     "beginColumn" : 4,
@@ -3417,7 +3417,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 13,
                     "beginColumn" : 4,
@@ -3470,7 +3470,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/building-control-mixed\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/instances\/BuildingControl_BuildingControlDemo_i_Instance.aaxl2#\/"
     }
   ],
   "annexLib" : [
@@ -3753,7 +3753,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 95,
                 "beginColumn" : 4,
@@ -3901,7 +3901,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 96,
                 "beginColumn" : 4,
@@ -4009,7 +4009,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/building-control-mixed\/BuildingControl.aadl#BuildingControl.TempUnit"
+          "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/BuildingControl.aadl#BuildingControl.TempUnit"
         }
       ],
       "connections" : [
@@ -4060,7 +4060,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 104,
                 "beginColumn" : 4,
@@ -4096,7 +4096,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 95,
                     "beginColumn" : 4,
@@ -4244,7 +4244,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 96,
                     "beginColumn" : 4,
@@ -4352,7 +4352,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/BuildingControl.aadl#BuildingControl.TempUnit"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/BuildingControl.aadl#BuildingControl.TempUnit"
             }
           ],
           "connections" : [
@@ -4367,7 +4367,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/building-control-mixed\/BuildingControl.aadl#BuildingControl.Temperature.impl"
+          "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/BuildingControl.aadl#BuildingControl.Temperature.impl"
         },
         {
           "type" : "Component",
@@ -4380,7 +4380,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                  "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                 },
                 "beginLine" : 105,
                 "beginColumn" : 4,
@@ -4416,7 +4416,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 95,
                     "beginColumn" : 4,
@@ -4564,7 +4564,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/building-control-mixed\/BuildingControl.aadl"
+                      "value" : "\/building-control-mixed-transpiler\/BuildingControl.aadl"
                     },
                     "beginLine" : 96,
                     "beginColumn" : 4,
@@ -4672,7 +4672,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/building-control-mixed\/BuildingControl.aadl#BuildingControl.TempUnit"
+              "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/BuildingControl.aadl#BuildingControl.TempUnit"
             }
           ],
           "connections" : [
@@ -4687,7 +4687,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/building-control-mixed\/BuildingControl.aadl#BuildingControl.Temperature.impl"
+          "uriFrag" : "platform:\/resource\/building-control-mixed-transpiler\/BuildingControl.aadl#BuildingControl.Temperature.impl"
         }
       ],
       "connections" : [

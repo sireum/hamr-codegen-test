@@ -143,7 +143,7 @@ trait CodeGenTest extends TestSuite {
     val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
     val slangDir = Os.path(testOps.slangOutputDir.get)
 
-    if(shouldTranspile(testOps.platform) && !reporter.hasError) {
+    if(shouldTranspile(testOps) && !reporter.hasError) {
       if(isLinux(testOps.platform)){
         val transpileScript = testOps.slangOutputCDir match {
           case Some(d) => Os.path(d) / "bin" / "transpile.cmd"
@@ -389,9 +389,11 @@ trait CodeGenTest extends TestSuite {
     return isSlang(platform) && ops.ISZOps(testModes).contains(TestMode.generated_unit_tests)
   }
 
-  def shouldTranspile(platform: CodeGenPlatform.Type): B = {
+  def shouldTranspile(testOps: CodeGenConfig): B = {
+    val platform = testOps.platform
     val _ops = ops.ISZOps(testModes)
-    return (_ops.contains(TestMode.transpile) && (isLinux(platform) || platform == CodeGenPlatform.SeL4)) ||
+    return (testOps.runTranspiler && (isLinux(platform) || platform == CodeGenPlatform.SeL4)) ||
+      (_ops.contains(TestMode.transpile) && (isLinux(platform) || platform == CodeGenPlatform.SeL4)) ||
       (_ops.contains(TestMode.compile) && isLinux(platform)) ||
       (_ops.contains(TestMode.camkes) && platform == CodeGenPlatform.SeL4)
   }
@@ -432,7 +434,7 @@ object CodeGenTest {
     bitWidth = 64,
     maxStringSize = 256,
     maxArraySize = 1,
-    runTranspiler = T,
+    runTranspiler = F,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     aadlRootDir = None(),
@@ -535,12 +537,21 @@ object CodeGenTest {
         //println(s"Wrote: ${f}")
 
         if(f.up.name.native == ".slang" && f.ext.native == "zip") {
-          if(Os.isWin || Os.isMac) {
-            // github mac doesn't appear to have unzip but mac and win10 tar (bsdtar) can unzip
-            Os.proc(ISZ("tar", "-xf", f.value)).at(f.up).runCheck()
+          // unzip the AIR json
+          val results: Os.Proc.Result = if(Os.isWin || Os.isMac) {
+            // mac and win10 tar (bsdtar) can unzip
+            Os.proc(ISZ("tar", "-xf", f.value)).at(f.up).run()
           } else {
             // linux tar can't unzip
-            Os.proc(ISZ("/usr/bin/unzip", f.value, "-d", f.up.value)).runCheck()
+            Os.proc(ISZ("/usr/bin/unzip", f.value, "-d", f.up.value)).run()
+          }
+          val jsonFile = f.up / ops.StringOps(f.name).substring(0, f.name.size - 4)
+          if(!jsonFile.exists){
+            println(s"exitCode: ${results.exitCode}, ok: ${results.exitCode}")
+            println(s"out: ${results.out}")
+            println(s"err: ${results.err}")
+            println(s"zip file ${f}.  Exists? ${f.exists}")
+            halt(s"${jsonFile} not unzipped")
           }
           //println(s"Unzipped: ${f}")
         }
