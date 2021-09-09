@@ -391,7 +391,7 @@ trait CodeGenTest extends TestSuite {
 
   def shouldTranspile(platform: CodeGenPlatform.Type): B = {
     val _ops = ops.ISZOps(testModes)
-    return (_ops.contains(TestMode.transpile) && isSlang(platform)) ||
+    return (_ops.contains(TestMode.transpile) && (isLinux(platform) || platform == CodeGenPlatform.SeL4)) ||
       (_ops.contains(TestMode.compile) && isLinux(platform)) ||
       (_ops.contains(TestMode.camkes) && platform == CodeGenPlatform.SeL4)
   }
@@ -535,9 +535,11 @@ object CodeGenTest {
         //println(s"Wrote: ${f}")
 
         if(f.up.name.native == ".slang" && f.ext.native == "zip") {
-          if(Os.isWin) {
+          if(Os.isWin || Os.isMac) {
+            // github mac doesn't appear to have unzip but mac and win10 tar (bsdtar) can unzip
             Os.proc(ISZ("tar", "-xf", f.value)).at(f.up).runCheck()
           } else {
+            // linux tar can't unzip
             Os.proc(ISZ("/usr/bin/unzip", f.value, "-d", f.up.value)).runCheck()
           }
           //println(s"Unzipped: ${f}")
