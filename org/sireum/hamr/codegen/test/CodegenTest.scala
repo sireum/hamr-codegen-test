@@ -537,20 +537,10 @@ object CodeGenTest {
         //println(s"Wrote: ${f}")
 
         if(f.up.name.native == ".slang" && f.ext.native == "zip") {
-          // unzip the AIR json
-          val results: Os.Proc.Result = if(Os.isWin || Os.isMac) {
-            // mac and win10 tar (bsdtar) can unzip
-            Os.proc(ISZ("tar", "-xf", f.value)).at(f.up).run()
-          } else {
-            // linux tar can't unzip
-            Os.proc(ISZ("/usr/bin/unzip", f.value, "-d", f.up.value)).run()
-          }
+          f.unzipTo(f.up)
+
           val jsonFile = f.up / ops.StringOps(f.name).substring(0, f.name.size - 4)
           if(!jsonFile.exists){
-            println(s"exitCode: ${results.exitCode}, ok: ${results.exitCode}")
-            println(s"out: ${results.out}")
-            println(s"err: ${results.err}")
-            println(s"zip file ${f}.  Exists? ${f.exists}")
             halt(s"${jsonFile} not unzipped")
           }
           //println(s"Unzipped: ${f}")
