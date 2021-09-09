@@ -538,7 +538,7 @@ object CodeGenTest {
           if(Os.isWin) {
             Os.proc(ISZ("tar", "-xf", f.value)).at(f.up).runCheck()
           } else {
-            Os.proc(ISZ("unzip", f.value, "-d", f.up.value)).runCheck()
+            Os.proc(ISZ("/usr/bin/unzip", f.value, "-d", f.up.value)).runCheck()
           }
           //println(s"Unzipped: ${f}")
         }
