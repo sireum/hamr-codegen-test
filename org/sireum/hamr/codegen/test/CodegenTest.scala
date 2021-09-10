@@ -141,7 +141,18 @@ trait CodeGenTest extends TestSuite {
     }
 
     val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
-    val slangDir = Os.path(testOps.slangOutputDir.get)
+    val slangDir: Os.Path = {
+      var ret = Os.path(testOps.slangOutputDir.get)
+      if(Os.isWin) {
+        // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
+        // so create a virtual drive to shorten the path
+        proc"subst z: /D".run()
+        proc"subst z: ${ret.string}".runCheck()
+        ret = Os.path("z:\\")
+        assert(ret.exists, s"Virtual drive ${ret.string} doesn't exist")
+      }
+      ret
+    }
 
     if(shouldTranspile(testOps) && !reporter.hasError) {
       if(isLinux(testOps.platform)){
