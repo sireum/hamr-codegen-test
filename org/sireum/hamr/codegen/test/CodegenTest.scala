@@ -92,15 +92,18 @@ trait CodeGenTest extends TestSuite {
     val resultsDir = rootTestOutputDir / "results"
     val slangOutputDir = resultsDir / testName
 
+    assert(ops.slangOutputDir.isEmpty, s"hmm, why custom output dir ${ops.slangOutputDir}")
+
     var testOps = ops(
-      slangOutputDir = if(ops.slangOutputDir.nonEmpty) ops.slangOutputDir else Some(slangOutputDir.canon.value),
+      slangOutputDir = Some(slangOutputDir.canon.value)
     )
 
     if(isSeL4(testOps.platform)) {
-      testOps = testOps(
-        slangOutputDir = Some(s"${testOps.slangOutputDir.get}/slang-embedded"),
+      assert(testOps.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${ops.camkesOutputDir}")
 
-        camkesOutputDir = if(testOps.camkesOutputDir.nonEmpty) testOps.camkesOutputDir  else testOps.slangOutputDir,
+      testOps = testOps(
+        slangOutputDir = Some(s"${slangOutputDir}/slang-embedded"),
+        camkesOutputDir = testOps.slangOutputDir,
         aadlRootDir = if(testOps.aadlRootDir.nonEmpty) testOps.aadlRootDir else Some(modelDir.canon.value),
       )
     }
@@ -140,7 +143,10 @@ trait CodeGenTest extends TestSuite {
       return
     }
 
-    runAdditionalTasks(testName, testOps, reporter)
+    if(!reporter.hasError) {
+      val tasksSuccessful = runAdditionalTasks(testName, slangOutputDir, testOps, reporter)
+      assert(tasksSuccessful, "Tasks did not complete successfully")
+    }
 
     val resultMap = TestUtil.convertToTestResult(results.resources, resultsDir)
 
@@ -248,67 +254,101 @@ trait CodeGenTest extends TestSuite {
     assert(!testFail, s"test fail in ${rootTestOutputDir.canon.toUri}")
   }
 
-  def runAdditionalTasks(testName: String, testOps: CodeGenConfig, reporter: Reporter): B = {
+  def runAdditionalTasks(testName: String, testResultsDir: Os.Path, testOps: CodeGenConfig, reporter: Reporter): B = {
+
+    val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+    var slangDir: Os.Path = testResultsDir //Os.path(testOps.slangOutputDir.get)
+
+    var optSubstDrive: String = ""
+    if (Os.isWin) {
+      // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
+      // so create a virtual drive to shorten the path
+      optSubstDrive = {
+        var i = 90
+        var cand: String = ""
+        while (i > 65) {
+          val d = Os.path(s"${C(i)}:")
+          if (!d.exists) {
+            cand = d.string; i = 65
+          }
+          i = i - 1
+        }
+        cand
+      }
+      println(s"Attempting subst of ${optSubstDrive} for '${slangDir.string}''")
+      proc"subst ${optSubstDrive} ${slangDir.string}".runCheck()
+
+      slangDir = Os.path(optSubstDrive)
+      assert(slangDir.exists, s"Virtual drive ${slangDir.string} doesn't exist")
+    }
+
+    def fetch(filename: String): Os.Path = {
+      var loc: ISZ[Os.Path] = ISZ()
+      def r(p: Os.Path): Unit = {
+        if(p.isDir) {  for(pp <- p.list if loc.isEmpty ) { r(pp)} }
+        else { if(p.name == filename) { loc = loc :+ p }
+        }
+      }
+      r(slangDir)
+      assert(loc.size == 1, s"Fetch failed for ${filename}. Found ${loc.size} matches. ${loc}")
+      return loc(0).canon
+    }
+
+    var keepGoing: B = T
     def check(results: OsProto.Proc.Result, failMsg: String): Unit = {
       if(!results.ok) {
-        println(s"${testName}")
+        println(s"${testName}: ${failMsg}")
         println("out:")
         println(results.out)
         println("err:")
         println(results.err)
-        assert(F, failMsg)
       }
+      keepGoing = results.ok
     }
 
-    val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
-    val slangDir: Os.Path = Os.path(testOps.slangOutputDir.get)
-
-    if(shouldTranspile(testOps) && !reporter.hasError) {
+    if(shouldTranspile(testOps) && keepGoing) {
       if(isLinux(testOps.platform)){
-        val transpileScript = testOps.slangOutputCDir match {
-          case Some(d) => Os.path(d) / "bin" / "transpile.cmd"
-          case _ => slangDir / "bin" / "transpile.cmd"
-        }
+        val transpileScript = fetch("transpile.cmd")
+
         println("Transpiling Linux ...")
         val cTranspileResults = proc"${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).run()
         check(cTranspileResults, "C transpiling failed")
 
       } else {
         assert (testOps.platform == CodeGenPlatform.SeL4, s"Hmm, ${testOps.platform}")
-        val transpileScript = testOps.slangOutputCDir match {
-          case Some(d) => Os.path(d) / "bin" / "transpile-sel4.cmd"
-          case _ => slangDir / "bin" / "transpile-sel4.cmd"
-        }
+        val transpileScript = fetch("transpile-sel4.cmd")
+
         println("Transpiling seL4 ...")
-        assert(transpileScript.exists, s"${transpileScript}")
         val cTranspileResults = proc"${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).run()
         check(cTranspileResults, "seL4 transpiling failed")
       }
     }
 
-    if(shouldCompile(testOps.platform) && !reporter.hasError) {
-      println("Compiling JVM ...")
-      //val proyekResults = proc"${sireum.string} proyek compile --par ${slangDir.string}".at(slangDir).console.run()
-      //assert(proyekResults.ok, "Proyek compilation failed")
+    if(shouldCompile(testOps.platform) && keepGoing) {
+      val projectCmd = fetch("project.cmd")
 
-      if(isLinux(testOps.platform) && !reporter.hasError) {
+      println("Compiling JVM ...")
+      val proyekResults = proc"${sireum.string} proyek compile --par ${projectCmd.up.up.string}".at(projectCmd.up.up).run()
+      check(proyekResults, "Proyek compilation failed")
+
+      if(isLinux(testOps.platform) && keepGoing) {
         println("Compiling C ...")
-        val compileScript = testOps.slangOutputCDir match {
-          case Some(d) => Os.path(d) / "bin" / "compile.cmd"
-          case _ => slangDir / "src" / "c" / "bin" / "compile.cmd"
-        }
+        val compileScript = fetch("compile.cmd")
+
         val cCompileResults = proc"${compileScript.string} -b -r -l".env(ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4"))).at(compileScript.up).run()
         check(cCompileResults, "C Compilation failed")
       }
     }
 
-    if (shouldRunGeneratedUnitTests(testOps.platform) && !reporter.hasError) {
+    if (shouldRunGeneratedUnitTests(testOps.platform) && keepGoing) {
+      val projectCmd = fetch("project.cmd")
+
       println("Running generated unit tests ...")
-      val proyekResults = proc"${sireum.string} proyek test --par ${slangDir.string}".at(slangDir).run()
+      val proyekResults = proc"${sireum.string} proyek test --par ${projectCmd.up.up.string}".at(projectCmd.up.up).run()
       check(proyekResults, "Proyek test failed")
     }
 
-    if(shouldCamkes(testOps.platform) && !reporter.hasError) {
+    if(shouldCamkes(testOps.platform) && keepGoing) {
       val hasVMs: B = reporter.messages.filter(m => org.sireum.ops.StringOps(m.text)
         .contains("Execute the following to install the CAmkES-ARM-VM project:")).nonEmpty
 
@@ -319,9 +359,9 @@ trait CodeGenTest extends TestSuite {
       rootCamkesDir match {
         case Some(camkesDir) => {
           val name = s"hamr_${testName}"
-          val camkesAppsDir = camkesDir / s"projects/camkes/apps/${name}"
+          val camkesAppsDir = camkesDir / "projects" / "camkes" / "apps" / name
           camkesAppsDir.removeAll()
-          camkesAppsDir.mklink(Os.path(testOps.slangOutputDir.get))
+          camkesAppsDir.mklink(Os.path(testOps.camkesOutputDir.get))
           println(s"Created symlink to ${camkesAppsDir.value}")
 
           var camkesArgs: ISZ[String] = ISZ("../init-build.sh")
@@ -351,9 +391,11 @@ trait CodeGenTest extends TestSuite {
           val camkesResults = Os.proc(camkesArgs).at(camkesBuildDir).run()
           check(camkesResults, "CAmkES build failed")
 
-          println("Running ninja ...")
-          val ninjaResults = Os.proc(ISZ("ninja")).at(camkesBuildDir).run()
-          check(ninjaResults, "Ninja failed")
+          if(keepGoing) {
+            println("Running ninja ...")
+            val ninjaResults = Os.proc(ISZ("ninja")).at(camkesBuildDir).run()
+            check(ninjaResults, "Ninja failed")
+          }
 
           //val results = Proc(ISZ("simulate"), Os.cwd, Map.empty, T, None(), F, F, F, F, F, timeout, F).at(camkesBuildDir).run()
           //println(results.out)
@@ -363,7 +405,13 @@ trait CodeGenTest extends TestSuite {
           assert(F, "CAmkES directory not found")
       }
     }
-    return T
+
+    if(Os.isWin) {
+      println(s"Attempting to unsubst ${optSubstDrive}")
+      proc"subst ${optSubstDrive} /D".run()
+    }
+
+    return keepGoing
   }
 
   def getModel(s: String): Option[Aadl] = {
@@ -538,26 +586,7 @@ object CodeGenTest {
         (intellijTestDir / "expected", intellijTestDir.up / "results", intellijTestDir / "models")
       } else {
         // probably running from jar so copy resources to a temp directory
-        var temp: Os.Path = Os.tempDir()
-        if (Os.isWin) {
-          // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
-          // so create a virtual drive to shorten the path
-          val driveLetter: String = {
-            var i = 90
-            var cand: String = ""
-            while (i > 65) {
-              val d = Os.path(s"${C(i)}:")
-              if (!d.exists) {
-                cand = d.string; i = 65
-              }
-              i = i - 1
-            }
-            cand
-          }
-          proc"subst ${driveLetter} ${temp.string}".runCheck()
-          temp = Os.path(driveLetter)
-          assert(temp.exists, s"Virtual drive ${temp.string} doesn't exist")
-        }
+        val temp: Os.Path = Os.tempDir()
 
         for (entry <- testResources) {
           assert(entry._1.head == "expected" || entry._1.head == "models")
