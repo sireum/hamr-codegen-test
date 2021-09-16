@@ -5,7 +5,7 @@ import org.sireum.hamr.act.templates.{CakeMLTemplate, SlangEmbeddedTemplate}
 import org.sireum.hamr.act.util.CMakeOption
 import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen._
-import org.sireum.hamr.codegen.common.containers.TranspilerConfig
+import org.sireum.hamr.codegen.common.containers.{ProyekIveConfig, TranspilerConfig}
 import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil}
 import org.sireum.hamr.codegen.test.util.TestMode
@@ -117,17 +117,19 @@ trait CodeGenTest extends TestSuite {
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
-    /*
+    // note transpiler will be run via the callback method and via the Slash scripts.
+    // proyek ive will only be run via callback
     val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
-      if(shouldTranspile(testOps.platform)) transpile _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 },
-      (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
+      if(shouldTranspile(testOps)) transpile (testOps) _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 },
+      if(shouldProyekIve(testOps)) proyekive (testOps) _ else (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
     )
-    */
 
+    /*
     val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
       (TranspilerConfig) => { println("Dummy transpiler"); 0 },
       (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
     )
+     */
 
     if(expectedErrorReasons.isEmpty) {
       assert(!reporter.hasError, "Expecting no errors but codegen did not complete successfully")
@@ -310,7 +312,7 @@ trait CodeGenTest extends TestSuite {
       if(isLinux(testOps.platform)){
         val transpileScript = fetch("transpile.cmd")
 
-        println("Transpiling Linux ...")
+        println(s"Transpiling ${testOps.platform} via script ...")
         val cTranspileResults = proc"${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).run()
         check(cTranspileResults, "C transpiling failed")
 
@@ -318,7 +320,7 @@ trait CodeGenTest extends TestSuite {
         assert (testOps.platform == CodeGenPlatform.SeL4, s"Hmm, ${testOps.platform}")
         val transpileScript = fetch("transpile-sel4.cmd")
 
-        println("Transpiling seL4 ...")
+        println(s"Transpiling ${testOps.platform} via script ...")
         val cTranspileResults = proc"${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).run()
         check(cTranspileResults, "seL4 transpiling failed")
       }
@@ -327,17 +329,25 @@ trait CodeGenTest extends TestSuite {
     if(shouldCompile(testOps.platform) && keepGoing) {
       val projectCmd = fetch("project.cmd")
 
-      println("Compiling JVM ...")
+      println("Compiling Slang project via proyek compile ...")
       val proyekResults = proc"${sireum.string} proyek compile --par ${projectCmd.up.up.string}".at(projectCmd.up.up).run()
       check(proyekResults, "Proyek compilation failed")
 
       if(isLinux(testOps.platform) && keepGoing) {
-        println("Compiling C ...")
+        println("Compiling C project via script ...")
         val compileScript = fetch("compile.cmd")
 
         val cCompileResults = proc"${compileScript.string} -b -r -l".env(ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4"))).at(compileScript.up).run()
         check(cCompileResults, "C Compilation failed")
       }
+    }
+
+    if(shouldProyekIve(testOps) && keepGoing) {
+      val projectCmd = fetch("project.cmd")
+
+      println("Generating IVE project via proyek ive ...")
+      val proyekResults = proc"${sireum.string} proyek ive ${projectCmd.up.up.string}".at(projectCmd.up.up).run()
+      check(proyekResults, "Proyek ive failed")
     }
 
     if (shouldRunGeneratedUnitTests(testOps.platform) && keepGoing) {
@@ -466,6 +476,10 @@ trait CodeGenTest extends TestSuite {
       (_ops.contains(TestMode.camkes) && platform == CodeGenPlatform.SeL4)
   }
 
+  def shouldProyekIve(config: CodeGenConfig): B = {
+    return shouldCompile(config.platform)
+  }
+
   def onOptions(options: ISZ[CMakeOption]): ISZ[String] = { return options.map(o => s"-D${o.name}=ON") }
 }
 
@@ -484,7 +498,7 @@ object CodeGenTest {
     platform = CodeGenPlatform.JVM,
     slangOutputDir = None(),
     packageName = None(),
-    noProyekIve = T,
+    noProyekIve = F,
     noEmbedArt = F,
     devicesAsThreads = T,
     slangAuxCodeDirs = ISZ(),
@@ -493,7 +507,7 @@ object CodeGenTest {
     bitWidth = 64,
     maxStringSize = 256,
     maxArraySize = 1,
-    runTranspiler = F,
+    runTranspiler = T,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     aadlRootDir = None(),
@@ -534,18 +548,43 @@ object CodeGenTest {
     }
   }
 
-
-  def transpile(tc: TranspilerConfig): Z = {
+  def proyekive(config: CodeGenConfig)(pc: ProyekIveConfig): Z = {
     var args: ISZ[String] = ISZ()
+    def addKey(key: String): Unit = { args = args :+ key }
+    def add(key: String, value: String): Unit = { args = args :+ key :+ value }
+    val pathSep: String = Os.pathSep
 
-    def addKey(key: String): Unit = {
-      args = args :+ key
-    }
+    if(pc.force) addKey("--force")
+    if(pc.ultimate) addKey("--ultimate")
+    if(pc.ignoreRuntime) addKey("--ignore-runtime")
+    if(pc.json.nonEmpty) add("--json", pc.json.get)
+    if(pc.name.nonEmpty) add("--name", pc.name.get)
+    if(pc.outputDirName.nonEmpty) add("--out", pc.outputDirName.get)
+    if(pc.project.nonEmpty) add("--project", pc.project.get)
+    if(pc.slice.nonEmpty) add("--slice", st"""${(pc.slice, ",")}""".render)
+    if(pc.symlink) addKey("--symlink")
+    if(pc.versions.nonEmpty) add("--versions", st"""${(pc.versions, pathSep)}""".render)
+    if(pc.cache.nonEmpty) add("--cache", pc.cache.get)
+    if(pc.docs) addKey("--no-docs")
+    if(pc.sources) addKey("--no-sources")
+    if(pc.repositories.nonEmpty) add("--repositories", st"""${(pc.repositories, ",")}""".render)
+    if(pc.args.nonEmpty) args = args ++ pc.args
 
-    def add(key: String, value: String): Unit = {
-      args = args :+ key :+ value
-    }
+    val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
 
+    args = ISZ[String](sireum.value, "proyek", "ive") ++ args
+
+    println("Generating IVE project via callback ...")
+    val results = Os.proc(args).console.run()
+
+    return results.exitCode
+
+  }
+
+  def transpile(config: CodeGenConfig)(tc: TranspilerConfig): Z = {
+    var args: ISZ[String] = ISZ()
+    def addKey(key: String): Unit = { args = args :+ key }
+    def add(key: String, value: String): Unit = { args = args :+ key :+ value }
     val pathSep: String = Os.pathSep
 
     args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, pathSep)}""".render
@@ -573,9 +612,18 @@ object CodeGenTest {
 
     args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
 
-    val results = Os.proc(args).console.run()
+    // transpiler callback method will be expensive for sel4 projects since
+    // each will be done in separate JVM instances (unlike when run from
+    // OSATE or via the transpile scripts) so only do it when explicitly requested
+    val ret: Z = if(Os.envs.contains("ALSO_TRANSPILE_VIA_CALLBACKS")) {
+      println(s"Transpiling ${config.platform} via callback ...")
+      val results = Os.proc(args).console.run()
+      results.exitCode
+    } else {
+      0
+    }
 
-    return results.exitCode
+    return ret
   }
 
   def getDirectories(testResources : scala.collection.Map[scala.Vector[Predef.String], Predef.String]): (Os.Path, Os.Path, Os.Path) = {
