@@ -634,7 +634,18 @@ object CodeGenTest {
         (intellijTestDir / "expected", intellijTestDir.up / "results", intellijTestDir / "models")
       } else {
         // probably running from jar so copy resources to a temp directory
-        val temp: Os.Path = Os.tempDir()
+        val temp: Os.Path = {
+          var ret = Os.tempDir()
+          if(Os.envs.contains("GITHUB_WORKSPACE") && Os.isWin) {
+            // win temp dirs are created under c: but the workspace is usually under d:
+            // which causes proyek ive to fail when it tries to create symlinks from
+            // the ive libs located on d: to the results dir located under c:.  Instead
+            // place the 'temp' dir under the gihub workspace
+            ret = Os.path(Os.envs.get("GITHUB_WORKSPACE").get) / ret.name
+            ret.mkdir()
+          }
+          ret
+        }
 
         for (entry <- testResources) {
           assert(entry._1.head == "expected" || entry._1.head == "models")
