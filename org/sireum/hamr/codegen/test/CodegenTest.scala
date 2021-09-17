@@ -477,7 +477,7 @@ trait CodeGenTest extends TestSuite {
   }
 
   def shouldProyekIve(config: CodeGenConfig): B = {
-    return shouldCompile(config.platform)
+    return !config.noProyekIve || shouldCompile(config.platform)
   }
 
   def onOptions(options: ISZ[CMakeOption]): ISZ[String] = { return options.map(o => s"-D${o.name}=ON") }
@@ -498,7 +498,7 @@ object CodeGenTest {
     platform = CodeGenPlatform.JVM,
     slangOutputDir = None(),
     packageName = None(),
-    noProyekIve = F,
+    noProyekIve = T,
     noEmbedArt = F,
     devicesAsThreads = T,
     slangAuxCodeDirs = ISZ(),
@@ -507,7 +507,7 @@ object CodeGenTest {
     bitWidth = 64,
     maxStringSize = 256,
     maxArraySize = 1,
-    runTranspiler = T,
+    runTranspiler = F,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     aadlRootDir = None(),
