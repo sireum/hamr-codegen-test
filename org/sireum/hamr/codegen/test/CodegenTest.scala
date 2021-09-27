@@ -118,7 +118,7 @@ trait CodeGenTest extends TestSuite {
         val outputFile = modelDir / ".slang" / "testAIR.json"
         outputFile.up.mkdir()
         println("Generating AIR via phantom ...")
-        val results = proc"sireum hamr phantom -f ${outputFile.string} ${modelDir.string}".at(modelDir).run()
+        val results = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.string} ${modelDir.string}".at(modelDir).run()
         assert(check(testName, results, "Phantom did not complete successfully"), "Check did not return OK")
         outputFile.read
       } else {
@@ -270,7 +270,7 @@ trait CodeGenTest extends TestSuite {
 
   def runAdditionalTasks(testName: String, testResultsDir: Os.Path, testOps: CodeGenConfig, reporter: Reporter): B = {
 
-    val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+    val sireum: Os.Path = CodeGenTest.getSireum()
     var slangDir: Os.Path = testResultsDir //Os.path(testOps.slangOutputDir.get)
 
     var optSubstDrive: String = ""
@@ -574,7 +574,7 @@ object CodeGenTest {
     if(pc.repositories.nonEmpty) add("--repositories", st"""${(pc.repositories, ",")}""".render)
     if(pc.args.nonEmpty) args = args ++ pc.args
 
-    val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+    val sireum: Os.Path = CodeGenTest.getSireum()
 
     args = ISZ[String](sireum.value, "proyek", "ive") ++ args
 
@@ -612,7 +612,7 @@ object CodeGenTest {
 
     //args.foreach(p => println(p))
 
-    val sireum: Os.Path = Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+    val sireum: Os.Path = CodeGenTest.getSireum()
 
     args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
 
@@ -629,6 +629,8 @@ object CodeGenTest {
 
     return ret
   }
+
+  def getSireum(): Os.Path= { return Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum") }
 
   def check(testName: String, results: OsProto.Proc.Result, failMsg: String): B = {
     if(!results.ok) {
