@@ -21,7 +21,7 @@ trait CodeGenTest extends TestSuite {
 
   import CodeGenTest._
 
-  def generateExpected: B = F
+  def generateExpected: B = T
   def delResultDirIfEqual: B = F
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
@@ -56,7 +56,7 @@ trait CodeGenTest extends TestSuite {
 
   def test(testName: String,
            modelDir: Os.Path,
-           airFile: Os.Path,
+           airFile: Option[Os.Path],
            ops: CodeGenConfig,
            resultDir:Option[String],
            description: Option[String],
@@ -77,8 +77,8 @@ trait CodeGenTest extends TestSuite {
 
   def testAir(testName: String,
               modelDir: Os.Path,
-              airFile: Os.Path,
-              ops: CodeGenConfig,
+              airFile: Option[Os.Path],
+              config: CodeGenConfig,
               resultDir: Option[String],
               description: Option[String],
               modelUri: Option[String],
@@ -92,14 +92,14 @@ trait CodeGenTest extends TestSuite {
     val resultsDir = rootTestOutputDir / "results"
     val slangOutputDir = resultsDir / testName
 
-    assert(ops.slangOutputDir.isEmpty, s"hmm, why custom output dir ${ops.slangOutputDir}")
+    assert(config.slangOutputDir.isEmpty, s"hmm, why custom output dir ${config.slangOutputDir}")
 
-    var testOps = ops(
+    var testOps = config(
       slangOutputDir = Some(slangOutputDir.canon.value)
     )
 
     if(isSeL4(testOps.platform)) {
-      assert(testOps.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${ops.camkesOutputDir}")
+      assert(testOps.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${config.camkesOutputDir}")
 
       testOps = testOps(
         slangOutputDir = Some(s"${slangOutputDir}/slang-embedded"),
@@ -113,13 +113,25 @@ trait CodeGenTest extends TestSuite {
 
     val reporter = Reporter.create
 
-    val model = getModel(airFile.read)
+    val model: Aadl = {
+      val s: String = if(ops.ISZOps(testModes).contains(TestMode.phantom) || airFile.isEmpty) {
+        val outputFile = modelDir / ".slang" / "testAIR.json"
+        outputFile.up.mkdir()
+        println("Generating AIR via phantom ...")
+        val results = proc"sireum hamr phantom -f ${outputFile.string} ${modelDir.string}".at(modelDir).run()
+        assert(check(testName, results, "Phantom did not complete successfully"), "Check did not return OK")
+        outputFile.read
+      } else {
+        airFile.get.read
+      }
+      getModel(s)
+    }
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
-    val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
+    val results: CodeGenResults = CodeGen.codeGen(model, testOps, reporter,
       if(shouldTranspile(testOps)) transpile (testOps) _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 },
       if(shouldProyekIve(testOps)) proyekive (testOps) _ else (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
     )
@@ -298,14 +310,7 @@ trait CodeGenTest extends TestSuite {
 
     var keepGoing: B = T
     def check(results: OsProto.Proc.Result, failMsg: String): Unit = {
-      if(!results.ok) {
-        println(s"${testName}: ${failMsg}")
-        println("out:")
-        println(results.out)
-        println("err:")
-        println(results.err)
-      }
-      keepGoing = results.ok
+      keepGoing = CodeGenTest.check(testName, results, failMsg: String)
     }
 
     if(shouldTranspile(testOps) && keepGoing) {
@@ -424,12 +429,11 @@ trait CodeGenTest extends TestSuite {
     return keepGoing
   }
 
-  def getModel(s: String): Option[Aadl] = {
+  def getModel(s: String): Aadl = {
     return JSON.toAadl(s) match {
-      case Either.Left(m) => Some(m)
+      case Either.Left(m) => m
       case Either.Right(m) =>
-        eprintln(s"Json deserialization error at (${m.line}, ${m.column}): ${m.message}")
-        None()
+        halt(s"Json deserialization error at (${m.line}, ${m.column}): ${m.message}")
     }
   }
 
@@ -624,6 +628,17 @@ object CodeGenTest {
     }
 
     return ret
+  }
+
+  def check(testName: String, results: OsProto.Proc.Result, failMsg: String): B = {
+    if(!results.ok) {
+      println(s"${testName}: ${failMsg}")
+      println("out:")
+      println(results.out)
+      println("err:")
+      println(results.err)
+    }
+    return results.ok
   }
 
   def getDirectories(testResources : scala.collection.Map[scala.Vector[Predef.String], Predef.String]): (Os.Path, Os.Path, Os.Path) = {

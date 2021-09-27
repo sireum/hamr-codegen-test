@@ -34,7 +34,7 @@ class HamrTranspileTests extends CodeGenTest {
       test(
         testName = s"${getClass.getSimpleName}_${proj._1}--${platform}",
         modelDir = proj._2,
-        airFile = proj._3,
+        airFile = Some(proj._3),
         ops = baseOptions(
           platform = platform,
           runTranspiler = T),
@@ -67,8 +67,8 @@ class HamrTranspileTests extends CodeGenTest {
 
       // exclude unneeded files by their extension
       val excludedResources: ISZ[org.sireum.String] =
-        ISZ("aadlbin", "aaxl2", "png", "pdf", "md", "dot", "aadl", "aadl_diagram", "reqspec",
-          "alisa", "project", "system", "org", "cat", "verify", "methodregistry", "gitignore", "goals", "xassure")
+        ISZ("aadlbin", "aaxl2", "png", "pdf", "md", "dot", "aadl_diagram", "reqspec",
+          "alisa", "org", "cat", "verify", "methodregistry", "gitignore", "goals", "xassure")
 
       val filename = Os.path(p.last)
 

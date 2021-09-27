@@ -8,7 +8,7 @@ import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
 
 case class TestContainer(testName: String,
                          modelDir: Os.Path,
-                         json: Os.Path,
+                         json: Option[Os.Path],
                          platform: ISZ[CodeGenPlatform.Type],
                          expectedErrorReasons: ISZ[String])
 
@@ -41,7 +41,7 @@ class CodegenTest_CASE extends CodeGenTest {
                 expectedErrorReasons: ISZ[String]): TestContainer = {
       val modelDir = case_tool_evaluation_dir / name
       val testName = name.native.replaceAll("/", "__")
-      return TestContainer(testName, modelDir, modelDir / ".slang" / json, platforms, expectedErrorReasons)
+      return TestContainer(testName, modelDir, Some(modelDir / ".slang" / json), platforms, expectedErrorReasons)
     }
 
     val tests: ISZ[TestContainer] = ISZ(
@@ -123,8 +123,8 @@ class CodegenTest_CASE extends CodeGenTest {
 
       // exclude unneeded files by their extension
       val excludedResources: ISZ[org.sireum.String] =
-        ISZ("aadlbin", "aaxl2", "png", "pdf", "md", "dot", "aadl", "aadl_diagram", "reqspec",
-          "alisa", "project", "system", "org", "cat", "verify", "methodregistry", "gitignore", "goals", "xassure")
+        ISZ("aadlbin", "aaxl2", "png", "pdf", "md", "dot", "aadl_diagram", "reqspec",
+          "alisa", "org", "cat", "verify", "methodregistry", "gitignore", "goals", "xassure")
 
       val filename = Os.path(p.last)
 

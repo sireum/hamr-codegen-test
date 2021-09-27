@@ -7,6 +7,8 @@ import org.sireum._
 @enum object TestMode {
   "codegen" // implied so doesn't need to be added
 
+  "phantom" // generate AIR model via phantom, otherwise pre-generated version will be used
+
   "transpile" // transpile linux and sel4 projects
 
   "compile" // compile Slang and Linux projects
