@@ -115,10 +115,10 @@ trait CodeGenTest extends TestSuite {
 
     val model: Aadl = {
       val s: String = if(ops.ISZOps(testModes).contains(TestMode.phantom) || airFile.isEmpty) {
-        val outputFile = modelDir / ".slang" / "testAIR.json"
+        val outputFile = modelDir.canon / ".slang" / "testAIR.json"
         outputFile.up.mkdir()
         println("Generating AIR via phantom ...")
-        val results = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.string} ${modelDir.string}".at(modelDir).run()
+        val results = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${modelDir.canon.string}".run()
         assert(check(testName, results, "Phantom did not complete successfully"), "Check did not return OK")
         outputFile.read
       } else {
