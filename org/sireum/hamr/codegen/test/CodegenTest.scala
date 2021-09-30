@@ -118,7 +118,7 @@ trait CodeGenTest extends TestSuite {
         val outputFile = modelDir.canon / ".slang" / "testAIR.json"
         outputFile.up.mkdir()
         println("Generating AIR via phantom ...")
-        val results = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${modelDir.canon.string}".run()
+        val results = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${modelDir.canon.string}".env(Os.envs.entries).run()
         assert(check(testName, results, "Phantom did not complete successfully"), "Check did not return OK")
         outputFile.read
       } else {

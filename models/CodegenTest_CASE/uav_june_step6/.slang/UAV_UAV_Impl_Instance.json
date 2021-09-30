@@ -39351,7 +39351,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 789,
                 "beginColumn" : 4,
@@ -39485,7 +39485,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
         }
       ],
       "connections" : [
@@ -40368,7 +40368,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 116,
                 "beginColumn" : 4,
@@ -40516,7 +40516,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 117,
                 "beginColumn" : 4,
@@ -40664,7 +40664,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 118,
                 "beginColumn" : 4,
@@ -40812,7 +40812,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 119,
                 "beginColumn" : 4,
@@ -40916,7 +40916,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.AltitudeType.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.AltitudeType.i"
         },
         {
           "type" : "Component",
@@ -40929,7 +40929,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 846,
                 "beginColumn" : 4,
@@ -41077,7 +41077,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 850,
                 "beginColumn" : 4,
@@ -41225,7 +41225,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 853,
                 "beginColumn" : 4,
@@ -41373,7 +41373,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 855,
                 "beginColumn" : 4,
@@ -41477,7 +41477,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.SpeedType.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.SpeedType.i"
         },
         {
           "type" : "Component",
@@ -41490,7 +41490,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 858,
                 "beginColumn" : 4,
@@ -41638,7 +41638,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 860,
                 "beginColumn" : 4,
@@ -41742,7 +41742,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.TurnType.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.TurnType.i"
         },
         {
           "type" : "Component",
@@ -41755,7 +41755,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 862,
                 "beginColumn" : 4,
@@ -41889,7 +41889,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.VehicleActionArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.VehicleActionArray"
         },
         {
           "type" : "Component",
@@ -41902,7 +41902,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 866,
                 "beginColumn" : 4,
@@ -42050,7 +42050,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 870,
                 "beginColumn" : 4,
@@ -42198,7 +42198,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 875,
                 "beginColumn" : 4,
@@ -42332,7 +42332,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
         }
       ],
       "connections" : [
@@ -42517,7 +42517,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 830,
                 "beginColumn" : 4,
@@ -42665,7 +42665,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 832,
                 "beginColumn" : 4,
@@ -42813,7 +42813,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 834,
                 "beginColumn" : 4,
@@ -42947,7 +42947,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.VehicleActionArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.VehicleActionArray"
         },
         {
           "type" : "Component",
@@ -42960,7 +42960,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 836,
                 "beginColumn" : 4,
@@ -43076,7 +43076,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.CommandStatusType.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.CommandStatusType.i"
         },
         {
           "type" : "Component",
@@ -43089,7 +43089,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 908,
                 "beginColumn" : 4,
@@ -43223,7 +43223,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.WaypointArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.WaypointArray"
         },
         {
           "type" : "Component",
@@ -43236,7 +43236,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 911,
                 "beginColumn" : 4,
@@ -43488,7 +43488,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 116,
                 "beginColumn" : 4,
@@ -43636,7 +43636,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 117,
                 "beginColumn" : 4,
@@ -43784,7 +43784,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 118,
                 "beginColumn" : 4,
@@ -43932,7 +43932,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 119,
                 "beginColumn" : 4,
@@ -44036,7 +44036,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.AltitudeType.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.AltitudeType.i"
         }
       ],
       "connections" : [
@@ -44087,7 +44087,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 104,
                 "beginColumn" : 4,
@@ -44169,7 +44169,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 106,
                 "beginColumn" : 4,
@@ -44423,7 +44423,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 176,
                 "beginColumn" : 10,
@@ -44571,7 +44571,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 178,
                 "beginColumn" : 10,
@@ -44705,7 +44705,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.KeyValuePairArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.KeyValuePairArray"
         }
       ],
       "connections" : [
@@ -45010,7 +45010,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 405,
                 "beginColumn" : 10,
@@ -45158,7 +45158,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 407,
                 "beginColumn" : 10,
@@ -45306,7 +45306,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 409,
                 "beginColumn" : 10,
@@ -45454,7 +45454,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 411,
                 "beginColumn" : 10,
@@ -45602,7 +45602,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 413,
                 "beginColumn" : 10,
@@ -45750,7 +45750,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 415,
                 "beginColumn" : 10,
@@ -45898,7 +45898,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 417,
                 "beginColumn" : 10,
@@ -46046,7 +46046,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 420,
                 "beginColumn" : 10,
@@ -46194,7 +46194,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 422,
                 "beginColumn" : 10,
@@ -46342,7 +46342,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 425,
                 "beginColumn" : 10,
@@ -46490,7 +46490,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 428,
                 "beginColumn" : 10,
@@ -46638,7 +46638,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 431,
                 "beginColumn" : 10,
@@ -46786,7 +46786,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 434,
                 "beginColumn" : 10,
@@ -46934,7 +46934,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 436,
                 "beginColumn" : 10,
@@ -47082,7 +47082,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 438,
                 "beginColumn" : 10,
@@ -47230,7 +47230,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 440,
                 "beginColumn" : 10,
@@ -47266,7 +47266,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 116,
                     "beginColumn" : 4,
@@ -47414,7 +47414,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 117,
                     "beginColumn" : 4,
@@ -47562,7 +47562,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 118,
                     "beginColumn" : 4,
@@ -47710,7 +47710,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 119,
                     "beginColumn" : 4,
@@ -47814,7 +47814,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.AltitudeType.i"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.AltitudeType.i"
             }
           ],
           "connections" : [
@@ -47829,7 +47829,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Location3D.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Location3D.i"
         },
         {
           "type" : "Component",
@@ -47842,7 +47842,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 443,
                 "beginColumn" : 10,
@@ -47990,7 +47990,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 446,
                 "beginColumn" : 10,
@@ -48138,7 +48138,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 448,
                 "beginColumn" : 10,
@@ -48272,7 +48272,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.PayloadStateArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.PayloadStateArray"
         },
         {
           "type" : "Component",
@@ -48285,7 +48285,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 451,
                 "beginColumn" : 10,
@@ -48433,7 +48433,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 455,
                 "beginColumn" : 10,
@@ -48581,7 +48581,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 457,
                 "beginColumn" : 10,
@@ -48701,7 +48701,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.NavigationMode.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.NavigationMode.i"
         },
         {
           "type" : "Component",
@@ -48714,7 +48714,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 463,
                 "beginColumn" : 10,
@@ -48848,7 +48848,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
         },
         {
           "type" : "Component",
@@ -48861,7 +48861,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 466,
                 "beginColumn" : 10,
@@ -49009,7 +49009,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 469,
                 "beginColumn" : 9,
@@ -49143,7 +49143,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.KeyValuePairArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.KeyValuePairArray"
         },
         {
           "type" : "Component",
@@ -49156,7 +49156,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 379,
                 "beginColumn" : 10,
@@ -49304,7 +49304,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 382,
                 "beginColumn" : 10,
@@ -49452,7 +49452,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 384,
                 "beginColumn" : 10,
@@ -49600,7 +49600,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 386,
                 "beginColumn" : 10,
@@ -50393,7 +50393,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 210,
                 "beginColumn" : 4,
@@ -50541,7 +50541,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 216,
                 "beginColumn" : 4,
@@ -50689,7 +50689,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 219,
                 "beginColumn" : 4,
@@ -50837,7 +50837,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 225,
                 "beginColumn" : 4,
@@ -50919,7 +50919,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 228,
                 "beginColumn" : 4,
@@ -51067,7 +51067,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 234,
                 "beginColumn" : 4,
@@ -51222,7 +51222,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 623,
                 "beginColumn" : 10,
@@ -51370,7 +51370,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 626,
                 "beginColumn" : 10,
@@ -51504,7 +51504,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
         },
         {
           "type" : "Component",
@@ -51517,7 +51517,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 629,
                 "beginColumn" : 10,
@@ -51651,7 +51651,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
         }
       ],
       "connections" : [
@@ -52259,7 +52259,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 724,
                 "beginColumn" : 13,
@@ -52407,7 +52407,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 726,
                 "beginColumn" : 13,
@@ -52555,7 +52555,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 729,
                 "beginColumn" : 13,
@@ -52703,7 +52703,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 732,
                 "beginColumn" : 13,
@@ -53023,7 +53023,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 676,
                 "beginColumn" : 10,
@@ -53171,7 +53171,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 680,
                 "beginColumn" : 10,
@@ -53253,7 +53253,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 683,
                 "beginColumn" : 10,
@@ -53387,7 +53387,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array.i"
         },
         {
           "type" : "Component",
@@ -53400,7 +53400,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 686,
                 "beginColumn" : 10,
@@ -53548,7 +53548,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 688,
                 "beginColumn" : 10,
@@ -53682,7 +53682,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.KeyValuePairArray.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.KeyValuePairArray.i"
         },
         {
           "type" : "Component",
@@ -53695,7 +53695,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 694,
                 "beginColumn" : 10,
@@ -53843,7 +53843,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 696,
                 "beginColumn" : 10,
@@ -53925,7 +53925,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 706,
                 "beginColumn" : 13,
@@ -54110,7 +54110,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.WavelengthBand"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.WavelengthBand"
         },
         {
           "type" : "Component",
@@ -54123,7 +54123,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 708,
                 "beginColumn" : 13,
@@ -54271,7 +54271,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 710,
                 "beginColumn" : 13,
@@ -54419,7 +54419,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 763,
                 "beginColumn" : 7,
@@ -54553,7 +54553,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.PointListArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.PointListArray"
         },
         {
           "type" : "Component",
@@ -54566,7 +54566,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 767,
                 "beginColumn" : 7,
@@ -54700,7 +54700,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.WedgeArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.WedgeArray"
         },
         {
           "type" : "Component",
@@ -54713,7 +54713,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 769,
                 "beginColumn" : 7,
@@ -55002,7 +55002,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 830,
                 "beginColumn" : 4,
@@ -55150,7 +55150,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 832,
                 "beginColumn" : 4,
@@ -55298,7 +55298,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 834,
                 "beginColumn" : 4,
@@ -55432,7 +55432,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.VehicleActionArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.VehicleActionArray"
         },
         {
           "type" : "Component",
@@ -55445,7 +55445,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 836,
                 "beginColumn" : 4,
@@ -55561,7 +55561,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.CommandStatusType.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.CommandStatusType.i"
         }
       ],
       "connections" : [
@@ -55746,7 +55746,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 265,
                 "beginColumn" : 4,
@@ -55880,7 +55880,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.MissionCommandArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.MissionCommandArray"
         },
         {
           "type" : "Component",
@@ -55893,7 +55893,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 267,
                 "beginColumn" : 4,
@@ -56027,7 +56027,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.VehicleActionCommandArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.VehicleActionCommandArray"
         }
       ],
       "connections" : [
@@ -56113,7 +56113,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 21,
                 "beginColumn" : 4,
@@ -56149,7 +56149,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 210,
                     "beginColumn" : 4,
@@ -56297,7 +56297,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 216,
                     "beginColumn" : 4,
@@ -56445,7 +56445,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 219,
                     "beginColumn" : 4,
@@ -56593,7 +56593,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 225,
                     "beginColumn" : 4,
@@ -56675,7 +56675,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 228,
                     "beginColumn" : 4,
@@ -56823,7 +56823,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 234,
                     "beginColumn" : 4,
@@ -56942,7 +56942,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.AutomationRequest.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.AutomationRequest.i"
         },
         {
           "type" : "Component",
@@ -56955,7 +56955,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 22,
                 "beginColumn" : 4,
@@ -56991,7 +56991,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 623,
                     "beginColumn" : 10,
@@ -57139,7 +57139,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 626,
                     "beginColumn" : 10,
@@ -57273,7 +57273,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
             },
             {
               "type" : "Component",
@@ -57286,7 +57286,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 629,
                     "beginColumn" : 10,
@@ -57420,7 +57420,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
             }
           ],
           "connections" : [
@@ -57470,7 +57470,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.OperatingRegion.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.OperatingRegion.i"
         },
         {
           "type" : "Component",
@@ -57483,7 +57483,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 23,
                 "beginColumn" : 4,
@@ -57519,7 +57519,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 676,
                     "beginColumn" : 10,
@@ -57667,7 +57667,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 680,
                     "beginColumn" : 10,
@@ -57749,7 +57749,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 683,
                     "beginColumn" : 10,
@@ -57883,7 +57883,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array.i"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array.i"
             },
             {
               "type" : "Component",
@@ -57896,7 +57896,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 686,
                     "beginColumn" : 10,
@@ -58044,7 +58044,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 688,
                     "beginColumn" : 10,
@@ -58178,7 +58178,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.KeyValuePairArray.i"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.KeyValuePairArray.i"
             },
             {
               "type" : "Component",
@@ -58191,7 +58191,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 694,
                     "beginColumn" : 10,
@@ -58339,7 +58339,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 696,
                     "beginColumn" : 10,
@@ -58421,7 +58421,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 706,
                     "beginColumn" : 13,
@@ -58606,7 +58606,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.WavelengthBand"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.WavelengthBand"
             },
             {
               "type" : "Component",
@@ -58619,7 +58619,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 708,
                     "beginColumn" : 13,
@@ -58767,7 +58767,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 710,
                     "beginColumn" : 13,
@@ -58915,7 +58915,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 763,
                     "beginColumn" : 7,
@@ -59049,7 +59049,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.PointListArray"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.PointListArray"
             },
             {
               "type" : "Component",
@@ -59062,7 +59062,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 767,
                     "beginColumn" : 7,
@@ -59196,7 +59196,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.WedgeArray"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.WedgeArray"
             },
             {
               "type" : "Component",
@@ -59209,7 +59209,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 769,
                     "beginColumn" : 7,
@@ -59328,7 +59328,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.LineSearchTask.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.LineSearchTask.i"
         },
         {
           "type" : "Component",
@@ -59341,7 +59341,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 24,
                 "beginColumn" : 4,
@@ -59377,7 +59377,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 265,
                     "beginColumn" : 4,
@@ -59511,7 +59511,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.MissionCommandArray"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.MissionCommandArray"
             },
             {
               "type" : "Component",
@@ -59524,7 +59524,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 267,
                     "beginColumn" : 4,
@@ -59658,7 +59658,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.VehicleActionCommandArray"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.VehicleActionCommandArray"
             }
           ],
           "connections" : [
@@ -59708,7 +59708,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.AutomationResponse.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.AutomationResponse.i"
         }
       ],
       "connections" : [
@@ -59790,7 +59790,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 54,
                 "beginColumn" : 4,
@@ -59924,7 +59924,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Address.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Address.i"
         },
         {
           "type" : "Component",
@@ -59937,7 +59937,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 55,
                 "beginColumn" : 4,
@@ -59973,7 +59973,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 21,
                     "beginColumn" : 4,
@@ -60009,7 +60009,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 210,
                         "beginColumn" : 4,
@@ -60157,7 +60157,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 216,
                         "beginColumn" : 4,
@@ -60305,7 +60305,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 219,
                         "beginColumn" : 4,
@@ -60453,7 +60453,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 225,
                         "beginColumn" : 4,
@@ -60535,7 +60535,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 228,
                         "beginColumn" : 4,
@@ -60683,7 +60683,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 234,
                         "beginColumn" : 4,
@@ -60802,7 +60802,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.AutomationRequest.i"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.AutomationRequest.i"
             },
             {
               "type" : "Component",
@@ -60815,7 +60815,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 22,
                     "beginColumn" : 4,
@@ -60851,7 +60851,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 623,
                         "beginColumn" : 10,
@@ -60999,7 +60999,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 626,
                         "beginColumn" : 10,
@@ -61133,7 +61133,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
                 },
                 {
                   "type" : "Component",
@@ -61146,7 +61146,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 629,
                         "beginColumn" : 10,
@@ -61280,7 +61280,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array"
                 }
               ],
               "connections" : [
@@ -61330,7 +61330,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.OperatingRegion.i"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.OperatingRegion.i"
             },
             {
               "type" : "Component",
@@ -61343,7 +61343,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 23,
                     "beginColumn" : 4,
@@ -61379,7 +61379,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 676,
                         "beginColumn" : 10,
@@ -61527,7 +61527,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 680,
                         "beginColumn" : 10,
@@ -61609,7 +61609,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 683,
                         "beginColumn" : 10,
@@ -61743,7 +61743,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Int64Array.i"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Int64Array.i"
                 },
                 {
                   "type" : "Component",
@@ -61756,7 +61756,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 686,
                         "beginColumn" : 10,
@@ -61904,7 +61904,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 688,
                         "beginColumn" : 10,
@@ -62038,7 +62038,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.KeyValuePairArray.i"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.KeyValuePairArray.i"
                 },
                 {
                   "type" : "Component",
@@ -62051,7 +62051,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 694,
                         "beginColumn" : 10,
@@ -62199,7 +62199,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 696,
                         "beginColumn" : 10,
@@ -62281,7 +62281,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 706,
                         "beginColumn" : 13,
@@ -62466,7 +62466,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.WavelengthBand"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.WavelengthBand"
                 },
                 {
                   "type" : "Component",
@@ -62479,7 +62479,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 708,
                         "beginColumn" : 13,
@@ -62627,7 +62627,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 710,
                         "beginColumn" : 13,
@@ -62775,7 +62775,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 763,
                         "beginColumn" : 7,
@@ -62909,7 +62909,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.PointListArray"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.PointListArray"
                 },
                 {
                   "type" : "Component",
@@ -62922,7 +62922,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 767,
                         "beginColumn" : 7,
@@ -63056,7 +63056,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.WedgeArray"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.WedgeArray"
                 },
                 {
                   "type" : "Component",
@@ -63069,7 +63069,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 769,
                         "beginColumn" : 7,
@@ -63188,7 +63188,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.LineSearchTask.i"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.LineSearchTask.i"
             },
             {
               "type" : "Component",
@@ -63201,7 +63201,7 @@
                     "type" : "Position",
                     "uriOpt" : {
                       "type" : "Some",
-                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                      "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                     },
                     "beginLine" : 24,
                     "beginColumn" : 4,
@@ -63237,7 +63237,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 265,
                         "beginColumn" : 4,
@@ -63371,7 +63371,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.MissionCommandArray"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.MissionCommandArray"
                 },
                 {
                   "type" : "Component",
@@ -63384,7 +63384,7 @@
                         "type" : "Position",
                         "uriOpt" : {
                           "type" : "Some",
-                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                          "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                         },
                         "beginLine" : 267,
                         "beginColumn" : 4,
@@ -63518,7 +63518,7 @@
                   ],
                   "annexes" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.VehicleActionCommandArray"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.VehicleActionCommandArray"
                 }
               ],
               "connections" : [
@@ -63568,7 +63568,7 @@
               ],
               "annexes" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.AutomationResponse.i"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.AutomationResponse.i"
             }
           ],
           "connections" : [
@@ -63614,7 +63614,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.LMCPObject.i"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.LMCPObject.i"
         }
       ],
       "connections" : [
@@ -63834,7 +63834,7 @@
                 "type" : "Position",
                 "uriOpt" : {
                   "type" : "Some",
-                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl"
+                  "value" : "\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl"
                 },
                 "beginLine" : 92,
                 "beginColumn" : 4,
@@ -63968,7 +63968,7 @@
           ],
           "annexes" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message Definitions\/CMASI.aadl#CMASI.Location3DArray"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UxAS\/Message_Definitions\/CMASI.aadl#CMASI.Location3DArray"
         }
       ],
       "connections" : [
