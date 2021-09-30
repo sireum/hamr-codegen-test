@@ -21,7 +21,7 @@ trait CodeGenTest extends TestSuite {
 
   import CodeGenTest._
 
-  def generateExpected: B = T
+  def generateExpected: B = F
   def delResultDirIfEqual: B = F
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
