@@ -373,6 +373,14 @@ trait CodeGenTest extends TestSuite {
 
       rootCamkesDir match {
         case Some(camkesDir) => {
+          val runCamkes = Os.path(testOps.camkesOutputDir.get) / "bin" / "run-camkes.sh"
+          assert(runCamkes.exists, s"${runCamkes} doesn't exist")
+
+          val camkesBuildDir = camkesDir / s"build_${testName}"
+          camkesBuildDir.removeAll()
+          //println(s"Removed ${camkesBuildDir}")
+
+          /*
           val name = s"hamr_${testName}"
           val camkesAppsDir = camkesDir / "projects" / "camkes" / "apps" / name
           camkesAppsDir.removeAll()
@@ -380,22 +388,30 @@ trait CodeGenTest extends TestSuite {
           println(s"Created symlink to ${camkesAppsDir.value}")
 
           var camkesArgs: ISZ[String] = ISZ("../init-build.sh")
+          */
+          def onOptions(options: ISZ[CMakeOption]): ISZ[(String, String)] = { return options.map(o => (o.name, "ON")) }
+
+          var camkesEnv: ISZ[(String, String)] = ISZ()
 
           if(testOps.platform == CodeGenPlatform.SeL4) {
             val toptions = SlangEmbeddedTemplate.TRANSPILER_OPTIONS.filter(c => c.name != string"NO_PRINT")
-            camkesArgs = camkesArgs ++ onOptions(toptions)
+            camkesEnv = camkesEnv ++ onOptions(toptions)
           }
 
           if(hasVMs) {
-            camkesArgs = camkesArgs ++ onOptions(VM_Template.VM_CMAKE_OPTIONS) ++
-              ISZ("-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON")
+            camkesEnv = camkesEnv ++ onOptions(VM_Template.VM_CMAKE_OPTIONS) //++
+              //ISZ("-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON")
           }
+
+          val camkesResults = proc"${runCamkes.value} -n".env(camkesEnv).run()
+          check(camkesResults, "CAmkES build failed")
 
           // would only want to enable cakeml assemblies if they are built ahead of time
           // which would mean the CI would need to do that as too expensive/large to
           // check the binaries into git
           //camkesArgs = camkesArgs ++ onOptions(CakeMLTemplate.CAKEML_OPTIONS)
 
+          /*
           camkesArgs = camkesArgs :+ s"-DCAMKES_APP=${name}"
 
           val camkesBuildDir = camkesDir / s"build_${name}"
@@ -411,6 +427,8 @@ trait CodeGenTest extends TestSuite {
             val ninjaResults = Os.proc(ISZ("ninja")).at(camkesBuildDir).run()
             check(ninjaResults, "Ninja failed")
           }
+
+           */
 
           //val results = Proc(ISZ("simulate"), Os.cwd, Map.empty, T, None(), F, F, F, F, F, timeout, F).at(camkesBuildDir).run()
           //println(results.out)
