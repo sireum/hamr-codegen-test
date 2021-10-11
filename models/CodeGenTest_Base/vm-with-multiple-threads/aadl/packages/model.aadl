@@ -3,6 +3,7 @@ public
 
 	with CASE_Properties;
 	with Base_Types;
+	with CASE_Scheduling;
 
 	system m
 	end m;
@@ -26,6 +27,7 @@ public
 	virtual processor virt_processor
 		properties
 			CASE_Properties::OS => Linux;
+			Period => 1000ms;
 	end virt_processor;
 
 	process virt_process
@@ -42,6 +44,8 @@ public
 			c1: port in_port -> virt_thread_1.in_port;
 			c2: port virt_thread_2.out_port -> out_port;
 			c3: port virt_thread_1.out_port -> virt_thread_2.in_port;
+		properties
+			CASE_Scheduling::Domain => 2;
 	end virt_process.impl;
 
 	thread virt_thread_1
@@ -60,18 +64,23 @@ public
 
 	--------------------------------------------------------------
 	processor norm_processor
+		properties
+			Frame_Period => 1000ms;
+			Clock_Period => 2ms;
 	end norm_processor;
 
 	process norm_process
 		features
 			in_port: in event data port Base_Types::Integer_32;
 			out_port: out event data port Base_Types::Integer_32;
+		properties
+			CASE_Scheduling::Domain => 2;			
 	end norm_process;
 
 	process implementation norm_process.impl
 		subcomponents
 			norm_thread_1: thread norm_thread;
-			norm_thread_2: thread norm_thread;
+		--norm_thread_2: thread norm_thread;
 		connections
 			c1: port in_port -> norm_thread_1.in_port;
 			c2: port norm_thread_1.out_port -> out_port;
@@ -81,6 +90,8 @@ public
 		features
 			in_port: in event data port Base_Types::Integer_32;
 			out_port: out event data port Base_Types::Integer_32;
+		properties
+			Dispatch_Protocol => Sporadic;
 	end norm_thread;
 
 end model;

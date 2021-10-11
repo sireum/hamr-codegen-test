@@ -378,17 +378,7 @@ trait CodeGenTest extends TestSuite {
 
           val camkesBuildDir = camkesDir / s"build_${testName}"
           camkesBuildDir.removeAll()
-          //println(s"Removed ${camkesBuildDir}")
 
-          /*
-          val name = s"hamr_${testName}"
-          val camkesAppsDir = camkesDir / "projects" / "camkes" / "apps" / name
-          camkesAppsDir.removeAll()
-          camkesAppsDir.mklink(Os.path(testOps.camkesOutputDir.get))
-          println(s"Created symlink to ${camkesAppsDir.value}")
-
-          var camkesArgs: ISZ[String] = ISZ("../init-build.sh")
-          */
           def onOptions(options: ISZ[CMakeOption]): ISZ[(String, String)] = { return options.map(o => (o.name, "ON")) }
 
           var camkesEnv: ISZ[(String, String)] = ISZ()
@@ -398,42 +388,24 @@ trait CodeGenTest extends TestSuite {
             camkesEnv = camkesEnv ++ onOptions(toptions)
           }
 
-          if(hasVMs) {
-            camkesEnv = camkesEnv ++ onOptions(VM_Template.VM_CMAKE_OPTIONS) //++
-              //ISZ("-DPLATFORM=qemu-arm-virt", "-DARM_HYP=ON")
-          }
-
-          val camkesResults = proc"${runCamkes.value} -n".env(camkesEnv).run()
-          check(camkesResults, "CAmkES build failed")
-
           // would only want to enable cakeml assemblies if they are built ahead of time
           // which would mean the CI would need to do that as too expensive/large to
           // check the binaries into git
           //camkesArgs = camkesArgs ++ onOptions(CakeMLTemplate.CAKEML_OPTIONS)
 
-          /*
-          camkesArgs = camkesArgs :+ s"-DCAMKES_APP=${name}"
 
-          val camkesBuildDir = camkesDir / s"build_${name}"
-          camkesBuildDir.removeAll()
-          camkesBuildDir.mkdir()
+          //camkesArgs = camkesArgs :+ s"-DCAMKES_APP=${name}"
 
-          println("Running CAmkES build ...")
-          val camkesResults = Os.proc(camkesArgs).at(camkesBuildDir).run()
-          check(camkesResults, "CAmkES build failed")
-
-          if(keepGoing) {
-            println("Running ninja ...")
-            val ninjaResults = Os.proc(ISZ("ninja")).at(camkesBuildDir).run()
-            check(ninjaResults, "Ninja failed")
+          if(hasVMs) {
+            camkesEnv = camkesEnv ++ onOptions(VM_Template.VM_CMAKE_OPTIONS)
           }
 
-           */
+          println("Running CAmkES build ...")
+          val camkesResults = proc"${runCamkes.value} -n".env(camkesEnv).run()
+          check(camkesResults, "CAmkES build failed")
 
           //val results = Proc(ISZ("simulate"), Os.cwd, Map.empty, T, None(), F, F, F, F, F, timeout, F).at(camkesBuildDir).run()
-          //println(results.out)
-          //println(results.err)
-        }
+         }
         case _ =>
           assert(F, "CAmkES directory not found")
       }
