@@ -15,6 +15,8 @@ import org.sireum._
 
   "camkes" // run CAmkES/ninja, also transpiles seL4 projects
 
+  "smt2" // run smt2 solver on generated refinement proofs
+
   "generated_unit_tests" // run unit tests on generated Slang projects
 
   // all = generated_unit_tests, compile, camkes

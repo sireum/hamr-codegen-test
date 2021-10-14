@@ -1,12 +1,12 @@
 package org.sireum.hamr.codegen.test
 
 import org.sireum._
-import org.sireum.hamr.act.templates.{CakeMLTemplate, SlangEmbeddedTemplate}
+import org.sireum.hamr.act.templates.{SlangEmbeddedTemplate}
 import org.sireum.hamr.act.util.CMakeOption
 import org.sireum.hamr.act.vm.VM_Template
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.{ProyekIveConfig, TranspilerConfig}
-import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
+import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults, ExperimentalOptions}
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil}
 import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.hamr.ir._
@@ -30,7 +30,8 @@ trait CodeGenTest extends TestSuite {
   //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
   def testModes: ISZ[TestMode.Type] = Os.env("HamrTestModes") match {
     case Some(list) => ops.StringOps(list).split((c: C) => c ==C(',')).map((m: String) => TestMode.byName(m).get)
-    case _ => ISZ(TestMode.codegen)
+    //case _ => ISZ(TestMode.codegen)
+    case _ => ISZ(TestMode.codegen, TestMode.smt2)
   }
 
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String]
@@ -232,7 +233,6 @@ trait CodeGenTest extends TestSuite {
         }
       } else if(!generateExpected) {
         allEqual = F
-        expectedMap.map.keySet.elements.foreach(p => println(p))
         eprintln(s"Expected missing: ${r._1}")
       }
 
@@ -271,6 +271,15 @@ trait CodeGenTest extends TestSuite {
   def runAdditionalTasks(testName: String, testResultsDir: Os.Path, testOps: CodeGenConfig, reporter: Reporter): B = {
 
     val sireum: Os.Path = CodeGenTest.getSireum()
+    val sireumHome: Os.Path = sireum.up.up
+    val os: String = Os.kind match {
+      case Os.Kind.Win => "win"
+      case Os.Kind.Linux => "linux"
+      case Os.Kind.LinuxArm => "linux/arm"
+      case Os.Kind.Mac => "mac"
+      case _ => halt("Unsupported OS")
+    }
+
     var slangDir: Os.Path = testResultsDir //Os.path(testOps.slangOutputDir.get)
 
     var optSubstDrive: String = ""
@@ -363,6 +372,61 @@ trait CodeGenTest extends TestSuite {
       check(proyekResults, "Proyek test failed")
     }
 
+    if(shouldProve(testOps)) {
+      val proof = Os.path(testOps.camkesOutputDir.get) / "proof" / "smt2_case.smt2"
+      val cvc4 = sireumHome / "bin" / os / (if(Os.isWin) "cvc4.exe" else "cvc4")
+      val z3 = sireumHome / "bin" / os / "z3" / "bin" / (if(Os.isWin) "z3.exe" else "z3")
+
+      def err(out: String, exitCode: Z): Unit = {
+        halt(
+          st"""Error encountered when running ${cvc4.value} query:
+              |${proof.read}
+              |
+              |${cvc4.value} output (exit code $exitCode):
+              |$out""".render)
+      }
+
+      assert(proof.exists, s"${proof} does not exist")
+      assert(cvc4.exists, s"${cvc4} doesn't exist")
+      assert(z3.exists, s"${z3} doesn't exist")
+
+      println("Checking refinement proof ...")
+      val timeout = 60000 // 1 min
+      val startTime = extension.Time.currentMillis
+      val proc = Os.proc(ISZ(cvc4.value, "-i", "--finite-model-find", proof.value)).redirectErr.timeout(timeout)
+      val pr = proc.run()
+      val pout: String = pr.out
+      val isTimeout: B = pr.exitCode === 6 || pr.exitCode === -101 || pr.exitCode === -100
+      if (pout.size == 0 && pr.exitCode != 0 && !isTimeout) {
+        err(pout, pr.exitCode)
+      }
+      val duration = extension.Time.currentMillis - startTime
+
+      val out = ops.StringOps(pout).split((c: C) => c == C('\n'))
+      if(out.size != 10) {
+        cprintln(T, s"expecting 10 lines but got ${out.size}")
+        cprintln(T, pr.out)
+        keepGoing = F
+      } else {
+        assert(out(0) == st""""RefinementProof: Shows that there is a model satisfying all the constraints (should be sat):"""".render)
+        assert(out(2) == st""""AADLWellFormedness: Proves that the generated AADL evidence is well-formed (should be unsat):"""".render)
+        assert(out(4) == st""""CAMKESWellFormedness: Proves that the generated CAMKES evidence is well-formed (should be unsat):"""".render)
+        assert(out(6) == st""""ConnectionPreservation: Proves that the generated CAMKES connections preserve AADL's (should be unsat):"""".render)
+        assert(out(8) == st""""NoNewConnections: Proves that the generated CAMKES connections does not contain more than AADL's (should be unsat):"""".render)
+
+        var accum: B = T
+        def scheck(b: B, errorMsg: String): Unit = { if(!b) cprintln(T, errorMsg); accum = accum & b }
+
+        scheck(out(1) == string"sat", s"RefinementProof is ${out(1)}")
+        scheck(out(3) == string"unsat", s"AADLWellFormedness is ${out(3)}")
+        scheck(out(5) == string"unsat", s"CAMKESWellFormedness is ${out(5)}")
+        scheck(out(7) == string"unsat", s"ConnectionPreservation is ${out(7)}")
+        scheck(out(9) == string"unsat", s"NoNewConnections is ${out(9)}")
+
+        keepGoing = accum
+      }
+    }
+
     if(shouldCamkes(testOps.platform) && keepGoing) {
       val hasVMs: B = reporter.messages.filter(m => org.sireum.ops.StringOps(m.text)
         .contains("Execute the following to install the CAmkES-ARM-VM project:")).nonEmpty
@@ -453,6 +517,13 @@ trait CodeGenTest extends TestSuite {
     return isSeL4(platform) && ops.ISZOps(testModes).contains(TestMode.camkes)
   }
 
+  def shouldProve(config: CodeGenConfig): B = {
+    val noVMs: B = config.camkesOutputDir.nonEmpty && ! (Os.path(config.camkesOutputDir.get) / "components" / "VM").exists
+    val platform = config.platform
+    return (platform == CodeGenPlatform.SeL4 || platform == CodeGenPlatform.SeL4_Only) &&
+      ops.ISZOps(testModes).contains(TestMode.smt2) && noVMs
+  }
+
   def shouldCompile(platform: CodeGenPlatform.Type): B = {
     return isSlang(platform) && ops.ISZOps(testModes).contains(TestMode.compile)
   }
@@ -505,7 +576,7 @@ object CodeGenTest {
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     aadlRootDir = None(),
-    experimentalOptions = ISZ()
+    experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
   )
 
   def filterTestsSet(): Option[B] = {
