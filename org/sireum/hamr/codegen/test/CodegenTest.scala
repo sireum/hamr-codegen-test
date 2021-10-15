@@ -402,7 +402,7 @@ trait CodeGenTest extends TestSuite {
       }
       val duration = extension.Time.currentMillis - startTime
 
-      val out = ops.StringOps(pout).split((c: C) => c == C('\n'))
+      val out = ops.StringOps(ops.StringOps(pout).replaceAllLiterally("\r\n", "\n")).split((c: C) => c == C('\n'))
       if(out.size != 10) {
         cprintln(T, s"expecting 10 lines but got ${out.size}")
         cprintln(T, pr.out)
