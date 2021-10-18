@@ -298,7 +298,7 @@ trait CodeGenTest extends TestSuite {
         }
         cand
       }
-      println(s"Attempting subst of ${optSubstDrive} for '${slangDir.string}''")
+      println(s"Attempting subst of ${optSubstDrive} for '${slangDir.string}'")
       proc"subst ${optSubstDrive} ${slangDir.string}".runCheck()
 
       slangDir = Os.path(optSubstDrive)
@@ -410,16 +410,16 @@ trait CodeGenTest extends TestSuite {
       } else {
         assert(out(0) == st""""RefinementProof: Shows that there is a model satisfying all the constraints (should be sat):"""".render)
         assert(out(2) == st""""AADLWellFormedness: Proves that the generated AADL evidence is well-formed (should be unsat):"""".render)
-        assert(out(4) == st""""CAMKESWellFormedness: Proves that the generated CAMKES evidence is well-formed (should be unsat):"""".render)
-        assert(out(6) == st""""ConnectionPreservation: Proves that the generated CAMKES connections preserve AADL's (should be unsat):"""".render)
-        assert(out(8) == st""""NoNewConnections: Proves that the generated CAMKES connections does not contain more than AADL's (should be unsat):"""".render)
+        assert(out(4) == st""""CAmkESWellFormedness: Proves that the generated CAmkES evidence is well-formed (should be unsat):"""".render)
+        assert(out(6) == st""""ConnectionPreservation: Proves that the generated CAmkES connections preserve AADL's (should be unsat):"""".render)
+        assert(out(8) == st""""NoNewConnections: Proves that the generated CAmkES connections does not contain more than AADL's (should be unsat):"""".render)
 
         var accum: B = T
         def scheck(b: B, errorMsg: String): Unit = { if(!b) cprintln(T, errorMsg); accum = accum & b }
 
         scheck(out(1) == string"sat", s"RefinementProof is ${out(1)}")
         scheck(out(3) == string"unsat", s"AADLWellFormedness is ${out(3)}")
-        scheck(out(5) == string"unsat", s"CAMKESWellFormedness is ${out(5)}")
+        scheck(out(5) == string"unsat", s"CAmkESWellFormedness is ${out(5)}")
         scheck(out(7) == string"unsat", s"ConnectionPreservation is ${out(7)}")
         scheck(out(9) == string"unsat", s"NoNewConnections is ${out(9)}")
 
