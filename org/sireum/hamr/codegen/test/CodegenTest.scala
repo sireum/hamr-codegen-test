@@ -37,7 +37,7 @@ trait CodeGenTest extends TestSuite {
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String]
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("test_event_data_port_periodic_domains--SeL4")
+  def filters: ISZ[String] = ISZ("isolette--SeL4")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
