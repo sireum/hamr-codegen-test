@@ -158,14 +158,13 @@ trait CodeGenTest extends TestSuite {
       return
     }
 
+    var testFail = F
     if(!reporter.hasError) {
-      val tasksSuccessful = runAdditionalTasks(testName, slangOutputDir, testOps, reporter)
-      assert(tasksSuccessful, "Tasks did not complete successfully")
+      testFail = runAdditionalTasks(testName, slangOutputDir, testOps, reporter)
     }
 
     val resultMap = TestUtil.convertToTestResult(results.resources, resultsDir)
 
-    var testFail = F
     val expectedMap: TestResult = if(generateExpected) {
       TestUtil.writeExpected(resultMap, expectedJson)
       println(s"Wrote: ${expectedJson}")
@@ -408,14 +407,15 @@ trait CodeGenTest extends TestSuite {
         cprintln(T, pr.out)
         keepGoing = F
       } else {
-        assert(out(0) == st""""RefinementProof: Shows that there is a model satisfying all the constraints (should be sat):"""".render)
-        assert(out(2) == st""""AADLWellFormedness: Proves that the generated AADL evidence is well-formed (should be unsat):"""".render)
-        assert(out(4) == st""""CAmkESWellFormedness: Proves that the generated CAmkES evidence is well-formed (should be unsat):"""".render)
-        assert(out(6) == st""""ConnectionPreservation: Proves that the generated CAmkES connections preserve AADL's (should be unsat):"""".render)
-        assert(out(8) == st""""NoNewConnections: Proves that the generated CAmkES connections does not contain more than AADL's (should be unsat):"""".render)
-
         var accum: B = T
         def scheck(b: B, errorMsg: String): Unit = { if(!b) cprintln(T, errorMsg); accum = accum & b }
+        def scheckH(a: String, b: String): Unit = { if(a != b) cprintln(T, s"Expecting '${a} but received ${b}'"); accum = accum & (a == b) }
+
+        scheckH(out(0), st""""RefinementProof: Shows that there is a model satisfying all the constraints (should be sat):"""".render)
+        scheckH(out(2), st""""AADLWellFormedness: Proves that the generated AADL evidence is well-formed (should be unsat):"""".render)
+        scheckH(out(4), st""""CAmkESWellFormedness: Proves that the generated CAmkES evidence is well-formed (should be unsat):"""".render)
+        scheckH(out(6), st""""ConnectionPreservation: Proves that the generated CAmkES connections preserve AADL's (should be unsat):"""".render)
+        scheckH(out(8), st""""NoNewConnections: Proves that the generated CAmkES connections does not contain more than AADL's (should be unsat):"""".render)
 
         scheck(out(1) == string"sat", s"RefinementProof is ${out(1)}")
         scheck(out(3) == string"unsat", s"AADLWellFormedness is ${out(3)}")
@@ -480,7 +480,7 @@ trait CodeGenTest extends TestSuite {
       proc"subst ${optSubstDrive} /D".run()
     }
 
-    return keepGoing
+    return !keepGoing // ie. no failure occurred
   }
 
   def getModel(s: String): Aadl = {
