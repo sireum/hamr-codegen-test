@@ -30,7 +30,6 @@ public
 			write_port: out event data port Base_Types::Integer_8;
 		properties
 			CASE_Scheduling::Domain => 2; -- pacer 1, source 2, destination 3
-			HAMR::Component_Type => VIRTUAL_MACHINE;
 	end emitter_p;
 
 	-- process specifies boundary of spatial isolation
@@ -86,6 +85,12 @@ public
 			CASE_Scheduling::Schedule_Source_Text => "behavior_code/kernel/domain_schedule.c";
 	end proc.impl;
 
+	virtual processor vm_producer_proc
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 1000ms;
+	end vm_producer_proc;
+
 	--------------------------------------------------------------------------
 	system top
 	end top;
@@ -93,15 +98,14 @@ public
 	system implementation top.impl
 		subcomponents
 			proc: processor proc.impl;
-			src_process: process emitter_p.impl; -- {
-			--	HAMR::Component_Type => VIRTUAL_MACHINE;
-			--};
+			vm_src_proc: virtual processor vm_producer_proc;
+			src_process: process emitter_p.impl;
 			dst_process: process consumer_p.impl;
 		connections
 			data_interconnect: port src_process.write_port -> dst_process.read_port;
 		properties
-			Actual_Processor_Binding => (reference (proc)) applies to src_process;
-			Actual_Processor_Binding => (reference (proc)) applies to dst_process;
+			Actual_Processor_Binding => (reference (vm_src_proc)) applies to src_process;
+			Actual_Processor_Binding => (reference (proc)) applies to dst_process, vm_src_proc;
 			HAMR::Platform => (seL4_TB, seL4_Only);
 	--annex resolute {**
 	--	check CASE_Tools
