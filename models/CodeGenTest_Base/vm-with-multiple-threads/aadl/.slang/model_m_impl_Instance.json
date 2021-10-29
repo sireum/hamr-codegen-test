@@ -118,11 +118,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -184,11 +184,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -256,11 +256,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -322,11 +322,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -430,11 +430,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -496,11 +496,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -568,11 +568,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -634,11 +634,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -852,11 +852,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -918,11 +918,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -990,11 +990,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -1056,11 +1056,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -1987,11 +1987,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -2053,11 +2053,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -2125,11 +2125,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -2191,11 +2191,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -2299,11 +2299,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -2365,11 +2365,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -2437,11 +2437,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -2503,11 +2503,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -3271,37 +3271,6 @@
                       "type" : "None"
                     }
                   }
-                }
-              ],
-              "appliesTo" : [
-              ]
-            },
-            {
-              "type" : "Property",
-              "name" : {
-                "type" : "Name",
-                "name" : ["m_impl_Instance", "virt_processor", "CASE_Properties::OS"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/com.collins.trustedsystems.briefcase.staircase\/resources\/CASE_Properties.aadl"
-                    },
-                    "beginLine" : 25,
-                    "beginColumn" : 2,
-                    "endLine" : 26,
-                    "endColumn" : 22,
-                    "offset" : 1080,
-                    "length" : 99
-                  }
-                }
-              },
-              "propertyValues" : [
-                {
-                  "type" : "ValueProp",
-                  "value" : "Linux"
                 }
               ],
               "appliesTo" : [
@@ -4339,11 +4308,11 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 78,
+                "beginLine" : 79,
                 "beginColumn" : 4,
-                "endLine" : 78,
+                "endLine" : 79,
                 "endColumn" : 88,
-                "offset" : 3653,
+                "offset" : 3710,
                 "length" : 84
               }
             }
@@ -4370,11 +4339,11 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 26,
+                "beginLine" : 27,
                 "beginColumn" : 4,
-                "endLine" : 29,
+                "endLine" : 30,
                 "endColumn" : 36,
-                "offset" : 1108,
+                "offset" : 1165,
                 "length" : 162
               }
             }

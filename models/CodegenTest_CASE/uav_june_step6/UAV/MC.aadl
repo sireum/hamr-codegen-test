@@ -74,11 +74,17 @@ public
 	virtual processor implementation CASE_Virtual_Machine.Radio
 		properties
 			CASE_Properties::OS => Linux;
+			Dispatch_Protocol => Periodic;
+			Period => 500ms;
+            Stack_Size => CM_Property_Set::Stack_Size;
 	end CASE_Virtual_Machine.Radio;
 	
 	virtual processor implementation CASE_Virtual_Machine.UxAS
 		properties
 			CASE_Properties::OS => Linux;
+			Dispatch_Protocol => Periodic;
+			Period => 500ms;
+            Stack_Size => CM_Property_Set::Stack_Size;
 	end CASE_Virtual_Machine.UxAS;
 
 	-- The MissionComputer on-board the UAV

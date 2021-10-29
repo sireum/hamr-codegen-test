@@ -18,7 +18,7 @@
             "beginColumn" : 2,
             "endLine" : 123,
             "endColumn" : 15,
-            "offset" : 3250,
+            "offset" : 3213,
             "length" : 723
           }
         }
@@ -50,7 +50,7 @@
                 "beginColumn" : 4,
                 "endLine" : 110,
                 "endColumn" : 40,
-                "offset" : 3434,
+                "offset" : 3397,
                 "length" : 36
               }
             }
@@ -80,11 +80,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 30,
+                    "beginLine" : 31,
                     "beginColumn" : 4,
-                    "endLine" : 30,
+                    "endLine" : 31,
                     "endColumn" : 58,
-                    "offset" : 991,
+                    "offset" : 993,
                     "length" : 54
                   }
                 }
@@ -118,11 +118,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -184,11 +184,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -220,11 +220,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 38,
+                    "beginLine" : 39,
                     "beginColumn" : 4,
-                    "endLine" : 38,
+                    "endLine" : 39,
                     "endColumn" : 38,
-                    "offset" : 1255,
+                    "offset" : 1257,
                     "length" : 34
                   }
                 }
@@ -254,11 +254,11 @@
                           "type" : "Some",
                           "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                         },
-                        "beginLine" : 15,
+                        "beginLine" : 16,
                         "beginColumn" : 4,
-                        "endLine" : 15,
+                        "endLine" : 16,
                         "endColumn" : 58,
-                        "offset" : 466,
+                        "offset" : 468,
                         "length" : 54
                       }
                     }
@@ -292,11 +292,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -358,11 +358,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -711,11 +711,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 40,
+                    "beginLine" : 41,
                     "beginColumn" : 4,
-                    "endLine" : 40,
+                    "endLine" : 41,
                     "endColumn" : 63,
-                    "offset" : 1307,
+                    "offset" : 1309,
                     "length" : 59
                   }
                 }
@@ -734,11 +734,11 @@
                           "type" : "Some",
                           "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                         },
-                        "beginLine" : 38,
+                        "beginLine" : 39,
                         "beginColumn" : 4,
-                        "endLine" : 38,
+                        "endLine" : 39,
                         "endColumn" : 38,
-                        "offset" : 1255,
+                        "offset" : 1257,
                         "length" : 34
                       }
                     }
@@ -756,11 +756,11 @@
                             "type" : "Some",
                             "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                           },
-                          "beginLine" : 15,
+                          "beginLine" : 16,
                           "beginColumn" : 4,
-                          "endLine" : 15,
+                          "endLine" : 16,
                           "endColumn" : 58,
-                          "offset" : 466,
+                          "offset" : 468,
                           "length" : 54
                         }
                       }
@@ -793,7 +793,7 @@
                         "beginColumn" : 4,
                         "endLine" : 110,
                         "endColumn" : 40,
-                        "offset" : 3434,
+                        "offset" : 3397,
                         "length" : 36
                       }
                     }
@@ -811,11 +811,11 @@
                             "type" : "Some",
                             "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                           },
-                          "beginLine" : 30,
+                          "beginLine" : 31,
                           "beginColumn" : 4,
-                          "endLine" : 30,
+                          "endLine" : 31,
                           "endColumn" : 58,
-                          "offset" : 991,
+                          "offset" : 993,
                           "length" : 54
                         }
                       }
@@ -976,7 +976,7 @@
                 "beginColumn" : 4,
                 "endLine" : 111,
                 "endColumn" : 41,
-                "offset" : 3474,
+                "offset" : 3437,
                 "length" : 37
               }
             }
@@ -1006,11 +1006,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 63,
+                    "beginLine" : 64,
                     "beginColumn" : 4,
-                    "endLine" : 63,
+                    "endLine" : 64,
                     "endColumn" : 56,
-                    "offset" : 2114,
+                    "offset" : 2116,
                     "length" : 52
                   }
                 }
@@ -1044,11 +1044,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 78,
+                        "beginLine" : 79,
                         "beginColumn" : 4,
-                        "endLine" : 78,
+                        "endLine" : 79,
                         "endColumn" : 88,
-                        "offset" : 3653,
+                        "offset" : 3710,
                         "length" : 84
                       }
                     }
@@ -1110,11 +1110,11 @@
                           "type" : "Some",
                           "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                         },
-                        "beginLine" : 26,
+                        "beginLine" : 27,
                         "beginColumn" : 4,
-                        "endLine" : 29,
+                        "endLine" : 30,
                         "endColumn" : 36,
-                        "offset" : 1108,
+                        "offset" : 1165,
                         "length" : 162
                       }
                     }
@@ -1146,11 +1146,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 71,
+                    "beginLine" : 72,
                     "beginColumn" : 4,
-                    "endLine" : 71,
+                    "endLine" : 72,
                     "endColumn" : 39,
-                    "offset" : 2378,
+                    "offset" : 2380,
                     "length" : 35
                   }
                 }
@@ -1180,11 +1180,11 @@
                           "type" : "Some",
                           "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                         },
-                        "beginLine" : 46,
+                        "beginLine" : 47,
                         "beginColumn" : 4,
-                        "endLine" : 48,
+                        "endLine" : 49,
                         "endColumn" : 6,
-                        "offset" : 1498,
+                        "offset" : 1500,
                         "length" : 137
                       }
                     }
@@ -1218,11 +1218,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 78,
+                            "beginLine" : 79,
                             "beginColumn" : 4,
-                            "endLine" : 78,
+                            "endLine" : 79,
                             "endColumn" : 88,
-                            "offset" : 3653,
+                            "offset" : 3710,
                             "length" : 84
                           }
                         }
@@ -1284,11 +1284,11 @@
                               "type" : "Some",
                               "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                             },
-                            "beginLine" : 26,
+                            "beginLine" : 27,
                             "beginColumn" : 4,
-                            "endLine" : 29,
+                            "endLine" : 30,
                             "endColumn" : 36,
-                            "offset" : 1108,
+                            "offset" : 1165,
                             "length" : 162
                           }
                         }
@@ -1668,11 +1668,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 73,
+                    "beginLine" : 74,
                     "beginColumn" : 4,
-                    "endLine" : 73,
+                    "endLine" : 74,
                     "endColumn" : 60,
-                    "offset" : 2431,
+                    "offset" : 2433,
                     "length" : 56
                   }
                 }
@@ -1695,7 +1695,7 @@
                         "beginColumn" : 4,
                         "endLine" : 111,
                         "endColumn" : 41,
-                        "offset" : 3474,
+                        "offset" : 3437,
                         "length" : 37
                       }
                     }
@@ -1713,11 +1713,11 @@
                             "type" : "Some",
                             "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                           },
-                          "beginLine" : 63,
+                          "beginLine" : 64,
                           "beginColumn" : 4,
-                          "endLine" : 63,
+                          "endLine" : 64,
                           "endColumn" : 56,
-                          "offset" : 2114,
+                          "offset" : 2116,
                           "length" : 52
                         }
                       }
@@ -1746,11 +1746,11 @@
                           "type" : "Some",
                           "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                         },
-                        "beginLine" : 71,
+                        "beginLine" : 72,
                         "beginColumn" : 4,
-                        "endLine" : 71,
+                        "endLine" : 72,
                         "endColumn" : 39,
-                        "offset" : 2378,
+                        "offset" : 2380,
                         "length" : 35
                       }
                     }
@@ -1768,11 +1768,11 @@
                             "type" : "Some",
                             "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                           },
-                          "beginLine" : 46,
+                          "beginLine" : 47,
                           "beginColumn" : 4,
-                          "endLine" : 48,
+                          "endLine" : 49,
                           "endColumn" : 6,
-                          "offset" : 1498,
+                          "offset" : 1500,
                           "length" : 137
                         }
                       }
@@ -1933,7 +1933,7 @@
                 "beginColumn" : 4,
                 "endLine" : 107,
                 "endColumn" : 30,
-                "offset" : 3300,
+                "offset" : 3263,
                 "length" : 26
               }
             }
@@ -2146,7 +2146,7 @@
                 "beginColumn" : 4,
                 "endLine" : 108,
                 "endColumn" : 52,
-                "offset" : 3330,
+                "offset" : 3293,
                 "length" : 48
               }
             }
@@ -2273,37 +2273,6 @@
               ],
               "appliesTo" : [
               ]
-            },
-            {
-              "type" : "Property",
-              "name" : {
-                "type" : "Name",
-                "name" : ["top_impl_Instance", "vm_src_proc", "CASE_Properties::OS"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/com.collins.trustedsystems.briefcase.staircase\/resources\/CASE_Properties.aadl"
-                    },
-                    "beginLine" : 25,
-                    "beginColumn" : 2,
-                    "endLine" : 26,
-                    "endColumn" : 22,
-                    "offset" : 1080,
-                    "length" : 99
-                  }
-                }
-              },
-              "propertyValues" : [
-                {
-                  "type" : "ValueProp",
-                  "value" : "Linux"
-                }
-              ],
-              "appliesTo" : [
-              ]
             }
           ],
           "flows" : [
@@ -2358,7 +2327,7 @@
                 "beginColumn" : 4,
                 "endLine" : 109,
                 "endColumn" : 52,
-                "offset" : 3382,
+                "offset" : 3345,
                 "length" : 48
               }
             }
@@ -2541,7 +2510,7 @@
                 "beginColumn" : 4,
                 "endLine" : 113,
                 "endColumn" : 76,
-                "offset" : 3529,
+                "offset" : 3492,
                 "length" : 72
               }
             }
@@ -2564,7 +2533,7 @@
                     "beginColumn" : 4,
                     "endLine" : 110,
                     "endColumn" : 40,
-                    "offset" : 3434,
+                    "offset" : 3397,
                     "length" : 36
                   }
                 }
@@ -2582,11 +2551,11 @@
                         "type" : "Some",
                         "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                       },
-                      "beginLine" : 30,
+                      "beginLine" : 31,
                       "beginColumn" : 4,
-                      "endLine" : 30,
+                      "endLine" : 31,
                       "endColumn" : 58,
-                      "offset" : 991,
+                      "offset" : 993,
                       "length" : 54
                     }
                   }
@@ -2619,7 +2588,7 @@
                     "beginColumn" : 4,
                     "endLine" : 111,
                     "endColumn" : 41,
-                    "offset" : 3474,
+                    "offset" : 3437,
                     "length" : 37
                   }
                 }
@@ -2637,11 +2606,11 @@
                         "type" : "Some",
                         "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                       },
-                      "beginLine" : 63,
+                      "beginLine" : 64,
                       "beginColumn" : 4,
-                      "endLine" : 63,
+                      "endLine" : 64,
                       "endColumn" : 56,
-                      "offset" : 2114,
+                      "offset" : 2116,
                       "length" : 52
                     }
                   }
@@ -2689,11 +2658,11 @@
                   "type" : "Some",
                   "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                 },
-                "beginLine" : 40,
+                "beginLine" : 41,
                 "beginColumn" : 4,
-                "endLine" : 40,
+                "endLine" : 41,
                 "endColumn" : 63,
-                "offset" : 1307,
+                "offset" : 1309,
                 "length" : 59
               }
             }
@@ -2711,11 +2680,11 @@
                     "type" : "Some",
                     "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                   },
-                  "beginLine" : 38,
+                  "beginLine" : 39,
                   "beginColumn" : 4,
-                  "endLine" : 38,
+                  "endLine" : 39,
                   "endColumn" : 38,
-                  "offset" : 1255,
+                  "offset" : 1257,
                   "length" : 34
                 }
               }
@@ -2733,11 +2702,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 15,
+                    "beginLine" : 16,
                     "beginColumn" : 4,
-                    "endLine" : 15,
+                    "endLine" : 16,
                     "endColumn" : 58,
-                    "offset" : 466,
+                    "offset" : 468,
                     "length" : 54
                   }
                 }
@@ -2764,11 +2733,11 @@
                     "type" : "Some",
                     "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                   },
-                  "beginLine" : 71,
+                  "beginLine" : 72,
                   "beginColumn" : 4,
-                  "endLine" : 71,
+                  "endLine" : 72,
                   "endColumn" : 39,
-                  "offset" : 2378,
+                  "offset" : 2380,
                   "length" : 35
                 }
               }
@@ -2786,11 +2755,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 46,
+                    "beginLine" : 47,
                     "beginColumn" : 4,
-                    "endLine" : 48,
+                    "endLine" : 49,
                     "endColumn" : 6,
-                    "offset" : 1498,
+                    "offset" : 1500,
                     "length" : 137
                   }
                 }
@@ -2822,11 +2791,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 40,
+                    "beginLine" : 41,
                     "beginColumn" : 4,
-                    "endLine" : 40,
+                    "endLine" : 41,
                     "endColumn" : 63,
-                    "offset" : 1307,
+                    "offset" : 1309,
                     "length" : 59
                   }
                 }
@@ -2846,7 +2815,7 @@
                     "beginColumn" : 4,
                     "endLine" : 110,
                     "endColumn" : 40,
-                    "offset" : 3434,
+                    "offset" : 3397,
                     "length" : 36
                   }
                 }
@@ -2870,7 +2839,7 @@
                     "beginColumn" : 4,
                     "endLine" : 113,
                     "endColumn" : 76,
-                    "offset" : 3529,
+                    "offset" : 3492,
                     "length" : 72
                   }
                 }
@@ -2890,7 +2859,7 @@
                     "beginColumn" : 2,
                     "endLine" : 123,
                     "endColumn" : 15,
-                    "offset" : 3250,
+                    "offset" : 3213,
                     "length" : 723
                   }
                 }
@@ -2910,11 +2879,11 @@
                       "type" : "Some",
                       "value" : "\/test_event_data_port_periodic_domains_both_vm\/test_event_data_port_periodic_domains.aadl"
                     },
-                    "beginLine" : 73,
+                    "beginLine" : 74,
                     "beginColumn" : 4,
-                    "endLine" : 73,
+                    "endLine" : 74,
                     "endColumn" : 60,
-                    "offset" : 2431,
+                    "offset" : 2433,
                     "length" : 56
                   }
                 }
@@ -2934,7 +2903,7 @@
                     "beginColumn" : 4,
                     "endLine" : 111,
                     "endColumn" : 41,
-                    "offset" : 3474,
+                    "offset" : 3437,
                     "length" : 37
                   }
                 }
@@ -3099,11 +3068,11 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 78,
+                "beginLine" : 79,
                 "beginColumn" : 4,
-                "endLine" : 78,
+                "endLine" : 79,
                 "endColumn" : 88,
-                "offset" : 3653,
+                "offset" : 3710,
                 "length" : 84
               }
             }
@@ -3130,11 +3099,11 @@
                   "type" : "Some",
                   "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
                 },
-                "beginLine" : 26,
+                "beginLine" : 27,
                 "beginColumn" : 4,
-                "endLine" : 29,
+                "endLine" : 30,
                 "endColumn" : 36,
-                "offset" : 1108,
+                "offset" : 1165,
                 "length" : 162
               }
             }
