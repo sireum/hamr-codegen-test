@@ -19,5 +19,6 @@ import org.sireum._
 
   "generated_unit_tests" // run unit tests on generated Slang projects
 
+  "verbose"
   // all = generated_unit_tests, compile, camkes
 }

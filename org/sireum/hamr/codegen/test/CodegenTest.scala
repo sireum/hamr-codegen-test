@@ -31,8 +31,10 @@ trait CodeGenTest extends TestSuite {
   def testModes: ISZ[TestMode.Type] = Os.env("HamrTestModes") match {
     case Some(list) => ops.StringOps(list).split((c: C) => c ==C(',')).map((m: String) => TestMode.byName(m).get)
     //case _ => ISZ(TestMode.codegen)
-    case _ => ISZ(TestMode.codegen, TestMode.smt2)
+    case _ => ISZ(TestMode.codegen, TestMode.verbose, TestMode.smt2)
   }
+
+  def verbose: B = { return ops.ISZOps(testModes).contains(TestMode.verbose) }
 
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String]
 
@@ -390,7 +392,7 @@ trait CodeGenTest extends TestSuite {
       assert(z3.exists, s"${z3} doesn't exist")
 
       println("Checking refinement proof ...")
-      val timeout = 60000 // 1 min
+      val timeout = 120000 // 2 min
       val startTime = extension.Time.currentMillis
       val proc = Os.proc(ISZ(cvc4.value, "-i", "--finite-model-find", proof.value)).redirectErr.timeout(timeout)
       val pr = proc.run()
@@ -400,6 +402,10 @@ trait CodeGenTest extends TestSuite {
         err(pout, pr.exitCode)
       }
       val duration = extension.Time.currentMillis - startTime
+
+      if(verbose) {
+        println(s"Refinement proof duration: $duration ms")
+      }
 
       val out = ops.StringOps(ops.StringOps(pout).replaceAllLiterally("\r\n", "\n")).split((c: C) => c == C('\n'))
       if(out.size != 10) {
