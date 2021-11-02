@@ -37,7 +37,7 @@ trait CodeGenTest extends TestSuite {
   def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String]
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
-  def filters: ISZ[String] = ISZ("TB")
+  def filters: ISZ[String] = ISZ("vm")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
@@ -518,12 +518,10 @@ trait CodeGenTest extends TestSuite {
   }
 
   def shouldProve(config: CodeGenConfig): B = {
-    val noVMs: B = config.camkesOutputDir.nonEmpty && ! (Os.path(config.camkesOutputDir.get) / "components" / "VM").exists
     val platform = config.platform
     return { //
-      //isSeL4(platform) &&
       (platform == CodeGenPlatform.SeL4 || platform == CodeGenPlatform.SeL4_Only) &&
-        ops.ISZOps(testModes).contains(TestMode.smt2) && noVMs
+        ops.ISZOps(testModes).contains(TestMode.smt2)
     }
   }
 
