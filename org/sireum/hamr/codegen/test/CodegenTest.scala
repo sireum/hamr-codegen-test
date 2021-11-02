@@ -271,6 +271,17 @@ trait CodeGenTest extends TestSuite {
 
   def runAdditionalTasks(testName: String, testResultsDir: Os.Path, testOps: CodeGenConfig, reporter: Reporter): B = {
 
+    def vproc(commands: String, runInDir: Os.Path, env: ISZ[(String, String)], timeout: Option[Z]): OsProto.Proc.Result = {
+      var p = proc"$commands".env(env).at(runInDir)
+      if(timeout.nonEmpty) {
+        p = p.timeout(timeout.get)
+      }
+      if(verbose) {
+        p = p.console.redirectErr
+      }
+      return p.run()
+    }
+
     val sireum: Os.Path = CodeGenTest.getSireum()
     val sireumHome: Os.Path = sireum.up.up
     val os: String = Os.kind match {
@@ -328,7 +339,7 @@ trait CodeGenTest extends TestSuite {
         val transpileScript = fetch("transpile.cmd")
 
         println(s"Transpiling ${testOps.platform} via script ...")
-        val cTranspileResults = proc"${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).run()
+        val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None())
         check(cTranspileResults, "C transpiling failed")
 
       } else {
@@ -336,7 +347,7 @@ trait CodeGenTest extends TestSuite {
         val transpileScript = fetch("transpile-sel4.cmd")
 
         println(s"Transpiling ${testOps.platform} via script ...")
-        val cTranspileResults = proc"${transpileScript.string}".env(ISZ(("SIREUM_HOME", sireum.up.up.string))).at(transpileScript.up).run()
+        val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None())
         check(cTranspileResults, "seL4 transpiling failed")
       }
     }
@@ -345,14 +356,14 @@ trait CodeGenTest extends TestSuite {
       val projectCmd = fetch("project.cmd")
 
       println("Compiling Slang project via proyek compile ...")
-      val proyekResults = proc"${sireum.string} proyek compile --par ${projectCmd.up.up.string}".at(projectCmd.up.up).run()
+      val proyekResults = vproc(s"${sireum.string} proyek compile --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
       check(proyekResults, "Proyek compilation failed")
 
       if(isLinux(testOps.platform) && keepGoing) {
         println("Compiling C project via script ...")
         val compileScript = fetch("compile.cmd")
 
-        val cCompileResults = proc"${compileScript.string} -b -r -l".env(ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4"))).at(compileScript.up).run()
+        val cCompileResults = vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None())
         check(cCompileResults, "C Compilation failed")
       }
     }
@@ -361,7 +372,7 @@ trait CodeGenTest extends TestSuite {
       val projectCmd = fetch("project.cmd")
 
       println("Generating IVE project via proyek ive ...")
-      val proyekResults = proc"${sireum.string} proyek ive ${projectCmd.up.up.string}".at(projectCmd.up.up).run()
+      val proyekResults = vproc(s"${sireum.string} proyek ive ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
       check(proyekResults, "Proyek ive failed")
     }
 
@@ -369,7 +380,7 @@ trait CodeGenTest extends TestSuite {
       val projectCmd = fetch("project.cmd")
 
       println("Running generated unit tests ...")
-      val proyekResults = proc"${sireum.string} proyek test --par ${projectCmd.up.up.string}".at(projectCmd.up.up).run()
+      val proyekResults = vproc(s"${sireum.string} proyek test --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
       check(proyekResults, "Proyek test failed")
     }
 
@@ -394,8 +405,7 @@ trait CodeGenTest extends TestSuite {
       println("Checking refinement proof ...")
       val timeout = 120000 // 2 min
       val startTime = extension.Time.currentMillis
-      val proc = Os.proc(ISZ(cvc4.value, "-i", "--finite-model-find", proof.value)).redirectErr.timeout(timeout)
-      val pr = proc.run()
+      val pr = vproc(s"${cvc4.value} -i --finite-model-find ${proof.value}", proof.up, ISZ(), Some(timeout))
       val pout: String = pr.out
       val isTimeout: B = pr.exitCode === 6 || pr.exitCode === -101 || pr.exitCode === -100
       if (pout.size == 0 && pr.exitCode != 0 && !isTimeout) {
@@ -471,7 +481,7 @@ trait CodeGenTest extends TestSuite {
           }
 
           println("Running CAmkES build ...")
-          val camkesResults = proc"${runCamkes.value} -n".env(camkesEnv).run()
+          val camkesResults = vproc(s"${runCamkes.value} -n", runCamkes.up, camkesEnv, None())
           check(camkesResults, "CAmkES build failed")
 
           //val results = Proc(ISZ("simulate"), Os.cwd, Map.empty, T, None(), F, F, F, F, F, timeout, F).at(camkesBuildDir).run()
