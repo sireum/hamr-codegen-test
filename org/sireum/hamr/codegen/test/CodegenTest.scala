@@ -31,7 +31,7 @@ trait CodeGenTest extends TestSuite {
   def testModes: ISZ[TestMode.Type] = Os.env("HamrTestModes") match {
     case Some(list) => ops.StringOps(list).split((c: C) => c ==C(',')).map((m: String) => TestMode.byName(m).get)
     //case _ => ISZ(TestMode.codegen)
-    case _ => ISZ(TestMode.codegen, TestMode.verbose, TestMode.smt2)
+    case _ => ISZ(TestMode.codegen, TestMode.smt2)
   }
 
   def verbose: B = { return ops.ISZOps(testModes).contains(TestMode.verbose) }
