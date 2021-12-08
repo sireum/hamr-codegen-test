@@ -30,8 +30,13 @@ trait CodeGenTest extends TestSuite {
   //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
   def testModes: ISZ[TestMode.Type] = Os.env("HamrTestModes") match {
     case Some(list) => ops.StringOps(list).split((c: C) => c ==C(',')).map((m: String) => TestMode.byName(m).get)
-    //case _ => ISZ(TestMode.codegen)
-    case _ => ISZ(TestMode.codegen, TestMode.smt2)
+    case _ => ISZ(TestMode.codegen)
+    //case _ => ISZ(TestMode.codegen, TestMode.smt2)
+  }
+
+  def smt2Timeout: Z = Os.env("SMT2_TIMEOUT") match {
+    case Some(t) => Z(t).get
+    case _ => 2 * 60000
   }
 
   def verbose: B = { return ops.ISZOps(testModes).contains(TestMode.verbose) }
@@ -44,8 +49,6 @@ trait CodeGenTest extends TestSuite {
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
   )
-
-  def timeout: Z = 10000
 
   val (rootExpectedDir, rootResultDir, baseModelsDir) = getDirectories(testResources())
 
@@ -403,14 +406,15 @@ trait CodeGenTest extends TestSuite {
       assert(z3.exists, s"${z3} doesn't exist")
 
       println("Checking refinement proof ...")
-      val timeout = 120000 // 2 min
+
       val startTime = extension.Time.currentMillis
-      val pr = vproc(s"${cvc.value} -i --finite-model-find ${proof.value}", proof.up, ISZ(), Some(timeout))
+      val pr = vproc(s"${cvc.value} -i --finite-model-find ${proof.value}", proof.up, ISZ(), Some(smt2Timeout))
       val pout: String = pr.out
       val isTimeout: B = pr.exitCode === 6 || pr.exitCode === -101 || pr.exitCode === -100
       if (pout.size == 0 && pr.exitCode != 0 && !isTimeout) {
         err(pout, pr.exitCode)
       }
+
       val duration = extension.Time.currentMillis - startTime
 
       if(verbose) {
@@ -418,8 +422,8 @@ trait CodeGenTest extends TestSuite {
       }
 
       val out = ops.StringOps(ops.StringOps(pout).replaceAllLiterally("\r\n", "\n")).split((c: C) => c == C('\n'))
-      if(out.size != 10) {
-        cprintln(T, s"expecting 10 lines but got ${out.size}")
+      if(isTimeout || out.size != 10) {
+        cprintln(T, s"${if(isTimeout) s"Timed-out after ${duration} ms. " else ""}Expecting 10 lines but got ${out.size}")
         cprintln(T, pr.out)
         keepGoing = F
       } else {
