@@ -17,6 +17,8 @@ import org.sireum._
 
   "smt2" // run smt2 solver on generated refinement proofs
 
+  "logika" // run proyek logika on Slang projects
+
   "generated_unit_tests" // run unit tests on generated Slang projects
 
   "verbose"

@@ -371,6 +371,20 @@ trait CodeGenTest extends TestSuite {
       }
     }
 
+    if(shouldRunLogika(testOps) && keepGoing) {
+      val projectCmd = fetch("project.cmd")
+
+      val tempOut = Os.tempDir()
+      println("Checking Slang project contracts via proyek logika ...")
+      val proyekResults = vproc(s"${sireum.string} proyek logika --all --out ${tempOut.value} --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      check(proyekResults, "Proyek logika failed")
+
+      // results still written to <project>/out even if "--out" option is used?  For now
+      // just delete it so it doesn't pollute directory diffs
+      val outDir = projectCmd.up.up / "out"
+      if(outDir.exists) outDir.removeAll()
+    }
+
     if(shouldProyekIve(testOps) && keepGoing) {
       val projectCmd = fetch("project.cmd")
 
@@ -551,6 +565,10 @@ trait CodeGenTest extends TestSuite {
 
   def shouldRunGeneratedUnitTests(platform: CodeGenPlatform.Type): B = {
     return isSlang(platform) && ops.ISZOps(testModes).contains(TestMode.generated_unit_tests)
+  }
+
+  def shouldRunLogika(config: CodeGenConfig): B = {
+    return isSlang(config.platform) && ops.ISZOps(testModes).contains(TestMode.logika)
   }
 
   def shouldTranspile(testOps: CodeGenConfig): B = {

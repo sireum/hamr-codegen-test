@@ -6,12 +6,17 @@ import org.sireum.{B, F, ISZ, None, Option, Os, Some, String, T, ops}
 import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
+import org.sireum.hamr.codegen.test.util.TestMode
 
-class Gumbo extends CodeGenTest with BeforeAndAfterAll {
+class GumboTest extends CodeGenTest with BeforeAndAfterAll {
   val resultDir: Option[String] = Some(getClass.getSimpleName)
   val modelsDir = baseModelsDir / getClass.getSimpleName
 
   override def generateExpected: B = F
+
+  override def testModes: ISZ[TestMode.Type] = {
+    return super.testModes :+ TestMode.logika
+  }
 
   override def afterAll(): Unit = {
     val rdir = rootResultDir / resultDir.get
