@@ -12,10 +12,20 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
   val resultDir: Option[String] = Some(getClass.getSimpleName)
   val modelsDir = baseModelsDir / getClass.getSimpleName
 
-  override def generateExpected: B = F
+  override def generateExpected: B = if (super.generateExpected) T else F
+
+  val phantomReady: B = F // use checked in AIR json until released osate plugins support gumbo
+
+  val superModes: ISZ[TestMode.Type] = {
+    if (!phantomReady && ops.ISZOps(super.testModes).contains(TestMode.phantom)) {
+      println(s"\n\n\nRemoving ${TestMode.phantom}\n\n\n")
+      super.testModes - TestMode.phantom
+    }
+    else { super.testModes }
+  }
 
   override def testModes: ISZ[TestMode.Type] = {
-    return super.testModes :+ TestMode.logika
+    return superModes :+ TestMode.logika
   }
 
   override def afterAll(): Unit = {
@@ -39,7 +49,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
 
   }
 
-  def getJson(d: Os.Path) : Os.Path = {
+  def getJson(d: Os.Path): Os.Path = {
     val s = d / ".slang"
     val cands = s.list.filter(f => f.name.native.endsWith("json"))
     assert(cands.size == 1, s"${cands} : ${s.value}")
@@ -57,10 +67,12 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
 
       val dirAllowed: B = {
         var matched: B = F
-        for(allowedDir <- allowedDirs if !matched) {
+        for (allowedDir <- allowedDirs if !matched) {
           val split: Array[Predef.String] = allowedDir.split("/")
           var index: Int = 0
-          while(index < split.length && index < p.length && split(index) == p(index)) { index = index + 1 }
+          while (index < split.length && index < p.length && split(index) == p(index)) {
+            index = index + 1
+          }
           matched = index == split.length
         }
         matched
@@ -77,7 +89,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
         !ops.ISZOps(excludedResources).contains(filename.ext) &&
         ((p.size > 1 && p(p.size - 2) != ".slang") || filename.ext.native != "json") // exclude json files in the .slang directories
 
-      if(allow) {
+      if (allow) {
         //println(s"allowed: ${p} - ${f.length()}")
         //println(f.length())
       } else {
