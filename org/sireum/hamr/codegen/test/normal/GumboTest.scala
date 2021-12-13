@@ -18,7 +18,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
 
   val superModes: ISZ[TestMode.Type] = {
     if (!phantomReady && ops.ISZOps(super.testModes).contains(TestMode.phantom)) {
-      println(s"\n\n\nRemoving ${TestMode.phantom}\n\n\n")
+      println(s"\n\n\nRemoving ${TestMode.phantom} test mode from ${this.getClass.getSimpleName}\n\n\n")
       super.testModes - TestMode.phantom
     }
     else { super.testModes }
@@ -62,7 +62,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
 
     RC.base64(Vector("../../../../../../")) { (p, f) =>
-      val cname = "gumbo"
+      val cname = "GumboTest"
       val allowedDirs: ISZ[Predef.String] = ISZ(s"expected/${cname}", s"models/${cname}")
 
       val dirAllowed: B = {
