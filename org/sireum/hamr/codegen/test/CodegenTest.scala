@@ -374,13 +374,11 @@ trait CodeGenTest extends TestSuite {
     if(shouldRunLogika(testOps) && keepGoing) {
       val projectCmd = fetch("project.cmd")
 
-      val tempOut = Os.tempDir()
       println("Checking Slang project contracts via proyek logika ...")
-      val proyekResults = vproc(s"${sireum.string} proyek logika --all --out ${tempOut.value} --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      val proyekResults = vproc(s"${sireum.string} proyek logika --all --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
       check(proyekResults, "Proyek logika failed")
 
-      // results still written to <project>/out even if "--out" option is used?  For now
-      // just delete it so it doesn't pollute directory diffs
+      // Delete the 'out' directory so that it doesn't pollute directory diffs
       val outDir = projectCmd.up.up / "out"
       if(outDir.exists) outDir.removeAll()
     }
