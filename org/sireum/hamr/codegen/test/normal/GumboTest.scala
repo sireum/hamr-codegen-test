@@ -47,6 +47,17 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
         resultDir, None(), None(), ISZ())
     }
 
+    {
+      val name = "integration-contracts"
+      val modelDir = modelsDir / name
+      val model = Some(getJson(modelDir))
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform),
+        resultDir, None(), None(), ISZ())
+    }
+
   }
 
   def getJson(d: Os.Path): Os.Path = {
