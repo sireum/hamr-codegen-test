@@ -63,7 +63,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
   def getJson(d: Os.Path): Os.Path = {
     val s = d / ".slang"
     val cands = s.list.filter(f => f.name.native.endsWith("json"))
-    assert(cands.size == 1, s"${cands} : ${s.value}")
+    assert(cands.size == 1, s": Inspect json files in ${s.value}")
     return cands(0)
   }
 
