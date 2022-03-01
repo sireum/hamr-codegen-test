@@ -465,10 +465,10 @@ trait CodeGenTest extends TestSuite {
 
     if(shouldCamkes(testOps.platform) && keepGoing) {
       val hasVMs: B = reporter.messages.filter(m => org.sireum.ops.StringOps(m.text)
-        .contains("Execute the following to install the CAmkES-ARM-VM project:")).nonEmpty
+        .contains("Your project contains VMs")).nonEmpty
 
       val rootCamkesDir: Option[Os.Path] =
-        if(hasVMs) { camkesArmVMDir() }
+        if(hasVMs) { camkesVmExamplesDir() }
         else { camkesDir() }
 
       rootCamkesDir match {
@@ -496,9 +496,9 @@ trait CodeGenTest extends TestSuite {
 
           //camkesArgs = camkesArgs :+ s"-DCAMKES_APP=${name}"
 
-          if(hasVMs) {
-            camkesEnv = camkesEnv ++ onOptions(VM_Template.VM_CMAKE_OPTIONS)
-          }
+          //if(hasVMs) {
+          //  camkesEnv = camkesEnv ++ onOptions(VM_Template.VM_CMAKE_OPTIONS)
+          //}
 
           println("Running CAmkES build ...")
           val camkesResults = vproc(s"${runCamkes.value} -n", runCamkes.up, camkesEnv, None())
@@ -592,7 +592,7 @@ trait CodeGenTest extends TestSuite {
 object CodeGenTest {
 
   val CAMKES_DIR = "CAMKES_DIR"
-  val CAMKES_ARM_VM_DIR = "CAMKES_ARM_VM_DIR"
+  val CAMKES_VM_EXAMPLES_DIR = "CAMKES_VM_EXAMPLES_DIR"
 
   val FILTER = "FILTER"
 
@@ -639,12 +639,12 @@ object CodeGenTest {
     }
   }
 
-  def camkesArmVMDir(): Option[Os.Path] = {
-    return Os.env(CodeGenTest.CAMKES_ARM_VM_DIR) match {
+  def camkesVmExamplesDir(): Option[Os.Path] = {
+    return Os.env(CodeGenTest.CAMKES_VM_EXAMPLES_DIR) match {
       case Some(x) => Some(Os.path(x))
       case _ =>
-        eprintln(s"${CodeGenTest.CAMKES_ARM_VM_DIR} environment variable not set!!!")
-        val candidate = Os.home / "CASE" / "camkes-arm-vm"
+        eprintln(s"${CodeGenTest.CAMKES_VM_EXAMPLES_DIR} environment variable not set!!!")
+        val candidate = Os.home / "CASE" / "camkes-vm-examples"
         if (candidate.exists) {
           eprintln(s"Found ${candidate} so using that")
           Some(candidate)
