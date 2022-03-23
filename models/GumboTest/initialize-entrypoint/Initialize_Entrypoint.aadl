@@ -1,4 +1,4 @@
-package Integration_Contracts
+package Initialize_Entrypoint
 public
 	with Data_Model;
 	with Base_Types;
@@ -78,20 +78,17 @@ public
   		Dispatch_Protocol => Sporadic;
   	annex
   		gumbo {**
+			state
+				currentSetPoint: SetPoint.i;
   			integration
   				assume "currentTemp Range":
   					currentTemp.degrees >= -70.0 and currentTemp.degrees <= 180.0;
   				assume "setPoint Range":
   					setPoint.low.degrees >= 40.0 and setPoint.high.degrees <= 110.0;
-  					
-				--assume "INVALID: refers to multiple ports":
-				--	setPoint.low.degrees >= 40.0 and currentTemp.degrees <= 180.0;
-					
-				--assume "INVALID: refers to no ports":
-				--	1 = 1;
-
-				--guarantee "INVALID: must use assume for incoming ports":
-				--	setPoint.low.degrees >= 40.0 and setPoint.high.degrees <= 110.0;
+ 			initialize
+				--modifies currentSetPoint;
+				guarantee "defaultSetPoint":
+					currentSetPoint.low.degrees = 70.0 and currentSetPoint.high.degrees = 80.0;
   		**}; 			
   end TempControl;
   
@@ -112,4 +109,4 @@ public
   		**};  		
   end tempSensor;
   
-end Integration_Contracts;
+end Initialize_Entrypoint;

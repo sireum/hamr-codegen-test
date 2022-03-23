@@ -25,7 +25,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
   }
 
   override def testModes: ISZ[TestMode.Type] = {
-    return superModes :+ TestMode.logika
+    return superModes //:+ TestMode.logika
   }
 
   override def afterAll(): Unit = {
@@ -49,6 +49,17 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
 
     {
       val name = "integration-contracts"
+      val modelDir = modelsDir / name
+      val model = Some(getJson(modelDir))
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform),
+        resultDir, None(), None(), ISZ())
+    }
+
+    {
+      val name = "initialize-entrypoint"
       val modelDir = modelsDir / name
       val model = Some(getJson(modelDir))
 

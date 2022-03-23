@@ -15,7 +15,7 @@ public
     subcomponents
       -- temperature message contains degrees, which is represented using an AADL Base Type
       -- defined in the AADL Data Modeling annex.
-      degrees: data Base_Types::Float_32;
+      degrees: data Base_Types::Float;
 
     annex GUMBO
     {**
@@ -40,6 +40,9 @@ public
           true or true orelse true and not true andthen true;
         inv "V: arith ops":
           2 - 1 - 5 / 5 + 1 * 5 = 5;
+          
+        inv "V: arith ops 2":
+         6 / (3 + 3) = 1;
 
         -- currently emitted an F32 <op> Z.  Need to convert one to the other first
         --inv "I: Real vs Int":
