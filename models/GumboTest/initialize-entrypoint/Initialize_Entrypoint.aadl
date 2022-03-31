@@ -24,7 +24,7 @@ public
       --                  and must be proved whenever a value of the data type is constructed
       invariants
         inv "Temperature Data Invariant":
-          degrees >= -459.67; -- this works since codegen is emitting real lits as F32's        
+          degrees >= (-459.67); -- this works since codegen is emitting real lits as F32's        
     **};
   end Temperature.i;
 
@@ -44,9 +44,9 @@ public
       annex GUMBO {**       
       invariants
         inv "SetPoint Data Invariant":
-          low.degrees >= 70.0 and
-          high.degrees <= 100.0 and
-          low.degrees <= high.degrees;
+          (low.degrees >= 70.0) &&
+          (high.degrees <= 100.0) &&
+          (low.degrees <= high.degrees);
       **};
   end SetPoint.i;
   
@@ -82,13 +82,13 @@ public
 				currentSetPoint: SetPoint.i;
   			integration
   				assume "currentTemp Range":
-  					currentTemp.degrees >= -70.0 and currentTemp.degrees <= 180.0;
+  					(currentTemp.degrees >= (-70.0)) && (currentTemp.degrees <= 180.0);
   				assume "setPoint Range":
-  					setPoint.low.degrees >= 40.0 and setPoint.high.degrees <= 110.0;
+  					(setPoint.low.degrees >= 40.0) && (setPoint.high.degrees <= 110.0);
  			initialize
 				--modifies currentSetPoint;
 				guarantee "defaultSetPoint":
-					currentSetPoint.low.degrees = 70.0 and currentSetPoint.high.degrees = 80.0;
+					(currentSetPoint.low.degrees == 70.0) && (currentSetPoint.high.degrees == 80.0);
   		**}; 			
   end TempControl;
   
@@ -102,7 +102,7 @@ public
   		gumbo {**
   			integration
   				guarantee "currentTemp Range":
-  					currentTemp.degrees >= -70.0 and currentTemp.degrees <= 180.0;
+  					(currentTemp.degrees >= (-70.0)) && (currentTemp.degrees <= 180.0);
   					
 				--assume "INVALID: must use guarantee for outgoing ports":
   				--	currentTemp.degrees >= -70.0 and currentTemp.degrees <= 180.0;  					

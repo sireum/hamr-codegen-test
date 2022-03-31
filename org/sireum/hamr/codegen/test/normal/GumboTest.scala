@@ -29,10 +29,12 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
   }
 
   override def afterAll(): Unit = {
+    /*
     val rdir = rootResultDir / resultDir.get
     assert(rdir.exists, rdir.value)
     val t = Os.home / "temp" / "gtest"
     rdir.copyOverTo(t)
+    */
   }
 
   val tests = Tests {

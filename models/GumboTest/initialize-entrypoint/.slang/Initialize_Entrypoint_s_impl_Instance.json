@@ -18,7 +18,7 @@
             "beginColumn" : 3,
             "endLine" : 60,
             "endColumn" : 14,
-            "offset" : 1771,
+            "offset" : 1777,
             "length" : 82
           }
         }
@@ -50,7 +50,7 @@
                 "beginColumn" : 5,
                 "endLine" : 59,
                 "endColumn" : 23,
-                "offset" : 1821,
+                "offset" : 1827,
                 "length" : 18
               }
             }
@@ -86,7 +86,7 @@
                     "beginColumn" : 5,
                     "endLine" : 67,
                     "endColumn" : 37,
-                    "offset" : 1937,
+                    "offset" : 1943,
                     "length" : 32
                   }
                 }
@@ -120,7 +120,7 @@
                         "beginColumn" : 5,
                         "endLine" : 75,
                         "endColumn" : 45,
-                        "offset" : 2138,
+                        "offset" : 2144,
                         "length" : 40
                       }
                     }
@@ -192,7 +192,7 @@
                         "beginColumn" : 5,
                         "endLine" : 76,
                         "endColumn" : 51,
-                        "offset" : 2183,
+                        "offset" : 2189,
                         "length" : 46
                       }
                     }
@@ -368,7 +368,7 @@
                                               "beginColumn" : 5,
                                               "endLine" : 82,
                                               "endColumn" : 33,
-                                              "offset" : 2315,
+                                              "offset" : 2321,
                                               "length" : 28
                                             }
                                           }
@@ -388,7 +388,7 @@
                                             "beginColumn" : 5,
                                             "endLine" : 82,
                                             "endColumn" : 33,
-                                            "offset" : 2315,
+                                            "offset" : 2321,
                                             "length" : 28
                                           }
                                         },
@@ -415,10 +415,10 @@
                                             "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                           },
                                           "beginLine" : 91,
-                                          "beginColumn" : 26,
+                                          "beginColumn" : 27,
                                           "endLine" : 91,
-                                          "endColumn" : 33,
-                                          "offset" : 2673,
+                                          "endColumn" : 34,
+                                          "offset" : 2688,
                                           "length" : 7
                                         }
                                       }
@@ -454,10 +454,10 @@
                                         "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                       },
                                       "beginLine" : 91,
-                                      "beginColumn" : 26,
+                                      "beginColumn" : 27,
                                       "endLine" : 91,
-                                      "endColumn" : 33,
-                                      "offset" : 2673,
+                                      "endColumn" : 34,
+                                      "offset" : 2688,
                                       "length" : 7
                                     }
                                   }
@@ -493,10 +493,10 @@
                                       "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                     },
                                     "beginLine" : 91,
-                                    "beginColumn" : 36,
+                                    "beginColumn" : 38,
                                     "endLine" : 91,
-                                    "endColumn" : 40,
-                                    "offset" : 2683,
+                                    "endColumn" : 42,
+                                    "offset" : 2699,
                                     "length" : 4
                                   }
                                 }
@@ -513,11 +513,11 @@
                                     "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                   },
                                   "beginLine" : 91,
-                                  "beginColumn" : 6,
+                                  "beginColumn" : 38,
                                   "endLine" : 91,
-                                  "endColumn" : 40,
-                                  "offset" : 2653,
-                                  "length" : 34
+                                  "endColumn" : 42,
+                                  "offset" : 2699,
+                                  "length" : 4
                                 }
                               },
                               "resOpt" : {
@@ -528,7 +528,7 @@
                               }
                             }
                           },
-                          "op" : "&",
+                          "op" : "&&",
                           "right" : {
                             "type" : "org.sireum.lang.ast.Exp.Binary",
                             "left" : {
@@ -558,7 +558,7 @@
                                               "beginColumn" : 5,
                                               "endLine" : 82,
                                               "endColumn" : 33,
-                                              "offset" : 2315,
+                                              "offset" : 2321,
                                               "length" : 28
                                             }
                                           }
@@ -578,7 +578,7 @@
                                             "beginColumn" : 5,
                                             "endLine" : 82,
                                             "endColumn" : 33,
-                                            "offset" : 2315,
+                                            "offset" : 2321,
                                             "length" : 28
                                           }
                                         },
@@ -605,10 +605,10 @@
                                             "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                           },
                                           "beginLine" : 91,
-                                          "beginColumn" : 66,
+                                          "beginColumn" : 69,
                                           "endLine" : 91,
-                                          "endColumn" : 73,
-                                          "offset" : 2713,
+                                          "endColumn" : 76,
+                                          "offset" : 2730,
                                           "length" : 7
                                         }
                                       }
@@ -644,10 +644,10 @@
                                         "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                       },
                                       "beginLine" : 91,
-                                      "beginColumn" : 66,
+                                      "beginColumn" : 69,
                                       "endLine" : 91,
-                                      "endColumn" : 73,
-                                      "offset" : 2713,
+                                      "endColumn" : 76,
+                                      "offset" : 2730,
                                       "length" : 7
                                     }
                                   }
@@ -683,10 +683,10 @@
                                       "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                     },
                                     "beginLine" : 91,
-                                    "beginColumn" : 76,
+                                    "beginColumn" : 80,
                                     "endLine" : 91,
-                                    "endColumn" : 80,
-                                    "offset" : 2723,
+                                    "endColumn" : 84,
+                                    "offset" : 2741,
                                     "length" : 4
                                   }
                                 }
@@ -703,11 +703,11 @@
                                     "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                   },
                                   "beginLine" : 91,
-                                  "beginColumn" : 45,
+                                  "beginColumn" : 80,
                                   "endLine" : 91,
-                                  "endColumn" : 80,
-                                  "offset" : 2692,
-                                  "length" : 35
+                                  "endColumn" : 84,
+                                  "offset" : 2741,
+                                  "length" : 4
                                 }
                               },
                               "resOpt" : {
@@ -729,11 +729,11 @@
                                   "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                 },
                                 "beginLine" : 91,
-                                "beginColumn" : 6,
+                                "beginColumn" : 38,
                                 "endLine" : 91,
-                                "endColumn" : 80,
-                                "offset" : 2653,
-                                "length" : 74
+                                "endColumn" : 84,
+                                "offset" : 2699,
+                                "length" : 42
                               }
                             },
                             "resOpt" : {
@@ -781,7 +781,7 @@
                                               "beginColumn" : 5,
                                               "endLine" : 76,
                                               "endColumn" : 51,
-                                              "offset" : 2183,
+                                              "offset" : 2189,
                                               "length" : 46
                                             }
                                           }
@@ -801,7 +801,7 @@
                                             "beginColumn" : 5,
                                             "endLine" : 76,
                                             "endColumn" : 51,
-                                            "offset" : 2183,
+                                            "offset" : 2189,
                                             "length" : 46
                                           }
                                         },
@@ -860,10 +860,10 @@
                                             "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                           },
                                           "beginLine" : 85,
-                                          "beginColumn" : 32,
+                                          "beginColumn" : 34,
                                           "endLine" : 85,
-                                          "endColumn" : 36,
-                                          "offset" : 2426,
+                                          "endColumn" : 38,
+                                          "offset" : 2434,
                                           "length" : 4
                                         }
                                       }
@@ -880,10 +880,10 @@
                                           "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                         },
                                         "beginLine" : 85,
-                                        "beginColumn" : 31,
+                                        "beginColumn" : 33,
                                         "endLine" : 85,
-                                        "endColumn" : 36,
-                                        "offset" : 2425,
+                                        "endColumn" : 38,
+                                        "offset" : 2433,
                                         "length" : 5
                                       }
                                     },
@@ -906,11 +906,11 @@
                                         "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                       },
                                       "beginLine" : 85,
-                                      "beginColumn" : 8,
+                                      "beginColumn" : 33,
                                       "endLine" : 85,
-                                      "endColumn" : 36,
-                                      "offset" : 2402,
-                                      "length" : 28
+                                      "endColumn" : 38,
+                                      "offset" : 2433,
+                                      "length" : 5
                                     }
                                   },
                                   "resOpt" : {
@@ -921,7 +921,7 @@
                                   }
                                 }
                               },
-                              "op" : "&",
+                              "op" : "&&",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.Binary",
                                 "left" : {
@@ -947,7 +947,7 @@
                                               "beginColumn" : 5,
                                               "endLine" : 76,
                                               "endColumn" : 51,
-                                              "offset" : 2183,
+                                              "offset" : 2189,
                                               "length" : 46
                                             }
                                           }
@@ -967,7 +967,7 @@
                                             "beginColumn" : 5,
                                             "endLine" : 76,
                                             "endColumn" : 51,
-                                            "offset" : 2183,
+                                            "offset" : 2189,
                                             "length" : 46
                                           }
                                         },
@@ -1020,10 +1020,10 @@
                                           "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                         },
                                         "beginLine" : 85,
-                                        "beginColumn" : 64,
+                                        "beginColumn" : 68,
                                         "endLine" : 85,
-                                        "endColumn" : 69,
-                                        "offset" : 2458,
+                                        "endColumn" : 73,
+                                        "offset" : 2468,
                                         "length" : 5
                                       }
                                     }
@@ -1040,11 +1040,11 @@
                                         "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                       },
                                       "beginLine" : 85,
-                                      "beginColumn" : 41,
+                                      "beginColumn" : 68,
                                       "endLine" : 85,
-                                      "endColumn" : 69,
-                                      "offset" : 2435,
-                                      "length" : 28
+                                      "endColumn" : 73,
+                                      "offset" : 2468,
+                                      "length" : 5
                                     }
                                   },
                                   "resOpt" : {
@@ -1066,11 +1066,11 @@
                                       "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                     },
                                     "beginLine" : 85,
-                                    "beginColumn" : 8,
+                                    "beginColumn" : 33,
                                     "endLine" : 85,
-                                    "endColumn" : 69,
-                                    "offset" : 2402,
-                                    "length" : 61
+                                    "endColumn" : 73,
+                                    "offset" : 2433,
+                                    "length" : 35
                                   }
                                 },
                                 "resOpt" : {
@@ -1116,7 +1116,7 @@
                                                   "beginColumn" : 5,
                                                   "endLine" : 75,
                                                   "endColumn" : 45,
-                                                  "offset" : 2138,
+                                                  "offset" : 2144,
                                                   "length" : 40
                                                 }
                                               }
@@ -1136,7 +1136,7 @@
                                                 "beginColumn" : 5,
                                                 "endLine" : 75,
                                                 "endColumn" : 45,
-                                                "offset" : 2138,
+                                                "offset" : 2144,
                                                 "length" : 40
                                               }
                                             },
@@ -1163,10 +1163,10 @@
                                                 "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                               },
                                               "beginLine" : 87,
-                                              "beginColumn" : 21,
+                                              "beginColumn" : 22,
                                               "endLine" : 87,
-                                              "endColumn" : 28,
-                                              "offset" : 2516,
+                                              "endColumn" : 29,
+                                              "offset" : 2528,
                                               "length" : 7
                                             }
                                           }
@@ -1202,10 +1202,10 @@
                                             "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                           },
                                           "beginLine" : 87,
-                                          "beginColumn" : 21,
+                                          "beginColumn" : 22,
                                           "endLine" : 87,
-                                          "endColumn" : 28,
-                                          "offset" : 2516,
+                                          "endColumn" : 29,
+                                          "offset" : 2528,
                                           "length" : 7
                                         }
                                       }
@@ -1241,10 +1241,10 @@
                                           "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                         },
                                         "beginLine" : 87,
-                                        "beginColumn" : 32,
+                                        "beginColumn" : 33,
                                         "endLine" : 87,
-                                        "endColumn" : 36,
-                                        "offset" : 2527,
+                                        "endColumn" : 37,
+                                        "offset" : 2539,
                                         "length" : 4
                                       }
                                     }
@@ -1261,11 +1261,11 @@
                                         "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                       },
                                       "beginLine" : 87,
-                                      "beginColumn" : 8,
+                                      "beginColumn" : 33,
                                       "endLine" : 87,
-                                      "endColumn" : 36,
-                                      "offset" : 2503,
-                                      "length" : 28
+                                      "endColumn" : 37,
+                                      "offset" : 2539,
+                                      "length" : 4
                                     }
                                   },
                                   "resOpt" : {
@@ -1276,7 +1276,7 @@
                                   }
                                 }
                               },
-                              "op" : "&",
+                              "op" : "&&",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.Binary",
                                 "left" : {
@@ -1306,7 +1306,7 @@
                                                   "beginColumn" : 5,
                                                   "endLine" : 75,
                                                   "endColumn" : 45,
-                                                  "offset" : 2138,
+                                                  "offset" : 2144,
                                                   "length" : 40
                                                 }
                                               }
@@ -1326,7 +1326,7 @@
                                                 "beginColumn" : 5,
                                                 "endLine" : 75,
                                                 "endColumn" : 45,
-                                                "offset" : 2138,
+                                                "offset" : 2144,
                                                 "length" : 40
                                               }
                                             },
@@ -1353,10 +1353,10 @@
                                                 "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                               },
                                               "beginLine" : 87,
-                                              "beginColumn" : 55,
+                                              "beginColumn" : 57,
                                               "endLine" : 87,
-                                              "endColumn" : 62,
-                                              "offset" : 2550,
+                                              "endColumn" : 64,
+                                              "offset" : 2563,
                                               "length" : 7
                                             }
                                           }
@@ -1392,10 +1392,10 @@
                                             "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                           },
                                           "beginLine" : 87,
-                                          "beginColumn" : 55,
+                                          "beginColumn" : 57,
                                           "endLine" : 87,
-                                          "endColumn" : 62,
-                                          "offset" : 2550,
+                                          "endColumn" : 64,
+                                          "offset" : 2563,
                                           "length" : 7
                                         }
                                       }
@@ -1431,10 +1431,10 @@
                                           "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                         },
                                         "beginLine" : 87,
-                                        "beginColumn" : 66,
+                                        "beginColumn" : 68,
                                         "endLine" : 87,
-                                        "endColumn" : 71,
-                                        "offset" : 2561,
+                                        "endColumn" : 73,
+                                        "offset" : 2574,
                                         "length" : 5
                                       }
                                     }
@@ -1451,11 +1451,11 @@
                                         "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                       },
                                       "beginLine" : 87,
-                                      "beginColumn" : 41,
+                                      "beginColumn" : 68,
                                       "endLine" : 87,
-                                      "endColumn" : 71,
-                                      "offset" : 2536,
-                                      "length" : 30
+                                      "endColumn" : 73,
+                                      "offset" : 2574,
+                                      "length" : 5
                                     }
                                   },
                                   "resOpt" : {
@@ -1477,11 +1477,11 @@
                                       "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                     },
                                     "beginLine" : 87,
-                                    "beginColumn" : 8,
+                                    "beginColumn" : 33,
                                     "endLine" : 87,
-                                    "endColumn" : 71,
-                                    "offset" : 2503,
-                                    "length" : 63
+                                    "endColumn" : 73,
+                                    "offset" : 2539,
+                                    "length" : 36
                                   }
                                 },
                                 "resOpt" : {
@@ -1521,7 +1521,7 @@
                     "beginColumn" : 5,
                     "endLine" : 68,
                     "endColumn" : 35,
-                    "offset" : 1974,
+                    "offset" : 1980,
                     "length" : 30
                   }
                 }
@@ -1555,7 +1555,7 @@
                         "beginColumn" : 5,
                         "endLine" : 97,
                         "endColumn" : 52,
-                        "offset" : 2800,
+                        "offset" : 2819,
                         "length" : 47
                       }
                     }
@@ -1763,7 +1763,7 @@
                                               "beginColumn" : 5,
                                               "endLine" : 97,
                                               "endColumn" : 52,
-                                              "offset" : 2800,
+                                              "offset" : 2819,
                                               "length" : 47
                                             }
                                           }
@@ -1783,7 +1783,7 @@
                                             "beginColumn" : 5,
                                             "endLine" : 97,
                                             "endColumn" : 52,
-                                            "offset" : 2800,
+                                            "offset" : 2819,
                                             "length" : 47
                                           }
                                         },
@@ -1842,10 +1842,10 @@
                                             "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                           },
                                           "beginLine" : 105,
-                                          "beginColumn" : 32,
+                                          "beginColumn" : 34,
                                           "endLine" : 105,
-                                          "endColumn" : 36,
-                                          "offset" : 3044,
+                                          "endColumn" : 38,
+                                          "offset" : 3065,
                                           "length" : 4
                                         }
                                       }
@@ -1862,10 +1862,10 @@
                                           "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                         },
                                         "beginLine" : 105,
-                                        "beginColumn" : 31,
+                                        "beginColumn" : 33,
                                         "endLine" : 105,
-                                        "endColumn" : 36,
-                                        "offset" : 3043,
+                                        "endColumn" : 38,
+                                        "offset" : 3064,
                                         "length" : 5
                                       }
                                     },
@@ -1888,11 +1888,11 @@
                                         "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                       },
                                       "beginLine" : 105,
-                                      "beginColumn" : 8,
+                                      "beginColumn" : 33,
                                       "endLine" : 105,
-                                      "endColumn" : 36,
-                                      "offset" : 3020,
-                                      "length" : 28
+                                      "endColumn" : 38,
+                                      "offset" : 3064,
+                                      "length" : 5
                                     }
                                   },
                                   "resOpt" : {
@@ -1903,7 +1903,7 @@
                                   }
                                 }
                               },
-                              "op" : "&",
+                              "op" : "&&",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.Binary",
                                 "left" : {
@@ -1929,7 +1929,7 @@
                                               "beginColumn" : 5,
                                               "endLine" : 97,
                                               "endColumn" : 52,
-                                              "offset" : 2800,
+                                              "offset" : 2819,
                                               "length" : 47
                                             }
                                           }
@@ -1949,7 +1949,7 @@
                                             "beginColumn" : 5,
                                             "endLine" : 97,
                                             "endColumn" : 52,
-                                            "offset" : 2800,
+                                            "offset" : 2819,
                                             "length" : 47
                                           }
                                         },
@@ -2002,10 +2002,10 @@
                                           "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                         },
                                         "beginLine" : 105,
-                                        "beginColumn" : 64,
+                                        "beginColumn" : 68,
                                         "endLine" : 105,
-                                        "endColumn" : 69,
-                                        "offset" : 3076,
+                                        "endColumn" : 73,
+                                        "offset" : 3099,
                                         "length" : 5
                                       }
                                     }
@@ -2022,11 +2022,11 @@
                                         "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                       },
                                       "beginLine" : 105,
-                                      "beginColumn" : 41,
+                                      "beginColumn" : 68,
                                       "endLine" : 105,
-                                      "endColumn" : 69,
-                                      "offset" : 3053,
-                                      "length" : 28
+                                      "endColumn" : 73,
+                                      "offset" : 3099,
+                                      "length" : 5
                                     }
                                   },
                                   "resOpt" : {
@@ -2048,11 +2048,11 @@
                                       "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                     },
                                     "beginLine" : 105,
-                                    "beginColumn" : 8,
+                                    "beginColumn" : 33,
                                     "endLine" : 105,
-                                    "endColumn" : 69,
-                                    "offset" : 3020,
-                                    "length" : 61
+                                    "endColumn" : 73,
+                                    "offset" : 3064,
+                                    "length" : 35
                                   }
                                 },
                                 "resOpt" : {
@@ -2094,7 +2094,7 @@
                     "beginColumn" : 5,
                     "endLine" : 70,
                     "endColumn" : 64,
-                    "offset" : 2024,
+                    "offset" : 2030,
                     "length" : 59
                   }
                 }
@@ -2117,7 +2117,7 @@
                         "beginColumn" : 5,
                         "endLine" : 68,
                         "endColumn" : 35,
-                        "offset" : 1974,
+                        "offset" : 1980,
                         "length" : 30
                       }
                     }
@@ -2139,7 +2139,7 @@
                           "beginColumn" : 5,
                           "endLine" : 97,
                           "endColumn" : 52,
-                          "offset" : 2800,
+                          "offset" : 2819,
                           "length" : 47
                         }
                       }
@@ -2172,7 +2172,7 @@
                         "beginColumn" : 5,
                         "endLine" : 67,
                         "endColumn" : 37,
-                        "offset" : 1937,
+                        "offset" : 1943,
                         "length" : 32
                       }
                     }
@@ -2194,7 +2194,7 @@
                           "beginColumn" : 5,
                           "endLine" : 76,
                           "endColumn" : 51,
-                          "offset" : 2183,
+                          "offset" : 2189,
                           "length" : 46
                         }
                       }
@@ -2246,7 +2246,7 @@
                     "beginColumn" : 5,
                     "endLine" : 70,
                     "endColumn" : 64,
-                    "offset" : 2024,
+                    "offset" : 2030,
                     "length" : 59
                   }
                 }
@@ -2268,7 +2268,7 @@
                       "beginColumn" : 5,
                       "endLine" : 68,
                       "endColumn" : 35,
-                      "offset" : 1974,
+                      "offset" : 1980,
                       "length" : 30
                     }
                   }
@@ -2290,7 +2290,7 @@
                         "beginColumn" : 5,
                         "endLine" : 97,
                         "endColumn" : 52,
-                        "offset" : 2800,
+                        "offset" : 2819,
                         "length" : 47
                       }
                     }
@@ -2321,7 +2321,7 @@
                       "beginColumn" : 5,
                       "endLine" : 67,
                       "endColumn" : 37,
-                      "offset" : 1937,
+                      "offset" : 1943,
                       "length" : 32
                     }
                   }
@@ -2343,7 +2343,7 @@
                         "beginColumn" : 5,
                         "endLine" : 76,
                         "endColumn" : 51,
-                        "offset" : 2183,
+                        "offset" : 2189,
                         "length" : 46
                       }
                     }
@@ -2379,7 +2379,7 @@
                         "beginColumn" : 5,
                         "endLine" : 70,
                         "endColumn" : 64,
-                        "offset" : 2024,
+                        "offset" : 2030,
                         "length" : 59
                       }
                     }
@@ -2399,7 +2399,7 @@
                         "beginColumn" : 5,
                         "endLine" : 59,
                         "endColumn" : 23,
-                        "offset" : 1821,
+                        "offset" : 1827,
                         "length" : 18
                       }
                     }
@@ -4422,10 +4422,10 @@
                               "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                             },
                             "beginLine" : 27,
-                            "beginColumn" : 23,
+                            "beginColumn" : 24,
                             "endLine" : 27,
-                            "endColumn" : 29,
-                            "offset" : 962,
+                            "endColumn" : 30,
+                            "offset" : 963,
                             "length" : 6
                           }
                         }
@@ -4442,10 +4442,10 @@
                             "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                           },
                           "beginLine" : 27,
-                          "beginColumn" : 22,
+                          "beginColumn" : 23,
                           "endLine" : 27,
-                          "endColumn" : 29,
-                          "offset" : 961,
+                          "endColumn" : 30,
+                          "offset" : 962,
                           "length" : 7
                         }
                       },
@@ -4470,9 +4470,9 @@
                         "beginLine" : 27,
                         "beginColumn" : 11,
                         "endLine" : 27,
-                        "endColumn" : 29,
+                        "endColumn" : 30,
                         "offset" : 950,
-                        "length" : 18
+                        "length" : 12
                       }
                     },
                     "resOpt" : {
@@ -4538,7 +4538,7 @@
                 "beginColumn" : 7,
                 "endLine" : 42,
                 "endColumn" : 31,
-                "offset" : 1459,
+                "offset" : 1461,
                 "length" : 24
               }
             }
@@ -4767,10 +4767,10 @@
                                   "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                 },
                                 "beginLine" : 27,
-                                "beginColumn" : 23,
+                                "beginColumn" : 24,
                                 "endLine" : 27,
-                                "endColumn" : 29,
-                                "offset" : 962,
+                                "endColumn" : 30,
+                                "offset" : 963,
                                 "length" : 6
                               }
                             }
@@ -4787,10 +4787,10 @@
                                 "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                               },
                               "beginLine" : 27,
-                              "beginColumn" : 22,
+                              "beginColumn" : 23,
                               "endLine" : 27,
-                              "endColumn" : 29,
-                              "offset" : 961,
+                              "endColumn" : 30,
+                              "offset" : 962,
                               "length" : 7
                             }
                           },
@@ -4815,9 +4815,9 @@
                             "beginLine" : 27,
                             "beginColumn" : 11,
                             "endLine" : 27,
-                            "endColumn" : 29,
+                            "endColumn" : 30,
                             "offset" : 950,
-                            "length" : 18
+                            "length" : 12
                           }
                         },
                         "resOpt" : {
@@ -4860,7 +4860,7 @@
                 "beginColumn" : 7,
                 "endLine" : 43,
                 "endColumn" : 32,
-                "offset" : 1490,
+                "offset" : 1492,
                 "length" : 25
               }
             }
@@ -5089,10 +5089,10 @@
                                   "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                                 },
                                 "beginLine" : 27,
-                                "beginColumn" : 23,
+                                "beginColumn" : 24,
                                 "endLine" : 27,
-                                "endColumn" : 29,
-                                "offset" : 962,
+                                "endColumn" : 30,
+                                "offset" : 963,
                                 "length" : 6
                               }
                             }
@@ -5109,10 +5109,10 @@
                                 "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                               },
                               "beginLine" : 27,
-                              "beginColumn" : 22,
+                              "beginColumn" : 23,
                               "endLine" : 27,
-                              "endColumn" : 29,
-                              "offset" : 961,
+                              "endColumn" : 30,
+                              "offset" : 962,
                               "length" : 7
                             }
                           },
@@ -5137,9 +5137,9 @@
                             "beginLine" : 27,
                             "beginColumn" : 11,
                             "endLine" : 27,
-                            "endColumn" : 29,
+                            "endColumn" : 30,
                             "offset" : 950,
-                            "length" : 18
+                            "length" : 12
                           }
                         },
                         "resOpt" : {
@@ -5248,7 +5248,7 @@
                                     "beginColumn" : 7,
                                     "endLine" : 42,
                                     "endColumn" : 31,
-                                    "offset" : 1459,
+                                    "offset" : 1461,
                                     "length" : 24
                                   }
                                 }
@@ -5268,7 +5268,7 @@
                                   "beginColumn" : 7,
                                   "endLine" : 42,
                                   "endColumn" : 31,
-                                  "offset" : 1459,
+                                  "offset" : 1461,
                                   "length" : 24
                                 }
                               },
@@ -5321,10 +5321,10 @@
                                 "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                               },
                               "beginLine" : 47,
-                              "beginColumn" : 26,
+                              "beginColumn" : 27,
                               "endLine" : 47,
-                              "endColumn" : 30,
-                              "offset" : 1626,
+                              "endColumn" : 31,
+                              "offset" : 1629,
                               "length" : 4
                             }
                           }
@@ -5341,11 +5341,11 @@
                               "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                             },
                             "beginLine" : 47,
-                            "beginColumn" : 11,
+                            "beginColumn" : 27,
                             "endLine" : 47,
-                            "endColumn" : 30,
-                            "offset" : 1611,
-                            "length" : 19
+                            "endColumn" : 31,
+                            "offset" : 1629,
+                            "length" : 4
                           }
                         },
                         "resOpt" : {
@@ -5356,7 +5356,7 @@
                         }
                       }
                     },
-                    "op" : "&",
+                    "op" : "&&",
                     "right" : {
                       "type" : "org.sireum.lang.ast.Exp.Binary",
                       "left" : {
@@ -5382,7 +5382,7 @@
                                     "beginColumn" : 7,
                                     "endLine" : 43,
                                     "endColumn" : 32,
-                                    "offset" : 1490,
+                                    "offset" : 1492,
                                     "length" : 25
                                   }
                                 }
@@ -5402,7 +5402,7 @@
                                   "beginColumn" : 7,
                                   "endLine" : 43,
                                   "endColumn" : 32,
-                                  "offset" : 1490,
+                                  "offset" : 1492,
                                   "length" : 25
                                 }
                               },
@@ -5455,10 +5455,10 @@
                                 "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                               },
                               "beginLine" : 48,
-                              "beginColumn" : 27,
+                              "beginColumn" : 28,
                               "endLine" : 48,
-                              "endColumn" : 32,
-                              "offset" : 1661,
+                              "endColumn" : 33,
+                              "offset" : 1665,
                               "length" : 5
                             }
                           }
@@ -5475,11 +5475,11 @@
                               "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                             },
                             "beginLine" : 48,
-                            "beginColumn" : 11,
+                            "beginColumn" : 28,
                             "endLine" : 48,
-                            "endColumn" : 32,
-                            "offset" : 1645,
-                            "length" : 21
+                            "endColumn" : 33,
+                            "offset" : 1665,
+                            "length" : 5
                           }
                         },
                         "resOpt" : {
@@ -5501,11 +5501,11 @@
                             "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                           },
                           "beginLine" : 47,
-                          "beginColumn" : 11,
+                          "beginColumn" : 27,
                           "endLine" : 48,
-                          "endColumn" : 32,
-                          "offset" : 1611,
-                          "length" : 55
+                          "endColumn" : 33,
+                          "offset" : 1629,
+                          "length" : 37
                         }
                       },
                       "resOpt" : {
@@ -5516,7 +5516,7 @@
                       }
                     }
                   },
-                  "op" : "&",
+                  "op" : "&&",
                   "right" : {
                     "type" : "org.sireum.lang.ast.Exp.Binary",
                     "left" : {
@@ -5542,7 +5542,7 @@
                                   "beginColumn" : 7,
                                   "endLine" : 42,
                                   "endColumn" : 31,
-                                  "offset" : 1459,
+                                  "offset" : 1461,
                                   "length" : 24
                                 }
                               }
@@ -5562,7 +5562,7 @@
                                 "beginColumn" : 7,
                                 "endLine" : 42,
                                 "endColumn" : 31,
-                                "offset" : 1459,
+                                "offset" : 1461,
                                 "length" : 24
                               }
                             },
@@ -5624,7 +5624,7 @@
                                   "beginColumn" : 7,
                                   "endLine" : 43,
                                   "endColumn" : 32,
-                                  "offset" : 1490,
+                                  "offset" : 1492,
                                   "length" : 25
                                 }
                               }
@@ -5644,7 +5644,7 @@
                                 "beginColumn" : 7,
                                 "endLine" : 43,
                                 "endColumn" : 32,
-                                "offset" : 1490,
+                                "offset" : 1492,
                                 "length" : 25
                               }
                             },
@@ -5685,20 +5685,7 @@
                     "attr" : {
                       "type" : "org.sireum.lang.ast.ResolvedAttr",
                       "posOpt" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                          },
-                          "beginLine" : 49,
-                          "beginColumn" : 11,
-                          "endLine" : 49,
-                          "endColumn" : 38,
-                          "offset" : 1681,
-                          "length" : 27
-                        }
+                        "type" : "None"
                       },
                       "resOpt" : {
                         "type" : "None"
@@ -5719,11 +5706,11 @@
                           "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
                         },
                         "beginLine" : 47,
-                        "beginColumn" : 11,
-                        "endLine" : 49,
-                        "endColumn" : 38,
-                        "offset" : 1611,
-                        "length" : 97
+                        "beginColumn" : 27,
+                        "endLine" : 48,
+                        "endColumn" : 33,
+                        "offset" : 1629,
+                        "length" : 37
                       }
                     },
                     "resOpt" : {
