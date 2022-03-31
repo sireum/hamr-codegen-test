@@ -18,7 +18,7 @@
             "beginColumn" : 3,
             "endLine" : 88,
             "endColumn" : 14,
-            "offset" : 2500,
+            "offset" : 2501,
             "length" : 82
           }
         }
@@ -50,7 +50,7 @@
                 "beginColumn" : 5,
                 "endLine" : 87,
                 "endColumn" : 23,
-                "offset" : 2550,
+                "offset" : 2551,
                 "length" : 18
               }
             }
@@ -86,7 +86,7 @@
                     "beginColumn" : 5,
                     "endLine" : 95,
                     "endColumn" : 17,
-                    "offset" : 2666,
+                    "offset" : 2667,
                     "length" : 12
                   }
                 }
@@ -120,7 +120,7 @@
                         "beginColumn" : 5,
                         "endLine" : 100,
                         "endColumn" : 40,
-                        "offset" : 2723,
+                        "offset" : 2724,
                         "length" : 35
                       }
                     }
@@ -192,7 +192,7 @@
                         "beginColumn" : 5,
                         "endLine" : 101,
                         "endColumn" : 39,
-                        "offset" : 2763,
+                        "offset" : 2764,
                         "length" : 34
                       }
                     }
@@ -2250,12 +2250,12 @@
                               "type" : "Some",
                               "value" : "\/data-invariants\/Data_Invariants.aadl"
                             },
-                            "beginLine" : 18,
-                            "beginColumn" : 7,
-                            "endLine" : 18,
-                            "endColumn" : 39,
-                            "offset" : 618,
-                            "length" : 32
+                            "beginLine" : 27,
+                            "beginColumn" : 11,
+                            "endLine" : 27,
+                            "endColumn" : 18,
+                            "offset" : 944,
+                            "length" : 7
                           }
                         }
                       }
@@ -2357,7 +2357,7 @@
                         "endLine" : 27,
                         "endColumn" : 30,
                         "offset" : 944,
-                        "length" : 12
+                        "length" : 19
                       }
                     },
                     "resOpt" : {
@@ -2468,7 +2468,7 @@
                         "endLine" : 30,
                         "endColumn" : 26,
                         "offset" : 1023,
-                        "length" : 12
+                        "length" : 15
                       }
                     },
                     "resOpt" : {
@@ -2549,7 +2549,7 @@
                           "endLine" : 32,
                           "endColumn" : 17,
                           "offset" : 1085,
-                          "length" : 4
+                          "length" : 5
                         }
                       },
                       "resOpt" : {
@@ -2625,7 +2625,7 @@
                           "endLine" : 32,
                           "endColumn" : 28,
                           "offset" : 1096,
-                          "length" : 4
+                          "length" : 5
                         }
                       },
                       "resOpt" : {
@@ -2651,7 +2651,7 @@
                         "endLine" : 32,
                         "endColumn" : 28,
                         "offset" : 1085,
-                        "length" : 11
+                        "length" : 16
                       }
                     },
                     "resOpt" : {
@@ -2844,7 +2844,7 @@
                             "endLine" : 38,
                             "endColumn" : 23,
                             "offset" : 1213,
-                            "length" : 4
+                            "length" : 5
                           }
                         },
                         "resOpt" : {
@@ -2920,7 +2920,7 @@
                             "endLine" : 38,
                             "endColumn" : 34,
                             "offset" : 1224,
-                            "length" : 4
+                            "length" : 5
                           }
                         },
                         "resOpt" : {
@@ -2946,7 +2946,7 @@
                           "endLine" : 38,
                           "endColumn" : 34,
                           "offset" : 1213,
-                          "length" : 11
+                          "length" : 16
                         }
                       },
                       "resOpt" : {
@@ -2972,7 +2972,7 @@
                         "endLine" : 38,
                         "endColumn" : 34,
                         "offset" : 1206,
-                        "length" : 17
+                        "length" : 23
                       }
                     },
                     "resOpt" : {
@@ -3053,7 +3053,7 @@
                           "endLine" : 40,
                           "endColumn" : 17,
                           "offset" : 1274,
-                          "length" : 4
+                          "length" : 5
                         }
                       },
                       "resOpt" : {
@@ -3163,7 +3163,7 @@
                             "endLine" : 40,
                             "endColumn" : 32,
                             "offset" : 1286,
-                            "length" : 7
+                            "length" : 8
                           }
                         },
                         "resOpt" : {
@@ -3213,7 +3213,7 @@
                           "endLine" : 40,
                           "endColumn" : 39,
                           "offset" : 1286,
-                          "length" : 8
+                          "length" : 15
                         }
                       },
                       "resOpt" : {
@@ -3239,7 +3239,7 @@
                         "endLine" : 40,
                         "endColumn" : 39,
                         "offset" : 1274,
-                        "length" : 16
+                        "length" : 27
                       }
                     },
                     "resOpt" : {
@@ -3279,7 +3279,7 @@
                                 "beginColumn" : 11,
                                 "endLine" : 42,
                                 "endColumn" : 12,
-                                "offset" : 1342,
+                                "offset" : 1343,
                                 "length" : 1
                               }
                             }
@@ -3303,7 +3303,7 @@
                                 "beginColumn" : 15,
                                 "endLine" : 42,
                                 "endColumn" : 16,
-                                "offset" : 1346,
+                                "offset" : 1347,
                                 "length" : 1
                               }
                             }
@@ -3323,8 +3323,8 @@
                               "beginColumn" : 11,
                               "endLine" : 42,
                               "endColumn" : 16,
-                              "offset" : 1342,
-                              "length" : 4
+                              "offset" : 1343,
+                              "length" : 5
                             }
                           },
                           "resOpt" : {
@@ -3355,7 +3355,7 @@
                                 "beginColumn" : 20,
                                 "endLine" : 42,
                                 "endColumn" : 21,
-                                "offset" : 1351,
+                                "offset" : 1352,
                                 "length" : 1
                               }
                             }
@@ -3379,7 +3379,7 @@
                                 "beginColumn" : 24,
                                 "endLine" : 42,
                                 "endColumn" : 25,
-                                "offset" : 1355,
+                                "offset" : 1356,
                                 "length" : 1
                               }
                             }
@@ -3399,8 +3399,8 @@
                               "beginColumn" : 20,
                               "endLine" : 42,
                               "endColumn" : 25,
-                              "offset" : 1351,
-                              "length" : 4
+                              "offset" : 1352,
+                              "length" : 5
                             }
                           },
                           "resOpt" : {
@@ -3425,8 +3425,8 @@
                             "beginColumn" : 11,
                             "endLine" : 42,
                             "endColumn" : 25,
-                            "offset" : 1342,
-                            "length" : 9
+                            "offset" : 1343,
+                            "length" : 14
                           }
                         },
                         "resOpt" : {
@@ -3457,7 +3457,7 @@
                               "beginColumn" : 30,
                               "endLine" : 42,
                               "endColumn" : 31,
-                              "offset" : 1361,
+                              "offset" : 1362,
                               "length" : 1
                             }
                           }
@@ -3481,7 +3481,7 @@
                               "beginColumn" : 34,
                               "endLine" : 42,
                               "endColumn" : 35,
-                              "offset" : 1365,
+                              "offset" : 1366,
                               "length" : 1
                             }
                           }
@@ -3501,8 +3501,8 @@
                             "beginColumn" : 30,
                             "endLine" : 42,
                             "endColumn" : 35,
-                            "offset" : 1361,
-                            "length" : 4
+                            "offset" : 1362,
+                            "length" : 5
                           }
                         },
                         "resOpt" : {
@@ -3527,8 +3527,8 @@
                           "beginColumn" : 11,
                           "endLine" : 42,
                           "endColumn" : 35,
-                          "offset" : 1342,
-                          "length" : 14
+                          "offset" : 1343,
+                          "length" : 24
                         }
                       },
                       "resOpt" : {
@@ -3557,7 +3557,7 @@
                           "beginColumn" : 40,
                           "endLine" : 42,
                           "endColumn" : 41,
-                          "offset" : 1371,
+                          "offset" : 1372,
                           "length" : 1
                         }
                       }
@@ -3577,8 +3577,8 @@
                         "beginColumn" : 11,
                         "endLine" : 42,
                         "endColumn" : 41,
-                        "offset" : 1342,
-                        "length" : 16
+                        "offset" : 1343,
+                        "length" : 30
                       }
                     },
                     "resOpt" : {
@@ -3644,7 +3644,7 @@
                 "beginColumn" : 7,
                 "endLine" : 70,
                 "endColumn" : 31,
-                "offset" : 2184,
+                "offset" : 2185,
                 "length" : 24
               }
             }
@@ -3816,12 +3816,12 @@
                                   "type" : "Some",
                                   "value" : "\/data-invariants\/Data_Invariants.aadl"
                                 },
-                                "beginLine" : 18,
-                                "beginColumn" : 7,
-                                "endLine" : 18,
-                                "endColumn" : 39,
-                                "offset" : 618,
-                                "length" : 32
+                                "beginLine" : 27,
+                                "beginColumn" : 11,
+                                "endLine" : 27,
+                                "endColumn" : 18,
+                                "offset" : 944,
+                                "length" : 7
                               }
                             }
                           }
@@ -3923,7 +3923,7 @@
                             "endLine" : 27,
                             "endColumn" : 30,
                             "offset" : 944,
-                            "length" : 12
+                            "length" : 19
                           }
                         },
                         "resOpt" : {
@@ -4034,7 +4034,7 @@
                             "endLine" : 30,
                             "endColumn" : 26,
                             "offset" : 1023,
-                            "length" : 12
+                            "length" : 15
                           }
                         },
                         "resOpt" : {
@@ -4115,7 +4115,7 @@
                               "endLine" : 32,
                               "endColumn" : 17,
                               "offset" : 1085,
-                              "length" : 4
+                              "length" : 5
                             }
                           },
                           "resOpt" : {
@@ -4191,7 +4191,7 @@
                               "endLine" : 32,
                               "endColumn" : 28,
                               "offset" : 1096,
-                              "length" : 4
+                              "length" : 5
                             }
                           },
                           "resOpt" : {
@@ -4217,7 +4217,7 @@
                             "endLine" : 32,
                             "endColumn" : 28,
                             "offset" : 1085,
-                            "length" : 11
+                            "length" : 16
                           }
                         },
                         "resOpt" : {
@@ -4410,7 +4410,7 @@
                                 "endLine" : 38,
                                 "endColumn" : 23,
                                 "offset" : 1213,
-                                "length" : 4
+                                "length" : 5
                               }
                             },
                             "resOpt" : {
@@ -4486,7 +4486,7 @@
                                 "endLine" : 38,
                                 "endColumn" : 34,
                                 "offset" : 1224,
-                                "length" : 4
+                                "length" : 5
                               }
                             },
                             "resOpt" : {
@@ -4512,7 +4512,7 @@
                               "endLine" : 38,
                               "endColumn" : 34,
                               "offset" : 1213,
-                              "length" : 11
+                              "length" : 16
                             }
                           },
                           "resOpt" : {
@@ -4538,7 +4538,7 @@
                             "endLine" : 38,
                             "endColumn" : 34,
                             "offset" : 1206,
-                            "length" : 17
+                            "length" : 23
                           }
                         },
                         "resOpt" : {
@@ -4619,7 +4619,7 @@
                               "endLine" : 40,
                               "endColumn" : 17,
                               "offset" : 1274,
-                              "length" : 4
+                              "length" : 5
                             }
                           },
                           "resOpt" : {
@@ -4729,7 +4729,7 @@
                                 "endLine" : 40,
                                 "endColumn" : 32,
                                 "offset" : 1286,
-                                "length" : 7
+                                "length" : 8
                               }
                             },
                             "resOpt" : {
@@ -4779,7 +4779,7 @@
                               "endLine" : 40,
                               "endColumn" : 39,
                               "offset" : 1286,
-                              "length" : 8
+                              "length" : 15
                             }
                           },
                           "resOpt" : {
@@ -4805,7 +4805,7 @@
                             "endLine" : 40,
                             "endColumn" : 39,
                             "offset" : 1274,
-                            "length" : 16
+                            "length" : 27
                           }
                         },
                         "resOpt" : {
@@ -4845,7 +4845,7 @@
                                     "beginColumn" : 11,
                                     "endLine" : 42,
                                     "endColumn" : 12,
-                                    "offset" : 1342,
+                                    "offset" : 1343,
                                     "length" : 1
                                   }
                                 }
@@ -4869,7 +4869,7 @@
                                     "beginColumn" : 15,
                                     "endLine" : 42,
                                     "endColumn" : 16,
-                                    "offset" : 1346,
+                                    "offset" : 1347,
                                     "length" : 1
                                   }
                                 }
@@ -4889,8 +4889,8 @@
                                   "beginColumn" : 11,
                                   "endLine" : 42,
                                   "endColumn" : 16,
-                                  "offset" : 1342,
-                                  "length" : 4
+                                  "offset" : 1343,
+                                  "length" : 5
                                 }
                               },
                               "resOpt" : {
@@ -4921,7 +4921,7 @@
                                     "beginColumn" : 20,
                                     "endLine" : 42,
                                     "endColumn" : 21,
-                                    "offset" : 1351,
+                                    "offset" : 1352,
                                     "length" : 1
                                   }
                                 }
@@ -4945,7 +4945,7 @@
                                     "beginColumn" : 24,
                                     "endLine" : 42,
                                     "endColumn" : 25,
-                                    "offset" : 1355,
+                                    "offset" : 1356,
                                     "length" : 1
                                   }
                                 }
@@ -4965,8 +4965,8 @@
                                   "beginColumn" : 20,
                                   "endLine" : 42,
                                   "endColumn" : 25,
-                                  "offset" : 1351,
-                                  "length" : 4
+                                  "offset" : 1352,
+                                  "length" : 5
                                 }
                               },
                               "resOpt" : {
@@ -4991,8 +4991,8 @@
                                 "beginColumn" : 11,
                                 "endLine" : 42,
                                 "endColumn" : 25,
-                                "offset" : 1342,
-                                "length" : 9
+                                "offset" : 1343,
+                                "length" : 14
                               }
                             },
                             "resOpt" : {
@@ -5023,7 +5023,7 @@
                                   "beginColumn" : 30,
                                   "endLine" : 42,
                                   "endColumn" : 31,
-                                  "offset" : 1361,
+                                  "offset" : 1362,
                                   "length" : 1
                                 }
                               }
@@ -5047,7 +5047,7 @@
                                   "beginColumn" : 34,
                                   "endLine" : 42,
                                   "endColumn" : 35,
-                                  "offset" : 1365,
+                                  "offset" : 1366,
                                   "length" : 1
                                 }
                               }
@@ -5067,8 +5067,8 @@
                                 "beginColumn" : 30,
                                 "endLine" : 42,
                                 "endColumn" : 35,
-                                "offset" : 1361,
-                                "length" : 4
+                                "offset" : 1362,
+                                "length" : 5
                               }
                             },
                             "resOpt" : {
@@ -5093,8 +5093,8 @@
                               "beginColumn" : 11,
                               "endLine" : 42,
                               "endColumn" : 35,
-                              "offset" : 1342,
-                              "length" : 14
+                              "offset" : 1343,
+                              "length" : 24
                             }
                           },
                           "resOpt" : {
@@ -5123,7 +5123,7 @@
                               "beginColumn" : 40,
                               "endLine" : 42,
                               "endColumn" : 41,
-                              "offset" : 1371,
+                              "offset" : 1372,
                               "length" : 1
                             }
                           }
@@ -5143,8 +5143,8 @@
                             "beginColumn" : 11,
                             "endLine" : 42,
                             "endColumn" : 41,
-                            "offset" : 1342,
-                            "length" : 16
+                            "offset" : 1343,
+                            "length" : 30
                           }
                         },
                         "resOpt" : {
@@ -5187,7 +5187,7 @@
                 "beginColumn" : 7,
                 "endLine" : 71,
                 "endColumn" : 32,
-                "offset" : 2215,
+                "offset" : 2216,
                 "length" : 25
               }
             }
@@ -5359,12 +5359,12 @@
                                   "type" : "Some",
                                   "value" : "\/data-invariants\/Data_Invariants.aadl"
                                 },
-                                "beginLine" : 18,
-                                "beginColumn" : 7,
-                                "endLine" : 18,
-                                "endColumn" : 39,
-                                "offset" : 618,
-                                "length" : 32
+                                "beginLine" : 27,
+                                "beginColumn" : 11,
+                                "endLine" : 27,
+                                "endColumn" : 18,
+                                "offset" : 944,
+                                "length" : 7
                               }
                             }
                           }
@@ -5466,7 +5466,7 @@
                             "endLine" : 27,
                             "endColumn" : 30,
                             "offset" : 944,
-                            "length" : 12
+                            "length" : 19
                           }
                         },
                         "resOpt" : {
@@ -5577,7 +5577,7 @@
                             "endLine" : 30,
                             "endColumn" : 26,
                             "offset" : 1023,
-                            "length" : 12
+                            "length" : 15
                           }
                         },
                         "resOpt" : {
@@ -5658,7 +5658,7 @@
                               "endLine" : 32,
                               "endColumn" : 17,
                               "offset" : 1085,
-                              "length" : 4
+                              "length" : 5
                             }
                           },
                           "resOpt" : {
@@ -5734,7 +5734,7 @@
                               "endLine" : 32,
                               "endColumn" : 28,
                               "offset" : 1096,
-                              "length" : 4
+                              "length" : 5
                             }
                           },
                           "resOpt" : {
@@ -5760,7 +5760,7 @@
                             "endLine" : 32,
                             "endColumn" : 28,
                             "offset" : 1085,
-                            "length" : 11
+                            "length" : 16
                           }
                         },
                         "resOpt" : {
@@ -5953,7 +5953,7 @@
                                 "endLine" : 38,
                                 "endColumn" : 23,
                                 "offset" : 1213,
-                                "length" : 4
+                                "length" : 5
                               }
                             },
                             "resOpt" : {
@@ -6029,7 +6029,7 @@
                                 "endLine" : 38,
                                 "endColumn" : 34,
                                 "offset" : 1224,
-                                "length" : 4
+                                "length" : 5
                               }
                             },
                             "resOpt" : {
@@ -6055,7 +6055,7 @@
                               "endLine" : 38,
                               "endColumn" : 34,
                               "offset" : 1213,
-                              "length" : 11
+                              "length" : 16
                             }
                           },
                           "resOpt" : {
@@ -6081,7 +6081,7 @@
                             "endLine" : 38,
                             "endColumn" : 34,
                             "offset" : 1206,
-                            "length" : 17
+                            "length" : 23
                           }
                         },
                         "resOpt" : {
@@ -6162,7 +6162,7 @@
                               "endLine" : 40,
                               "endColumn" : 17,
                               "offset" : 1274,
-                              "length" : 4
+                              "length" : 5
                             }
                           },
                           "resOpt" : {
@@ -6272,7 +6272,7 @@
                                 "endLine" : 40,
                                 "endColumn" : 32,
                                 "offset" : 1286,
-                                "length" : 7
+                                "length" : 8
                               }
                             },
                             "resOpt" : {
@@ -6322,7 +6322,7 @@
                               "endLine" : 40,
                               "endColumn" : 39,
                               "offset" : 1286,
-                              "length" : 8
+                              "length" : 15
                             }
                           },
                           "resOpt" : {
@@ -6348,7 +6348,7 @@
                             "endLine" : 40,
                             "endColumn" : 39,
                             "offset" : 1274,
-                            "length" : 16
+                            "length" : 27
                           }
                         },
                         "resOpt" : {
@@ -6388,7 +6388,7 @@
                                     "beginColumn" : 11,
                                     "endLine" : 42,
                                     "endColumn" : 12,
-                                    "offset" : 1342,
+                                    "offset" : 1343,
                                     "length" : 1
                                   }
                                 }
@@ -6412,7 +6412,7 @@
                                     "beginColumn" : 15,
                                     "endLine" : 42,
                                     "endColumn" : 16,
-                                    "offset" : 1346,
+                                    "offset" : 1347,
                                     "length" : 1
                                   }
                                 }
@@ -6432,8 +6432,8 @@
                                   "beginColumn" : 11,
                                   "endLine" : 42,
                                   "endColumn" : 16,
-                                  "offset" : 1342,
-                                  "length" : 4
+                                  "offset" : 1343,
+                                  "length" : 5
                                 }
                               },
                               "resOpt" : {
@@ -6464,7 +6464,7 @@
                                     "beginColumn" : 20,
                                     "endLine" : 42,
                                     "endColumn" : 21,
-                                    "offset" : 1351,
+                                    "offset" : 1352,
                                     "length" : 1
                                   }
                                 }
@@ -6488,7 +6488,7 @@
                                     "beginColumn" : 24,
                                     "endLine" : 42,
                                     "endColumn" : 25,
-                                    "offset" : 1355,
+                                    "offset" : 1356,
                                     "length" : 1
                                   }
                                 }
@@ -6508,8 +6508,8 @@
                                   "beginColumn" : 20,
                                   "endLine" : 42,
                                   "endColumn" : 25,
-                                  "offset" : 1351,
-                                  "length" : 4
+                                  "offset" : 1352,
+                                  "length" : 5
                                 }
                               },
                               "resOpt" : {
@@ -6534,8 +6534,8 @@
                                 "beginColumn" : 11,
                                 "endLine" : 42,
                                 "endColumn" : 25,
-                                "offset" : 1342,
-                                "length" : 9
+                                "offset" : 1343,
+                                "length" : 14
                               }
                             },
                             "resOpt" : {
@@ -6566,7 +6566,7 @@
                                   "beginColumn" : 30,
                                   "endLine" : 42,
                                   "endColumn" : 31,
-                                  "offset" : 1361,
+                                  "offset" : 1362,
                                   "length" : 1
                                 }
                               }
@@ -6590,7 +6590,7 @@
                                   "beginColumn" : 34,
                                   "endLine" : 42,
                                   "endColumn" : 35,
-                                  "offset" : 1365,
+                                  "offset" : 1366,
                                   "length" : 1
                                 }
                               }
@@ -6610,8 +6610,8 @@
                                 "beginColumn" : 30,
                                 "endLine" : 42,
                                 "endColumn" : 35,
-                                "offset" : 1361,
-                                "length" : 4
+                                "offset" : 1362,
+                                "length" : 5
                               }
                             },
                             "resOpt" : {
@@ -6636,8 +6636,8 @@
                               "beginColumn" : 11,
                               "endLine" : 42,
                               "endColumn" : 35,
-                              "offset" : 1342,
-                              "length" : 14
+                              "offset" : 1343,
+                              "length" : 24
                             }
                           },
                           "resOpt" : {
@@ -6666,7 +6666,7 @@
                               "beginColumn" : 40,
                               "endLine" : 42,
                               "endColumn" : 41,
-                              "offset" : 1371,
+                              "offset" : 1372,
                               "length" : 1
                             }
                           }
@@ -6686,8 +6686,8 @@
                             "beginColumn" : 11,
                             "endLine" : 42,
                             "endColumn" : 41,
-                            "offset" : 1342,
-                            "length" : 16
+                            "offset" : 1343,
+                            "length" : 30
                           }
                         },
                         "resOpt" : {
@@ -6792,12 +6792,12 @@
                                       "type" : "Some",
                                       "value" : "\/data-invariants\/Data_Invariants.aadl"
                                     },
-                                    "beginLine" : 70,
-                                    "beginColumn" : 7,
-                                    "endLine" : 70,
-                                    "endColumn" : 31,
-                                    "offset" : 2184,
-                                    "length" : 24
+                                    "beginLine" : 75,
+                                    "beginColumn" : 12,
+                                    "endLine" : 75,
+                                    "endColumn" : 15,
+                                    "offset" : 2338,
+                                    "length" : 3
                                   }
                                 }
                               }
@@ -6812,12 +6812,12 @@
                                     "type" : "Some",
                                     "value" : "\/data-invariants\/Data_Invariants.aadl"
                                   },
-                                  "beginLine" : 70,
-                                  "beginColumn" : 7,
-                                  "endLine" : 70,
-                                  "endColumn" : 31,
-                                  "offset" : 2184,
-                                  "length" : 24
+                                  "beginLine" : 75,
+                                  "beginColumn" : 12,
+                                  "endLine" : 75,
+                                  "endColumn" : 15,
+                                  "offset" : 2338,
+                                  "length" : 3
                                 }
                               },
                               "resOpt" : {
@@ -6835,7 +6835,20 @@
                           "attr" : {
                             "type" : "org.sireum.lang.ast.Attr",
                             "posOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/data-invariants\/Data_Invariants.aadl"
+                                },
+                                "beginLine" : 75,
+                                "beginColumn" : 16,
+                                "endLine" : 75,
+                                "endColumn" : 23,
+                                "offset" : 2342,
+                                "length" : 7
+                              }
                             }
                           }
                         },
@@ -6844,7 +6857,20 @@
                         "attr" : {
                           "type" : "org.sireum.lang.ast.ResolvedAttr",
                           "posOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/data-invariants\/Data_Invariants.aadl"
+                              },
+                              "beginLine" : 75,
+                              "beginColumn" : 12,
+                              "endLine" : 75,
+                              "endColumn" : 23,
+                              "offset" : 2338,
+                              "length" : 11
+                            }
                           },
                           "resOpt" : {
                             "type" : "None"
@@ -6872,7 +6898,7 @@
                               "beginColumn" : 27,
                               "endLine" : 75,
                               "endColumn" : 31,
-                              "offset" : 2352,
+                              "offset" : 2353,
                               "length" : 4
                             }
                           }
@@ -6889,11 +6915,11 @@
                               "value" : "\/data-invariants\/Data_Invariants.aadl"
                             },
                             "beginLine" : 75,
-                            "beginColumn" : 27,
+                            "beginColumn" : 12,
                             "endLine" : 75,
                             "endColumn" : 31,
-                            "offset" : 2352,
-                            "length" : 4
+                            "offset" : 2338,
+                            "length" : 19
                           }
                         },
                         "resOpt" : {
@@ -6926,12 +6952,12 @@
                                       "type" : "Some",
                                       "value" : "\/data-invariants\/Data_Invariants.aadl"
                                     },
-                                    "beginLine" : 71,
-                                    "beginColumn" : 7,
-                                    "endLine" : 71,
-                                    "endColumn" : 32,
-                                    "offset" : 2215,
-                                    "length" : 25
+                                    "beginLine" : 76,
+                                    "beginColumn" : 12,
+                                    "endLine" : 76,
+                                    "endColumn" : 16,
+                                    "offset" : 2373,
+                                    "length" : 4
                                   }
                                 }
                               }
@@ -6946,12 +6972,12 @@
                                     "type" : "Some",
                                     "value" : "\/data-invariants\/Data_Invariants.aadl"
                                   },
-                                  "beginLine" : 71,
-                                  "beginColumn" : 7,
-                                  "endLine" : 71,
-                                  "endColumn" : 32,
-                                  "offset" : 2215,
-                                  "length" : 25
+                                  "beginLine" : 76,
+                                  "beginColumn" : 12,
+                                  "endLine" : 76,
+                                  "endColumn" : 16,
+                                  "offset" : 2373,
+                                  "length" : 4
                                 }
                               },
                               "resOpt" : {
@@ -6969,7 +6995,20 @@
                           "attr" : {
                             "type" : "org.sireum.lang.ast.Attr",
                             "posOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/data-invariants\/Data_Invariants.aadl"
+                                },
+                                "beginLine" : 76,
+                                "beginColumn" : 17,
+                                "endLine" : 76,
+                                "endColumn" : 24,
+                                "offset" : 2378,
+                                "length" : 7
+                              }
                             }
                           }
                         },
@@ -6978,7 +7017,20 @@
                         "attr" : {
                           "type" : "org.sireum.lang.ast.ResolvedAttr",
                           "posOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/data-invariants\/Data_Invariants.aadl"
+                              },
+                              "beginLine" : 76,
+                              "beginColumn" : 12,
+                              "endLine" : 76,
+                              "endColumn" : 24,
+                              "offset" : 2373,
+                              "length" : 12
+                            }
                           },
                           "resOpt" : {
                             "type" : "None"
@@ -7006,7 +7058,7 @@
                               "beginColumn" : 28,
                               "endLine" : 76,
                               "endColumn" : 33,
-                              "offset" : 2388,
+                              "offset" : 2389,
                               "length" : 5
                             }
                           }
@@ -7023,11 +7075,11 @@
                               "value" : "\/data-invariants\/Data_Invariants.aadl"
                             },
                             "beginLine" : 76,
-                            "beginColumn" : 28,
+                            "beginColumn" : 12,
                             "endLine" : 76,
                             "endColumn" : 33,
-                            "offset" : 2388,
-                            "length" : 5
+                            "offset" : 2373,
+                            "length" : 21
                           }
                         },
                         "resOpt" : {
@@ -7049,11 +7101,11 @@
                             "value" : "\/data-invariants\/Data_Invariants.aadl"
                           },
                           "beginLine" : 75,
-                          "beginColumn" : 27,
+                          "beginColumn" : 12,
                           "endLine" : 76,
                           "endColumn" : 33,
-                          "offset" : 2352,
-                          "length" : 37
+                          "offset" : 2338,
+                          "length" : 56
                         }
                       },
                       "resOpt" : {
@@ -7086,12 +7138,12 @@
                                     "type" : "Some",
                                     "value" : "\/data-invariants\/Data_Invariants.aadl"
                                   },
-                                  "beginLine" : 70,
-                                  "beginColumn" : 7,
-                                  "endLine" : 70,
-                                  "endColumn" : 31,
-                                  "offset" : 2184,
-                                  "length" : 24
+                                  "beginLine" : 77,
+                                  "beginColumn" : 12,
+                                  "endLine" : 77,
+                                  "endColumn" : 15,
+                                  "offset" : 2410,
+                                  "length" : 3
                                 }
                               }
                             }
@@ -7106,12 +7158,12 @@
                                   "type" : "Some",
                                   "value" : "\/data-invariants\/Data_Invariants.aadl"
                                 },
-                                "beginLine" : 70,
-                                "beginColumn" : 7,
-                                "endLine" : 70,
-                                "endColumn" : 31,
-                                "offset" : 2184,
-                                "length" : 24
+                                "beginLine" : 77,
+                                "beginColumn" : 12,
+                                "endLine" : 77,
+                                "endColumn" : 15,
+                                "offset" : 2410,
+                                "length" : 3
                               }
                             },
                             "resOpt" : {
@@ -7129,7 +7181,20 @@
                         "attr" : {
                           "type" : "org.sireum.lang.ast.Attr",
                           "posOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/data-invariants\/Data_Invariants.aadl"
+                              },
+                              "beginLine" : 77,
+                              "beginColumn" : 16,
+                              "endLine" : 77,
+                              "endColumn" : 23,
+                              "offset" : 2414,
+                              "length" : 7
+                            }
                           }
                         }
                       },
@@ -7138,7 +7203,20 @@
                       "attr" : {
                         "type" : "org.sireum.lang.ast.ResolvedAttr",
                         "posOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/data-invariants\/Data_Invariants.aadl"
+                            },
+                            "beginLine" : 77,
+                            "beginColumn" : 12,
+                            "endLine" : 77,
+                            "endColumn" : 23,
+                            "offset" : 2410,
+                            "length" : 11
+                          }
                         },
                         "resOpt" : {
                           "type" : "None"
@@ -7168,12 +7246,12 @@
                                     "type" : "Some",
                                     "value" : "\/data-invariants\/Data_Invariants.aadl"
                                   },
-                                  "beginLine" : 71,
-                                  "beginColumn" : 7,
-                                  "endLine" : 71,
-                                  "endColumn" : 32,
-                                  "offset" : 2215,
-                                  "length" : 25
+                                  "beginLine" : 77,
+                                  "beginColumn" : 27,
+                                  "endLine" : 77,
+                                  "endColumn" : 31,
+                                  "offset" : 2425,
+                                  "length" : 4
                                 }
                               }
                             }
@@ -7188,12 +7266,12 @@
                                   "type" : "Some",
                                   "value" : "\/data-invariants\/Data_Invariants.aadl"
                                 },
-                                "beginLine" : 71,
-                                "beginColumn" : 7,
-                                "endLine" : 71,
-                                "endColumn" : 32,
-                                "offset" : 2215,
-                                "length" : 25
+                                "beginLine" : 77,
+                                "beginColumn" : 27,
+                                "endLine" : 77,
+                                "endColumn" : 31,
+                                "offset" : 2425,
+                                "length" : 4
                               }
                             },
                             "resOpt" : {
@@ -7211,7 +7289,20 @@
                         "attr" : {
                           "type" : "org.sireum.lang.ast.Attr",
                           "posOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/data-invariants\/Data_Invariants.aadl"
+                              },
+                              "beginLine" : 77,
+                              "beginColumn" : 32,
+                              "endLine" : 77,
+                              "endColumn" : 39,
+                              "offset" : 2430,
+                              "length" : 7
+                            }
                           }
                         }
                       },
@@ -7220,7 +7311,20 @@
                       "attr" : {
                         "type" : "org.sireum.lang.ast.ResolvedAttr",
                         "posOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/data-invariants\/Data_Invariants.aadl"
+                            },
+                            "beginLine" : 77,
+                            "beginColumn" : 27,
+                            "endLine" : 77,
+                            "endColumn" : 39,
+                            "offset" : 2425,
+                            "length" : 12
+                          }
                         },
                         "resOpt" : {
                           "type" : "None"
@@ -7233,7 +7337,20 @@
                     "attr" : {
                       "type" : "org.sireum.lang.ast.ResolvedAttr",
                       "posOpt" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/data-invariants\/Data_Invariants.aadl"
+                          },
+                          "beginLine" : 77,
+                          "beginColumn" : 12,
+                          "endLine" : 77,
+                          "endColumn" : 39,
+                          "offset" : 2410,
+                          "length" : 27
+                        }
                       },
                       "resOpt" : {
                         "type" : "None"
@@ -7254,11 +7371,11 @@
                           "value" : "\/data-invariants\/Data_Invariants.aadl"
                         },
                         "beginLine" : 75,
-                        "beginColumn" : 27,
-                        "endLine" : 76,
-                        "endColumn" : 33,
-                        "offset" : 2352,
-                        "length" : 37
+                        "beginColumn" : 12,
+                        "endLine" : 77,
+                        "endColumn" : 39,
+                        "offset" : 2338,
+                        "length" : 99
                       }
                     },
                     "resOpt" : {
