@@ -4,7 +4,7 @@ import org.sireum.$internal.RC
 import org.sireum._
 import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
-import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
+import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 
 case class TestContainer(testName: String,
                          modelDir: Os.Path,
@@ -101,12 +101,12 @@ class CodegenTest_CASE extends CodeGenTest {
       }
     }
   }
-  def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
+  def testResources(): TestResources = {
     // scala/java 'resources' directories don't play nicely with mill so instead embed the contents
     // of 'expected' and 'models' into the test class via the RC macros .  These can then
     // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
 
-    RC.base64(Vector("../../../../../../")) { (p, f) =>
+    val files = RC.base64(Vector("../../../../../../")) { (p, f) =>
       val cname = "CodegenTest_CASE"
       val allowedDirs: ISZ[Predef.String] = ISZ(s"expected/${cname}", s"models/${cname}")
 
@@ -141,5 +141,6 @@ class CodegenTest_CASE extends CodeGenTest {
 
       allow
     }
+    return TestResources(files)
   }
 }

@@ -4,7 +4,7 @@ import org.sireum._
 import org.sireum.$internal.RC
 import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
-import org.sireum.hamr.codegen.test.CodeGenTest.baseOptions
+import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.TestMode
 
 class HamrTranspileTests extends CodeGenTest {
@@ -45,12 +45,12 @@ class HamrTranspileTests extends CodeGenTest {
     }
   }
 
-  def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String] = {
+  def testResources(): TestResources = {
     // scala/java 'resources' directories don't play nicely with mill so instead embed the contents
     // of 'expected' and 'models' into the test class via the RC macros .  These can then
     // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
 
-    RC.base64(Vector("../../../../../../")) { (p, f) =>
+    val files = RC.base64(Vector("../../../../../../")) { (p, f) =>
       val cname = "HamrTranspileTests"
       val allowedDirs: ISZ[Predef.String] = ISZ(s"expected/${cname}", s"models/${cname}")
 
@@ -85,5 +85,6 @@ class HamrTranspileTests extends CodeGenTest {
 
       allow
     }
+    return TestResources(files)
   }
 }

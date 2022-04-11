@@ -41,7 +41,7 @@ trait CodeGenTest extends TestSuite {
 
   def verbose: B = { return ops.ISZOps(testModes).contains(TestMode.verbose) }
 
-  def testResources(): scala.collection.Map[scala.Vector[Predef.String], Predef.String]
+  def testResources(): TestResources
 
   def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
   def filters: ISZ[String] = ISZ("vm")
@@ -592,6 +592,9 @@ trait CodeGenTest extends TestSuite {
 
 object CodeGenTest {
 
+  case class TestResources(files: scala.collection.Map[scala.Vector[Predef.String], Predef.String],
+                           testDir: String = "test")
+
   val CAMKES_DIR = "CAMKES_DIR"
   val CAMKES_VM_EXAMPLES_DIR = "CAMKES_VM_EXAMPLES_DIR"
 
@@ -746,8 +749,8 @@ object CodeGenTest {
     return results.ok
   }
 
-  def getDirectories(testResources : scala.collection.Map[scala.Vector[Predef.String], Predef.String]): (Os.Path, Os.Path, Os.Path) = {
-    val intellijTestDir = Os.path("./hamr/codegen/jvm/src/test/scala")
+  def getDirectories(testResources: TestResources): (Os.Path, Os.Path, Os.Path) = {
+    val intellijTestDir = Os.path(s"./hamr/codegen/jvm/src/${testResources.testDir}/scala")
     val (expected, results, models) : (Os.Path, Os.Path, Os.Path) = {
       if(intellijTestDir.exists) {
         // use local/intellij copy
@@ -756,7 +759,7 @@ object CodeGenTest {
         // probably running from jar so copy resources to a temp directory
         val temp: Os.Path = Os.tempDir()
 
-        for (entry <- testResources) {
+        for (entry <- testResources.files) {
           assert(entry._1.head == "expected" || entry._1.head == "models")
 
           val f = temp / entry._1.mkString("/")
