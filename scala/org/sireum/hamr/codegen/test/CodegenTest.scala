@@ -750,11 +750,11 @@ object CodeGenTest {
   }
 
   def getDirectories(testResources: TestResources): (Os.Path, Os.Path, Os.Path) = {
-    val intellijTestDir = Os.path(s"./hamr/codegen/jvm/src/${testResources.testDir}/scala")
+    val intellijTestDir = Os.path(s"./hamr/codegen/jvm/src/${testResources.testDir}")
     val (expected, results, models) : (Os.Path, Os.Path, Os.Path) = {
       if(intellijTestDir.exists) {
         // use local/intellij copy
-        (intellijTestDir / "expected", intellijTestDir.up / "results", intellijTestDir / "models")
+        (intellijTestDir / "resources"/ "expected", intellijTestDir / "results", intellijTestDir / "resources" / "models")
       } else {
         // probably running from jar so copy resources to a temp directory
         val temp: Os.Path = Os.tempDir()

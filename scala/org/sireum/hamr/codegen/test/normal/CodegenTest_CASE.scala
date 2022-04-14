@@ -106,7 +106,7 @@ class CodegenTest_CASE extends CodeGenTest {
     // of 'expected' and 'models' into the test class via the RC macros .  These can then
     // be retrieved as a map from 'exploded path' to 'contents' via a call to 'testResources()'
 
-    val files = RC.base64(Vector("../../../../../../")) { (p, f) =>
+    val files = RC.base64(Vector("../../../../../../../resources")) { (p, f) =>
       val cname = "CodegenTest_CASE"
       val allowedDirs: ISZ[Predef.String] = ISZ(s"expected/${cname}", s"models/${cname}")
 
