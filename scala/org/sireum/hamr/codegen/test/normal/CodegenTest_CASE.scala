@@ -15,14 +15,16 @@ case class TestContainer(testName: String,
 class CodegenTest_CASE extends CodeGenTest {
 
   override def generateExpected: B = if(super.generateExpected) T else F
-  
+
+  val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
+
   val tests = Tests {
     val id = "case_tool_evaluation"
 
     val(linux, sel4, sel4_tb, sel4_only) = (CodeGenPlatform.Linux, CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
 
-    val case_tool_evaluation_dir = baseModelsDir / getClass.getSimpleName
-    val resultDir: Option[String] = Some(getClass.getSimpleName)
+    val case_tool_evaluation_dir = testResources.modelsDir
+    //val resultDir: Option[String] = Some(getClass.getSimpleName)
 
     def genFail(name: String,
                 json: String,
@@ -94,13 +96,14 @@ class CodegenTest_CASE extends CodeGenTest {
             bitWidth = 32,
             maxStringSize = 256
           ),
-          resultDir = resultDir,
           description = None(),
           modelUri = None(),
           expectedErrorReasons = container.expectedErrorReasons)
       }
     }
   }
+
+  /*
   def testResources(): TestResources = {
     // scala/java 'resources' directories don't play nicely with mill so instead embed the contents
     // of 'expected' and 'models' into the test class via the RC macros .  These can then
@@ -143,4 +146,5 @@ class CodegenTest_CASE extends CodeGenTest {
     }
     return TestResources(files)
   }
+  */
 }

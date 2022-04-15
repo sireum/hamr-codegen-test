@@ -22,6 +22,7 @@ trait CodeGenTest extends TestSuite {
   import CodeGenTest._
 
   def generateExpected: B = F
+
   def delResultDirIfEqual: B = F
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
@@ -39,45 +40,37 @@ trait CodeGenTest extends TestSuite {
     case _ => 2 * 60000
   }
 
-  def verbose: B = { return ops.ISZOps(testModes).contains(TestMode.verbose) }
+  def verbose: B = {
+    return ops.ISZOps(testModes).contains(TestMode.verbose)
+  }
 
-  def testResources(): TestResources
+  def testResources: TestResources
 
-  def filter: B = if(filterTestsSet().nonEmpty) filterTestsSet().get else F
+  def filter: B = if (filterTestsSet().nonEmpty) filterTestsSet().get else F
+
   def filters: ISZ[String] = ISZ("vm")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
   )
 
-  val (rootExpectedDir, rootResultDir, baseModelsDir) = getDirectories(testResources())
-
-  //def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig)(implicit position: org.scalactic.source.Position) : Unit = {
-  //  test(testName, modelDir, airFile, ops, T)
-  //}
-
-  //def test(testName: String, modelDir: Os.Path, airFile: Os.Path, ops: CodeGenConfig, shouldPass: B)(implicit position: org.scalactic.source.Position) : Unit = {
-  //  test(testName, modelDir, airFile, ops, None(), None(), None(), shouldPass)
-  //}
-
   def test(testName: String,
            modelDir: Os.Path,
            airFile: Option[Os.Path],
            ops: CodeGenConfig,
-           resultDir:Option[String],
            description: Option[String],
            modelUri: Option[String],
            expectedErrorReasons: ISZ[String] // empty if errors not expected
-          )(implicit position: org.scalactic.source.Position) : Unit = {
+          )(implicit position: org.scalactic.source.Position): Unit = {
     var tags: ISZ[org.scalatest.Tag] = ISZ()
 
-    if(ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))){
-      registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements:_*)(
-        testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri, expectedErrorReasons))
+    if (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
+      registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
+        testAir(testName, modelDir, airFile, ops, description, modelUri, expectedErrorReasons))
     }
-    else if(!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
-      registerTest(s"${testName} L${position.lineNumber}", tags.elements:_*)(
-        testAir(testName, modelDir, airFile, ops, resultDir, description, modelUri, expectedErrorReasons))
+    else if (!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
+      registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
+        testAir(testName, modelDir, airFile, ops, description, modelUri, expectedErrorReasons))
     }
   }
 
@@ -85,15 +78,17 @@ trait CodeGenTest extends TestSuite {
               modelDir: Os.Path,
               airFile: Option[Os.Path],
               config: CodeGenConfig,
-              resultDir: Option[String],
               description: Option[String],
               modelUri: Option[String],
               expectedErrorReasons: ISZ[String] // empty if errors not expected
              ): Unit = {
 
-    val expectedJson = rootExpectedDir / getClass.getSimpleName / s"${testName}.json"
+    val rootResultDir = testResources.resultsDir
+    val rootExpectedDir = testResources.expectedDir
 
-    val rootTestOutputDir = if(resultDir.nonEmpty) rootResultDir / resultDir.get / testName else rootResultDir / testName
+    val expectedJson = rootExpectedDir / s"${testName}.json"
+
+    val rootTestOutputDir = rootResultDir / testName
     val expectedDir = rootTestOutputDir / "expected"
     val resultsDir = rootTestOutputDir / "results"
     val slangOutputDir = resultsDir / testName
@@ -104,13 +99,13 @@ trait CodeGenTest extends TestSuite {
       slangOutputDir = Some(slangOutputDir.canon.value)
     )
 
-    if(isSeL4(testOps.platform)) {
+    if (isSeL4(testOps.platform)) {
       assert(testOps.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${config.camkesOutputDir}")
 
       testOps = testOps(
         slangOutputDir = Some(s"${slangOutputDir}/slang-embedded"),
         camkesOutputDir = testOps.slangOutputDir,
-        aadlRootDir = if(testOps.aadlRootDir.nonEmpty) testOps.aadlRootDir else Some(modelDir.canon.value),
+        aadlRootDir = if (testOps.aadlRootDir.nonEmpty) testOps.aadlRootDir else Some(modelDir.canon.value),
       )
     }
 
@@ -120,7 +115,7 @@ trait CodeGenTest extends TestSuite {
     val reporter = Reporter.create
 
     val model: Aadl = {
-      val s: String = if(ops.ISZOps(testModes).contains(TestMode.phantom) || airFile.isEmpty) {
+      val s: String = if (ops.ISZOps(testModes).contains(TestMode.phantom) || airFile.isEmpty) {
         val outputFile = modelDir.canon / ".slang" / "testAIR.json"
         outputFile.up.mkdir()
         println("Generating AIR via phantom ...")
@@ -142,25 +137,22 @@ trait CodeGenTest extends TestSuite {
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
     val results: CodeGenResults = CodeGen.codeGen(model, testOps, reporter,
-      if(shouldTranspile(testOps)) transpile (testOps) _ else (TranspilerConfig) => { println("Dummy transpiler"); 0 },
-      if(shouldProyekIve(testOps)) proyekive (testOps) _ else (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
+      if (shouldTranspile(testOps)) transpile(testOps) _ else (TranspilerConfig) => {
+        println("Dummy transpiler"); 0
+      },
+      if (shouldProyekIve(testOps)) proyekive(testOps) _ else (ProyekIveConfig) => {
+        println("Dummy Proyek IVE"); 0
+      }
     )
 
-    /*
-    val results: CodeGenResults = CodeGen.codeGen(model.get, testOps, reporter,
-      (TranspilerConfig) => { println("Dummy transpiler"); 0 },
-      (ProyekIveConfig) => { println("Dummy Proyek IVE"); 0 }
-    )
-     */
-
-    if(expectedErrorReasons.isEmpty) {
+    if (expectedErrorReasons.isEmpty) {
       assert(!reporter.hasError, "Expecting no errors but codegen did not complete successfully")
     }
     else {
       assert(reporter.hasError, "Expecting errors but codegen completed successfully")
       assert(reporter.errors.size == expectedErrorReasons.size)
 
-      for(m <- reporter.errors) {
+      for (m <- reporter.errors) {
         assert(org.sireum.ops.ISZOps(expectedErrorReasons).contains(m.text), s"Expected errors doesn't contain ${m.text}")
       }
 
@@ -168,18 +160,18 @@ trait CodeGenTest extends TestSuite {
     }
 
     var testFail = F
-    if(!reporter.hasError) {
+    if (!reporter.hasError) {
       testFail = runAdditionalTasks(testName, slangOutputDir, testOps, reporter)
     }
 
     val resultMap = TestUtil.convertToTestResult(results.resources, resultsDir)
 
-    val expectedMap: TestResult = if(generateExpected) {
+    val expectedMap: TestResult = if (generateExpected) {
       TestUtil.writeExpected(resultMap, expectedJson)
       println(s"Wrote: ${expectedJson}")
       resultMap
     }
-    else if(expectedJson.exists) {
+    else if (expectedJson.exists) {
       TestUtil.readExpected(expectedJson)
     }
     else {
@@ -188,7 +180,7 @@ trait CodeGenTest extends TestSuite {
       TestResult(Map.empty)
     }
 
-    if(resultMap.map.size != expectedMap.map.size) {
+    if (resultMap.map.size != expectedMap.map.size) {
       val ekeys = expectedMap.map.keySet
       val rkeys = resultMap.map.keySet
 
@@ -196,12 +188,12 @@ trait CodeGenTest extends TestSuite {
       val missingRkeys = (ekeys.union(rkeys) -- rkeys.elements).elements
 
       if (missingEkeys.nonEmpty) {
-        for(k <- missingEkeys) {
+        for (k <- missingEkeys) {
           println(s"Expected missing entry ${k}")
           //println(s"  - ${resultMap.map.get(k).get}")
         }
       } else {
-        for(k <- missingRkeys) {
+        for (k <- missingRkeys) {
           println(s"Results missing entry ${k}")
           //println(s"  - ${expectedMap.map.get(k)}")
         }
@@ -213,26 +205,26 @@ trait CodeGenTest extends TestSuite {
     var allEqual = T
 
     // could limit emitted files to only non-matching results
-    for(r <- resultMap.map.entries) {
+    for (r <- resultMap.map.entries) {
 
-      if(expectedMap.map.contains(r._1)) {
+      if (expectedMap.map.contains(r._1)) {
         val e = expectedMap.map.get(r._1).get
         allEqual &= {
           val ignores = ISZOps(ISZ("build.sbt", "build.sc", "versions.properties", "project.cmd"))
           val ignoreFile = ignoreBuildDefChanges && ignores.exists(p => r._1.native.endsWith(p))
           val sameContents = r._2 == e
-          if(!sameContents) {
+          if (!sameContents) {
             var reason: ISZ[String] = ISZ()
             ((r._2, e)) match {
               case ((ri: ITestResource, ei: ITestResource)) =>
-                if(ri.content != ei.content) reason = reason :+ "content is not the same"
-                if(ri.overwrite != ei.overwrite) reason = reason :+ "overwrite flag is not the same"
-                if(ri.makeExecutable != ei.makeExecutable) reason = reason :+ "makeExecutable flag is not the same"
-                if(ri.makeCRLF != ei.makeCRLF) reason = reason :+ "makeCRLF flag is not the same"
-                if(ri.markers != ei.markers) reason = reason :+ "markers is not the same"
+                if (ri.content != ei.content) reason = reason :+ "content is not the same"
+                if (ri.overwrite != ei.overwrite) reason = reason :+ "overwrite flag is not the same"
+                if (ri.makeExecutable != ei.makeExecutable) reason = reason :+ "makeExecutable flag is not the same"
+                if (ri.makeCRLF != ei.makeCRLF) reason = reason :+ "makeCRLF flag is not the same"
+                if (ri.markers != ei.markers) reason = reason :+ "markers is not the same"
               case ((re: ETestResource, ee: ETestResource)) =>
-                if(re.content != ee.content) reason = reason :+ "content is not the same"
-                if(re.symlink != ee.symlink) reason = reason :+ "symLink flag is not the same"
+                if (re.content != ee.content) reason = reason :+ "content is not the same"
+                if (re.symlink != ee.symlink) reason = reason :+ "symLink flag is not the same"
 
               case _ => halt("Infeasible: TestResource types not the same")
             }
@@ -240,7 +232,7 @@ trait CodeGenTest extends TestSuite {
           }
           ignoreFile || sameContents
         }
-      } else if(!generateExpected) {
+      } else if (!generateExpected) {
         allEqual = F
         eprintln(s"Expected missing: ${r._1}")
       }
@@ -257,19 +249,20 @@ trait CodeGenTest extends TestSuite {
       */
     }
 
-    for(e <- expectedMap.map.entries) {
+    for (e <- expectedMap.map.entries) {
       (expectedDir / e._1).canon.writeOver(e._2.content)
     }
 
-    if(allEqual && delResultDirIfEqual) rootTestOutputDir.removeAll()
+    if (allEqual && delResultDirIfEqual) rootTestOutputDir.removeAll()
 
-    if(modelUri.nonEmpty) {
+    if (modelUri.nonEmpty) {
       println(s"Model URI: ${modelUri.get}")
     }
 
-    if(description.nonEmpty) {
-      println(st"""Test Description: ${description.get}
-                  |----------------""".render)
+    if (description.nonEmpty) {
+      println(
+        st"""Test Description: ${description.get}
+            |----------------""".render)
     }
 
     assert(allEqual, s"Mismatches in ${rootTestOutputDir.canon.toUri}")
@@ -281,10 +274,10 @@ trait CodeGenTest extends TestSuite {
 
     def vproc(commands: String, runInDir: Os.Path, env: ISZ[(String, String)], timeout: Option[Z]): OsProto.Proc.Result = {
       var p = proc"$commands".env(env).at(runInDir)
-      if(timeout.nonEmpty) {
+      if (timeout.nonEmpty) {
         p = p.timeout(timeout.get)
       }
-      if(verbose) {
+      if (verbose) {
         p = p.console.redirectErr
       }
       return p.run()
@@ -312,7 +305,8 @@ trait CodeGenTest extends TestSuite {
         while (i > 65) {
           val d = Os.path(s"${C(i)}:")
           if (!d.exists) {
-            cand = d.string; i = 65
+            cand = d.string;
+            i = 65
           }
           i = i - 1
         }
@@ -327,23 +321,33 @@ trait CodeGenTest extends TestSuite {
 
     def fetch(filename: String): Os.Path = {
       var loc: ISZ[Os.Path] = ISZ()
+
       def r(p: Os.Path): Unit = {
-        if(p.isDir) {  for(pp <- p.list if loc.isEmpty ) { r(pp)} }
-        else { if(p.name == filename) { loc = loc :+ p }
+        if (p.isDir) {
+          for (pp <- p.list if loc.isEmpty) {
+            r(pp)
+          }
+        }
+        else {
+          if (p.name == filename) {
+            loc = loc :+ p
+          }
         }
       }
+
       r(slangDir)
       assert(loc.size == 1, s"Fetch failed for ${filename}. Found ${loc.size} matches. ${loc}")
       return loc(0).canon
     }
 
     var keepGoing: B = T
+
     def check(results: OsProto.Proc.Result, failMsg: String): Unit = {
       keepGoing = CodeGenTest.check(testName, results, failMsg: String)
     }
 
-    if(shouldTranspile(testOps) && keepGoing) {
-      if(isLinux(testOps.platform)){
+    if (shouldTranspile(testOps) && keepGoing) {
+      if (isLinux(testOps.platform)) {
         val transpileScript = fetch("transpile.cmd")
 
         println(s"Transpiling ${testOps.platform} via script ...")
@@ -351,7 +355,7 @@ trait CodeGenTest extends TestSuite {
         check(cTranspileResults, "C transpiling failed")
 
       } else {
-        assert (testOps.platform == CodeGenPlatform.SeL4, s"Hmm, ${testOps.platform}")
+        assert(testOps.platform == CodeGenPlatform.SeL4, s"Hmm, ${testOps.platform}")
         val transpileScript = fetch("transpile-sel4.cmd")
 
         println(s"Transpiling ${testOps.platform} via script ...")
@@ -360,14 +364,14 @@ trait CodeGenTest extends TestSuite {
       }
     }
 
-    if(shouldCompile(testOps.platform) && keepGoing) {
+    if (shouldCompile(testOps.platform) && keepGoing) {
       val projectCmd = fetch("project.cmd")
 
       println("Compiling Slang project via proyek compile ...")
       val proyekResults = vproc(s"${sireum.string} proyek compile --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
       check(proyekResults, "Proyek compilation failed")
 
-      if(isLinux(testOps.platform) && keepGoing) {
+      if (isLinux(testOps.platform) && keepGoing) {
         println("Compiling C project via script ...")
         val compileScript = fetch("compile.cmd")
 
@@ -376,7 +380,7 @@ trait CodeGenTest extends TestSuite {
       }
     }
 
-    if(shouldRunLogika(testOps) && keepGoing) {
+    if (shouldRunLogika(testOps) && keepGoing) {
       val projectCmd = fetch("project.cmd")
 
       println("Checking Slang project contracts via proyek logika ...")
@@ -385,10 +389,10 @@ trait CodeGenTest extends TestSuite {
 
       // Delete the 'out' directory so that it doesn't pollute directory diffs
       val outDir = projectCmd.up.up / "out"
-      if(outDir.exists) outDir.removeAll()
+      if (outDir.exists) outDir.removeAll()
     }
 
-    if(shouldProyekIve(testOps) && keepGoing) {
+    if (shouldProyekIve(testOps) && keepGoing) {
       val projectCmd = fetch("project.cmd")
 
       println("Generating IVE project via proyek ive ...")
@@ -404,10 +408,10 @@ trait CodeGenTest extends TestSuite {
       check(proyekResults, "Proyek test failed")
     }
 
-    if(shouldProve(testOps)) {
+    if (shouldProve(testOps)) {
       val proof = Os.path(testOps.camkesOutputDir.get) / "proof" / "smt2_case.smt2"
-      val cvc = sireumHome / "bin" / os / (if(Os.isWin) "cvc.exe" else "cvc")
-      val z3 = sireumHome / "bin" / os / "z3" / "bin" / (if(Os.isWin) "z3.exe" else "z3")
+      val cvc = sireumHome / "bin" / os / (if (Os.isWin) "cvc.exe" else "cvc")
+      val z3 = sireumHome / "bin" / os / "z3" / "bin" / (if (Os.isWin) "z3.exe" else "z3")
 
       def err(out: String, exitCode: Z): Unit = {
         halt(
@@ -434,19 +438,25 @@ trait CodeGenTest extends TestSuite {
 
       val duration = extension.Time.currentMillis - startTime
 
-      if(verbose) {
+      if (verbose) {
         println(s"Refinement proof duration: $duration ms")
       }
 
       val out = ops.StringOps(ops.StringOps(pout).replaceAllLiterally("\r\n", "\n")).split((c: C) => c == C('\n'))
-      if(isTimeout || out.size != 10) {
-        cprintln(T, s"${if(isTimeout) s"Timed-out after ${duration} ms. " else ""}Expecting 10 lines but got ${out.size}")
+      if (isTimeout || out.size != 10) {
+        cprintln(T, s"${if (isTimeout) s"Timed-out after ${duration} ms. " else ""}Expecting 10 lines but got ${out.size}")
         cprintln(T, pr.out)
         keepGoing = F
       } else {
         var accum: B = T
-        def scheck(b: B, errorMsg: String): Unit = { if(!b) cprintln(T, errorMsg); accum = accum & b }
-        def scheckH(a: String, b: String): Unit = { if(a != b) cprintln(T, s"Expecting '${a} but received ${b}'"); accum = accum & (a == b) }
+
+        def scheck(b: B, errorMsg: String): Unit = {
+          if (!b) cprintln(T, errorMsg); accum = accum & b
+        }
+
+        def scheckH(a: String, b: String): Unit = {
+          if (a != b) cprintln(T, s"Expecting '${a} but received ${b}'"); accum = accum & (a == b)
+        }
 
         scheckH(out(0), st""""RefinementProof: Shows that there is a model satisfying all the constraints (should be sat):"""".render)
         scheckH(out(2), st""""AADLWellFormedness: Proves that the generated AADL evidence is well-formed (should be unsat):"""".render)
@@ -464,13 +474,17 @@ trait CodeGenTest extends TestSuite {
       }
     }
 
-    if(shouldCamkes(testOps.platform) && keepGoing) {
+    if (shouldCamkes(testOps.platform) && keepGoing) {
       val hasVMs: B = reporter.messages.filter(m => org.sireum.ops.StringOps(m.text)
         .contains("Your project contains VMs")).nonEmpty
 
       val rootCamkesDir: Option[Os.Path] =
-        if(hasVMs) { camkesVmExamplesDir() }
-        else { camkesDir() }
+        if (hasVMs) {
+          camkesVmExamplesDir()
+        }
+        else {
+          camkesDir()
+        }
 
       rootCamkesDir match {
         case Some(camkesDir) => {
@@ -480,11 +494,13 @@ trait CodeGenTest extends TestSuite {
           val camkesBuildDir = camkesDir / s"build_${testName}"
           camkesBuildDir.removeAll()
 
-          def onOptions(options: ISZ[CMakeOption]): ISZ[(String, String)] = { return options.map(o => (o.name, "ON")) }
+          def onOptions(options: ISZ[CMakeOption]): ISZ[(String, String)] = {
+            return options.map(o => (o.name, "ON"))
+          }
 
           var camkesEnv: ISZ[(String, String)] = ISZ()
 
-          if(testOps.platform == CodeGenPlatform.SeL4) {
+          if (testOps.platform == CodeGenPlatform.SeL4) {
             val toptions = SlangEmbeddedTemplate.TRANSPILER_OPTIONS.filter(c => c.name != string"NO_PRINT")
             camkesEnv = camkesEnv ++ onOptions(toptions)
           }
@@ -506,13 +522,13 @@ trait CodeGenTest extends TestSuite {
           check(camkesResults, "CAmkES build failed")
 
           //val results = Proc(ISZ("simulate"), Os.cwd, Map.empty, T, None(), F, F, F, F, F, timeout, F).at(camkesBuildDir).run()
-         }
+        }
         case _ =>
           assert(F, "CAmkES directory not found")
       }
     }
 
-    if(Os.isWin) {
+    if (Os.isWin) {
       println(s"Attempting to unsubst ${optSubstDrive}")
       proc"subst ${optSubstDrive} /D".run()
     }
@@ -587,13 +603,16 @@ trait CodeGenTest extends TestSuite {
     return !config.noProyekIve || shouldCompile(config.platform)
   }
 
-  def onOptions(options: ISZ[CMakeOption]): ISZ[String] = { return options.map(o => s"-D${o.name}=ON") }
+  def onOptions(options: ISZ[CMakeOption]): ISZ[String] = {
+    return options.map(o => s"-D${o.name}=ON")
+  }
 }
 
 object CodeGenTest {
 
-  case class TestResources(files: scala.collection.Map[scala.Vector[Predef.String], Predef.String],
-                           testDir: String = "test")
+  case class TestResources(resultsDir: Os.Path,
+                           expectedDir: Os.Path,
+                           modelsDir: Os.Path)
 
   val CAMKES_DIR = "CAMKES_DIR"
   val CAMKES_VM_EXAMPLES_DIR = "CAMKES_VM_EXAMPLES_DIR"
@@ -660,25 +679,32 @@ object CodeGenTest {
 
   def proyekive(config: CodeGenConfig)(pc: ProyekIveConfig): Z = {
     var args: ISZ[String] = ISZ()
-    def addKey(key: String): Unit = { args = args :+ key }
-    def add(key: String, value: String): Unit = { args = args :+ key :+ value }
+
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
+
     val pathSep: String = Os.pathSep
 
-    if(pc.force) addKey("--force")
-    if(pc.ultimate) addKey("--ultimate")
-    if(pc.ignoreRuntime) addKey("--ignore-runtime")
-    if(pc.json.nonEmpty) add("--json", pc.json.get)
-    if(pc.name.nonEmpty) add("--name", pc.name.get)
-    if(pc.outputDirName.nonEmpty) add("--out", pc.outputDirName.get)
-    if(pc.project.nonEmpty) add("--project", pc.project.get)
-    if(pc.slice.nonEmpty) add("--slice", st"""${(pc.slice, ",")}""".render)
-    if(pc.symlink) addKey("--symlink")
-    if(pc.versions.nonEmpty) add("--versions", st"""${(pc.versions, pathSep)}""".render)
-    if(pc.cache.nonEmpty) add("--cache", pc.cache.get)
-    if(pc.docs) addKey("--no-docs")
-    if(pc.sources) addKey("--no-sources")
-    if(pc.repositories.nonEmpty) add("--repositories", st"""${(pc.repositories, ",")}""".render)
-    if(pc.args.nonEmpty) args = args ++ pc.args
+    if (pc.force) addKey("--force")
+    if (pc.ultimate) addKey("--ultimate")
+    if (pc.ignoreRuntime) addKey("--ignore-runtime")
+    if (pc.json.nonEmpty) add("--json", pc.json.get)
+    if (pc.name.nonEmpty) add("--name", pc.name.get)
+    if (pc.outputDirName.nonEmpty) add("--out", pc.outputDirName.get)
+    if (pc.project.nonEmpty) add("--project", pc.project.get)
+    if (pc.slice.nonEmpty) add("--slice", st"""${(pc.slice, ",")}""".render)
+    if (pc.symlink) addKey("--symlink")
+    if (pc.versions.nonEmpty) add("--versions", st"""${(pc.versions, pathSep)}""".render)
+    if (pc.cache.nonEmpty) add("--cache", pc.cache.get)
+    if (pc.docs) addKey("--no-docs")
+    if (pc.sources) addKey("--no-sources")
+    if (pc.repositories.nonEmpty) add("--repositories", st"""${(pc.repositories, ",")}""".render)
+    if (pc.args.nonEmpty) args = args ++ pc.args
 
     val sireum: Os.Path = CodeGenTest.getSireum()
 
@@ -693,8 +719,15 @@ object CodeGenTest {
 
   def transpile(config: CodeGenConfig)(tc: TranspilerConfig): Z = {
     var args: ISZ[String] = ISZ()
-    def addKey(key: String): Unit = { args = args :+ key }
-    def add(key: String, value: String): Unit = { args = args :+ key :+ value }
+
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
+
     val pathSep: String = Os.pathSep
 
     args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, pathSep)}""".render
@@ -725,7 +758,7 @@ object CodeGenTest {
     // transpiler callback method will be expensive for sel4 projects since
     // each will be done in separate JVM instances (unlike when run from
     // OSATE or via the transpile scripts) so only do it when explicitly requested
-    val ret: Z = if(Os.envs.contains("ALSO_TRANSPILE_VIA_CALLBACKS")) {
+    val ret: Z = if (Os.envs.contains("ALSO_TRANSPILE_VIA_CALLBACKS")) {
       println(s"Transpiling ${config.platform} via callback ...")
       val results = Os.proc(args).console.run()
       results.exitCode
@@ -736,10 +769,12 @@ object CodeGenTest {
     return ret
   }
 
-  def getSireum(): Os.Path= { return Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum") }
+  def getSireum(): Os.Path = {
+    return Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+  }
 
   def check(testName: String, results: OsProto.Proc.Result, failMsg: String): B = {
-    if(!results.ok) {
+    if (!results.ok) {
       println(s"${testName}: ${failMsg}")
       println("out:")
       println(results.out)
@@ -749,39 +784,63 @@ object CodeGenTest {
     return results.ok
   }
 
-  def getDirectories(testResources: TestResources): (Os.Path, Os.Path, Os.Path) = {
-    val intellijTestDir = Os.path(s"./hamr/codegen/jvm/src/${testResources.testDir}")
-    val (expected, results, models) : (Os.Path, Os.Path, Os.Path) = {
-      if(intellijTestDir.exists) {
-        // use local/intellij copy
-        (intellijTestDir / "resources"/ "expected", intellijTestDir / "results", intellijTestDir / "resources" / "models")
-      } else {
-        // probably running from jar so copy resources to a temp directory
-        val temp: Os.Path = Os.tempDir()
-
-        for (entry <- testResources.files) {
-          assert(entry._1.head == "expected" || entry._1.head == "models")
-
-          val f = temp / entry._1.mkString("/")
-
-          f.writeOverU8s(conversions.String.fromBase64(entry._2).left)
-
-          //println(s"Wrote: ${f}")
-
-          if (f.up.name.native == ".slang" && f.ext.native == "zip") {
-            f.unzipTo(f.up)
-
-            val jsonFile = f.up / ops.StringOps(f.name).substring(0, f.name.size - 4)
-            if (!jsonFile.exists) {
-              halt(s"${jsonFile} not unzipped")
-            }
-            //println(s"Unzipped: ${f}")
+  /*
+   * - resources/
+   *   - expected/
+   *     - clsName/
+   *   - models/
+   *     - clsName/
+   * - scala/
+   *     <contains cls>
+   */
+  def defaultTestLayout(cls: Class[_]): TestResources = {
+    def search(p: Os.Path): Option[(Os.Path, Os.Path)] = {
+      assert(p.isDir, p)
+      for (pp <- p.list) {
+        if (pp.isFile && pp.name.native == s"${cls.getSimpleName}.scala") {
+          val _package = ops.StringOps(cls.getPackage.getName).split((c: C) => c == C('.'))
+          var dir = pp.up
+          var ok = T
+          var i = _package.size - 1
+          while (ok && i >= 0) { // ensure we're in the right package
+            ok = _package(i) == dir.name
+            i = i - 1
+            dir = dir.up
+          }
+          if (ok) {
+            return Some((dir, pp))
           }
         }
-        (temp / "expected", temp / "results", temp / "models")
+        if (pp.isDir) {
+          search(pp) match {
+            case Some((a, b)) => return Some((a,b))
+            case _ =>
+          }
+        }
       }
+      return None()
     }
-    results.mkdirAll()
-    return (expected, results, models)
+
+    search(Os.path(".").canon) match {
+      case Some((scalaDir, p)) =>
+
+        assert(scalaDir.name.native == "scala", s"Expecting ${cls.getName} to be in a 'scala' directory")
+
+        val resourcesDir = scalaDir.up / "resources"
+        assert(resourcesDir.exists && resourcesDir.isDir, s"Expected to find directory: ${resourcesDir}")
+
+        val expectedDir = resourcesDir / "expected" / cls.getSimpleName
+        //assert(expectedDir.exists && expectedDir.isDir, s"Expecting to find ${expectedDir}")
+
+        val modelsDir = resourcesDir / "models" / cls.getSimpleName
+        assert(modelsDir.exists && modelsDir.isDir, s"Expected to find directory: ${modelsDir}")
+
+        return TestResources(
+          resultsDir = resourcesDir.up / "results" / cls.getSimpleName,
+          expectedDir = expectedDir,
+          modelsDir = modelsDir)
+      case _ =>
+        halt(s"Couldn't find resources for ${cls.getSimpleName}")
+    }
   }
 }
