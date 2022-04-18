@@ -827,13 +827,13 @@ object CodeGenTest {
         assert(scalaDir.name.native == "scala", s"Expecting ${cls.getName} to be in a 'scala' directory")
 
         val resourcesDir = scalaDir.up / "resources"
-        assert(resourcesDir.exists && resourcesDir.isDir, s"Expected to find directory: ${resourcesDir}")
+        assert(resourcesDir.exists && resourcesDir.isDir, s"Expected to find resources directory: ${resourcesDir}")
 
         val expectedDir = resourcesDir / "expected" / cls.getSimpleName
         //assert(expectedDir.exists && expectedDir.isDir, s"Expecting to find ${expectedDir}")
 
         val modelsDir = resourcesDir / "models" / cls.getSimpleName
-        assert(modelsDir.exists && modelsDir.isDir, s"Expected to find directory: ${modelsDir}")
+        assert(modelsDir.exists && modelsDir.isDir, s"Expected to find model directory: ${modelsDir}")
 
         return TestResources(
           resultsDir = resourcesDir.up / "results" / cls.getSimpleName,
