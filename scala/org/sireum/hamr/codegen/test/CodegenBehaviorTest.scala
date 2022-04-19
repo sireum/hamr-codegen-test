@@ -96,9 +96,12 @@ trait CodegenBehaviorTest extends TestSuite {
             println("Dummy Proyek IVE"); 0
           }
         )
-        if (!reporter.hasError) {
-          TestUtil.runAdditionalTasks(testName, Os.path(testOps.slangOutputDir.get), testOps, unitTestModes, 0, verbose, reporter)
+        var success = !reporter.hasError
+        if (success) {
+          success = TestUtil.runAdditionalTasks(testName, Os.path(testOps.slangOutputDir.get), testOps, unitTestModes, 0, verbose, reporter)
         }
+
+        assert(success, s"Test failed: ${testName}")
       })
     }
   }
