@@ -141,9 +141,9 @@ trait CodeGenTest extends TestSuite {
       return
     }
 
-    var testFail = F
+    var testSuccess = T
     if (!reporter.hasError) {
-      testFail = TestUtil.runAdditionalTasks(testName, slangOutputDir, testOps, testModes, smt2Timeout, verbose, reporter)
+      testSuccess &= TestUtil.runAdditionalTasks(testName, slangOutputDir, testOps, testModes, smt2Timeout, verbose, reporter)
     }
 
     val resultMap = CommonTestUtil.convertToTestResult(results.resources, resultsDir)
@@ -157,7 +157,7 @@ trait CodeGenTest extends TestSuite {
       CommonTestUtil.readExpected(expectedJson)
     }
     else {
-      testFail = T
+      testSuccess = F
       Console.err.println(s"Expected does not exist: ${expectedJson}")
       TestResult(Map.empty)
     }
@@ -181,7 +181,7 @@ trait CodeGenTest extends TestSuite {
         }
         //rkeys.elements.foreach(f => println(f))
       }
-      testFail = T
+      testSuccess &= F
     }
 
     var allEqual = T
@@ -249,7 +249,7 @@ trait CodeGenTest extends TestSuite {
 
     assert(allEqual, s"Mismatches in ${rootTestOutputDir.canon.toUri}")
 
-    assert(!testFail, s"test fail in ${rootTestOutputDir.canon.toUri}")
+    assert(testSuccess, s"test fail in ${rootTestOutputDir.canon.toUri}")
   }
 }
 

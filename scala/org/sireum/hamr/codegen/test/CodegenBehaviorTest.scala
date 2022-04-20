@@ -99,6 +99,7 @@ trait CodegenBehaviorTest extends TestSuite {
         var success = !reporter.hasError
         if (success) {
           success = TestUtil.runAdditionalTasks(testName, Os.path(testOps.slangOutputDir.get), testOps, unitTestModes, 0, verbose, reporter)
+          success = success && !reporter.hasError
         }
 
         assert(success, s"Test failed: ${testName}")

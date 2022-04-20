@@ -368,7 +368,7 @@ object TestUtil {
       proc"subst ${optSubstDrive} /D".run()
     }
 
-    return !keepGoing // ie. no failure occurred
+    return keepGoing // ie. no failure occurred
   }
 
   def isLinux(platform: CodeGenPlatform.Type): Boolean = {
