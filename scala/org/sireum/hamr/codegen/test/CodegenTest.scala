@@ -95,6 +95,7 @@ trait CodeGenTest extends TestSuite {
     var testOps = config(
       slangOutputDir = Some(slangOutputDir.canon.value),
       aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value),
+      verbose = verbose
     )
 
     if (TestUtil.isSeL4(testOps.platform)) {
@@ -110,7 +111,7 @@ trait CodeGenTest extends TestSuite {
 
     val reporter = Reporter.create
 
-    val model: Aadl = TestUtil.getModel(airFile, Os.path(testOps.aadlRootDir.get), testModes, testName)
+    val model: Aadl = TestUtil.getModel(airFile, Os.path(testOps.aadlRootDir.get), testModes, testName, verbose)
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 

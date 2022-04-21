@@ -11,7 +11,7 @@ import org.sireum.test.TestSuite
 trait CodegenBehaviorTest extends TestSuite {
 
   def testModes: ISZ[TestMode.Type] = {
-    val envModes = CodegenBehaviorTest.getUnitTestModes(Os.env("HamrTestMode"))
+    val envModes = CodegenBehaviorTest.getUnitTestModes(Os.env("HamrTestModes"))
     if (envModes.nonEmpty) envModes
     else ISZ()
   }
@@ -65,14 +65,17 @@ trait CodegenBehaviorTest extends TestSuite {
       return
     }
 
-    val hamrOpts = CodegenBehaviorTest.processHamrArgs(props.get("hamrArgs").get, test.up)
+    var hamrOpts = CodegenBehaviorTest.processHamrArgs(props.get("hamrArgs").get, test.up)
 
     if (hamrOpts.isEmpty) {
       cprint(T, s"The 'hamrArgs' entry did not parse: ${test.value}")
       return
     }
 
-    val testOps = hamrOpts.get
+    var testOps = hamrOpts.get
+    if(verbose) {
+      testOps = testOps(verbose = verbose)
+    }
 
     val label = s"From test properties file: ${test.canon.toUri}"
     if (overrideIgnore || CodegenBehaviorTest.shouldIgnore(props)) {
@@ -84,9 +87,13 @@ trait CodegenBehaviorTest extends TestSuite {
       registerTest(testName.native)({
         println(label)
 
+        if(verbose) {
+          println(s"Test Modes: ${unitTestModes}")
+        }
+
         val reporter = Reporter.create
 
-        val model = TestUtil.getModel(airFile, Os.path(testOps.aadlRootDir.get), unitTestModes, testName)
+        val model = TestUtil.getModel(airFile, Os.path(testOps.aadlRootDir.get), unitTestModes, testName, verbose)
 
         val results: CodeGenResults = CodeGen.codeGen(model, testOps, reporter,
           (TranspilerConfig) => {

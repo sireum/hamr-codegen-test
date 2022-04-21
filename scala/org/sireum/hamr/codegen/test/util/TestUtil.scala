@@ -49,7 +49,7 @@ object TestUtil {
     }
   }
 
-  def getModel(airFile: Option[Os.Path], rootAadlDir: Os.Path, testModes: ISZ[TestMode.Type], testName: String): Aadl = {
+  def getModel(airFile: Option[Os.Path], rootAadlDir: Os.Path, testModes: ISZ[TestMode.Type], testName: String, verbose: B): Aadl = {
 
     val s: String = if (ops.ISZOps(testModes).contains(TestMode.phantom) || airFile.isEmpty) {
       val tempDir = Os.tempDir()
@@ -60,7 +60,11 @@ object TestUtil {
       val custEnv = Os.envs.entries :+ (("CHECK_PHANTOM_HAMR_API_COMPATIBILITY", "true"))
 
       println("Generating AIR via phantom ...")
-      val results = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv).run()
+      var p = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
+      if(verbose) {
+        p = p.console
+      }
+      val results = p.run()
 
       assert(results.ok,
         st"""AIR generation failed:
