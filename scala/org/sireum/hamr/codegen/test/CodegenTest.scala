@@ -94,9 +94,13 @@ trait CodeGenTest extends TestSuite {
 
     var testOps = config(
       slangOutputDir = Some(slangOutputDir.canon.value),
-      aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value),
-      verbose = verbose
+      aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value)
     )
+
+    if(verbose) {
+      println(s"Test Modes: ${testModes}")
+      testOps = testOps(verbose = verbose)
+    }
 
     if (TestUtil.isSeL4(testOps.platform)) {
       assert(testOps.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${config.camkesOutputDir}")
