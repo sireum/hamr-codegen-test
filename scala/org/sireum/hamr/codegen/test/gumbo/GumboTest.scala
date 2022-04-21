@@ -1,11 +1,11 @@
-package org.sireum.hamr.codegen.test.normal
+package org.sireum.hamr.codegen.test.gumbo
 
 import org.scalatest.BeforeAndAfterAll
-import org.sireum.{B, F, ISZ, None, Os, Some, T, ops}
 import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.TestMode
+import org.sireum.{B, F, ISZ, None, Os, Some, T, ops}
 
 class GumboTest extends CodeGenTest with BeforeAndAfterAll {
 
