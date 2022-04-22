@@ -49,6 +49,14 @@ object TestUtil {
     }
   }
 
+  def getModel(rootAadlDir: Os.Path, testModes: ISZ[TestMode.Type], testName: String, verbose: B): Aadl = {
+    val s = rootAadlDir / ".slang"
+    val cands = s.list.filter(f => f.name.native.endsWith("json"))
+    assert(cands.size == 1, s": Inspect json files in ${s.value}")
+
+    return getModel(Some(cands(0)), rootAadlDir, testModes, testName, verbose)
+  }
+
   def getModel(airFile: Option[Os.Path], rootAadlDir: Os.Path, testModes: ISZ[TestMode.Type], testName: String, verbose: B): Aadl = {
 
     val s: String = if (ops.ISZOps(testModes).contains(TestMode.phantom) || airFile.isEmpty) {

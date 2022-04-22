@@ -2,7 +2,7 @@ package org.sireum.hamr.codegen.test
 
 import org.sireum._
 import org.sireum.hamr.codegen.CodeGen
-import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
+import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults, ExperimentalOptions}
 import org.sireum.hamr.codegen.test.util.Cli.{CodegenHamrPlatform, CodegenOption}
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 import org.sireum.message.Reporter
@@ -20,7 +20,9 @@ trait CodegenBehaviorTest extends TestSuite {
     return ops.ISZOps(testModes).contains(TestMode.verbose)
   }
 
-  def locateHamrTests(root: Os.Path): ISZ[Os.Path] = {
+  // recursively finds files whose name begin with '.hamrtest', case insensitive,
+  // suffix ignored (e.g. .hamrtest, .hamrTest_case01)
+  def locateHamrTestFiles(root: Os.Path): ISZ[Os.Path] = {
     var testRoots: ISZ[Os.Path] = ISZ()
 
     def locate(f: Os.Path): Unit = {
@@ -28,23 +30,80 @@ trait CodegenBehaviorTest extends TestSuite {
       for (item <- f.list) {
         if (item.isDir) {
           locate(item)
-        } else if (ops.StringOps(item.name).startsWith(".hamrtest")) {
+        } else if (ops.StringOps(ops.StringOps(item.name).toLower).startsWith(".hamrtest")) {
           testRoots = testRoots :+ item
         }
       }
     }
-
     locate(root)
     return testRoots
   }
 
-  def test(test: Os.Path): Unit = {
-    val props = test.properties
+  def test(testName: String,
+           testDescription: String,
+           testOptions: CodeGenConfig,
+           testModes: ISZ[TestMode.Type],
+           airFile: Option[Os.Path] = None())(implicit position: org.scalactic.source.Position): Unit = {
+
+    val _testName = s"${testName} L${position.lineNumber}"
+
+    val tags: ISZ[org.scalatest.Tag] = ISZ()
+
+    registerTest(_testName, tags.elements: _*)({
+
+      cprintln(F, testDescription)
+
+      assert(testOptions.aadlRootDir.nonEmpty, "Currently requires aadlRootDir to be populated")
+      assert(testOptions.slangOutputDir.nonEmpty, "Currently requires slangOutputDir to be populated")
+
+      val slangOutputDir = Os.path(testOptions.slangOutputDir.get)
+      cprintln(F, s"Slang Output Directory: ${slangOutputDir.canon.toUri}")
+
+      if(verbose) {
+        cprintln(F, s"Test Modes: ${testModes}")
+      }
+
+      val reporter = Reporter.create
+
+      val model = airFile match {
+        case Some(a) => TestUtil.getModel(Some(a), Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+        case _ => TestUtil.getModel(Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+      }
+
+      val results: CodeGenResults = CodeGen.codeGen(model, testOptions, reporter,
+        (TranspilerConfig) => { 0 },
+        (ProyekIveConfig) => { 0 }
+      )
+      var success = !reporter.hasError
+      if (success) {
+        success = TestUtil.runAdditionalTasks(_testName, Os.path(testOptions.slangOutputDir.get), testOptions, testModes, 0, verbose, reporter)
+        success = success && !reporter.hasError
+      }
+
+      assert(success, s"Test failed: ${_testName}")
+    })
+  }
+
+  def ignoreTest(testName: String,
+                 testDescription: String)(implicit position: org.scalactic.source.Position): Unit = {
+
+    val _testName = s"${testName} L${position.lineNumber}"
+
+    // TODO: would be nice if the following was attached to the outline view
+    cprintln(T,
+      st"""Ignoring ${_testName}
+          |  $testDescription""".render)
+
+    registerIgnoredTest(_testName)({})
+  }
+
+  def genTestFromFile(hamrTestFile: Os.Path)(implicit position: org.scalactic.source.Position): Unit = {
+    val props = hamrTestFile.properties
 
     var ignoreReasons: ISZ[String] = ISZ()
 
     if (!props.contains("testName")) {
-      cprint(T, s"Property file must contain 'testName' entry: ${test.value}")
+      cprint(T, s"Property file must contain 'testName' entry: ${hamrTestFile.value}")
       return
     }
 
@@ -52,7 +111,7 @@ trait CodegenBehaviorTest extends TestSuite {
 
     val unitTestModes: ISZ[TestMode.Type] = testModes ++ CodegenBehaviorTest.getUnitTestModes(props.get("testModes"))
 
-    val airFile = CodegenBehaviorTest.getAirFileEntry(props.get("airFile"), test.canon)
+    val airFile = CodegenBehaviorTest.getAirFileEntry(props.get("airFile"), hamrTestFile.up.canon)
 
     var overrideIgnore = F
     if (airFile.isEmpty && !ops.ISZOps(unitTestModes).contains(TestMode.phantom)) {
@@ -61,14 +120,14 @@ trait CodegenBehaviorTest extends TestSuite {
     }
 
     if (!props.contains("hamrArgs")) {
-      cprint(T, s"Property file must contain 'hamrArgs' entry: ${test.value}")
+      cprint(T, s"Property file must contain 'hamrArgs' entry: ${hamrTestFile.value}")
       return
     }
 
-    var hamrOpts = CodegenBehaviorTest.processHamrArgs(props.get("hamrArgs").get, test.up)
+    val hamrOpts = CodegenBehaviorTest.processHamrArgs(props.get("hamrArgs").get, hamrTestFile.up)
 
     if (hamrOpts.isEmpty) {
-      cprint(T, s"The 'hamrArgs' entry did not parse: ${test.value}")
+      cprint(T, s"The 'hamrArgs' entry did not parse: ${hamrTestFile.value}")
       return
     }
 
@@ -77,50 +136,49 @@ trait CodegenBehaviorTest extends TestSuite {
       testOps = testOps(verbose = verbose)
     }
 
-    val label = s"From test properties file: ${test.canon.toUri}"
+    val label = s"From test properties file: ${hamrTestFile.canon.toUri}"
     if (overrideIgnore || CodegenBehaviorTest.shouldIgnore(props)) {
-      cprintln(T,
-        st"""Ignoring ${testName} from ${test.toUri}
-            |  ${(ignoreReasons, "\n")}""".render)
-      registerIgnoredTest(testName.native)({})
+      val testDescription = st"""Ignoring ${testName} from ${hamrTestFile.toUri}
+                                |  ${(ignoreReasons, "\n")}""".render
+      ignoreTest(testName, testDescription)(position)
     } else {
-      registerTest(testName.native)({
-        println(label)
-
-        if(verbose) {
-          println(s"Test Modes: ${unitTestModes}")
-        }
-
-        val reporter = Reporter.create
-
-        val model = TestUtil.getModel(airFile, Os.path(testOps.aadlRootDir.get), unitTestModes, testName, verbose)
-
-        val results: CodeGenResults = CodeGen.codeGen(model, testOps, reporter,
-          (TranspilerConfig) => {
-            println("Dummy transpiler"); 0
-          },
-          (ProyekIveConfig) => {
-            println("Dummy Proyek IVE"); 0
-          }
-        )
-        var success = !reporter.hasError
-        if (success) {
-          success = TestUtil.runAdditionalTasks(testName, Os.path(testOps.slangOutputDir.get), testOps, unitTestModes, 0, verbose, reporter)
-          success = success && !reporter.hasError
-        }
-
-        assert(success, s"Test failed: ${testName}")
-      })
+      test(testName, label, testOps, unitTestModes, airFile)(position)
     }
   }
+
+
+  val baseOptions = CodeGenConfig(
+    writeOutResources = T,
+    ipc = CodeGenIpcMechanism.SharedMemory,
+
+    verbose = F,
+    platform = CodeGenPlatform.JVM,
+    slangOutputDir = None(),
+    packageName = None(),
+    noProyekIve = T,
+    noEmbedArt = F,
+    devicesAsThreads = T,
+    slangAuxCodeDirs = ISZ(),
+    slangOutputCDir = None(),
+    excludeComponentImpl = F,
+    bitWidth = 64,
+    maxStringSize = 256,
+    maxArraySize = 1,
+    runTranspiler = F,
+    camkesOutputDir = None(),
+    camkesAuxCodeDirs = ISZ(),
+    aadlRootDir = None(),
+    experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
+  )
 }
 
 
 object CodegenBehaviorTest {
-  def getAirFileEntry(value: Option[String], root: Os.Path): Option[Os.Path] = {
+  def getAirFileEntry(value: Option[String], rootDir: Os.Path): Option[Os.Path] = {
+    assert(rootDir.isDir, s"Expecting a director: ${rootDir}")
     val ret: Option[Os.Path] = value match {
       case Some(f) =>
-        val cand = (root / f).canon
+        val cand = (rootDir / f).canon
         if (cand.exists) {
           Some(cand)
         } else {
