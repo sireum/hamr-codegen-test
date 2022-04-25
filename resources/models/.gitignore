@@ -1,3 +1,4 @@
 *.aaxl2
 **/testAIR.json
 **/out
+**/.idea
