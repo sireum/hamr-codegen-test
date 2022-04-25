@@ -51,7 +51,20 @@ trait CodegenBehaviorTest extends TestSuite {
 
     registerTest(_testName, tags.elements: _*)({
 
-      cprintln(F, testDescription)
+      // FIXME: Output from individual unit tests were not grouping correctly in intellij's Test Results view.
+      //        Seems sleeping for a bit or doing something that takes awhile (e.g. loading AIR) resolves the issue.
+      //        See https://youtrack.jetbrains.com/issue/IDEA-66683.  One of the duplicated issues mentioned sleeping
+
+      //Thread.sleep(1000)
+
+      val model = airFile match {
+        case Some(a) => TestUtil.getModel(Some(a), Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+        case _ => TestUtil.getModel(Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+      }
+
+      if(testDescription.size > 0) {
+        cprintln(F, testDescription)
+      }
 
       assert(testOptions.aadlRootDir.nonEmpty, "Currently requires aadlRootDir to be populated")
       assert(testOptions.slangOutputDir.nonEmpty, "Currently requires slangOutputDir to be populated")
@@ -64,11 +77,6 @@ trait CodegenBehaviorTest extends TestSuite {
       }
 
       val reporter = Reporter.create
-
-      val model = airFile match {
-        case Some(a) => TestUtil.getModel(Some(a), Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
-        case _ => TestUtil.getModel(Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
-      }
 
       val results: CodeGenResults = CodeGen.codeGen(model, testOptions, reporter,
         (TranspilerConfig) => { 0 },
