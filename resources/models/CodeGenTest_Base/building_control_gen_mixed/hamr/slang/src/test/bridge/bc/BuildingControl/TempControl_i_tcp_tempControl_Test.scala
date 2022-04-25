@@ -8,5 +8,6 @@ class TempControl_i_tcp_tempControl_Test extends TempControl_i_tcp_tempControl_T
 
   test("Example Unit Test"){
     executeTest()
+    executeTest()
   }
 }
