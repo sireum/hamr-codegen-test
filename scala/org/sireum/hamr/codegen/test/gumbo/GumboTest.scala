@@ -13,7 +13,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
 
   override def generateExpected: B = if (super.generateExpected) T else F
 
-  val phantomReady: B = F // use checked in AIR json until released osate plugins support gumbo
+  val phantomReady: B = T
 
   val superModes: ISZ[TestMode.Type] = {
     if (!phantomReady && ops.ISZOps(super.testModes).contains(TestMode.phantom)) {
