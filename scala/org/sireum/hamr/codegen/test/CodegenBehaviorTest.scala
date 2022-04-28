@@ -2,7 +2,7 @@ package org.sireum.hamr.codegen.test
 
 import org.sireum._
 import org.sireum.hamr.codegen.CodeGen
-import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults, ExperimentalOptions}
+import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.test.util.Cli.{CodegenHamrPlatform, CodegenOption}
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 import org.sireum.message.Reporter
@@ -35,6 +35,7 @@ trait CodegenBehaviorTest extends TestSuite {
         }
       }
     }
+
     locate(root)
     return testRoots
   }
@@ -45,51 +46,60 @@ trait CodegenBehaviorTest extends TestSuite {
            testModes: ISZ[TestMode.Type],
            airFile: Option[Os.Path] = None())(implicit position: org.scalactic.source.Position): Unit = {
 
-    val _testName = s"${testName} L${position.lineNumber}"
-
     val tags: ISZ[org.scalatest.Tag] = ISZ()
 
-    registerTest(_testName, tags.elements: _*)({
+    registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
+      testAir(testName, testDescription, testOptions, testModes, airFile))
+  }
 
-      // FIXME: Output from individual unit tests were not grouping correctly in intellij's Test Results view.
-      //        Seems sleeping for a bit or doing something that takes awhile (e.g. loading AIR) resolves the issue.
-      //        See https://youtrack.jetbrains.com/issue/IDEA-66683.  One of the duplicated issues mentioned sleeping
+  def testAir(testName: String,
+              testDescription: String,
+              testOptions: CodeGenConfig,
+              testModes: ISZ[TestMode.Type],
+              airFile: Option[Os.Path] = None()): Unit = {
 
-      //Thread.sleep(1000)
+    // FIXME: Output from individual unit tests were not grouping correctly in intellij's Test Results view.
+    //        Seems sleeping for a bit or doing something that takes awhile (e.g. loading AIR) resolves the issue.
+    //        See https://youtrack.jetbrains.com/issue/IDEA-66683.  One of the duplicated issues mentioned sleeping
 
-      val model = airFile match {
-        case Some(a) => TestUtil.getModel(Some(a), Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
-        case _ => TestUtil.getModel(Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+    //Thread.sleep(1000)
+
+    val model = airFile match {
+      case Some(a) => TestUtil.getModel(Some(a), Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+      case _ => TestUtil.getModel(Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+    }
+
+    if (testDescription.size > 0) {
+      cprintln(F, testDescription)
+    }
+
+    assert(testOptions.aadlRootDir.nonEmpty, "Currently requires aadlRootDir to be populated")
+    assert(testOptions.slangOutputDir.nonEmpty, "Currently requires slangOutputDir to be populated")
+
+    val slangOutputDir = Os.path(testOptions.slangOutputDir.get)
+    cprintln(F, s"Slang Output Directory: ${slangOutputDir.canon.toUri}")
+
+    if (verbose) {
+      cprintln(F, s"Test Modes: ${testModes}")
+    }
+
+    val reporter = Reporter.create
+
+    val results: CodeGenResults = CodeGen.codeGen(model, testOptions, reporter,
+      (TranspilerConfig) => {
+        0
+      },
+      (ProyekIveConfig) => {
+        0
       }
+    )
+    var success = !reporter.hasError
+    if (success) {
+      success = TestUtil.runAdditionalTasks(testName, Os.path(testOptions.slangOutputDir.get), testOptions, testModes, 0, verbose, reporter)
+      success = success && !reporter.hasError
+    }
 
-      if(testDescription.size > 0) {
-        cprintln(F, testDescription)
-      }
-
-      assert(testOptions.aadlRootDir.nonEmpty, "Currently requires aadlRootDir to be populated")
-      assert(testOptions.slangOutputDir.nonEmpty, "Currently requires slangOutputDir to be populated")
-
-      val slangOutputDir = Os.path(testOptions.slangOutputDir.get)
-      cprintln(F, s"Slang Output Directory: ${slangOutputDir.canon.toUri}")
-
-      if(verbose) {
-        cprintln(F, s"Test Modes: ${testModes}")
-      }
-
-      val reporter = Reporter.create
-
-      val results: CodeGenResults = CodeGen.codeGen(model, testOptions, reporter,
-        (TranspilerConfig) => { 0 },
-        (ProyekIveConfig) => { 0 }
-      )
-      var success = !reporter.hasError
-      if (success) {
-        success = TestUtil.runAdditionalTasks(_testName, Os.path(testOptions.slangOutputDir.get), testOptions, testModes, 0, verbose, reporter)
-        success = success && !reporter.hasError
-      }
-
-      assert(success, s"Test failed: ${_testName}")
-    })
+    assert(success, s"Test failed: ${testName}")
   }
 
   def ignoreTest(testName: String,
@@ -140,14 +150,15 @@ trait CodegenBehaviorTest extends TestSuite {
     }
 
     var testOps = hamrOpts.get
-    if(verbose) {
+    if (verbose) {
       testOps = testOps(verbose = verbose)
     }
 
     val label = s"From test properties file: ${hamrTestFile.canon.toUri}"
     if (overrideIgnore || CodegenBehaviorTest.shouldIgnore(props)) {
-      val testDescription = st"""Ignoring ${testName} from ${hamrTestFile.toUri}
-                                |  ${(ignoreReasons, "\n")}""".render
+      val testDescription =
+        st"""Ignoring ${testName} from ${hamrTestFile.toUri}
+            |  ${(ignoreReasons, "\n")}""".render
       ignoreTest(testName, testDescription)(position)
     } else {
       test(testName, label, testOps, unitTestModes, airFile)(position)
