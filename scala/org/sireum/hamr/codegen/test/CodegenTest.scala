@@ -280,6 +280,7 @@ object CodeGenTest {
     noProyekIve = T,
     noEmbedArt = F,
     devicesAsThreads = T,
+    genSbtMill = T,
     slangAuxCodeDirs = ISZ(),
     slangOutputCDir = None(),
     excludeComponentImpl = F,
