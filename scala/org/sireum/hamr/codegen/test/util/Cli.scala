@@ -34,6 +34,7 @@ object Cli {
     val noProyekIve: B,
     val noEmbedArt: B,
     val devicesAsThreads: B,
+    val genSbtMill: B,
     val slangAuxCodeDirs: ISZ[String],
     val slangOutputCDir: Option[String],
     val excludeComponentImpl: B,
@@ -98,6 +99,7 @@ import Cli._
           |    --no-proyek-ive      Do not run Proyek IVE
           |    --no-embed-art       Do not embed ART project files
           |    --devices-as-thread  Treat AADL devices as threads
+          |    --sbt-mill           Generate SBT and Mill projects in addition to Proyek
           |
           |Transpiler Options:
           |    --aux-code-dirs      Auxiliary C source code directories (expects path
@@ -136,6 +138,7 @@ import Cli._
     var noProyekIve: B = false
     var noEmbedArt: B = false
     var devicesAsThreads: B = false
+    var genSbtMill: B = false
     var slangAuxCodeDirs: ISZ[String] = ISZ[String]()
     var slangOutputCDir: Option[String] = None[String]()
     var excludeComponentImpl: B = false
@@ -201,6 +204,12 @@ import Cli._
            val o: Option[B] = { j = j - 1; Some(!devicesAsThreads) }
            o match {
              case Some(v) => devicesAsThreads = v
+             case _ => return None()
+           }
+         } else if (arg == "--sbt-mill") {
+           val o: Option[B] = { j = j - 1; Some(!genSbtMill) }
+           o match {
+             case Some(v) => genSbtMill = v
              case _ => return None()
            }
          } else if (arg == "--aux-code-dirs") {
@@ -278,7 +287,7 @@ import Cli._
         isOption = F
       }
     }
-    return Some(CodegenOption(help, parseArguments(args, j), msgpack, verbose, platform, outputDir, packageName, noProyekIve, noEmbedArt, devicesAsThreads, slangAuxCodeDirs, slangOutputCDir, excludeComponentImpl, bitWidth, maxStringSize, maxArraySize, runTranspiler, camkesOutputDir, camkesAuxCodeDirs, aadlRootDir, experimentalOptions))
+    return Some(CodegenOption(help, parseArguments(args, j), msgpack, verbose, platform, outputDir, packageName, noProyekIve, noEmbedArt, devicesAsThreads, genSbtMill, slangAuxCodeDirs, slangOutputCDir, excludeComponentImpl, bitWidth, maxStringSize, maxArraySize, runTranspiler, camkesOutputDir, camkesAuxCodeDirs, aadlRootDir, experimentalOptions))
   }
 
   def parseArguments(args: ISZ[String], i: Z): ISZ[String] = {
@@ -457,4 +466,5 @@ import Cli._
 // @formatter:on
 
 // BEGIN USER CODE
+
 // END USER CODE
