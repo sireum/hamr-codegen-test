@@ -25,7 +25,7 @@
 //   this file then click 'OK'.  To install Sireum IVE see https://github.com/sireum/kekinian#installing
 //
 //   To run the demo from within Sireum IVE:
-//     Right click src/main/architecture/slang/Demo.scala and choose "Run 'Demo'"
+//     Right click src/main/architecture/TempControlSimpleTemp/Demo.scala and choose "Run 'Demo'"
 //
 //   To run the unit test cases from within Sireum IVE:
 //     Right click the src/test/bridge directory and choose "Run ScalaTests in bridge"
@@ -94,9 +94,9 @@ val slangEmbeddedSettings = Seq(
   // Jetbrains UI Designer
   libraryDependencies += "com.intellij" % "forms_rt" % formsRtVersion,
 
-  mainClass in (Compile, run) := Some("slang.Demo"),
+  mainClass in (Compile, run) := Some("TempControlSimpleTemp.Demo"),
 
-  mainClass in assembly := Some("slang.Demo"),
+  mainClass in assembly := Some("TempControlSimpleTemp.Demo"),
   assemblyJarName in assembly := "TempControlSoftwareSystem_i_Instance.jar",
   assemblyOption in assembly := (assemblyOption in assembly).value.copy(prependShellScript = Some(defaultUniversalScript(shebang = false))),
 
@@ -113,7 +113,7 @@ val slangEmbeddedInspectorSettings = Seq(
   libraryDependencies += "org.sireum" % "inspector-gui" % inspectorVersion withSources(),
   libraryDependencies += "org.sireum" % "inspector-services-jvm" % inspectorVersion withSources(),
 
-  mainClass in (Compile, run) := Some("slang.InspectorDemo"),
+  mainClass in (Compile, run) := Some("TempControlSimpleTemp.InspectorDemo"),
 )
 
 def slangEmbeddedProject(projId: String, projectDirectory: String) =

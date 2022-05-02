@@ -24,16 +24,16 @@ exit /B %errorlevel%
 //
 // Command Line:
 //   To run the demo from the command line using the default scheduler:
-//     sireum proyek run . slang.Demo
+//     sireum proyek run . TempControlSimpleTemp.Demo
 //
 //   To see the available CLI options:
-//     sireum proyek run . slang.Demo -h
+//     sireum proyek run . TempControlSimpleTemp.Demo -h
 //
 //   To run the example unit tests from the command line:
 //     sireum proyek test .
 //
 //   To build an executable jar:
-//     sireum proyek assemble --uber --main slang.Demo .
+//     sireum proyek assemble --uber --main TempControlSimpleTemp.Demo .
 //
 // Sireum IVE:
 //
@@ -44,7 +44,7 @@ exit /B %errorlevel%
 //   'bin' directory and click 'OK'.
 //
 //   To run the demo from within Sireum IVE:
-//     Right click src/main/architecture/slang/Demo.scala and choose "Run 'Demo'"
+//     Right click src/main/architecture/TempControlSimpleTemp/Demo.scala and choose "Run 'Demo'"
 //
 //   To run the unit test cases from within Sireum IVE:
 //     Right click the src/test/bridge and choose "Run ScalaTests in bridge"

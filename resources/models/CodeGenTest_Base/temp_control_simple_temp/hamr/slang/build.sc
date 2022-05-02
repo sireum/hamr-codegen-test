@@ -7,10 +7,10 @@ import ammonite.ops._
 // mill can be obtained following instructions at https://github.com/sireum/kekinian#slang-app-example-mill-project
 //
 // To run the demo from the command line:
-//   $SIREUM_HOME/bin/mill slang.run
+//   $SIREUM_HOME/bin/mill TempControlSimpleTemp.run
 //
 // To run the example unit tests:
-//   $SIREUM_HOME/bin/mill slang.tests
+//   $SIREUM_HOME/bin/mill TempControlSimpleTemp.tests
 //
 // Sireum IVE:
 //   First cd to the directory containing this file and execute the following:
@@ -21,7 +21,7 @@ import ammonite.ops._
 //   containing this file then click 'OK'.  To have the codebase and its
 //   test suites recompiled upon changes, run:
 //
-//     $SIREUM_HOME/bin/mill -w slang.tests.compile
+//     $SIREUM_HOME/bin/mill -w TempControlSimpleTemp.tests.compile
 //
 // Visual Studio Code:
 //   Follow Sireum Kekinian's instructions for setting up a development
@@ -30,7 +30,7 @@ import ammonite.ops._
 //   mill build when asked.
 
 
-object `slang` extends slangEmbeddedProject
+object `TempControlSimpleTemp` extends slangEmbeddedProject
 
 trait SlangEmbeddedModule extends ScalaModule {
 
@@ -84,7 +84,7 @@ trait SlangEmbeddedModule extends ScalaModule {
 
   override def repositories = super.repositories :+ coursier.Repositories.jitpack
 
-  override def mainClass = T { Some("slang.Demo") }
+  override def mainClass = T { Some("TempControlSimpleTemp.Demo") }
 
   implicit def osPath2PathRef(p: os.Path): PathRef = PathRef(p)
 }
@@ -118,7 +118,7 @@ trait slangEmbeddedProject extends SlangEmbeddedModule {
 
 trait slangEmbeddedInspectorProject extends slangEmbeddedProject {
 
-  override def mainClass = T { Some("slang.InspectorDemo") }
+  override def mainClass = T { Some("TempControlSimpleTemp.InspectorDemo") }
 
   override def contributedSources =
     super.contributedSources :+ millSourcePath / os.up / "src" / "main" / "inspector"
