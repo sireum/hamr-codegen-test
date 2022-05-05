@@ -8126,11 +8126,11 @@
                               "type" : "Some",
                               "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                             },
-                            "beginLine" : 148,
+                            "beginLine" : 151,
                             "beginColumn" : 11,
-                            "endLine" : 148,
+                            "endLine" : 151,
                             "endColumn" : 18,
-                            "offset" : 6858,
+                            "offset" : 7058,
                             "length" : 7
                           }
                         }
@@ -8146,11 +8146,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                           },
-                          "beginLine" : 148,
+                          "beginLine" : 151,
                           "beginColumn" : 11,
-                          "endLine" : 148,
+                          "endLine" : 151,
                           "endColumn" : 18,
-                          "offset" : 6858,
+                          "offset" : 7058,
                           "length" : 7
                         }
                       },
@@ -8182,11 +8182,11 @@
                               "type" : "Some",
                               "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                             },
-                            "beginLine" : 148,
+                            "beginLine" : 151,
                             "beginColumn" : 24,
-                            "endLine" : 148,
+                            "endLine" : 151,
                             "endColumn" : 35,
-                            "offset" : 6871,
+                            "offset" : 7071,
                             "length" : 11
                           }
                         }
@@ -8202,11 +8202,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                           },
-                          "beginLine" : 148,
+                          "beginLine" : 151,
                           "beginColumn" : 23,
-                          "endLine" : 148,
+                          "endLine" : 151,
                           "endColumn" : 35,
-                          "offset" : 6870,
+                          "offset" : 7070,
                           "length" : 12
                         }
                       },
@@ -8228,11 +8228,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                         },
-                        "beginLine" : 148,
+                        "beginLine" : 151,
                         "beginColumn" : 11,
-                        "endLine" : 148,
+                        "endLine" : 151,
                         "endColumn" : 35,
-                        "offset" : 6858,
+                        "offset" : 7058,
                         "length" : 24
                       }
                     },
@@ -8746,11 +8746,11 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                                 },
-                                "beginLine" : 148,
+                                "beginLine" : 151,
                                 "beginColumn" : 11,
-                                "endLine" : 148,
+                                "endLine" : 151,
                                 "endColumn" : 18,
-                                "offset" : 6858,
+                                "offset" : 7058,
                                 "length" : 7
                               }
                             }
@@ -8766,11 +8766,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                               },
-                              "beginLine" : 148,
+                              "beginLine" : 151,
                               "beginColumn" : 11,
-                              "endLine" : 148,
+                              "endLine" : 151,
                               "endColumn" : 18,
-                              "offset" : 6858,
+                              "offset" : 7058,
                               "length" : 7
                             }
                           },
@@ -8802,11 +8802,11 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                                 },
-                                "beginLine" : 148,
+                                "beginLine" : 151,
                                 "beginColumn" : 24,
-                                "endLine" : 148,
+                                "endLine" : 151,
                                 "endColumn" : 35,
-                                "offset" : 6871,
+                                "offset" : 7071,
                                 "length" : 11
                               }
                             }
@@ -8822,11 +8822,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                               },
-                              "beginLine" : 148,
+                              "beginLine" : 151,
                               "beginColumn" : 23,
-                              "endLine" : 148,
+                              "endLine" : 151,
                               "endColumn" : 35,
-                              "offset" : 6870,
+                              "offset" : 7070,
                               "length" : 12
                             }
                           },
@@ -8848,11 +8848,11 @@
                               "type" : "Some",
                               "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                             },
-                            "beginLine" : 148,
+                            "beginLine" : 151,
                             "beginColumn" : 11,
-                            "endLine" : 148,
+                            "endLine" : 151,
                             "endColumn" : 35,
-                            "offset" : 6858,
+                            "offset" : 7058,
                             "length" : 24
                           }
                         },
@@ -9135,11 +9135,11 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                                 },
-                                "beginLine" : 148,
+                                "beginLine" : 151,
                                 "beginColumn" : 11,
-                                "endLine" : 148,
+                                "endLine" : 151,
                                 "endColumn" : 18,
-                                "offset" : 6858,
+                                "offset" : 7058,
                                 "length" : 7
                               }
                             }
@@ -9155,11 +9155,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                               },
-                              "beginLine" : 148,
+                              "beginLine" : 151,
                               "beginColumn" : 11,
-                              "endLine" : 148,
+                              "endLine" : 151,
                               "endColumn" : 18,
-                              "offset" : 6858,
+                              "offset" : 7058,
                               "length" : 7
                             }
                           },
@@ -9191,11 +9191,11 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                                 },
-                                "beginLine" : 148,
+                                "beginLine" : 151,
                                 "beginColumn" : 24,
-                                "endLine" : 148,
+                                "endLine" : 151,
                                 "endColumn" : 35,
-                                "offset" : 6871,
+                                "offset" : 7071,
                                 "length" : 11
                               }
                             }
@@ -9211,11 +9211,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                               },
-                              "beginLine" : 148,
+                              "beginLine" : 151,
                               "beginColumn" : 23,
-                              "endLine" : 148,
+                              "endLine" : 151,
                               "endColumn" : 35,
-                              "offset" : 6870,
+                              "offset" : 7070,
                               "length" : 12
                             }
                           },
@@ -9237,11 +9237,11 @@
                               "type" : "Some",
                               "value" : "\/temp-control-simple-temp\/packages\/TempSensor.aadl"
                             },
-                            "beginLine" : 148,
+                            "beginLine" : 151,
                             "beginColumn" : 11,
-                            "endLine" : 148,
+                            "endLine" : 151,
                             "endColumn" : 35,
-                            "offset" : 6858,
+                            "offset" : 7058,
                             "length" : 24
                           }
                         },

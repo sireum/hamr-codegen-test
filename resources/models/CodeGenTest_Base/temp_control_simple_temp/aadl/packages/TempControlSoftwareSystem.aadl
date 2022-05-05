@@ -222,7 +222,7 @@ public
       			(currentSetPoint.low.degrees == f32"70.0") && (currentSetPoint.high.degrees == f32"80.0");
       		
       		guarantee "defaultLatestTemp":
-      			latestTemp.degrees == f32"72.0";
+      			latestTemp.degrees == f32"75.0";
       			
       		-- guarantee "defaultFanStates":
       		--	currentFanState == FanCmd.Off;
