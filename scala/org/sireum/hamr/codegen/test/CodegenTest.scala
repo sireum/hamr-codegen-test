@@ -28,7 +28,7 @@ trait CodeGenTest extends TestSuite {
   //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
   def testModes: ISZ[TestMode.Type] = Os.env("HamrTestModes") match {
     case Some(list) => ops.StringOps(list).split((c: C) => c == C(',')).map((m: String) => TestMode.byName(m).get)
-    case _ => ISZ(TestMode.codegen)
+    case _ => ISZ(TestMode.codegen, TestMode.transpile)
     //case _ => ISZ(TestMode.codegen, TestMode.smt2)
   }
 
@@ -99,7 +99,6 @@ trait CodeGenTest extends TestSuite {
 
     if(verbose) {
       println(s"Test Modes: ${testModes}")
-      testOps = testOps(verbose = verbose)
     }
 
     if (TestUtil.isSeL4(testOps.platform)) {
