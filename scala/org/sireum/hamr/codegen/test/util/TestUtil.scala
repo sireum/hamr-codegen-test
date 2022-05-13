@@ -5,7 +5,6 @@ import org.sireum.hamr.act.templates.SlangEmbeddedTemplate
 import org.sireum.hamr.act.util.CMakeOption
 import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenPlatform}
 import org.sireum.hamr.codegen.test.CodeGenTest
-import org.sireum.hamr.codegen.test.CodeGenTest.{camkesDir, camkesVmExamplesDir}
 import org.sireum.hamr.ir.{Aadl, JSON}
 import org.sireum.message.Reporter
 
@@ -69,7 +68,7 @@ object TestUtil {
 
       println("Generating AIR via phantom ...")
       var p = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
-      if(verbose) {
+      if (verbose) {
         p = p.console
       }
       val results = p.run()
@@ -326,12 +325,8 @@ object TestUtil {
         .contains("Your project contains VMs")).nonEmpty
 
       val rootCamkesDir: Option[Os.Path] =
-        if (hasVMs) {
-          camkesVmExamplesDir()
-        }
-        else {
-          camkesDir()
-        }
+        if (hasVMs) camkesVmExamplesDir()
+        else camkesDir()
 
       rootCamkesDir match {
         case Some(camkesDir) => {
@@ -444,5 +439,25 @@ object TestUtil {
 
   def onOptions(options: ISZ[CMakeOption]): ISZ[String] = {
     return options.map(o => s"-D${o.name}=ON")
+  }
+
+  def camkesDir(): Option[Os.Path] = {
+    return Os.env(CodeGenTest.CAMKES_DIR) match {
+      case Some(x) => Some(Os.path(x))
+      case _ =>
+        val candidate = Os.home / "CASE" / "camkes"
+        if (candidate.exists) Some(candidate)
+        else None()
+    }
+  }
+
+  def camkesVmExamplesDir(): Option[Os.Path] = {
+    return Os.env(CodeGenTest.CAMKES_VM_EXAMPLES_DIR) match {
+      case Some(x) => Some(Os.path(x))
+      case _ =>
+        val candidate = Os.home / "CASE" / "camkes-vm-examples"
+        if (candidate.exists) Some(candidate)
+        else None()
+    }
   }
 }

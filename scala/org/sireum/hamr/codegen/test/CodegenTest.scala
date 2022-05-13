@@ -297,36 +297,6 @@ object CodeGenTest {
     return if (Os.env(FILTER).nonEmpty) return Some(Os.env(FILTER).get.native.toBoolean) else None()
   }
 
-  def camkesDir(): Option[Os.Path] = {
-    return Os.env(CodeGenTest.CAMKES_DIR) match {
-      case Some(x) => Some(Os.path(x))
-      case _ =>
-        eprintln(s"${CodeGenTest.CAMKES_DIR} environment variable not set !!!!")
-        val candidate = Os.home / "CASE" / "camkes"
-        if (candidate.exists) {
-          eprintln(s"Found ${candidate} so using that")
-          Some(candidate)
-        } else {
-          None()
-        }
-    }
-  }
-
-  def camkesVmExamplesDir(): Option[Os.Path] = {
-    return Os.env(CodeGenTest.CAMKES_VM_EXAMPLES_DIR) match {
-      case Some(x) => Some(Os.path(x))
-      case _ =>
-        eprintln(s"${CodeGenTest.CAMKES_VM_EXAMPLES_DIR} environment variable not set!!!")
-        val candidate = Os.home / "CASE" / "camkes-vm-examples"
-        if (candidate.exists) {
-          eprintln(s"Found ${candidate} so using that")
-          Some(candidate)
-        } else {
-          None()
-        }
-    }
-  }
-
   def proyekive(config: CodeGenConfig)(pc: ProyekIveConfig): Z = {
     var args: ISZ[String] = ISZ()
 
