@@ -11,7 +11,7 @@ class BaseBehaviorTest extends CodegenBehaviorTest{
 
 
   "temp_control_simple_temp" in {
-      val modelDir = modelsDir / "CodeGenTest_Base" / "temp_control_simple_temp"
+      val modelDir = modelsDir / getClass.getSimpleName / "temp_control_simple_temp"
       val description = "Temp Control model with temp data structure with 1 field"
       val packageName: Option[org.sireum.String] = Some("TempControlSimpleTemp")
 
@@ -33,13 +33,14 @@ class BaseBehaviorTest extends CodegenBehaviorTest{
 
     { // static approach
       {
-        val modelDir = modelsDir / "CodeGenTest_Base" / "building_control_gen_mixed"
+        val modelDir = modelsDir / getClass.getSimpleName / "building_control_gen_mixed"
         val description = ""
 
         test(
           testName = modelDir.name,
           testDescription = description,
           testOptions = baseOptions(
+            packageName = Some("bc"),
             slangOutputDir = Some((modelDir / "hamr" / "slang").value),
             aadlRootDir = Some(modelDir.value),
             verbose = verbose
