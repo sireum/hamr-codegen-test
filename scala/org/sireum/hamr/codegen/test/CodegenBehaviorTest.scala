@@ -195,7 +195,7 @@ trait CodegenBehaviorTest extends TestSuite {
 
 object CodegenBehaviorTest {
   def getAirFileEntry(value: Option[String], rootDir: Os.Path): Option[Os.Path] = {
-    assert(rootDir.isDir, s"Expecting a director: ${rootDir}")
+    assert(rootDir.isDir, s"Expecting a directory: ${rootDir}")
     val ret: Option[Os.Path] = value match {
       case Some(f) =>
         val cand = (rootDir / f).canon

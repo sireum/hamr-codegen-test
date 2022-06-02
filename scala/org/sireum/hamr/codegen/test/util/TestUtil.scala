@@ -74,7 +74,7 @@ object TestUtil {
       val results = p.run()
 
       assert(results.ok,
-        st"""AIR generation failed:
+        st"""AIR generation failed for model at ${rootAadlDir.toUri}:
             |  ${results.out}
             |  ${results.err}""".render)
 
