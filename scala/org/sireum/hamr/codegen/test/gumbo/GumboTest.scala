@@ -20,7 +20,9 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
       println(s"\n\n\nRemoving ${TestMode.phantom} test mode from ${this.getClass.getSimpleName}\n\n\n")
       super.testModes - TestMode.phantom
     }
-    else { super.testModes }
+    else {
+      super.testModes
+    }
   }
 
   override def testModes: ISZ[TestMode.Type] = {
@@ -36,41 +38,50 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     */
   }
 
-  val tests = Tests {
-    {
-      val name = "data-invariants"
-      val modelDir = testResources.modelsDir / name
-      val model = Some(getJson(modelDir))
+  "data-invariants" in {
+    val name = "data-invariants"
+    val modelDir = testResources.modelsDir / name
+    val model = Some(getJson(modelDir))
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform),
-        None(), None(), ISZ())
-    }
-
-    {
-      val name = "integration-contracts"
-      val modelDir = testResources.modelsDir / name
-      val model = Some(getJson(modelDir))
-
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform),
-        None(), None(), ISZ())
-    }
-
-    {
-      val name = "initialize-entrypoint"
-      val modelDir = testResources.modelsDir / name
-      val model = Some(getJson(modelDir))
-
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform),
-        None(), None(), ISZ())
-    }
-
+    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    testAir(s"$name--${platform}", modelDir, model,
+      baseOptions(platform = platform),
+      None(), None(), ISZ())
   }
+
+  "integration-contracts" in {
+    val name = "integration-contracts"
+    val modelDir = testResources.modelsDir / name
+    val model = Some(getJson(modelDir))
+
+    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    testAir(s"$name--${platform}", modelDir, model,
+      baseOptions(platform = platform),
+      None(), None(), ISZ())
+  }
+
+  "enum-test" in {
+    val name = "enum-test"
+    val modelDir = testResources.modelsDir / name
+    val model = Some(getJson(modelDir))
+
+    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    testAir(s"$name--${platform}", modelDir, model,
+      baseOptions(platform = platform),
+      None(), None(), ISZ())
+  }
+
+  "initialize-entrypoint" in {
+    val name = "initialize-entrypoint"
+    val modelDir = testResources.modelsDir / name
+    val model = Some(getJson(modelDir))
+
+    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    testAir(s"$name--${platform}", modelDir, model,
+      baseOptions(platform = platform),
+      None(), None(), ISZ())
+  }
+
 
   def getJson(d: Os.Path): Os.Path = {
     val s = d / ".slang"
