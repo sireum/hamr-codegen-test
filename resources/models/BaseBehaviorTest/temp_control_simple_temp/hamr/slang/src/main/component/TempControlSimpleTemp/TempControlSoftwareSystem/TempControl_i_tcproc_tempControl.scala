@@ -13,9 +13,9 @@ object TempControl_i_tcproc_tempControl {
   // BEGIN STATE VARS
   var currentSetPoint: TempControlSoftwareSystem.SetPoint_i = TempControlSoftwareSystem.SetPoint_i.example()
 
-  var currentTemp: TempSensor.Temperature_i = TempSensor.Temperature_i.example()
-
   var latestTemp: TempSensor.Temperature_i = TempSensor.Temperature_i.example()
+
+  var currentFanState: CoolingFan.FanCmd.Type = CoolingFan.FanCmd.byOrdinal(0).get
   // END STATE VARS
 
   // ToDo: currentTemp should not be included in the vars above (it should not be included in the
@@ -24,7 +24,7 @@ object TempControl_i_tcproc_tempControl {
 
   // FROM ORIGINAL CODE
   // var currentSetPoint: SetPoint_i = TempControlSoftwareSystem.Defs.initialSetPoint // Traces to currentSetPoint in AADL TempControl thread
-  var currentFanState: FanCmd.Type = TempControlSoftwareSystem.Defs.initialFanState // Traces to currentFanState in AADL TempControl thread
+  // var currentFanState: FanCmd.Type = TempControlSoftwareSystem.Defs.initialFanState // Traces to currentFanState in AADL TempControl thread
   // var latestTemp: TempSensor.Temperature_i = TempSensor.Defs.defaultTemp
 
   //=================================================
@@ -43,7 +43,9 @@ object TempControl_i_tcproc_tempControl {
         // guarantee "defautSetPoint"
         currentSetPoint.low.degrees == 70.0f && currentSetPoint.high.degrees == 80.0f,
         // guarantee "defaultLatestTemp"
-        latestTemp.degrees == 75.0f
+        latestTemp.degrees == 75.0f,
+        // guarantee "defaultFanStates"
+        currentFanState == CoolingFan.FanCmd.Off
         // END INITIALIZES ENSURES
       )
     )

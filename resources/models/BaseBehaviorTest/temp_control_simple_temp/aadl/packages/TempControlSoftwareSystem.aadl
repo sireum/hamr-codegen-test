@@ -208,9 +208,8 @@ public
       annex GUMBO{**
       	state
       		currentSetPoint: SetPoint.i;
-      		currentTemp: TempSensor::Temperature.i;
       		latestTemp: TempSensor::Temperature.i;
-      		--currentFanState: CoolingFan::FanCmd; -- enums not supported yet
+      		currentFanState: CoolingFan::FanCmd;
       		
       	integration
       		assume currentTempRange:
@@ -224,8 +223,8 @@ public
       		guarantee defaultLatestTemp:
       			latestTemp.degrees == f32"75.0";
       			
-      		-- guarantee "defaultFanStates":
-      		--	currentFanState == FanCmd.Off;
+      		 guarantee defaultFanStates:
+      			currentFanState == enum(CoolingFan::FanCmd, Off);
       			      		
       **};
   end TempControl.i;
