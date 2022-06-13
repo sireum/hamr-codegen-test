@@ -12,10 +12,19 @@ object TempSensor_i_tcproc_tempSensor {
   //=================================================
   def initialise(api: TempSensor_i_Initialization_Api): Unit = {
     Contract(
-      Modifies(api),  // modifies api.currentTemp
+      Modifies(
+        // BEGIN INITIALIZES MODIFIES
+        // END INITIALIZES MODIFIES
+      ),
+      // modifies api.currentTemp
       // Robby: cannot get things to work with 'val' definitions in Defs
       // Ensures(api.currentTemp == Defs.defaultTemp)
-      Ensures(api.currentTemp == Temperature_i(72.0f))
+      Ensures(
+        // BEGIN INITIALIZES ENSURES
+        // guarantee initializes
+        api.currentTemp.degrees == 72.0f
+        // END INITIALIZES ENSURES
+      )
     )
     // The Initialize Entry Point must initialize all component local state and all output data ports.
 

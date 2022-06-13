@@ -35,17 +35,18 @@ object TempControl_i_tcproc_tempControl {
       Modifies(
         // BEGIN INITIALIZES MODIFIES
         currentSetPoint,
+        currentFanState,
         latestTemp
         // END INITIALIZES MODIFIES
       ),
       Ensures(
         // BEGIN INITIALIZES ENSURES
-        // guarantee "defautSetPoint"
+        // guarantee defautSetPoint
         currentSetPoint.low.degrees == 70.0f && currentSetPoint.high.degrees == 80.0f,
-        // guarantee "defaultLatestTemp"
-        latestTemp.degrees == 75.0f,
-        // guarantee "defaultFanStates"
-        currentFanState == CoolingFan.FanCmd.Off
+        // guarantee defaultFanStates
+        currentFanState == CoolingFan.FanCmd.Off,
+        // guarantee defaultLatestTemp
+        latestTemp.degrees == 75.0f
         // END INITIALIZES ENSURES
       )
     )
@@ -78,7 +79,26 @@ object TempControl_i_tcproc_tempControl {
   //------------------------------------------------
 
   def handle_fanAck(api: TempControl_i_Operational_Api, value : CoolingFan.FanAck.Type): Unit = {
-
+    Contract(
+      Modifies(
+        // BEGIN_COMPUTE_MODIFIES_fanAck
+        currentSetPoint,
+        currentFanState,
+        latestTemp
+        // END_COMPUTE MODIFIES_fanAck
+      ),
+      Ensures(
+        // BEGIN_COMPUTE_ENSURES_fanAck
+        // guarantee TC_Req_01
+        //   If the current temperature is less than the set point, then the fan state shall be Off.
+        (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
+        // guarantee TC_Req_02
+        //   If the current temperature is greater than the set point,
+        //   then the fan state shall be On.
+        (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On)
+        // END_COMPUTE ENSURES_fanAck
+      )
+    )
     api.logInfo("received fanAck")
     if (value == FanAck.Error) {
       // In a more complete implementation, we would implement some sort
@@ -99,6 +119,29 @@ object TempControl_i_tcproc_tempControl {
   //
   //------------------------------------------------
   def handle_setPoint(api: TempControl_i_Operational_Api, value : TempControlSoftwareSystem.SetPoint_i): Unit = {
+    Contract(
+      Modifies(
+        // BEGIN_COMPUTE_MODIFIES_setPoint
+        currentSetPoint,
+        currentFanState,
+        latestTemp,
+        currentSetPoint
+        // END_COMPUTE MODIFIES_setPoint
+      ),
+      Ensures(
+        // BEGIN_COMPUTE_ENSURES_setPoint
+        // guarantee TC_Req_01
+        //   If the current temperature is less than the set point, then the fan state shall be Off.
+        (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
+        // guarantee TC_Req_02
+        //   If the current temperature is greater than the set point,
+        //   then the fan state shall be On.
+        (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On),
+        // guarantees setPointChanged
+        currentSetPoint == api.setPoint
+        // END_COMPUTE ENSURES_setPoint
+      )
+    )
     // log to indicate that that a setPoint event was received/handled
     // on the setPoint in event data port
     // api.logInfo(s"received setPoint $value")  // remove for now because Logika cannot handle string interpolation
@@ -118,6 +161,29 @@ object TempControl_i_tcproc_tempControl {
   //
   //------------------------------------------------
   def handle_tempChanged(api: TempControl_i_Operational_Api): Unit = {
+    Contract(
+      Modifies(
+        // BEGIN_COMPUTE_MODIFIES_tempChanged
+        currentSetPoint,
+        currentFanState,
+        latestTemp,
+        latestTemp
+        // END_COMPUTE MODIFIES_tempChanged
+      ),
+      Ensures(
+        // BEGIN_COMPUTE_ENSURES_tempChanged
+        // guarantee TC_Req_01
+        //   If the current temperature is less than the set point, then the fan state shall be Off.
+        (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
+        // guarantee TC_Req_02
+        //   If the current temperature is greater than the set point,
+        //   then the fan state shall be On.
+        (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On),
+        // guarantees tempChanged
+        latestTemp == api.currentTemp
+        // END_COMPUTE ENSURES_tempChanged
+      )
+    )
     // log to indicate that that a tempChanged event was received/handled
     api.logInfo("received tempChanged")
 

@@ -18,11 +18,11 @@ import TempSensor_i_Api._
   def currentTemp_Id : Art.PortId
   def tempChanged_Id : Art.PortId
 
-  @spec var currentTemp: TempSensor.Temperature_i = $ // Logika spec var representing port state
+  // Logika spec var representing port state for outgoing data port
+  @spec var currentTemp: TempSensor.Temperature_i = $
   @spec def currentTemp_Inv = Invariant(
     SensorTemperatureRange(currentTemp)
   )
-
 
   def put_currentTemp(value : TempSensor.Temperature_i) : Unit = {
     Contract(
@@ -37,7 +37,18 @@ import TempSensor_i_Api._
     Art.putValue(currentTemp_Id, TempSensor.Temperature_i_Payload(value))
   }
 
+  // Logika spec var representing port state for outgoing event port
+  @spec var tempChanged: Option[art.Empty] = $
+
   def put_tempChanged() : Unit = {
+    Contract(
+      Modifies(tempChanged),
+      Ensures(tempChanged == Some(Empty()))
+    )
+    Spec {
+      tempChanged = Some(Empty())
+    }
+
     Art.putValue(tempChanged_Id, art.Empty())
   }
 
