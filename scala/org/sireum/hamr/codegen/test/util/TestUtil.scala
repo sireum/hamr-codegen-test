@@ -112,7 +112,7 @@ object TestUtil {
                          testResultsDir: Os.Path,
                          testOps: CodeGenConfig,
                          testModes: ISZ[TestMode.Type],
-                         smt2Timeout: Z,
+                         logikaOptions: Option[String],
                          verbose: B,
                          reporter: Reporter): B = {
 
@@ -228,7 +228,7 @@ object TestUtil {
       val projectCmd = fetch("project.cmd")
 
       println("Checking Slang project contracts via proyek logika ...")
-      val proyekResults = vproc(s"${sireum.string} proyek logika --all --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      val proyekResults = vproc(st"${sireum.string} proyek logika --all --par ${logikaOptions} ${projectCmd.up.up.string}".render, projectCmd.up.up, ISZ(), None())
       _check(proyekResults, "Proyek logika failed")
 
       // Delete the 'out' directory so that it doesn't pollute directory diffs
@@ -273,7 +273,7 @@ object TestUtil {
       println("Checking refinement proof ...")
 
       val startTime = extension.Time.currentMillis
-      val pr = vproc(s"${cvc.value} -i --finite-model-find ${proof.value}", proof.up, ISZ(), Some(smt2Timeout))
+      val pr = vproc(st"${cvc.value} -i --finite-model-find ${logikaOptions} ${proof.value}".render, proof.up, ISZ(), None())
       val pout: String = pr.out
       val isTimeout: B = pr.exitCode === 6 || pr.exitCode === -101 || pr.exitCode === -100
       if (pout.size == 0 && pr.exitCode != 0 && !isTimeout) {

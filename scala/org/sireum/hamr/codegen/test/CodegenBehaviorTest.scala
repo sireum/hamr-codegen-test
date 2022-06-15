@@ -20,6 +20,10 @@ trait CodegenBehaviorTest extends TestSuite {
     return ops.ISZOps(testModes).contains(TestMode.verbose)
   }
 
+  def logikaOptions: Option[String] = {
+    return Some("--rlimit 1000000 --timeout 2000")
+  }
+
   // recursively finds files whose name begin with '.hamrtest', case insensitive,
   // suffix ignored (e.g. .hamrtest, .hamrTest_case01)
   def locateHamrTestFiles(root: Os.Path): ISZ[Os.Path] = {
@@ -44,18 +48,20 @@ trait CodegenBehaviorTest extends TestSuite {
            testDescription: String,
            testOptions: CodeGenConfig,
            testModes: ISZ[TestMode.Type],
+           logikaOptions: Option[String],
            airFile: Option[Os.Path] = None())(implicit position: org.scalactic.source.Position): Unit = {
 
     val tags: ISZ[org.scalatest.Tag] = ISZ()
 
     registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-      testAir(testName, testDescription, testOptions, testModes, airFile))
+      testAir(testName, testDescription, testOptions, testModes, logikaOptions, airFile))
   }
 
   def testAir(testName: String,
               testDescription: String,
               testOptions: CodeGenConfig,
               testModes: ISZ[TestMode.Type],
+              logikaOptions: Option[String],
               airFile: Option[Os.Path] = None()): Unit = {
 
     // FIXME: Output from individual unit tests were not grouping correctly in intellij's Test Results view.
@@ -95,7 +101,14 @@ trait CodegenBehaviorTest extends TestSuite {
     )
     var success = !reporter.hasError
     if (success) {
-      success = TestUtil.runAdditionalTasks(testName, Os.path(testOptions.slangOutputDir.get), testOptions, testModes, 0, verbose, reporter)
+      success = TestUtil.runAdditionalTasks(
+        testName,
+        Os.path(testOptions.slangOutputDir.get),
+        testOptions,
+        testModes,
+        logikaOptions,
+        verbose,
+        reporter)
       success = success && !reporter.hasError
     }
 
@@ -149,6 +162,8 @@ trait CodegenBehaviorTest extends TestSuite {
       return
     }
 
+    val logikaOptions = props.get("logikaOptions")
+
     var testOps = hamrOpts.get
     if (verbose) {
       testOps = testOps(verbose = verbose)
@@ -161,7 +176,7 @@ trait CodegenBehaviorTest extends TestSuite {
             |  ${(ignoreReasons, "\n")}""".render
       ignoreTest(testName, testDescription)(position)
     } else {
-      test(testName, label, testOps, unitTestModes, airFile)(position)
+      test(testName, label, testOps, unitTestModes, logikaOptions, airFile)(position)
     }
   }
 
@@ -240,7 +255,6 @@ object CodegenBehaviorTest {
     }
     return ret
   }
-
 
   def processHamrArgs(args: String, root: Os.Path): Option[CodeGenConfig] = {
     assert(root.isDir, root)

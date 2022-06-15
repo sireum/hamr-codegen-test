@@ -37,6 +37,10 @@ trait CodeGenTest extends TestSuite {
     case _ => 2 * 60000
   }
 
+  def logikaOptions: Option[String] = {
+    return Some(s"--timeout ${smt2Timeout}")
+  }
+
   def verbose: B = {
     return ops.ISZOps(testModes).contains(TestMode.verbose)
   }
@@ -147,7 +151,7 @@ trait CodeGenTest extends TestSuite {
 
     var testSuccess = T
     if (!reporter.hasError) {
-      testSuccess &= TestUtil.runAdditionalTasks(testName, slangOutputDir, testOps, testModes, smt2Timeout, verbose, reporter)
+      testSuccess &= TestUtil.runAdditionalTasks(testName, slangOutputDir, testOps, testModes, logikaOptions, verbose, reporter)
     }
 
     val resultMap = CommonTestUtil.convertToTestResult(results.resources, resultsDir)

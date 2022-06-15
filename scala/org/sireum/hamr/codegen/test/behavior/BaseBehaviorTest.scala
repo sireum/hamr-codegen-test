@@ -24,6 +24,7 @@ class BaseBehaviorTest extends CodegenBehaviorTest{
           packageName = packageName,
           verbose = verbose
         ),
+        logikaOptions = logikaOptions,
         // include test modes from super (e.g. maybe from env var)
         testModes = testModes :+ TestMode.generated_unit_tests
       )
@@ -45,6 +46,7 @@ class BaseBehaviorTest extends CodegenBehaviorTest{
             aadlRootDir = Some(modelDir.value),
             verbose = verbose
           ),
+          logikaOptions = logikaOptions,
           // include test modes from super (e.g. maybe from env var)
           testModes = testModes :+ TestMode.generated_unit_tests
         )
