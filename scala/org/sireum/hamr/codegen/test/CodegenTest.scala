@@ -5,7 +5,8 @@ import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.{ProyekIveConfig, TranspilerConfig}
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil => CommonTestUtil}
-import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
+import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
+import org.sireum.hamr.codegen.test.util.{TestMode, TestModeHelper, TestUtil}
 import org.sireum.hamr.ir._
 import org.sireum.message._
 import org.sireum.ops.ISZOps
@@ -26,11 +27,9 @@ trait CodeGenTest extends TestSuite {
 
   // e.g. from command line:
   //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
-  def testModes: ISZ[TestMode.Type] = Os.env("HamrTestModes") match {
-    case Some(list) => ops.StringOps(list).split((c: C) => c == C(',')).map((m: String) => TestMode.byName(m).get)
-    case _ => ISZ(TestMode.codegen)
-    //case _ => ISZ(TestMode.codegen, TestMode.smt2)
-  }
+  def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
+    ISZ(TestMode.codegen)
+    //ISZ(TestMode.codegen, TestMode.smt2)
 
   def smt2Timeout: Z = Os.env("SMT2_TIMEOUT") match {
     case Some(t) => Z(t).get

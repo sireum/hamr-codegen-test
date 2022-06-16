@@ -4,17 +4,15 @@ import org.sireum._
 import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.test.util.Cli.{CodegenHamrPlatform, CodegenOption}
+import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 
 trait CodegenBehaviorTest extends TestSuite {
 
-  def testModes: ISZ[TestMode.Type] = {
-    val envModes = CodegenBehaviorTest.getUnitTestModes(Os.env("HamrTestModes"))
-    if (envModes.nonEmpty) envModes
-    else ISZ()
-  }
+  def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
+    ISZ()
 
   def verbose: B = {
     return ops.ISZOps(testModes).contains(TestMode.verbose)

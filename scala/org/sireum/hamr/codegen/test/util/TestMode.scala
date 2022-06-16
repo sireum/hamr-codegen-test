@@ -24,3 +24,26 @@ import org.sireum._
   "verbose"
   // all = generated_unit_tests, compile, camkes
 }
+
+object TestModeHelper {
+  def getEnvTestModes(): ISZ[TestMode.Type] = {
+    var ret: ISZ[TestMode.Type] = ISZ()
+    for(k <- ISZ(
+      "HamrTestMode", "HamrTestModes",
+      "Hamr_Test_Mode", "HAMR_TEST_MODE",
+      "Hamr_Test_Modes", "HAMR_TEST_MODES")) {
+      Os.envs.get(k) match {
+        case Some(list) =>
+          for (cand <- ops.StringOps(list).split((c: C) => c == ',')) {
+            TestMode.byName(ops.StringOps(cand).trim) match {
+              case Some(x) => ret = ret :+ x
+              case _ =>
+                cprintln(T, s"$cand is not a valid TestMode.  Found in env var ${k}")
+            }
+          }
+        case _ =>
+      }
+    }
+    return ret
+  }
+}
