@@ -273,7 +273,7 @@ object TestUtil {
       println("Checking refinement proof ...")
 
       val startTime = extension.Time.currentMillis
-      val pr = vproc(st"${cvc.value} -i --finite-model-find ${logikaOptions} ${proof.value}".render, proof.up, ISZ(), None())
+      val pr = vproc(st"${cvc.value} -i --finite-model-find ${proof.value}".render, proof.up, ISZ(), None())
       val pout: String = pr.out
       val isTimeout: B = pr.exitCode === 6 || pr.exitCode === -101 || pr.exitCode === -100
       if (pout.size == 0 && pr.exitCode != 0 && !isTimeout) {
