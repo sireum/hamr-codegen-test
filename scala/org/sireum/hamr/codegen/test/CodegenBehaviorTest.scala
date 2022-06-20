@@ -46,19 +46,21 @@ trait CodegenBehaviorTest extends TestSuite {
            testDescription: String,
            testOptions: CodeGenConfig,
            testModes: ISZ[TestMode.Type],
+           phantomOptions: Option[String],
            logikaOptions: Option[String],
            airFile: Option[Os.Path] = None())(implicit position: org.scalactic.source.Position): Unit = {
 
     val tags: ISZ[org.scalatest.Tag] = ISZ()
 
     registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-      testAir(testName, testDescription, testOptions, testModes, logikaOptions, airFile))
+      testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, airFile))
   }
 
   def testAir(testName: String,
               testDescription: String,
               testOptions: CodeGenConfig,
               testModes: ISZ[TestMode.Type],
+              phantomOptions: Option[String],
               logikaOptions: Option[String],
               airFile: Option[Os.Path] = None()): Unit = {
 
@@ -69,8 +71,8 @@ trait CodegenBehaviorTest extends TestSuite {
     //Thread.sleep(1000)
 
     val model = airFile match {
-      case Some(a) => TestUtil.getModel(Some(a), Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
-      case _ => TestUtil.getModel(Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+      case Some(a) => TestUtil.getModel(Some(a), phantomOptions, Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+      case _ => TestUtil.getModel(phantomOptions, Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
     }
 
     if (testDescription.size > 0) {
@@ -161,6 +163,7 @@ trait CodegenBehaviorTest extends TestSuite {
     }
 
     val logikaOptions = props.get("logikaOptions")
+    val phantomOptions = props.get("phantomOptions")
 
     var testOps = hamrOpts.get
     if (verbose) {
@@ -174,7 +177,7 @@ trait CodegenBehaviorTest extends TestSuite {
             |  ${(ignoreReasons, "\n")}""".render
       ignoreTest(testName, testDescription)(position)
     } else {
-      test(testName, label, testOps, unitTestModes, logikaOptions, airFile)(position)
+      test(testName, label, testOps, unitTestModes, phantomOptions, logikaOptions, airFile)(position)
     }
   }
 

@@ -48,15 +48,19 @@ object TestUtil {
     }
   }
 
-  def getModel(rootAadlDir: Os.Path, testModes: ISZ[TestMode.Type], testName: String, verbose: B): Aadl = {
+  def getModel(phantomOptions: Option[String],
+               rootAadlDir: Os.Path, testModes: ISZ[TestMode.Type], testName: String, verbose: B): Aadl = {
     val s = rootAadlDir / ".slang"
     val cands = s.list.filter(f => f.name.native.endsWith("json"))
     assert(cands.size == 1, s": Inspect json files in ${s.value}")
 
-    return getModel(Some(cands(0)), rootAadlDir, testModes, testName, verbose)
+    return getModel(Some(cands(0)), phantomOptions, rootAadlDir, testModes, testName, verbose)
   }
 
-  def getModel(airFile: Option[Os.Path], rootAadlDir: Os.Path, testModes: ISZ[TestMode.Type], testName: String, verbose: B): Aadl = {
+  def getModel(airFile: Option[Os.Path],
+               phantomOptions: Option[String],
+               rootAadlDir: Os.Path,
+               testModes: ISZ[TestMode.Type], testName: String, verbose: B): Aadl = {
 
     val s: String = if (ops.ISZOps(testModes).contains(TestMode.phantom) || airFile.isEmpty) {
       val tempDir = Os.tempDir()
@@ -67,7 +71,10 @@ object TestUtil {
       val custEnv = Os.envs.entries :+ (("CHECK_PHANTOM_HAMR_API_COMPATIBILITY", "true"))
 
       println("Generating AIR via phantom ...")
-      var p = proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
+      var p: OsProto.Proc =
+        if(phantomOptions.isEmpty) proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
+        else proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${phantomOptions.get}".at(rootAadlDir).env(custEnv)
+
       if (verbose) {
         p = p.console
       }

@@ -117,7 +117,7 @@ trait CodeGenTest extends TestSuite {
 
     val reporter = Reporter.create
 
-    val model: Aadl = TestUtil.getModel(airFile, Os.path(testOps.aadlRootDir.get), testModes, testName, verbose)
+    val model: Aadl = TestUtil.getModel(airFile, None(), Os.path(testOps.aadlRootDir.get), testModes, testName, verbose)
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
