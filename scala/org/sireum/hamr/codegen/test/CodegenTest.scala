@@ -62,21 +62,34 @@ trait CodeGenTest extends TestSuite {
            modelUri: Option[String],
            expectedErrorReasons: ISZ[String] // empty if errors not expected
           )(implicit position: org.scalactic.source.Position): Unit = {
+    testPhantom(testName, modelDir, airFile, None(), ops, description, modelUri, expectedErrorReasons)(position)
+  }
+
+  def testPhantom(testName: String,
+                  modelDir: Os.Path,
+                  airFile: Option[Os.Path],
+                  phantomOptions: Option[String],
+                  ops: CodeGenConfig,
+                  description: Option[String],
+                  modelUri: Option[String],
+                  expectedErrorReasons: ISZ[String] // empty if errors not expected
+                 )(implicit position: org.scalactic.source.Position): Unit = {
     var tags: ISZ[org.scalatest.Tag] = ISZ()
 
     if (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-        testAir(testName, modelDir, airFile, ops, description, modelUri, expectedErrorReasons))
+        testAir(testName, modelDir, airFile, phantomOptions, ops, description, modelUri, expectedErrorReasons))
     }
     else if (!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-        testAir(testName, modelDir, airFile, ops, description, modelUri, expectedErrorReasons))
+        testAir(testName, modelDir, airFile, phantomOptions, ops, description, modelUri, expectedErrorReasons))
     }
   }
 
   def testAir(testName: String,
               modelDir: Os.Path,
               airFile: Option[Os.Path],
+              phantomOptions: Option[String],
               config: CodeGenConfig,
               description: Option[String],
               modelUri: Option[String],
@@ -100,7 +113,7 @@ trait CodeGenTest extends TestSuite {
       aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value)
     )
 
-    if(verbose) {
+    if (verbose) {
       println(s"Test Modes: ${testModes}")
     }
 
@@ -117,7 +130,7 @@ trait CodeGenTest extends TestSuite {
 
     val reporter = Reporter.create
 
-    val model: Aadl = TestUtil.getModel(airFile, None(), Os.path(testOps.aadlRootDir.get), testModes, testName, verbose)
+    val model: Aadl = TestUtil.getModel(airFile, phantomOptions, Os.path(testOps.aadlRootDir.get), testModes, testName, verbose)
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 

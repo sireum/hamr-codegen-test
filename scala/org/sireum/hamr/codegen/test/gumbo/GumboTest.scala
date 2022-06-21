@@ -44,7 +44,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val model = Some(getJson(modelDir))
 
     var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-    testAir(s"$name--${platform}", modelDir, model,
+    testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
   }
@@ -55,7 +55,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val model = Some(getJson(modelDir))
 
     var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-    testAir(s"$name--${platform}", modelDir, model,
+    testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
   }
@@ -66,7 +66,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val model = Some(getJson(modelDir))
 
     var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-    testAir(s"$name--${platform}", modelDir, model,
+    testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
   }
@@ -77,7 +77,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val model = Some(getJson(modelDir))
 
     var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-    testAir(s"$name--${platform}", modelDir, model,
+    testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
   }
