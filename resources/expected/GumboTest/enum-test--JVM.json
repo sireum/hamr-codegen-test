@@ -187,13 +187,13 @@
             },
             {
               "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "beginMarker" : "\/\/ BEGIN INITIALIZES MODIFIES",
+              "endMarker" : "\/\/ END INITIALIZES MODIFIES"
             },
             {
               "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES MODIFIES",
-              "endMarker" : "\/\/ END INITIALIZES MODIFIES"
+              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
+              "endMarker" : "\/\/ END INITIALIZES ENSURES"
             }
           ]
         }
