@@ -165,23 +165,23 @@ public
 				modifies currentSetPoint, currentFanState, latestTemp;
 			
 				guarantee  TC_Req_01 "If the current temperature is less than the set point, then the fan state shall be Off.":
-					latestTemp.degrees < currentSetPoint.low.degrees ->: currentFanState == CoolingFan::FanCmd.Off;  
+					(latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan::FanCmd.Off);
 
 				guarantee TC_Req_02 "If the current temperature is greater than the set point,
                                     |then the fan state shall be On.":
-					latestTemp.degrees > currentSetPoint.high.degrees ->: currentFanState == CoolingFan::FanCmd.On;  
+					(latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan::FanCmd.On);
 
 --				guarantee TC_Req_03 "If the current temperature is greater than or equal to the
 --                                    |current low set point and less than or equal to the current high set point,
 --                                    |then the current fan state is maintained.":
---					(latestTemp.degrees >= currentSetPoint.low.degrees) & 
---						(latestTemp.degrees <= currentSetPoint.high.degrees)
+--					((latestTemp.degrees >= currentSetPoint.low.degrees) &
+--						(latestTemp.degrees <= currentSetPoint.high.degrees))
 --					-- if we are still in set point range, don't change the fan state
---					->: currentFanState == In(currentFanState);
+--					->: (currentFanState == In(currentFanState));
 --			
 				--guarantee mustSendFanCmd "If the local record of the fan state was updated, 
 				--                         |then send a fan command event with this updated value.":
-				--	In(currentFanState) != currentFanState ->: MustSend(fanCmd,currentFanState); -- alternate: fanCmd!!currentFanState
+				--	(In(currentFanState) != currentFanState) ->: (MustSend(fanCmd,currentFanState)); -- alternate: fanCmd!!currentFanState
 			
 				handle setPoint:
 					modifies currentSetPoint;
