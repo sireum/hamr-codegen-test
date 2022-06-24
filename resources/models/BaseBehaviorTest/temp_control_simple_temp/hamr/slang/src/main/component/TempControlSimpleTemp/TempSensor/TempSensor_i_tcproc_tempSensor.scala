@@ -12,6 +12,13 @@ object TempSensor_i_tcproc_tempSensor {
   //=================================================
   def initialise(api: TempSensor_i_Initialization_Api): Unit = {
     Contract(
+      Requires(
+        // BEGIN INITIALIZES REQUIRES
+        // assume AADL_Requirement
+        //   All outgoing event data ports must be empty
+        api.tempChanged.isEmpty
+        // END INITIALIZES REQUIRES
+      ),
       Modifies(
         // BEGIN INITIALIZES MODIFIES
         // END INITIALIZES MODIFIES

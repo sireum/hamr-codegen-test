@@ -32,6 +32,13 @@ object TempControl_i_tcproc_tempControl {
   //=================================================
   def initialise(api: TempControl_i_Initialization_Api): Unit = {
     Contract(
+      Requires(
+        // BEGIN INITIALIZES REQUIRES
+        // assume AADL_Requirement
+        //   All outgoing event data ports must be empty
+        api.fanCmd.isEmpty
+        // END INITIALIZES REQUIRES
+      ),
       Modifies(
         // BEGIN INITIALIZES MODIFIES
         currentSetPoint,
@@ -80,6 +87,17 @@ object TempControl_i_tcproc_tempControl {
 
   def handle_fanAck(api: TempControl_i_Operational_Api, value : CoolingFan.FanAck.Type): Unit = {
     Contract(
+      Requires(
+        // BEGIN_COMPUTE_REQUIRES_fanAck
+        // assume AADL_Requirement
+        //   All outgoing event data ports must be empty
+        api.fanCmd.isEmpty,
+        // assume HAMR-Guarantee
+        //   passed in payload must be the same as the spec var's value
+        //   NOTE: this assumes the user never changes the param name"
+        api.fanAck == value
+        // END_COMPUTE REQUIRES_fanAck
+      ),
       Modifies(
         // BEGIN_COMPUTE_MODIFIES_fanAck
         currentSetPoint,
@@ -120,12 +138,22 @@ object TempControl_i_tcproc_tempControl {
   //------------------------------------------------
   def handle_setPoint(api: TempControl_i_Operational_Api, value : TempControlSoftwareSystem.SetPoint_i): Unit = {
     Contract(
+      Requires(
+        // BEGIN_COMPUTE_REQUIRES_setPoint
+        // assume AADL_Requirement
+        //   All outgoing event data ports must be empty
+        api.fanCmd.isEmpty,
+        // assume HAMR-Guarantee
+        //   passed in payload must be the same as the spec var's value
+        //   NOTE: this assumes the user never changes the param name"
+        api.setPoint == value
+        // END_COMPUTE REQUIRES_setPoint
+      ),
       Modifies(
         // BEGIN_COMPUTE_MODIFIES_setPoint
         currentSetPoint,
         currentFanState,
-        latestTemp,
-        currentSetPoint
+        latestTemp
         // END_COMPUTE MODIFIES_setPoint
       ),
       Ensures(
@@ -162,11 +190,17 @@ object TempControl_i_tcproc_tempControl {
   //------------------------------------------------
   def handle_tempChanged(api: TempControl_i_Operational_Api): Unit = {
     Contract(
+      Requires(
+        // BEGIN_COMPUTE_REQUIRES_tempChanged
+        // assume AADL_Requirement
+        //   All outgoing event data ports must be empty
+        api.fanCmd.isEmpty
+        // END_COMPUTE REQUIRES_tempChanged
+      ),
       Modifies(
         // BEGIN_COMPUTE_MODIFIES_tempChanged
         currentSetPoint,
         currentFanState,
-        latestTemp,
         latestTemp
         // END_COMPUTE MODIFIES_tempChanged
       ),
