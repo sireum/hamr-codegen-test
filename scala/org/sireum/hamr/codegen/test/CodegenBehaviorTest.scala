@@ -14,6 +14,8 @@ trait CodegenBehaviorTest extends TestSuite {
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
     ISZ()
 
+  def disablePhantom: B = F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
+
   def verbose: B = {
     return ops.ISZOps(testModes).contains(TestMode.verbose)
   }
@@ -140,7 +142,14 @@ trait CodegenBehaviorTest extends TestSuite {
 
     val testName = props.get("testName").get
 
-    val unitTestModes: ISZ[TestMode.Type] = testModes ++ CodegenBehaviorTest.getUnitTestModes(props.get("testModes"))
+    var unitTestModes: ISZ[TestMode.Type] = testModes ++ CodegenBehaviorTest.getUnitTestModes(props.get("testModes"))
+
+    if(disablePhantom && ops.ISZOps(unitTestModes).contains((TestMode.phantom))) {
+      println("!!!!!!!!!!!!!!!!!!!!!!")
+      println("!! Phantom Disabled !!")
+      println("!!!!!!!!!!!!!!!!!!!!!!")
+      unitTestModes = unitTestModes - TestMode.phantom
+    }
 
     val airFile = CodegenBehaviorTest.getAirFileEntry(props.get("airFile"), hamrTestFile.up.canon)
 
