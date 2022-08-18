@@ -197,6 +197,14 @@ object TestUtil {
       keepGoing = check(testName, results, failMsg)
     }
 
+    if (shouldTipe(testOps, testModes) && keepGoing) {
+      val projectCmd = fetch("project.cmd")
+
+      println("Running Tipe on Slang project ...")
+      val proyekResults = vproc(s"${sireum.string} proyek tipe --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      _check(proyekResults, "Proyek tipe failed")
+    }
+
     if (shouldTranspile(testOps, testModes) && keepGoing) {
       if (isLinux(testOps.platform)) {
         val transpileScript = fetch("transpile.cmd")
@@ -429,6 +437,10 @@ object TestUtil {
 
   def shouldRunLogika(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
     return isSlang(config.platform) && ops.ISZOps(testModes).contains(TestMode.logika)
+  }
+
+  def shouldTipe(testOps: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+    return isSlang(testOps.platform) && ops.ISZOps(testModes).contains(TestMode.tipe) && !testOps.noEmbedArt
   }
 
   def shouldTranspile(testOps: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
