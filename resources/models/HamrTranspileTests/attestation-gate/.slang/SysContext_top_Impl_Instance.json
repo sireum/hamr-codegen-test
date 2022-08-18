@@ -4655,11 +4655,11 @@
                       "type" : "Some",
                       "value" : "\/org.sireum.aadl.osate.hamr\/resources\/CASE_Scheduling.aadl"
                     },
-                    "beginLine" : 23,
+                    "beginLine" : 29,
                     "beginColumn" : 2,
-                    "endLine" : 23,
+                    "endLine" : 29,
                     "endColumn" : 68,
-                    "offset" : 880,
+                    "offset" : 1060,
                     "length" : 66
                   }
                 }
@@ -4689,11 +4689,11 @@
                       "type" : "Some",
                       "value" : "\/org.sireum.aadl.osate.hamr\/resources\/CASE_Scheduling.aadl"
                     },
-                    "beginLine" : 28,
+                    "beginLine" : 34,
                     "beginColumn" : 2,
-                    "endLine" : 28,
+                    "endLine" : 34,
                     "endColumn" : 77,
-                    "offset" : 1103,
+                    "offset" : 1283,
                     "length" : 75
                   }
                 }
