@@ -21,6 +21,8 @@ import org.sireum._
 
   "logika" // run proyek logika on Slang projects
 
+  "tipe" // run proyek tipe on Slang projects
+
   "generated_unit_tests" // run unit tests on generated Slang projects
 
   "verbose"

@@ -439,6 +439,10 @@ object TestUtil {
     return isSlang(config.platform) && ops.ISZOps(testModes).contains(TestMode.logika)
   }
 
+  def shouldTipe(testOps: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+    return isSlang(testOps.platform) && ops.ISZOps(testModes).contains(TestMode.tipe) && !testOps.noEmbedArt
+  }
+
   def shouldTranspile(testOps: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
     val platform = testOps.platform
     val _ops = ops.ISZOps(testModes)
