@@ -611,11 +611,11 @@
                       "type" : "Some",
                       "value" : "\/org.sireum.aadl.osate.hamr\/resources\/CASE_Scheduling.aadl"
                     },
-                    "beginLine" : 29,
+                    "beginLine" : 34,
                     "beginColumn" : 2,
-                    "endLine" : 29,
+                    "endLine" : 34,
                     "endColumn" : 68,
-                    "offset" : 1060,
+                    "offset" : 1431,
                     "length" : 66
                   }
                 }
