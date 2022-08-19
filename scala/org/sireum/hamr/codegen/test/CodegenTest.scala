@@ -28,7 +28,7 @@ trait CodeGenTest extends TestSuite {
   // e.g. from command line:
   //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
-    ISZ(TestMode.codegen, TestMode.tipe)
+    ISZ(TestMode.codegen)
     //ISZ(TestMode.codegen, TestMode.smt2)
 
   def smt2Timeout: Z = Os.env("SMT2_TIMEOUT") match {
