@@ -442,7 +442,7 @@
                           "typeChecked" : false,
                           "purity" : {
                             "type" : "org.sireum.lang.ast.Purity",
-                            "value" : "Pure"
+                            "value" : "StrictPure"
                           },
                           "hasOverride" : false,
                           "isHelper" : false,
@@ -630,20 +630,7 @@
                             "attr" : {
                               "type" : "org.sireum.lang.ast.Attr",
                               "posOpt" : {
-                                "type" : "Some",
-                                "value" : {
-                                  "type" : "Position",
-                                  "uriOpt" : {
-                                    "type" : "Some",
-                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
-                                  },
-                                  "beginLine" : 80,
-                                  "beginColumn" : 54,
-                                  "endLine" : 80,
-                                  "endColumn" : 54,
-                                  "offset" : 4018,
-                                  "length" : 0
-                                }
+                                "type" : "None"
                               }
                             }
                           },
@@ -748,7 +735,7 @@
                           "typeChecked" : false,
                           "purity" : {
                             "type" : "org.sireum.lang.ast.Purity",
-                            "value" : "Pure"
+                            "value" : "StrictPure"
                           },
                           "hasOverride" : false,
                           "isHelper" : false,
@@ -936,20 +923,7 @@
                             "attr" : {
                               "type" : "org.sireum.lang.ast.Attr",
                               "posOpt" : {
-                                "type" : "Some",
-                                "value" : {
-                                  "type" : "Position",
-                                  "uriOpt" : {
-                                    "type" : "Some",
-                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
-                                  },
-                                  "beginLine" : 82,
-                                  "beginColumn" : 58,
-                                  "endLine" : 82,
-                                  "endColumn" : 58,
-                                  "offset" : 4097,
-                                  "length" : 0
-                                }
+                                "type" : "None"
                               }
                             }
                           },
@@ -16408,7 +16382,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -16596,20 +16570,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
-                    },
-                    "beginLine" : 24,
-                    "beginColumn" : 51,
-                    "endLine" : 24,
-                    "endColumn" : 51,
-                    "offset" : 616,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
@@ -16714,7 +16675,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -17032,20 +16993,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
-                    },
-                    "beginLine" : 26,
-                    "beginColumn" : 88,
-                    "endLine" : 26,
-                    "endColumn" : 88,
-                    "offset" : 726,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
@@ -17534,7 +17482,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -17982,20 +17930,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
-                    },
-                    "beginLine" : 29,
-                    "beginColumn" : 110,
-                    "endLine" : 29,
-                    "endColumn" : 110,
-                    "offset" : 902,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
@@ -18922,7 +18857,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -19240,20 +19175,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
-                    },
-                    "beginLine" : 34,
-                    "beginColumn" : 75,
-                    "endLine" : 34,
-                    "endColumn" : 75,
-                    "offset" : 1156,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
@@ -24683,7 +24605,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -25001,20 +24923,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
-                    },
-                    "beginLine" : 73,
-                    "beginColumn" : 79,
-                    "endLine" : 73,
-                    "endColumn" : 79,
-                    "offset" : 2872,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
@@ -25407,7 +25316,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -25595,20 +25504,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
-                    },
-                    "beginLine" : 39,
-                    "beginColumn" : 53,
-                    "endLine" : 39,
-                    "endColumn" : 53,
-                    "offset" : 1667,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
@@ -25713,7 +25609,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -25901,20 +25797,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
-                    },
-                    "beginLine" : 41,
-                    "beginColumn" : 53,
-                    "endLine" : 41,
-                    "endColumn" : 53,
-                    "offset" : 1739,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
@@ -26019,7 +25902,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -26207,20 +26090,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
-                    },
-                    "beginLine" : 43,
-                    "beginColumn" : 57,
-                    "endLine" : 43,
-                    "endColumn" : 57,
-                    "offset" : 1815,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
@@ -26325,7 +26195,7 @@
             "typeChecked" : false,
             "purity" : {
               "type" : "org.sireum.lang.ast.Purity",
-              "value" : "Pure"
+              "value" : "StrictPure"
             },
             "hasOverride" : false,
             "isHelper" : false,
@@ -26643,20 +26513,7 @@
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
-                    },
-                    "beginLine" : 45,
-                    "beginColumn" : 73,
-                    "endLine" : 45,
-                    "endColumn" : 73,
-                    "offset" : 1906,
-                    "length" : 0
-                  }
+                  "type" : "None"
                 }
               }
             },
