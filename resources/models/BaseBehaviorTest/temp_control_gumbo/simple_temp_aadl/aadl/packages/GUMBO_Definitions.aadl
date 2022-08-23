@@ -1,0 +1,36 @@
+package GUMBO_Definitions
+public
+  
+  with Base_Types, TempSensor;
+  
+  -- ===========================================================================================================
+  --
+  --   Specification   D e f i n i t i o n s 
+  --
+  --   Specification definitions are constants, predicates, or functions defined for the current scope (in this case package)
+  --   that can be used in ACL contracts.
+  -- ===========================================================================================================
+
+  annex GUMBO {**
+    
+    functions
+    
+      def inRange(temp: TempSensor::Temperature.i): Base_Types::Boolean := 
+        temp.degrees >= f32"-50.0" && temp.degrees <= f32"150.0" &&
+        
+        -- can call spec defs from imported libraries 
+        temp.degrees >= TempSensor::gminTempDegrees() && temp.degrees <= TempSensor::gmaxTempDegrees();
+        
+      -- FIXME: this would be a handy contract util method if the K/C/F unit field
+      -- was added back to the datatype.  However, it would need a requires that 
+      -- temp.degrees satisifies the data invariant (was hoping I'd get that for
+      -- free if it was obtained from a previously created value)
+      def toFahrenheit(temp: TempSensor::Temperature.i): TempSensor::Temperature.i :=
+        TempSensor::Temperature.i (temp.degrees);
+      
+      -- FIXME: need contract that requires the degrees to satisfy temp's invariant
+      --def buildTemp(degrees: Base_Types::Float_32): TempSensor::Temperature.i :=
+      --  TempSensor::Temperature.i (degrees); 
+  **};
+    
+end GUMBO_Definitions;

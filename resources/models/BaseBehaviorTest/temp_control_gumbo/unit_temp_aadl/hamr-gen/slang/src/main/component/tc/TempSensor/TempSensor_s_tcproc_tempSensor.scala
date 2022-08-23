@@ -1,0 +1,92 @@
+// #Sireum #Logika
+
+package tc.TempSensor
+
+import org.sireum._
+import tc._
+
+// This file will not be overwritten so is safe to edit
+object TempSensor_s_tcproc_tempSensor {
+
+  // BEGIN FUNCTIONS
+  @strictpure def minTempDegrees(): Base_Types.Float_32 = -50.0f
+
+  @strictpure def defaultTempDegrees(): Base_Types.Float_32 = 72.0f
+
+  @pure def createFahrenheit(degrees: Base_Types.Float_32): TempSensor.Temperature_i = {
+    Contract(
+      Requires(degrees >= GUMBO_Definitions.GUMBO__Library.absoluteZeroF()),
+      Ensures(Res[TempSensor.Temperature_i].degrees == degrees && Res[TempSensor.Temperature_i].unit == TempSensor.Unit.Fahrenheit && Res[TempSensor.Temperature_i] == TempSensor.Temperature_i(degrees, TempSensor.Unit.Fahrenheit))
+    )
+    return TempSensor.Temperature_i(degrees, TempSensor.Unit.Fahrenheit)
+  }
+  // END FUNCTIONS
+
+  def initialise(api: TempSensor_s_Initialization_Api): Unit = {
+    Contract(
+      Requires(
+        // BEGIN INITIALIZES REQUIRES
+        // assume AADL_Requirement
+        //   All outgoing event data ports must be empty
+        api.tempChanged.isEmpty
+        // END INITIALIZES REQUIRES
+      ),
+      Modifies(api),
+      Ensures(
+        // BEGIN INITIALIZES ENSURES
+        // guarantee initializes
+        GUMBO_Definitions.GUMBO__Library.isFahrenheit(api.currentTemp) && api.currentTemp.degrees == 72.0f && api.currentTemp.degrees == TempSensor_s_tcproc_tempSensor.defaultTempDegrees() && api.currentTemp == TempSensor_s_tcproc_tempSensor.createFahrenheit(72.0f) && api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees(), TempSensor.Unit.Fahrenheit) && api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees(), TempSensor.Unit.Fahrenheit),
+        // guarantee g1
+        //   Testing MustSend with event port, initializes so no event expected
+        !(api.tempChanged.nonEmpty),
+        // guarantee g2
+        //   Testing NoSend with event port, initializes so no event expected
+        api.tempChanged.isEmpty
+        // END INITIALIZES ENSURES
+      )
+    )
+    api.put_currentTemp(Temperature_i(72.0f, Unit.Fahrenheit))
+  }
+
+  def timeTriggered(api: TempSensor_s_Operational_Api): Unit = {
+    Contract(
+      Modifies(api) // required since the api has integration contracts
+    )
+    // read temperature from HARDWARE temperature sensor,
+    // via interface realized via Slang Extension "TempSensorNative"
+    var temp = TempSensorDevice.currentTempGet()
+    // set the out data port currentTemp to hold the read temperature
+    //  BUG - unauthorized mod of temperature data
+    // val adjDegrees = temp.degrees + 13.0f // adjust temperature upward
+    // temp = Temperature_i(adjDegrees)
+
+    api.put_currentTemp(temp)
+    // put an event on tempChanged out event port to
+    // notify subscribers (e.g., tempControl thermostat) that the
+    // temperature has changed
+    api.put_tempChanged()
+  }
+
+  def activate(api: TempSensor_s_Operational_Api): Unit = { }
+
+  def deactivate(api: TempSensor_s_Operational_Api): Unit = { }
+
+  def finalise(api: TempSensor_s_Operational_Api): Unit = { }
+
+  def recover(api: TempSensor_s_Operational_Api): Unit = { }
+}
+
+@ext("TempSensorDevice_Ext_Sim") object TempSensorDevice {
+  def currentTempGet(): Temperature_i = Contract.Only(
+    Ensures(
+      GUMBO_Definitions.GUMBO__Library.inRange(Res[Temperature_i]),
+
+      // FIXME: the api's invariant just calls the above with api.currentTemp
+      // method so I don't think we should need to explicitly
+      // call it here, but not doing that causes the
+      // api.put_currentTemp(temp) to fail as smt is unable to deduce
+      // the precondition holds
+      TempSensor_s_Api.Sensor_Temperature_Range(Res[Temperature_i]),
+    )
+  )
+}

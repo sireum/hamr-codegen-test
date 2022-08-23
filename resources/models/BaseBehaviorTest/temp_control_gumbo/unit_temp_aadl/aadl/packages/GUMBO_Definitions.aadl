@@ -1,0 +1,72 @@
+package GUMBO_Definitions
+public
+  
+  with Base_Types, TempSensor;
+  
+  -- ===========================================================================================================
+  --
+  --   Specification   D e f i n i t i o n s 
+  --
+  --   Specification definitions are constants, predicates, or functions defined for the current scope (in this case package)
+  --   that can be used in ACL contracts.
+  -- ===========================================================================================================
+
+  annex GUMBO {**
+    
+    functions
+       
+      def absoluteZeroF(): Base_Types::Float_32 := f32"-459.67"; 
+      
+      def atLeastAbsoluteZero(temp : TempSensor::Temperature.i): Base_Types::Boolean :=
+        atLeastAbsoluteZeroRaw(temp.degrees, temp.unit);
+        
+      def atLeastAbsoluteZeroRaw(value: Base_Types::Float_32, unit: TempSensor::Unit): Base_Types::Boolean :=
+        if(unit == TempSensor::Unit.Kelvin) value >= f32"0" 
+        else if (unit == TempSensor::Unit.Celsius) value >= f32"-273"   
+        else value >= f32"-459.67";
+        
+      def inRange(temp: TempSensor::Temperature.i): Base_Types::Boolean := 
+        isFahrenheit(temp) &&
+        
+        (temp.degrees >= f32"-50.0") && (temp.degrees <= f32"150.0") &&
+        
+        -- can call spec defs from imported libraries 
+        (temp.degrees >= TempSensor::gminTempDegrees()) &&
+         
+        (temp.degrees <= TempSensor::gmaxTempDegrees())
+        ;
+
+     def toFahrenheit(temp: TempSensor::Temperature.i): TempSensor::Temperature.i :=
+          -- shouldn't need an assumes since temp's invariant should assure it's above abs zero
+          guarantee
+             -- FIXME: tipe complains 'illegal start of simple expression' 
+             --   if this is changed to a conjuncted binary expression.  
+             --   Enclosing the if/else expression in parens resolves the issue but
+             --   that would need to be done by the pretty printer                  
+            isFahrenheit(Res),
+            if (temp.unit == TempSensor::Unit.Kelvin)
+              ((f32"1.8" * (temp.degrees -f32"273")) + f32"32") == Res.degrees
+            else 
+              if (temp.unit == TempSensor::Unit.Celsius) 
+                ((temp.degrees *f32"1.8") + f32"32") == Res.degrees
+              else (temp.degrees == Res.degrees);
+          
+
+        if (temp.unit == TempSensor::Unit.Kelvin) 
+          TempSensor::Temperature.i (
+            f32"1.8" * (temp.degrees - f32"273") + f32"32", 
+            TempSensor::Unit.Fahrenheit) 
+        else 
+          if (temp.unit == TempSensor::Unit.Celsius)
+            TempSensor::Temperature.i (
+              (temp.degrees * f32"1.8") + f32"32", 
+              TempSensor::Unit.Fahrenheit)
+          else 
+            temp;
+      
+     def isFahrenheit(temp: TempSensor::Temperature.i): Base_Types::Boolean :=
+       temp.unit == TempSensor::Unit.Fahrenheit;
+
+  **};
+    
+end GUMBO_Definitions;
