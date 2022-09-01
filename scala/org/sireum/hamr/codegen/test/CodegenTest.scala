@@ -137,7 +137,7 @@ trait CodeGenTest extends TestSuite {
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
     val results: CodeGenResults = CodeGen.codeGen(model, testOps, reporter,
-      if (TestUtil.shouldTranspile(testOps, testModes)) transpile(testOps) _ else (TranspilerConfig) => {
+      if (TestUtil.shouldTranspile(testOps, testModes)) transpile(testOps) _ else (TranspilerConfig, Reporter) => {
         println("Dummy transpiler");
         0
       },
@@ -353,7 +353,7 @@ object CodeGenTest {
 
   }
 
-  def transpile(config: CodeGenConfig)(tc: TranspilerConfig): Z = {
+  def transpile(config: CodeGenConfig)(tc: TranspilerConfig, reporter: Reporter): Z = {
     var args: ISZ[String] = ISZ()
 
     def addKey(key: String): Unit = {

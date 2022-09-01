@@ -94,7 +94,7 @@ trait CodegenBehaviorTest extends TestSuite {
     val reporter = Reporter.create
 
     val results: CodeGenResults = CodeGen.codeGen(model, testOptions, reporter,
-      (TranspilerConfig) => {
+      (TranspilerConfig, reporter) => {
         0
       },
       (ProyekIveConfig) => {
