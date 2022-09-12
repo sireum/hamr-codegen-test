@@ -197,6 +197,22 @@ object TestUtil {
       keepGoing = check(testName, results, failMsg)
     }
 
+    if (shouldTipe(testOps, testModes) && keepGoing) {
+      val projectCmd = fetch("project.cmd")
+
+      println("Running Tipe on Slang project ...")
+      val proyekResults = vproc(s"${sireum.string} proyek tipe --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      _check(proyekResults, "Proyek tipe failed")
+    }
+
+    if (shouldProyekIve(testOps, testModes) && keepGoing) {
+      val projectCmd = fetch("project.cmd")
+
+      println("Generating IVE project via proyek ive ...")
+      val proyekResults = vproc(s"${sireum.string} proyek ive ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      _check(proyekResults, "Proyek ive failed")
+    }
+
     if (shouldTranspile(testOps, testModes) && keepGoing) {
       if (isLinux(testOps.platform)) {
         val transpileScript = fetch("transpile.cmd")
@@ -241,14 +257,6 @@ object TestUtil {
       // Delete the 'out' directory so that it doesn't pollute directory diffs
       val outDir = projectCmd.up.up / "out"
       if (outDir.exists) outDir.removeAll()
-    }
-
-    if (shouldProyekIve(testOps, testModes) && keepGoing) {
-      val projectCmd = fetch("project.cmd")
-
-      println("Generating IVE project via proyek ive ...")
-      val proyekResults = vproc(s"${sireum.string} proyek ive ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
-      _check(proyekResults, "Proyek ive failed")
     }
 
     if (shouldRunGeneratedUnitTests(testOps.platform, testModes) && keepGoing) {
@@ -441,7 +449,7 @@ object TestUtil {
   }
 
   def shouldProyekIve(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
-    return !config.noProyekIve || shouldCompile(config.platform, testModes)
+    return isSlang(config.platform) && (!config.noProyekIve || ops.ISZOps(testModes).contains(TestMode.ive))
   }
 
   def onOptions(options: ISZ[CMakeOption]): ISZ[String] = {
