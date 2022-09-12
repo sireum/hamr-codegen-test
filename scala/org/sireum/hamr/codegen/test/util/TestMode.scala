@@ -11,6 +11,8 @@ import org.sireum._
 
   "transpile" // transpile linux and sel4 projects
 
+  "ive" // generate ive project info for Slang projects
+
   "compile" // compile Slang and Linux projects
 
   "camkes" // run CAmkES/ninja, also transpiles seL4 projects
@@ -24,7 +26,6 @@ import org.sireum._
   "generated_unit_tests" // run unit tests on generated Slang projects
 
   "verbose"
-  // all = generated_unit_tests, compile, camkes
 }
 
 object TestModeHelper {
