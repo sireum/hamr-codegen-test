@@ -108,6 +108,12 @@ object TempSensor_i_tcproc_tempSensor_Bridge {
       Art.releaseOutput(eventOutPortIds, dataOutPortIds)
     }
 
+    override
+    def testInitialise(): Unit = {
+      component.initialise(initialization_api)
+      Art.releaseOutput(eventOutPortIds, dataOutPortIds)
+    }
+
     def activate(): Unit = {
       // implement the following method in 'component':  def activate(api: TempSensor_i_Operational_Api): Unit = {}
       component.activate(operational_api)

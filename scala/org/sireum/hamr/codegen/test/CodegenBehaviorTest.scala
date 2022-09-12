@@ -11,9 +11,11 @@ import org.sireum.test.TestSuite
 
 trait CodegenBehaviorTest extends TestSuite {
 
+  // Initialize to use only test modes received from environment
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
-    ISZ()
+    ISZ(TestMode.compile)
 
+  // ToDo: Jason: What is this for?
   def disablePhantom: B = F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
   def verbose: B = {

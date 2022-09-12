@@ -8,6 +8,22 @@ import TempControlSimpleTemp.CoolingFan.FanCmd
 // This file will not be overwritten so is safe to edit
 class TempControl_i_tcproc_tempControl_Test extends TempControl_i_tcproc_tempControl_TestApi {
 
+  // CHUT = Convential HAMR Unit Test
+  test("CHUT: InitialEP") {
+    // Test outputs TempControl Initialise EP
+    //  The only thing the InitialiseEP does is initialise state local variables,
+    //  so just check their values.
+
+    testInitialise()
+
+    // assert that then Controller's view of the fan is set to off
+    assert(TempControl_i_tcproc_tempControl.currentFanState == FanCmd.Off)
+    // assert that then Controller's initial set point is set to (55,100)
+    assert(TempControl_i_tcproc_tempControl.currentSetPoint == SetPoint_i(Temperature_i(55f), Temperature_i(100f)))
+    // assert that then Controller's initial latestTemp value is set to 72.0
+    assert(TempControl_i_tcproc_tempControl.latestTemp == Temperature_i(72.0f))
+  }
+
   def setPointandCurrentTempInteractions(low: Float, high: Float, current: Float): Unit = {
     //-----------------
     // Interaction 1: cause a set point to be stored in TempControl component's local state
@@ -22,7 +38,7 @@ class TempControl_i_tcproc_tempControl_Test extends TempControl_i_tcproc_tempCon
     // execute compute entry point to process updated setPoint
     // ..this will cause the setPoint values to be stored in the
     //   component local state
-    executeTest()
+    testCompute()
 
     //-----------------
     // Interaction 2: send a temperature value
@@ -37,7 +53,7 @@ class TempControl_i_tcproc_tempControl_Test extends TempControl_i_tcproc_tempCon
     // execute compute entry point to process updated setPoint
     // ..this will cause the setPoint values to be stored in the
     //   component local state
-    executeTest()
+    testCompute()
   }
 
   // CHUT = Convential HAMR Unit Test
@@ -97,7 +113,7 @@ class TempControl_i_tcproc_tempControl_Test extends TempControl_i_tcproc_tempCon
     put_tempChanged()
 
     // ------------ e x e c u t e     c o m p o n e n t  ------------
-    executeTest()
+    testCompute()
 
     // ------------ c h e c k   e x p e c t e d   o u t p u t  ------------
     // get output state
