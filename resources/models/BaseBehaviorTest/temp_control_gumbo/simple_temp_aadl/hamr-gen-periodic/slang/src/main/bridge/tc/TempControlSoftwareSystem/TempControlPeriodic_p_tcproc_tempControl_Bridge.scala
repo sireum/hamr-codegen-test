@@ -124,6 +124,12 @@ object TempControlPeriodic_p_tcproc_tempControl_Bridge {
       Art.releaseOutput(eventOutPortIds, dataOutPortIds)
     }
 
+    override
+    def testInitialise(): Unit = {
+      component.initialise(initialization_api)
+      Art.releaseOutput(eventOutPortIds, dataOutPortIds)
+    }
+
     def activate(): Unit = {
       // implement the following method in 'component':  def activate(api: TempControlPeriodic_p_Operational_Api): Unit = {}
       component.activate(operational_api)

@@ -7,12 +7,16 @@ import TestUtil._
 
 class BaseBehaviorTest extends CodegenBehaviorTest {
 
+  // set base directory for AADL models to be used in behavior tests
   val modelsDir = TestUtil.getRootDirectory(getClass) / "resources" / "models"
 
 
   "temp_control_simple_temp" in {
+    // directory of model to use in this test
     val modelDir = modelsDir / getClass.getSimpleName / "temp_control_simple_temp"
+    // description to be used in reporting (where ??)
     val description = "Temp Control model with temp data structure with 1 field"
+    // basePackageName ???  used in HAMR code generation ???
     val packageName: Option[org.sireum.String] = Some("TempControlSimpleTemp")
 
     // there are multiple system implementations in this project so need to

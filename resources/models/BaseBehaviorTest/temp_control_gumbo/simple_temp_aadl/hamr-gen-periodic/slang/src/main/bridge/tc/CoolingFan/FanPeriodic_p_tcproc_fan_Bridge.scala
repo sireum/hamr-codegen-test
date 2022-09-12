@@ -108,6 +108,12 @@ object FanPeriodic_p_tcproc_fan_Bridge {
       Art.releaseOutput(eventOutPortIds, dataOutPortIds)
     }
 
+    override
+    def testInitialise(): Unit = {
+      component.initialise(initialization_api)
+      Art.releaseOutput(eventOutPortIds, dataOutPortIds)
+    }
+
     def activate(): Unit = {
       // implement the following method in 'component':  def activate(api: FanPeriodic_p_Operational_Api): Unit = {}
       component.activate(operational_api)
