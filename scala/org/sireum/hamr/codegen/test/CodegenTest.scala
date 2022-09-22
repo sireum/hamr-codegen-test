@@ -327,7 +327,7 @@ object CodeGenTest {
     val pathSep: String = Os.pathSep
 
     if (pc.force) addKey("--force")
-    if (pc.ultimate) addKey("--ultimate")
+    add("--edition", ops.StringOps(pc.edition.name).firstToLower)
     if (pc.ignoreRuntime) addKey("--ignore-runtime")
     if (pc.json.nonEmpty) add("--json", pc.json.get)
     if (pc.name.nonEmpty) add("--name", pc.name.get)
