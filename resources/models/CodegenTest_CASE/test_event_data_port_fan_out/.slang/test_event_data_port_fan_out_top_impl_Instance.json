@@ -28,7 +28,11 @@
         "value" : "System"
       },
       "classifier" : {
-        "type" : "None"
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "test_event_data_port_fan_out::top.impl"
+        }
       },
       "features" : [
       ],

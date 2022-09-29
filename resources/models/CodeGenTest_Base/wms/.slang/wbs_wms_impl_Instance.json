@@ -28,7 +28,11 @@
         "value" : "System"
       },
       "classifier" : {
-        "type" : "None"
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "wms::wms.impl"
+        }
       },
       "features" : [
       ],

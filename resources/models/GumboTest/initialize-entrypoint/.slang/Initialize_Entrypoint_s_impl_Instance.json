@@ -28,7 +28,11 @@
         "value" : "System"
       },
       "classifier" : {
-        "type" : "None"
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Initialize_Entrypoint::s.impl"
+        }
       },
       "features" : [
       ],

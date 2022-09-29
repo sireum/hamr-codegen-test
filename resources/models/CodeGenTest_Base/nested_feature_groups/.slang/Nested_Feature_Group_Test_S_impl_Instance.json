@@ -28,7 +28,11 @@
         "value" : "System"
       },
       "classifier" : {
-        "type" : "None"
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Nested_Feature_Group_Test::S.impl"
+        }
       },
       "features" : [
       ],
