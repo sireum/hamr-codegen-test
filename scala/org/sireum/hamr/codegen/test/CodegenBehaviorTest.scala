@@ -18,6 +18,8 @@ trait CodegenBehaviorTest extends TestSuite {
   // ToDo: Jason: What is this for?
   def disablePhantom: B = F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
+  def ignoreUnitTestModes: B = F // ignore unit test modes contained in .hamrTest files
+
   def verbose: B = {
     return ops.ISZOps(testModes).contains(TestMode.verbose)
   }
@@ -144,7 +146,19 @@ trait CodegenBehaviorTest extends TestSuite {
 
     val testName = props.get("testName").get
 
-    var unitTestModes: ISZ[TestMode.Type] = testModes ++ CodegenBehaviorTest.getUnitTestModes(props.get("testModes"))
+    var unitTestModes: ISZ[TestMode.Type] = {
+      val unitTestModes = CodegenBehaviorTest.getUnitTestModes(props.get("testModes"))
+      if(ignoreUnitTestModes && unitTestModes.nonEmpty) {
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!  Ignoring Unit Test Modes  !!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+        testModes
+      }
+      else {
+        testModes ++ unitTestModes
+      }
+    }
 
     if(disablePhantom && ops.ISZOps(unitTestModes).contains((TestMode.phantom))) {
       println("!!!!!!!!!!!!!!!!!!!!!!")
