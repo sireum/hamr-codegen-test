@@ -43,12 +43,12 @@ object TempControlPeriodic_p_tcproc_tempControl {
     Contract(
       Modifies(
         api,
-        // BEGIN_COMPUTE_MODIFIES_timeTriggered
+        // BEGIN COMPUTE MODIFIES timeTriggered
         latestFanCmd
-        // END_COMPUTE MODIFIES_timeTriggered
+        // END COMPUTE MODIFIES timeTriggered
       ),
       Ensures(
-        // BEGIN_COMPUTE_ENSURES_timeTriggered
+        // BEGIN COMPUTE ENSURES timeTriggered
         // guarantee altCurrentTempLTSetPoint
         //   If current temperature is less than
         //   the current low set point, then the fan state shall be Off
@@ -75,7 +75,7 @@ object TempControlPeriodic_p_tcproc_tempControl {
         //   current low set point and less than or equal to the current high set point,
         //   then the current fan state is maintained.
         (api.currentTemp.degrees >= api.setPoint.low.degrees & api.currentTemp.degrees <= api.setPoint.high.degrees) -->: (latestFanCmd == In(latestFanCmd) & api.fanCmd == latestFanCmd)
-        // END_COMPUTE ENSURES_timeTriggered
+        // END COMPUTE ENSURES timeTriggered
       )
     )
     // Note the following was originally needed to help SMT out

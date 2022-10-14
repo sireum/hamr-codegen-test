@@ -88,7 +88,7 @@ object TempControl_i_tcproc_tempControl {
   def handle_fanAck(api: TempControl_i_Operational_Api, value : CoolingFan.FanAck.Type): Unit = {
     Contract(
       Requires(
-        // BEGIN_COMPUTE_REQUIRES_fanAck
+        // BEGIN COMPUTE REQUIRES fanAck
         // assume AADL_Requirement
         //   All outgoing event data ports must be empty
         api.fanCmd.isEmpty,
@@ -96,17 +96,17 @@ object TempControl_i_tcproc_tempControl {
         //   passed in payload must be the same as the spec var's value
         //   NOTE: this assumes the user never changes the param name"
         api.fanAck == value
-        // END_COMPUTE REQUIRES_fanAck
+        // END COMPUTE REQUIRES fanAck
       ),
       Modifies(
-        // BEGIN_COMPUTE_MODIFIES_fanAck
+        // BEGIN COMPUTE MODIFIES fanAck
         currentSetPoint,
         currentFanState,
         latestTemp
-        // END_COMPUTE MODIFIES_fanAck
+        // END COMPUTE MODIFIES fanAck
       ),
       Ensures(
-        // BEGIN_COMPUTE_ENSURES_fanAck
+        // BEGIN COMPUTE ENSURES fanAck
         // guarantee TC_Req_01
         //   If the current temperature is less than the set point, then the fan state shall be Off.
         (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
@@ -114,7 +114,7 @@ object TempControl_i_tcproc_tempControl {
         //   If the current temperature is greater than the set point,
         //   then the fan state shall be On.
         (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On)
-        // END_COMPUTE ENSURES_fanAck
+        // END COMPUTE ENSURES fanAck
       )
     )
     api.logInfo("received fanAck")
@@ -139,7 +139,7 @@ object TempControl_i_tcproc_tempControl {
   def handle_setPoint(api: TempControl_i_Operational_Api, value : TempControlSoftwareSystem.SetPoint_i): Unit = {
     Contract(
       Requires(
-        // BEGIN_COMPUTE_REQUIRES_setPoint
+        // BEGIN COMPUTE REQUIRES setPoint
         // assume AADL_Requirement
         //   All outgoing event data ports must be empty
         api.fanCmd.isEmpty,
@@ -147,17 +147,17 @@ object TempControl_i_tcproc_tempControl {
         //   passed in payload must be the same as the spec var's value
         //   NOTE: this assumes the user never changes the param name"
         api.setPoint == value
-        // END_COMPUTE REQUIRES_setPoint
+        // END COMPUTE REQUIRES setPoint
       ),
       Modifies(
-        // BEGIN_COMPUTE_MODIFIES_setPoint
+        // BEGIN COMPUTE MODIFIES setPoint
         currentSetPoint,
         currentFanState,
         latestTemp
-        // END_COMPUTE MODIFIES_setPoint
+        // END COMPUTE MODIFIES setPoint
       ),
       Ensures(
-        // BEGIN_COMPUTE_ENSURES_setPoint
+        // BEGIN COMPUTE ENSURES setPoint
         // guarantee TC_Req_01
         //   If the current temperature is less than the set point, then the fan state shall be Off.
         (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
@@ -167,7 +167,7 @@ object TempControl_i_tcproc_tempControl {
         (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On),
         // guarantees setPointChanged
         currentSetPoint == api.setPoint
-        // END_COMPUTE ENSURES_setPoint
+        // END COMPUTE ENSURES setPoint
       )
     )
     // log to indicate that that a setPoint event was received/handled
@@ -191,21 +191,21 @@ object TempControl_i_tcproc_tempControl {
   def handle_tempChanged(api: TempControl_i_Operational_Api): Unit = {
     Contract(
       Requires(
-        // BEGIN_COMPUTE_REQUIRES_tempChanged
+        // BEGIN COMPUTE REQUIRES tempChanged
         // assume AADL_Requirement
         //   All outgoing event data ports must be empty
         api.fanCmd.isEmpty
-        // END_COMPUTE REQUIRES_tempChanged
+        // END COMPUTE REQUIRES tempChanged
       ),
       Modifies(
-        // BEGIN_COMPUTE_MODIFIES_tempChanged
+        // BEGIN COMPUTE MODIFIES tempChanged
         currentSetPoint,
         currentFanState,
         latestTemp
-        // END_COMPUTE MODIFIES_tempChanged
+        // END COMPUTE MODIFIES tempChanged
       ),
       Ensures(
-        // BEGIN_COMPUTE_ENSURES_tempChanged
+        // BEGIN COMPUTE ENSURES tempChanged
         // guarantee TC_Req_01
         //   If the current temperature is less than the set point, then the fan state shall be Off.
         (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
@@ -215,7 +215,7 @@ object TempControl_i_tcproc_tempControl {
         (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On),
         // guarantees tempChanged
         latestTemp == api.currentTemp
-        // END_COMPUTE ENSURES_tempChanged
+        // END COMPUTE ENSURES tempChanged
       )
     )
     // log to indicate that that a tempChanged event was received/handled
