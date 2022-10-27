@@ -72,12 +72,9 @@ object Fan_i_tcp_fan_Bridge {
 
   @datatype class EntryPoints(
     Fan_i_tcp_fan_BridgeId : Art.BridgeId,
-
     fanCmd_Id : Art.PortId,
     fanAck_Id : Art.PortId,
-
     dispatchTriggers : Option[ISZ[Art.PortId]],
-
     initialization_api: Fan_i_Initialization_Api,
     operational_api: Fan_i_Operational_Api) extends Bridge.EntryPoints {
 
@@ -88,6 +85,12 @@ object Fan_i_tcp_fan_Bridge {
     val dataOutPortIds: ISZ[Art.PortId] = ISZ()
 
     val eventOutPortIds: ISZ[Art.PortId] = ISZ(fanAck_Id)
+
+    def initialise(): Unit = {
+      // implement the following method in 'component':  def initialise(api: Fan_i_Initialization_Api): Unit = {}
+      component.initialise(initialization_api)
+      Art.sendOutput(eventOutPortIds, dataOutPortIds)
+    }
 
     def compute(): Unit = {
       // transpiler friendly filter
@@ -124,6 +127,33 @@ object Fan_i_tcp_fan_Bridge {
       Art.sendOutput(eventOutPortIds, dataOutPortIds)
     }
 
+    def activate(): Unit = {
+      // implement the following method in 'component':  def activate(api: Fan_i_Operational_Api): Unit = {}
+      component.activate(operational_api)
+    }
+
+    def deactivate(): Unit = {
+      // implement the following method in 'component':  def deactivate(api: Fan_i_Operational_Api): Unit = {}
+      component.deactivate(operational_api)
+    }
+
+    def finalise(): Unit = {
+      // implement the following method in 'component':  def finalise(api: Fan_i_Operational_Api): Unit = {}
+      component.finalise(operational_api)
+    }
+
+    def recover(): Unit = {
+      // implement the following method in 'component':  def recover(api: Fan_i_Operational_Api): Unit = {}
+      component.recover(operational_api)
+    }
+
+    override
+    def testInitialise(): Unit = {
+      // implement the following method in 'component':  def initialise(api: Fan_i_Initialization_Api): Unit = {}
+      component.initialise(initialization_api)
+      Art.releaseOutput(eventOutPortIds, dataOutPortIds)
+    }
+
     override
     def testCompute(): Unit = {
       // transpiler friendly filter
@@ -158,38 +188,6 @@ object Fan_i_tcp_fan_Bridge {
       }
 
       Art.releaseOutput(eventOutPortIds, dataOutPortIds)
-    }
-
-    override
-    def testInitialise(): Unit = {
-      component.initialise(initialization_api)
-      Art.releaseOutput(eventOutPortIds, dataOutPortIds)
-    }
-
-    def activate(): Unit = {
-      // implement the following method in 'component':  def activate(api: Fan_i_Operational_Api): Unit = {}
-      component.activate(operational_api)
-    }
-
-    def deactivate(): Unit = {
-      // implement the following method in 'component':  def deactivate(api: Fan_i_Operational_Api): Unit = {}
-      component.deactivate(operational_api)
-    }
-
-    def finalise(): Unit = {
-      // implement the following method in 'component':  def finalise(api: Fan_i_Operational_Api): Unit = {}
-      component.finalise(operational_api)
-    }
-
-    def initialise(): Unit = {
-      // implement the following method in 'component':  def initialise(api: Fan_i_Initialization_Api): Unit = {}
-      component.initialise(initialization_api)
-      Art.sendOutput(eventOutPortIds, dataOutPortIds)
-    }
-
-    def recover(): Unit = {
-      // implement the following method in 'component':  def recover(api: Fan_i_Operational_Api): Unit = {}
-      component.recover(operational_api)
     }
   }
 }

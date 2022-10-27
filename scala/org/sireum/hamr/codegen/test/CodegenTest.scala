@@ -1,6 +1,7 @@
 package org.sireum.hamr.codegen.test
 
 import org.sireum._
+import org.sireum.hamr.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.containers.{ProyekIveConfig, TranspilerConfig}
 import org.sireum.hamr.codegen.common.util._
@@ -136,7 +137,7 @@ trait CodeGenTest extends TestSuite {
 
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
-    val results: CodeGenResults = CodeGen.codeGen(model, testOps, reporter,
+    val results: CodeGenResults = CodeGen.codeGen(model, testOps, ArsitPlugin.defaultPlugins, reporter,
       if (TestUtil.shouldTranspile(testOps, testModes)) transpile(testOps) _ else (TranspilerConfig, Reporter) => {
         println("Dummy transpiler");
         0

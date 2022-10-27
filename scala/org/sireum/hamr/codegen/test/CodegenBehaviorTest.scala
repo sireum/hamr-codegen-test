@@ -1,6 +1,7 @@
 package org.sireum.hamr.codegen.test
 
 import org.sireum._
+import org.sireum.hamr.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.test.util.Cli.{CodegenHamrPlatform, CodegenOption}
@@ -97,7 +98,7 @@ trait CodegenBehaviorTest extends TestSuite {
 
     val reporter = Reporter.create
 
-    val results: CodeGenResults = CodeGen.codeGen(model, testOptions, reporter,
+    val results: CodeGenResults = CodeGen.codeGen(model, testOptions, ArsitPlugin.defaultPlugins(), reporter,
       (TranspilerConfig, reporter) => {
         0
       },
