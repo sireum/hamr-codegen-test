@@ -139,7 +139,7 @@
         "vm-with-multiple-threads--SeL4\/slang-embedded\/src\/main\/component\/slang_embedded\/model\/virt_thread_1_virt_process_virt_thread_1.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage slang_embedded.model\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject virt_thread_1_virt_process_virt_thread_1 {\n\n  def initialise(api: virt_thread_1_Initialization_Api): Unit = { }\n\n  def timeTriggered(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def activate(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def deactivate(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def finalise(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def recover(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def testInitialise(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def testCompute(api: virt_thread_1_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage slang_embedded.model\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject virt_thread_1_virt_process_virt_thread_1 {\n\n  def initialise(api: virt_thread_1_Initialization_Api): Unit = { }\n\n  def timeTriggered(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def activate(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def deactivate(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def finalise(api: virt_thread_1_Operational_Api): Unit = { }\n\n  def recover(api: virt_thread_1_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -211,7 +211,7 @@
         "vm-with-multiple-threads--SeL4\/slang-embedded\/src\/main\/component\/slang_embedded\/model\/virt_thread_2_virt_process_virt_thread_2.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage slang_embedded.model\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject virt_thread_2_virt_process_virt_thread_2 {\n\n  def initialise(api: virt_thread_2_Initialization_Api): Unit = { }\n\n  def handle_in_port(api: virt_thread_2_Operational_Api, value : Base_Types.Integer_32): Unit = { }\n\n  def activate(api: virt_thread_2_Operational_Api): Unit = { }\n\n  def deactivate(api: virt_thread_2_Operational_Api): Unit = { }\n\n  def finalise(api: virt_thread_2_Operational_Api): Unit = { }\n\n  def recover(api: virt_thread_2_Operational_Api): Unit = { }\n\n  def testInitialise(api: virt_thread_2_Operational_Api): Unit = { }\n\n  def testCompute(api: virt_thread_2_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage slang_embedded.model\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject virt_thread_2_virt_process_virt_thread_2 {\n\n  def initialise(api: virt_thread_2_Initialization_Api): Unit = { }\n\n  def handle_in_port(api: virt_thread_2_Operational_Api, value : Base_Types.Integer_32): Unit = { }\n\n  def activate(api: virt_thread_2_Operational_Api): Unit = { }\n\n  def deactivate(api: virt_thread_2_Operational_Api): Unit = { }\n\n  def finalise(api: virt_thread_2_Operational_Api): Unit = { }\n\n  def recover(api: virt_thread_2_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -271,7 +271,7 @@
         "vm-with-multiple-threads--SeL4\/slang-embedded\/src\/main\/component\/slang_embedded\/model\/norm_thread_norm_process_norm_thread_1.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage slang_embedded.model\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject norm_thread_norm_process_norm_thread_1 {\n\n  def initialise(api: norm_thread_Initialization_Api): Unit = { }\n\n  def handle_in_port(api: norm_thread_Operational_Api, value : Base_Types.Integer_32): Unit = { }\n\n  def activate(api: norm_thread_Operational_Api): Unit = { }\n\n  def deactivate(api: norm_thread_Operational_Api): Unit = { }\n\n  def finalise(api: norm_thread_Operational_Api): Unit = { }\n\n  def recover(api: norm_thread_Operational_Api): Unit = { }\n\n  def testInitialise(api: norm_thread_Operational_Api): Unit = { }\n\n  def testCompute(api: norm_thread_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage slang_embedded.model\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject norm_thread_norm_process_norm_thread_1 {\n\n  def initialise(api: norm_thread_Initialization_Api): Unit = { }\n\n  def handle_in_port(api: norm_thread_Operational_Api, value : Base_Types.Integer_32): Unit = { }\n\n  def activate(api: norm_thread_Operational_Api): Unit = { }\n\n  def deactivate(api: norm_thread_Operational_Api): Unit = { }\n\n  def finalise(api: norm_thread_Operational_Api): Unit = { }\n\n  def recover(api: norm_thread_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,

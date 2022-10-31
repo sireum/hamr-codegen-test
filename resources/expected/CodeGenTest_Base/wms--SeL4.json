@@ -139,7 +139,7 @@
         "wms--SeL4\/slang-embedded\/src\/main\/component\/slang_embedded\/wms\/tire_monitor_impl_tire_p_monitor.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage slang_embedded.wms\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject tire_monitor_impl_tire_p_monitor {\n\n  def initialise(api: tire_monitor_impl_Initialization_Api): Unit = { }\n\n  def timeTriggered(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def activate(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def deactivate(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def finalise(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def recover(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def testInitialise(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def testCompute(api: tire_monitor_impl_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage slang_embedded.wms\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject tire_monitor_impl_tire_p_monitor {\n\n  def initialise(api: tire_monitor_impl_Initialization_Api): Unit = { }\n\n  def timeTriggered(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def activate(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def deactivate(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def finalise(api: tire_monitor_impl_Operational_Api): Unit = { }\n\n  def recover(api: tire_monitor_impl_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -211,7 +211,7 @@
         "wms--SeL4\/slang-embedded\/src\/main\/component\/slang_embedded\/wms\/sensor_impl_front_p_sensor.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage slang_embedded.wms\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject sensor_impl_front_p_sensor {\n\n  def initialise(api: sensor_impl_Initialization_Api): Unit = { }\n\n  def timeTriggered(api: sensor_impl_Operational_Api): Unit = { }\n\n  def activate(api: sensor_impl_Operational_Api): Unit = { }\n\n  def deactivate(api: sensor_impl_Operational_Api): Unit = { }\n\n  def finalise(api: sensor_impl_Operational_Api): Unit = { }\n\n  def recover(api: sensor_impl_Operational_Api): Unit = { }\n\n  def testInitialise(api: sensor_impl_Operational_Api): Unit = { }\n\n  def testCompute(api: sensor_impl_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage slang_embedded.wms\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject sensor_impl_front_p_sensor {\n\n  def initialise(api: sensor_impl_Initialization_Api): Unit = { }\n\n  def timeTriggered(api: sensor_impl_Operational_Api): Unit = { }\n\n  def activate(api: sensor_impl_Operational_Api): Unit = { }\n\n  def deactivate(api: sensor_impl_Operational_Api): Unit = { }\n\n  def finalise(api: sensor_impl_Operational_Api): Unit = { }\n\n  def recover(api: sensor_impl_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -259,7 +259,7 @@
         "wms--SeL4\/slang-embedded\/src\/main\/component\/slang_embedded\/wms\/sensor_impl_rear_p_sensor.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage slang_embedded.wms\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject sensor_impl_rear_p_sensor {\n\n  def initialise(api: sensor_impl_Initialization_Api): Unit = { }\n\n  def timeTriggered(api: sensor_impl_Operational_Api): Unit = { }\n\n  def activate(api: sensor_impl_Operational_Api): Unit = { }\n\n  def deactivate(api: sensor_impl_Operational_Api): Unit = { }\n\n  def finalise(api: sensor_impl_Operational_Api): Unit = { }\n\n  def recover(api: sensor_impl_Operational_Api): Unit = { }\n\n  def testInitialise(api: sensor_impl_Operational_Api): Unit = { }\n\n  def testCompute(api: sensor_impl_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage slang_embedded.wms\n\nimport org.sireum._\nimport slang_embedded._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject sensor_impl_rear_p_sensor {\n\n  def initialise(api: sensor_impl_Initialization_Api): Unit = { }\n\n  def timeTriggered(api: sensor_impl_Operational_Api): Unit = { }\n\n  def activate(api: sensor_impl_Operational_Api): Unit = { }\n\n  def deactivate(api: sensor_impl_Operational_Api): Unit = { }\n\n  def finalise(api: sensor_impl_Operational_Api): Unit = { }\n\n  def recover(api: sensor_impl_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
