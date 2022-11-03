@@ -78,7 +78,7 @@
           },
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@featureInstance.0"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@featureInstance.0"
         },
         {
           "type" : "FeatureEnd",
@@ -115,7 +115,7 @@
           },
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@featureInstance.1"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@featureInstance.1"
         },
         {
           "type" : "FeatureEnd",
@@ -152,7 +152,7 @@
           },
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@featureInstance.2"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@featureInstance.2"
         }
       ],
       "subComponents" : [
@@ -263,7 +263,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -342,7 +342,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.0"
             },
             {
               "type" : "FeatureAccess",
@@ -387,7 +387,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -424,7 +424,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.2"
             },
             {
               "type" : "FeatureEnd",
@@ -461,7 +461,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.3"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.3"
             },
             {
               "type" : "FeatureEnd",
@@ -498,7 +498,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.4"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.4"
             },
             {
               "type" : "FeatureEnd",
@@ -535,7 +535,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.5"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.5"
             }
           ],
           "subComponents" : [
@@ -615,7 +615,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -686,7 +686,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -727,7 +727,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -768,7 +768,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -805,7 +805,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -850,7 +850,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -895,7 +895,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -939,7 +939,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -1010,7 +1010,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1051,7 +1051,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1092,7 +1092,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1129,7 +1129,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -1174,7 +1174,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -1219,7 +1219,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -1263,7 +1263,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2"
             },
             {
               "type" : "Component",
@@ -1342,7 +1342,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.3\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.3\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1386,7 +1386,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.3"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.3"
             },
             {
               "type" : "Component",
@@ -1465,7 +1465,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1644,7 +1644,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4"
             },
             {
               "type" : "Component",
@@ -1756,7 +1756,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1834,7 +1834,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1912,7 +1912,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1990,7 +1990,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@featureInstance.3"
                 }
               ],
               "subComponents" : [
@@ -2104,7 +2104,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2213,7 +2213,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2291,7 +2291,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2369,7 +2369,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2447,7 +2447,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@featureInstance.4"
                     }
                   ],
                   "subComponents" : [
@@ -2561,7 +2561,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2670,7 +2670,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2748,7 +2748,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2826,7 +2826,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2904,7 +2904,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
                         }
                       ],
                       "subComponents" : [
@@ -3169,7 +3169,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -3321,7 +3321,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.6\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.6\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -3471,7 +3471,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.10\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.10\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -3621,7 +3621,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.0\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.0\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -3771,7 +3771,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.1\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.1\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -3921,7 +3921,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.10\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.10\/@connectionReference.2"
                     }
                   ],
                   "connectionInstances" : [
@@ -4069,7 +4069,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.0"
                 },
                 {
                   "type" : "Component",
@@ -4181,7 +4181,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -4259,7 +4259,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -4433,7 +4433,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -4511,7 +4511,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -4589,7 +4589,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.4"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -4667,7 +4667,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.5"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@featureInstance.5"
                     }
                   ],
                   "subComponents" : [
@@ -4781,7 +4781,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -4859,7 +4859,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -5033,7 +5033,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -5111,7 +5111,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -5189,7 +5189,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -5267,7 +5267,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.5"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0\/@featureInstance.5"
                         }
                       ],
                       "subComponents" : [
@@ -5532,7 +5532,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -5684,7 +5684,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -5834,7 +5834,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.11\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.11\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -5984,7 +5984,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.2\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.2\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -6134,7 +6134,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.3\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.3\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -6284,7 +6284,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.4\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.4\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -6434,7 +6434,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.5\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.5\/@connectionReference.0"
                     }
                   ],
                   "connectionInstances" : [
@@ -6582,7 +6582,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.1"
                 },
                 {
                   "type" : "Component",
@@ -6694,7 +6694,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -6772,7 +6772,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@featureInstance.1"
                     }
                   ],
                   "subComponents" : [
@@ -6886,7 +6886,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -6964,7 +6964,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
                         }
                       ],
                       "subComponents" : [
@@ -7229,7 +7229,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -7381,7 +7381,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.6\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.6\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -7531,7 +7531,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.7\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.7\/@connectionReference.0"
                     }
                   ],
                   "connectionInstances" : [
@@ -7679,7 +7679,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.2"
                 },
                 {
                   "type" : "Component",
@@ -7791,7 +7791,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -7869,7 +7869,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -7947,7 +7947,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -8025,7 +8025,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -8103,7 +8103,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.4"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -8181,7 +8181,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.5"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@featureInstance.5"
                     }
                   ],
                   "subComponents" : [
@@ -8295,7 +8295,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -8373,7 +8373,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -8451,7 +8451,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -8529,7 +8529,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -8607,7 +8607,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.4"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -8685,7 +8685,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.5"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0\/@featureInstance.5"
                         }
                       ],
                       "subComponents" : [
@@ -8950,7 +8950,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -9102,7 +9102,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.1\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.1\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -9252,7 +9252,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.8\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.8\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -9402,7 +9402,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.9\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.9\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -9552,7 +9552,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.11\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.11\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -9702,7 +9702,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.13\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.13\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -9852,7 +9852,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.15\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.15\/@connectionReference.2"
                     }
                   ],
                   "connectionInstances" : [
@@ -10000,7 +10000,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.3"
                 },
                 {
                   "type" : "Component",
@@ -10112,7 +10112,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -10190,7 +10190,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -10299,7 +10299,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -10336,7 +10336,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@featureInstance.3"
                     }
                   ],
                   "subComponents" : [
@@ -10450,7 +10450,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -10528,7 +10528,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -10637,7 +10637,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -10674,7 +10674,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0\/@featureInstance.3"
                         }
                       ],
                       "subComponents" : [
@@ -10939,7 +10939,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -11091,7 +11091,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.0\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.0\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -11241,7 +11241,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.10\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.10\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -11391,7 +11391,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.16\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.16\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -11541,7 +11541,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.17\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.17\/@connectionReference.2"
                     }
                   ],
                   "connectionInstances" : [
@@ -11689,7 +11689,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.4"
                 },
                 {
                   "type" : "Component",
@@ -11897,7 +11897,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -11975,7 +11975,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12053,7 +12053,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12131,7 +12131,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12209,7 +12209,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.4"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12287,7 +12287,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.5"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.5"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12365,7 +12365,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.6"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.6"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12443,7 +12443,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.7"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@featureInstance.7"
                     }
                   ],
                   "subComponents" : [
@@ -12653,7 +12653,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -12731,7 +12731,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -12809,7 +12809,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -12887,7 +12887,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -12965,7 +12965,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.4"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -13043,7 +13043,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.5"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.5"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -13121,7 +13121,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.6"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.6"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -13199,7 +13199,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.7"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0\/@featureInstance.7"
                         }
                       ],
                       "subComponents" : [
@@ -13526,7 +13526,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -13678,7 +13678,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.2\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.2\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -13828,7 +13828,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.3\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.3\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -13978,7 +13978,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.4\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.4\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -14128,7 +14128,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.5\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.5\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -14278,7 +14278,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.11\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.11\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -14428,7 +14428,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.12\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.12\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -14578,7 +14578,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.13\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.13\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -14728,7 +14728,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.14\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.14\/@connectionReference.0"
                     }
                   ],
                   "connectionInstances" : [
@@ -14876,7 +14876,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.5"
                 },
                 {
                   "type" : "Component",
@@ -14988,7 +14988,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -15066,7 +15066,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@featureInstance.1"
                     }
                   ],
                   "subComponents" : [
@@ -15180,7 +15180,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -15258,7 +15258,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@componentInstance.0\/@featureInstance.1"
                         }
                       ],
                       "subComponents" : [
@@ -15585,7 +15585,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -15737,7 +15737,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.14\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.14\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -15887,7 +15887,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.15\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.15\/@connectionReference.0"
                     }
                   ],
                   "connectionInstances" : [
@@ -16035,7 +16035,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.6"
                 },
                 {
                   "type" : "Component",
@@ -16147,7 +16147,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -16225,7 +16225,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -16334,7 +16334,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@featureInstance.2"
                     }
                   ],
                   "subComponents" : [
@@ -16448,7 +16448,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -16526,7 +16526,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@componentInstance.0\/@featureInstance.1"
                         }
                       ],
                       "subComponents" : [
@@ -16853,7 +16853,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -17005,7 +17005,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.9\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.9\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -17155,7 +17155,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.12\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.12\/@connectionReference.2"
                     }
                   ],
                   "connectionInstances" : [
@@ -17303,7 +17303,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.7"
                 },
                 {
                   "type" : "Component",
@@ -17415,7 +17415,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -17493,7 +17493,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -17571,7 +17571,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -17649,7 +17649,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -17686,7 +17686,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@featureInstance.4"
                     }
                   ],
                   "subComponents" : [
@@ -17800,7 +17800,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -17878,7 +17878,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -17956,7 +17956,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -18034,7 +18034,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -18071,7 +18071,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0\/@featureInstance.4"
                         }
                       ],
                       "subComponents" : [
@@ -18437,7 +18437,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -18589,7 +18589,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.6\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.6\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -18739,7 +18739,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.7\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.7\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -18889,7 +18889,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.8\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.8\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -19039,7 +19039,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.16\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.16\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -19189,7 +19189,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.17\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.17\/@connectionReference.0"
                     }
                   ],
                   "connectionInstances" : [
@@ -19337,7 +19337,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.8"
                 },
                 {
                   "type" : "Component",
@@ -19587,7 +19587,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@componentInstance.9"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@componentInstance.9"
                 }
               ],
               "connections" : [
@@ -19739,7 +19739,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -19889,7 +19889,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.6\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.6\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20039,7 +20039,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.10\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.10\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20189,7 +20189,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.11\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.11\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20339,7 +20339,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.0\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.0\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20489,7 +20489,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.1\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.1\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20639,7 +20639,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.2\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.2\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20789,7 +20789,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.3\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.3\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20939,7 +20939,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.4\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.4\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -21089,7 +21089,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.5\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.5\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -21239,7 +21239,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.6\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.6\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -21389,7 +21389,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.7\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.7\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -21539,7 +21539,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.8\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.8\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -21689,7 +21689,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.9\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.9\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -21839,7 +21839,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.10\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.10\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -21989,7 +21989,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.11\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.11\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -22139,7 +22139,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.12\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.12\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -22289,7 +22289,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.13\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.13\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -22439,7 +22439,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.14\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.14\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -22589,7 +22589,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.15\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.15\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -22739,7 +22739,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.16\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.16\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -22889,7 +22889,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.17\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@connectionInstance.17\/@connectionReference.1"
                 }
               ],
               "connectionInstances" : [
@@ -27941,7 +27941,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5"
             },
             {
               "type" : "Component",
@@ -28188,7 +28188,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.6"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.6"
             },
             {
               "type" : "Component",
@@ -28435,7 +28435,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.7"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.7"
             }
           ],
           "connections" : [
@@ -28587,7 +28587,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -28737,7 +28737,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -28894,7 +28894,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -29044,7 +29044,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -29194,7 +29194,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.5\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -29351,7 +29351,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.6\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -29501,7 +29501,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.8\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.8\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -29638,7 +29638,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -29775,7 +29775,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -29912,7 +29912,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -30049,7 +30049,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -30199,7 +30199,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -30336,7 +30336,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.5\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.5\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -30486,7 +30486,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.6\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.6\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -30623,7 +30623,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.7\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.7\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -30760,7 +30760,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.8\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.8\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -30897,7 +30897,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.9\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.9\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -31047,7 +31047,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.10\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.10\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -31197,7 +31197,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.11\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.11\/@connectionReference.2"
             }
           ],
           "connectionInstances" : [
@@ -33850,7 +33850,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -33929,7 +33929,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -33966,7 +33966,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -34003,7 +34003,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.2"
             }
           ],
           "subComponents" : [
@@ -34076,7 +34076,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -34120,7 +34120,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -34272,7 +34272,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.8\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.8\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -34312,7 +34312,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.2"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.2"
         }
       ],
       "connections" : [
@@ -34464,7 +34464,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -34614,7 +34614,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -34751,7 +34751,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -34888,7 +34888,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -35038,7 +35038,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -35188,7 +35188,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.5\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -35325,7 +35325,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.6\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -35462,7 +35462,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.7\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.7\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -35612,7 +35612,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.8\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.8\/@connectionReference.1"
         }
       ],
       "connectionInstances" : [
@@ -37744,7 +37744,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/Phase-2-UAV-Experimental-Platform-June-hamr\/UAV\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [

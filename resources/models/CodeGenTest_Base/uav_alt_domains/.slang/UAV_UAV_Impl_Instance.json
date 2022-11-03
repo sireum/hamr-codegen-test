@@ -78,7 +78,7 @@
           },
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@featureInstance.0"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@featureInstance.0"
         }
       ],
       "subComponents" : [
@@ -158,7 +158,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -237,7 +237,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.0"
             },
             {
               "type" : "FeatureAccess",
@@ -282,7 +282,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -323,7 +323,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.2"
             },
             {
               "type" : "FeatureEnd",
@@ -364,7 +364,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.3"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.3"
             },
             {
               "type" : "FeatureEnd",
@@ -405,7 +405,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.4"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.4"
             },
             {
               "type" : "FeatureEnd",
@@ -446,7 +446,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.5"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.5"
             }
           ],
           "subComponents" : [
@@ -526,7 +526,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -601,7 +601,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -642,7 +642,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -683,7 +683,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -724,7 +724,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -769,7 +769,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -814,7 +814,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -858,7 +858,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -933,7 +933,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -974,7 +974,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1015,7 +1015,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -1060,7 +1060,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -1105,7 +1105,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.4"
                 }
               ],
               "subComponents" : [
@@ -1149,7 +1149,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.2"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2"
             },
             {
               "type" : "Component",
@@ -1228,7 +1228,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.3\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.3\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1272,7 +1272,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.3"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.3"
             },
             {
               "type" : "Component",
@@ -1451,7 +1451,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.0\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.0\/@featureInstance.0"
                     }
                   ],
                   "subComponents" : [
@@ -1743,7 +1743,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.0"
                 },
                 {
                   "type" : "Component",
@@ -1982,7 +1982,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.1\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.1\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2122,7 +2122,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.1\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.1\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2231,7 +2231,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.1\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.1\/@featureInstance.2"
                     }
                   ],
                   "subComponents" : [
@@ -2523,7 +2523,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.1"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.1"
                 },
                 {
                   "type" : "Component",
@@ -2762,7 +2762,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2902,7 +2902,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -3107,7 +3107,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -3313,7 +3313,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2\/@featureInstance.3"
                     }
                   ],
                   "subComponents" : [
@@ -3605,7 +3605,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.2"
                 },
                 {
                   "type" : "Component",
@@ -3844,7 +3844,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.3\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.3\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -4050,7 +4050,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.3\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.3\/@featureInstance.1"
                     }
                   ],
                   "subComponents" : [
@@ -4342,7 +4342,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@componentInstance.3"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@componentInstance.3"
                 }
               ],
               "connections" : [
@@ -4494,7 +4494,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.0\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.0\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -4644,7 +4644,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.1\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.1\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -4794,7 +4794,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.2\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.2\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -4944,7 +4944,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.3\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.3\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -5094,7 +5094,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.4\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4\/@connectionInstance.4\/@connectionReference.0"
                 }
               ],
               "connectionInstances" : [
@@ -6113,7 +6113,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.4"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.4"
             },
             {
               "type" : "Component",
@@ -6192,7 +6192,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -6360,7 +6360,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.5"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.5"
             }
           ],
           "connections" : [
@@ -6512,7 +6512,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -6669,7 +6669,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -6826,7 +6826,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -6963,7 +6963,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -7100,7 +7100,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -7237,7 +7237,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -7374,7 +7374,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -7511,7 +7511,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -7648,7 +7648,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.5\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.5\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -7785,7 +7785,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.6\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.6\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -7922,7 +7922,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1\/@connectionInstance.7\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.7\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -9218,7 +9218,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -9297,7 +9297,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.0"
             }
           ],
           "subComponents" : [
@@ -9341,7 +9341,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@componentInstance.2"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@componentInstance.2"
         }
       ],
       "connections" : [
@@ -9493,7 +9493,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -9630,7 +9630,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -9767,7 +9767,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -9904,7 +9904,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -10041,7 +10041,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.0"
         }
       ],
       "connectionInstances" : [
@@ -11057,7 +11057,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/uav_alt_domains\/instances\/UAV_UAV_Impl_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [

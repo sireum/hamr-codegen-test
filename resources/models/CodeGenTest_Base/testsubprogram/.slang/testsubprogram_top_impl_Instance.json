@@ -243,7 +243,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -381,7 +381,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -519,7 +519,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -563,7 +563,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -735,7 +735,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -873,7 +873,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1011,7 +1011,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -1055,7 +1055,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -1134,7 +1134,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureAccess",
@@ -1179,7 +1179,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -1223,7 +1223,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2"
             },
             {
               "type" : "Component",
@@ -1302,7 +1302,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1476,7 +1476,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3"
+              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3"
             },
             {
               "type" : "Component",
@@ -1555,7 +1555,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.4\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.4\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1667,7 +1667,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.4"
+              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.4"
             }
           ],
           "connections" : [
@@ -1819,7 +1819,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -2077,7 +2077,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -2155,7 +2155,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0\/@componentInstance.1"
         }
       ],
       "connections" : [
@@ -2228,7 +2228,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/testsubprogram\/instances\/testsubprogram_top_impl_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [

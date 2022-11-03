@@ -177,7 +177,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -214,7 +214,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -344,7 +344,7 @@
                       }
                     }
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.0"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.0"
                 },
                 {
                   "type" : "Flow",
@@ -398,7 +398,7 @@
                       }
                     }
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.1"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.1"
                 }
               ],
               "modes" : [
@@ -623,6 +623,17 @@
                             "ensuresClause" : {
                               "type" : "org.sireum.lang.ast.MethodContract.Claims",
                               "claims" : [
+                              ],
+                              "attr" : {
+                                "type" : "org.sireum.lang.ast.Attr",
+                                "posOpt" : {
+                                  "type" : "None"
+                                }
+                              }
+                            },
+                            "infoFlowsClause" : {
+                              "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                              "flows" : [
                               ],
                               "attr" : {
                                 "type" : "org.sireum.lang.ast.Attr",
@@ -916,6 +927,17 @@
                             "ensuresClause" : {
                               "type" : "org.sireum.lang.ast.MethodContract.Claims",
                               "claims" : [
+                              ],
+                              "attr" : {
+                                "type" : "org.sireum.lang.ast.Attr",
+                                "posOpt" : {
+                                  "type" : "None"
+                                }
+                              }
+                            },
+                            "infoFlowsClause" : {
+                              "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                              "flows" : [
                               ],
                               "attr" : {
                                 "type" : "org.sireum.lang.ast.Attr",
@@ -2567,6 +2589,17 @@
                                     "offset" : 4291,
                                     "length" : 162
                                   }
+                                }
+                              }
+                            },
+                            "infoFlowsClause" : {
+                              "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                              "flows" : [
+                              ],
+                              "attr" : {
+                                "type" : "org.sireum.lang.ast.Attr",
+                                "posOpt" : {
+                                  "type" : "None"
                                 }
                               }
                             },
@@ -5574,7 +5607,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -5715,7 +5748,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -5822,7 +5855,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -5972,7 +6005,7 @@
                       }
                     }
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@flowSpecification.0"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@flowSpecification.0"
                 },
                 {
                   "type" : "Flow",
@@ -6026,7 +6059,7 @@
                   "sink" : {
                     "type" : "None"
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@flowSpecification.1"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@flowSpecification.1"
                 }
               ],
               "modes" : [
@@ -6060,7 +6093,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -6166,7 +6199,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -6273,7 +6306,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -6345,7 +6378,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -6452,7 +6485,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -6489,7 +6522,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.4"
                 }
               ],
               "subComponents" : [
@@ -6639,7 +6672,7 @@
                       }
                     }
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@flowSpecification.0"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@flowSpecification.0"
                 },
                 {
                   "type" : "Flow",
@@ -6713,7 +6746,7 @@
                       }
                     }
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@flowSpecification.1"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@flowSpecification.1"
                 },
                 {
                   "type" : "Flow",
@@ -6787,7 +6820,7 @@
                       }
                     }
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@flowSpecification.2"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@flowSpecification.2"
                 },
                 {
                   "type" : "Flow",
@@ -6841,7 +6874,7 @@
                   "sink" : {
                     "type" : "None"
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@flowSpecification.3"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@flowSpecification.3"
                 }
               ],
               "modes" : [
@@ -13477,7 +13510,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2"
             },
             {
               "type" : "Component",
@@ -13583,7 +13616,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -13655,7 +13688,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -13692,7 +13725,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -13822,7 +13855,7 @@
                   "sink" : {
                     "type" : "None"
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3\/@flowSpecification.0"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3\/@flowSpecification.0"
                 },
                 {
                   "type" : "Flow",
@@ -13876,7 +13909,7 @@
                   "sink" : {
                     "type" : "None"
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3\/@flowSpecification.1"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3\/@flowSpecification.1"
                 },
                 {
                   "type" : "Flow",
@@ -13930,7 +13963,7 @@
                       }
                     }
                   },
-                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3\/@flowSpecification.2"
+                  "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3\/@flowSpecification.2"
                 }
               ],
               "modes" : [
@@ -13964,7 +13997,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.3"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.3"
             }
           ],
           "connections" : [
@@ -14116,7 +14149,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -14266,7 +14299,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -14416,7 +14449,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -14566,7 +14599,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -14716,7 +14749,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -14866,7 +14899,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.5\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.5\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -15016,7 +15049,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.6\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.6\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -16323,7 +16356,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0\/@componentInstance.0"
         }
       ],
       "connections" : [
@@ -16365,7 +16398,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/temp-control-unit-temp-gumbo\/packages\/instances\/TempControlSoftwareSystem_TempControlSoftwareSystem_s_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [
@@ -16563,6 +16596,17 @@
               "ensuresClause" : {
                 "type" : "org.sireum.lang.ast.MethodContract.Claims",
                 "claims" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
                 ],
                 "attr" : {
                   "type" : "org.sireum.lang.ast.Attr",
@@ -16986,6 +17030,17 @@
               "ensuresClause" : {
                 "type" : "org.sireum.lang.ast.MethodContract.Claims",
                 "claims" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
                 ],
                 "attr" : {
                   "type" : "org.sireum.lang.ast.Attr",
@@ -17923,6 +17978,17 @@
               "ensuresClause" : {
                 "type" : "org.sireum.lang.ast.MethodContract.Claims",
                 "claims" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
                 ],
                 "attr" : {
                   "type" : "org.sireum.lang.ast.Attr",
@@ -19168,6 +19234,17 @@
               "ensuresClause" : {
                 "type" : "org.sireum.lang.ast.MethodContract.Claims",
                 "claims" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
                 ],
                 "attr" : {
                   "type" : "org.sireum.lang.ast.Attr",
@@ -22738,6 +22815,17 @@
                   }
                 }
               },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
@@ -24924,6 +25012,17 @@
                   }
                 }
               },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
@@ -25505,6 +25604,17 @@
                   }
                 }
               },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
@@ -25798,6 +25908,17 @@
                   }
                 }
               },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
               "attr" : {
                 "type" : "org.sireum.lang.ast.Attr",
                 "posOpt" : {
@@ -26083,6 +26204,17 @@
               "ensuresClause" : {
                 "type" : "org.sireum.lang.ast.MethodContract.Claims",
                 "claims" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
                 ],
                 "attr" : {
                   "type" : "org.sireum.lang.ast.Attr",
@@ -26506,6 +26638,17 @@
               "ensuresClause" : {
                 "type" : "org.sireum.lang.ast.MethodContract.Claims",
                 "claims" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
                 ],
                 "attr" : {
                   "type" : "org.sireum.lang.ast.Attr",

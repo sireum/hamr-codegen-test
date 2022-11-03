@@ -243,7 +243,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -381,7 +381,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -519,7 +519,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -560,7 +560,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -697,7 +697,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -734,7 +734,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -879,7 +879,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -1051,7 +1051,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1189,7 +1189,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1327,7 +1327,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1368,7 +1368,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1506,7 +1506,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1644,7 +1644,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.5"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1782,7 +1782,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.6"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.6"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1823,7 +1823,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.7"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.7"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1960,7 +1960,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.8"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.8"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2097,7 +2097,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.9"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.9"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2134,7 +2134,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.10"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.10"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2171,7 +2171,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.11"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.11"
                 }
               ],
               "subComponents" : [
@@ -2316,7 +2316,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -2488,7 +2488,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2626,7 +2626,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2764,7 +2764,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2805,7 +2805,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2942,7 +2942,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2979,7 +2979,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -3124,7 +3124,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2"
             }
           ],
           "connections" : [
@@ -3276,7 +3276,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3426,7 +3426,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3576,7 +3576,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3726,7 +3726,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -3876,7 +3876,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4026,7 +4026,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.5\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.5\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4176,7 +4176,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.6\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.6\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4326,7 +4326,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.7\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.7\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4476,7 +4476,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.8\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.8\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4626,7 +4626,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.9\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.9\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4776,7 +4776,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.10\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.10\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -4926,7 +4926,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.11\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.11\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -7138,7 +7138,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0"
         }
       ],
       "connections" : [
@@ -7399,7 +7399,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/Bit_Codec\/instances\/Bit_Codec_Bit_Codec_Sys_Impl_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [

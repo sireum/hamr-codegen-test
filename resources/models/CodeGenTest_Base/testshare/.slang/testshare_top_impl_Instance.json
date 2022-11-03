@@ -282,7 +282,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0"
                 },
                 {
                   "type" : "Component",
@@ -457,7 +457,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.1"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@componentInstance.1"
                 },
                 {
                   "type" : "Component",
@@ -632,7 +632,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.2"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@componentInstance.2"
                 },
                 {
                   "type" : "Component",
@@ -807,7 +807,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@componentInstance.3"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@componentInstance.3"
                 }
               ],
               "connections" : [
@@ -880,7 +880,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -959,7 +959,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1133,7 +1133,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1"
             },
             {
               "type" : "Component",
@@ -1212,7 +1212,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                 }
               ],
               "subComponents" : [
@@ -1386,7 +1386,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2"
             }
           ],
           "connections" : [
@@ -1517,7 +1517,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1646,7 +1646,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -2037,7 +2037,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -2115,7 +2115,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0\/@componentInstance.1"
         }
       ],
       "connections" : [
@@ -2188,7 +2188,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/testshare\/instances\/testshare_top_impl_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [

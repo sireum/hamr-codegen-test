@@ -136,7 +136,7 @@
               ]
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@featureInstance.0"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@featureInstance.0"
         },
         {
           "type" : "FeatureEnd",
@@ -239,7 +239,7 @@
               ]
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@featureInstance.1"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@featureInstance.1"
         },
         {
           "type" : "FeatureEnd",
@@ -342,7 +342,7 @@
               ]
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@featureInstance.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@featureInstance.2"
         },
         {
           "type" : "FeatureEnd",
@@ -445,7 +445,7 @@
               ]
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@featureInstance.3"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@featureInstance.3"
         },
         {
           "type" : "FeatureEnd",
@@ -486,7 +486,7 @@
           },
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@featureInstance.4"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@featureInstance.4"
         }
       ],
       "subComponents" : [
@@ -670,7 +670,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -745,7 +745,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -786,7 +786,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -827,7 +827,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.2"
             },
             {
               "type" : "FeatureEnd",
@@ -868,7 +868,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.3"
             },
             {
               "type" : "FeatureEnd",
@@ -909,7 +909,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.4"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.4"
             },
             {
               "type" : "FeatureEnd",
@@ -1016,7 +1016,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.5"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.5"
             },
             {
               "type" : "FeatureEnd",
@@ -1127,7 +1127,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.6"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.6"
             },
             {
               "type" : "FeatureEnd",
@@ -1238,7 +1238,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.7"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.7"
             },
             {
               "type" : "FeatureEnd",
@@ -1279,7 +1279,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.8"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.8"
             },
             {
               "type" : "FeatureEnd",
@@ -1386,7 +1386,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.9"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.9"
             }
           ],
           "subComponents" : [
@@ -1463,7 +1463,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1504,7 +1504,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1545,7 +1545,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1656,7 +1656,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1697,7 +1697,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1804,7 +1804,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.5"
                 }
               ],
               "subComponents" : [
@@ -1881,7 +1881,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -1922,7 +1922,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -1963,7 +1963,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2074,7 +2074,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2115,7 +2115,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2156,7 +2156,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.5"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2197,7 +2197,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.6"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.6"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2308,7 +2308,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.7"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.7"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -2349,7 +2349,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.8"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.8"
                     }
                   ],
                   "subComponents" : [
@@ -2426,7 +2426,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2467,7 +2467,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2508,7 +2508,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2619,7 +2619,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2660,7 +2660,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2701,7 +2701,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.5"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.5"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2742,7 +2742,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.6"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.6"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2853,7 +2853,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.7"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.7"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -2894,7 +2894,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.8"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.8"
                         }
                       ],
                       "subComponents" : [
@@ -3162,7 +3162,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.0"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.0"
                         },
                         {
                           "type" : "Flow",
@@ -3236,7 +3236,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.1"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.1"
                         },
                         {
                           "type" : "Flow",
@@ -3310,7 +3310,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.2"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.2"
                         },
                         {
                           "type" : "Flow",
@@ -3384,7 +3384,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.3"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.3"
                         },
                         {
                           "type" : "Flow",
@@ -3458,7 +3458,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.4"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.4"
                         },
                         {
                           "type" : "Flow",
@@ -3532,7 +3532,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.5"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.5"
                         },
                         {
                           "type" : "Flow",
@@ -3606,7 +3606,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.6"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0\/@flowSpecification.6"
                         }
                       ],
                       "modes" : [
@@ -3640,7 +3640,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -3792,7 +3792,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -3942,7 +3942,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -4092,7 +4092,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.9\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.9\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -4242,7 +4242,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.10\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.10\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -4392,7 +4392,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.17\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.17\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -4542,7 +4542,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -4692,7 +4692,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -4842,7 +4842,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -4992,7 +4992,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.2"
                     }
                   ],
                   "connectionInstances" : [
@@ -5103,7 +5103,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0"
                 },
                 {
                   "type" : "Component",
@@ -5178,7 +5178,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -5219,7 +5219,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -5260,7 +5260,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -5371,7 +5371,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -5478,7 +5478,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
                     }
                   ],
                   "subComponents" : [
@@ -5555,7 +5555,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -5596,7 +5596,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -5637,7 +5637,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -5748,7 +5748,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -5855,7 +5855,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
                         }
                       ],
                       "subComponents" : [
@@ -6123,7 +6123,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@flowSpecification.0"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@flowSpecification.0"
                         },
                         {
                           "type" : "Flow",
@@ -6197,7 +6197,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@flowSpecification.1"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@flowSpecification.1"
                         },
                         {
                           "type" : "Flow",
@@ -6271,7 +6271,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@flowSpecification.2"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@flowSpecification.2"
                         },
                         {
                           "type" : "Flow",
@@ -6345,7 +6345,7 @@
                               }
                             }
                           },
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@flowSpecification.3"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0\/@flowSpecification.3"
                         }
                       ],
                       "modes" : [
@@ -6379,7 +6379,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -6531,7 +6531,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -6681,7 +6681,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.18\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -6831,7 +6831,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -6981,7 +6981,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -7131,7 +7131,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.2"
                     }
                   ],
                   "connectionInstances" : [
@@ -7242,7 +7242,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.1"
                 },
                 {
                   "type" : "Component",
@@ -7317,7 +7317,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -7358,7 +7358,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -7399,7 +7399,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -7510,7 +7510,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@featureInstance.3"
                     }
                   ],
                   "subComponents" : [
@@ -7587,7 +7587,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -7628,7 +7628,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -7669,7 +7669,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -7780,7 +7780,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.3"
                         }
                       ],
                       "subComponents" : [
@@ -8008,7 +8008,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -8160,7 +8160,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.19\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -8310,7 +8310,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -8467,7 +8467,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -8624,7 +8624,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.0"
                     }
                   ],
                   "connectionInstances" : [
@@ -8735,7 +8735,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@componentInstance.2"
                 }
               ],
               "connections" : [
@@ -8887,7 +8887,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -9037,7 +9037,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -9187,7 +9187,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -9337,7 +9337,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.9\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.9\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -9487,7 +9487,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.10\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.10\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -9637,7 +9637,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.17\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.17\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -9787,7 +9787,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.18\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -9937,7 +9937,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.19\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -10087,7 +10087,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -10237,7 +10237,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -10387,7 +10387,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -10537,7 +10537,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -10687,7 +10687,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@connectionInstance.4\/@connectionReference.1"
                 }
               ],
               "connectionInstances" : [
@@ -12109,7 +12109,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -12184,7 +12184,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -12225,7 +12225,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -12266,7 +12266,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -12373,7 +12373,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -12484,7 +12484,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.4"
                 }
               ],
               "subComponents" : [
@@ -12561,7 +12561,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12602,7 +12602,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12643,7 +12643,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12754,7 +12754,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -12861,7 +12861,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
                     }
                   ],
                   "subComponents" : [
@@ -12938,7 +12938,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -12979,7 +12979,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -13020,7 +13020,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -13131,7 +13131,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -13238,7 +13238,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
                         }
                       ],
                       "subComponents" : [
@@ -13466,7 +13466,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -13618,7 +13618,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.5\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -13768,7 +13768,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.15\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.15\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -13918,7 +13918,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -14068,7 +14068,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -14218,7 +14218,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.2"
                     }
                   ],
                   "connectionInstances" : [
@@ -14329,7 +14329,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0"
                 },
                 {
                   "type" : "Component",
@@ -14404,7 +14404,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -14445,7 +14445,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -14486,7 +14486,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -14597,7 +14597,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -14638,7 +14638,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.4"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -14679,7 +14679,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.5"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -14790,7 +14790,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.6"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.6"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -14831,7 +14831,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.7"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@featureInstance.7"
                     }
                   ],
                   "subComponents" : [
@@ -14908,7 +14908,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -14949,7 +14949,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -14990,7 +14990,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -15101,7 +15101,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.3"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -15142,7 +15142,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.4"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -15183,7 +15183,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.5"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.5"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -15294,7 +15294,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.6"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.6"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -15335,7 +15335,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.7"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0\/@featureInstance.7"
                         }
                       ],
                       "subComponents" : [
@@ -15563,7 +15563,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -15715,7 +15715,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.6\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -15865,7 +15865,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.12\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.12\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -16015,7 +16015,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.13\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.13\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -16165,7 +16165,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.14\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.14\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -16315,7 +16315,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -16465,7 +16465,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -16615,7 +16615,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -16765,7 +16765,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.2"
                     }
                   ],
                   "connectionInstances" : [
@@ -16876,7 +16876,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.1"
                 },
                 {
                   "type" : "Component",
@@ -16951,7 +16951,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -16992,7 +16992,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -17033,7 +17033,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -17144,7 +17144,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@featureInstance.3"
                     }
                   ],
                   "subComponents" : [
@@ -17221,7 +17221,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -17262,7 +17262,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -17303,7 +17303,7 @@
                           },
                           "properties" : [
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0\/@featureInstance.2"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0\/@featureInstance.2"
                         },
                         {
                           "type" : "FeatureEnd",
@@ -17414,7 +17414,7 @@
                               ]
                             }
                           ],
-                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0\/@featureInstance.3"
+                          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0\/@featureInstance.3"
                         }
                       ],
                       "subComponents" : [
@@ -17642,7 +17642,7 @@
                           }
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2\/@componentInstance.0"
                     }
                   ],
                   "connections" : [
@@ -17794,7 +17794,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.16\/@connectionReference.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.16\/@connectionReference.5"
                     },
                     {
                       "type" : "Connection",
@@ -17944,7 +17944,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.2"
                     },
                     {
                       "type" : "Connection",
@@ -18101,7 +18101,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.0"
                     },
                     {
                       "type" : "Connection",
@@ -18258,7 +18258,7 @@
                       ],
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.0"
                     }
                   ],
                   "connectionInstances" : [
@@ -18369,7 +18369,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@componentInstance.2"
                 }
               ],
               "connections" : [
@@ -18521,7 +18521,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.5\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -18671,7 +18671,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.6\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -18821,7 +18821,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.11\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.11\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -18978,7 +18978,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.12\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.12\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -19135,7 +19135,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.13\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.13\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -19285,7 +19285,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.14\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.14\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -19435,7 +19435,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.15\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.15\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -19585,7 +19585,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.16\/@connectionReference.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.16\/@connectionReference.4"
                 },
                 {
                   "type" : "Connection",
@@ -19735,7 +19735,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -19885,7 +19885,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20035,7 +20035,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.2\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20185,7 +20185,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.3\/@connectionReference.1"
                 },
                 {
                   "type" : "Connection",
@@ -20335,7 +20335,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@connectionInstance.4\/@connectionReference.1"
                 }
               ],
               "connectionInstances" : [
@@ -21757,7 +21757,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1"
             }
           ],
           "connections" : [
@@ -21909,7 +21909,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -22059,7 +22059,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -22209,7 +22209,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -22359,7 +22359,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.5\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -22509,7 +22509,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.6\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -22659,7 +22659,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.9\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.9\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -22809,7 +22809,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.10\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.10\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -22959,7 +22959,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.11\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.11\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -23116,7 +23116,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.12\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.12\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -23273,7 +23273,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.13\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.13\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -23437,7 +23437,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.14\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.14\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -23601,7 +23601,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.15\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.15\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -23765,7 +23765,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.16\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.16\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -23929,7 +23929,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.17\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.17\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -24093,7 +24093,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.18\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.3"
             },
             {
               "type" : "Connection",
@@ -24257,7 +24257,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.19\/@connectionReference.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.3"
             }
           ],
           "connectionInstances" : [
@@ -24334,7 +24334,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -24471,7 +24471,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -24574,7 +24574,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.1"
             },
             {
               "type" : "FeatureEnd",
@@ -24677,7 +24677,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.2"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.2"
             },
             {
               "type" : "FeatureEnd",
@@ -24788,7 +24788,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.3"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.3"
             },
             {
               "type" : "FeatureEnd",
@@ -24899,7 +24899,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.4"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.4"
             },
             {
               "type" : "FeatureEnd",
@@ -24940,7 +24940,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.5"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.5"
             },
             {
               "type" : "FeatureEnd",
@@ -25047,7 +25047,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.6"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.6"
             },
             {
               "type" : "FeatureEnd",
@@ -25088,7 +25088,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.7"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.7"
             },
             {
               "type" : "FeatureEnd",
@@ -25129,7 +25129,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.8"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.8"
             },
             {
               "type" : "FeatureEnd",
@@ -25170,7 +25170,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.9"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.9"
             },
             {
               "type" : "FeatureEnd",
@@ -25211,7 +25211,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@featureInstance.10"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@featureInstance.10"
             }
           ],
           "subComponents" : [
@@ -25358,7 +25358,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -25469,7 +25469,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -25510,7 +25510,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.2"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -25617,7 +25617,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.3"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.3"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -25658,7 +25658,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.4"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.4"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -25699,7 +25699,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.5"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.5"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -25740,7 +25740,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.6"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.6"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -25781,7 +25781,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@featureInstance.7"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@featureInstance.7"
                 }
               ],
               "subComponents" : [
@@ -25928,7 +25928,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -26039,7 +26039,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -26080,7 +26080,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -26187,7 +26187,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.3"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -26228,7 +26228,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.4"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -26269,7 +26269,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.5"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.5"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -26310,7 +26310,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.6"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.6"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -26351,7 +26351,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.7"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0\/@featureInstance.7"
                     }
                   ],
                   "subComponents" : [
@@ -26579,7 +26579,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0\/@componentInstance.0"
                 }
               ],
               "connections" : [
@@ -26731,7 +26731,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.5"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.5"
                 },
                 {
                   "type" : "Connection",
@@ -26881,7 +26881,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.5"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.5"
                 },
                 {
                   "type" : "Connection",
@@ -27031,7 +27031,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.5"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.5\/@connectionReference.5"
                 },
                 {
                   "type" : "Connection",
@@ -27181,7 +27181,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.5"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.6\/@connectionReference.5"
                 },
                 {
                   "type" : "Connection",
@@ -27331,7 +27331,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.9\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.9\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -27481,7 +27481,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.10\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.10\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -27631,7 +27631,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.11\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.11\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -27788,7 +27788,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.12\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.12\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -27945,7 +27945,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.13\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.13\/@connectionReference.0"
                 }
               ],
               "connectionInstances" : [
@@ -28056,7 +28056,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -28208,7 +28208,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.4"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.4"
             },
             {
               "type" : "Connection",
@@ -28358,7 +28358,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.4"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.4"
             },
             {
               "type" : "Connection",
@@ -28508,7 +28508,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.4"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.5\/@connectionReference.4"
             },
             {
               "type" : "Connection",
@@ -28658,7 +28658,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.4"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.6\/@connectionReference.4"
             },
             {
               "type" : "Connection",
@@ -28808,7 +28808,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.9\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.9\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -28958,7 +28958,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.10\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.10\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -29108,7 +29108,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.11\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.11\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -29265,7 +29265,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.12\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.12\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -29422,7 +29422,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.13\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.13\/@connectionReference.1"
             }
           ],
           "connectionInstances" : [
@@ -29499,7 +29499,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.2"
         },
         {
           "type" : "Component",
@@ -29574,7 +29574,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -29615,7 +29615,7 @@
               },
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3\/@featureInstance.1"
             }
           ],
           "subComponents" : [
@@ -29692,7 +29692,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -29733,7 +29733,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -29810,7 +29810,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -29851,7 +29851,7 @@
                       },
                       "properties" : [
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                     }
                   ],
                   "subComponents" : [
@@ -30079,7 +30079,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3\/@componentInstance.0\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3\/@componentInstance.0\/@componentInstance.0"
                 }
               ],
               "connections" : [
@@ -30231,7 +30231,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.2"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.2"
                 },
                 {
                   "type" : "Connection",
@@ -30416,7 +30416,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.14\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.14\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -30601,7 +30601,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.15\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.15\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -30786,7 +30786,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.16\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.16\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -30971,7 +30971,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.17\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.17\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -31156,7 +31156,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.18\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.0"
                 },
                 {
                   "type" : "Connection",
@@ -31341,7 +31341,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.19\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.0"
                 }
               ],
               "connectionInstances" : [
@@ -31452,7 +31452,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -31604,7 +31604,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -31789,7 +31789,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.14\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.14\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -31974,7 +31974,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.15\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.15\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -32159,7 +32159,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.16\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.16\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -32344,7 +32344,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.17\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.17\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -32529,7 +32529,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.18\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.1"
             },
             {
               "type" : "Connection",
@@ -32714,7 +32714,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.19\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.1"
             }
           ],
           "connectionInstances" : [
@@ -32791,7 +32791,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.3"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.3"
         },
         {
           "type" : "Component",
@@ -32932,7 +32932,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -33035,7 +33035,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4\/@featureInstance.1"
             }
           ],
           "subComponents" : [
@@ -33178,7 +33178,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -33281,7 +33281,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -33424,7 +33424,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                     },
                     {
                       "type" : "FeatureEnd",
@@ -33527,7 +33527,7 @@
                           ]
                         }
                       ],
-                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                     }
                   ],
                   "subComponents" : [
@@ -33755,7 +33755,7 @@
                       }
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4\/@componentInstance.0\/@componentInstance.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4\/@componentInstance.0\/@componentInstance.0"
                 }
               ],
               "connections" : [
@@ -33907,7 +33907,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.5"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.5"
                 },
                 {
                   "type" : "Connection",
@@ -34057,7 +34057,7 @@
                   ],
                   "properties" : [
                   ],
-                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.20\/@connectionReference.0"
+                  "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.20\/@connectionReference.0"
                 }
               ],
               "connectionInstances" : [
@@ -34168,7 +34168,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -34320,7 +34320,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.4"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.4"
             },
             {
               "type" : "Connection",
@@ -34470,7 +34470,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.20\/@connectionReference.1"
+              "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.20\/@connectionReference.1"
             }
           ],
           "connectionInstances" : [
@@ -34547,7 +34547,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@componentInstance.4"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@componentInstance.4"
         }
       ],
       "connections" : [
@@ -34699,7 +34699,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -34849,7 +34849,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -34999,7 +34999,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.2\/@connectionReference.3"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.2\/@connectionReference.3"
         },
         {
           "type" : "Connection",
@@ -35149,7 +35149,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.3\/@connectionReference.3"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.3\/@connectionReference.3"
         },
         {
           "type" : "Connection",
@@ -35299,7 +35299,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.4\/@connectionReference.3"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.4\/@connectionReference.3"
         },
         {
           "type" : "Connection",
@@ -35449,7 +35449,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.5\/@connectionReference.3"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.5\/@connectionReference.3"
         },
         {
           "type" : "Connection",
@@ -35599,7 +35599,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.6\/@connectionReference.3"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.6\/@connectionReference.3"
         },
         {
           "type" : "Connection",
@@ -35749,7 +35749,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.7\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.7\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -35899,7 +35899,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.8\/@connectionReference.0"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.8\/@connectionReference.0"
         },
         {
           "type" : "Connection",
@@ -36049,7 +36049,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.9\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.9\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -36199,7 +36199,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.10\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.10\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -36349,7 +36349,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.11\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.11\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -36506,7 +36506,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.12\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.12\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -36663,7 +36663,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.13\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.13\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -36848,7 +36848,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.14\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.14\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -37033,7 +37033,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.15\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.15\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -37218,7 +37218,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.16\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.16\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -37403,7 +37403,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.17\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.17\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -37588,7 +37588,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.18\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -37773,7 +37773,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.19\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.2"
         },
         {
           "type" : "Connection",
@@ -37923,7 +37923,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/\/@connectionInstance.20\/@connectionReference.2"
+          "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0\/@connectionInstance.20\/@connectionReference.2"
         }
       ],
       "connectionInstances" : [
@@ -45416,7 +45416,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/isolette\/packages\/instances\/Isolette_isolette_single_sensor_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [

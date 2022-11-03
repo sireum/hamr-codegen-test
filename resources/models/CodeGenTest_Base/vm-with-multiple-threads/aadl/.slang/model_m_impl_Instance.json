@@ -207,7 +207,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -345,7 +345,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.1"
             }
           ],
           "subComponents" : [
@@ -519,7 +519,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -657,7 +657,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -769,7 +769,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -941,7 +941,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1079,7 +1079,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -1160,7 +1160,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1"
             }
           ],
           "connections" : [
@@ -1312,7 +1312,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1462,7 +1462,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -1612,7 +1612,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -1904,7 +1904,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -2076,7 +2076,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.0"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.0"
             },
             {
               "type" : "FeatureEnd",
@@ -2214,7 +2214,7 @@
                   ]
                 }
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@featureInstance.1"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.1"
             }
           ],
           "subComponents" : [
@@ -2388,7 +2388,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -2526,7 +2526,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
                 }
               ],
               "subComponents" : [
@@ -2638,7 +2638,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -2790,7 +2790,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.2"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.2"
             },
             {
               "type" : "Connection",
@@ -2940,7 +2940,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -3051,7 +3051,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -3199,7 +3199,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.2"
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.2"
         },
         {
           "type" : "Component",
@@ -3349,7 +3349,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@componentInstance.3"
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@componentInstance.3"
         }
       ],
       "connections" : [
@@ -3501,7 +3501,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.1"
         },
         {
           "type" : "Connection",
@@ -3651,7 +3651,7 @@
           ],
           "properties" : [
           ],
-          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/\/@connectionInstance.1\/@connectionReference.1"
+          "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.1"
         }
       ],
       "connectionInstances" : [
@@ -4229,7 +4229,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/vm-with-multiple-threads\/packages\/instances\/model_m_impl_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [
