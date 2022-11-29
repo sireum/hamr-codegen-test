@@ -9,13 +9,15 @@ import bc._
 
 object SetPoint_impl {
   def example(): BuildingControl.SetPoint_impl = {
-    return BuildingControl.SetPoint_impl(BuildingControl.Temperature_impl.example(), BuildingControl.Temperature_impl.example())
+    return BuildingControl.SetPoint_impl(
+      low = BuildingControl.Temperature_impl.example(),
+      high = BuildingControl.Temperature_impl.example())
   }
 }
 
 @datatype class SetPoint_impl(
-  low : BuildingControl.Temperature_impl,
-  high : BuildingControl.Temperature_impl) {
+  val low: BuildingControl.Temperature_impl,
+  val high: BuildingControl.Temperature_impl) {
 }
 
 object SetPoint_impl_Payload {

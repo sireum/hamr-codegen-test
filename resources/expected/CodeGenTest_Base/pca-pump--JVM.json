@@ -55,7 +55,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/ICE_Types\/Milliliter_Per_Hour.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.ICE_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Milliliter_Per_Hour {\n  def example(): ICE_Types.Milliliter_Per_Hour = {\n    return ICE_Types.Milliliter_Per_Hour()\n  }\n}\n\n@datatype class Milliliter_Per_Hour() \/\/ type skeleton\n\nobject Milliliter_Per_Hour_Payload {\n  def example(): Milliliter_Per_Hour_Payload = {\n    return Milliliter_Per_Hour_Payload(ICE_Types.Milliliter_Per_Hour.example())\n  }\n}\n\n@datatype class Milliliter_Per_Hour_Payload(value: ICE_Types.Milliliter_Per_Hour) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.ICE_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate ICE_Types::Milliliter_Per_Hour\n\nobject Milliliter_Per_Hour {\n  def example(): ICE_Types.Milliliter_Per_Hour = {\n    return ICE_Types.Milliliter_Per_Hour()\n  }\n}\n\n@datatype class Milliliter_Per_Hour()\n\nobject Milliliter_Per_Hour_Payload {\n  def example(): Milliliter_Per_Hour_Payload = {\n    return Milliliter_Per_Hour_Payload(ICE_Types.Milliliter_Per_Hour.example())\n  }\n}\n\n@datatype class Milliliter_Per_Hour_Payload(value: ICE_Types.Milliliter_Per_Hour) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -67,7 +67,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/ICE_Types\/Milliliter.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.ICE_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Milliliter {\n  def example(): ICE_Types.Milliliter = {\n    return ICE_Types.Milliliter()\n  }\n}\n\n@datatype class Milliliter() \/\/ type skeleton\n\nobject Milliliter_Payload {\n  def example(): Milliliter_Payload = {\n    return Milliliter_Payload(ICE_Types.Milliliter.example())\n  }\n}\n\n@datatype class Milliliter_Payload(value: ICE_Types.Milliliter) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.ICE_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate ICE_Types::Milliliter\n\nobject Milliliter {\n  def example(): ICE_Types.Milliliter = {\n    return ICE_Types.Milliliter()\n  }\n}\n\n@datatype class Milliliter()\n\nobject Milliliter_Payload {\n  def example(): Milliliter_Payload = {\n    return Milliliter_Payload(ICE_Types.Milliliter.example())\n  }\n}\n\n@datatype class Milliliter_Payload(value: ICE_Types.Milliliter) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -79,7 +79,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/ICE_Types\/Minute_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.ICE_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Minute_imp {\n  def example(): ICE_Types.Minute_imp = {\n    return ICE_Types.Minute_imp(Base_Types.Unsigned_16_example())\n  }\n}\n\n@datatype class Minute_imp(\n  value : U16) {\n}\n\nobject Minute_imp_Payload {\n  def example(): Minute_imp_Payload = {\n    return Minute_imp_Payload(ICE_Types.Minute_imp.example())\n  }\n}\n\n@datatype class Minute_imp_Payload(value: ICE_Types.Minute_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.ICE_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Minute_imp {\n  def example(): ICE_Types.Minute_imp = {\n    return ICE_Types.Minute_imp(\n      value = Base_Types.Unsigned_16_example())\n  }\n}\n\n@datatype class Minute_imp(\n  val value: U16) {\n}\n\nobject Minute_imp_Payload {\n  def example(): Minute_imp_Payload = {\n    return Minute_imp_Payload(ICE_Types.Minute_imp.example())\n  }\n}\n\n@datatype class Minute_imp_Payload(value: ICE_Types.Minute_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -91,7 +91,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Drug_Code_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Code_imp {\n  def example(): PCA_Types.Drug_Code_imp = {\n    return PCA_Types.Drug_Code_imp(Base_Types.String_example())\n  }\n}\n\n@datatype class Drug_Code_imp(\n  code : String) {\n}\n\nobject Drug_Code_imp_Payload {\n  def example(): Drug_Code_imp_Payload = {\n    return Drug_Code_imp_Payload(PCA_Types.Drug_Code_imp.example())\n  }\n}\n\n@datatype class Drug_Code_imp_Payload(value: PCA_Types.Drug_Code_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Code_imp {\n  def example(): PCA_Types.Drug_Code_imp = {\n    return PCA_Types.Drug_Code_imp(\n      code = Base_Types.String_example())\n  }\n}\n\n@datatype class Drug_Code_imp(\n  val code: String) {\n}\n\nobject Drug_Code_imp_Payload {\n  def example(): Drug_Code_imp_Payload = {\n    return Drug_Code_imp_Payload(PCA_Types.Drug_Code_imp.example())\n  }\n}\n\n@datatype class Drug_Code_imp_Payload(value: PCA_Types.Drug_Code_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -103,7 +103,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Dose_Rate_Unit_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Dose_Rate_Unit_imp {\n  def example(): PCA_Types.Dose_Rate_Unit_imp = {\n    return PCA_Types.Dose_Rate_Unit_imp(Base_Types.String_example())\n  }\n}\n\n@datatype class Dose_Rate_Unit_imp(\n  value : String) {\n}\n\nobject Dose_Rate_Unit_imp_Payload {\n  def example(): Dose_Rate_Unit_imp_Payload = {\n    return Dose_Rate_Unit_imp_Payload(PCA_Types.Dose_Rate_Unit_imp.example())\n  }\n}\n\n@datatype class Dose_Rate_Unit_imp_Payload(value: PCA_Types.Dose_Rate_Unit_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Dose_Rate_Unit_imp {\n  def example(): PCA_Types.Dose_Rate_Unit_imp = {\n    return PCA_Types.Dose_Rate_Unit_imp(\n      value = Base_Types.String_example())\n  }\n}\n\n@datatype class Dose_Rate_Unit_imp(\n  val value: String) {\n}\n\nobject Dose_Rate_Unit_imp_Payload {\n  def example(): Dose_Rate_Unit_imp_Payload = {\n    return Dose_Rate_Unit_imp_Payload(PCA_Types.Dose_Rate_Unit_imp.example())\n  }\n}\n\n@datatype class Dose_Rate_Unit_imp_Payload(value: PCA_Types.Dose_Rate_Unit_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -115,7 +115,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Infusion_Unit_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Infusion_Unit_imp {\n  def example(): PCA_Types.Infusion_Unit_imp = {\n    return PCA_Types.Infusion_Unit_imp(Base_Types.String_example())\n  }\n}\n\n@datatype class Infusion_Unit_imp(\n  value : String) {\n}\n\nobject Infusion_Unit_imp_Payload {\n  def example(): Infusion_Unit_imp_Payload = {\n    return Infusion_Unit_imp_Payload(PCA_Types.Infusion_Unit_imp.example())\n  }\n}\n\n@datatype class Infusion_Unit_imp_Payload(value: PCA_Types.Infusion_Unit_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Infusion_Unit_imp {\n  def example(): PCA_Types.Infusion_Unit_imp = {\n    return PCA_Types.Infusion_Unit_imp(\n      value = Base_Types.String_example())\n  }\n}\n\n@datatype class Infusion_Unit_imp(\n  val value: String) {\n}\n\nobject Infusion_Unit_imp_Payload {\n  def example(): Infusion_Unit_imp_Payload = {\n    return Infusion_Unit_imp_Payload(PCA_Types.Infusion_Unit_imp.example())\n  }\n}\n\n@datatype class Infusion_Unit_imp_Payload(value: PCA_Types.Infusion_Unit_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -127,7 +127,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Drug_Weight_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Weight_imp {\n  def example(): PCA_Types.Drug_Weight_imp = {\n    return PCA_Types.Drug_Weight_imp(Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Drug_Weight_imp(\n  value : S16) {\n}\n\nobject Drug_Weight_imp_Payload {\n  def example(): Drug_Weight_imp_Payload = {\n    return Drug_Weight_imp_Payload(PCA_Types.Drug_Weight_imp.example())\n  }\n}\n\n@datatype class Drug_Weight_imp_Payload(value: PCA_Types.Drug_Weight_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Weight_imp {\n  def example(): PCA_Types.Drug_Weight_imp = {\n    return PCA_Types.Drug_Weight_imp(\n      value = Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Drug_Weight_imp(\n  val value: S16) {\n}\n\nobject Drug_Weight_imp_Payload {\n  def example(): Drug_Weight_imp_Payload = {\n    return Drug_Weight_imp_Payload(PCA_Types.Drug_Weight_imp.example())\n  }\n}\n\n@datatype class Drug_Weight_imp_Payload(value: PCA_Types.Drug_Weight_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -139,7 +139,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Drug_Concentration_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Concentration_imp {\n  def example(): PCA_Types.Drug_Concentration_imp = {\n    return PCA_Types.Drug_Concentration_imp(Base_Types.Float_32_example())\n  }\n}\n\n@datatype class Drug_Concentration_imp(\n  value : F32) {\n}\n\nobject Drug_Concentration_imp_Payload {\n  def example(): Drug_Concentration_imp_Payload = {\n    return Drug_Concentration_imp_Payload(PCA_Types.Drug_Concentration_imp.example())\n  }\n}\n\n@datatype class Drug_Concentration_imp_Payload(value: PCA_Types.Drug_Concentration_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Concentration_imp {\n  def example(): PCA_Types.Drug_Concentration_imp = {\n    return PCA_Types.Drug_Concentration_imp(\n      value = Base_Types.Float_32_example())\n  }\n}\n\n@datatype class Drug_Concentration_imp(\n  val value: F32) {\n}\n\nobject Drug_Concentration_imp_Payload {\n  def example(): Drug_Concentration_imp_Payload = {\n    return Drug_Concentration_imp_Payload(PCA_Types.Drug_Concentration_imp.example())\n  }\n}\n\n@datatype class Drug_Concentration_imp_Payload(value: PCA_Types.Drug_Concentration_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -151,7 +151,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Drug_Volume_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Volume_imp {\n  def example(): PCA_Types.Drug_Volume_imp = {\n    return PCA_Types.Drug_Volume_imp(Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Drug_Volume_imp(\n  value : S16) {\n}\n\nobject Drug_Volume_imp_Payload {\n  def example(): Drug_Volume_imp_Payload = {\n    return Drug_Volume_imp_Payload(PCA_Types.Drug_Volume_imp.example())\n  }\n}\n\n@datatype class Drug_Volume_imp_Payload(value: PCA_Types.Drug_Volume_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Volume_imp {\n  def example(): PCA_Types.Drug_Volume_imp = {\n    return PCA_Types.Drug_Volume_imp(\n      value = Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Drug_Volume_imp(\n  val value: S16) {\n}\n\nobject Drug_Volume_imp_Payload {\n  def example(): Drug_Volume_imp_Payload = {\n    return Drug_Volume_imp_Payload(PCA_Types.Drug_Volume_imp.example())\n  }\n}\n\n@datatype class Drug_Volume_imp_Payload(value: PCA_Types.Drug_Volume_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -163,7 +163,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Flow_Rate_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Flow_Rate_imp {\n  def example(): PCA_Types.Flow_Rate_imp = {\n    return PCA_Types.Flow_Rate_imp(Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Flow_Rate_imp(\n  value : S16) {\n}\n\nobject Flow_Rate_imp_Payload {\n  def example(): Flow_Rate_imp_Payload = {\n    return Flow_Rate_imp_Payload(PCA_Types.Flow_Rate_imp.example())\n  }\n}\n\n@datatype class Flow_Rate_imp_Payload(value: PCA_Types.Flow_Rate_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Flow_Rate_imp {\n  def example(): PCA_Types.Flow_Rate_imp = {\n    return PCA_Types.Flow_Rate_imp(\n      value = Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Flow_Rate_imp(\n  val value: S16) {\n}\n\nobject Flow_Rate_imp_Payload {\n  def example(): Flow_Rate_imp_Payload = {\n    return Flow_Rate_imp_Payload(PCA_Types.Flow_Rate_imp.example())\n  }\n}\n\n@datatype class Flow_Rate_imp_Payload(value: PCA_Types.Flow_Rate_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -175,7 +175,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Drug_Record_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Record_imp {\n  def example(): PCA_Types.Drug_Record_imp = {\n    return PCA_Types.Drug_Record_imp(PCA_Types.Drug_Code_imp.example(), Base_Types.String_example(), Base_Types.String_example(), PCA_Types.Dose_Rate_Unit_imp.example(), PCA_Types.Infusion_Unit_imp.example(), PCA_Types.Drug_Weight_imp.example(), PCA_Types.Drug_Concentration_imp.example(), PCA_Types.Drug_Volume_imp.example(), PCA_Types.Drug_Volume_imp.example(), PCA_Types.Drug_Volume_imp.example(), PCA_Types.Drug_Volume_imp.example(), PCA_Types.Drug_Volume_imp.example(), PCA_Types.Flow_Rate_imp.example(), PCA_Types.Flow_Rate_imp.example(), PCA_Types.Flow_Rate_imp.example(), PCA_Types.Flow_Rate_imp.example(), PCA_Types.Flow_Rate_imp.example(), PCA_Types.Drug_Volume_imp.example(), PCA_Types.Flow_Rate_imp.example())\n  }\n}\n\n@datatype class Drug_Record_imp(\n  code : PCA_Types.Drug_Code_imp,\n  name : String,\n  location : String,\n  dose_rate_unit : PCA_Types.Dose_Rate_Unit_imp,\n  vtbi_unit : PCA_Types.Infusion_Unit_imp,\n  amount : PCA_Types.Drug_Weight_imp,\n  concentration : PCA_Types.Drug_Concentration_imp,\n  vtbiLowerSoft : PCA_Types.Drug_Volume_imp,\n  vtbiLowerHard : PCA_Types.Drug_Volume_imp,\n  vtbiTypical : PCA_Types.Drug_Volume_imp,\n  vtbiUpperSoft : PCA_Types.Drug_Volume_imp,\n  vtbiUpperHard : PCA_Types.Drug_Volume_imp,\n  basalRateLowerSoft : PCA_Types.Flow_Rate_imp,\n  basalRateLowerHard : PCA_Types.Flow_Rate_imp,\n  basalRateTypical : PCA_Types.Flow_Rate_imp,\n  basalRateUpperSoft : PCA_Types.Flow_Rate_imp,\n  basalRateUpperHard : PCA_Types.Flow_Rate_imp,\n  bolusTypical : PCA_Types.Drug_Volume_imp,\n  squareBolusRateTypical : PCA_Types.Flow_Rate_imp) {\n}\n\nobject Drug_Record_imp_Payload {\n  def example(): Drug_Record_imp_Payload = {\n    return Drug_Record_imp_Payload(PCA_Types.Drug_Record_imp.example())\n  }\n}\n\n@datatype class Drug_Record_imp_Payload(value: PCA_Types.Drug_Record_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Record_imp {\n  def example(): PCA_Types.Drug_Record_imp = {\n    return PCA_Types.Drug_Record_imp(\n      code = PCA_Types.Drug_Code_imp.example(),\n      name = Base_Types.String_example(),\n      location = Base_Types.String_example(),\n      dose_rate_unit = PCA_Types.Dose_Rate_Unit_imp.example(),\n      vtbi_unit = PCA_Types.Infusion_Unit_imp.example(),\n      amount = PCA_Types.Drug_Weight_imp.example(),\n      concentration = PCA_Types.Drug_Concentration_imp.example(),\n      vtbiLowerSoft = PCA_Types.Drug_Volume_imp.example(),\n      vtbiLowerHard = PCA_Types.Drug_Volume_imp.example(),\n      vtbiTypical = PCA_Types.Drug_Volume_imp.example(),\n      vtbiUpperSoft = PCA_Types.Drug_Volume_imp.example(),\n      vtbiUpperHard = PCA_Types.Drug_Volume_imp.example(),\n      basalRateLowerSoft = PCA_Types.Flow_Rate_imp.example(),\n      basalRateLowerHard = PCA_Types.Flow_Rate_imp.example(),\n      basalRateTypical = PCA_Types.Flow_Rate_imp.example(),\n      basalRateUpperSoft = PCA_Types.Flow_Rate_imp.example(),\n      basalRateUpperHard = PCA_Types.Flow_Rate_imp.example(),\n      bolusTypical = PCA_Types.Drug_Volume_imp.example(),\n      squareBolusRateTypical = PCA_Types.Flow_Rate_imp.example())\n  }\n}\n\n@datatype class Drug_Record_imp(\n  val code: PCA_Types.Drug_Code_imp,\n  val name: String,\n  val location: String,\n  val dose_rate_unit: PCA_Types.Dose_Rate_Unit_imp,\n  val vtbi_unit: PCA_Types.Infusion_Unit_imp,\n  val amount: PCA_Types.Drug_Weight_imp,\n  val concentration: PCA_Types.Drug_Concentration_imp,\n  val vtbiLowerSoft: PCA_Types.Drug_Volume_imp,\n  val vtbiLowerHard: PCA_Types.Drug_Volume_imp,\n  val vtbiTypical: PCA_Types.Drug_Volume_imp,\n  val vtbiUpperSoft: PCA_Types.Drug_Volume_imp,\n  val vtbiUpperHard: PCA_Types.Drug_Volume_imp,\n  val basalRateLowerSoft: PCA_Types.Flow_Rate_imp,\n  val basalRateLowerHard: PCA_Types.Flow_Rate_imp,\n  val basalRateTypical: PCA_Types.Flow_Rate_imp,\n  val basalRateUpperSoft: PCA_Types.Flow_Rate_imp,\n  val basalRateUpperHard: PCA_Types.Flow_Rate_imp,\n  val bolusTypical: PCA_Types.Drug_Volume_imp,\n  val squareBolusRateTypical: PCA_Types.Flow_Rate_imp) {\n}\n\nobject Drug_Record_imp_Payload {\n  def example(): Drug_Record_imp_Payload = {\n    return Drug_Record_imp_Payload(PCA_Types.Drug_Record_imp.example())\n  }\n}\n\n@datatype class Drug_Record_imp_Payload(value: PCA_Types.Drug_Record_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -187,7 +187,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Drug_Library.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Library {\n  def example(): PCA_Types.Drug_Library = {\n    return PCA_Types.Drug_Library(ISZ.create(500, PCA_Types.Drug_Record_imp.example()))\n  }\n}\n\n@datatype class Drug_Library(\n  value : ISZ[PCA_Types.Drug_Record_imp]) {\n  \/\/{  assert (value.size == 500) }\n}\n\nobject Drug_Library_Payload {\n  def example(): Drug_Library_Payload = {\n    return Drug_Library_Payload(PCA_Types.Drug_Library.example())\n  }\n}\n\n@datatype class Drug_Library_Payload(value: PCA_Types.Drug_Library) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Drug_Library {\n  def example(): PCA_Types.Drug_Library = {\n    return PCA_Types.Drug_Library(\n      value = ISZ.create(500, PCA_Types.Drug_Record_imp.example()))\n  }\n}\n\n@datatype class Drug_Library(\n  val value: ISZ[PCA_Types.Drug_Record_imp]) {\n  @spec def correctSize = Invariant(value.size == 500)\n}\n\nobject Drug_Library_Payload {\n  def example(): Drug_Library_Payload = {\n    return Drug_Library_Payload(PCA_Types.Drug_Library.example())\n  }\n}\n\n@datatype class Drug_Library_Payload(value: PCA_Types.Drug_Library) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -199,7 +199,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/BLESS_Types\/Time.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.BLESS_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Time {\n  def example(): BLESS_Types.Time = {\n    return BLESS_Types.Time()\n  }\n}\n\n@datatype class Time() \/\/ type skeleton\n\nobject Time_Payload {\n  def example(): Time_Payload = {\n    return Time_Payload(BLESS_Types.Time.example())\n  }\n}\n\n@datatype class Time_Payload(value: BLESS_Types.Time) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.BLESS_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate BLESS_Types::Time\n\nobject Time {\n  def example(): BLESS_Types.Time = {\n    return BLESS_Types.Time()\n  }\n}\n\n@datatype class Time()\n\nobject Time_Payload {\n  def example(): Time_Payload = {\n    return Time_Payload(BLESS_Types.Time.example())\n  }\n}\n\n@datatype class Time_Payload(value: BLESS_Types.Time) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -211,7 +211,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Fault_Record_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Fault_Record_imp {\n  def example(): PCA_Types.Fault_Record_imp = {\n    return PCA_Types.Fault_Record_imp(PCA_Types.Alarm_Type.byOrdinal(0).get, PCA_Types.Warning_Type.byOrdinal(0).get, Base_Types.Integer_example())\n  }\n}\n\n@datatype class Fault_Record_imp(\n  alarm : PCA_Types.Alarm_Type.Type,\n  warning : PCA_Types.Warning_Type.Type,\n  occurrence_time : Z) {\n}\n\nobject Fault_Record_imp_Payload {\n  def example(): Fault_Record_imp_Payload = {\n    return Fault_Record_imp_Payload(PCA_Types.Fault_Record_imp.example())\n  }\n}\n\n@datatype class Fault_Record_imp_Payload(value: PCA_Types.Fault_Record_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Fault_Record_imp {\n  def example(): PCA_Types.Fault_Record_imp = {\n    return PCA_Types.Fault_Record_imp(\n      alarm = PCA_Types.Alarm_Type.byOrdinal(0).get,\n      warning = PCA_Types.Warning_Type.byOrdinal(0).get,\n      occurrence_time = Base_Types.Integer_example())\n  }\n}\n\n@datatype class Fault_Record_imp(\n  val alarm: PCA_Types.Alarm_Type.Type,\n  val warning: PCA_Types.Warning_Type.Type,\n  val occurrence_time: Z) {\n}\n\nobject Fault_Record_imp_Payload {\n  def example(): Fault_Record_imp_Payload = {\n    return Fault_Record_imp_Payload(PCA_Types.Fault_Record_imp.example())\n  }\n}\n\n@datatype class Fault_Record_imp_Payload(value: PCA_Types.Fault_Record_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -223,7 +223,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Fault_Log.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Fault_Log {\n  def example(): PCA_Types.Fault_Log = {\n    return PCA_Types.Fault_Log(ISZ.create(150, PCA_Types.Fault_Record_imp.example()))\n  }\n}\n\n@datatype class Fault_Log(\n  value : ISZ[PCA_Types.Fault_Record_imp]) {\n  \/\/{  assert (value.size == 150) }\n}\n\nobject Fault_Log_Payload {\n  def example(): Fault_Log_Payload = {\n    return Fault_Log_Payload(PCA_Types.Fault_Log.example())\n  }\n}\n\n@datatype class Fault_Log_Payload(value: PCA_Types.Fault_Log) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Fault_Log {\n  def example(): PCA_Types.Fault_Log = {\n    return PCA_Types.Fault_Log(\n      value = ISZ.create(150, PCA_Types.Fault_Record_imp.example()))\n  }\n}\n\n@datatype class Fault_Log(\n  val value: ISZ[PCA_Types.Fault_Record_imp]) {\n  @spec def correctSize = Invariant(value.size == 150)\n}\n\nobject Fault_Log_Payload {\n  def example(): Fault_Log_Payload = {\n    return Fault_Log_Payload(PCA_Types.Fault_Log.example())\n  }\n}\n\n@datatype class Fault_Log_Payload(value: PCA_Types.Fault_Log) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -235,7 +235,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Start_Patient_Bolus_Event.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Start_Patient_Bolus_Event {\n  def example(): PCA_Types.Start_Patient_Bolus_Event = {\n    return PCA_Types.Start_Patient_Bolus_Event()\n  }\n}\n\n@datatype class Start_Patient_Bolus_Event() \/\/ type skeleton\n\nobject Start_Patient_Bolus_Event_Payload {\n  def example(): Start_Patient_Bolus_Event_Payload = {\n    return Start_Patient_Bolus_Event_Payload(PCA_Types.Start_Patient_Bolus_Event.example())\n  }\n}\n\n@datatype class Start_Patient_Bolus_Event_Payload(value: PCA_Types.Start_Patient_Bolus_Event) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate PCA_Types::Start_Patient_Bolus_Event\n\nobject Start_Patient_Bolus_Event {\n  def example(): PCA_Types.Start_Patient_Bolus_Event = {\n    return PCA_Types.Start_Patient_Bolus_Event()\n  }\n}\n\n@datatype class Start_Patient_Bolus_Event()\n\nobject Start_Patient_Bolus_Event_Payload {\n  def example(): Start_Patient_Bolus_Event_Payload = {\n    return Start_Patient_Bolus_Event_Payload(PCA_Types.Start_Patient_Bolus_Event.example())\n  }\n}\n\n@datatype class Start_Patient_Bolus_Event_Payload(value: PCA_Types.Start_Patient_Bolus_Event) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -247,7 +247,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Stop_Patient_Bolus_Event.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Stop_Patient_Bolus_Event {\n  def example(): PCA_Types.Stop_Patient_Bolus_Event = {\n    return PCA_Types.Stop_Patient_Bolus_Event()\n  }\n}\n\n@datatype class Stop_Patient_Bolus_Event() \/\/ type skeleton\n\nobject Stop_Patient_Bolus_Event_Payload {\n  def example(): Stop_Patient_Bolus_Event_Payload = {\n    return Stop_Patient_Bolus_Event_Payload(PCA_Types.Stop_Patient_Bolus_Event.example())\n  }\n}\n\n@datatype class Stop_Patient_Bolus_Event_Payload(value: PCA_Types.Stop_Patient_Bolus_Event) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate PCA_Types::Stop_Patient_Bolus_Event\n\nobject Stop_Patient_Bolus_Event {\n  def example(): PCA_Types.Stop_Patient_Bolus_Event = {\n    return PCA_Types.Stop_Patient_Bolus_Event()\n  }\n}\n\n@datatype class Stop_Patient_Bolus_Event()\n\nobject Stop_Patient_Bolus_Event_Payload {\n  def example(): Stop_Patient_Bolus_Event_Payload = {\n    return Stop_Patient_Bolus_Event_Payload(PCA_Types.Stop_Patient_Bolus_Event.example())\n  }\n}\n\n@datatype class Stop_Patient_Bolus_Event_Payload(value: PCA_Types.Stop_Patient_Bolus_Event) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -259,7 +259,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Event_Record.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Event_Record {\n  def example(): PCA_Types.Event_Record = {\n    return PCA_Types.Event_Record()\n  }\n}\n\n@datatype class Event_Record() \/\/ type skeleton\n\nobject Event_Record_Payload {\n  def example(): Event_Record_Payload = {\n    return Event_Record_Payload(PCA_Types.Event_Record.example())\n  }\n}\n\n@datatype class Event_Record_Payload(value: PCA_Types.Event_Record) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate PCA_Types::Event_Record\n\nobject Event_Record {\n  def example(): PCA_Types.Event_Record = {\n    return PCA_Types.Event_Record()\n  }\n}\n\n@datatype class Event_Record()\n\nobject Event_Record_Payload {\n  def example(): Event_Record_Payload = {\n    return Event_Record_Payload(PCA_Types.Event_Record.example())\n  }\n}\n\n@datatype class Event_Record_Payload(value: PCA_Types.Event_Record) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -271,7 +271,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Event_Log.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Event_Log {\n  def example(): PCA_Types.Event_Log = {\n    return PCA_Types.Event_Log(ISZ.create(1500, PCA_Types.Event_Record.example()))\n  }\n}\n\n@datatype class Event_Log(\n  value : ISZ[PCA_Types.Event_Record]) {\n  \/\/{  assert (value.size == 1500) }\n}\n\nobject Event_Log_Payload {\n  def example(): Event_Log_Payload = {\n    return Event_Log_Payload(PCA_Types.Event_Log.example())\n  }\n}\n\n@datatype class Event_Log_Payload(value: PCA_Types.Event_Log) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Event_Log {\n  def example(): PCA_Types.Event_Log = {\n    return PCA_Types.Event_Log(\n      value = ISZ.create(1500, PCA_Types.Event_Record.example()))\n  }\n}\n\n@datatype class Event_Log(\n  val value: ISZ[PCA_Types.Event_Record]) {\n  @spec def correctSize = Invariant(value.size == 1500)\n}\n\nobject Event_Log_Payload {\n  def example(): Event_Log_Payload = {\n    return Event_Log_Payload(PCA_Types.Event_Log.example())\n  }\n}\n\n@datatype class Event_Log_Payload(value: PCA_Types.Event_Log) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -283,7 +283,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/Physical_Types\/Fluid_Flow_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.Physical_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Fluid_Flow_imp {\n  def example(): Physical_Types.Fluid_Flow_imp = {\n    return Physical_Types.Fluid_Flow_imp(Base_Types.Float_32_example())\n  }\n}\n\n@datatype class Fluid_Flow_imp(\n  value : F32) {\n}\n\nobject Fluid_Flow_imp_Payload {\n  def example(): Fluid_Flow_imp_Payload = {\n    return Fluid_Flow_imp_Payload(Physical_Types.Fluid_Flow_imp.example())\n  }\n}\n\n@datatype class Fluid_Flow_imp_Payload(value: Physical_Types.Fluid_Flow_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.Physical_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Fluid_Flow_imp {\n  def example(): Physical_Types.Fluid_Flow_imp = {\n    return Physical_Types.Fluid_Flow_imp(\n      value = Base_Types.Float_32_example())\n  }\n}\n\n@datatype class Fluid_Flow_imp(\n  val value: F32) {\n}\n\nobject Fluid_Flow_imp_Payload {\n  def example(): Fluid_Flow_imp_Payload = {\n    return Fluid_Flow_imp_Payload(Physical_Types.Fluid_Flow_imp.example())\n  }\n}\n\n@datatype class Fluid_Flow_imp_Payload(value: Physical_Types.Fluid_Flow_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -307,7 +307,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/Physical_Types\/Voltage_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.Physical_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Voltage_imp {\n  def example(): Physical_Types.Voltage_imp = {\n    return Physical_Types.Voltage_imp(Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Voltage_imp(\n  value : S16) {\n}\n\nobject Voltage_imp_Payload {\n  def example(): Voltage_imp_Payload = {\n    return Voltage_imp_Payload(Physical_Types.Voltage_imp.example())\n  }\n}\n\n@datatype class Voltage_imp_Payload(value: Physical_Types.Voltage_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.Physical_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Voltage_imp {\n  def example(): Physical_Types.Voltage_imp = {\n    return Physical_Types.Voltage_imp(\n      value = Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Voltage_imp(\n  val value: S16) {\n}\n\nobject Voltage_imp_Payload {\n  def example(): Voltage_imp_Payload = {\n    return Voltage_imp_Payload(Physical_Types.Voltage_imp.example())\n  }\n}\n\n@datatype class Voltage_imp_Payload(value: Physical_Types.Voltage_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -319,7 +319,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/Physical_Types\/Current_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.Physical_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Current_imp {\n  def example(): Physical_Types.Current_imp = {\n    return Physical_Types.Current_imp(Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Current_imp(\n  value : S16) {\n}\n\nobject Current_imp_Payload {\n  def example(): Current_imp_Payload = {\n    return Current_imp_Payload(Physical_Types.Current_imp.example())\n  }\n}\n\n@datatype class Current_imp_Payload(value: Physical_Types.Current_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.Physical_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Current_imp {\n  def example(): Physical_Types.Current_imp = {\n    return Physical_Types.Current_imp(\n      value = Base_Types.Integer_16_example())\n  }\n}\n\n@datatype class Current_imp(\n  val value: S16) {\n}\n\nobject Current_imp_Payload {\n  def example(): Current_imp_Payload = {\n    return Current_imp_Payload(Physical_Types.Current_imp.example())\n  }\n}\n\n@datatype class Current_imp_Payload(value: Physical_Types.Current_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -331,7 +331,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Scan_Data_Type.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Scan_Data_Type {\n  def example(): PCA_Types.Scan_Data_Type = {\n    return PCA_Types.Scan_Data_Type()\n  }\n}\n\n@datatype class Scan_Data_Type() \/\/ type skeleton\n\nobject Scan_Data_Type_Payload {\n  def example(): Scan_Data_Type_Payload = {\n    return Scan_Data_Type_Payload(PCA_Types.Scan_Data_Type.example())\n  }\n}\n\n@datatype class Scan_Data_Type_Payload(value: PCA_Types.Scan_Data_Type) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate PCA_Types::Scan_Data_Type\n\nobject Scan_Data_Type {\n  def example(): PCA_Types.Scan_Data_Type = {\n    return PCA_Types.Scan_Data_Type()\n  }\n}\n\n@datatype class Scan_Data_Type()\n\nobject Scan_Data_Type_Payload {\n  def example(): Scan_Data_Type_Payload = {\n    return Scan_Data_Type_Payload(PCA_Types.Scan_Data_Type.example())\n  }\n}\n\n@datatype class Scan_Data_Type_Payload(value: PCA_Types.Scan_Data_Type) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -343,7 +343,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Prescription_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Prescription_imp {\n  def example(): PCA_Types.Prescription_imp = {\n    return PCA_Types.Prescription_imp(Base_Types.String_example(), Base_Types.String_example(), PCA_Types.Drug_Code_imp.example(), PCA_Types.Drug_Concentration_imp.example(), PCA_Types.Drug_Volume_imp.example(), PCA_Types.Flow_Rate_imp.example(), PCA_Types.Flow_Rate_imp.example(), PCA_Types.Drug_Volume_imp.example(), PCA_Types.Drug_Volume_imp.example(), ICE_Types.Minute_imp.example(), Base_Types.String_example(), Base_Types.String_example(), Base_Types.String_example())\n  }\n}\n\n@datatype class Prescription_imp(\n  patient : String,\n  drugName : String,\n  code : PCA_Types.Drug_Code_imp,\n  concentration : PCA_Types.Drug_Concentration_imp,\n  initialVolume : PCA_Types.Drug_Volume_imp,\n  basalFlowRate : PCA_Types.Flow_Rate_imp,\n  patientBolusRate : PCA_Types.Flow_Rate_imp,\n  vtbi : PCA_Types.Drug_Volume_imp,\n  maxDrugPerHour : PCA_Types.Drug_Volume_imp,\n  minimumTimeBetweenBolus : ICE_Types.Minute_imp,\n  dateRxFilled : String,\n  prescriber : String,\n  pharmacist : String) {\n}\n\nobject Prescription_imp_Payload {\n  def example(): Prescription_imp_Payload = {\n    return Prescription_imp_Payload(PCA_Types.Prescription_imp.example())\n  }\n}\n\n@datatype class Prescription_imp_Payload(value: PCA_Types.Prescription_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Prescription_imp {\n  def example(): PCA_Types.Prescription_imp = {\n    return PCA_Types.Prescription_imp(\n      patient = Base_Types.String_example(),\n      drugName = Base_Types.String_example(),\n      code = PCA_Types.Drug_Code_imp.example(),\n      concentration = PCA_Types.Drug_Concentration_imp.example(),\n      initialVolume = PCA_Types.Drug_Volume_imp.example(),\n      basalFlowRate = PCA_Types.Flow_Rate_imp.example(),\n      patientBolusRate = PCA_Types.Flow_Rate_imp.example(),\n      vtbi = PCA_Types.Drug_Volume_imp.example(),\n      maxDrugPerHour = PCA_Types.Drug_Volume_imp.example(),\n      minimumTimeBetweenBolus = ICE_Types.Minute_imp.example(),\n      dateRxFilled = Base_Types.String_example(),\n      prescriber = Base_Types.String_example(),\n      pharmacist = Base_Types.String_example())\n  }\n}\n\n@datatype class Prescription_imp(\n  val patient: String,\n  val drugName: String,\n  val code: PCA_Types.Drug_Code_imp,\n  val concentration: PCA_Types.Drug_Concentration_imp,\n  val initialVolume: PCA_Types.Drug_Volume_imp,\n  val basalFlowRate: PCA_Types.Flow_Rate_imp,\n  val patientBolusRate: PCA_Types.Flow_Rate_imp,\n  val vtbi: PCA_Types.Drug_Volume_imp,\n  val maxDrugPerHour: PCA_Types.Drug_Volume_imp,\n  val minimumTimeBetweenBolus: ICE_Types.Minute_imp,\n  val dateRxFilled: String,\n  val prescriber: String,\n  val pharmacist: String) {\n}\n\nobject Prescription_imp_Payload {\n  def example(): Prescription_imp_Payload = {\n    return Prescription_imp_Payload(PCA_Types.Prescription_imp.example())\n  }\n}\n\n@datatype class Prescription_imp_Payload(value: PCA_Types.Prescription_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -367,7 +367,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Image.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Image {\n  def example(): PCA_Types.Image = {\n    return PCA_Types.Image()\n  }\n}\n\n@datatype class Image() \/\/ type skeleton\n\nobject Image_Payload {\n  def example(): Image_Payload = {\n    return Image_Payload(PCA_Types.Image.example())\n  }\n}\n\n@datatype class Image_Payload(value: PCA_Types.Image) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate PCA_Types::Image\n\nobject Image {\n  def example(): PCA_Types.Image = {\n    return PCA_Types.Image()\n  }\n}\n\n@datatype class Image()\n\nobject Image_Payload {\n  def example(): Image_Payload = {\n    return Image_Payload(PCA_Types.Image.example())\n  }\n}\n\n@datatype class Image_Payload(value: PCA_Types.Image) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -379,7 +379,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/PCA_Types\/Touch.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\nobject Touch {\n  def example(): PCA_Types.Touch = {\n    return PCA_Types.Touch()\n  }\n}\n\n@datatype class Touch() \/\/ type skeleton\n\nobject Touch_Payload {\n  def example(): Touch_Payload = {\n    return Touch_Payload(PCA_Types.Touch.example())\n  }\n}\n\n@datatype class Touch_Payload(value: PCA_Types.Touch) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.PCA_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\n\n\/\/ This is a type skeleton as HAMR doesn't know how to translate PCA_Types::Touch\n\nobject Touch {\n  def example(): PCA_Types.Touch = {\n    return PCA_Types.Touch()\n  }\n}\n\n@datatype class Touch()\n\nobject Touch_Payload {\n  def example(): Touch_Payload = {\n    return Touch_Payload(PCA_Types.Touch.example())\n  }\n}\n\n@datatype class Touch_Payload(value: PCA_Types.Touch) extends art.DataContent\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -391,7 +391,7 @@
         "pca-pump--JVM\/src\/main\/data\/pca_pump__JVM\/Physical_Types\/Fluid_Volume_imp.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.Physical_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Fluid_Volume_imp {\n  def example(): Physical_Types.Fluid_Volume_imp = {\n    return Physical_Types.Fluid_Volume_imp(Base_Types.Float_32_example())\n  }\n}\n\n@datatype class Fluid_Volume_imp(\n  value : F32) {\n}\n\nobject Fluid_Volume_imp_Payload {\n  def example(): Fluid_Volume_imp_Payload = {\n    return Fluid_Volume_imp_Payload(Physical_Types.Fluid_Volume_imp.example())\n  }\n}\n\n@datatype class Fluid_Volume_imp_Payload(value: Physical_Types.Fluid_Volume_imp) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage pca_pump__JVM.Physical_Types\n\nimport org.sireum._\nimport pca_pump__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Fluid_Volume_imp {\n  def example(): Physical_Types.Fluid_Volume_imp = {\n    return Physical_Types.Fluid_Volume_imp(\n      value = Base_Types.Float_32_example())\n  }\n}\n\n@datatype class Fluid_Volume_imp(\n  val value: F32) {\n}\n\nobject Fluid_Volume_imp_Payload {\n  def example(): Fluid_Volume_imp_Payload = {\n    return Fluid_Volume_imp_Payload(Physical_Types.Fluid_Volume_imp.example())\n  }\n}\n\n@datatype class Fluid_Volume_imp_Payload(value: Physical_Types.Fluid_Volume_imp) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,

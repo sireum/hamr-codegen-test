@@ -9,12 +9,13 @@ import TempControlSimpleTemp._
 
 object Temperature_i {
   def example(): TempSensor.Temperature_i = {
-    return TempSensor.Temperature_i(Base_Types.Float_32_example())
+    return TempSensor.Temperature_i(
+      degrees = Base_Types.Float_32_example())
   }
 }
 
 @datatype class Temperature_i(
-  degrees : F32) {
+  val degrees: F32) {
   @spec def AbsZero = Invariant(
     degrees >= -459.67f
   )

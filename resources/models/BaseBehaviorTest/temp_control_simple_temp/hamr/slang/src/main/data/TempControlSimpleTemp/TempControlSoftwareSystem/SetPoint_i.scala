@@ -9,13 +9,15 @@ import TempControlSimpleTemp._
 
 object SetPoint_i {
   def example(): TempControlSoftwareSystem.SetPoint_i = {
-    return TempControlSoftwareSystem.SetPoint_i(TempSensor.Temperature_i.example(), TempSensor.Temperature_i.example())
+    return TempControlSoftwareSystem.SetPoint_i(
+      low = TempSensor.Temperature_i.example(),
+      high = TempSensor.Temperature_i.example())
   }
 }
 
 @datatype class SetPoint_i(
-  low : TempSensor.Temperature_i,
-  high : TempSensor.Temperature_i) {
+  val low: TempSensor.Temperature_i,
+  val high: TempSensor.Temperature_i) {
   @spec def SetPointDataInvariant = Invariant(
     low.degrees >= 50.0f & high.degrees <= 110.0f & low.degrees <= high.degrees
   )

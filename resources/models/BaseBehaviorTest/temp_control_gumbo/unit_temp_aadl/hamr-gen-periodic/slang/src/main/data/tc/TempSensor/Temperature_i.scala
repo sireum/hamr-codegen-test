@@ -9,13 +9,15 @@ import tc._
 
 object Temperature_i {
   def example(): TempSensor.Temperature_i = {
-    return TempSensor.Temperature_i(Base_Types.Float_32_example(), TempSensor.Unit.byOrdinal(0).get)
+    return TempSensor.Temperature_i(
+      degrees = Base_Types.Float_32_example(),
+      unit = TempSensor.Unit.byOrdinal(0).get)
   }
 }
 
 @datatype class Temperature_i(
-  degrees : F32,
-  unit : TempSensor.Unit.Type) {
+  val degrees: F32,
+  val unit: TempSensor.Unit.Type) {
   @spec def AbsZero = Invariant(
     GUMBO_Definitions.GUMBO__Library.atLeastAbsoluteZeroRaw(degrees, unit)
   )

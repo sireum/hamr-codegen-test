@@ -7,7 +7,7 @@
         "uav_alt--JVM\/src\/main\/data\/uav_alt__JVM\/MC\/MISSING_TYPE_Impl.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.MC\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject MISSING_TYPE_Impl {\n  def example(): MC.MISSING_TYPE_Impl = {\n    return MC.MISSING_TYPE_Impl(Base_Types.Integer_32_example())\n  }\n}\n\n@datatype class MISSING_TYPE_Impl(\n  MISSING : S32) {\n}\n\nobject MISSING_TYPE_Impl_Payload {\n  def example(): MISSING_TYPE_Impl_Payload = {\n    return MISSING_TYPE_Impl_Payload(MC.MISSING_TYPE_Impl.example())\n  }\n}\n\n@datatype class MISSING_TYPE_Impl_Payload(value: MC.MISSING_TYPE_Impl) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.MC\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject MISSING_TYPE_Impl {\n  def example(): MC.MISSING_TYPE_Impl = {\n    return MC.MISSING_TYPE_Impl(\n      MISSING = Base_Types.Integer_32_example())\n  }\n}\n\n@datatype class MISSING_TYPE_Impl(\n  val MISSING: S32) {\n}\n\nobject MISSING_TYPE_Impl_Payload {\n  def example(): MISSING_TYPE_Impl_Payload = {\n    return MISSING_TYPE_Impl_Payload(MC.MISSING_TYPE_Impl.example())\n  }\n}\n\n@datatype class MISSING_TYPE_Impl_Payload(value: MC.MISSING_TYPE_Impl) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -19,7 +19,7 @@
         "uav_alt--JVM\/src\/main\/data\/uav_alt__JVM\/SW\/Coordinate_Impl.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Coordinate_Impl {\n  def example(): SW.Coordinate_Impl = {\n    return SW.Coordinate_Impl(Base_Types.Integer_32_example(), Base_Types.Integer_32_example(), Base_Types.Integer_32_example())\n  }\n}\n\n@datatype class Coordinate_Impl(\n  lat : S32,\n  longitude : S32,\n  alt : S32) {\n}\n\nobject Coordinate_Impl_Payload {\n  def example(): Coordinate_Impl_Payload = {\n    return Coordinate_Impl_Payload(SW.Coordinate_Impl.example())\n  }\n}\n\n@datatype class Coordinate_Impl_Payload(value: SW.Coordinate_Impl) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Coordinate_Impl {\n  def example(): SW.Coordinate_Impl = {\n    return SW.Coordinate_Impl(\n      lat = Base_Types.Integer_32_example(),\n      longitude = Base_Types.Integer_32_example(),\n      alt = Base_Types.Integer_32_example())\n  }\n}\n\n@datatype class Coordinate_Impl(\n  val lat: S32,\n  val longitude: S32,\n  val alt: S32) {\n}\n\nobject Coordinate_Impl_Payload {\n  def example(): Coordinate_Impl_Payload = {\n    return Coordinate_Impl_Payload(SW.Coordinate_Impl.example())\n  }\n}\n\n@datatype class Coordinate_Impl_Payload(value: SW.Coordinate_Impl) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -31,7 +31,7 @@
         "uav_alt--JVM\/src\/main\/data\/uav_alt__JVM\/SW\/Map.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Map {\n  def example(): SW.Map = {\n    return SW.Map(ISZ.create(4, SW.Coordinate_Impl.example()))\n  }\n}\n\n@datatype class Map(\n  value : ISZ[SW.Coordinate_Impl]) {\n  \/\/{  assert (value.size == 4) }\n}\n\nobject Map_Payload {\n  def example(): Map_Payload = {\n    return Map_Payload(SW.Map.example())\n  }\n}\n\n@datatype class Map_Payload(value: SW.Map) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Map {\n  def example(): SW.Map = {\n    return SW.Map(\n      value = ISZ.create(4, SW.Coordinate_Impl.example()))\n  }\n}\n\n@datatype class Map(\n  val value: ISZ[SW.Coordinate_Impl]) {\n  @spec def correctSize = Invariant(value.size == 4)\n}\n\nobject Map_Payload {\n  def example(): Map_Payload = {\n    return Map_Payload(SW.Map.example())\n  }\n}\n\n@datatype class Map_Payload(value: SW.Map) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -55,7 +55,7 @@
         "uav_alt--JVM\/src\/main\/data\/uav_alt__JVM\/SW\/Command_Impl.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Command_Impl {\n  def example(): SW.Command_Impl = {\n    return SW.Command_Impl(SW.Map.example(), SW.FlightPattern.byOrdinal(0).get, Base_Types.Boolean_example())\n  }\n}\n\n@datatype class Command_Impl(\n  Map : SW.Map,\n  Pattern : SW.FlightPattern.Type,\n  HMAC : B) {\n}\n\nobject Command_Impl_Payload {\n  def example(): Command_Impl_Payload = {\n    return Command_Impl_Payload(SW.Command_Impl.example())\n  }\n}\n\n@datatype class Command_Impl_Payload(value: SW.Command_Impl) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Command_Impl {\n  def example(): SW.Command_Impl = {\n    return SW.Command_Impl(\n      Map = SW.Map.example(),\n      Pattern = SW.FlightPattern.byOrdinal(0).get,\n      HMAC = Base_Types.Boolean_example())\n  }\n}\n\n@datatype class Command_Impl(\n  val Map: SW.Map,\n  val Pattern: SW.FlightPattern.Type,\n  val HMAC: B) {\n}\n\nobject Command_Impl_Payload {\n  def example(): Command_Impl_Payload = {\n    return Command_Impl_Payload(SW.Command_Impl.example())\n  }\n}\n\n@datatype class Command_Impl_Payload(value: SW.Command_Impl) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -67,7 +67,7 @@
         "uav_alt--JVM\/src\/main\/data\/uav_alt__JVM\/SW\/Mission.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Mission {\n  def example(): SW.Mission = {\n    return SW.Mission(ISZ.create(10, SW.Coordinate_Impl.example()))\n  }\n}\n\n@datatype class Mission(\n  value : ISZ[SW.Coordinate_Impl]) {\n  \/\/{  assert (value.size == 10) }\n}\n\nobject Mission_Payload {\n  def example(): Mission_Payload = {\n    return Mission_Payload(SW.Mission.example())\n  }\n}\n\n@datatype class Mission_Payload(value: SW.Mission) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Mission {\n  def example(): SW.Mission = {\n    return SW.Mission(\n      value = ISZ.create(10, SW.Coordinate_Impl.example()))\n  }\n}\n\n@datatype class Mission(\n  val value: ISZ[SW.Coordinate_Impl]) {\n  @spec def correctSize = Invariant(value.size == 10)\n}\n\nobject Mission_Payload {\n  def example(): Mission_Payload = {\n    return Mission_Payload(SW.Mission.example())\n  }\n}\n\n@datatype class Mission_Payload(value: SW.Mission) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -79,7 +79,7 @@
         "uav_alt--JVM\/src\/main\/data\/uav_alt__JVM\/SW\/MissionWindow.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject MissionWindow {\n  def example(): SW.MissionWindow = {\n    return SW.MissionWindow(ISZ.create(4, SW.Coordinate_Impl.example()))\n  }\n}\n\n@datatype class MissionWindow(\n  value : ISZ[SW.Coordinate_Impl]) {\n  \/\/{  assert (value.size == 4) }\n}\n\nobject MissionWindow_Payload {\n  def example(): MissionWindow_Payload = {\n    return MissionWindow_Payload(SW.MissionWindow.example())\n  }\n}\n\n@datatype class MissionWindow_Payload(value: SW.MissionWindow) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage uav_alt__JVM.SW\n\nimport org.sireum._\nimport uav_alt__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject MissionWindow {\n  def example(): SW.MissionWindow = {\n    return SW.MissionWindow(\n      value = ISZ.create(4, SW.Coordinate_Impl.example()))\n  }\n}\n\n@datatype class MissionWindow(\n  val value: ISZ[SW.Coordinate_Impl]) {\n  @spec def correctSize = Invariant(value.size == 4)\n}\n\nobject MissionWindow_Payload {\n  def example(): MissionWindow_Payload = {\n    return MissionWindow_Payload(SW.MissionWindow.example())\n  }\n}\n\n@datatype class MissionWindow_Payload(value: SW.MissionWindow) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,

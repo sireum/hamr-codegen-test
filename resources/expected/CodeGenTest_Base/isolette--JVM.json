@@ -31,7 +31,7 @@
         "isolette--JVM\/src\/main\/data\/isolette__JVM\/Isolette_Data_Model\/PhysicalTemp_impl.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject PhysicalTemp_impl {\n  def example(): Isolette_Data_Model.PhysicalTemp_impl = {\n    return Isolette_Data_Model.PhysicalTemp_impl(Base_Types.Float_32_example())\n  }\n}\n\n@datatype class PhysicalTemp_impl(\n  value : F32) {\n}\n\nobject PhysicalTemp_impl_Payload {\n  def example(): PhysicalTemp_impl_Payload = {\n    return PhysicalTemp_impl_Payload(Isolette_Data_Model.PhysicalTemp_impl.example())\n  }\n}\n\n@datatype class PhysicalTemp_impl_Payload(value: Isolette_Data_Model.PhysicalTemp_impl) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject PhysicalTemp_impl {\n  def example(): Isolette_Data_Model.PhysicalTemp_impl = {\n    return Isolette_Data_Model.PhysicalTemp_impl(\n      value = Base_Types.Float_32_example())\n  }\n}\n\n@datatype class PhysicalTemp_impl(\n  val value: F32) {\n}\n\nobject PhysicalTemp_impl_Payload {\n  def example(): PhysicalTemp_impl_Payload = {\n    return PhysicalTemp_impl_Payload(Isolette_Data_Model.PhysicalTemp_impl.example())\n  }\n}\n\n@datatype class PhysicalTemp_impl_Payload(value: Isolette_Data_Model.PhysicalTemp_impl) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -55,7 +55,7 @@
         "isolette--JVM\/src\/main\/data\/isolette__JVM\/Isolette_Data_Model\/TempWstatus_impl.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject TempWstatus_impl {\n  def example(): Isolette_Data_Model.TempWstatus_impl = {\n    return Isolette_Data_Model.TempWstatus_impl(Base_Types.Float_32_example(), Isolette_Data_Model.ValueStatus.byOrdinal(0).get)\n  }\n}\n\n@datatype class TempWstatus_impl(\n  value : F32,\n  status : Isolette_Data_Model.ValueStatus.Type) {\n}\n\nobject TempWstatus_impl_Payload {\n  def example(): TempWstatus_impl_Payload = {\n    return TempWstatus_impl_Payload(Isolette_Data_Model.TempWstatus_impl.example())\n  }\n}\n\n@datatype class TempWstatus_impl_Payload(value: Isolette_Data_Model.TempWstatus_impl) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject TempWstatus_impl {\n  def example(): Isolette_Data_Model.TempWstatus_impl = {\n    return Isolette_Data_Model.TempWstatus_impl(\n      value = Base_Types.Float_32_example(),\n      status = Isolette_Data_Model.ValueStatus.byOrdinal(0).get)\n  }\n}\n\n@datatype class TempWstatus_impl(\n  val value: F32,\n  val status: Isolette_Data_Model.ValueStatus.Type) {\n}\n\nobject TempWstatus_impl_Payload {\n  def example(): TempWstatus_impl_Payload = {\n    return TempWstatus_impl_Payload(Isolette_Data_Model.TempWstatus_impl.example())\n  }\n}\n\n@datatype class TempWstatus_impl_Payload(value: Isolette_Data_Model.TempWstatus_impl) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -91,7 +91,7 @@
         "isolette--JVM\/src\/main\/data\/isolette__JVM\/Isolette_Data_Model\/Temp_impl.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Temp_impl {\n  def example(): Isolette_Data_Model.Temp_impl = {\n    return Isolette_Data_Model.Temp_impl(Base_Types.Float_32_example())\n  }\n}\n\n@datatype class Temp_impl(\n  value : F32) {\n}\n\nobject Temp_impl_Payload {\n  def example(): Temp_impl_Payload = {\n    return Temp_impl_Payload(Isolette_Data_Model.Temp_impl.example())\n  }\n}\n\n@datatype class Temp_impl_Payload(value: Isolette_Data_Model.Temp_impl) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Temp_impl {\n  def example(): Isolette_Data_Model.Temp_impl = {\n    return Isolette_Data_Model.Temp_impl(\n      value = Base_Types.Float_32_example())\n  }\n}\n\n@datatype class Temp_impl(\n  val value: F32) {\n}\n\nobject Temp_impl_Payload {\n  def example(): Temp_impl_Payload = {\n    return Temp_impl_Payload(Isolette_Data_Model.Temp_impl.example())\n  }\n}\n\n@datatype class Temp_impl_Payload(value: Isolette_Data_Model.Temp_impl) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -115,7 +115,7 @@
         "isolette--JVM\/src\/main\/data\/isolette__JVM\/Isolette_Data_Model\/Failure_Flag_impl.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Failure_Flag_impl {\n  def example(): Isolette_Data_Model.Failure_Flag_impl = {\n    return Isolette_Data_Model.Failure_Flag_impl(Base_Types.Boolean_example())\n  }\n}\n\n@datatype class Failure_Flag_impl(\n  value : B) {\n}\n\nobject Failure_Flag_impl_Payload {\n  def example(): Failure_Flag_impl_Payload = {\n    return Failure_Flag_impl_Payload(Isolette_Data_Model.Failure_Flag_impl.example())\n  }\n}\n\n@datatype class Failure_Flag_impl_Payload(value: Isolette_Data_Model.Failure_Flag_impl) extends art.DataContent\n",
+          "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Isolette_Data_Model\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject Failure_Flag_impl {\n  def example(): Isolette_Data_Model.Failure_Flag_impl = {\n    return Isolette_Data_Model.Failure_Flag_impl(\n      value = Base_Types.Boolean_example())\n  }\n}\n\n@datatype class Failure_Flag_impl(\n  val value: B) {\n}\n\nobject Failure_Flag_impl_Payload {\n  def example(): Failure_Flag_impl_Payload = {\n    return Failure_Flag_impl_Payload(Isolette_Data_Model.Failure_Flag_impl.example())\n  }\n}\n\n@datatype class Failure_Flag_impl_Payload(value: Isolette_Data_Model.Failure_Flag_impl) extends art.DataContent\n",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
