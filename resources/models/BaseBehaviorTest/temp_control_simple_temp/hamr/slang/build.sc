@@ -1,6 +1,5 @@
 import mill._
 import scalalib._
-import ammonite.ops._
 
 // Example mill build -- the contents of this file will not be overwritten.
 //
@@ -38,19 +37,19 @@ trait SlangEmbeddedModule extends ScalaModule {
   // to get the most recent versions of the following dependencies
 
   // versions.properties key: org.scala-lang%scala-library%
-  val scalaVer = "2.13.8"
+  val scalaVer = "2.13.10"
 
   // versions.properties key: org.scalatest%%scalatest%%
-  val scalaTestVersion = "3.2.10"
+  val scalaTestVersion = "3.2.14"
 
   // versions.properties key: org.sireum%%scalac-plugin%
-  // https://github.com/sireum/scalac-plugin/tree/4.20220817.dcaa6ea
-  val sireumScalacVersion = "4.20220817.dcaa6ea"
+  // https://github.com/sireum/scalac-plugin/tree/4.20221017.4c5e7da
+  val sireumScalacVersion = "4.20221017.4c5e7da"
 
 
   // refer to https://github.com/sireum/kekinian/releases to get the latest
-  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/4.20220822.8603817
-  val kekinianVersion = "4.20220822.8603817"
+  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/4.20221130.c350258
+  val kekinianVersion = "4.20221130.c350258"
 
 
   val inspectorVersion = "0.6-SNAPSHOT"
@@ -63,7 +62,7 @@ trait SlangEmbeddedModule extends ScalaModule {
   override def javacOptions = T { Seq("-source", "1.8", "-target", "1.8", "-encoding", "utf8") }
 
   override def scalacOptions = T { Seq(
-    "-target:jvm-1.8",
+    "-release:8",
     "-deprecation",
     "-Yrangepos",
     "-Ydelambdafy:method",
@@ -142,7 +141,7 @@ trait slangEmbeddedInspectorProject extends slangEmbeddedProject {
       Repositories.sonatype("releases"),
       Repositories.jitpack
     ).run()
-    val pathRefs = files.map(f => PathRef(Path(f)))
+    val pathRefs = files.map(f => PathRef(os.Path(f)))
     Agg(pathRefs : _*)
   }
 }

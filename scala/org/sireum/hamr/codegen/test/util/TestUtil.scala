@@ -16,7 +16,7 @@ object TestUtil {
 
   def getCodegenDir(): Os.Path = {
     return (
-      if (Os.cwd.name.native == "codegen") Os.cwd
+      if (Os.cwd.name.native endsWith "codegen") Os.cwd
       else getSireum().up.up / "hamr" / "codegen")
   }
 

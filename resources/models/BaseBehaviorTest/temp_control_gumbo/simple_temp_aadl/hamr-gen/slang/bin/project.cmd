@@ -48,10 +48,6 @@ exit /B %errorlevel%
 //
 //   To run the unit test cases from within Sireum IVE:
 //     Right click the src/test/bridge and choose "Run ScalaTests in bridge"
-//
-//   NOTE: A ClassNotFoundException may be raised the first time you try to
-//         run the demo or unit tests.  If this occurs simply delete the directory
-//         named 'target' and retry
 
 import org.sireum._
 import org.sireum.project.{Module, Project, Target}
@@ -59,7 +55,7 @@ import org.sireum.project.{Module, Project, Target}
 val home: Os.Path = Os.slashDir.up.canon
 
 val slangModule: Module = Module(
-  id = "TempControlSoftwareSystem_i_Instance",
+  id = "TempControlSoftwareSystem_s_Instance",
   basePath = (home / "src").string,
   subPathOpt = None(),
   deps = ISZ(),

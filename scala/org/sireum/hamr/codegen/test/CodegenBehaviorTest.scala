@@ -19,7 +19,7 @@ trait CodegenBehaviorTest extends TestSuite {
   // ToDo: Jason: What is this for?
   def disablePhantom: B = F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
-  def ignoreUnitTestModes: B = F // ignore unit test modes contained in .hamrTest files
+  def justRegenerate: B = F // ignore test modes
 
   def verbose: B = {
     return ops.ISZOps(testModes).contains(TestMode.verbose)
@@ -71,6 +71,28 @@ trait CodegenBehaviorTest extends TestSuite {
               logikaOptions: Option[String],
               airFile: Option[Os.Path] = None()): Unit = {
 
+    var _testModes = testModes
+    if (justRegenerate) {
+      println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+      println("!!  Ignoring Test Modes : Just Regenerating  !!")
+      println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+      _testModes = ISZ()
+    }
+
+    testOptions.aadlRootDir match {
+      case Some(e) =>
+        val clean = Os.path(e) / "clean.cmd"
+        if (clean.exists) {
+          println(s"Cleaning $testName")
+          val p = proc"$clean $testName".at(clean.up)
+          if (verbose)
+            p.console.runCheck()
+          else p.runCheck()
+        }
+      case _ =>
+    }
+
     // FIXME: Output from individual unit tests were not grouping correctly in intellij's Test Results view.
     //        Seems sleeping for a bit or doing something that takes awhile (e.g. loading AIR) resolves the issue.
     //        See https://youtrack.jetbrains.com/issue/IDEA-66683.  One of the duplicated issues mentioned sleeping
@@ -78,8 +100,8 @@ trait CodegenBehaviorTest extends TestSuite {
     //Thread.sleep(1000)
 
     val model = airFile match {
-      case Some(a) => TestUtil.getModel(Some(a), phantomOptions, Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
-      case _ => TestUtil.getModel(phantomOptions, Os.path(testOptions.aadlRootDir.get), testModes, testName, verbose)
+      case Some(a) => TestUtil.getModel(Some(a), phantomOptions, Os.path(testOptions.aadlRootDir.get), _testModes, testName, verbose)
+      case _ => TestUtil.getModel(phantomOptions, Os.path(testOptions.aadlRootDir.get), _testModes, testName, verbose)
     }
 
     if (testDescription.size > 0) {
@@ -93,7 +115,7 @@ trait CodegenBehaviorTest extends TestSuite {
     cprintln(F, s"Slang Output Directory: ${slangOutputDir.canon.toUri}")
 
     if (verbose) {
-      cprintln(F, s"Test Modes: ${testModes}")
+      cprintln(F, s"Test Modes: ${_testModes}")
     }
 
     val reporter = Reporter.create
@@ -112,7 +134,7 @@ trait CodegenBehaviorTest extends TestSuite {
         testName,
         Os.path(testOptions.slangOutputDir.get),
         testOptions,
-        testModes,
+        _testModes,
         logikaOptions,
         verbose,
         reporter)
@@ -147,19 +169,8 @@ trait CodegenBehaviorTest extends TestSuite {
 
     val testName = props.get("testName").get
 
-    var unitTestModes: ISZ[TestMode.Type] = {
-      val unitTestModes = CodegenBehaviorTest.getUnitTestModes(props.get("testModes"))
-      if(ignoreUnitTestModes && unitTestModes.nonEmpty) {
-        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        println("!!  Ignoring Unit Test Modes  !!")
-        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
-        testModes
-      }
-      else {
-        testModes ++ unitTestModes
-      }
-    }
+    var unitTestModes: ISZ[TestMode.Type] =
+      testModes ++ CodegenBehaviorTest.getUnitTestModes(props.get("testModes"))
 
     if(disablePhantom && ops.ISZOps(unitTestModes).contains((TestMode.phantom))) {
       println("!!!!!!!!!!!!!!!!!!!!!!")
