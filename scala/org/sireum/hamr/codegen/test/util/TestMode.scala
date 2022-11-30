@@ -34,7 +34,8 @@ object TestModeHelper {
     for(k <- ISZ(
       "HamrTestMode", "HamrTestModes",
       "Hamr_Test_Mode", "HAMR_TEST_MODE",
-      "Hamr_Test_Modes", "HAMR_TEST_MODES")) {
+      "Hamr_Test_Modes", "HAMR_TEST_MODES",
+      "TestMode", "TestModes")) {
       Os.envs.get(k) match {
         case Some(list) =>
           for (cand <- ops.StringOps(list).split((c: C) => c == ',')) {
