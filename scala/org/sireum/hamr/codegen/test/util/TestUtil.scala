@@ -10,6 +10,16 @@ import org.sireum.message.Reporter
 
 object TestUtil {
 
+  def getSireum(): Os.Path = {
+    return Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
+  }
+
+  def getCodegenDir(): Os.Path = {
+    return (
+      if (Os.cwd.name.native == "codegen") Os.cwd
+      else getSireum().up.up / "hamr" / "codegen")
+  }
+
   def getRootDirectory(cls: Class[_]): Os.Path = {
     def search(p: Os.Path): Option[(Os.Path, Os.Path)] = {
       assert(p.isDir, p)
@@ -72,8 +82,8 @@ object TestUtil {
 
       println("Generating AIR via phantom ...")
       var p: OsProto.Proc =
-        if(phantomOptions.isEmpty) proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
-        else proc"${CodeGenTest.getSireum().value} hamr phantom -f ${outputFile.canon.string} ${phantomOptions.get}".at(rootAadlDir).env(custEnv)
+        if(phantomOptions.isEmpty) proc"${getSireum().value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
+        else proc"${getSireum().value} hamr phantom -f ${outputFile.canon.string} ${phantomOptions.get}".at(rootAadlDir).env(custEnv)
 
       if (verbose) {
         p = p.console
@@ -134,7 +144,7 @@ object TestUtil {
       return p.run()
     }
 
-    val sireum: Os.Path = CodeGenTest.getSireum()
+    val sireum: Os.Path = getSireum()
     val sireumHome: Os.Path = sireum.up.up
     val os: String = Os.kind match {
       case Os.Kind.Win => "win"
@@ -237,6 +247,18 @@ object TestUtil {
       println("Compiling Slang project via proyek compile ...")
       val proyekResults = vproc(s"${sireum.string} proyek compile --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
       _check(proyekResults, "Proyek compilation failed")
+
+      if (testOps.genSbtMill && keepGoing) {
+        val sbt = getCodegenDir() / "bin" / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
+        if (sbt.exists) {
+          println("Compiling Slang project via sbt ...")
+          val sbtResults = vproc(s"$sbt compile", projectCmd.up.up, ISZ(), None())
+          _check(sbtResults, "sbt compilation failed")
+        } else {
+          eprintln(s"sbt not found at $sbt.")
+          eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
+        }
+      }
 
       if (isLinux(testOps.platform) && keepGoing) {
         println("Compiling C project via script ...")

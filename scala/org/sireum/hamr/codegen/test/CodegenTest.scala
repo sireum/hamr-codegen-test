@@ -343,7 +343,7 @@ object CodeGenTest {
     if (pc.repositories.nonEmpty) add("--repositories", st"""${(pc.repositories, ",")}""".render)
     if (pc.args.nonEmpty) args = args ++ pc.args
 
-    val sireum: Os.Path = CodeGenTest.getSireum()
+    val sireum: Os.Path = TestUtil.getSireum()
 
     args = ISZ[String](sireum.value, "proyek", "ive") ++ args
 
@@ -388,7 +388,7 @@ object CodeGenTest {
 
     //args.foreach(p => println(p))
 
-    val sireum: Os.Path = CodeGenTest.getSireum()
+    val sireum: Os.Path = TestUtil.getSireum()
 
     args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
 
@@ -405,11 +405,6 @@ object CodeGenTest {
 
     return ret
   }
-
-  def getSireum(): Os.Path = {
-    return Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
-  }
-
 
   /*
    * - resources/
