@@ -258,6 +258,16 @@ object TestUtil {
           eprintln(s"sbt not found at $sbt.")
           eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
         }
+
+        val mill = getCodegenDir() / "bin" / "mill"
+        if (mill.exists && keepGoing) {
+          println("Compiling Slang project via mill ...")
+          val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, ISZ(), None())
+          _check(sbtResults, "mill compilation failed")
+        } else {
+          eprintln(s"mill not found at $mill.")
+          eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
+        }
       }
 
       if (isLinux(testOps.platform) && keepGoing) {
