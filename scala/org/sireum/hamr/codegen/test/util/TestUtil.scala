@@ -532,4 +532,6 @@ object TestUtil {
         else None()
     }
   }
+
+  def isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 }

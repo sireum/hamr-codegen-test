@@ -26,6 +26,13 @@ trait CodeGenTest extends TestSuite {
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
+  def ignoreVersionChanges: B = T
+
+  val versionChangesDetected: B = {
+    if (TestUtil.isCI) F
+    else !proc"${TestUtil.getCodegenDir / "bin" / "checkVersions.sc"} no-update".console.run().ok
+  }
+
   // e.g. from command line:
   //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
@@ -96,6 +103,15 @@ trait CodeGenTest extends TestSuite {
               modelUri: Option[String],
               expectedErrorReasons: ISZ[String] // empty if errors not expected
              ): Unit = {
+
+    if (versionChangesDetected) {
+      val codegenVersions = TestUtil.getCodegenDir / "jvm" / "src" / "main" / "resources" / "codegen.versions"
+      if (ignoreVersionChanges) {
+        eprintln(s"Warning: you've chosen to ignore changes in ${codegenVersions.toUri}")
+      } else {
+        assert (F, ": Resolve version changes in ${codegenVersions.toUri}")
+      }
+    }
 
     val rootResultDir = testResources.resultsDir
     val rootExpectedDir = testResources.expectedDir
@@ -343,7 +359,7 @@ object CodeGenTest {
     if (pc.repositories.nonEmpty) add("--repositories", st"""${(pc.repositories, ",")}""".render)
     if (pc.args.nonEmpty) args = args ++ pc.args
 
-    val sireum: Os.Path = TestUtil.getSireum()
+    val sireum: Os.Path = TestUtil.getSireum
 
     args = ISZ[String](sireum.value, "proyek", "ive") ++ args
 
@@ -388,7 +404,7 @@ object CodeGenTest {
 
     //args.foreach(p => println(p))
 
-    val sireum: Os.Path = TestUtil.getSireum()
+    val sireum: Os.Path = TestUtil.getSireum
 
     args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
 
