@@ -8,16 +8,19 @@ import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.ir.{Aadl, JSON}
 import org.sireum.message.Reporter
 
+import java.util.Date
+import scala.util.Random
+
 object TestUtil {
 
-  def getSireum(): Os.Path = {
+  def getSireum: Os.Path = {
     return Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
   }
 
-  def getCodegenDir(): Os.Path = {
+  def getCodegenDir: Os.Path = {
     return (
       if (Os.cwd.name.native endsWith "codegen") Os.cwd
-      else getSireum().up.up / "hamr" / "codegen")
+      else getSireum.up.up / "hamr" / "codegen")
   }
 
   def getRootDirectory(cls: Class[_]): Os.Path = {
@@ -82,8 +85,8 @@ object TestUtil {
 
       println("Generating AIR via phantom ...")
       var p: OsProto.Proc =
-        if(phantomOptions.isEmpty) proc"${getSireum().value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
-        else proc"${getSireum().value} hamr phantom -f ${outputFile.canon.string} ${phantomOptions.get}".at(rootAadlDir).env(custEnv)
+        if (phantomOptions.isEmpty) proc"${getSireum.value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
+        else proc"${getSireum.value} hamr phantom -f ${outputFile.canon.string} ${phantomOptions.get}".at(rootAadlDir).env(custEnv)
 
       if (verbose) {
         p = p.console
@@ -133,6 +136,17 @@ object TestUtil {
                          verbose: B,
                          reporter: Reporter): B = {
 
+    val onGithub = Os.env("GITHUB_ACTIONS").nonEmpty
+    val rand = new Random(new Date().hashCode())
+
+    def performAction(msg: String): B = {
+      val ret = !onGithub || rand.nextInt() % 2 == 0
+      if (!ret) {
+        println(s"Skipping: $msg")
+      }
+      return ret
+    }
+
     def vproc(commands: String, runInDir: Os.Path, env: ISZ[(String, String)], timeout: Option[Z]): OsProto.Proc.Result = {
       var p = proc"$commands".env(env).at(runInDir)
       if (timeout.nonEmpty) {
@@ -144,7 +158,7 @@ object TestUtil {
       return p.run()
     }
 
-    val sireum: Os.Path = getSireum()
+    val sireum: Os.Path = getSireum
     val sireumHome: Os.Path = sireum.up.up
     val os: String = Os.kind match {
       case Os.Kind.Win => "win"
@@ -207,7 +221,7 @@ object TestUtil {
       keepGoing = check(testName, results, failMsg)
     }
 
-    if (shouldTipe(testOps, testModes) && keepGoing) {
+    if (shouldTipe(testOps, testModes) && keepGoing && performAction("Tipe")) {
       val projectCmd = fetch("project.cmd")
 
       println("Running Tipe on Slang project ...")
@@ -215,7 +229,7 @@ object TestUtil {
       _check(proyekResults, "Proyek tipe failed")
     }
 
-    if (shouldProyekIve(testOps, testModes) && keepGoing) {
+    if (shouldProyekIve(testOps, testModes) && keepGoing && performAction("Proyek IVE")) {
       val projectCmd = fetch("project.cmd")
 
       println("Generating IVE project via proyek ive ...")
@@ -223,7 +237,7 @@ object TestUtil {
       _check(proyekResults, "Proyek ive failed")
     }
 
-    if (shouldTranspile(testOps, testModes) && keepGoing) {
+    if (shouldTranspile(testOps, testModes) && keepGoing && performAction("Transpiling")) {
       if (isLinux(testOps.platform)) {
         val transpileScript = fetch("transpile.cmd")
 
@@ -244,33 +258,40 @@ object TestUtil {
     if (shouldCompile(testOps.platform, testModes) && keepGoing) {
       val projectCmd = fetch("project.cmd")
 
-      println("Compiling Slang project via proyek compile ...")
-      val proyekResults = vproc(s"${sireum.string} proyek compile --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
-      _check(proyekResults, "Proyek compilation failed")
+      if (performAction("Proyek compile")) {
+        println("Compiling Slang project via proyek compile ...")
+        val proyekResults = vproc(s"${sireum.string} proyek compile --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+        _check(proyekResults, "Proyek compilation failed")
+      }
 
       if (testOps.genSbtMill && keepGoing) {
-        val sbt = getCodegenDir() / "bin" / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
-        if (sbt.exists) {
-          println("Compiling Slang project via sbt ...")
-          val sbtResults = vproc(s"$sbt compile", projectCmd.up.up, ISZ(), None())
-          _check(sbtResults, "sbt compilation failed")
-        } else {
-          eprintln(s"sbt not found at $sbt.")
-          eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
+
+        if (performAction("sbt compile")) {
+          val sbt = getCodegenDir / "bin" / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
+          if (sbt.exists) {
+            println("Compiling Slang project via sbt ...")
+            val sbtResults = vproc(s"$sbt compile", projectCmd.up.up, ISZ(), None())
+            _check(sbtResults, "sbt compilation failed")
+          } else {
+            eprintln(s"sbt not found at $sbt.")
+            eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
+          }
         }
 
-        val mill = getCodegenDir() / "bin" / "mill"
-        if (mill.exists && keepGoing) {
-          println("Compiling Slang project via mill ...")
-          val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, ISZ(), None())
-          _check(sbtResults, "mill compilation failed")
-        } else {
-          eprintln(s"mill not found at $mill.")
-          eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
+        if (performAction("mill compile")) {
+          val mill = getCodegenDir / "bin" / "mill"
+          if (mill.exists && keepGoing) {
+            println("Compiling Slang project via mill ...")
+            val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, ISZ(), None())
+            _check(sbtResults, "mill compilation failed")
+          } else {
+            eprintln(s"mill not found at $mill.")
+            eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
+          }
         }
       }
 
-      if (isLinux(testOps.platform) && keepGoing) {
+      if (isLinux(testOps.platform) && keepGoing && performAction("C compile")) {
         println("Compiling C project via script ...")
         val compileScript = fetch("compile.cmd")
 
@@ -279,7 +300,7 @@ object TestUtil {
       }
     }
 
-    if (shouldRunLogika(testOps, testModes) && keepGoing) {
+    if (shouldRunLogika(testOps, testModes) && keepGoing && performAction("Logika")) {
       val projectCmd = fetch("project.cmd")
 
       println("Checking Slang project contracts via proyek logika ...")
@@ -291,7 +312,7 @@ object TestUtil {
       if (outDir.exists) outDir.removeAll()
     }
 
-    if (shouldRunGeneratedUnitTests(testOps.platform, testModes) && keepGoing) {
+    if (shouldRunGeneratedUnitTests(testOps.platform, testModes) && keepGoing && performAction("Generated unit tests")) {
       val projectCmd = fetch("project.cmd")
 
       println("Running generated unit tests ...")
@@ -299,7 +320,7 @@ object TestUtil {
       _check(proyekResults, "Proyek test failed")
     }
 
-    if (shouldProve(testOps, testModes)) {
+    if (shouldProve(testOps, testModes) && performAction("Refinement proof")) {
       val proof = Os.path(testOps.camkesOutputDir.get) / "proof" / "smt2_case.smt2"
       val cvc = sireumHome / "bin" / os / (if (Os.isWin) "cvc.exe" else "cvc")
       val z3 = sireumHome / "bin" / os / "z3" / "bin" / (if (Os.isWin) "z3.exe" else "z3")
@@ -367,7 +388,7 @@ object TestUtil {
       }
     }
 
-    if (shouldCamkes(testOps.platform, testModes) && keepGoing) {
+    if (shouldCamkes(testOps.platform, testModes) && keepGoing && performAction("Camkes")) {
       val hasVMs: B = reporter.messages.filter(m => org.sireum.ops.StringOps(m.text)
         .contains("Your project contains VMs")).nonEmpty
 
