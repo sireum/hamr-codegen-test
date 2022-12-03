@@ -237,7 +237,8 @@ object TestUtil {
       _check(proyekResults, "Proyek ive failed")
     }
 
-    if (shouldTranspile(testOps, testModes) && keepGoing && performAction("Transpiling")) {
+    // always transpile if required
+    if (shouldTranspile(testOps, testModes) && keepGoing) {
       if (isLinux(testOps.platform)) {
         val transpileScript = fetch("transpile.cmd")
 

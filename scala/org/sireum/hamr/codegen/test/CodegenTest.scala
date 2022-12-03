@@ -26,10 +26,10 @@ trait CodeGenTest extends TestSuite {
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
-  def ignoreVersionChanges: B = T
+  def ignoreVersionChanges: B = F
 
   val versionChangesDetected: B = {
-    if (TestUtil.isCI) F
+    if (TestUtil.isCI || !(TestUtil.getCodegenDir / ".idea").exists) F
     else !proc"${TestUtil.getCodegenDir / "bin" / "checkVersions.sc"} no-update".console.run().ok
   }
 
@@ -109,7 +109,7 @@ trait CodeGenTest extends TestSuite {
       if (ignoreVersionChanges) {
         eprintln(s"Warning: you've chosen to ignore changes in ${codegenVersions.toUri}")
       } else {
-        assert (F, ": Resolve version changes in ${codegenVersions.toUri}")
+        assert (F, s": Resolve version changes in ${codegenVersions.toUri}")
       }
     }
 
