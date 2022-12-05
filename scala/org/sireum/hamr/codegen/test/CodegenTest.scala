@@ -26,7 +26,9 @@ trait CodeGenTest extends CodegenTestSuite {
 
   def ignoreVersionChanges: B = F
 
-  val versionChangesDetected: B = !proc"${TestUtil.getCodegenDir / "bin" / "checkVersions.sc"} no-update".console.run().ok
+  val versionChangesDetected: B =
+    if (TestUtil.isCI) F
+    else !proc"${TestUtil.getCodegenDir / "bin" / "checkVersions.sc"} no-update".console.run().ok
 
   // e.g. from command line:
   //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
