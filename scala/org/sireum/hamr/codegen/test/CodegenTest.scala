@@ -7,7 +7,7 @@ import org.sireum.hamr.codegen.common.containers.{ProyekIveConfig, TranspilerCon
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil => CommonTestUtil}
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
-import org.sireum.hamr.codegen.test.util.{TestMode, TestModeHelper, TestUtil}
+import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
 import org.sireum.hamr.ir._
 import org.sireum.message._
 import org.sireum.ops.ISZOps
@@ -16,22 +16,17 @@ import org.sireum.test.TestSuite
 /** Can regenerate AIR JSON files via 
 * https://github.com/sireum/osate-plugin/blob/d0015531e9d2039f7f186c4fa7a124521ee664b6/org.sireum.aadl.osate.tests/src/org/sireum/aadl/osate/tests/extras/AirUpdater.java#L46-L54
 */
-trait CodeGenTest extends TestSuite {
+trait CodeGenTest extends CodegenTestSuite {
 
   import CodeGenTest._
 
   def generateExpected: B = F
 
-  def delResultDirIfEqual: B = F
-
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   def ignoreVersionChanges: B = F
 
-  val versionChangesDetected: B = {
-    if (TestUtil.isCI || !(TestUtil.getCodegenDir / ".idea").exists) F
-    else !proc"${TestUtil.getCodegenDir / "bin" / "checkVersions.sc"} no-update".console.run().ok
-  }
+  val versionChangesDetected: B = !proc"${TestUtil.getCodegenDir / "bin" / "checkVersions.sc"} no-update".console.run().ok
 
   // e.g. from command line:
   //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
@@ -180,7 +175,7 @@ trait CodeGenTest extends TestSuite {
 
     var testSuccess = T
     if (!reporter.hasError) {
-      testSuccess &= TestUtil.runAdditionalTasks(testName, slangOutputDir, testOps, testModes, logikaOptions, verbose, reporter)
+      testSuccess &= TestUtil.runAdditionalTasks(testName, slangOutputDir, testOps, testModes, logikaOptions, verbose, this, reporter)
     }
 
     val resultMap = CommonTestUtil.convertToTestResult(results.resources, resultsDir)
@@ -271,8 +266,6 @@ trait CodeGenTest extends TestSuite {
     for (e <- expectedMap.map.entries) {
       (expectedDir / e._1).canon.writeOver(e._2.content)
     }
-
-    if (allEqual && delResultDirIfEqual) rootTestOutputDir.removeAll()
 
     if (modelUri.nonEmpty) {
       println(s"Model URI: ${modelUri.get}")

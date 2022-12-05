@@ -7,6 +7,8 @@ import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenPlatform}
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.ir.{Aadl, JSON}
 import org.sireum.message.Reporter
+import org.sireum.test.TestSuite
+import org.scalatest.BeforeAndAfterAll
 
 import java.util.Date
 import scala.util.Random
@@ -134,6 +136,7 @@ object TestUtil {
                          testModes: ISZ[TestMode.Type],
                          logikaOptions: Option[String],
                          verbose: B,
+                         testSuite: CodegenTestSuite,
                          reporter: Reporter): B = {
 
     val onGithub = Os.env("GITHUB_ACTIONS").nonEmpty
@@ -147,7 +150,7 @@ object TestUtil {
       return ret
     }
 
-    def vproc(commands: String, runInDir: Os.Path, env: ISZ[(String, String)], timeout: Option[Z]): OsProto.Proc.Result = {
+    def vproc(commands: String, runInDir: Os.Path, env: ISZ[(String, String)], timeout: Option[Z], key: String): OsProto.Proc.Result = {
       var p = proc"$commands".env(env).at(runInDir)
       if (timeout.nonEmpty) {
         p = p.timeout(timeout.get)
@@ -155,7 +158,12 @@ object TestUtil {
       if (verbose) {
         p = p.console.redirectErr
       }
-      return p.run()
+
+      val start = System.currentTimeMillis()
+      val results = p.run()
+      testSuite.add(key, System.currentTimeMillis() - start)
+
+      return results
     }
 
     val sireum: Os.Path = getSireum
@@ -225,7 +233,7 @@ object TestUtil {
       val projectCmd = fetch("project.cmd")
 
       println("Running Tipe on Slang project ...")
-      val proyekResults = vproc(s"${sireum.string} proyek tipe --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      val proyekResults = vproc(s"${sireum.string} proyek tipe --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "tipe")
       _check(proyekResults, "Proyek tipe failed")
     }
 
@@ -233,7 +241,7 @@ object TestUtil {
       val projectCmd = fetch("project.cmd")
 
       println("Generating IVE project via proyek ive ...")
-      val proyekResults = vproc(s"${sireum.string} proyek ive ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      val proyekResults = vproc(s"${sireum.string} proyek ive ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "ive")
       _check(proyekResults, "Proyek ive failed")
     }
 
@@ -243,7 +251,7 @@ object TestUtil {
         val transpileScript = fetch("transpile.cmd")
 
         println(s"Transpiling ${testOps.platform} via script ...")
-        val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None())
+        val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None(), "trans-linux")
         _check(cTranspileResults, "C transpiling failed")
 
       } else {
@@ -251,7 +259,7 @@ object TestUtil {
         val transpileScript = fetch("transpile-sel4.cmd")
 
         println(s"Transpiling ${testOps.platform} via script ...")
-        val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None())
+        val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None(), "trans-camkes")
         _check(cTranspileResults, "seL4 transpiling failed")
       }
     }
@@ -261,7 +269,7 @@ object TestUtil {
 
       if (performAction("Proyek compile")) {
         println("Compiling Slang project via proyek compile ...")
-        val proyekResults = vproc(s"${sireum.string} proyek compile --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+        val proyekResults = vproc(s"${sireum.string} proyek compile --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "proyek-compile")
         _check(proyekResults, "Proyek compilation failed")
       }
 
@@ -271,7 +279,7 @@ object TestUtil {
           val sbt = getCodegenDir / "bin" / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
           if (sbt.exists) {
             println("Compiling Slang project via sbt ...")
-            val sbtResults = vproc(s"$sbt compile", projectCmd.up.up, ISZ(), None())
+            val sbtResults = vproc(s"$sbt compile", projectCmd.up.up, ISZ(), None(), "sbt-compile")
             _check(sbtResults, "sbt compilation failed")
           } else {
             eprintln(s"sbt not found at $sbt.")
@@ -283,7 +291,7 @@ object TestUtil {
           val mill = getCodegenDir / "bin" / "mill"
           if (mill.exists && keepGoing) {
             println("Compiling Slang project via mill ...")
-            val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, ISZ(), None())
+            val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, ISZ(), None(), "mill-compile")
             _check(sbtResults, "mill compilation failed")
           } else {
             eprintln(s"mill not found at $mill.")
@@ -296,7 +304,7 @@ object TestUtil {
         println("Compiling C project via script ...")
         val compileScript = fetch("compile.cmd")
 
-        val cCompileResults = vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None())
+        val cCompileResults = vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None(), "c-compile")
         _check(cCompileResults, "C Compilation failed")
       }
     }
@@ -305,7 +313,7 @@ object TestUtil {
       val projectCmd = fetch("project.cmd")
 
       println("Checking Slang project contracts via proyek logika ...")
-      val proyekResults = vproc(st"${sireum.string} proyek logika --all --par ${logikaOptions} ${projectCmd.up.up.string}".render, projectCmd.up.up, ISZ(), None())
+      val proyekResults = vproc(st"${sireum.string} proyek logika --all --par ${logikaOptions} ${projectCmd.up.up.string}".render, projectCmd.up.up, ISZ(), None(), "logika")
       _check(proyekResults, "Proyek logika failed")
 
       // Delete the 'out' directory so that it doesn't pollute directory diffs
@@ -317,7 +325,7 @@ object TestUtil {
       val projectCmd = fetch("project.cmd")
 
       println("Running generated unit tests ...")
-      val proyekResults = vproc(s"${sireum.string} proyek test --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None())
+      val proyekResults = vproc(s"${sireum.string} proyek test --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "gen-unit-test")
       _check(proyekResults, "Proyek test failed")
     }
 
@@ -342,7 +350,7 @@ object TestUtil {
       println("Checking refinement proof ...")
 
       val startTime = extension.Time.currentMillis
-      val pr = vproc(st"${cvc.value} -i --finite-model-find ${proof.value}".render, proof.up, ISZ(), None())
+      val pr = vproc(st"${cvc.value} -i --finite-model-find ${proof.value}".render, proof.up, ISZ(), None(), "refinement-proof")
       val pout: String = pr.out
       val isTimeout: B = pr.exitCode === 6 || pr.exitCode === -101 || pr.exitCode === -100
       if (pout.size == 0 && pr.exitCode != 0 && !isTimeout) {
@@ -429,7 +437,7 @@ object TestUtil {
           //}
 
           println("Running CAmkES build ...")
-          val camkesResults = vproc(s"${runCamkes.value} -n", runCamkes.up, camkesEnv, None())
+          val camkesResults = vproc(s"${runCamkes.value} -n", runCamkes.up, camkesEnv, None(), "camkes")
           _check(camkesResults, "CAmkES build failed")
 
           //val results = Proc(ISZ("simulate"), Os.cwd, Map.empty, T, None(), F, F, F, F, F, timeout, F).at(camkesBuildDir).run()
@@ -533,6 +541,23 @@ object TestUtil {
         else None()
     }
   }
+}
 
-  def isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
+trait CodegenTestSuite extends TestSuite with BeforeAndAfterAll {
+
+  import org.sireum.$internal.CollectionCompat.Converters._
+
+  val taskMap: scala.collection.mutable.Map[String, ISZ[Z]] = new java.util.concurrent.ConcurrentHashMap[String, ISZ[Z]].asInstanceOf[java.util.Map[String, ISZ[Z]]].asScala
+
+  def add(key: String, time: Z): Unit = {
+    taskMap.put(key, taskMap.getOrElse[ISZ[Z]](key, ISZ[Z]()) :+ time)
+  }
+
+  override def afterAll(): Unit = {
+    println("\nTiming Info:")
+    for (task <- taskMap) {
+      val seconds = task._2.elements.foldLeft[Z](0)(_ + _) / 1000
+      println(s"  ${task._1} took ${seconds} seconds (${seconds / 60} min) for ${task._2.size} tests")
+    }
+  }
 }

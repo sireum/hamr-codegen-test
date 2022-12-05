@@ -6,11 +6,11 @@ import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.test.util.Cli.{CodegenHamrPlatform, CodegenOption}
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
-import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
+import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 
-trait CodegenBehaviorTest extends TestSuite {
+trait CodegenBehaviorTest extends CodegenTestSuite {
 
   // Initialize to use only test modes received from environment
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
@@ -137,6 +137,7 @@ trait CodegenBehaviorTest extends TestSuite {
         _testModes,
         logikaOptions,
         verbose,
+        this,
         reporter)
       success = success && !reporter.hasError
     }
