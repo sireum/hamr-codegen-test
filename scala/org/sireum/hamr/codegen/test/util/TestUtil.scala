@@ -545,21 +545,35 @@ object TestUtil {
   def isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 }
 
+
+object CodegenTestSuite {
+  import org.sireum.$internal.CollectionCompat.Converters._
+  val taskMap: scala.collection.mutable.Map[String, Map[String, ISZ[Z]]] = (new java.util.concurrent.ConcurrentHashMap[String, Map[String, ISZ[Z]]]().asInstanceOf[java.util.Map[String, Map[String, ISZ[Z]]]]).asScala
+}
+
 trait CodegenTestSuite extends TestSuite with BeforeAndAfterAll {
 
-  import org.sireum.$internal.CollectionCompat.Converters._
-
-  val taskMap: scala.collection.mutable.Map[String, ISZ[Z]] = new java.util.concurrent.ConcurrentHashMap[String, ISZ[Z]].asInstanceOf[java.util.Map[String, ISZ[Z]]].asScala
-
   def add(key: String, time: Z): Unit = {
-    taskMap.put(key, taskMap.getOrElse[ISZ[Z]](key, ISZ[Z]()) :+ time)
+    var suiteResults: Map[String, ISZ[Z]] = CodegenTestSuite.taskMap.getOrElse(this.suiteName, Map.empty)
+    suiteResults = suiteResults + (key ~> (suiteResults.getOrElse(key, ISZ[Z]()) :+ time))
+    CodegenTestSuite.taskMap.put(this.suiteName, suiteResults)
+  }
+
+  override def beforeAll(): Unit = {
+    CodegenTestSuite.taskMap.remove(this.suiteName)
   }
 
   override def afterAll(): Unit = {
-    println("\nTiming Info:")
-    for (task <- taskMap) {
-      val seconds = task._2.elements.foldLeft[Z](0)(_ + _) / 1000
-      println(s"  ${task._1} took ${seconds} seconds (${seconds / 60} min) for ${task._2.size} tests")
+    println(s"\nTiming Info for ${CodegenTestSuite.taskMap.size} test suites:")
+    var cumulative = Map.empty[String, ISZ[Z]]
+    for (suite <- CodegenTestSuite.taskMap;
+         task <- suite._2.entries) {
+      cumulative = cumulative + (task._1 ~> (cumulative.getOrElse(task._1, ISZ[Z]()) ++ task._2))
+    }
+
+    for(task <- cumulative.entries) {
+      val ms: Z = task._2.elements.foldLeft[Z](0)(_ + _)
+      println(s"  ${task._1} took ${ms / 1000} seconds (${ms / 60000} min) for ${task._2.size} tests")
     }
   }
 }
