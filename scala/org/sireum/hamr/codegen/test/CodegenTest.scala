@@ -31,7 +31,7 @@ trait CodeGenTest extends CodegenTestSuite {
     else !proc"${TestUtil.getCodegenDir / "bin" / "checkVersions.sc"} no-update".console.run().ok
 
   // e.g. from command line:
-  //   HamrTestModes=generated_unit_test,compile,camkes sireum proyek test ...
+  //   testmodes=generated_unit_test,compile,camkes sireum proyek test ...
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
     ISZ(TestMode.codegen)
     //ISZ(TestMode.codegen, TestMode.smt2)

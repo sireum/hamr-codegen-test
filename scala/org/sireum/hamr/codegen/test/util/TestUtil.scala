@@ -72,6 +72,12 @@ object TestUtil {
     return getModel(Some(cands(0)), phantomOptions, rootAadlDir, testModes, testName, verbose)
   }
 
+  val osateDir: Option[Os.Path] = {
+    val d = getCodegenDir / "bin" / (if (Os.isWin) "win" else if (Os.isLinux) "linux" else "mac") / s"osate${if (Os.isMac) ".app" else ""}"
+    if (d.exists) Some(d)
+    else None()
+  }
+
   def getModel(airFile: Option[Os.Path],
                phantomOptions: Option[String],
                rootAadlDir: Os.Path,
@@ -85,10 +91,12 @@ object TestUtil {
       // see https://github.com/sireum/osate-plugin/blob/57785407d84793cf1f8d5926647e4dc75ab197a9/org.sireum.aadl.osate.cli/src/org/sireum/aadl/osate/cli/Phantom.java#L508-L517
       val custEnv = Os.envs.entries :+ (("CHECK_PHANTOM_HAMR_API_COMPATIBILITY", "true"))
 
-      println("Generating AIR via phantom ...")
+      val osateOpt: String = if (osateDir.isEmpty) "" else s"-o ${osateDir.get.value}"
+
+      println(s"Generating AIR via phantom ${ if(osateDir.isEmpty) "" else s"using ${osateDir.get} " }...")
       var p: OsProto.Proc =
-        if (phantomOptions.isEmpty) proc"${getSireum.value} hamr phantom -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
-        else proc"${getSireum.value} hamr phantom -f ${outputFile.canon.string} ${phantomOptions.get}".at(rootAadlDir).env(custEnv)
+        if (phantomOptions.isEmpty) proc"${getSireum.value} hamr phantom ${osateOpt} -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
+        else proc"${getSireum.value} hamr phantom ${osateOpt} -f ${outputFile.canon.string} ${phantomOptions.get}".at(rootAadlDir).env(custEnv)
 
       if (verbose) {
         p = p.console
@@ -547,7 +555,9 @@ object TestUtil {
 
 
 object CodegenTestSuite {
+
   import org.sireum.$internal.CollectionCompat.Converters._
+
   val taskMap: scala.collection.mutable.Map[String, Map[String, ISZ[Z]]] = (new java.util.concurrent.ConcurrentHashMap[String, Map[String, ISZ[Z]]]().asInstanceOf[java.util.Map[String, Map[String, ISZ[Z]]]]).asScala
 }
 
@@ -571,7 +581,7 @@ trait CodegenTestSuite extends TestSuite with BeforeAndAfterAll {
       cumulative = cumulative + (task._1 ~> (cumulative.getOrElse(task._1, ISZ[Z]()) ++ task._2))
     }
 
-    for(task <- cumulative.entries) {
+    for (task <- cumulative.entries) {
       val ms: Z = task._2.elements.foldLeft[Z](0)(_ + _)
       println(s"  ${task._1} took ${ms / 1000} seconds (${ms / 60000} min) for ${task._2.size} tests")
     }

@@ -31,22 +31,16 @@ import org.sireum._
 object TestModeHelper {
   def getEnvTestModes(): ISZ[TestMode.Type] = {
     var ret: ISZ[TestMode.Type] = ISZ()
-    for(k <- ISZ(
-      "HamrTestMode", "HamrTestModes",
-      "Hamr_Test_Mode", "HAMR_TEST_MODE",
-      "Hamr_Test_Modes", "HAMR_TEST_MODES",
-      "TestMode", "TestModes")) {
-      Os.envs.get(k) match {
-        case Some(list) =>
-          for (cand <- ops.StringOps(list).split((c: C) => c == ',')) {
-            TestMode.byName(ops.StringOps(cand).trim) match {
-              case Some(x) => ret = ret :+ x
-              case _ =>
-                cprintln(T, s"$cand is not a valid TestMode.  Found in env var ${k}")
-            }
+    Os.env("testmodes") match {
+      case Some(list) =>
+        for (cand <- ops.StringOps(list).split((c: C) => c == ',')) {
+          TestMode.byName(ops.StringOps(cand).trim) match {
+            case Some(x) => ret = ret :+ x
+            case _ =>
+              cprintln(T, s"$cand is not a valid test mode.  Found in env var testmodes")
           }
-        case _ =>
-      }
+        }
+      case _ =>
     }
     return ret
   }
