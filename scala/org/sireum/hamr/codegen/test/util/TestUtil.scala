@@ -551,6 +551,12 @@ object TestUtil {
   }
 
   def isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
+
+  def inIVE: B =
+    Os.env("__CFBundleIdentifier") match {
+      case Some(string"com.jetbrains.intellij.ce") => T
+      case _ => F
+    }
 }
 
 
