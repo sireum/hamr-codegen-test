@@ -15,6 +15,14 @@ import scala.util.Random
 
 object TestUtil {
 
+  val os: String = Os.kind match {
+    case Os.Kind.Win => "win"
+    case Os.Kind.Linux => "linux"
+    case Os.Kind.LinuxArm => "linux/arm"
+    case Os.Kind.Mac => "mac"
+    case _ => halt("Unsupported OS")
+  }
+
   def getSireum: Os.Path = {
     return Os.cwd / "bin" / (if (Os.isWin) "sireum.bat" else "sireum")
   }
@@ -73,7 +81,7 @@ object TestUtil {
   }
 
   val osateDir: Option[Os.Path] = {
-    val d = getCodegenDir / "bin" / (if (Os.isWin) "win" else if (Os.isLinux) "linux" else "mac") / s"osate${if (Os.isMac) ".app" else ""}"
+    val d = getCodegenDir / "bin" / os / s"osate${if (Os.isMac) ".app" else ""}"
     if (d.exists) Some(d)
     else None()
   }
@@ -176,13 +184,6 @@ object TestUtil {
 
     val sireum: Os.Path = getSireum
     val sireumHome: Os.Path = sireum.up.up
-    val os: String = Os.kind match {
-      case Os.Kind.Win => "win"
-      case Os.Kind.Linux => "linux"
-      case Os.Kind.LinuxArm => "linux/arm"
-      case Os.Kind.Mac => "mac"
-      case _ => halt("Unsupported OS")
-    }
 
     var slangDir: Os.Path = testResultsDir //Os.path(testOps.slangOutputDir.get)
 
@@ -284,7 +285,7 @@ object TestUtil {
       if (testOps.genSbtMill && keepGoing) {
 
         if (performAction("sbt compile")) {
-          val sbt = getCodegenDir / "bin" / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
+          val sbt = getCodegenDir / "bin" / os / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
           if (sbt.exists) {
             println("Compiling Slang project via sbt ...")
             val sbtResults = vproc(s"$sbt compile", projectCmd.up.up, ISZ(), None(), "sbt-compile")
@@ -296,7 +297,7 @@ object TestUtil {
         }
 
         if (performAction("mill compile")) {
-          val mill = getCodegenDir / "bin" / "mill"
+          val mill = getCodegenDir / "bin" / os / "mill"
           if (mill.exists && keepGoing) {
             println("Compiling Slang project via mill ...")
             val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, ISZ(), None(), "mill-compile")
