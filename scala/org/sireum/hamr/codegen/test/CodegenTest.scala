@@ -24,10 +24,6 @@ trait CodeGenTest extends CodegenTestSuite {
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
-  def ignoreVersionChanges: B = F
-
-  val versionChangesDetected: B = TestUtil.inIVE && !proc"${TestUtil.getCodegenDir / "bin" / "checkVersions.sc"} no-update".console.run().ok
-
   // e.g. from command line:
   //   testmodes=generated_unit_test,compile,camkes sireum proyek test ...
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
@@ -98,15 +94,6 @@ trait CodeGenTest extends CodegenTestSuite {
               modelUri: Option[String],
               expectedErrorReasons: ISZ[String] // empty if errors not expected
              ): Unit = {
-
-    if (versionChangesDetected) {
-      val codegenVersions = TestUtil.getCodegenDir / "jvm" / "src" / "main" / "resources" / "codegen.versions"
-      if (ignoreVersionChanges) {
-        eprintln(s"Warning: you've chosen to ignore changes in ${codegenVersions.toUri}")
-      } else {
-        assert (F, s": Resolve version changes in ${codegenVersions.toUri}")
-      }
-    }
 
     val rootResultDir = testResources.resultsDir
     val rootExpectedDir = testResources.expectedDir

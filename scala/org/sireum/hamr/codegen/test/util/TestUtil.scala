@@ -581,7 +581,8 @@ trait CodegenTestSuite extends TestSuite with BeforeAndAfterAll {
   }
 
   override def afterAll(): Unit = {
-    println(s"\nTiming Info for ${CodegenTestSuite.taskMap.size} test suites:")
+    println(s"\nFinished ${this.suiteName}")
+    println(s"\nTiming Info for ${CodegenTestSuite.taskMap.size} test suites: ${CodegenTestSuite.taskMap.keySet}")
     var cumulative = Map.empty[String, ISZ[Z]]
     for (suite <- CodegenTestSuite.taskMap;
          task <- suite._2.entries) {
