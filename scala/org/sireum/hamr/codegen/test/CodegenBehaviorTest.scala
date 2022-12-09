@@ -89,6 +89,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
           if (verbose)
             p.console.runCheck()
           else p.runCheck()
+        } else {
+          eprintln(s"Didn't find a clean script for $testName: $clean")
         }
       case _ =>
     }
