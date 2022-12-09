@@ -101,7 +101,7 @@ object TestUtil {
 
       val osateOpt: String = if (osateDir.isEmpty) "" else s"-o ${osateDir.get.value}"
 
-      println(s"Generating AIR via phantom ${ if(osateDir.isEmpty) "" else s"using ${osateDir.get} " }...")
+      println(s"Generating AIR via phantom ${if (osateDir.isEmpty) "" else s"using ${osateDir.get} "}...")
       var p: OsProto.Proc =
         if (phantomOptions.isEmpty) proc"${getSireum.value} hamr phantom ${osateOpt} -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
         else proc"${getSireum.value} hamr phantom ${osateOpt} -f ${outputFile.canon.string} ${phantomOptions.get}".at(rootAadlDir).env(custEnv)
@@ -197,7 +197,7 @@ object TestUtil {
         while (i > 65) {
           val d = Os.path(s"${C(i)}:")
           if (!d.exists) {
-            cand = d.string;
+            cand = d.string
             i = 65
           }
           i = i - 1
@@ -309,6 +309,7 @@ object TestUtil {
         }
       }
 
+      //noinspection DfaConstantConditions
       if (isLinux(testOps.platform) && keepGoing && performAction("C compile")) {
         println("Compiling C project via script ...")
         val compileScript = fetch("compile.cmd")
@@ -381,12 +382,12 @@ object TestUtil {
         var accum: B = T
 
         def scheck(b: B, errorMsg: String): Unit = {
-          if (!b) cprintln(T, errorMsg);
+          if (!b) cprintln(T, errorMsg)
           accum = accum & b
         }
 
         def scheckH(a: String, b: String): Unit = {
-          if (a != b) cprintln(T, s"Expecting '${a} but received ${b}'");
+          if (a != b) cprintln(T, s"Expecting '${a} but received ${b}'")
           accum = accum & (a == b)
         }
 
