@@ -19,6 +19,17 @@ class CodeGenTest_Base extends CodeGenTest {
     val modelsDir = testResources.modelsDir
 
     {
+      val name = "arrays"
+      val modelDir = modelsDir / name
+      val model = Some(modelDir / ".slang" / "arrays_PC_Sys_Impl_Instance.json")
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.Linux
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform),
+        None(), None(), ISZ())
+    }
+
+    {
       val name = "nested_feature_groups"
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "Nested_Feature_Group_Test_S_impl_Instance.json")
