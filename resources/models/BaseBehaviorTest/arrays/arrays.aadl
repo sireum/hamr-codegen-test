@@ -1,0 +1,76 @@
+package Arrays
+public
+	with Base_Types, Data_Model;
+
+	data Coordinate
+	end Coordinate;
+
+	data implementation Coordinate.Impl
+		subcomponents
+			latitude: data Base_Types::Integer_32;
+			longitude: data Base_Types::Integer_32;
+			altitude: data Base_Types::Integer_32;
+	end Coordinate.Impl;
+
+	data Array_of_Coordinates
+		properties
+			Data_Model::Data_Representation => Array;
+			Data_Model::Base_Type => (classifier (Coordinate.Impl));
+			Data_Model::Dimension => (3);
+	end Array_of_Coordinates;
+
+	data Vector_of_Coordinates
+		properties
+			Data_Model::Data_Representation => Array;
+			Data_Model::Base_Type => (classifier (Base_Types::Integer));
+	end Vector_of_Coordinates;
+		
+	data Array_of_Integers
+		properties
+			Data_Model::Data_Representation => Array;
+			Data_Model::Base_Type => (classifier (Base_Types::Integer));
+			Data_Model::Dimension => (1);
+	end Array_of_Integers;
+	
+
+	system PC_Sys
+	end PC_Sys;
+
+	system implementation PC_Sys.Impl
+		subcomponents
+			proc: process PC_Proc.Impl;
+	end PC_Sys.Impl;
+
+	process PC_Proc
+	end PC_Proc;
+
+	process implementation PC_Proc.Impl
+		subcomponents
+			producer: thread Producer;
+			consumer: thread Consumer;
+		connections
+			c1: port producer.coordinates -> consumer.coordinates;
+			c2: port producer.vector_of_coordinates -> consumer.vector_of_coordinates;
+			c3: port producer.integers -> consumer.integers;
+	end PC_Proc.Impl;
+
+	thread Producer
+		features
+			--to_filter: out event data port Mission;
+			coordinates: out event data port Array_of_Coordinates;
+			vector_of_coordinates: out event data port Vector_of_Coordinates;
+			integers: out event data port Array_of_Integers;
+		properties
+			Thread_Properties::Dispatch_Protocol => Periodic;
+			Timing_Properties::Period => 1000ms;
+	end Producer;
+
+	thread Consumer
+		features
+			coordinates: in event data port Array_of_Coordinates;
+			vector_of_coordinates: in event data port Vector_of_Coordinates;
+			integers: in event data port Array_of_Integers;
+		properties
+			Dispatch_Protocol => Sporadic;
+	end Consumer;
+end Arrays;

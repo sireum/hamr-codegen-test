@@ -1,9 +1,9 @@
 package org.sireum.hamr.codegen.test.behavior
 
 import org.sireum._
+import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodegenBehaviorTest
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
-import TestUtil._
 
 class BaseBehaviorTest extends CodegenBehaviorTest {
 
@@ -45,25 +45,46 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
   val tests = Tests {
 
     { // static approach
-      {
-        val modelDir = modelsDir / getClass.getSimpleName / "building_control_gen_mixed"
-        val description = ""
+      val modelDir = modelsDir / getClass.getSimpleName / "building_control_gen_mixed"
+      val description = ""
 
-        test(
-          testName = modelDir.name,
-          testDescription = description,
-          testOptions = baseOptions(
-            packageName = Some("bc"),
-            slangOutputDir = Some((modelDir / "hamr" / "slang").value),
-            aadlRootDir = Some(modelDir.value),
-            verbose = verbose
-          ),
-          phantomOptions = None(),
-          logikaOptions = logikaOptions,
-          // include test modes from super (e.g. maybe from env var)
-          testModes = testModes :+ TestMode.generated_unit_tests
-        )
-      }
+      test(
+        testName = modelDir.name,
+        testDescription = description,
+        testOptions = baseOptions(
+          packageName = Some("bc"),
+          slangOutputDir = Some((modelDir / "hamr" / "slang").value),
+          aadlRootDir = Some(modelDir.value),
+          verbose = verbose
+        ),
+        phantomOptions = None(),
+        logikaOptions = logikaOptions,
+        // include test modes from super (e.g. maybe from env var)
+        testModes = testModes :+ TestMode.generated_unit_tests
+      )
+    }
+
+    {
+      val modelDir = modelsDir / getClass.getSimpleName / "arrays"
+      val description = ""
+
+      test(
+        testName = s"${modelDir.name}_excludes",
+        testDescription = description,
+        testOptions = baseOptions(
+          platform = CodeGenPlatform.Linux,
+          packageName = Some("a"),
+          slangOutputDir = Some((modelDir / "hamr" / "slang").value),
+          slangOutputCDir = Some((modelDir / "hamr" / "c_excludes").value),
+          aadlRootDir = Some(modelDir.value),
+          verbose = verbose,
+          excludeComponentImpl = T
+        ),
+        phantomOptions = None(),
+        logikaOptions = logikaOptions,
+        testModes = testModes :+ TestMode.compile
+      )
+
     }
 
     { // dynamic approach

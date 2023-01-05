@@ -1,0 +1,3215 @@
+{
+  "type" : "Aadl",
+  "components" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["PC_Sys_Impl_Instance"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/arrays-example\/arrays.aadl"
+            },
+            "beginLine" : 39,
+            "beginColumn" : 2,
+            "endLine" : 42,
+            "endColumn" : 18,
+            "offset" : 914,
+            "length" : 98
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "System"
+      },
+      "classifier" : {
+        "type" : "None"
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["PC_Sys_Impl_Instance", "proc"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/arrays-example\/arrays.aadl"
+                },
+                "beginLine" : 41,
+                "beginColumn" : 4,
+                "endLine" : 41,
+                "endColumn" : 31,
+                "offset" : 967,
+                "length" : 27
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Arrays::PC_Proc.Impl"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["PC_Sys_Impl_Instance", "proc", "producer"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/arrays-example\/arrays.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 4,
+                    "endLine" : 49,
+                    "endColumn" : 30,
+                    "offset" : 1102,
+                    "length" : 26
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Arrays::Producer"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "coordinates"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 60,
+                        "beginColumn" : 4,
+                        "endLine" : 60,
+                        "endColumn" : 58,
+                        "offset" : 1457,
+                        "length" : 54
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Arrays::Array_of_Coordinates"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "coordinates", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Array"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "coordinates", "Data_Model::Base_Type"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 6,
+                            "beginColumn" : 4,
+                            "endLine" : 6,
+                            "endColumn" : 73,
+                            "offset" : 163,
+                            "length" : 69
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ClassifierProp",
+                          "name" : "Arrays::Coordinate.Impl"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "coordinates", "Data_Model::Dimension"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 39,
+                            "beginColumn" : 4,
+                            "endLine" : 39,
+                            "endColumn" : 97,
+                            "offset" : 1668,
+                            "length" : 93
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "3.0",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "vector_of_coordinates"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 61,
+                        "beginColumn" : 4,
+                        "endLine" : 61,
+                        "endColumn" : 69,
+                        "offset" : 1515,
+                        "length" : 65
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Arrays::Vector_of_Coordinates"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "vector_of_coordinates", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Array"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "vector_of_coordinates", "Data_Model::Base_Type"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 6,
+                            "beginColumn" : 4,
+                            "endLine" : 6,
+                            "endColumn" : 73,
+                            "offset" : 163,
+                            "length" : 69
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ClassifierProp",
+                          "name" : "Base_Types::Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "integers"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 4,
+                        "endLine" : 62,
+                        "endColumn" : 52,
+                        "offset" : 1584,
+                        "length" : 48
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Arrays::Array_of_Integers"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "integers", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Array"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "integers", "Data_Model::Base_Type"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 6,
+                            "beginColumn" : 4,
+                            "endLine" : 6,
+                            "endColumn" : 73,
+                            "offset" : 163,
+                            "length" : 69
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ClassifierProp",
+                          "name" : "Base_Types::Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "integers", "Data_Model::Dimension"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 39,
+                            "beginColumn" : 4,
+                            "endLine" : 39,
+                            "endColumn" : 97,
+                            "offset" : 1668,
+                            "length" : 93
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1.0",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 2,
+                        "endLine" : 14,
+                        "endColumn" : 50,
+                        "offset" : 527,
+                        "length" : 97
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 192,
+                        "beginColumn" : 2,
+                        "endLine" : 193,
+                        "endColumn" : 99,
+                        "offset" : 11626,
+                        "length" : 119
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["PC_Sys_Impl_Instance", "proc", "consumer"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/arrays-example\/arrays.aadl"
+                    },
+                    "beginLine" : 50,
+                    "beginColumn" : 4,
+                    "endLine" : 50,
+                    "endColumn" : 30,
+                    "offset" : 1132,
+                    "length" : 26
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Arrays::Consumer"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "coordinates"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 70,
+                        "beginColumn" : 4,
+                        "endLine" : 70,
+                        "endColumn" : 57,
+                        "offset" : 1786,
+                        "length" : 53
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Arrays::Array_of_Coordinates"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "coordinates", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Array"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "coordinates", "Data_Model::Base_Type"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 6,
+                            "beginColumn" : 4,
+                            "endLine" : 6,
+                            "endColumn" : 73,
+                            "offset" : 163,
+                            "length" : 69
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ClassifierProp",
+                          "name" : "Arrays::Coordinate.Impl"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "coordinates", "Data_Model::Dimension"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 39,
+                            "beginColumn" : 4,
+                            "endLine" : 39,
+                            "endColumn" : 97,
+                            "offset" : 1668,
+                            "length" : 93
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "3.0",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "vector_of_coordinates"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 71,
+                        "beginColumn" : 4,
+                        "endLine" : 71,
+                        "endColumn" : 68,
+                        "offset" : 1843,
+                        "length" : 64
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Arrays::Vector_of_Coordinates"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "vector_of_coordinates", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Array"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "vector_of_coordinates", "Data_Model::Base_Type"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 6,
+                            "beginColumn" : 4,
+                            "endLine" : 6,
+                            "endColumn" : 73,
+                            "offset" : 163,
+                            "length" : 69
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ClassifierProp",
+                          "name" : "Base_Types::Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "integers"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 72,
+                        "beginColumn" : 4,
+                        "endLine" : 72,
+                        "endColumn" : 51,
+                        "offset" : 1911,
+                        "length" : 47
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Arrays::Array_of_Integers"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "integers", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Array"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "integers", "Data_Model::Base_Type"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 6,
+                            "beginColumn" : 4,
+                            "endLine" : 6,
+                            "endColumn" : 73,
+                            "offset" : 163,
+                            "length" : 69
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ClassifierProp",
+                          "name" : "Base_Types::Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "integers", "Data_Model::Dimension"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 39,
+                            "beginColumn" : 4,
+                            "endLine" : 39,
+                            "endColumn" : 97,
+                            "offset" : 1668,
+                            "length" : 93
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1.0",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 2,
+                        "endLine" : 14,
+                        "endColumn" : 50,
+                        "offset" : 527,
+                        "length" : 97
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["PC_Sys_Impl_Instance", "proc", "c1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/arrays-example\/arrays.aadl"
+                    },
+                    "beginLine" : 52,
+                    "beginColumn" : 4,
+                    "endLine" : 52,
+                    "endColumn" : 58,
+                    "offset" : 1176,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 49,
+                        "beginColumn" : 4,
+                        "endLine" : 49,
+                        "endColumn" : 30,
+                        "offset" : 1102,
+                        "length" : 26
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "coordinates"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/arrays-example\/arrays.aadl"
+                          },
+                          "beginLine" : 60,
+                          "beginColumn" : 4,
+                          "endLine" : 60,
+                          "endColumn" : 58,
+                          "offset" : 1457,
+                          "length" : 54
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 50,
+                        "beginColumn" : 4,
+                        "endLine" : 50,
+                        "endColumn" : 30,
+                        "offset" : 1132,
+                        "length" : 26
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "coordinates"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/arrays-example\/arrays.aadl"
+                          },
+                          "beginLine" : 70,
+                          "beginColumn" : 4,
+                          "endLine" : 70,
+                          "endColumn" : 57,
+                          "offset" : 1786,
+                          "length" : 53
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "coordinates -> consumer", "coordinates"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["PC_Sys_Impl_Instance", "proc", "c2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/arrays-example\/arrays.aadl"
+                    },
+                    "beginLine" : 53,
+                    "beginColumn" : 4,
+                    "endLine" : 53,
+                    "endColumn" : 78,
+                    "offset" : 1234,
+                    "length" : 74
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 49,
+                        "beginColumn" : 4,
+                        "endLine" : 49,
+                        "endColumn" : 30,
+                        "offset" : 1102,
+                        "length" : 26
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "vector_of_coordinates"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/arrays-example\/arrays.aadl"
+                          },
+                          "beginLine" : 61,
+                          "beginColumn" : 4,
+                          "endLine" : 61,
+                          "endColumn" : 69,
+                          "offset" : 1515,
+                          "length" : 65
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 50,
+                        "beginColumn" : 4,
+                        "endLine" : 50,
+                        "endColumn" : 30,
+                        "offset" : 1132,
+                        "length" : 26
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "vector_of_coordinates"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/arrays-example\/arrays.aadl"
+                          },
+                          "beginLine" : 71,
+                          "beginColumn" : 4,
+                          "endLine" : 71,
+                          "endColumn" : 68,
+                          "offset" : 1843,
+                          "length" : 64
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "vector_of_coordinates -> consumer", "vector_of_coordinates"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["PC_Sys_Impl_Instance", "proc", "c3"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/arrays-example\/arrays.aadl"
+                    },
+                    "beginLine" : 54,
+                    "beginColumn" : 4,
+                    "endLine" : 54,
+                    "endColumn" : 52,
+                    "offset" : 1312,
+                    "length" : 48
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 49,
+                        "beginColumn" : 4,
+                        "endLine" : 49,
+                        "endColumn" : 30,
+                        "offset" : 1102,
+                        "length" : 26
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "integers"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/arrays-example\/arrays.aadl"
+                          },
+                          "beginLine" : 62,
+                          "beginColumn" : 4,
+                          "endLine" : 62,
+                          "endColumn" : 52,
+                          "offset" : 1584,
+                          "length" : 48
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 50,
+                        "beginColumn" : 4,
+                        "endLine" : 50,
+                        "endColumn" : 30,
+                        "offset" : 1132,
+                        "length" : 26
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "integers"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/arrays-example\/arrays.aadl"
+                          },
+                          "beginLine" : 72,
+                          "beginColumn" : 4,
+                          "endLine" : 72,
+                          "endColumn" : 51,
+                          "offset" : 1911,
+                          "length" : 47
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "integers -> consumer", "integers"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+            }
+          ],
+          "connectionInstances" : [
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["PC_Sys_Impl_Instance", "proc", "producer.coordinates -> consumer.coordinates"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/arrays-example\/arrays.aadl"
+                    },
+                    "beginLine" : 52,
+                    "beginColumn" : 4,
+                    "endLine" : 52,
+                    "endColumn" : 58,
+                    "offset" : 1176,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "producer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/arrays-example\/arrays.aadl"
+                      },
+                      "beginLine" : 49,
+                      "beginColumn" : 4,
+                      "endLine" : 49,
+                      "endColumn" : 30,
+                      "offset" : 1102,
+                      "length" : 26
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "coordinates"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 60,
+                        "beginColumn" : 4,
+                        "endLine" : 60,
+                        "endColumn" : 58,
+                        "offset" : 1457,
+                        "length" : 54
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "consumer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/arrays-example\/arrays.aadl"
+                      },
+                      "beginLine" : 50,
+                      "beginColumn" : 4,
+                      "endLine" : 50,
+                      "endColumn" : 30,
+                      "offset" : 1132,
+                      "length" : 26
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "coordinates"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 70,
+                        "beginColumn" : 4,
+                        "endLine" : 70,
+                        "endColumn" : 57,
+                        "offset" : 1786,
+                        "length" : 53
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "c1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 52,
+                        "beginColumn" : 4,
+                        "endLine" : 52,
+                        "endColumn" : 58,
+                        "offset" : 1176,
+                        "length" : 54
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 41,
+                        "beginColumn" : 4,
+                        "endLine" : 41,
+                        "endColumn" : 31,
+                        "offset" : 967,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["PC_Sys_Impl_Instance", "proc", "producer.vector_of_coordinates -> consumer.vector_of_coordinates"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/arrays-example\/arrays.aadl"
+                    },
+                    "beginLine" : 53,
+                    "beginColumn" : 4,
+                    "endLine" : 53,
+                    "endColumn" : 78,
+                    "offset" : 1234,
+                    "length" : 74
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "producer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/arrays-example\/arrays.aadl"
+                      },
+                      "beginLine" : 49,
+                      "beginColumn" : 4,
+                      "endLine" : 49,
+                      "endColumn" : 30,
+                      "offset" : 1102,
+                      "length" : 26
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "vector_of_coordinates"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 61,
+                        "beginColumn" : 4,
+                        "endLine" : 61,
+                        "endColumn" : 69,
+                        "offset" : 1515,
+                        "length" : 65
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "consumer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/arrays-example\/arrays.aadl"
+                      },
+                      "beginLine" : 50,
+                      "beginColumn" : 4,
+                      "endLine" : 50,
+                      "endColumn" : 30,
+                      "offset" : 1132,
+                      "length" : 26
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "vector_of_coordinates"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 71,
+                        "beginColumn" : 4,
+                        "endLine" : 71,
+                        "endColumn" : 68,
+                        "offset" : 1843,
+                        "length" : 64
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "c2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 53,
+                        "beginColumn" : 4,
+                        "endLine" : 53,
+                        "endColumn" : 78,
+                        "offset" : 1234,
+                        "length" : 74
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 41,
+                        "beginColumn" : 4,
+                        "endLine" : 41,
+                        "endColumn" : 31,
+                        "offset" : 967,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["PC_Sys_Impl_Instance", "proc", "producer.integers -> consumer.integers"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/arrays-example\/arrays.aadl"
+                    },
+                    "beginLine" : 54,
+                    "beginColumn" : 4,
+                    "endLine" : 54,
+                    "endColumn" : 52,
+                    "offset" : 1312,
+                    "length" : 48
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "producer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/arrays-example\/arrays.aadl"
+                      },
+                      "beginLine" : 49,
+                      "beginColumn" : 4,
+                      "endLine" : 49,
+                      "endColumn" : 30,
+                      "offset" : 1102,
+                      "length" : 26
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "producer", "integers"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 4,
+                        "endLine" : 62,
+                        "endColumn" : 52,
+                        "offset" : 1584,
+                        "length" : 48
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["PC_Sys_Impl_Instance", "proc", "consumer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/arrays-example\/arrays.aadl"
+                      },
+                      "beginLine" : 50,
+                      "beginColumn" : 4,
+                      "endLine" : 50,
+                      "endColumn" : 30,
+                      "offset" : 1132,
+                      "length" : 26
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "consumer", "integers"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 72,
+                        "beginColumn" : 4,
+                        "endLine" : 72,
+                        "endColumn" : 51,
+                        "offset" : 1911,
+                        "length" : 47
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc", "c3"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 54,
+                        "beginColumn" : 4,
+                        "endLine" : 54,
+                        "endColumn" : 52,
+                        "offset" : 1312,
+                        "length" : 48
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["PC_Sys_Impl_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/arrays-example\/arrays.aadl"
+                        },
+                        "beginLine" : 41,
+                        "beginColumn" : 4,
+                        "endLine" : 41,
+                        "endColumn" : 31,
+                        "offset" : 967,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            }
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0"
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+        {
+          "type" : "Annex",
+          "name" : "Emv2",
+          "clause" : {
+            "type" : "Emv2Clause",
+            "libraries" : [
+            ],
+            "propagations" : [
+            ],
+            "flows" : [
+            ],
+            "componentBehavior" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Emv2BehaviorSection",
+                "events" : [
+                ],
+                "transitions" : [
+                ],
+                "propagations" : [
+                ]
+              }
+            },
+            "properties" : [
+            ]
+          }
+        }
+      ],
+      "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/"
+    }
+  ],
+  "annexLib" : [
+  ],
+  "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Integer_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 92,
+                "beginColumn" : 2,
+                "endLine" : 93,
+                "endColumn" : 137,
+                "offset" : 4808,
+                "length" : 152
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "32.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Number_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 79,
+                "beginColumn" : 4,
+                "endLine" : 79,
+                "endColumn" : 88,
+                "offset" : 3710,
+                "length" : 84
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Signed"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Arrays::Coordinate.Impl"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["latitude"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/arrays-example\/arrays.aadl"
+                },
+                "beginLine" : 10,
+                "beginColumn" : 4,
+                "endLine" : 10,
+                "endColumn" : 42,
+                "offset" : 144,
+                "length" : 38
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Integer_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Number_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 79,
+                    "beginColumn" : 4,
+                    "endLine" : 79,
+                    "endColumn" : 88,
+                    "offset" : 3710,
+                    "length" : 84
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Signed"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 27,
+                    "beginColumn" : 4,
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Integer"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["longitude"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/arrays-example\/arrays.aadl"
+                },
+                "beginLine" : 11,
+                "beginColumn" : 4,
+                "endLine" : 11,
+                "endColumn" : 43,
+                "offset" : 186,
+                "length" : 39
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Integer_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Number_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 79,
+                    "beginColumn" : 4,
+                    "endLine" : 79,
+                    "endColumn" : 88,
+                    "offset" : 3710,
+                    "length" : 84
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Signed"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 27,
+                    "beginColumn" : 4,
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Integer"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["altitude"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/arrays-example\/arrays.aadl"
+                },
+                "beginLine" : 12,
+                "beginColumn" : 4,
+                "endLine" : 12,
+                "endColumn" : 42,
+                "offset" : 229,
+                "length" : 38
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Integer_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Number_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 79,
+                    "beginColumn" : 4,
+                    "endLine" : 79,
+                    "endColumn" : 88,
+                    "offset" : 3710,
+                    "length" : 84
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Signed"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 27,
+                    "beginColumn" : 4,
+                    "endLine" : 30,
+                    "endColumn" : 36,
+                    "offset" : 1165,
+                    "length" : 162
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Integer"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Integer_32"
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Arrays::Array_of_Coordinates"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Dimension"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 39,
+                "beginColumn" : 4,
+                "endLine" : 39,
+                "endColumn" : 97,
+                "offset" : 1668,
+                "length" : 93
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "3.0",
+              "unit" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Base_Type"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 6,
+                "beginColumn" : 4,
+                "endLine" : 6,
+                "endColumn" : 73,
+                "offset" : 163,
+                "length" : 69
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ClassifierProp",
+              "name" : "Arrays::Coordinate.Impl"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Array"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Integer"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Arrays::Vector_of_Coordinates"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Base_Type"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 6,
+                "beginColumn" : 4,
+                "endLine" : 6,
+                "endColumn" : 73,
+                "offset" : 163,
+                "length" : 69
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ClassifierProp",
+              "name" : "Base_Types::Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Array"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Arrays::Array_of_Integers"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Dimension"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 39,
+                "beginColumn" : 4,
+                "endLine" : 39,
+                "endColumn" : 97,
+                "offset" : 1668,
+                "length" : 93
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "1.0",
+              "unit" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Base_Type"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 6,
+                "beginColumn" : 4,
+                "endLine" : 6,
+                "endColumn" : 73,
+                "offset" : 163,
+                "length" : 69
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ClassifierProp",
+              "name" : "Base_Types::Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Array"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
+  ]
+}
