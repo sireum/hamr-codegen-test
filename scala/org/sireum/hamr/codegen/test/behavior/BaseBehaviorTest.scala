@@ -42,6 +42,28 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
     )
   }
 
+  "arrays" in {
+    val modelDir = modelsDir / getClass.getSimpleName / "arrays"
+    val description = ""
+
+    testAir(
+      testName = s"${modelDir.name}_excludes",
+      testDescription = description,
+      testOptions = baseOptions(
+        platform = CodeGenPlatform.Linux,
+        packageName = Some("a"),
+        slangOutputDir = Some((modelDir / "hamr" / "slang").value),
+        slangOutputCDir = Some((modelDir / "hamr" / "c_excludes").value),
+        aadlRootDir = Some(modelDir.value),
+        verbose = verbose,
+        excludeComponentImpl = T
+      ),
+      phantomOptions = None(),
+      logikaOptions = logikaOptions,
+      testModes = testModes :+ TestMode.compile
+    )
+  }
+
   val tests = Tests {
 
     { // static approach
@@ -62,29 +84,6 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
         // include test modes from super (e.g. maybe from env var)
         testModes = testModes :+ TestMode.generated_unit_tests
       )
-    }
-
-    {
-      val modelDir = modelsDir / getClass.getSimpleName / "arrays"
-      val description = ""
-
-      test(
-        testName = s"${modelDir.name}_excludes",
-        testDescription = description,
-        testOptions = baseOptions(
-          platform = CodeGenPlatform.Linux,
-          packageName = Some("a"),
-          slangOutputDir = Some((modelDir / "hamr" / "slang").value),
-          slangOutputCDir = Some((modelDir / "hamr" / "c_excludes").value),
-          aadlRootDir = Some(modelDir.value),
-          verbose = verbose,
-          excludeComponentImpl = T
-        ),
-        phantomOptions = None(),
-        logikaOptions = logikaOptions,
-        testModes = testModes :+ TestMode.compile
-      )
-
     }
 
     { // dynamic approach

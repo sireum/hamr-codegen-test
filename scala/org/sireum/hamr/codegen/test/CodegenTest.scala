@@ -162,7 +162,7 @@ trait CodeGenTest extends CodegenTestSuite {
 
     var testSuccess = T
     if (!reporter.hasError) {
-      testSuccess &= TestUtil.runAdditionalTasks(testName, slangOutputDir, testOps, testModes, logikaOptions, verbose, this, reporter)
+      testSuccess &= TestUtil.runAdditionalTasks(testName, testOps, testModes, logikaOptions, verbose, this, reporter)
     }
 
     val resultMap = CommonTestUtil.convertToTestResult(results.resources, resultsDir)

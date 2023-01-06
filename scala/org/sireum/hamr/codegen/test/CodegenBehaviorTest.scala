@@ -134,7 +134,6 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     if (success) {
       success = TestUtil.runAdditionalTasks(
         testName,
-        Os.path(testOptions.slangOutputDir.get),
         testOptions,
         _testModes,
         logikaOptions,
