@@ -1,5 +1,6 @@
 package org.sireum.hamr.codegen.test.util
 
+import org.scalatest.BeforeAndAfterAll
 import org.sireum._
 import org.sireum.hamr.act.templates.SlangEmbeddedTemplate
 import org.sireum.hamr.act.util.CMakeOption
@@ -8,7 +9,6 @@ import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.ir.{Aadl, JSON}
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
-import org.scalatest.BeforeAndAfterAll
 
 import java.util.Date
 import scala.util.Random
@@ -184,40 +184,40 @@ object TestUtil {
     val sireum: Os.Path = getSireum
     val sireumHome: Os.Path = sireum.up.up
 
-    def getDir(value: Option[String]): Option[(Os.Path, B)] = {
-      return (value match {
-        case Some(d) =>
-          if (!Os.isWin) {
-            Some(Os.path(d), F)
-          } else {
-            var optSubstDrive: String = ""
-            // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
-            // so create a virtual drive to shorten the path
-            optSubstDrive = {
-              var i = 90
-              var cand: String = ""
-              while (i > 65) {
-                val d = Os.path(s"${C(i)}:")
-                if (!d.exists) {
-                  cand = d.string
-                  i = 65
-                }
-                i = i - 1
-              }
-              cand
-            }
-            println(s"Attempting subst of ${optSubstDrive} for '${d.string}'")
-            proc"subst ${optSubstDrive} ${d.string}".runCheck()
+    def getDir(value: Option[String] = None()): (Os.Path, B) = {
+      val d =
+        if (value.isEmpty) testOps.slangOutputDir.get
+        else value.get
 
-            val sub = Os.path(optSubstDrive)
-            assert(sub.exists, s"Virtual drive ${sub.string} doesn't exist")
-            Some(sub, T)
+      if (!Os.isWin) {
+        return (Os.path(d), F)
+      } else {
+        var optSubstDrive: String = ""
+        // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
+        // so create a virtual drive to shorten the path
+        optSubstDrive = {
+          var i = 90
+          var cand: String = ""
+          while (i > 65) {
+            val d = Os.path(s"${C(i)}:")
+            if (!d.exists) {
+              cand = d.string
+              i = 65
+            }
+            i = i - 1
           }
-        case _ => None()
-      })
+          cand
+        }
+        println(s"Attempting subst of ${optSubstDrive} for '${d.string}'")
+        proc"subst ${optSubstDrive} ${d.string}".runCheck()
+
+        val sub = Os.path(optSubstDrive)
+        assert(sub.exists, s"Virtual drive ${sub.string} doesn't exist")
+        return (sub, T)
+      }
     }
 
-    val slangOutDir = getDir(testOps.slangOutputDir)
+    val slangOutDir = getDir()
     val cOutDir = getDir(testOps.slangOutputCDir)
     val camkesOutDir = getDir(testOps.camkesOutputDir)
 
@@ -249,7 +249,7 @@ object TestUtil {
     }
 
     if (shouldTipe(testOps, testModes) && keepGoing && performAction("Tipe")) {
-      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
+      val projectCmd = fetch("project.cmd", slangOutDir._1)
 
       println("Running Tipe on Slang project ...")
       val proyekResults = vproc(s"${sireum.string} proyek tipe --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "tipe")
@@ -257,7 +257,7 @@ object TestUtil {
     }
 
     if (shouldProyekIve(testOps, testModes) && keepGoing && performAction("Proyek IVE")) {
-      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
+      val projectCmd = fetch("project.cmd", slangOutDir._1)
 
       println("Generating IVE project via proyek ive ...")
       val proyekResults = vproc(s"${sireum.string} proyek ive ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "ive")
@@ -267,7 +267,7 @@ object TestUtil {
     // always transpile if required
     if (shouldTranspile(testOps, testModes) && keepGoing) {
       if (isLinux(testOps.platform)) {
-        val transpileScript = fetch("transpile.cmd", slangOutDir.get._1)
+        val transpileScript = fetch("transpile.cmd", slangOutDir._1)
 
         println(s"Transpiling ${testOps.platform} via script ...")
         val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None(), "trans-linux")
@@ -275,7 +275,7 @@ object TestUtil {
 
       } else {
         assert(testOps.platform == CodeGenPlatform.SeL4, s"Hmm, ${testOps.platform}")
-        val transpileScript = fetch("transpile-sel4.cmd", slangOutDir.get._1)
+        val transpileScript = fetch("transpile-sel4.cmd", slangOutDir._1)
 
         println(s"Transpiling ${testOps.platform} via script ...")
         val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None(), "trans-camkes")
@@ -284,7 +284,7 @@ object TestUtil {
     }
 
     if (shouldCompile(testOps.platform, testModes) && keepGoing) {
-      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
+      val projectCmd = fetch("project.cmd", slangOutDir._1)
 
       if (performAction("Proyek compile")) {
         println("Compiling Slang project via proyek compile ...")
@@ -322,7 +322,7 @@ object TestUtil {
       //noinspection DfaConstantConditions
       if (isLinux(testOps.platform) && keepGoing && performAction("C compile")) {
         println("Compiling C project via script ...")
-        val compileScript = fetch("compile.cmd", cOutDir.get._1)
+        val compileScript = fetch("compile.cmd", cOutDir._1)
 
         val cCompileResults = vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None(), "c-compile")
         _check(cCompileResults, "C Compilation failed")
@@ -330,7 +330,7 @@ object TestUtil {
     }
 
     if (shouldRunLogika(testOps, testModes) && keepGoing && performAction("Logika")) {
-      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
+      val projectCmd = fetch("project.cmd", slangOutDir._1)
 
       println("Checking Slang project contracts via proyek logika ...")
       val proyekResults = vproc(st"${sireum.string} proyek logika --all --par ${logikaOptions} ${projectCmd.up.up.string}".render, projectCmd.up.up, ISZ(), None(), "logika")
@@ -342,7 +342,7 @@ object TestUtil {
     }
 
     if (shouldRunGeneratedUnitTests(testOps.platform, testModes) && keepGoing && performAction("Generated unit tests")) {
-      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
+      val projectCmd = fetch("project.cmd", slangOutDir._1)
 
       println("Running generated unit tests ...")
       val proyekResults = vproc(s"${sireum.string} proyek test --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "gen-unit-test")
@@ -350,7 +350,7 @@ object TestUtil {
     }
 
     if (shouldProve(testOps, testModes) && performAction("Refinement proof")) {
-      val proof = camkesOutDir.get._1 / "proof" / "smt2_case.smt2"
+      val proof = camkesOutDir._1 / "proof" / "smt2_case.smt2"
       val cvc = sireumHome / "bin" / os / (if (Os.isWin) "cvc.exe" else "cvc")
       val z3 = sireumHome / "bin" / os / "z3" / "bin" / (if (Os.isWin) "z3.exe" else "z3")
 
@@ -427,7 +427,7 @@ object TestUtil {
 
       rootCamkesInstallationDir match {
         case Some(camkesInstallDir) => {
-          val runCamkes = camkesOutDir.get._1 / "bin" / "run-camkes.sh"
+          val runCamkes = camkesOutDir._1 / "bin" / "run-camkes.sh"
           assert(runCamkes.exists, s"${runCamkes} doesn't exist")
 
           val camkesBuildDir = camkesInstallDir / s"build_${testName}"
@@ -467,14 +467,13 @@ object TestUtil {
       }
     }
 
-    def unsub(o: Option[(Os.Path, B)]): Unit = {
-      o match {
-        case Some((p, b)) if b =>
-          println(s"Attempting to unsubst ${p}")
-          proc"subst ${p} /D".run()
-        case _ =>
+    def unsub(o: (Os.Path, B)): Unit = {
+      if (o._2) {
+        println(s"Attempting to unsubst ${o._1}")
+        proc"subst ${o._1} /D".run()
       }
     }
+
     unsub(slangOutDir)
     unsub(cOutDir)
     unsub(camkesOutDir)
