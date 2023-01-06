@@ -184,13 +184,16 @@ object TestUtil {
     val sireum: Os.Path = getSireum
     val sireumHome: Os.Path = sireum.up.up
 
-    def getDir(value: Option[String] = None()): (Os.Path, B) = {
-      val d =
-        if (value.isEmpty) testOps.slangOutputDir.get
+    def getDir(value: Option[String] = None()): Option[(Os.Path, B)] = {
+      val candSlangDir = Os.path(testOps.slangOutputDir.get)
+      if(value.isEmpty && !candSlangDir.exists) return None() // TB, sel4_only
+
+      val d: String =
+        if (value.isEmpty) candSlangDir.value
         else value.get
 
       if (!Os.isWin) {
-        return (Os.path(d), F)
+        return Some((Os.path(d), F))
       } else {
         var optSubstDrive: String = ""
         // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
@@ -213,7 +216,7 @@ object TestUtil {
 
         val sub = Os.path(optSubstDrive)
         assert(sub.exists, s"Virtual drive ${sub.string} doesn't exist")
-        return (sub, T)
+        return Some((sub, T))
       }
     }
 
@@ -249,7 +252,7 @@ object TestUtil {
     }
 
     if (shouldTipe(testOps, testModes) && keepGoing && performAction("Tipe")) {
-      val projectCmd = fetch("project.cmd", slangOutDir._1)
+      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
 
       println("Running Tipe on Slang project ...")
       val proyekResults = vproc(s"${sireum.string} proyek tipe --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "tipe")
@@ -257,7 +260,7 @@ object TestUtil {
     }
 
     if (shouldProyekIve(testOps, testModes) && keepGoing && performAction("Proyek IVE")) {
-      val projectCmd = fetch("project.cmd", slangOutDir._1)
+      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
 
       println("Generating IVE project via proyek ive ...")
       val proyekResults = vproc(s"${sireum.string} proyek ive ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "ive")
@@ -267,7 +270,7 @@ object TestUtil {
     // always transpile if required
     if (shouldTranspile(testOps, testModes) && keepGoing) {
       if (isLinux(testOps.platform)) {
-        val transpileScript = fetch("transpile.cmd", slangOutDir._1)
+        val transpileScript = fetch("transpile.cmd", slangOutDir.get._1)
 
         println(s"Transpiling ${testOps.platform} via script ...")
         val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None(), "trans-linux")
@@ -275,7 +278,7 @@ object TestUtil {
 
       } else {
         assert(testOps.platform == CodeGenPlatform.SeL4, s"Hmm, ${testOps.platform}")
-        val transpileScript = fetch("transpile-sel4.cmd", slangOutDir._1)
+        val transpileScript = fetch("transpile-sel4.cmd", slangOutDir.get._1)
 
         println(s"Transpiling ${testOps.platform} via script ...")
         val cTranspileResults = vproc(s"${transpileScript.string}", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None(), "trans-camkes")
@@ -284,7 +287,7 @@ object TestUtil {
     }
 
     if (shouldCompile(testOps.platform, testModes) && keepGoing) {
-      val projectCmd = fetch("project.cmd", slangOutDir._1)
+      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
 
       if (performAction("Proyek compile")) {
         println("Compiling Slang project via proyek compile ...")
@@ -322,7 +325,7 @@ object TestUtil {
       //noinspection DfaConstantConditions
       if (isLinux(testOps.platform) && keepGoing && performAction("C compile")) {
         println("Compiling C project via script ...")
-        val compileScript = fetch("compile.cmd", cOutDir._1)
+        val compileScript = fetch("compile.cmd", cOutDir.get._1)
 
         val cCompileResults = vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None(), "c-compile")
         _check(cCompileResults, "C Compilation failed")
@@ -330,7 +333,7 @@ object TestUtil {
     }
 
     if (shouldRunLogika(testOps, testModes) && keepGoing && performAction("Logika")) {
-      val projectCmd = fetch("project.cmd", slangOutDir._1)
+      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
 
       println("Checking Slang project contracts via proyek logika ...")
       val proyekResults = vproc(st"${sireum.string} proyek logika --all --par ${logikaOptions} ${projectCmd.up.up.string}".render, projectCmd.up.up, ISZ(), None(), "logika")
@@ -342,7 +345,7 @@ object TestUtil {
     }
 
     if (shouldRunGeneratedUnitTests(testOps.platform, testModes) && keepGoing && performAction("Generated unit tests")) {
-      val projectCmd = fetch("project.cmd", slangOutDir._1)
+      val projectCmd = fetch("project.cmd", slangOutDir.get._1)
 
       println("Running generated unit tests ...")
       val proyekResults = vproc(s"${sireum.string} proyek test --par ${projectCmd.up.up.string}", projectCmd.up.up, ISZ(), None(), "gen-unit-test")
@@ -350,7 +353,7 @@ object TestUtil {
     }
 
     if (shouldProve(testOps, testModes) && performAction("Refinement proof")) {
-      val proof = camkesOutDir._1 / "proof" / "smt2_case.smt2"
+      val proof = camkesOutDir.get._1 / "proof" / "smt2_case.smt2"
       val cvc = sireumHome / "bin" / os / (if (Os.isWin) "cvc.exe" else "cvc")
       val z3 = sireumHome / "bin" / os / "z3" / "bin" / (if (Os.isWin) "z3.exe" else "z3")
 
@@ -427,7 +430,7 @@ object TestUtil {
 
       rootCamkesInstallationDir match {
         case Some(camkesInstallDir) => {
-          val runCamkes = camkesOutDir._1 / "bin" / "run-camkes.sh"
+          val runCamkes = camkesOutDir.get._1 / "bin" / "run-camkes.sh"
           assert(runCamkes.exists, s"${runCamkes} doesn't exist")
 
           val camkesBuildDir = camkesInstallDir / s"build_${testName}"
@@ -467,10 +470,12 @@ object TestUtil {
       }
     }
 
-    def unsub(o: (Os.Path, B)): Unit = {
-      if (o._2) {
-        println(s"Attempting to unsubst ${o._1}")
-        proc"subst ${o._1} /D".console.runCheck()
+    def unsub(o: Option[(Os.Path, B)]): Unit = {
+      o match {
+        case Some((d, b)) if b =>
+          println(s"Attempting to unsubst ${d}")
+          proc"subst ${d} /D".console.runCheck()
+        case _ =>
       }
     }
 
