@@ -209,7 +209,7 @@ object TestUtil {
           cand
         }
         println(s"Attempting subst of ${optSubstDrive} for '${d.string}'")
-        proc"subst ${optSubstDrive} ${d.string}".runCheck()
+        proc"subst ${optSubstDrive} ${d.string}".console.runCheck()
 
         val sub = Os.path(optSubstDrive)
         assert(sub.exists, s"Virtual drive ${sub.string} doesn't exist")
@@ -470,7 +470,7 @@ object TestUtil {
     def unsub(o: (Os.Path, B)): Unit = {
       if (o._2) {
         println(s"Attempting to unsubst ${o._1}")
-        proc"subst ${o._1} /D".run()
+        proc"subst ${o._1} /D".console.runCheck()
       }
     }
 

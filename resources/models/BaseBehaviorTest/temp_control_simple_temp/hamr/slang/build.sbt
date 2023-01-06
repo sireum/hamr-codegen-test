@@ -44,7 +44,7 @@ lazy val TempControlSoftwareSystem_i_Instance = slangEmbeddedProject("TempContro
 val scalaVer = "2.13.10"
 
 // versions.properties key: org.scalatest%%scalatest%%
-val scalaTestVersion = "3.2.14"
+val scalaTestVersion = "3.2.15"
 
 // versions.properties key: org.sireum%%scalac-plugin%
 // https://github.com/sireum/scalac-plugin/tree/4.20221207.b303d55
@@ -52,8 +52,8 @@ val sireumScalacVersion = "4.20221207.b303d55"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/4.20221130.c350258
-val kekinianVersion = "4.20221130.c350258"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/a7c0a90
+val kekinianVersion = "a7c0a90"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"
@@ -71,6 +71,7 @@ val commonSettings = Seq(
   Test / parallelExecution := true,
   resolvers ++= Resolver.sonatypeOssRepos("public") ++ Seq("jitpack" at "https://jitpack.io"),
   addCompilerPlugin("org.sireum" %% "scalac-plugin" % sireumScalacVersion),
+  ThisBuild / evictionErrorLevel := Level.Warn,
   libraryDependencies ++= Seq(
     "org.sireum.kekinian" %% "library" % kekinianVersion withSources()
   )
