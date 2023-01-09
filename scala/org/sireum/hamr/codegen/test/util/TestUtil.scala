@@ -113,7 +113,7 @@ object TestUtil {
 
       if (Os.isMac && isCI && !results.ok) {
         var retries = 1
-        while(results.ok && retries <= 3) {
+        while(!results.ok && retries <= 3) {
           println(s"Previous attempt failed, retry attempt $retries. AIR gen via phantom ${if (osateDir.isEmpty) "" else s"using ${osateDir.get} "}...")
           var p: OsProto.Proc =
             if (phantomOptions.isEmpty) proc"${getSireum.value} hamr phantom ${osateOpt} -f ${outputFile.canon.string} ${rootAadlDir.canon.string}".env(custEnv)
