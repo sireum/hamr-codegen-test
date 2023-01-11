@@ -24,6 +24,7 @@ Unit a_Arrays_Producer_proc_producer_initialise_(STACK_FRAME_ONLY) {
             // not exactly in the spirit of an immutable ds, but this
             // copies coord into isc.value[i], replacing whatever is there
             isc.value[i] = coord;
+            isc.size = i + 1;
 
             // though an update method for the IS is provided so calling it will
             // check that 'i' (whose type becomes a uint64) is in range if
@@ -33,8 +34,6 @@ Unit a_Arrays_Producer_proc_producer_initialise_(STACK_FRAME_ONLY) {
             //       transpiler generate CMakeLists.txt.  Without that you get linking
             //       errors for the inlined functions when the build is Debug
             IS_659A54_up(&isc, i, &coord);
-
-            isc.size = i + 1;
         }
 
         DeclNewa_Arrays_Array_of_Coordinates(aac);
