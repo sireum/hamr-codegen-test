@@ -25,7 +25,7 @@ Unit a_Arrays_Producer_proc_producer_initialise_(STACK_FRAME_ONLY) {
             isc.value[i] = coord;
             isc.size = i + 1;
 
-            // alternative is to use the provided IS method as that will
+            // alternative is to use the provided update method as that will
             // check that 'i' (whose type becomes a uint64) is in range if
             // SIREUM_BOUND_CHECK is set and you use the Debug build as 
             // Release's optimization setting disable asserts
