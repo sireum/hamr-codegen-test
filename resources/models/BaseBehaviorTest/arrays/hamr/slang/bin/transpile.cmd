@@ -1,10 +1,10 @@
-::#! 2> /dev/null                                   #
-@ 2>/dev/null # 2>nul & echo off & goto BOF         #
-if [ -z ${SIREUM_HOME} ]; then                      #
-  echo "Please set SIREUM_HOME env var"             #
-  exit -1                                           #
-fi                                                  #
-exec ${SIREUM_HOME}/bin/sireum slang run "$0" "$@"  #
+::/*#! 2> /dev/null                                   #
+@ 2>/dev/null # 2>nul & echo off & goto BOF           #
+if [ -z ${SIREUM_HOME} ]; then                       #
+  echo "Please set SIREUM_HOME env var"               #
+  exit -1                                             #
+fi                                                    #
+exec ${SIREUM_HOME}/bin/sireum slang run "$0" "$@" #
 :BOF
 setlocal
 if not defined SIREUM_HOME (
@@ -13,7 +13,7 @@ if not defined SIREUM_HOME (
 )
 %SIREUM_HOME%\\bin\\sireum.bat slang run "%0" %*
 exit /B %errorlevel%
-::!#
+::!#*/
 // #Sireum
 
 import org.sireum._
@@ -22,6 +22,9 @@ import org.sireum._
 
 val SCRIPT_HOME: Os.Path = Os.slashDir
 val PATH_SEP: String = Os.pathSep
+
+// ART stores bridge and port ids using ISZ[Z].  This project has 9 ports and 2 bridges
+ // so the sequence size of IS[Z,Z] must be at least 9
 
 var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) match {
   case Some(o: Cli.TranspileOption) =>
@@ -36,8 +39,8 @@ var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) mat
         "--fingerprint", "3",
         "--bits", "64",
         "--string-size", "256",
-        "--sequence-size", "9",
-        "--sequence", s"IS[Z,art.Bridge]=2;MS[Z,Option[art.Bridge]]=2;IS[Z,art.UPort]=3;IS[Z,art.UConnection]=3",
+        "--sequence-size", "1",
+        "--sequence", s"IS[Z,art.Bridge]=2;MS[Z,Option[art.Bridge]]=2;IS[Z,art.UPort]=3;IS[Z,art.UConnection]=3;IS[Z,Z]=$minISZSize",
         "--constants", s"art.Art.maxComponents=2;art.Art.maxPorts=9",
         "--forward", "art.ArtNative=a.ArtNix,a.Platform=a.PlatformNix",
         "--stack-size", "16*1024*1024",
@@ -54,8 +57,8 @@ var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) mat
         "--fingerprint", "3",
         "--bits", "64",
         "--string-size", "256",
-        "--sequence-size", "9",
-        "--sequence", s"IS[Z,art.Bridge]=2;MS[Z,Option[art.Bridge]]=2;IS[Z,art.UPort]=3;IS[Z,art.UConnection]=3",
+        "--sequence-size", "1",
+        "--sequence", s"IS[Z,art.Bridge]=2;MS[Z,Option[art.Bridge]]=2;IS[Z,art.UPort]=3;IS[Z,art.UConnection]=3;IS[Z,Z]=$minISZSize",
         "--constants", s"art.Art.maxComponents=2;art.Art.maxPorts=9",
         "--forward", "art.ArtNative=art.ArtNativeSlang",
         "--stack-size", "16*1024*1024",
