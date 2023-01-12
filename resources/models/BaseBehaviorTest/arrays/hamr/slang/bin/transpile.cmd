@@ -24,7 +24,8 @@ val SCRIPT_HOME: Os.Path = Os.slashDir
 val PATH_SEP: String = Os.pathSep
 
 // ART stores bridge and port ids using ISZ[Z].  This project has 9 ports and 2 bridges
- // so the sequence size of IS[Z,Z] must be at least 9
+// so the sequence size of IS[Z,Z] must be at least 9
+val minISZSize: Z = 9
 
 var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) match {
   case Some(o: Cli.TranspileOption) =>
