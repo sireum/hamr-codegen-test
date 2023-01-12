@@ -21,18 +21,14 @@ Unit a_Arrays_Producer_proc_producer_initialise_(STACK_FRAME_ONLY) {
             coord.altitude = s32 - 2;
             s32 -= 3;
 
-            // not exactly in the spirit of an immutable ds, but this
-            // copies coord into isc.value[i], replacing whatever is there
+            // copy coord into isc.value[i], replacing whatever is there
             isc.value[i] = coord;
             isc.size = i + 1;
 
-            // though an update method for the IS is provided so calling it will
+            // alternative is to use the provided IS method as that will
             // check that 'i' (whose type becomes a uint64) is in range if
-            // SIREUM_BOUND_CHECK, and
-            //    -- use the Debug build as Release's optimization setting disable asserts
-            //    -- add "add_compile_options(-Dinline=static)" to the clang options in the
-            //       transpiler generate CMakeLists.txt.  Without that you get linking
-            //       errors for the inlined functions when the build is Debug
+            // SIREUM_BOUND_CHECK is set and you use the Debug build as 
+            // Release's optimization setting disable asserts
             IS_659A54_up(&isc, i, &coord);
         }
 
