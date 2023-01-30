@@ -28,7 +28,11 @@
         "value" : "System"
       },
       "classifier" : {
-        "type" : "None"
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Arrays::PC_Sys.Impl"
+        }
       },
       "features" : [
       ],
@@ -238,7 +242,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -375,7 +379,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -512,7 +516,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -622,7 +626,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             },
             {
               "type" : "Component",
@@ -793,7 +797,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -930,7 +934,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
                 },
                 {
                   "type" : "FeatureEnd",
@@ -1067,7 +1071,7 @@
                       ]
                     }
                   ],
-                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
+                  "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
                 }
               ],
               "subComponents" : [
@@ -1142,7 +1146,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1"
             }
           ],
           "connections" : [
@@ -1294,7 +1298,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1444,7 +1448,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
             },
             {
               "type" : "Connection",
@@ -1594,7 +1598,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+              "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -2177,7 +2181,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0\/@componentInstance.0"
         }
       ],
       "connections" : [
@@ -2219,7 +2223,7 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/arrays-example\/instances\/arrays_PC_Sys_Impl_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [

@@ -4,7 +4,7 @@
 #
 APPS="Demo Producer_proc_producer_App Consumer_proc_consumer_App"
 for APP in ${APPS}; do
-  pkill -f -SIGTERM $APP
+  pkill -SIGTERM -f $APP
 done
 ME=`whoami`
 

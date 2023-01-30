@@ -25,21 +25,17 @@ object Producer_proc_producer {
 
     // Array_of_Integers is an IS that can hold at most 1 integer
     var ai = IS[Array_of_Integers.I, Base_Types.Integer]()
-    var z = 0
     for(i <- Array_of_Integers.I.Min to Array_of_Integers.I.Max) {
-      ai = ai :+ z
-      z = z + 1
+      ai = ai :+ i.toZ
     }
     api.put_integers(Array_of_Integers(ai))
 
 
-    // Vector_of_Coordinates is an unbounded ISZ (i.e. IS[Z,Z]). It's max
-    // transpiled capacity is set either via the default sequence size option, e.g.
-    //   sireum slang transpiler c --sequence-size 9 ...
+    // Vector_of_Coordinates is an unbounded ISZ (i.e. IS[Z,Z]). Its static
+    // transpiled size is set either via the default sequence size option, e.g.
+    //   sireum slang transpiler c --sequence-size 4 ...
     // or by a custom sequence entry, eg.
-    //   sireum slang transpiler c --sequence IS[Z,Z]=9 ...
-    //
-    // Refer to bin/transpile.cmd regarding ART's usage of ISZ
+    //   sireum slang transpiler c --sequence IS[Z,Z]=4 ...
     var vc = ISZ[Base_Types.Integer]()
     for(i <- 0 until 3) {
       vc = vc :+ i

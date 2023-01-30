@@ -20,12 +20,16 @@ import org.sireum._
 
 // This file was auto-generated.  Do not edit
 
+// If you want to make changes to this script, make a copy of it and edit that version
+
+// Origin of custom sequence sizes
+//   IS[Z,String]=3 - Needed for the CLI arguments to the Demo Slang app
+//   IS[Z,(art.Art.PortId, art.ArtSlangMessage)]=9 - Needed for the Map[PortId, ArgSlangMessage] in ArtNativeSlang
+//   IS[Z,art.Bridge]=2 - Needed for the example round robin schedule in Schedulers
+//   IS[Z,art.scheduling.static.Schedule.Slot]=2 - Needed for the example static schedule in Schedulers
+
 val SCRIPT_HOME: Os.Path = Os.slashDir
 val PATH_SEP: String = Os.pathSep
-
-// ART stores bridge and port ids using ISZ[Z].  This project has 9 ports and 2 bridges
-// so the sequence size of IS[Z,Z] must be at least 9
-val minISZSize: Z = 9
 
 var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) match {
   case Some(o: Cli.TranspileOption) =>
@@ -34,38 +38,36 @@ var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) mat
 
       val main: ISZ[String] = ISZ(
         "--sourcepath", s"${SCRIPT_HOME}/../src/main",
-        "--output-dir", s"${SCRIPT_HOME}/../../c_excludes/nix",
+        "--output-dir", s"${SCRIPT_HOME}/../../c/nix",
         "--name", "main",
         "--apps", "a.Producer_proc_producer_App,a.Consumer_proc_consumer_App,a.LegacyDemo",
         "--fingerprint", "3",
         "--bits", "64",
         "--string-size", "256",
-        "--sequence-size", "1",
-        "--sequence", s"IS[Z,art.Bridge]=2;MS[Z,Option[art.Bridge]]=2;IS[Z,art.UPort]=3;IS[Z,art.UConnection]=3;IS[Z,Z]=$minISZSize",
+        "--sequence-size", "4",
+        "--sequence", s"IS[Z,String]=3",
         "--constants", s"art.Art.maxComponents=2;art.Art.maxPorts=9",
         "--forward", "art.ArtNative=a.ArtNix,a.Platform=a.PlatformNix",
         "--stack-size", "16*1024*1024",
         "--stable-type-id",
-        "--exts", s"${SCRIPT_HOME}/../../c_excludes/ext-c${PATH_SEP}${SCRIPT_HOME}/../../c_excludes/etc",
-        "--exclude-build", "a.Arrays.Producer_proc_producer,a.Arrays.Consumer_proc_consumer")
+        "--exts", s"${SCRIPT_HOME}/../../c/ext-c${PATH_SEP}${SCRIPT_HOME}/../../c/etc")
       main
     } else {
       val main: ISZ[String] = ISZ(
         "--sourcepath", s"${SCRIPT_HOME}/../src/main",
-        "--output-dir", s"${SCRIPT_HOME}/../../c_excludes/nix",
+        "--output-dir", s"${SCRIPT_HOME}/../../c/nix",
         "--name", "main",
         "--apps", "a.Demo",
         "--fingerprint", "3",
         "--bits", "64",
         "--string-size", "256",
-        "--sequence-size", "1",
-        "--sequence", s"IS[Z,art.Bridge]=2;MS[Z,Option[art.Bridge]]=2;IS[Z,art.UPort]=3;IS[Z,art.UConnection]=3;IS[Z,Z]=$minISZSize",
+        "--sequence-size", "4",
+        "--sequence", s"IS[Z,String]=3;IS[Z,(art.Art.PortId, art.ArtSlangMessage)]=9;IS[Z,art.Bridge]=2;IS[Z,art.scheduling.static.Schedule.Slot]=2",
         "--constants", s"art.Art.maxComponents=2;art.Art.maxPorts=9",
         "--forward", "art.ArtNative=art.ArtNativeSlang",
         "--stack-size", "16*1024*1024",
         "--stable-type-id",
-        "--exts", s"${SCRIPT_HOME}/../../c_excludes/ext-schedule${PATH_SEP}${SCRIPT_HOME}/../../c_excludes/ext-c${PATH_SEP}${SCRIPT_HOME}/../../c_excludes/etc",
-        "--exclude-build", "a.Arrays.Producer_proc_producer,a.Arrays.Consumer_proc_consumer")
+        "--exts", s"${SCRIPT_HOME}/../../c/ext-schedule${PATH_SEP}${SCRIPT_HOME}/../../c/ext-c${PATH_SEP}${SCRIPT_HOME}/../../c/etc")
       main
     }
   case Some(o: Cli.HelpOption) =>

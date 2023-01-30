@@ -30,6 +30,14 @@ trait CodeGenTest extends CodegenTestSuite {
     ISZ(TestMode.codegen)
     //ISZ(TestMode.codegen, TestMode.smt2)
 
+  def filter: B = if (filterTestsSet().nonEmpty) filterTestsSet().get else T
+
+  def filters: ISZ[String] = ISZ("array")
+
+  def ignores: ISZ[String] = ISZ(
+    "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
+  )
+
   def smt2Timeout: Z = Os.env("SMT2_TIMEOUT") match {
     case Some(t) => Z(t).get
     case _ => 2 * 60000
@@ -44,14 +52,6 @@ trait CodeGenTest extends CodegenTestSuite {
   }
 
   def testResources: TestResources
-
-  def filter: B = if (filterTestsSet().nonEmpty) filterTestsSet().get else F
-
-  def filters: ISZ[String] = ISZ("vm")
-
-  def ignores: ISZ[String] = ISZ(
-    "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
-  )
 
   def test(testName: String,
            modelDir: Os.Path,

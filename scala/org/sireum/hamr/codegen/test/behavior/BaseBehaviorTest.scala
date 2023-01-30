@@ -42,7 +42,7 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
     )
   }
 
-  "arrays" in {
+  "arrays_excludes" in {
     val modelDir = modelsDir / getClass.getSimpleName / "arrays"
     val description = ""
 
@@ -52,11 +52,34 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
       testOptions = baseOptions(
         platform = CodeGenPlatform.Linux,
         packageName = Some("a"),
-        slangOutputDir = Some((modelDir / "hamr" / "slang").value),
-        slangOutputCDir = Some((modelDir / "hamr" / "c_excludes").value),
+        slangOutputDir = Some((modelDir / "hamr-excludes" / "slang").value),
+        slangOutputCDir = Some((modelDir / "hamr-excludes" / "c").value),
         aadlRootDir = Some(modelDir.value),
         verbose = verbose,
-        excludeComponentImpl = T
+        excludeComponentImpl = T,
+        maxArraySize = 4
+      ),
+      phantomOptions = None(),
+      logikaOptions = logikaOptions,
+      testModes = testModes :+ TestMode.compile
+    )
+  }
+
+  "arrays" in {
+    val modelDir = modelsDir / getClass.getSimpleName / "arrays"
+    val description = ""
+
+    testAir(
+      testName = s"${modelDir.name}",
+      testDescription = description,
+      testOptions = baseOptions(
+        platform = CodeGenPlatform.Linux,
+        packageName = Some("a"),
+        slangOutputDir = Some((modelDir / "hamr" / "slang").value),
+        slangOutputCDir = Some((modelDir / "hamr" / "c").value),
+        aadlRootDir = Some(modelDir.value),
+        verbose = verbose,
+        maxArraySize = 4
       ),
       phantomOptions = None(),
       logikaOptions = logikaOptions,

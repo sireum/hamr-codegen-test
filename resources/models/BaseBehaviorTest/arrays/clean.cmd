@@ -1,4 +1,4 @@
-::#! 2> /dev/null                                   #
+::/*#! 2> /dev/null                                 #
 @ 2>/dev/null # 2>nul & echo off & goto BOF         #
 if [ -z ${SIREUM_HOME} ]; then                      #
   echo "Please set SIREUM_HOME env var"             #
@@ -13,34 +13,39 @@ if not defined SIREUM_HOME (
 )
 %SIREUM_HOME%\\bin\\sireum.bat slang run "%0" %*
 exit /B %errorlevel%
-::!#
+::!#*/
 // #Sireum
 
 import org.sireum._
 
-val hamrDir = Os.slashDir / "hamr"
+val excludesVersion = ops.StringOps(Os.cliArgs(0)).contains("excludes")
+
+val hamrDir = Os.slashDir / (if(excludesVersion) "hamr-excludes" else "hamr")
 val slangDir = hamrDir / "slang"
 
-val toKeep = ops.ISZOps(ISZ(
-  (hamrDir / "c_excludes" / "ext-c" / "Consumer_proc_consumer" / "Consumer_proc_consumer.c"),
-  (hamrDir / "c_excludes" / "ext-c" / "Producer_proc_producer" / "Producer_proc_producer.c"),
-  (slangDir / "src" / "main" / "component"),
-  (slangDir / "src" / "test" / "bridge")
-))
+val toKeep: ops.ISZOps[Os.Path] =
+  ops.ISZOps(
+    ISZ((slangDir / "src" / "main" / "component"),
+      (slangDir / "src" / "test" / "bridge")) ++ (
+      if (excludesVersion)
+        ISZ(
+          (hamrDir / "c" / "ext-c" / "Consumer_proc_consumer" / "Consumer_proc_consumer.c"),
+          (hamrDir / "c" / "ext-c" / "Producer_proc_producer" / "Producer_proc_producer.c"))
+      else ISZ[Os.Path]()))
 
 
 def rec(p: Os.Path): Unit = {
-  if(p.isFile && !toKeep.contains(p)) {
+  if (p.isFile && !toKeep.contains(p)) {
     println(s"Removing file ${p.value}")
     p.remove()
   } else {
     if (toKeep.contains(p)) {
       return
     } else {
-      for(pp <- p.list) {
+      for (pp <- p.list) {
         rec(pp)
       }
-      if(p.list.isEmpty) {
+      if (p.list.isEmpty) {
         println(s"Removing directory ${p.value}")
         p.removeAll()
       }
