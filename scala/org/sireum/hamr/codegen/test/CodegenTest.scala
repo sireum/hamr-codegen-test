@@ -30,9 +30,9 @@ trait CodeGenTest extends CodegenTestSuite {
     ISZ(TestMode.codegen)
     //ISZ(TestMode.codegen, TestMode.smt2)
 
-  def filter: B = if (filterTestsSet().nonEmpty) filterTestsSet().get else T
+  def filter: B = if (filterTestsSet().nonEmpty) filterTestsSet().get else F
 
-  def filters: ISZ[String] = ISZ("array")
+  def filters: ISZ[String] = ISZ("isolette")
 
   def ignores: ISZ[String] = ISZ(
     "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
