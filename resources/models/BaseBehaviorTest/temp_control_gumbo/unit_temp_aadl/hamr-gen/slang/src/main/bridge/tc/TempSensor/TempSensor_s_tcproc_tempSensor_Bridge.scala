@@ -13,23 +13,23 @@ import tc.TempSensor.{TempSensor_s_tcproc_tempSensor => component}
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[ISZ[Art.PortId]],
+  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
 
   currentTemp: Port[TempSensor.Temperature_i],
   tempChanged: Port[art.Empty]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(currentTemp,
-              tempChanged),
+    all = IS[Art.PortId, art.UPort](currentTemp,
+                                    tempChanged),
 
-    dataIns = ISZ(),
+    dataIns = IS[Art.PortId, art.UPort](),
 
-    dataOuts = ISZ(currentTemp),
+    dataOuts = IS[Art.PortId, art.UPort](currentTemp),
 
-    eventIns = ISZ(),
+    eventIns = IS[Art.PortId, art.UPort](),
 
-    eventOuts = ISZ(tempChanged)
+    eventOuts = IS[Art.PortId, art.UPort](tempChanged)
   )
 
   val initialization_api : TempSensor_s_Initialization_Api = {
@@ -74,17 +74,17 @@ object TempSensor_s_tcproc_tempSensor_Bridge {
     TempSensor_s_tcproc_tempSensor_BridgeId : Art.BridgeId,
     currentTemp_Id : Art.PortId,
     tempChanged_Id : Art.PortId,
-    dispatchTriggers : Option[ISZ[Art.PortId]],
+    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
     initialization_api: TempSensor_s_Initialization_Api,
     operational_api: TempSensor_s_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ()
+    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS()
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(currentTemp_Id)
+    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS(currentTemp_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(tempChanged_Id)
+    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS(tempChanged_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: TempSensor_s_Initialization_Api): Unit = {}

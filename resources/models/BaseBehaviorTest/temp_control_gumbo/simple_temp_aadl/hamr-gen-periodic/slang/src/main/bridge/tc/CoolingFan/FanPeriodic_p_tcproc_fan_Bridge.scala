@@ -13,23 +13,23 @@ import tc.CoolingFan.{FanPeriodic_p_tcproc_fan => component}
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[ISZ[Art.PortId]],
+  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
 
   fanCmd: Port[CoolingFan.FanCmd.Type],
   fanAck: Port[CoolingFan.FanAck.Type]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(fanCmd,
-              fanAck),
+    all = IS[Art.PortId, art.UPort](fanCmd,
+                                    fanAck),
 
-    dataIns = ISZ(fanCmd),
+    dataIns = IS[Art.PortId, art.UPort](fanCmd),
 
-    dataOuts = ISZ(fanAck),
+    dataOuts = IS[Art.PortId, art.UPort](fanAck),
 
-    eventIns = ISZ(),
+    eventIns = IS[Art.PortId, art.UPort](),
 
-    eventOuts = ISZ()
+    eventOuts = IS[Art.PortId, art.UPort]()
   )
 
   val initialization_api : FanPeriodic_p_Initialization_Api = {
@@ -74,17 +74,17 @@ object FanPeriodic_p_tcproc_fan_Bridge {
     FanPeriodic_p_tcproc_fan_BridgeId : Art.BridgeId,
     fanCmd_Id : Art.PortId,
     fanAck_Id : Art.PortId,
-    dispatchTriggers : Option[ISZ[Art.PortId]],
+    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
     initialization_api: FanPeriodic_p_Initialization_Api,
     operational_api: FanPeriodic_p_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ(fanCmd_Id)
+    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS(fanCmd_Id)
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(fanAck_Id)
+    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS(fanAck_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ()
+    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: FanPeriodic_p_Initialization_Api): Unit = {}

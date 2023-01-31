@@ -13,23 +13,23 @@ import tc.TempControlSoftwareSystem.{OperatorInterfacePeriodic_p_tcproc_operator
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[ISZ[Art.PortId]],
+  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
 
   currentTemp: Port[TempSensor.Temperature_i],
   setPoint: Port[TempControlSoftwareSystem.SetPoint_i]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(currentTemp,
-              setPoint),
+    all = IS[Art.PortId, art.UPort](currentTemp,
+                                    setPoint),
 
-    dataIns = ISZ(currentTemp),
+    dataIns = IS[Art.PortId, art.UPort](currentTemp),
 
-    dataOuts = ISZ(setPoint),
+    dataOuts = IS[Art.PortId, art.UPort](setPoint),
 
-    eventIns = ISZ(),
+    eventIns = IS[Art.PortId, art.UPort](),
 
-    eventOuts = ISZ()
+    eventOuts = IS[Art.PortId, art.UPort]()
   )
 
   val initialization_api : OperatorInterfacePeriodic_p_Initialization_Api = {
@@ -74,17 +74,17 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_Bridge {
     OperatorInterfacePeriodic_p_tcproc_operatorInterface_BridgeId : Art.BridgeId,
     currentTemp_Id : Art.PortId,
     setPoint_Id : Art.PortId,
-    dispatchTriggers : Option[ISZ[Art.PortId]],
+    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
     initialization_api: OperatorInterfacePeriodic_p_Initialization_Api,
     operational_api: OperatorInterfacePeriodic_p_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ(currentTemp_Id)
+    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS(currentTemp_Id)
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(setPoint_Id)
+    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS(setPoint_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ()
+    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: OperatorInterfacePeriodic_p_Initialization_Api): Unit = {}

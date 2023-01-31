@@ -6,15 +6,17 @@ import org.sireum._
 import art._
 import art.PortMode._
 import art.DispatchPropertyProtocol._
+import art.Art.BridgeId._
+import art.Art.PortId._
 
 // This file was auto-generated.  Do not edit
 
 object Arch {
   val TempControlSoftwareSystem_p_Instance_tcproc_tempSensor : tc.TempSensor.TempSensorPeriodic_p_tcproc_tempSensor_Bridge = {
-    val currentTemp = Port[TempSensor.Temperature_i] (id = 0, name = "TempControlSoftwareSystem_p_Instance_tcproc_tempSensor_currentTemp", mode = DataOut)
+    val currentTemp = Port[TempSensor.Temperature_i] (id = portId"0", name = "TempControlSoftwareSystem_p_Instance_tcproc_tempSensor_currentTemp", mode = DataOut)
 
     tc.TempSensor.TempSensorPeriodic_p_tcproc_tempSensor_Bridge(
-      id = 0,
+      id = bridgeId"0",
       name = "TempControlSoftwareSystem_p_Instance_tcproc_tempSensor",
       dispatchProtocol = Periodic(period = 1000),
       dispatchTriggers = None(),
@@ -23,11 +25,11 @@ object Arch {
     )
   }
   val TempControlSoftwareSystem_p_Instance_tcproc_fan : tc.CoolingFan.FanPeriodic_p_tcproc_fan_Bridge = {
-    val fanCmd = Port[CoolingFan.FanCmd.Type] (id = 1, name = "TempControlSoftwareSystem_p_Instance_tcproc_fan_fanCmd", mode = DataIn)
-    val fanAck = Port[CoolingFan.FanAck.Type] (id = 2, name = "TempControlSoftwareSystem_p_Instance_tcproc_fan_fanAck", mode = DataOut)
+    val fanCmd = Port[CoolingFan.FanCmd.Type] (id = portId"1", name = "TempControlSoftwareSystem_p_Instance_tcproc_fan_fanCmd", mode = DataIn)
+    val fanAck = Port[CoolingFan.FanAck.Type] (id = portId"2", name = "TempControlSoftwareSystem_p_Instance_tcproc_fan_fanAck", mode = DataOut)
 
     tc.CoolingFan.FanPeriodic_p_tcproc_fan_Bridge(
-      id = 1,
+      id = bridgeId"1",
       name = "TempControlSoftwareSystem_p_Instance_tcproc_fan",
       dispatchProtocol = Periodic(period = 1000),
       dispatchTriggers = None(),
@@ -37,13 +39,13 @@ object Arch {
     )
   }
   val TempControlSoftwareSystem_p_Instance_tcproc_tempControl : tc.TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl_Bridge = {
-    val currentTemp = Port[TempSensor.Temperature_i] (id = 3, name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl_currentTemp", mode = DataIn)
-    val fanAck = Port[CoolingFan.FanAck.Type] (id = 4, name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl_fanAck", mode = DataIn)
-    val setPoint = Port[TempControlSoftwareSystem.SetPoint_i] (id = 5, name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl_setPoint", mode = DataIn)
-    val fanCmd = Port[CoolingFan.FanCmd.Type] (id = 6, name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl_fanCmd", mode = DataOut)
+    val currentTemp = Port[TempSensor.Temperature_i] (id = portId"3", name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl_currentTemp", mode = DataIn)
+    val fanAck = Port[CoolingFan.FanAck.Type] (id = portId"4", name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl_fanAck", mode = DataIn)
+    val setPoint = Port[TempControlSoftwareSystem.SetPoint_i] (id = portId"5", name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl_setPoint", mode = DataIn)
+    val fanCmd = Port[CoolingFan.FanCmd.Type] (id = portId"6", name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl_fanCmd", mode = DataOut)
 
     tc.TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl_Bridge(
-      id = 2,
+      id = bridgeId"2",
       name = "TempControlSoftwareSystem_p_Instance_tcproc_tempControl",
       dispatchProtocol = Periodic(period = 1000),
       dispatchTriggers = None(),
@@ -55,11 +57,11 @@ object Arch {
     )
   }
   val TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface : tc.TempControlSoftwareSystem.OperatorInterfacePeriodic_p_tcproc_operatorInterface_Bridge = {
-    val currentTemp = Port[TempSensor.Temperature_i] (id = 7, name = "TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface_currentTemp", mode = DataIn)
-    val setPoint = Port[TempControlSoftwareSystem.SetPoint_i] (id = 8, name = "TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface_setPoint", mode = DataOut)
+    val currentTemp = Port[TempSensor.Temperature_i] (id = portId"7", name = "TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface_currentTemp", mode = DataIn)
+    val setPoint = Port[TempControlSoftwareSystem.SetPoint_i] (id = portId"8", name = "TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface_setPoint", mode = DataOut)
 
     tc.TempControlSoftwareSystem.OperatorInterfacePeriodic_p_tcproc_operatorInterface_Bridge(
-      id = 3,
+      id = bridgeId"3",
       name = "TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface",
       dispatchProtocol = Periodic(period = 1000),
       dispatchTriggers = None(),
@@ -72,13 +74,13 @@ object Arch {
   val ad : ArchitectureDescription = {
 
     ArchitectureDescription(
-      components = ISZ (TempControlSoftwareSystem_p_Instance_tcproc_tempSensor, TempControlSoftwareSystem_p_Instance_tcproc_fan, TempControlSoftwareSystem_p_Instance_tcproc_tempControl, TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface),
+      components = IS[Art.BridgeId, Bridge] (TempControlSoftwareSystem_p_Instance_tcproc_tempSensor, TempControlSoftwareSystem_p_Instance_tcproc_fan, TempControlSoftwareSystem_p_Instance_tcproc_tempControl, TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface),
 
-      connections = ISZ (Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_tempSensor.currentTemp, to = TempControlSoftwareSystem_p_Instance_tcproc_tempControl.currentTemp),
-                         Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_tempSensor.currentTemp, to = TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface.currentTemp),
-                         Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_fan.fanAck, to = TempControlSoftwareSystem_p_Instance_tcproc_tempControl.fanAck),
-                         Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_tempControl.fanCmd, to = TempControlSoftwareSystem_p_Instance_tcproc_fan.fanCmd),
-                         Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface.setPoint, to = TempControlSoftwareSystem_p_Instance_tcproc_tempControl.setPoint))
+      connections = IS[Art.ConnectionId, UConnection] (Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_tempSensor.currentTemp, to = TempControlSoftwareSystem_p_Instance_tcproc_tempControl.currentTemp),
+                                                       Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_tempSensor.currentTemp, to = TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface.currentTemp),
+                                                       Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_fan.fanAck, to = TempControlSoftwareSystem_p_Instance_tcproc_tempControl.fanAck),
+                                                       Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_tempControl.fanCmd, to = TempControlSoftwareSystem_p_Instance_tcproc_fan.fanCmd),
+                                                       Connection(from = TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface.setPoint, to = TempControlSoftwareSystem_p_Instance_tcproc_tempControl.setPoint))
     )
   }
 }
