@@ -312,7 +312,7 @@ object TestUtil {
         _check(proyekResults, "Proyek compilation failed")
       }
 
-      if (testOps.genSbtMill && keepGoing) {
+      if (testOps.genSbtMill && keepGoing && !(Os.isWin && isCI)) {
 
         if (performAction("sbt compile")) {
           val sbt = getCodegenDir / "bin" / os / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
