@@ -327,7 +327,7 @@ object TestUtil {
         }
 
         if (performAction("mill compile")) {
-          val mill = getCodegenDir / "bin" / os / "mill"
+          val mill = getCodegenDir / "bin" / os / (if (Os.isWin) "mill.bat" else "mill")
           if (mill.exists && keepGoing) {
             println("Compiling Slang project via mill ...")
             val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, ISZ(), None(), "mill-compile")
