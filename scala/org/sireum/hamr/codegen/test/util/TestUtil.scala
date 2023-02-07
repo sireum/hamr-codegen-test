@@ -175,7 +175,7 @@ object TestUtil {
     val rand = new Random(new Date().hashCode())
 
     def performAction(msg: String): B = {
-      val ret = !onGithub || rand.nextInt() % 2 == 0
+      val ret = T // !onGithub || rand.nextInt() % 2 == 0
       if (!ret) {
         println(s"Skipping: $msg")
       }
