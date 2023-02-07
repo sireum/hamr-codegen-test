@@ -53,6 +53,7 @@ class CodegenTest_CASE extends CodeGenTest {
     }
 
     val tests: ISZ[TestContainer] = ISZ(
+      gen("vm-with-multiple-threads", "model_m_impl_Instance.json", T, ISZ(sel4)),
 
       gen("uav_june_step6", "UAV_UAV_Impl_Instance.json", T, ISZ(linux, sel4)),
 

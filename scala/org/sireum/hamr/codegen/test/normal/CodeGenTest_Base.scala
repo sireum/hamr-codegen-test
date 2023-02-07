@@ -41,21 +41,6 @@ class CodeGenTest_Base extends CodeGenTest {
     }
 
     {
-      val name = "vm-with-multiple-threads"
-      val modelDir = modelsDir / name
-      val model = Some(modelDir / "aadl" / ".slang" / "model_m_impl_Instance.json")
-
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(
-          platform = platform,
-          devicesAsThreads = F,
-          excludeComponentImpl = T,
-          bitWidth = 32),
-        None(), None(), ISZ())
-    }
-
-    {
       val name = "wms"
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "wbs_wms_impl_Instance.json")
