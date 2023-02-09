@@ -103,25 +103,29 @@ trait CodeGenTest extends CodegenTestSuite {
     val rootTestOutputDir = rootResultDir / testName
     val expectedDir = rootTestOutputDir / "expected"
     val resultsDir = rootTestOutputDir / "results"
-    val slangOutputDir = resultsDir / testName
 
     assert(config.slangOutputDir.isEmpty, s"hmm, why custom output dir ${config.slangOutputDir}")
-
-    var testOps = config(
-      slangOutputDir = Some(slangOutputDir.canon.value),
-      aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value)
-    )
+    assert(config.slangOutputCDir.isEmpty, s"hmm, why custom c dir ${config.slangOutputCDir}")
+    assert(config.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${config.camkesOutputDir}")
 
     if (verbose) {
       println(s"Test Modes: ${testModes}")
     }
 
-    if (TestUtil.isSeL4(testOps.platform)) {
-      assert(testOps.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${config.camkesOutputDir}")
+    var testOps = config(
+      aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value)
+    )
 
-      testOps = testOps(
-        slangOutputDir = Some(s"${slangOutputDir}/slang-embedded"),
-        camkesOutputDir = testOps.slangOutputDir)
+    if (TestUtil.isSlang(testOps.platform)) {
+      testOps = testOps(slangOutputDir = Some((resultsDir / "slang").canon.value))
+    }
+
+    if (TestUtil.isLinux(testOps.platform)) {
+      testOps = testOps(slangOutputCDir = Some((resultsDir / "c").canon.value))
+    }
+
+    if (TestUtil.isSeL4(testOps.platform)) {
+      testOps = testOps(camkesOutputDir = Some((resultsDir / "camkes").canon.value))
     }
 
     rootTestOutputDir.removeAll()
