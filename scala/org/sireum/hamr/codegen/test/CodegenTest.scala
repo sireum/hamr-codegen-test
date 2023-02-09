@@ -113,7 +113,8 @@ trait CodeGenTest extends CodegenTestSuite {
     }
 
     var testOps = config(
-      aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value)
+      aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value),
+      packageName = if (config.packageName.nonEmpty) config.packageName else Some(testName)
     )
 
     if (TestUtil.isSlang(testOps.platform)) {
