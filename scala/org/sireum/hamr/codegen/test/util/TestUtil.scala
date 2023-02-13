@@ -322,7 +322,7 @@ object TestUtil {
 
       if (testOps.genSbtMill && keepGoing) {
 
-        if (performAction("sbt compile")) {
+        if (performAction("sbt compile") && !(Os.isWin && isCI)) {
           val sbt = getCodegenDir / "bin" / os / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
           if (sbt.exists) {
             println("Compiling Slang project via sbt ...")
