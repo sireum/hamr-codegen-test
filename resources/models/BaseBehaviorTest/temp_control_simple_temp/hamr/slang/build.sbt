@@ -20,9 +20,10 @@
 //   sbt "set test in assembly := {}" assembly
 // on Windows
 //
-// Sireum IVE:
+// Sireum IVE: Installation instructions available at https://sireum.org/getting-started/
+//
 //   In IVE select 'File > Open ...' and navigate to the directory containing
-//   this file then click 'OK'.  To install Sireum IVE see https://github.com/sireum/kekinian#installing
+//   this file then click 'OK'.
 //
 //   To run the demo from within Sireum IVE:
 //     Right click src/main/architecture/TempControlSimpleTemp/Demo.scala and choose "Run 'Demo'"
@@ -52,8 +53,8 @@ val sireumScalacVersion = "4.20230203.d1cc695"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/1692a8a
-val kekinianVersion = "1692a8a"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/44fad9b
+val kekinianVersion = "44fad9b"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"

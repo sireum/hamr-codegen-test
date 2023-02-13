@@ -3,15 +3,17 @@ import scalalib._
 
 // Example mill build -- the contents of this file will not be overwritten.
 //
-// mill can be obtained following instructions at https://github.com/sireum/kekinian#slang-app-example-mill-project
+// A custom mill build for Sireum can be obtained from https://github.com/sireum/rolling/releases/tag/mill
+// On Windows, rename 'mill' to 'mill.bat'
 //
 // To run the demo from the command line:
-//   $SIREUM_HOME/bin/mill a.run
+//   mill a.run
 //
 // To run the example unit tests:
-//   $SIREUM_HOME/bin/mill a.tests
+//   mill a.tests
 //
-// Sireum IVE:
+// Sireum IVE: Installation instructions available at https://sireum.org/getting-started/
+//
 //   First cd to the directory containing this file and execute the following:
 //
 //     $SIREUM_HOME/bin/sireum tools ivegen -f -m mill -n slang ../
@@ -48,8 +50,8 @@ trait SlangEmbeddedModule extends ScalaModule {
 
 
   // refer to https://github.com/sireum/kekinian/releases to get the latest
-  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/1692a8a
-  val kekinianVersion = "1692a8a"
+  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/44fad9b
+  val kekinianVersion = "44fad9b"
 
 
   val inspectorVersion = "0.6-SNAPSHOT"

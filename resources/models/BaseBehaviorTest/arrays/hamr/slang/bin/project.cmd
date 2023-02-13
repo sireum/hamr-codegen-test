@@ -18,7 +18,7 @@ exit /B %errorlevel%
 
 // Example Sireum Proyek build definitions -- the contents of this file will not be overwritten
 //
-// To install Sireum (Proyek and IVE) see https://github.com/sireum/kekinian#installing
+// To install Sireum (Proyek and IVE) see https://sireum.org/getting-started/
 //
 // The following commands should be executed in the parent of the 'bin' directory.
 //
@@ -37,7 +37,8 @@ exit /B %errorlevel%
 //
 // Sireum IVE:
 //
-//   If you prevented HAMR from running Proyek IVE then first generate the IVE project:
+//   Create the IVE project if Codegen was not run locally or if its no-proyek-ive
+//   option was used:
 //     sireum proyek ive .
 //
 //   Then in IVE select 'File > Open ...' and navigate to the parent of the
