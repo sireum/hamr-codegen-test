@@ -6,7 +6,7 @@
 // Transpiled signature of the Slang variable a.Schedulers.roundRobinSchedule
 // in architecture/a/Schedulers.scala.  This weak function declaration allows
 // a_ScheduleProviderI_getRoundRobinOrder to detect whether the Slang variable was deleted
-__attribute__((weak)) IS_7E8796 a_Schedulers_roundRobinSchedule(STACK_FRAME_ONLY);
+__attribute__((weak)) IS_FDDCB6 a_Schedulers_roundRobinSchedule(STACK_FRAME_ONLY);
 
 volatile sig_atomic_t shouldStop = 0;
 
@@ -15,9 +15,9 @@ volatile sig_atomic_t shouldStop = 0;
  * defined in architecture/a/Schedulers.scala
  *
  * @param result an empty schedule.  Add components in the order you want them to be dispatched.
- *               IS_7E8796=ISZ[art.Bridge], i.e. an immutable sequence of art.Bridge
+ *               IS_FDDCB6=ISZ[art.Art.BridgeId], i.e. an immutable sequence of art.Bridge
  */
-void a_ScheduleProviderI_getRoundRobinOrder(STACK_FRAME IS_7E8796 result) {
+void a_ScheduleProviderI_getRoundRobinOrder(STACK_FRAME IS_FDDCB6 result) {
   DeclNewStackFrame(caller, "round_robin.c", "", "a_ScheduleProviderI_getRoundRobinOrder", 0);
 
   if(a_Schedulers_roundRobinSchedule) {
@@ -25,8 +25,8 @@ void a_ScheduleProviderI_getRoundRobinOrder(STACK_FRAME IS_7E8796 result) {
     printf("  a_ScheduleProviderI_getRoundRobinOrder located in round_robin.c\n");
     printf("to supply your own\n");
 
-    IS_7E8796 order = a_Schedulers_roundRobinSchedule(SF_LAST);
-    memcpy(result->value, order->value, sizeof(union art_Bridge) * order->size);
+    IS_FDDCB6 order = a_Schedulers_roundRobinSchedule(SF_LAST);
+    memcpy(result->value, order->value, sizeof(art_Art_BridgeId) * order->size);
     result->size = order->size;
 
   } else {
@@ -35,8 +35,8 @@ void a_ScheduleProviderI_getRoundRobinOrder(STACK_FRAME IS_7E8796 result) {
 
     // example schedule
     int i = 0;
-    IS_7E8796_up(result, i++, (art_Bridge) a_Arch_PC_Sys_Impl_Instance_proc_producer(SF_LAST));
-    IS_7E8796_up(result, i++, (art_Bridge) a_Arch_PC_Sys_Impl_Instance_proc_consumer(SF_LAST));
+    IS_FDDCB6_up(result, i++, (art_Art_BridgeId) a_Arch_PC_Sys_Impl_Instance_proc_producer(SF_LAST)->id);
+    IS_FDDCB6_up(result, i++, (art_Art_BridgeId) a_Arch_PC_Sys_Impl_Instance_proc_consumer(SF_LAST)->id);
 
     result->size = i;
   }

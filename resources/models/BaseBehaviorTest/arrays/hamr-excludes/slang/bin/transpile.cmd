@@ -1,10 +1,10 @@
 ::/*#! 2> /dev/null                                   #
 @ 2>/dev/null # 2>nul & echo off & goto BOF           #
-if [ -z ${SIREUM_HOME} ]; then                       #
+if [ -z ${SIREUM_HOME} ]; then                        #
   echo "Please set SIREUM_HOME env var"               #
   exit -1                                             #
 fi                                                    #
-exec ${SIREUM_HOME}/bin/sireum slang run "$0" "$@" #
+exec ${SIREUM_HOME}/bin/sireum slang run "$0" "$@"    #
 :BOF
 setlocal
 if not defined SIREUM_HOME (
@@ -23,9 +23,13 @@ import org.sireum._
 // If you want to make changes to this script, make a copy of it and edit that version
 
 // Origin of custom sequence sizes
+//   MS[Z,Option[art.Bridge]]=2 - Needed for Art.bridges
 //   IS[Z,String]=3 - Needed for the CLI arguments to the Demo Slang app
-//   IS[Z,(art.Art.PortId, art.ArtSlangMessage)]=9 - Needed for the Map[PortId, ArgSlangMessage] in ArtNativeSlang
-//   IS[Z,art.Bridge]=2 - Needed for the example round robin schedule in Schedulers
+//   IS[Z,art.Art.PortId]=3 - Needed for the sending and receiving of messages in ART and the bridges
+//   IS[Z,art.UPort]=3 - Needed for producer's dataOuts ports
+//   MS[Z,art.UPort]=3 - Needed for the ops.ISZOps(sorted).tail call used by ArtNativeSlang
+//   IS[Z,(Z, art.ArtSlangMessage)]=9 - Needed for the backing store of Map[Z, ArgSlangMessage] in ArtNativeSlang
+//   IS[Z,art.Art.BridgeId]=2 - Needed for the example round robin schedule in Schedulers
 //   IS[Z,art.scheduling.static.Schedule.Slot]=2 - Needed for the example static schedule in Schedulers
 
 val SCRIPT_HOME: Os.Path = Os.slashDir
@@ -45,8 +49,8 @@ var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) mat
         "--bits", "64",
         "--string-size", "256",
         "--sequence-size", "4",
-        "--sequence", s"IS[Z,String]=3",
-        "--constants", s"art.Art.maxComponents=2;art.Art.maxPorts=9",
+        "--sequence", s"MS[Z,Option[art.Bridge]]=2;IS[Z,String]=3;IS[Z,art.Art.PortId]=3;IS[Z,art.UPort]=3",
+        "--constants", s"art.Art.numComponents=2;art.Art.numPorts=9;art.Art.numConnections=3",
         "--forward", "art.ArtNative=a.ArtNix,a.Platform=a.PlatformNix",
         "--stack-size", "16*1024*1024",
         "--stable-type-id",
@@ -63,8 +67,8 @@ var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) mat
         "--bits", "64",
         "--string-size", "256",
         "--sequence-size", "4",
-        "--sequence", s"IS[Z,String]=3;IS[Z,(art.Art.PortId, art.ArtSlangMessage)]=9;IS[Z,art.Bridge]=2;IS[Z,art.scheduling.static.Schedule.Slot]=2",
-        "--constants", s"art.Art.maxComponents=2;art.Art.maxPorts=9",
+        "--sequence", s"MS[Z,Option[art.Bridge]]=2;IS[Z,String]=3;IS[Z,art.Art.PortId]=3;IS[Z,art.UPort]=3;MS[Z,art.UPort]=3;IS[Z,(Z, art.ArtSlangMessage)]=9;IS[Z,art.Art.BridgeId]=2;IS[Z,art.scheduling.static.Schedule.Slot]=2",
+        "--constants", s"art.Art.numComponents=2;art.Art.numPorts=9;art.Art.numConnections=3",
         "--forward", "art.ArtNative=art.ArtNativeSlang",
         "--stack-size", "16*1024*1024",
         "--stable-type-id",
@@ -84,7 +88,9 @@ var project: ISZ[String] = Cli(Os.pathSepChar).parseTranspile(Os.cliArgs, 0) mat
 println("Initializing runtime library ...")
 Sireum.initRuntimeLibrary()
 
-Sireum.run(ISZ[String]("slang", "transpilers", "c") ++ project)
+val result = Sireum.run(ISZ[String]("slang", "transpilers", "c") ++ project)
+
+Os.exit(result)
 
 import org.sireum._
 

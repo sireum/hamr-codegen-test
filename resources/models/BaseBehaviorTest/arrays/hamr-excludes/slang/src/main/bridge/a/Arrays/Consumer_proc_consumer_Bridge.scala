@@ -13,7 +13,7 @@ import a.Arrays.{Consumer_proc_consumer => component}
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
+  val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   coordinates: Port[Arrays.Array_of_Coordinates],
   vector_of_coordinates: Port[Arrays.Vector_of_Coordinates],
@@ -21,19 +21,15 @@ import a.Arrays.{Consumer_proc_consumer => component}
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = IS[Art.PortId, art.UPort](coordinates,
-                                    vector_of_coordinates,
-                                    integers),
+    dataIns = ISZ[art.UPort](),
 
-    dataIns = IS[Art.PortId, art.UPort](),
+    dataOuts = ISZ[art.UPort](),
 
-    dataOuts = IS[Art.PortId, art.UPort](),
+    eventIns = ISZ[art.UPort](coordinates,
+                              vector_of_coordinates,
+                              integers),
 
-    eventIns = IS[Art.PortId, art.UPort](coordinates,
-                                         vector_of_coordinates,
-                                         integers),
-
-    eventOuts = IS[Art.PortId, art.UPort]()
+    eventOuts = ISZ[art.UPort]()
   )
 
   val initialization_api : Consumer_Initialization_Api = {
@@ -82,19 +78,19 @@ object Consumer_proc_consumer_Bridge {
     coordinates_Id : Art.PortId,
     vector_of_coordinates_Id : Art.PortId,
     integers_Id : Art.PortId,
-    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
+    dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: Consumer_Initialization_Api,
     operational_api: Consumer_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataInPortIds: ISZ[Art.PortId] = IS()
 
-    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS(coordinates_Id,
-                                                        vector_of_coordinates_Id,
-                                                        integers_Id)
+    val eventInPortIds: ISZ[Art.PortId] = IS(coordinates_Id,
+                                             vector_of_coordinates_Id,
+                                             integers_Id)
 
-    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
 
-    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val eventOutPortIds: ISZ[Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: Consumer_Initialization_Api): Unit = {}
@@ -104,9 +100,9 @@ object Consumer_proc_consumer_Bridge {
 
     def compute(): Unit = {
       // transpiler friendly filter
-      def filter(receivedEvents: IS[Art.PortId, Art.PortId], triggers: IS[Art.PortId, Art.PortId]): IS[Art.PortId, Art.PortId] = {
-        var r = IS[Art.PortId, Art.PortId]()
-        val opsTriggers = art.ops.ISPOps(triggers)
+      def filter(receivedEvents: ISZ[Art.PortId], triggers: ISZ[Art.PortId]): ISZ[Art.PortId] = {
+        var r = ISZ[Art.PortId]()
+        val opsTriggers = ops.ISZOps(triggers)
         for(e <- receivedEvents) {
           if(opsTriggers.contains(e)) {
             r = r :+ e
@@ -119,7 +115,7 @@ object Consumer_proc_consumer_Bridge {
       val EventTriggered(receivedEvents) = Art.dispatchStatus(Consumer_proc_consumer_BridgeId)
 
       // remove non-dispatching event ports
-      val dispatchableEventPorts: IS[Art.PortId, Art.PortId] =
+      val dispatchableEventPorts: ISZ[Art.PortId] =
         if(dispatchTriggers.isEmpty) receivedEvents
         else filter(receivedEvents, dispatchTriggers.get)
 
@@ -179,9 +175,9 @@ object Consumer_proc_consumer_Bridge {
     override
     def testCompute(): Unit = {
       // transpiler friendly filter
-      def filter(receivedEvents: IS[Art.PortId, Art.PortId], triggers: IS[Art.PortId, Art.PortId]): IS[Art.PortId, Art.PortId] = {
-        var r = IS[Art.PortId, Art.PortId]()
-        val opsTriggers = art.ops.ISPOps(triggers)
+      def filter(receivedEvents: ISZ[Art.PortId], triggers: ISZ[Art.PortId]): ISZ[Art.PortId] = {
+        var r = ISZ[Art.PortId]()
+        val opsTriggers = ops.ISZOps(triggers)
         for(e <- receivedEvents) {
           if(opsTriggers.contains(e)) {
             r = r :+ e
@@ -194,7 +190,7 @@ object Consumer_proc_consumer_Bridge {
       val EventTriggered(receivedEvents) = Art.dispatchStatus(Consumer_proc_consumer_BridgeId)
 
       // remove non-dispatching event ports
-      val dispatchableEventPorts: IS[Art.PortId, Art.PortId] =
+      val dispatchableEventPorts: ISZ[Art.PortId] =
         if(dispatchTriggers.isEmpty) receivedEvents
         else filter(receivedEvents, dispatchTriggers.get)
 

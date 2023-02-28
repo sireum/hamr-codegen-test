@@ -13,7 +13,7 @@ import bc.BuildingControl.{TempControl_i_tcp_tempControl => component}
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
+  val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   currentTemp: Port[BuildingControl.Temperature_impl],
   fanAck: Port[BuildingControl.FanAck.Type],
@@ -23,21 +23,15 @@ import bc.BuildingControl.{TempControl_i_tcp_tempControl => component}
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = IS[Art.PortId, art.UPort](currentTemp,
-                                    fanAck,
-                                    setPoint,
-                                    fanCmd,
-                                    tempChanged),
+    dataIns = ISZ[art.UPort](currentTemp),
 
-    dataIns = IS[Art.PortId, art.UPort](currentTemp),
+    dataOuts = ISZ[art.UPort](),
 
-    dataOuts = IS[Art.PortId, art.UPort](),
+    eventIns = ISZ[art.UPort](fanAck,
+                              setPoint,
+                              tempChanged),
 
-    eventIns = IS[Art.PortId, art.UPort](fanAck,
-                                         setPoint,
-                                         tempChanged),
-
-    eventOuts = IS[Art.PortId, art.UPort](fanCmd)
+    eventOuts = ISZ[art.UPort](fanCmd)
   )
 
   val initialization_api : TempControl_i_Initialization_Api = {
@@ -94,19 +88,19 @@ object TempControl_i_tcp_tempControl_Bridge {
     setPoint_Id : Art.PortId,
     fanCmd_Id : Art.PortId,
     tempChanged_Id : Art.PortId,
-    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
+    dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: TempControl_i_Initialization_Api,
     operational_api: TempControl_i_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS(currentTemp_Id)
+    val dataInPortIds: ISZ[Art.PortId] = IS(currentTemp_Id)
 
-    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS(fanAck_Id,
-                                                        setPoint_Id,
-                                                        tempChanged_Id)
+    val eventInPortIds: ISZ[Art.PortId] = IS(fanAck_Id,
+                                             setPoint_Id,
+                                             tempChanged_Id)
 
-    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
 
-    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS(fanCmd_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = IS(fanCmd_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: TempControl_i_Initialization_Api): Unit = {}
@@ -116,9 +110,9 @@ object TempControl_i_tcp_tempControl_Bridge {
 
     def compute(): Unit = {
       // transpiler friendly filter
-      def filter(receivedEvents: IS[Art.PortId, Art.PortId], triggers: IS[Art.PortId, Art.PortId]): IS[Art.PortId, Art.PortId] = {
-        var r = IS[Art.PortId, Art.PortId]()
-        val opsTriggers = art.ops.ISPOps(triggers)
+      def filter(receivedEvents: ISZ[Art.PortId], triggers: ISZ[Art.PortId]): ISZ[Art.PortId] = {
+        var r = ISZ[Art.PortId]()
+        val opsTriggers = ops.ISZOps(triggers)
         for(e <- receivedEvents) {
           if(opsTriggers.contains(e)) {
             r = r :+ e
@@ -131,7 +125,7 @@ object TempControl_i_tcp_tempControl_Bridge {
       val EventTriggered(receivedEvents) = Art.dispatchStatus(TempControl_i_tcp_tempControl_BridgeId)
 
       // remove non-dispatching event ports
-      val dispatchableEventPorts: IS[Art.PortId, Art.PortId] =
+      val dispatchableEventPorts: ISZ[Art.PortId] =
         if(dispatchTriggers.isEmpty) receivedEvents
         else filter(receivedEvents, dispatchTriggers.get)
 
@@ -189,9 +183,9 @@ object TempControl_i_tcp_tempControl_Bridge {
     override
     def testCompute(): Unit = {
       // transpiler friendly filter
-      def filter(receivedEvents: IS[Art.PortId, Art.PortId], triggers: IS[Art.PortId, Art.PortId]): IS[Art.PortId, Art.PortId] = {
-        var r = IS[Art.PortId, Art.PortId]()
-        val opsTriggers = art.ops.ISPOps(triggers)
+      def filter(receivedEvents: ISZ[Art.PortId], triggers: ISZ[Art.PortId]): ISZ[Art.PortId] = {
+        var r = ISZ[Art.PortId]()
+        val opsTriggers = ops.ISZOps(triggers)
         for(e <- receivedEvents) {
           if(opsTriggers.contains(e)) {
             r = r :+ e
@@ -204,7 +198,7 @@ object TempControl_i_tcp_tempControl_Bridge {
       val EventTriggered(receivedEvents) = Art.dispatchStatus(TempControl_i_tcp_tempControl_BridgeId)
 
       // remove non-dispatching event ports
-      val dispatchableEventPorts: IS[Art.PortId, Art.PortId] =
+      val dispatchableEventPorts: ISZ[Art.PortId] =
         if(dispatchTriggers.isEmpty) receivedEvents
         else filter(receivedEvents, dispatchTriggers.get)
 

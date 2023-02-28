@@ -9,21 +9,21 @@ import org.sireum._
 
   "phantom" // generate AIR model via phantom, otherwise pre-generated version will be used
 
-  "transpile" // transpile linux and sel4 projects
+  "tipe" // run proyek tipe on Slang projects
 
   "ive" // generate ive project info for Slang projects
 
   "compile" // compile Slang and Linux projects
 
+  "logika" // run proyek logika on Slang projects
+
+  "generated_unit_tests" // run unit tests on generated Slang projects
+
+  "transpile" // transpile linux and sel4 projects
+
   "camkes" // run CAmkES/ninja, also transpiles seL4 projects
 
   "smt2" // run smt2 solver on generated refinement proofs
-
-  "logika" // run proyek logika on Slang projects
-
-  "tipe" // run proyek tipe on Slang projects
-
-  "generated_unit_tests" // run unit tests on generated Slang projects
 
   "verbose"
 }

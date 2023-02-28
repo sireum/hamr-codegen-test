@@ -13,23 +13,20 @@ import bc.BuildingControl.{Fan_i_tcp_fan => component}
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
+  val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   fanCmd: Port[BuildingControl.FanCmd.Type],
   fanAck: Port[BuildingControl.FanAck.Type]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = IS[Art.PortId, art.UPort](fanCmd,
-                                    fanAck),
+    dataIns = ISZ[art.UPort](),
 
-    dataIns = IS[Art.PortId, art.UPort](),
+    dataOuts = ISZ[art.UPort](),
 
-    dataOuts = IS[Art.PortId, art.UPort](),
+    eventIns = ISZ[art.UPort](fanCmd),
 
-    eventIns = IS[Art.PortId, art.UPort](fanCmd),
-
-    eventOuts = IS[Art.PortId, art.UPort](fanAck)
+    eventOuts = ISZ[art.UPort](fanAck)
   )
 
   val initialization_api : Fan_i_Initialization_Api = {
@@ -74,17 +71,17 @@ object Fan_i_tcp_fan_Bridge {
     Fan_i_tcp_fan_BridgeId : Art.BridgeId,
     fanCmd_Id : Art.PortId,
     fanAck_Id : Art.PortId,
-    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
+    dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: Fan_i_Initialization_Api,
     operational_api: Fan_i_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataInPortIds: ISZ[Art.PortId] = IS()
 
-    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS(fanCmd_Id)
+    val eventInPortIds: ISZ[Art.PortId] = IS(fanCmd_Id)
 
-    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
 
-    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS(fanAck_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = IS(fanAck_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: Fan_i_Initialization_Api): Unit = {}
@@ -94,9 +91,9 @@ object Fan_i_tcp_fan_Bridge {
 
     def compute(): Unit = {
       // transpiler friendly filter
-      def filter(receivedEvents: IS[Art.PortId, Art.PortId], triggers: IS[Art.PortId, Art.PortId]): IS[Art.PortId, Art.PortId] = {
-        var r = IS[Art.PortId, Art.PortId]()
-        val opsTriggers = art.ops.ISPOps(triggers)
+      def filter(receivedEvents: ISZ[Art.PortId], triggers: ISZ[Art.PortId]): ISZ[Art.PortId] = {
+        var r = ISZ[Art.PortId]()
+        val opsTriggers = ops.ISZOps(triggers)
         for(e <- receivedEvents) {
           if(opsTriggers.contains(e)) {
             r = r :+ e
@@ -109,7 +106,7 @@ object Fan_i_tcp_fan_Bridge {
       val EventTriggered(receivedEvents) = Art.dispatchStatus(Fan_i_tcp_fan_BridgeId)
 
       // remove non-dispatching event ports
-      val dispatchableEventPorts: IS[Art.PortId, Art.PortId] =
+      val dispatchableEventPorts: ISZ[Art.PortId] =
         if(dispatchTriggers.isEmpty) receivedEvents
         else filter(receivedEvents, dispatchTriggers.get)
 
@@ -157,9 +154,9 @@ object Fan_i_tcp_fan_Bridge {
     override
     def testCompute(): Unit = {
       // transpiler friendly filter
-      def filter(receivedEvents: IS[Art.PortId, Art.PortId], triggers: IS[Art.PortId, Art.PortId]): IS[Art.PortId, Art.PortId] = {
-        var r = IS[Art.PortId, Art.PortId]()
-        val opsTriggers = art.ops.ISPOps(triggers)
+      def filter(receivedEvents: ISZ[Art.PortId], triggers: ISZ[Art.PortId]): ISZ[Art.PortId] = {
+        var r = ISZ[Art.PortId]()
+        val opsTriggers = ops.ISZOps(triggers)
         for(e <- receivedEvents) {
           if(opsTriggers.contains(e)) {
             r = r :+ e
@@ -172,7 +169,7 @@ object Fan_i_tcp_fan_Bridge {
       val EventTriggered(receivedEvents) = Art.dispatchStatus(Fan_i_tcp_fan_BridgeId)
 
       // remove non-dispatching event ports
-      val dispatchableEventPorts: IS[Art.PortId, Art.PortId] =
+      val dispatchableEventPorts: ISZ[Art.PortId] =
         if(dispatchTriggers.isEmpty) receivedEvents
         else filter(receivedEvents, dispatchTriggers.get)
 

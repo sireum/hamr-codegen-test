@@ -13,7 +13,7 @@ import a.Arrays.{Producer_proc_producer => component}
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
+  val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   coordinates: Port[Arrays.Array_of_Coordinates],
   vector_of_coordinates: Port[Arrays.Vector_of_Coordinates],
@@ -21,19 +21,15 @@ import a.Arrays.{Producer_proc_producer => component}
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = IS[Art.PortId, art.UPort](coordinates,
-                                    vector_of_coordinates,
-                                    integers),
+    dataIns = ISZ[art.UPort](),
 
-    dataIns = IS[Art.PortId, art.UPort](),
+    dataOuts = ISZ[art.UPort](),
 
-    dataOuts = IS[Art.PortId, art.UPort](),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = IS[Art.PortId, art.UPort](),
-
-    eventOuts = IS[Art.PortId, art.UPort](coordinates,
-                                          vector_of_coordinates,
-                                          integers)
+    eventOuts = ISZ[art.UPort](coordinates,
+                               vector_of_coordinates,
+                               integers)
   )
 
   val initialization_api : Producer_Initialization_Api = {
@@ -82,19 +78,19 @@ object Producer_proc_producer_Bridge {
     coordinates_Id : Art.PortId,
     vector_of_coordinates_Id : Art.PortId,
     integers_Id : Art.PortId,
-    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
+    dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: Producer_Initialization_Api,
     operational_api: Producer_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataInPortIds: ISZ[Art.PortId] = IS()
 
-    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
 
-    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS(coordinates_Id,
-                                                         vector_of_coordinates_Id,
-                                                         integers_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = IS(coordinates_Id,
+                                              vector_of_coordinates_Id,
+                                              integers_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: Producer_Initialization_Api): Unit = {}

@@ -13,7 +13,7 @@ import tc.TempControlSoftwareSystem.{TempControlPeriodic_p_tcproc_tempControl =>
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
+  val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   currentTemp: Port[TempSensor.Temperature_i],
   fanAck: Port[CoolingFan.FanAck.Type],
@@ -22,20 +22,15 @@ import tc.TempControlSoftwareSystem.{TempControlPeriodic_p_tcproc_tempControl =>
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = IS[Art.PortId, art.UPort](currentTemp,
-                                    fanAck,
-                                    setPoint,
-                                    fanCmd),
+    dataIns = ISZ[art.UPort](currentTemp,
+                             fanAck,
+                             setPoint),
 
-    dataIns = IS[Art.PortId, art.UPort](currentTemp,
-                                        fanAck,
-                                        setPoint),
+    dataOuts = ISZ[art.UPort](fanCmd),
 
-    dataOuts = IS[Art.PortId, art.UPort](fanCmd),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = IS[Art.PortId, art.UPort](),
-
-    eventOuts = IS[Art.PortId, art.UPort]()
+    eventOuts = ISZ[art.UPort]()
   )
 
   val initialization_api : TempControlPeriodic_p_Initialization_Api = {
@@ -88,19 +83,19 @@ object TempControlPeriodic_p_tcproc_tempControl_Bridge {
     fanAck_Id : Art.PortId,
     setPoint_Id : Art.PortId,
     fanCmd_Id : Art.PortId,
-    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
+    dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: TempControlPeriodic_p_Initialization_Api,
     operational_api: TempControlPeriodic_p_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS(currentTemp_Id,
-                                                       fanAck_Id,
-                                                       setPoint_Id)
+    val dataInPortIds: ISZ[Art.PortId] = IS(currentTemp_Id,
+                                            fanAck_Id,
+                                            setPoint_Id)
 
-    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS(fanCmd_Id)
+    val dataOutPortIds: ISZ[Art.PortId] = IS(fanCmd_Id)
 
-    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val eventOutPortIds: ISZ[Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: TempControlPeriodic_p_Initialization_Api): Unit = {}

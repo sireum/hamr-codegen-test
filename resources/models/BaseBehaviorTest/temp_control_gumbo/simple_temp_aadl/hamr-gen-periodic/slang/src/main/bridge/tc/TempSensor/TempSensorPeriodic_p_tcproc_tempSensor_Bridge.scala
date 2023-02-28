@@ -13,21 +13,19 @@ import tc.TempSensor.{TempSensorPeriodic_p_tcproc_tempSensor => component}
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
+  val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   currentTemp: Port[TempSensor.Temperature_i]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = IS[Art.PortId, art.UPort](currentTemp),
+    dataIns = ISZ[art.UPort](),
 
-    dataIns = IS[Art.PortId, art.UPort](),
+    dataOuts = ISZ[art.UPort](currentTemp),
 
-    dataOuts = IS[Art.PortId, art.UPort](currentTemp),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = IS[Art.PortId, art.UPort](),
-
-    eventOuts = IS[Art.PortId, art.UPort]()
+    eventOuts = ISZ[art.UPort]()
   )
 
   val initialization_api : TempSensorPeriodic_p_Initialization_Api = {
@@ -68,17 +66,17 @@ object TempSensorPeriodic_p_tcproc_tempSensor_Bridge {
   @datatype class EntryPoints(
     TempSensorPeriodic_p_tcproc_tempSensor_BridgeId : Art.BridgeId,
     currentTemp_Id : Art.PortId,
-    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
+    dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: TempSensorPeriodic_p_Initialization_Api,
     operational_api: TempSensorPeriodic_p_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataInPortIds: ISZ[Art.PortId] = IS()
 
-    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS(currentTemp_Id)
+    val dataOutPortIds: ISZ[Art.PortId] = IS(currentTemp_Id)
 
-    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val eventOutPortIds: ISZ[Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: TempSensorPeriodic_p_Initialization_Api): Unit = {}

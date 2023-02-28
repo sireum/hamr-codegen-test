@@ -13,7 +13,7 @@ import TempControlSimpleTemp.TempControlSoftwareSystem.{OperatorInterface_i_tcpr
   val id: Art.BridgeId,
   val name: String,
   val dispatchProtocol: DispatchPropertyProtocol,
-  val dispatchTriggers: Option[IS[Art.PortId, Art.PortId]],
+  val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   currentTemp: Port[TempSensor.Temperature_i],
   setPoint: Port[TempControlSoftwareSystem.SetPoint_i],
@@ -21,17 +21,13 @@ import TempControlSimpleTemp.TempControlSoftwareSystem.{OperatorInterface_i_tcpr
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = IS[Art.PortId, art.UPort](currentTemp,
-                                    setPoint,
-                                    tempChanged),
+    dataIns = ISZ[art.UPort](currentTemp),
 
-    dataIns = IS[Art.PortId, art.UPort](currentTemp),
+    dataOuts = ISZ[art.UPort](),
 
-    dataOuts = IS[Art.PortId, art.UPort](),
+    eventIns = ISZ[art.UPort](tempChanged),
 
-    eventIns = IS[Art.PortId, art.UPort](tempChanged),
-
-    eventOuts = IS[Art.PortId, art.UPort](setPoint)
+    eventOuts = ISZ[art.UPort](setPoint)
   )
 
   val initialization_api : OperatorInterface_i_Initialization_Api = {
@@ -80,17 +76,17 @@ object OperatorInterface_i_tcproc_operatorInterface_Bridge {
     currentTemp_Id : Art.PortId,
     setPoint_Id : Art.PortId,
     tempChanged_Id : Art.PortId,
-    dispatchTriggers : Option[IS[Art.PortId, Art.PortId]],
+    dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: OperatorInterface_i_Initialization_Api,
     operational_api: OperatorInterface_i_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: IS[Art.PortId, Art.PortId] = IS(currentTemp_Id)
+    val dataInPortIds: ISZ[Art.PortId] = IS(currentTemp_Id)
 
-    val eventInPortIds: IS[Art.PortId, Art.PortId] = IS(tempChanged_Id)
+    val eventInPortIds: ISZ[Art.PortId] = IS(tempChanged_Id)
 
-    val dataOutPortIds: IS[Art.PortId, Art.PortId] = IS()
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
 
-    val eventOutPortIds: IS[Art.PortId, Art.PortId] = IS(setPoint_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = IS(setPoint_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: OperatorInterface_i_Initialization_Api): Unit = {}
