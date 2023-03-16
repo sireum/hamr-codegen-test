@@ -7,10 +7,10 @@ import scalalib._
 // On Windows, rename 'mill' to 'mill.bat'
 //
 // To run the demo from the command line:
-//   mill a.run
+//   mill bc.run
 //
 // To run the example unit tests:
-//   mill a.tests
+//   mill bc.tests
 //
 // Sireum IVE: Installation instructions available at https://sireum.org/getting-started/
 //
@@ -22,7 +22,7 @@ import scalalib._
 //   containing this file then click 'OK'.  To have the codebase and its
 //   test suites recompiled upon changes, run:
 //
-//     $SIREUM_HOME/bin/mill -w a.tests.compile
+//     $SIREUM_HOME/bin/mill -w bc.tests.compile
 //
 // Visual Studio Code:
 //   Follow Sireum Kekinian's instructions for setting up a development
@@ -31,7 +31,7 @@ import scalalib._
 //   mill build when asked.
 
 
-object `a` extends slangEmbeddedProject
+object `bc` extends slangEmbeddedProject
 
 trait SlangEmbeddedModule extends ScalaModule {
 
@@ -85,7 +85,7 @@ trait SlangEmbeddedModule extends ScalaModule {
 
   override def repositories = super.repositories :+ coursier.Repositories.jitpack
 
-  override def mainClass = T { Some("a.Demo") }
+  override def mainClass = T { Some("bc.Demo") }
 
   implicit def osPath2PathRef(p: os.Path): PathRef = PathRef(p)
 }
@@ -119,7 +119,7 @@ trait slangEmbeddedProject extends SlangEmbeddedModule {
 
 trait slangEmbeddedInspectorProject extends slangEmbeddedProject {
 
-  override def mainClass = T { Some("a.InspectorDemo") }
+  override def mainClass = T { Some("bc.InspectorDemo") }
 
   override def contributedSources =
     super.contributedSources :+ millSourcePath / os.up / "src" / "main" / "inspector"

@@ -75,7 +75,7 @@ object TestUtil {
                rootAadlDir: Os.Path, testModes: ISZ[TestMode.Type], testName: String, verbose: B): Aadl = {
     val s = rootAadlDir / ".slang"
     val cands = s.list.filter(f => f.name.native.endsWith("json"))
-    assert(cands.size == 1, s": Inspect json files in ${s.value}")
+    assert(cands.size == 1, s": Inspect json files in ${s.toUri}")
 
     return getModel(Some(cands(0)), phantomOptions, rootAadlDir, testModes, testName, verbose)
   }

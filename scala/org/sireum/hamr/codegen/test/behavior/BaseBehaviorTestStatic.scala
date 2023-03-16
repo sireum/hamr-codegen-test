@@ -5,15 +5,16 @@ import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodegenBehaviorTest
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 
-class BaseBehaviorTest extends CodegenBehaviorTest {
+class BaseBehaviorTestStatic extends CodegenBehaviorTest {
 
   // set base directory for AADL models to be used in behavior tests
-  val modelsDir = TestUtil.getRootDirectory(getClass) / "resources" / "models"
+  val modelsDirs = TestUtil.getRootDirectory(getClass) / "resources" / "models"
 
+  val testDir = modelsDirs / "BaseBehaviorTest"
 
   "temp_control_simple_temp" in {
     // directory of model to use in this test
-    val modelDir = modelsDir / getClass.getSimpleName / "temp_control_simple_temp"
+    val modelDir = testDir / "temp_control_simple_temp"
     // description to be used in reporting (where ??)
     val description = "Temp Control model with temp data structure with 1 field"
     // basePackageName ???  used in HAMR code generation ???
@@ -43,7 +44,7 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
   }
 
   "arrays_excludes" in {
-    val modelDir = modelsDir / getClass.getSimpleName / "arrays"
+    val modelDir = testDir / "arrays"
     val description = ""
 
     testAir(
@@ -66,7 +67,7 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
   }
 
   "arrays" in {
-    val modelDir = modelsDir / getClass.getSimpleName / "arrays"
+    val modelDir = testDir / "arrays"
     val description = ""
 
     testAir(
@@ -90,7 +91,7 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
   val tests = Tests {
 
     { // static approach
-      val modelDir = modelsDir / getClass.getSimpleName / "building_control_gen_mixed"
+      val modelDir = testDir / "building_control_gen_mixed"
       val description = ""
 
       test(
@@ -107,14 +108,6 @@ class BaseBehaviorTest extends CodegenBehaviorTest {
         // include test modes from super (e.g. maybe from env var)
         testModes = testModes :+ TestMode.generated_unit_tests
       )
-    }
-
-    { // dynamic approach
-      var testRoots: ISZ[Os.Path] = locateHamrTestFiles(modelsDir)
-
-      for (hamrTestFile <- testRoots) {
-        genTestFromFile(hamrTestFile)
-      }
     }
   }
 }

@@ -16,10 +16,15 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
     ISZ(TestMode.compile)
 
-  // ToDo: Jason: What is this for?
   def disablePhantom: B = F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
   def justRegenerate: B = F // ignore test modes
+
+  def filter: B = F
+
+  def filters: ISZ[String] = ISZ("simple_temp_aadl-sporadic")
+
+  def ignores: ISZ[String] = ISZ()
 
   def verbose: B = {
     return ops.ISZOps(testModes).contains(TestMode.verbose)
@@ -56,11 +61,16 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
            phantomOptions: Option[String],
            logikaOptions: Option[String],
            airFile: Option[Os.Path] = None())(implicit position: org.scalactic.source.Position): Unit = {
-
     val tags: ISZ[org.scalatest.Tag] = ISZ()
 
-    registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-      testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, airFile))
+    if (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
+      registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
+        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, airFile))
+    }
+    else if (!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
+      registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
+        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, airFile))
+    }
   }
 
   def testAir(testName: String,
