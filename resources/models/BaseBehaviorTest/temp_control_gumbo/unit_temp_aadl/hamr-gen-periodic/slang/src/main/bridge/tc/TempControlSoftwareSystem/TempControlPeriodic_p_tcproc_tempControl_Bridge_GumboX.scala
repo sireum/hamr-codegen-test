@@ -61,7 +61,7 @@ object TempControlPeriodic_p_tcproc_tempControl_Bridge_GumboX {
     * @param latestFanCmd post-state state variable
     * @param api_fanCmd port variable
     */
-  @strictpure def compute_cae_currentTempLTSetPoint_guarantee(
+  @strictpure def compute_case_currentTempLTSetPoint_guarantee(
       latestFanCmd: CoolingFan.FanCmd.Type,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
     latestFanCmd == CoolingFan.FanCmd.Off & api_fanCmd == CoolingFan.FanCmd.Off
@@ -72,7 +72,7 @@ object TempControlPeriodic_p_tcproc_tempControl_Bridge_GumboX {
     * @param latestFanCmd post-state state variable
     * @param api_fanCmd port variable
     */
-  @strictpure def compute_cae_currentTempGTSetPoint_guarantee(
+  @strictpure def compute_case_currentTempGTSetPoint_guarantee(
       latestFanCmd: CoolingFan.FanCmd.Type,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
     latestFanCmd == CoolingFan.FanCmd.On & api_fanCmd == CoolingFan.FanCmd.On
@@ -85,7 +85,7 @@ object TempControlPeriodic_p_tcproc_tempControl_Bridge_GumboX {
     * @param latestFanCmd post-state state variable
     * @param api_fanCmd port variable
     */
-  @strictpure def compute_cae_currentTempInRange_guarantee(
+  @strictpure def compute_case_currentTempInRange_guarantee(
       In_latestFanCmd: CoolingFan.FanCmd.Type,
       latestFanCmd: CoolingFan.FanCmd.Type,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
@@ -108,7 +108,7 @@ object TempControlPeriodic_p_tcproc_tempControl_Bridge_GumboX {
     compute_spec_altCurrentTempLTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_fanCmd, api_setPoint) &
     compute_spec_altCurrentTempGTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_fanCmd, api_setPoint) &
     compute_spec_altCurrentTempInRange_guarantee(In_latestFanCmd, latestFanCmd, api_currentTemp, api_fanCmd, api_setPoint) &
-    compute_cae_currentTempLTSetPoint_guarantee(latestFanCmd, api_fanCmd) &
-    compute_cae_currentTempGTSetPoint_guarantee(latestFanCmd, api_fanCmd) &
-    compute_cae_currentTempInRange_guarantee(In_latestFanCmd, latestFanCmd, api_fanCmd)
+    compute_case_currentTempLTSetPoint_guarantee(latestFanCmd, api_fanCmd) &
+    compute_case_currentTempGTSetPoint_guarantee(latestFanCmd, api_fanCmd) &
+    compute_case_currentTempInRange_guarantee(In_latestFanCmd, latestFanCmd, api_fanCmd)
 }
