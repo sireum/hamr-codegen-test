@@ -374,12 +374,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                         },
-                        "beginLine" : 47,
-                        "beginColumn" : 2,
-                        "endLine" : 48,
-                        "endColumn" : 81,
-                        "offset" : 3130,
-                        "length" : 189
+                        "beginLine" : 41,
+                        "beginColumn" : 5,
+                        "endLine" : 42,
+                        "endColumn" : 97,
+                        "offset" : 3251,
+                        "length" : 195
                       }
                     }
                   },
@@ -411,12 +411,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
                         },
-                        "beginLine" : 13,
-                        "beginColumn" : 2,
-                        "endLine" : 14,
-                        "endColumn" : 50,
-                        "offset" : 527,
-                        "length" : 97
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
                       }
                     }
                   },
@@ -442,12 +442,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
                         },
-                        "beginLine" : 192,
-                        "beginColumn" : 2,
-                        "endLine" : 193,
-                        "endColumn" : 99,
-                        "offset" : 11626,
-                        "length" : 119
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
                       }
                     }
                   },
@@ -477,12 +477,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 107,
-                        "beginColumn" : 2,
-                        "endLine" : 108,
-                        "endColumn" : 73,
-                        "offset" : 5669,
-                        "length" : 89
+                        "beginLine" : 76,
+                        "beginColumn" : 5,
+                        "endLine" : 76,
+                        "endColumn" : 92,
+                        "offset" : 5251,
+                        "length" : 87
                       }
                     }
                   },
@@ -1004,12 +1004,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                     },
-                    "beginLine" : 47,
-                    "beginColumn" : 2,
-                    "endLine" : 48,
-                    "endColumn" : 81,
-                    "offset" : 3130,
-                    "length" : 189
+                    "beginLine" : 41,
+                    "beginColumn" : 5,
+                    "endLine" : 42,
+                    "endColumn" : 97,
+                    "offset" : 3251,
+                    "length" : 195
                   }
                 }
               },
@@ -1517,12 +1517,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                         },
-                        "beginLine" : 47,
-                        "beginColumn" : 2,
-                        "endLine" : 48,
-                        "endColumn" : 81,
-                        "offset" : 3130,
-                        "length" : 189
+                        "beginLine" : 41,
+                        "beginColumn" : 5,
+                        "endLine" : 42,
+                        "endColumn" : 97,
+                        "offset" : 3251,
+                        "length" : 195
                       }
                     }
                   },
@@ -1554,12 +1554,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
                         },
-                        "beginLine" : 13,
-                        "beginColumn" : 2,
-                        "endLine" : 14,
-                        "endColumn" : 50,
-                        "offset" : 527,
-                        "length" : 97
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
                       }
                     }
                   },
@@ -1585,12 +1585,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
                         },
-                        "beginLine" : 192,
-                        "beginColumn" : 2,
-                        "endLine" : 193,
-                        "endColumn" : 99,
-                        "offset" : 11626,
-                        "length" : 119
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
                       }
                     }
                   },
@@ -1620,12 +1620,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 107,
-                        "beginColumn" : 2,
-                        "endLine" : 108,
-                        "endColumn" : 73,
-                        "offset" : 5669,
-                        "length" : 89
+                        "beginLine" : 76,
+                        "beginColumn" : 5,
+                        "endLine" : 76,
+                        "endColumn" : 92,
+                        "offset" : 5251,
+                        "length" : 87
                       }
                     }
                   },
@@ -1656,11 +1656,11 @@
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
                         },
                         "beginLine" : 54,
-                        "beginColumn" : 2,
+                        "beginColumn" : 5,
                         "endLine" : 55,
-                        "endColumn" : 72,
-                        "offset" : 3754,
-                        "length" : 106
+                        "endColumn" : 78,
+                        "offset" : 3905,
+                        "length" : 112
                       }
                     }
                   },
@@ -2343,12 +2343,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                     },
-                    "beginLine" : 47,
-                    "beginColumn" : 2,
-                    "endLine" : 48,
-                    "endColumn" : 81,
-                    "offset" : 3130,
-                    "length" : 189
+                    "beginLine" : 41,
+                    "beginColumn" : 5,
+                    "endLine" : 42,
+                    "endColumn" : 97,
+                    "offset" : 3251,
+                    "length" : 195
                   }
                 }
               },
@@ -3102,12 +3102,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                         },
-                        "beginLine" : 47,
-                        "beginColumn" : 2,
-                        "endLine" : 48,
-                        "endColumn" : 81,
-                        "offset" : 3130,
-                        "length" : 189
+                        "beginLine" : 41,
+                        "beginColumn" : 5,
+                        "endLine" : 42,
+                        "endColumn" : 97,
+                        "offset" : 3251,
+                        "length" : 195
                       }
                     }
                   },
@@ -3139,12 +3139,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
                         },
-                        "beginLine" : 13,
-                        "beginColumn" : 2,
-                        "endLine" : 14,
-                        "endColumn" : 50,
-                        "offset" : 527,
-                        "length" : 97
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
                       }
                     }
                   },
@@ -3170,12 +3170,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
                         },
-                        "beginLine" : 192,
-                        "beginColumn" : 2,
-                        "endLine" : 193,
-                        "endColumn" : 99,
-                        "offset" : 11626,
-                        "length" : 119
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
                       }
                     }
                   },
@@ -3205,12 +3205,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 107,
-                        "beginColumn" : 2,
-                        "endLine" : 108,
-                        "endColumn" : 73,
-                        "offset" : 5669,
-                        "length" : 89
+                        "beginLine" : 76,
+                        "beginColumn" : 5,
+                        "endLine" : 76,
+                        "endColumn" : 92,
+                        "offset" : 5251,
+                        "length" : 87
                       }
                     }
                   },
@@ -3241,11 +3241,11 @@
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
                         },
                         "beginLine" : 54,
-                        "beginColumn" : 2,
+                        "beginColumn" : 5,
                         "endLine" : 55,
-                        "endColumn" : 72,
-                        "offset" : 3754,
-                        "length" : 106
+                        "endColumn" : 78,
+                        "offset" : 3905,
+                        "length" : 112
                       }
                     }
                   },
@@ -4440,12 +4440,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
                     },
-                    "beginLine" : 47,
-                    "beginColumn" : 2,
-                    "endLine" : 48,
-                    "endColumn" : 81,
-                    "offset" : 3130,
-                    "length" : 189
+                    "beginLine" : 41,
+                    "beginColumn" : 5,
+                    "endLine" : 42,
+                    "endColumn" : 97,
+                    "offset" : 3251,
+                    "length" : 195
                   }
                 }
               },
@@ -4589,12 +4589,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
                     },
-                    "beginLine" : 294,
-                    "beginColumn" : 2,
-                    "endLine" : 295,
-                    "endColumn" : 45,
-                    "offset" : 17479,
-                    "length" : 63
+                    "beginLine" : 291,
+                    "beginColumn" : 5,
+                    "endLine" : 292,
+                    "endColumn" : 51,
+                    "offset" : 18459,
+                    "length" : 69
                   }
                 }
               },
@@ -4624,12 +4624,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
                     },
-                    "beginLine" : 252,
-                    "beginColumn" : 2,
-                    "endLine" : 253,
-                    "endColumn" : 42,
-                    "offset" : 15267,
-                    "length" : 60
+                    "beginLine" : 250,
+                    "beginColumn" : 5,
+                    "endLine" : 251,
+                    "endColumn" : 48,
+                    "offset" : 16135,
+                    "length" : 66
                   }
                 }
               },
@@ -4659,11 +4659,11 @@
                       "type" : "Some",
                       "value" : "\/org.sireum.aadl.osate.hamr\/resources\/CASE_Scheduling.aadl"
                     },
-                    "beginLine" : 34,
+                    "beginLine" : 32,
                     "beginColumn" : 2,
-                    "endLine" : 34,
+                    "endLine" : 32,
                     "endColumn" : 68,
-                    "offset" : 1431,
+                    "offset" : 1264,
                     "length" : 66
                   }
                 }
@@ -4693,11 +4693,11 @@
                       "type" : "Some",
                       "value" : "\/org.sireum.aadl.osate.hamr\/resources\/CASE_Scheduling.aadl"
                     },
-                    "beginLine" : 39,
+                    "beginLine" : 37,
                     "beginColumn" : 2,
-                    "endLine" : 39,
+                    "endLine" : 37,
                     "endColumn" : 77,
-                    "offset" : 1654,
+                    "offset" : 1487,
                     "length" : 75
                   }
                 }
@@ -7901,12 +7901,12 @@
                   "type" : "Some",
                   "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                 },
-                "beginLine" : 92,
-                "beginColumn" : 2,
-                "endLine" : 93,
-                "endColumn" : 137,
-                "offset" : 4808,
-                "length" : 152
+                "beginLine" : 67,
+                "beginColumn" : 5,
+                "endLine" : 68,
+                "endColumn" : 54,
+                "offset" : 4661,
+                "length" : 158
               }
             }
           },
@@ -8210,12 +8210,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -8358,12 +8358,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -8506,12 +8506,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -8736,12 +8736,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -9173,12 +9173,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -9786,12 +9786,12 @@
                   "type" : "Some",
                   "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                 },
-                "beginLine" : 92,
-                "beginColumn" : 2,
-                "endLine" : 93,
-                "endColumn" : 137,
-                "offset" : 4808,
-                "length" : 152
+                "beginLine" : 67,
+                "beginColumn" : 5,
+                "endLine" : 68,
+                "endColumn" : 54,
+                "offset" : 4661,
+                "length" : 158
               }
             }
           },
@@ -10257,12 +10257,12 @@
                   "type" : "Some",
                   "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                 },
-                "beginLine" : 92,
-                "beginColumn" : 2,
-                "endLine" : 93,
-                "endColumn" : 137,
-                "offset" : 4808,
-                "length" : 152
+                "beginLine" : 67,
+                "beginColumn" : 5,
+                "endLine" : 68,
+                "endColumn" : 54,
+                "offset" : 4661,
+                "length" : 158
               }
             }
           },
@@ -10512,12 +10512,12 @@
                   "type" : "Some",
                   "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                 },
-                "beginLine" : 92,
-                "beginColumn" : 2,
-                "endLine" : 93,
-                "endColumn" : 137,
-                "offset" : 4808,
-                "length" : 152
+                "beginLine" : 67,
+                "beginColumn" : 5,
+                "endLine" : 68,
+                "endColumn" : 54,
+                "offset" : 4661,
+                "length" : 158
               }
             }
           },
@@ -10787,12 +10787,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -10935,12 +10935,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -11083,12 +11083,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -11520,12 +11520,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -11668,12 +11668,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -11816,12 +11816,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -11964,12 +11964,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -12284,12 +12284,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -12661,12 +12661,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -12956,12 +12956,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -13384,12 +13384,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -13532,12 +13532,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -14129,12 +14129,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -14351,12 +14351,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -15230,12 +15230,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -15378,12 +15378,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -15526,12 +15526,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -15791,12 +15791,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -15939,12 +15939,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -16087,12 +16087,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -16352,12 +16352,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -16764,12 +16764,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -16912,12 +16912,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -17379,12 +17379,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -17527,12 +17527,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -18098,12 +18098,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -18245,12 +18245,12 @@
                   "type" : "Some",
                   "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Modeling_Properties.aadl"
                 },
-                "beginLine" : 24,
-                "beginColumn" : 2,
-                "endLine" : 25,
-                "endColumn" : 50,
-                "offset" : 1077,
-                "length" : 151
+                "beginLine" : 19,
+                "beginColumn" : 5,
+                "endLine" : 20,
+                "endColumn" : 91,
+                "offset" : 1131,
+                "length" : 175
               }
             }
           },
@@ -18484,12 +18484,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -18632,12 +18632,12 @@
                       "type" : "Some",
                       "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                     },
-                    "beginLine" : 92,
-                    "beginColumn" : 2,
-                    "endLine" : 93,
-                    "endColumn" : 137,
-                    "offset" : 4808,
-                    "length" : 152
+                    "beginLine" : 67,
+                    "beginColumn" : 5,
+                    "endLine" : 68,
+                    "endColumn" : 54,
+                    "offset" : 4661,
+                    "length" : 158
                   }
                 }
               },
@@ -19631,12 +19631,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -19779,12 +19779,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -19927,12 +19927,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -20157,12 +20157,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -20473,12 +20473,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -21001,12 +21001,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -21378,12 +21378,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -21673,12 +21673,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -22101,12 +22101,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -22249,12 +22249,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -23308,12 +23308,12 @@
                           "type" : "Some",
                           "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                         },
-                        "beginLine" : 92,
-                        "beginColumn" : 2,
-                        "endLine" : 93,
-                        "endColumn" : 137,
-                        "offset" : 4808,
-                        "length" : 152
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
                       }
                     }
                   },
@@ -23543,12 +23543,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -23691,12 +23691,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -23839,12 +23839,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -24069,12 +24069,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -24385,12 +24385,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -24913,12 +24913,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -25290,12 +25290,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -25585,12 +25585,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -26013,12 +26013,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
@@ -26161,12 +26161,12 @@
                               "type" : "Some",
                               "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
                             },
-                            "beginLine" : 92,
-                            "beginColumn" : 2,
-                            "endLine" : 93,
-                            "endColumn" : 137,
-                            "offset" : 4808,
-                            "length" : 152
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
                           }
                         }
                       },
