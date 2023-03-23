@@ -38,7 +38,15 @@ import a._
   val vector_of_coordinates_Id : Art.PortId,
   val integers_Id : Art.PortId) extends Consumer_Api {
 
+  // Logika spec var representing port state for incoming event data port
+  @spec var coordinates: Arrays.Array_of_Coordinates = $
+
   def get_coordinates() : Option[Arrays.Array_of_Coordinates] = {
+    Contract(
+      Ensures(
+        Res == Some(coordinates)
+      )
+    )
     val value : Option[Arrays.Array_of_Coordinates] = Art.getValue(coordinates_Id) match {
       case Some(Arrays.Array_of_Coordinates_Payload(v)) => Some(v)
       case Some(v) =>
@@ -49,7 +57,15 @@ import a._
     return value
   }
 
+  // Logika spec var representing port state for incoming event data port
+  @spec var vector_of_coordinates: Arrays.Vector_of_Coordinates = $
+
   def get_vector_of_coordinates() : Option[Arrays.Vector_of_Coordinates] = {
+    Contract(
+      Ensures(
+        Res == Some(vector_of_coordinates)
+      )
+    )
     val value : Option[Arrays.Vector_of_Coordinates] = Art.getValue(vector_of_coordinates_Id) match {
       case Some(Arrays.Vector_of_Coordinates_Payload(v)) => Some(v)
       case Some(v) =>
@@ -60,7 +76,15 @@ import a._
     return value
   }
 
+  // Logika spec var representing port state for incoming event data port
+  @spec var integers: Arrays.Array_of_Integers = $
+
   def get_integers() : Option[Arrays.Array_of_Integers] = {
+    Contract(
+      Ensures(
+        Res == Some(integers)
+      )
+    )
     val value : Option[Arrays.Array_of_Integers] = Art.getValue(integers_Id) match {
       case Some(Arrays.Array_of_Integers_Payload(v)) => Some(v)
       case Some(v) =>

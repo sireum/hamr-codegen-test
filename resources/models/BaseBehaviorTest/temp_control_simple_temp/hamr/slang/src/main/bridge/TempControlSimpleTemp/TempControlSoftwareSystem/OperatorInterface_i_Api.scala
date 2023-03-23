@@ -12,7 +12,20 @@ import TempControlSimpleTemp._
   def setPoint_Id : Art.PortId
   def tempChanged_Id : Art.PortId
 
+  // Logika spec var representing port state for outgoing event data port
+  @spec var setPoint: Option[TempControlSoftwareSystem.SetPoint_i] = $
+
   def put_setPoint(value : TempControlSoftwareSystem.SetPoint_i) : Unit = {
+    Contract(
+      Modifies(setPoint),
+      Ensures(
+        setPoint == Some(value)
+      )
+    )
+    Spec {
+      setPoint = Some(value)
+    }
+
     Art.putValue(setPoint_Id, TempControlSoftwareSystem.SetPoint_i_Payload(value))
   }
 
@@ -41,7 +54,15 @@ import TempControlSimpleTemp._
   val setPoint_Id : Art.PortId,
   val tempChanged_Id : Art.PortId) extends OperatorInterface_i_Api {
 
+  // Logika spec var representing port state for incoming data port
+  @spec var currentTemp: TempSensor.Temperature_i = $
+
   def get_currentTemp() : Option[TempSensor.Temperature_i] = {
+    Contract(
+      Ensures(
+        Res == Some(currentTemp)
+      )
+    )
     val value : Option[TempSensor.Temperature_i] = Art.getValue(currentTemp_Id) match {
       case Some(TempSensor.Temperature_i_Payload(v)) => Some(v)
       case Some(v) =>
@@ -52,7 +73,15 @@ import TempControlSimpleTemp._
     return value
   }
 
+  // Logika spec var representing port state for incoming event port
+  @spec var tempChanged: art.Empty = $
+
   def get_tempChanged() : Option[art.Empty] = {
+    Contract(
+      Ensures(
+        Res == Some(Empty())
+      )
+    )
     val value : Option[art.Empty] = Art.getValue(tempChanged_Id) match {
       case Some(Empty()) => Some(Empty())
       case Some(v) =>

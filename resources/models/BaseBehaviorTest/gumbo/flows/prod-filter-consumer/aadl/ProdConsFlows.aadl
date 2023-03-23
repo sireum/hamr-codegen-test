@@ -1,0 +1,115 @@
+package ProdConsFlows
+public
+	
+	with Base_Types;
+	
+	system s
+		
+	end s;
+	
+	system implementation s.i
+		subcomponents
+			p: process p.i;
+	end s.i;
+	
+	process p
+		
+	end p;
+	
+	process implementation p.i
+		subcomponents
+			producer: thread Producer;
+			filterp: thread Filter.p;
+			filters: thread Filter.s;
+			consumer: thread Consumer;
+		connections
+			c1: port producer.a_out -> filterp.a_in;
+			c2: port producer.b_out -> filterp.b_in;
+			
+			c3: port producer.a_out -> filters.a_in;
+			c4: port producer.b_out -> filters.b_in;
+			
+			c5: port filterp.a_out -> consumer.a_in;
+			c6: port filterp.b_out -> consumer.b_in;
+			
+			c7: port filters.a_out -> consumer.a_in;
+			c8: port filters.b_out -> consumer.b_in;
+	end p.i;
+	
+	thread Producer
+		features
+			a_out: out event data port Base_Types::Float_32;
+			b_out: out event data port Base_Types::Float_32;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 1 sec;			
+		annex Gumbo {**
+			compute
+				infoflow a_source "Producer is the source a flow" :
+					from (),
+					to (a_out);
+					
+				infoflow b_source "Producer is the source of a flow" :
+					from (),
+					to (b_out);
+		**};
+	end Producer;
+	
+	thread Filter
+		features
+			a_in: in event data port Base_Types::Float_32;
+			b_in: in event data port Base_Types::Float_32;
+			
+			a_out: out event data port Base_Types::Float_32;
+			b_out: out event data port Base_Types::Float_32;
+			
+		annex Gumbo {**
+			
+			state
+				last_a_in: Base_Types::Float_32;
+				last_b_in: Base_Types::Float_32;
+				
+			compute
+				infoflow a_channel "A channel" :
+					from (a_in, last_a_in),
+					to (a_out);
+					
+				infoflow b_channel "B channel" :
+					from(b_in, last_b_in),
+					to (b_out);
+		**};
+	end Filter;
+
+	thread implementation Filter.p
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 1 sec;
+			
+	end Filter.p;
+	
+	thread implementation Filter.s
+		properties
+			Dispatch_Protocol => Sporadic;
+			
+	end Filter.s;
+	
+	thread Consumer
+		features
+			a_in: in event data port Base_Types::Float_32;
+			b_in: in event data port Base_Types::Float_32;
+		annex Gumbo {**
+			state
+				from_b: Base_Types::Float_32;
+			compute
+				infoflow a_sink "Consumer is a sink for a_in
+				                |The generated sequent will just conclude T since the to clause is empty
+				                |so currently sinks are effectively just for documentation." : 
+					from (a_in),
+					to ();
+
+				infoflow b_sink "Consumer is a sink for b_in" :
+					from (b_in),
+					to (from_b);
+		**};
+	end Consumer;
+end ProdConsFlows;

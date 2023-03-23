@@ -26,9 +26,13 @@ import TempSensor_i_Api._
 
   def put_currentTemp(value : TempSensor.Temperature_i) : Unit = {
     Contract(
-      Requires(SensorTemperatureRange(value)),
+      Requires(
+        SensorTemperatureRange(value)
+      ),
       Modifies(currentTemp),
-      Ensures(currentTemp == value)
+      Ensures(
+        currentTemp == value
+      )
     )
     Spec {
       currentTemp = value
@@ -43,7 +47,9 @@ import TempSensor_i_Api._
   def put_tempChanged() : Unit = {
     Contract(
       Modifies(tempChanged),
-      Ensures(tempChanged == Some(Empty()))
+      Ensures(
+        tempChanged == Some(Empty())
+      )
     )
     Spec {
       tempChanged = Some(Empty())

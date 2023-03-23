@@ -1,0 +1,140 @@
+// #Sireum
+
+package prod_cons__JVM.ProdConsFlows
+
+import org.sireum._
+import art._
+import prod_cons__JVM._
+import prod_cons__JVM.ProdConsFlows.{Producer_p_producer => component}
+
+// This file was auto-generated.  Do not edit
+
+@datatype class Producer_p_producer_Bridge(
+  val id: Art.BridgeId,
+  val name: String,
+  val dispatchProtocol: DispatchPropertyProtocol,
+  val dispatchTriggers: Option[ISZ[Art.PortId]],
+
+  a_out: Port[Base_Types.Float_32],
+  b_out: Port[Base_Types.Float_32]
+  ) extends Bridge {
+
+  val ports : Bridge.Ports = Bridge.Ports(
+    dataIns = ISZ[art.UPort](),
+
+    dataOuts = ISZ[art.UPort](),
+
+    eventIns = ISZ[art.UPort](),
+
+    eventOuts = ISZ[art.UPort](a_out,
+                               b_out)
+  )
+
+  val initialization_api : Producer_Initialization_Api = {
+    val api = Producer_Initialization_Api(
+      id,
+      a_out.id,
+      b_out.id
+    )
+    Producer_p_producer_Bridge.c_initialization_api = Some(api)
+    api
+  }
+
+  val operational_api : Producer_Operational_Api = {
+    val api = Producer_Operational_Api(
+      id,
+      a_out.id,
+      b_out.id
+    )
+    Producer_p_producer_Bridge.c_operational_api = Some(api)
+    api
+  }
+
+  val entryPoints : Bridge.EntryPoints =
+    Producer_p_producer_Bridge.EntryPoints(
+      id,
+
+      a_out.id,
+      b_out.id,
+
+      dispatchTriggers,
+
+      initialization_api,
+      operational_api)
+}
+
+object Producer_p_producer_Bridge {
+
+  var c_initialization_api: Option[Producer_Initialization_Api] = None()
+  var c_operational_api: Option[Producer_Operational_Api] = None()
+
+  @datatype class EntryPoints(
+    Producer_p_producer_BridgeId : Art.BridgeId,
+    a_out_Id : Art.PortId,
+    b_out_Id : Art.PortId,
+    dispatchTriggers : Option[ISZ[Art.PortId]],
+    initialization_api: Producer_Initialization_Api,
+    operational_api: Producer_Operational_Api) extends Bridge.EntryPoints {
+
+    val dataInPortIds: ISZ[Art.PortId] = IS()
+
+    val eventInPortIds: ISZ[Art.PortId] = IS()
+
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
+
+    val eventOutPortIds: ISZ[Art.PortId] = IS(a_out_Id,
+                                              b_out_Id)
+
+    def initialise(): Unit = {
+      // implement the following method in 'component':  def initialise(api: Producer_Initialization_Api): Unit = {}
+      component.initialise(initialization_api)
+      Art.sendOutput(eventOutPortIds, dataOutPortIds)
+    }
+
+    def compute(): Unit = {
+      Art.receiveInput(eventInPortIds, dataInPortIds)
+
+      // implement the following in 'component':  def timeTriggered(api: Producer_Operational_Api): Unit = {}
+      component.timeTriggered(operational_api)
+
+      Art.sendOutput(eventOutPortIds, dataOutPortIds)
+    }
+
+    def activate(): Unit = {
+      // implement the following method in 'component':  def activate(api: Producer_Operational_Api): Unit = {}
+      component.activate(operational_api)
+    }
+
+    def deactivate(): Unit = {
+      // implement the following method in 'component':  def deactivate(api: Producer_Operational_Api): Unit = {}
+      component.deactivate(operational_api)
+    }
+
+    def finalise(): Unit = {
+      // implement the following method in 'component':  def finalise(api: Producer_Operational_Api): Unit = {}
+      component.finalise(operational_api)
+    }
+
+    def recover(): Unit = {
+      // implement the following method in 'component':  def recover(api: Producer_Operational_Api): Unit = {}
+      component.recover(operational_api)
+    }
+
+    override
+    def testInitialise(): Unit = {
+      // implement the following method in 'component':  def initialise(api: Producer_Initialization_Api): Unit = {}
+      component.initialise(initialization_api)
+      Art.releaseOutput(eventOutPortIds, dataOutPortIds)
+    }
+
+    override
+    def testCompute(): Unit = {
+      Art.receiveInput(eventInPortIds, dataInPortIds)
+
+      // implement the following in 'component':  def timeTriggered(api: Producer_Operational_Api): Unit = {}
+      component.timeTriggered(operational_api)
+
+      Art.releaseOutput(eventOutPortIds, dataOutPortIds)
+    }
+  }
+}

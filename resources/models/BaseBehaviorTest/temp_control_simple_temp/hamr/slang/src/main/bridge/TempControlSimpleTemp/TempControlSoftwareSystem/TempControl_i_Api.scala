@@ -27,7 +27,9 @@ import TempControl_i_Api._
   def put_fanCmd(value : CoolingFan.FanCmd.Type) : Unit = {
     Contract(
       Modifies(fanCmd),
-      Ensures(fanCmd == Some(value))
+      Ensures(
+        fanCmd == Some(value)
+      )
     )
     Spec {
       fanCmd = Some(value)

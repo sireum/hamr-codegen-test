@@ -94,7 +94,7 @@ object TempControl_i_tcproc_tempControl {
         api.fanCmd.isEmpty,
         // assume HAMR-Guarantee
         //   passed in payload must be the same as the spec var's value
-        //   NOTE: this assumes the user never changes the param name"
+        //   NOTE: this assumes the user never changes the param name
         api.fanAck == value
         // END COMPUTE REQUIRES fanAck
       ),
@@ -145,7 +145,7 @@ object TempControl_i_tcproc_tempControl {
         api.fanCmd.isEmpty,
         // assume HAMR-Guarantee
         //   passed in payload must be the same as the spec var's value
-        //   NOTE: this assumes the user never changes the param name"
+        //   NOTE: this assumes the user never changes the param name
         api.setPoint == value
         // END COMPUTE REQUIRES setPoint
       ),

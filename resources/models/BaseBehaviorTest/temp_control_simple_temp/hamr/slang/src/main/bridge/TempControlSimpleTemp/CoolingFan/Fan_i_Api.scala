@@ -11,7 +11,20 @@ import TempControlSimpleTemp._
   def fanCmd_Id : Art.PortId
   def fanAck_Id : Art.PortId
 
+  // Logika spec var representing port state for outgoing event data port
+  @spec var fanAck: Option[CoolingFan.FanAck.Type] = $
+
   def put_fanAck(value : CoolingFan.FanAck.Type) : Unit = {
+    Contract(
+      Modifies(fanAck),
+      Ensures(
+        fanAck == Some(value)
+      )
+    )
+    Spec {
+      fanAck = Some(value)
+    }
+
     Art.putValue(fanAck_Id, CoolingFan.FanAck_Payload(value))
   }
 
@@ -38,7 +51,15 @@ import TempControlSimpleTemp._
   val fanCmd_Id : Art.PortId,
   val fanAck_Id : Art.PortId) extends Fan_i_Api {
 
+  // Logika spec var representing port state for incoming event data port
+  @spec var fanCmd: CoolingFan.FanCmd.Type = $
+
   def get_fanCmd() : Option[CoolingFan.FanCmd.Type] = {
+    Contract(
+      Ensures(
+        Res == Some(fanCmd)
+      )
+    )
     val value : Option[CoolingFan.FanCmd.Type] = Art.getValue(fanCmd_Id) match {
       case Some(CoolingFan.FanCmd_Payload(v)) => Some(v)
       case Some(v) =>

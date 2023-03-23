@@ -14,7 +14,20 @@ import bc._
   def fanCmd_Id : Art.PortId
   def tempChanged_Id : Art.PortId
 
+  // Logika spec var representing port state for outgoing event data port
+  @spec var fanCmd: Option[BuildingControl.FanCmd.Type] = $
+
   def put_fanCmd(value : BuildingControl.FanCmd.Type) : Unit = {
+    Contract(
+      Modifies(fanCmd),
+      Ensures(
+        fanCmd == Some(value)
+      )
+    )
+    Spec {
+      fanCmd = Some(value)
+    }
+
     Art.putValue(fanCmd_Id, BuildingControl.FanCmd_Payload(value))
   }
 
@@ -47,7 +60,15 @@ import bc._
   val fanCmd_Id : Art.PortId,
   val tempChanged_Id : Art.PortId) extends TempControl_i_Api {
 
+  // Logika spec var representing port state for incoming data port
+  @spec var currentTemp: BuildingControl.Temperature_impl = $
+
   def get_currentTemp() : Option[BuildingControl.Temperature_impl] = {
+    Contract(
+      Ensures(
+        Res == Some(currentTemp)
+      )
+    )
     val value : Option[BuildingControl.Temperature_impl] = Art.getValue(currentTemp_Id) match {
       case Some(BuildingControl.Temperature_impl_Payload(v)) => Some(v)
       case Some(v) =>
@@ -58,7 +79,15 @@ import bc._
     return value
   }
 
+  // Logika spec var representing port state for incoming event data port
+  @spec var fanAck: BuildingControl.FanAck.Type = $
+
   def get_fanAck() : Option[BuildingControl.FanAck.Type] = {
+    Contract(
+      Ensures(
+        Res == Some(fanAck)
+      )
+    )
     val value : Option[BuildingControl.FanAck.Type] = Art.getValue(fanAck_Id) match {
       case Some(BuildingControl.FanAck_Payload(v)) => Some(v)
       case Some(v) =>
@@ -69,7 +98,15 @@ import bc._
     return value
   }
 
+  // Logika spec var representing port state for incoming event data port
+  @spec var setPoint: BuildingControl.SetPoint_impl = $
+
   def get_setPoint() : Option[BuildingControl.SetPoint_impl] = {
+    Contract(
+      Ensures(
+        Res == Some(setPoint)
+      )
+    )
     val value : Option[BuildingControl.SetPoint_impl] = Art.getValue(setPoint_Id) match {
       case Some(BuildingControl.SetPoint_impl_Payload(v)) => Some(v)
       case Some(v) =>
@@ -80,7 +117,15 @@ import bc._
     return value
   }
 
+  // Logika spec var representing port state for incoming event port
+  @spec var tempChanged: art.Empty = $
+
   def get_tempChanged() : Option[art.Empty] = {
+    Contract(
+      Ensures(
+        Res == Some(Empty())
+      )
+    )
     val value : Option[art.Empty] = Art.getValue(tempChanged_Id) match {
       case Some(Empty()) => Some(Empty())
       case Some(v) =>
