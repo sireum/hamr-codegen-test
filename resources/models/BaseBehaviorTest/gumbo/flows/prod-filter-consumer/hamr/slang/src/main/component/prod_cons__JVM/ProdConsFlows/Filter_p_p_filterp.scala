@@ -16,9 +16,37 @@ object Filter_p_p_filterp {
 
   def initialise(api: Filter_p_Initialization_Api): Unit = {
     Contract(
-      Modifies(api)
+      Requires(
+        // BEGIN INITIALIZES REQUIRES
+        // assume AADL_Requirement
+        //   All outgoing event data ports must be empty
+        api.a_out.isEmpty,
+        api.b_out.isEmpty
+        // END INITIALIZES REQUIRES
+      ),
+      Modifies(api, last_a_in, last_b_in),
+      InfoFlows(
+        // BEGIN INITIALIZES FLOWS
+        // infoflow set_last_a_in
+        //   Can also flow to state variable in the initialization phase
+        Flow("set_last_a_in",
+          From(),
+          To(last_a_in)
+        ),
+        // infoflow set_last_b_in
+        //   Can also flow to state variable in the initialization phase
+        Flow("set_last_b_in",
+          From(),
+          To(last_b_in)
+        )
+        // END INITIALIZES FLOWS
+      )
+
     )
     // example api usage
+
+    last_a_in = 0f
+    last_b_in = 0f
 
     api.logInfo("Example info logging")
     api.logDebug("Example debug logging")

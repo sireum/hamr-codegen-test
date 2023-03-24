@@ -44,8 +44,17 @@ public
 			Dispatch_Protocol => Periodic;
 			Period => 1 sec;			
 		annex Gumbo {**
+			initialize
+				infoflow a_source "Producer is the source a flow in the initialization phase" :
+					from (),
+					to (a_out);
+					
+				infoflow b_source "Producer is the source of a flow in the intialization phase" :
+					from (),
+					to (b_out);						
+				
 			compute
-				infoflow a_source "Producer is the source a flow" :
+				infoflow a_source "Producer is the source a flow in the compute phase" :
 					from (),
 					to (a_out);
 					
@@ -68,7 +77,16 @@ public
 			state
 				last_a_in: Base_Types::Float_32;
 				last_b_in: Base_Types::Float_32;
-				
+			
+			initialize
+				infoflow set_last_a_in "Can also flow to state variable in the initialization phase" :
+					from (),
+					to (last_a_in);
+					
+				infoflow set_last_b_in "Can also flow to state variable in the initialization phase" :
+					from (),
+					to (last_b_in);
+					
 			compute
 				infoflow a_channel "A channel" :
 					from (a_in, last_a_in),

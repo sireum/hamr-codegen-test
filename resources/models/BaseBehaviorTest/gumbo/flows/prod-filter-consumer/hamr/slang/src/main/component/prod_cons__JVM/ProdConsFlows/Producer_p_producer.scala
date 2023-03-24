@@ -10,7 +10,31 @@ object Producer_p_producer {
 var x: F32 = 3f
   def initialise(api: Producer_Initialization_Api): Unit = {
     Contract(
-      Modifies(api)
+      Requires(
+        // BEGIN INITIALIZES REQUIRES
+        // assume AADL_Requirement
+        //   All outgoing event data ports must be empty
+        api.a_out.isEmpty,
+        api.b_out.isEmpty
+        // END INITIALIZES REQUIRES
+      ),
+      Modifies(api),
+      InfoFlows(
+        // BEGIN INITIALIZES FLOWS
+        // infoflow a_source
+        //   Producer is the source a flow in the initialization phase
+        Flow("a_source",
+          From(),
+          To(api.a_out)
+        ),
+        // infoflow b_source
+        //   Producer is the source of a flow in the intialization phase
+        Flow("b_source",
+          From(),
+          To(api.b_out)
+        )
+        // END INITIALIZES FLOWS
+      )
     )
     // example api usage
 
@@ -36,7 +60,7 @@ var x: F32 = 3f
       InfoFlows(
         // BEGIN COMPUTE FLOW producer
         // infoflow a_source
-        //   Producer is the source a flow
+        //   Producer is the source a flow in the compute phase
         Flow("a_source",
           From(),
           To(api.a_out)

@@ -26,7 +26,7 @@
 //   this file then click 'OK'.
 //
 //   To run the demo from within Sireum IVE:
-//     Right click src/main/architecture/a/Demo.scala and choose "Run 'Demo'"
+//     Right click src/main/architecture/bc/Demo.scala and choose "Run 'Demo'"
 //
 //   To run the unit test cases from within Sireum IVE:
 //     Right click the src/test/bridge directory and choose "Run ScalaTests in bridge"
@@ -36,7 +36,7 @@
 //         named 'target' and retry
 
 
-lazy val PC_Sys_Impl_Instance = slangEmbeddedProject("PC_Sys_Impl_Instance", ".")
+lazy val BuildingControlDemo_i_Instance = slangEmbeddedProject("BuildingControlDemo_i_Instance", ".")
 
 // refer to https://github.com/sireum/kekinian/blob/master/versions.properties
 // to get the most recent versions of the following dependencies
@@ -96,10 +96,10 @@ val slangEmbeddedSettings = Seq(
   // Jetbrains UI Designer
   libraryDependencies += "com.intellij" % "forms_rt" % formsRtVersion,
 
-  mainClass in (Compile, run) := Some("a.Demo"),
+  mainClass in (Compile, run) := Some("bc.Demo"),
 
-  mainClass in assembly := Some("a.Demo"),
-  assemblyJarName in assembly := "PC_Sys_Impl_Instance.jar",
+  mainClass in assembly := Some("bc.Demo"),
+  assemblyJarName in assembly := "BuildingControlDemo_i_Instance.jar",
   assemblyOption in assembly := (assemblyOption in assembly).value.copy(prependShellScript = Some(defaultUniversalScript(shebang = false))),
 
   assemblyMergeStrategy in assembly := {
@@ -115,7 +115,7 @@ val slangEmbeddedInspectorSettings = Seq(
   libraryDependencies += "org.sireum" % "inspector-gui" % inspectorVersion withSources(),
   libraryDependencies += "org.sireum" % "inspector-services-jvm" % inspectorVersion withSources(),
 
-  mainClass in (Compile, run) := Some("a.InspectorDemo"),
+  mainClass in (Compile, run) := Some("bc.InspectorDemo"),
 )
 
 def slangEmbeddedProject(projId: String, projectDirectory: String) =
