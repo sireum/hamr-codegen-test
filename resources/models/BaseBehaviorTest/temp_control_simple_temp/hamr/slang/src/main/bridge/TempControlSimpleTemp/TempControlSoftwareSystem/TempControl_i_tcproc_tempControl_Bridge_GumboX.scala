@@ -7,6 +7,24 @@ import TempControlSimpleTemp._
 
 // This file was auto-generated.  Do not edit
 object TempControl_i_tcproc_tempControl_Bridge_GumboX {
+  /** invariant AbsZero
+    */
+  @strictpure def TempControlSimpleTemp_TempSensor_Temperature_i_AbsZero_Invariant(value: TempSensor.Temperature_i): B =
+    value.degrees >= -459.67f
+
+  @strictpure def TempControlSimpleTemp_TempSensor_Temperature_i_Invariant(value: TempSensor.Temperature_i): B =
+    TempControlSimpleTemp_TempSensor_Temperature_i_AbsZero_Invariant(value)
+
+  /** invariant SetPointDataInvariant
+    *   SetPoint Data Invariant
+    */
+  @strictpure def TempControlSimpleTemp_TempControlSoftwareSystem_SetPoint_i_SetPointDataInvariant_Invariant(value: TempControlSoftwareSystem.SetPoint_i): B =
+    value.low.degrees >= 50.0f & value.high.degrees <= 110.0f & value.low.degrees <= value.high.degrees
+
+  @strictpure def TempControlSimpleTemp_TempControlSoftwareSystem_SetPoint_i_Invariant(value: TempControlSoftwareSystem.SetPoint_i): B =
+    TempControlSimpleTemp_TempControlSoftwareSystem_SetPoint_i_SetPointDataInvariant_Invariant(value)
+
+
   /** guarantees TC_Req_01
     *   If the current temperature is less than the set point, then the fan state shall be Off.
     * @param currentFanState post-state state variable
@@ -60,6 +78,8 @@ object TempControl_i_tcproc_tempControl_Bridge_GumboX {
       currentFanState: CoolingFan.FanCmd.Type,
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i): B =
+    TempControlSimpleTemp_TempControlSoftwareSystem_SetPoint_i_Invariant(currentSetPoint) &
+    TempControlSimpleTemp_TempSensor_Temperature_i_Invariant(latestTemp) &
     compute_spec_TC_Req_01_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_02_guarantee(currentFanState, currentSetPoint, latestTemp)
 
@@ -74,6 +94,9 @@ object TempControl_i_tcproc_tempControl_Bridge_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i): B =
+    TempControlSimpleTemp_TempControlSoftwareSystem_SetPoint_i_Invariant(currentSetPoint) &
+    TempControlSimpleTemp_TempSensor_Temperature_i_Invariant(latestTemp) &
+    TempControlSimpleTemp_TempControlSoftwareSystem_SetPoint_i_Invariant(api_setPoint) &
     compute_spec_TC_Req_01_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_02_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_setPoint_setPointChanged_guarantee(currentSetPoint, api_setPoint)
@@ -89,6 +112,9 @@ object TempControl_i_tcproc_tempControl_Bridge_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_currentTemp: TempSensor.Temperature_i): B =
+    TempControlSimpleTemp_TempControlSoftwareSystem_SetPoint_i_Invariant(currentSetPoint) &
+    TempControlSimpleTemp_TempSensor_Temperature_i_Invariant(latestTemp) &
+    TempControlSimpleTemp_TempSensor_Temperature_i_Invariant(api_currentTemp) &
     compute_spec_TC_Req_01_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_02_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_tempChanged_tempChanged_guarantee(latestTemp, api_currentTemp)
