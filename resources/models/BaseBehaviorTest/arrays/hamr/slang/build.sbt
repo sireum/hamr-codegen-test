@@ -53,8 +53,8 @@ val sireumScalacVersion = "4.20230331.343a799"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/d6e0b85
-val kekinianVersion = "d6e0b85"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/3dcd426
+val kekinianVersion = "3dcd426"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"
