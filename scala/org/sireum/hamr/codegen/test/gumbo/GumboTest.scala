@@ -82,6 +82,17 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
       None(), None(), ISZ())
   }
 
+  "compute-entrypoint" in {
+    val name = "compute-entrypoint"
+    val modelDir = testResources.modelsDir / name
+    val model = Some(getJson(modelDir))
+
+    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    testAir(s"$name--${platform}", modelDir, model, None(),
+      baseOptions(platform = platform),
+      None(), None(), ISZ())
+  }
+
 
   def getJson(d: Os.Path): Os.Path = {
     val s = d / ".slang"

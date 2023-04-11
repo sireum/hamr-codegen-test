@@ -28,10 +28,34 @@
         }
       ],
       [
+        "slang\/src\/main\/data\/enum_test__JVM\/Enum_Test\/Temperature_i_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject Temperature_i_GumboX {\n  \/** invariant i1\n    *   Temperature Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Enum_Test.Temperature_i): B =\n    if (value.unit == Enum_Test.Unity.Ke) value.degrees >= 0.0d else if (value.unit == Enum_Test.Unity.Ce) value.degrees >= -273.0d else if (value.unit == Enum_Test.Unity.Fa) value.degrees >= -459.67d else F\n\n  @strictpure def Temperature_i_Invariant(value: Enum_Test.Temperature_i): B =\n    i1_Invariant(value)\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
         "slang\/src\/main\/data\/enum_test__JVM\/Enum_Test\/SetPoint_i.scala",
         {
           "type" : "ITestResource",
           "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject SetPoint_i {\n  def example(): Enum_Test.SetPoint_i = {\n    return Enum_Test.SetPoint_i(\n      low = Enum_Test.Temperature_i.example(),\n      high = Enum_Test.Temperature_i.example())\n  }\n}\n\n@datatype class SetPoint_i(\n  val low: Enum_Test.Temperature_i,\n  val high: Enum_Test.Temperature_i) {\n  @spec def i1 = Invariant(\n    low.degrees >= 70.0d && high.degrees <= 100.0d && low.degrees <= high.degrees\n  )\n}\n\nobject SetPoint_i_Payload {\n  def example(): SetPoint_i_Payload = {\n    return SetPoint_i_Payload(Enum_Test.SetPoint_i.example())\n  }\n}\n\n@datatype class SetPoint_i_Payload(value: Enum_Test.SetPoint_i) extends art.DataContent\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/enum_test__JVM\/Enum_Test\/SetPoint_i_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject SetPoint_i_GumboX {\n  \/** invariant i1\n    *   SetPoint Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Enum_Test.SetPoint_i): B =\n    value.low.degrees >= 70.0d && value.high.degrees <= 100.0d && value.low.degrees <= value.high.degrees\n\n  @strictpure def SetPoint_i_Invariant(value: Enum_Test.SetPoint_i): B =\n    i1_Invariant(value)\n}",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,

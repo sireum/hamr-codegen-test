@@ -7,23 +7,6 @@ import tc._
 
 // This file was auto-generated.  Do not edit
 object TempControl_s_tcproc_tempControl_Bridge_GumboX {
-  /** invariant AbsZero
-    */
-  @strictpure def tc_TempSensor_Temperature_i_AbsZero_Invariant(value: TempSensor.Temperature_i): B =
-    GUMBO_Definitions.GUMBO__Library.atLeastAbsoluteZeroRaw(value.degrees, value.unit)
-
-  @strictpure def tc_TempSensor_Temperature_i_Invariant(value: TempSensor.Temperature_i): B =
-    tc_TempSensor_Temperature_i_AbsZero_Invariant(value)
-
-  /** invariant SetPoint_Data_Invariant
-    */
-  @strictpure def tc_TempControlSoftwareSystem_SetPoint_i_SetPoint_Data_Invariant_Invariant(value: TempControlSoftwareSystem.SetPoint_i): B =
-    value.low.degrees >= 50.0f & value.high.degrees <= 110.0f & value.low.degrees <= value.high.degrees
-
-  @strictpure def tc_TempControlSoftwareSystem_SetPoint_i_Invariant(value: TempControlSoftwareSystem.SetPoint_i): B =
-    tc_TempControlSoftwareSystem_SetPoint_i_SetPoint_Data_Invariant_Invariant(value)
-
-
   /** guarantees TC_Req_01
     *   If the current temperature is less than the set point, then the fan state shall be Off.
     * @param currentFanState post-state state variable
@@ -166,10 +149,10 @@ object TempControl_s_tcproc_tempControl_Bridge_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    tc_TempControlSoftwareSystem_SetPoint_i_Invariant(In_currentSetPoint) &
-    tc_TempSensor_Temperature_i_Invariant(In_latestTemp) &
-    tc_TempControlSoftwareSystem_SetPoint_i_Invariant(currentSetPoint) &
-    tc_TempSensor_Temperature_i_Invariant(latestTemp) &
+    tc.TempControlSoftwareSystem.SetPoint_i_GumboX.SetPoint_i_Invariant(In_currentSetPoint) &
+    tc.TempSensor.Temperature_i_GumboX.Temperature_i_Invariant(In_latestTemp) &
+    tc.TempControlSoftwareSystem.SetPoint_i_GumboX.SetPoint_i_Invariant(currentSetPoint) &
+    tc.TempSensor.Temperature_i_GumboX.Temperature_i_Invariant(latestTemp) &
     compute_spec_TC_Req_01_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_02_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_03_guarantee(In_currentFanState, currentFanState, currentSetPoint, latestTemp) &
@@ -196,10 +179,10 @@ object TempControl_s_tcproc_tempControl_Bridge_GumboX {
       latestTemp: TempSensor.Temperature_i,
       api_fanCmd: Option[CoolingFan.FanCmd.Type],
       api_setPoint: TempControlSoftwareSystem.SetPoint_i): B =
-    tc_TempSensor_Temperature_i_Invariant(In_latestTemp) &
-    tc_TempControlSoftwareSystem_SetPoint_i_Invariant(currentSetPoint) &
-    tc_TempSensor_Temperature_i_Invariant(latestTemp) &
-    tc_TempControlSoftwareSystem_SetPoint_i_Invariant(api_setPoint) &
+    tc.TempSensor.Temperature_i_GumboX.Temperature_i_Invariant(In_latestTemp) &
+    tc.TempControlSoftwareSystem.SetPoint_i_GumboX.SetPoint_i_Invariant(currentSetPoint) &
+    tc.TempSensor.Temperature_i_GumboX.Temperature_i_Invariant(latestTemp) &
+    tc.TempControlSoftwareSystem.SetPoint_i_GumboX.SetPoint_i_Invariant(api_setPoint) &
     compute_spec_TC_Req_01_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_02_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_03_guarantee(In_currentFanState, currentFanState, currentSetPoint, latestTemp) &
@@ -224,10 +207,10 @@ object TempControl_s_tcproc_tempControl_Bridge_GumboX {
       latestTemp: TempSensor.Temperature_i,
       api_currentTemp: TempSensor.Temperature_i,
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    tc_TempControlSoftwareSystem_SetPoint_i_Invariant(In_currentSetPoint) &
-    tc_TempControlSoftwareSystem_SetPoint_i_Invariant(currentSetPoint) &
-    tc_TempSensor_Temperature_i_Invariant(latestTemp) &
-    tc_TempSensor_Temperature_i_Invariant(api_currentTemp) &
+    tc.TempControlSoftwareSystem.SetPoint_i_GumboX.SetPoint_i_Invariant(In_currentSetPoint) &
+    tc.TempControlSoftwareSystem.SetPoint_i_GumboX.SetPoint_i_Invariant(currentSetPoint) &
+    tc.TempSensor.Temperature_i_GumboX.Temperature_i_Invariant(latestTemp) &
+    tc.TempSensor.Temperature_i_GumboX.Temperature_i_Invariant(api_currentTemp) &
     compute_spec_TC_Req_01_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_02_guarantee(currentFanState, currentSetPoint, latestTemp) &
     compute_spec_TC_Req_03_guarantee(In_currentFanState, currentFanState, currentSetPoint, latestTemp) &

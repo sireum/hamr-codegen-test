@@ -7,23 +7,6 @@ import tc._
 
 // This file was auto-generated.  Do not edit
 object TempControlPeriodic_p_tcproc_tempControl_Bridge_GumboX {
-  /** invariant AbsZero
-    */
-  @strictpure def tc_TempSensor_Temperature_i_AbsZero_Invariant(value: TempSensor.Temperature_i): B =
-    GUMBO_Definitions.GUMBO__Library.atLeastAbsoluteZeroRaw(value.degrees, value.unit)
-
-  @strictpure def tc_TempSensor_Temperature_i_Invariant(value: TempSensor.Temperature_i): B =
-    tc_TempSensor_Temperature_i_AbsZero_Invariant(value)
-
-  /** invariant SetPoint_Data_Invariant
-    */
-  @strictpure def tc_TempControlSoftwareSystem_SetPoint_i_SetPoint_Data_Invariant_Invariant(value: TempControlSoftwareSystem.SetPoint_i): B =
-    value.low.degrees >= 50.0f & value.high.degrees <= 110.0f & value.low.degrees <= value.high.degrees
-
-  @strictpure def tc_TempControlSoftwareSystem_SetPoint_i_Invariant(value: TempControlSoftwareSystem.SetPoint_i): B =
-    tc_TempControlSoftwareSystem_SetPoint_i_SetPoint_Data_Invariant_Invariant(value)
-
-
   /** guarantees altCurrentTempLTSetPoint
     *   If current temperature is less than
     *   the current low set point, then the fan state shall be Off
@@ -122,8 +105,8 @@ object TempControlPeriodic_p_tcproc_tempControl_Bridge_GumboX {
       api_currentTemp: TempSensor.Temperature_i,
       api_fanCmd: CoolingFan.FanCmd.Type,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i): B =
-    tc_TempSensor_Temperature_i_Invariant(api_currentTemp) &
-    tc_TempControlSoftwareSystem_SetPoint_i_Invariant(api_setPoint) &
+    tc.TempSensor.Temperature_i_GumboX.Temperature_i_Invariant(api_currentTemp) &
+    tc.TempControlSoftwareSystem.SetPoint_i_GumboX.SetPoint_i_Invariant(api_setPoint) &
     compute_spec_altCurrentTempLTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_fanCmd, api_setPoint) &
     compute_spec_altCurrentTempGTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_fanCmd, api_setPoint) &
     compute_spec_altCurrentTempInRange_guarantee(In_latestFanCmd, latestFanCmd, api_currentTemp, api_fanCmd, api_setPoint) &
