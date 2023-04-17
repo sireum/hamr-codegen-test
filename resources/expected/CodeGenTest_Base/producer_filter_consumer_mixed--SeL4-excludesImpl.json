@@ -271,7 +271,7 @@
         "slang\/src\/main\/component\/pfc_project\/PFC\/Consumer_proc_consumer.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage pfc_project.PFC\n\nimport org.sireum._\nimport pfc_project._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Consumer_proc_consumer {\n\n  def initialise(api: Consumer_Initialization_Api): Unit = { }\n\n  def handle_from_filter(api: Consumer_Operational_Api, value : Base_Types.Bits): Unit = { }\n\n  def activate(api: Consumer_Operational_Api): Unit = { }\n\n  def deactivate(api: Consumer_Operational_Api): Unit = { }\n\n  def finalise(api: Consumer_Operational_Api): Unit = { }\n\n  def recover(api: Consumer_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage pfc_project.PFC\n\nimport org.sireum._\nimport pfc_project._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Consumer_proc_consumer {\n\n  def initialise(api: Consumer_Initialization_Api): Unit = { }\n\n  def handle_from_filter(api: Consumer_Operational_Api, value: Base_Types.Bits): Unit = { }\n\n  def activate(api: Consumer_Operational_Api): Unit = { }\n\n  def deactivate(api: Consumer_Operational_Api): Unit = { }\n\n  def finalise(api: Consumer_Operational_Api): Unit = { }\n\n  def recover(api: Consumer_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
