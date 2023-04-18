@@ -17,4 +17,5 @@ airFile = .slang/BuildingControl_BuildingControlDemo_i_Instance.json
 # same options as 'sireum hamr codegen', paths should be relative to the .hamrtest file
 hamrArgs = --package-name bc \
            --no-proyek-ive \
+           --sbt-mill \
            --output-dir ./hamr/slang

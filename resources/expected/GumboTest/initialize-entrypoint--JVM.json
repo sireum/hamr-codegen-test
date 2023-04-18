@@ -192,6 +192,21 @@
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN STATE VARS",
+              "endMarker" : "\/\/ END STATE VARS"
+            },
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN INITIALIZES MODIFIES",
+              "endMarker" : "\/\/ END INITIALIZES MODIFIES"
+            },
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
+              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+            }
           ]
         }
       ],
