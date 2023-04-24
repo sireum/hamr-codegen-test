@@ -28,34 +28,10 @@
         }
       ],
       [
-        "slang\/src\/main\/data\/enum_test__JVM\/Enum_Test\/Temperature_i_GumboX.scala",
-        {
-          "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject Temperature_i_GumboX {\n  \/** invariant i1\n    *   Temperature Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Enum_Test.Temperature_i): B =\n    if (value.unit == Enum_Test.Unity.Ke) value.degrees >= 0.0d else if (value.unit == Enum_Test.Unity.Ce) value.degrees >= -273.0d else if (value.unit == Enum_Test.Unity.Fa) value.degrees >= -459.67d else F\n\n  @strictpure def Temperature_i_Invariant(value: Enum_Test.Temperature_i): B =\n    i1_Invariant(value)\n}",
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "markers" : [
-          ]
-        }
-      ],
-      [
         "slang\/src\/main\/data\/enum_test__JVM\/Enum_Test\/SetPoint_i.scala",
         {
           "type" : "ITestResource",
           "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject SetPoint_i {\n  def example(): Enum_Test.SetPoint_i = {\n    return Enum_Test.SetPoint_i(\n      low = Enum_Test.Temperature_i.example(),\n      high = Enum_Test.Temperature_i.example())\n  }\n}\n\n@datatype class SetPoint_i(\n  val low: Enum_Test.Temperature_i,\n  val high: Enum_Test.Temperature_i) {\n  @spec def i1 = Invariant(\n    low.degrees >= 70.0d && high.degrees <= 100.0d && low.degrees <= high.degrees\n  )\n}\n\nobject SetPoint_i_Payload {\n  def example(): SetPoint_i_Payload = {\n    return SetPoint_i_Payload(Enum_Test.SetPoint_i.example())\n  }\n}\n\n@datatype class SetPoint_i_Payload(value: Enum_Test.SetPoint_i) extends art.DataContent\n",
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "markers" : [
-          ]
-        }
-      ],
-      [
-        "slang\/src\/main\/data\/enum_test__JVM\/Enum_Test\/SetPoint_i_GumboX.scala",
-        {
-          "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject SetPoint_i_GumboX {\n  \/** invariant i1\n    *   SetPoint Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Enum_Test.SetPoint_i): B =\n    value.low.degrees >= 70.0d && value.high.degrees <= 100.0d && value.low.degrees <= value.high.degrees\n\n  @strictpure def SetPoint_i_Invariant(value: Enum_Test.SetPoint_i): B =\n    i1_Invariant(value)\n}",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -223,6 +199,42 @@
         }
       ],
       [
+        "slang\/src\/main\/data\/enum_test__JVM\/Enum_Test\/Temperature_i_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject Temperature_i_GumboX {\n  \/** invariant i1\n    *   Temperature Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Enum_Test.Temperature_i): B =\n    if (value.unit == Enum_Test.Unity.Ke) value.degrees >= 0.0d else if (value.unit == Enum_Test.Unity.Ce) value.degrees >= -273.0d else if (value.unit == Enum_Test.Unity.Fa) value.degrees >= -459.67d else F\n\n  \/** D-Inv Data Invariant for Enum_Test.Temperature_i\n    *\/\n  @strictpure def D_Inv_Temperature_i(value: Enum_Test.Temperature_i): B =\n    (i1_Invariant(value))\n\n  \/** D-Inv-Guard Data Invariant for Enum_Test.Temperature_i\n    *\/\n  @strictpure def D_Inv_Guard_Temperature_i(value: Option[Enum_Test.Temperature_i]): B =\n    value.nonEmpty -->: D_Inv_Temperature_i(value.get)\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/enum_test__JVM\/Enum_Test\/SetPoint_i_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject SetPoint_i_GumboX {\n  \/** invariant i1\n    *   SetPoint Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Enum_Test.SetPoint_i): B =\n    value.low.degrees >= 70.0d && value.high.degrees <= 100.0d && value.low.degrees <= value.high.degrees\n\n  \/** D-Inv Data Invariant for Enum_Test.SetPoint_i\n    *\/\n  @strictpure def D_Inv_SetPoint_i(value: Enum_Test.SetPoint_i): B =\n    (i1_Invariant(value))\n\n  \/** D-Inv-Guard Data Invariant for Enum_Test.SetPoint_i\n    *\/\n  @strictpure def D_Inv_Guard_SetPoint_i(value: Option[Enum_Test.SetPoint_i]): B =\n    value.nonEmpty -->: D_Inv_SetPoint_i(value.get)\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/enum_test__JVM\/Enum_Test\/TempControl_p_tempControl_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject TempControl_p_tempControl_GumboX {\n  \/** I-Assm: Integration constraint on tempControl's incoming event data port setPoint\n    *\n    * assume a1\n    *   setPoint Range\n    *\/\n  @strictpure def I_Assm_setPoint(setPoint: Enum_Test.SetPoint_i): B =\n    setPoint.low.degrees >= 40.0d && setPoint.high.degrees <= 110.0d\n\n  \/\/ I-Assm-Guard: Integration constraint on tempControl's incoming event data port setPoint\n  @strictpure def I_Assm_Guard_setPoint(setPoint: Option[Enum_Test.SetPoint_i]): B =\n    setPoint.nonEmpty -->: I_Assm_setPoint(setPoint.get)\n\n  \/** I-Assm: Integration constraint on tempControl's incoming event data port currentTemp\n    *\n    * assume i1\n    *   currentTemp Range\n    *\/\n  @strictpure def I_Assm_currentTemp(currentTemp: Enum_Test.Temperature_i): B =\n    currentTemp.degrees >= -70.0d && currentTemp.degrees <= 180.0d\n\n  \/\/ I-Assm-Guard: Integration constraint on tempControl's incoming event data port currentTemp\n  @strictpure def I_Assm_Guard_currentTemp(currentTemp: Option[Enum_Test.Temperature_i]): B =\n    currentTemp.nonEmpty -->: I_Assm_currentTemp(currentTemp.get)\n\n  \/** Initialize Entrypoint Contract\n    *\n    * guarantees g1\n    *   defaultSetPoint\n    * @param currentSetPoint post-state state variable\n    *\/\n  @strictpure def initialize_g1 (\n      currentSetPoint: Enum_Test.SetPoint_i): B =\n    currentSetPoint.low.degrees == 70.0d && currentSetPoint.high.degrees == 80.0d\n\n  \/** IEP-Post: Initialize Entrypoint Post-Condition\n    *\n    * @param currentSetPoint post-state state variable\n    *\/\n  @strictpure def inititialize_IEP_Post (\n      currentSetPoint: Enum_Test.SetPoint_i): B =\n    (\n     \/\/ IEP-Guar: Initialize Entrypoint contract for tempControl\n     initialize_g1(currentSetPoint))\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
         "slang\/src\/test\/util\/enum_test__JVM\/BridgeTestSuite.scala",
         {
           "type" : "ITestResource",
@@ -288,6 +300,18 @@
           "type" : "ITestResource",
           "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject tempSensor_p_tempSensor {\n\n  def initialise(api: tempSensor_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_currentTemp(Enum_Test.Temperature_i.example())\n  }\n\n  def timeTriggered(api: tempSensor_Operational_Api): Unit = {\n    \/\/ example api usage\n\n\n  }\n\n  def activate(api: tempSensor_Operational_Api): Unit = { }\n\n  def deactivate(api: tempSensor_Operational_Api): Unit = { }\n\n  def finalise(api: tempSensor_Operational_Api): Unit = { }\n\n  def recover(api: tempSensor_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/enum_test__JVM\/Enum_Test\/tempSensor_p_tempSensor_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject tempSensor_p_tempSensor_GumboX {\n  \/** I-Guar: Integration constraint on tempSensor's outgoing event data port currentTemp\n    *\n    * guarantee g1\n    *   currentTemp Range\n    *\/\n  @strictpure def I_Guar_currentTemp(currentTemp: Enum_Test.Temperature_i): B =\n    currentTemp.degrees >= -70.0d && currentTemp.degrees <= 180.0d\n\n  \/\/ I_Guar-Guard: Integration constraint on tempSensor's outgoing event data port currentTemp\n  @strictpure def I_Guar_Guard_currentTemp(currentTemp: Option[Enum_Test.Temperature_i]): B =\n    currentTemp.nonEmpty -->: I_Guar_currentTemp(currentTemp.get)\n}\n",
+          "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [

@@ -16,34 +16,10 @@
         }
       ],
       [
-        "slang\/src\/main\/data\/integration_contracts__JVM\/Integration_Contracts\/Temperature_i_GumboX.scala",
-        {
-          "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage integration_contracts__JVM.Integration_Contracts\n\nimport org.sireum._\nimport integration_contracts__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject Temperature_i_GumboX {\n  \/** invariant i1\n    *   Temperature Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Integration_Contracts.Temperature_i): B =\n    value.degrees >= -459.67f\n\n  @strictpure def Temperature_i_Invariant(value: Integration_Contracts.Temperature_i): B =\n    i1_Invariant(value)\n}",
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "markers" : [
-          ]
-        }
-      ],
-      [
         "slang\/src\/main\/data\/integration_contracts__JVM\/Integration_Contracts\/SetPoint_i.scala",
         {
           "type" : "ITestResource",
           "content" : "\/\/ #Sireum\n\npackage integration_contracts__JVM.Integration_Contracts\n\nimport org.sireum._\nimport integration_contracts__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\nobject SetPoint_i {\n  def example(): Integration_Contracts.SetPoint_i = {\n    return Integration_Contracts.SetPoint_i(\n      low = Integration_Contracts.Temperature_i.example(),\n      high = Integration_Contracts.Temperature_i.example())\n  }\n}\n\n@datatype class SetPoint_i(\n  val low: Integration_Contracts.Temperature_i,\n  val high: Integration_Contracts.Temperature_i) {\n  @spec def i1 = Invariant(\n    low.degrees >= 70.0f && high.degrees <= 100.0f && low.degrees <= high.degrees\n  )\n}\n\nobject SetPoint_i_Payload {\n  def example(): SetPoint_i_Payload = {\n    return SetPoint_i_Payload(Integration_Contracts.SetPoint_i.example())\n  }\n}\n\n@datatype class SetPoint_i_Payload(value: Integration_Contracts.SetPoint_i) extends art.DataContent\n",
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "markers" : [
-          ]
-        }
-      ],
-      [
-        "slang\/src\/main\/data\/integration_contracts__JVM\/Integration_Contracts\/SetPoint_i_GumboX.scala",
-        {
-          "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage integration_contracts__JVM.Integration_Contracts\n\nimport org.sireum._\nimport integration_contracts__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject SetPoint_i_GumboX {\n  \/** invariant i1\n    *   SetPoint Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Integration_Contracts.SetPoint_i): B =\n    value.low.degrees >= 70.0f && value.high.degrees <= 100.0f && value.low.degrees <= value.high.degrees\n\n  @strictpure def SetPoint_i_Invariant(value: Integration_Contracts.SetPoint_i): B =\n    i1_Invariant(value)\n}",
           "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
@@ -196,6 +172,42 @@
         }
       ],
       [
+        "slang\/src\/main\/data\/integration_contracts__JVM\/Integration_Contracts\/Temperature_i_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage integration_contracts__JVM.Integration_Contracts\n\nimport org.sireum._\nimport integration_contracts__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject Temperature_i_GumboX {\n  \/** invariant i1\n    *   Temperature Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Integration_Contracts.Temperature_i): B =\n    value.degrees >= -459.67f\n\n  \/** D-Inv Data Invariant for Integration_Contracts.Temperature_i\n    *\/\n  @strictpure def D_Inv_Temperature_i(value: Integration_Contracts.Temperature_i): B =\n    (i1_Invariant(value))\n\n  \/** D-Inv-Guard Data Invariant for Integration_Contracts.Temperature_i\n    *\/\n  @strictpure def D_Inv_Guard_Temperature_i(value: Option[Integration_Contracts.Temperature_i]): B =\n    value.nonEmpty -->: D_Inv_Temperature_i(value.get)\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/integration_contracts__JVM\/Integration_Contracts\/SetPoint_i_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage integration_contracts__JVM.Integration_Contracts\n\nimport org.sireum._\nimport integration_contracts__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject SetPoint_i_GumboX {\n  \/** invariant i1\n    *   SetPoint Data Invariant\n    *\/\n  @strictpure def i1_Invariant(value: Integration_Contracts.SetPoint_i): B =\n    value.low.degrees >= 70.0f && value.high.degrees <= 100.0f && value.low.degrees <= value.high.degrees\n\n  \/** D-Inv Data Invariant for Integration_Contracts.SetPoint_i\n    *\/\n  @strictpure def D_Inv_SetPoint_i(value: Integration_Contracts.SetPoint_i): B =\n    (i1_Invariant(value))\n\n  \/** D-Inv-Guard Data Invariant for Integration_Contracts.SetPoint_i\n    *\/\n  @strictpure def D_Inv_Guard_SetPoint_i(value: Option[Integration_Contracts.SetPoint_i]): B =\n    value.nonEmpty -->: D_Inv_SetPoint_i(value.get)\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/integration_contracts__JVM\/Integration_Contracts\/TempControl_p_tempControl_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage integration_contracts__JVM.Integration_Contracts\n\nimport org.sireum._\nimport integration_contracts__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject TempControl_p_tempControl_GumboX {\n  \/** I-Assm: Integration constraint on tempControl's incoming event data port setPoint\n    *\n    * assume a2\n    *   setPoint Range\n    *\/\n  @strictpure def I_Assm_setPoint(setPoint: Integration_Contracts.SetPoint_i): B =\n    setPoint.low.degrees >= 40.0f && setPoint.high.degrees <= 110.0f\n\n  \/\/ I-Assm-Guard: Integration constraint on tempControl's incoming event data port setPoint\n  @strictpure def I_Assm_Guard_setPoint(setPoint: Option[Integration_Contracts.SetPoint_i]): B =\n    setPoint.nonEmpty -->: I_Assm_setPoint(setPoint.get)\n\n  \/** I-Assm: Integration constraint on tempControl's incoming event data port currentTemp\n    *\n    * assume a1\n    *   currentTemp Range\n    *\/\n  @strictpure def I_Assm_currentTemp(currentTemp: Integration_Contracts.Temperature_i): B =\n    currentTemp.degrees >= 70.0f && currentTemp.degrees <= 180.0f\n\n  \/\/ I-Assm-Guard: Integration constraint on tempControl's incoming event data port currentTemp\n  @strictpure def I_Assm_Guard_currentTemp(currentTemp: Option[Integration_Contracts.Temperature_i]): B =\n    currentTemp.nonEmpty -->: I_Assm_currentTemp(currentTemp.get)\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
         "slang\/src\/test\/util\/integration_contracts__JVM\/BridgeTestSuite.scala",
         {
           "type" : "ITestResource",
@@ -261,6 +273,18 @@
           "type" : "ITestResource",
           "content" : "\/\/ #Sireum\n\npackage integration_contracts__JVM.Integration_Contracts\n\nimport org.sireum._\nimport integration_contracts__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject tempSensor_p_tempSensor {\n\n  def initialise(api: tempSensor_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_currentTemp(Integration_Contracts.Temperature_i.example())\n  }\n\n  def timeTriggered(api: tempSensor_Operational_Api): Unit = {\n    \/\/ example api usage\n\n\n  }\n\n  def activate(api: tempSensor_Operational_Api): Unit = { }\n\n  def deactivate(api: tempSensor_Operational_Api): Unit = { }\n\n  def finalise(api: tempSensor_Operational_Api): Unit = { }\n\n  def recover(api: tempSensor_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/integration_contracts__JVM\/Integration_Contracts\/tempSensor_p_tempSensor_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage integration_contracts__JVM.Integration_Contracts\n\nimport org.sireum._\nimport integration_contracts__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject tempSensor_p_tempSensor_GumboX {\n  \/** I-Guar: Integration constraint on tempSensor's outgoing event data port currentTemp\n    *\n    * guarantee g1\n    *   currentTemp Range\n    *\/\n  @strictpure def I_Guar_currentTemp(currentTemp: Integration_Contracts.Temperature_i): B =\n    currentTemp.degrees >= 70.0f && currentTemp.degrees <= 180.0f\n\n  \/\/ I_Guar-Guard: Integration constraint on tempSensor's outgoing event data port currentTemp\n  @strictpure def I_Guar_Guard_currentTemp(currentTemp: Option[Integration_Contracts.Temperature_i]): B =\n    currentTemp.nonEmpty -->: I_Guar_currentTemp(currentTemp.get)\n}\n",
+          "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [

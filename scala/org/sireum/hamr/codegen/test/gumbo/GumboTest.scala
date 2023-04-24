@@ -93,11 +93,32 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
       None(), None(), ISZ())
   }
 
+  "isolette" in {
+    val name = "isolette"
+    val modelDir = testResources.modelsDir / name
+    val model = Some(getJson(modelDir))
+
+    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    testAir(s"$name--${platform}", modelDir, model, None(),
+      baseOptions(platform = platform),
+      None(), None(), ISZ())
+  }
+
+  "rts" in {
+    val name = "RTS-aadl"
+    val modelDir = testResources.modelsDir / name
+    val model = Some(getJson(modelDir))
+
+    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    testAir(s"$name--${platform}", modelDir, model, None(),
+      baseOptions(platform = platform),
+      None(), None(), ISZ())
+  }
+
 
   def getJson(d: Os.Path): Os.Path = {
-    val s = d / ".slang"
-    val cands = s.list.filter(f => f.name.native.endsWith("json"))
-    assert(cands.size == 1, s": Inspect json files in ${s.value}")
+    val cands = Os.Path.walk(d, T, F, p => p.isFile && p.up.name.native == ".slang" && p.ext.native == "json")
+    assert(cands.size == 1, s": Inspect json files in ${d.toUri}: $cands")
     return cands(0)
   }
 }
