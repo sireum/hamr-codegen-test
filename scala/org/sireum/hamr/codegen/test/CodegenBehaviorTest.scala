@@ -18,7 +18,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
   def disablePhantom: B = F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
-  def justRegenerate: B = F // ignore test modes
+  def justRegenerate: B = T // ignore test modes
 
   def filter: B = F
 
