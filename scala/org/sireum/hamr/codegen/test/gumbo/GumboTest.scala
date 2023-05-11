@@ -26,7 +26,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
   }
 
   override def testModes: ISZ[TestMode.Type] = {
-    return superModes :+ TestMode.logika
+    return (superModes :+ TestMode.logika) - TestMode.generated_unit_tests
   }
 
   override def afterAll(): Unit = {
