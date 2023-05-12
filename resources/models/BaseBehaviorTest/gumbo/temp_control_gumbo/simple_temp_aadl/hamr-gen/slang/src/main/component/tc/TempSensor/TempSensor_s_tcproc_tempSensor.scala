@@ -27,7 +27,10 @@ object TempSensor_s_tcproc_tempSensor {
       Ensures(
         // BEGIN INITIALIZES ENSURES
         // guarantee initializes
-        api.currentTemp.degrees == 72.0f && api.currentTemp.degrees == TempSensor_s_tcproc_tempSensor.defaultTempDegrees() && api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees()) && api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees()),
+        api.currentTemp.degrees == 72.0f &&
+          api.currentTemp.degrees == TempSensor_s_tcproc_tempSensor.defaultTempDegrees() &&
+          api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees()) &&
+          api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees()),
         // guarantee g1
         //   Testing MustSend with event port, initializes so no event expected
         !(api.tempChanged.nonEmpty),

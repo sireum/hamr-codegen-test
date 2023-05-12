@@ -6,7 +6,7 @@ import TempControlSimpleTemp.TempSensor.Temperature_i
 import TempControlSimpleTemp.CoolingFan.FanCmd
 
 // This file will not be overwritten so is safe to edit
-class TempControl_i_tcproc_tempControl_Test extends TempControl_i_tcproc_tempControl_TestApi {
+class TempControl_i_tcproc_tempControl_Test extends TempControl_i_tcproc_tempControl_ScalaTest {
 
   // CHUT = Convential HAMR Unit Test
   test("CHUT: InitialEP") {

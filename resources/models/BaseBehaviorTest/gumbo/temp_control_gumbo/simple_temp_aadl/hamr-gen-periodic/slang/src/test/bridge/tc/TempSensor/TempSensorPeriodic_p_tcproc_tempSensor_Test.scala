@@ -4,7 +4,7 @@ import org.sireum._
 import tc.TempSensor._
 
 // This file will not be overwritten so is safe to edit
-class TempSensorPeriodic_p_tcproc_tempSensor_Test extends TempSensorPeriodic_p_tcproc_tempSensor_TestApi {
+class TempSensorPeriodic_p_tcproc_tempSensor_Test extends TempSensorPeriodic_p_tcproc_tempSensor_ScalaTest {
 
   test("Example Unit Test for Initialise Entry Point"){
     // Initialise Entry Point doesn't read input port values, so just proceed with

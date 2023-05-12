@@ -6,7 +6,7 @@ import tc.TempControlSoftwareSystem._
 import tc.TempSensor.Temperature_i
 
 // This file will not be overwritten so is safe to edit
-class TempControlPeriodic_p_tcproc_tempControl_Test extends TempControlPeriodic_p_tcproc_tempControl_TestApi {
+class TempControlPeriodic_p_tcproc_tempControl_Test extends TempControlPeriodic_p_tcproc_tempControl_ScalaTest {
 
   test("Example Unit Test for Initialise Entry Point"){
     // Initialise Entry Point doesn't read input port values, so just proceed with

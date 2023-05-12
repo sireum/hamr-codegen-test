@@ -1,11 +1,31 @@
+// #Sireum
+
 package prod_cons__JVM.ProdConsFlows
 
 import org.sireum._
-import art.{ArtNative_Ext, Empty}
+import art.{Art, ArtNative, Empty}
 import prod_cons__JVM._
 
 // This file was auto-generated.  Do not edit
-abstract class Consumer_p_consumer_TestApi extends BridgeTestSuite[Consumer_p_consumer_Bridge](Arch.s_i_Instance_p_consumer) {
+@msig trait Consumer_p_consumer_TestApi {
+
+  def BeforeEntrypoint(): Unit = {
+    Art.initTest(Arch.s_i_Instance_p_consumer)
+  }
+
+  def AfterEntrypoint(): Unit = {
+    Art.finalizeTest(Arch.s_i_Instance_p_consumer)
+  }
+
+  def testCompute(): Unit = {
+    Art.manuallyClearOutput()
+    Art.testCompute(Arch.s_i_Instance_p_consumer)
+  }
+
+  def testInitialise(): Unit = {
+    Art.manuallyClearOutput()
+    Art.testInitialise(Arch.s_i_Instance_p_consumer)
+  }
 
   /** helper function to set the values of all input ports.
    * @param a_in payloads for event data port a_in.
@@ -28,12 +48,12 @@ abstract class Consumer_p_consumer_TestApi extends BridgeTestSuite[Consumer_p_co
 
   // setter for in EventDataPort
   def put_a_in(value : Base_Types.Float_32): Unit = {
-    ArtNative_Ext.insertInPortValue(bridge.operational_api.a_in_Id, Base_Types.Float_32_Payload(value))
+    ArtNative.insertInPortValue(Arch.s_i_Instance_p_consumer.operational_api.a_in_Id, Base_Types.Float_32_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_b_in(value : Base_Types.Float_32): Unit = {
-    ArtNative_Ext.insertInPortValue(bridge.operational_api.b_in_Id, Base_Types.Float_32_Payload(value))
+    ArtNative.insertInPortValue(Arch.s_i_Instance_p_consumer.operational_api.b_in_Id, Base_Types.Float_32_Payload(value))
   }
 
 }

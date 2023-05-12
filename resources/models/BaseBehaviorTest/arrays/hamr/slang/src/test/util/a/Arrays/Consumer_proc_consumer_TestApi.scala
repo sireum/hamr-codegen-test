@@ -1,11 +1,31 @@
+// #Sireum
+
 package a.Arrays
 
 import org.sireum._
-import art.{ArtNative_Ext, Empty}
+import art.{Art, ArtNative, Empty}
 import a._
 
 // This file was auto-generated.  Do not edit
-abstract class Consumer_proc_consumer_TestApi extends BridgeTestSuite[Consumer_proc_consumer_Bridge](Arch.PC_Sys_Impl_Instance_proc_consumer) {
+@msig trait Consumer_proc_consumer_TestApi {
+
+  def BeforeEntrypoint(): Unit = {
+    Art.initTest(Arch.PC_Sys_Impl_Instance_proc_consumer)
+  }
+
+  def AfterEntrypoint(): Unit = {
+    Art.finalizeTest(Arch.PC_Sys_Impl_Instance_proc_consumer)
+  }
+
+  def testCompute(): Unit = {
+    Art.manuallyClearOutput()
+    Art.testCompute(Arch.PC_Sys_Impl_Instance_proc_consumer)
+  }
+
+  def testInitialise(): Unit = {
+    Art.manuallyClearOutput()
+    Art.testInitialise(Arch.PC_Sys_Impl_Instance_proc_consumer)
+  }
 
   /** helper function to set the values of all input ports.
    * @param coordinates payloads for event data port coordinates.
@@ -35,17 +55,17 @@ abstract class Consumer_proc_consumer_TestApi extends BridgeTestSuite[Consumer_p
 
   // setter for in EventDataPort
   def put_coordinates(value : Arrays.Array_of_Coordinates): Unit = {
-    ArtNative_Ext.insertInPortValue(bridge.operational_api.coordinates_Id, Arrays.Array_of_Coordinates_Payload(value))
+    ArtNative.insertInPortValue(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.coordinates_Id, Arrays.Array_of_Coordinates_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_vector_of_coordinates(value : Arrays.Vector_of_Coordinates): Unit = {
-    ArtNative_Ext.insertInPortValue(bridge.operational_api.vector_of_coordinates_Id, Arrays.Vector_of_Coordinates_Payload(value))
+    ArtNative.insertInPortValue(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.vector_of_coordinates_Id, Arrays.Vector_of_Coordinates_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_integers(value : Arrays.Array_of_Integers): Unit = {
-    ArtNative_Ext.insertInPortValue(bridge.operational_api.integers_Id, Arrays.Array_of_Integers_Payload(value))
+    ArtNative.insertInPortValue(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.integers_Id, Arrays.Array_of_Integers_Payload(value))
   }
 
 }

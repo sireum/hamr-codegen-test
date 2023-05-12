@@ -1,11 +1,31 @@
+// #Sireum
+
 package tc.TempControlSoftwareSystem
 
 import org.sireum._
-import art.{ArtNative_Ext, Empty}
+import art.{Art, ArtNative, Empty}
 import tc._
 
 // This file was auto-generated.  Do not edit
-abstract class OperatorInterfacePeriodic_p_tcproc_operatorInterface_TestApi extends BridgeTestSuite[OperatorInterfacePeriodic_p_tcproc_operatorInterface_Bridge](Arch.TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface) {
+@msig trait OperatorInterfacePeriodic_p_tcproc_operatorInterface_TestApi {
+
+  def BeforeEntrypoint(): Unit = {
+    Art.initTest(Arch.TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface)
+  }
+
+  def AfterEntrypoint(): Unit = {
+    Art.finalizeTest(Arch.TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface)
+  }
+
+  def testCompute(): Unit = {
+    Art.manuallyClearOutput()
+    Art.testCompute(Arch.TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface)
+  }
+
+  def testInitialise(): Unit = {
+    Art.manuallyClearOutput()
+    Art.testInitialise(Arch.TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface)
+  }
 
   /** helper function to set the values of all input ports.
    * @param currentTemp payload for data port currentTemp
@@ -20,7 +40,7 @@ abstract class OperatorInterfacePeriodic_p_tcproc_operatorInterface_TestApi exte
    * @param setPoint method that will be called with the value of the outgoing data
    *        port 'setPoint'.
    */
-  def check_concrete_output(setPoint: TempControlSoftwareSystem.SetPoint_i => B = setPointParam => {T}): Unit = {
+  def check_concrete_output(setPoint: TempControlSoftwareSystem.SetPoint_i => B): Unit = {
     var testFailures: ISZ[ST] = ISZ()
 
     val setPointValue: TempControlSoftwareSystem.SetPoint_i = get_setPoint().get
@@ -34,14 +54,14 @@ abstract class OperatorInterfacePeriodic_p_tcproc_operatorInterface_TestApi exte
 
   // setter for in DataPort
   def put_currentTemp(value : TempSensor.Temperature_i): Unit = {
-    ArtNative_Ext.insertInPortValue(bridge.operational_api.currentTemp_Id, TempSensor.Temperature_i_Payload(value))
+    ArtNative.insertInPortValue(Arch.TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface.operational_api.currentTemp_Id, TempSensor.Temperature_i_Payload(value))
   }
 
   // getter for out DataPort
   def get_setPoint(): Option[TempControlSoftwareSystem.SetPoint_i] = {
     val value: Option[TempControlSoftwareSystem.SetPoint_i] = get_setPoint_payload() match {
       case Some(TempControlSoftwareSystem.SetPoint_i_Payload(v)) => Some(v)
-      case Some(v) => fail(s"Unexpected payload on port setPoint.  Expecting 'TempControlSoftwareSystem.SetPoint_i_Payload' but received ${v}")
+      case Some(v) => halt(s"Unexpected payload on port setPoint.  Expecting 'TempControlSoftwareSystem.SetPoint_i_Payload' but received ${v}")
       case _ => None[TempControlSoftwareSystem.SetPoint_i]()
     }
     return value
@@ -49,7 +69,7 @@ abstract class OperatorInterfacePeriodic_p_tcproc_operatorInterface_TestApi exte
 
   // payload getter for out DataPort
   def get_setPoint_payload(): Option[TempControlSoftwareSystem.SetPoint_i_Payload] = {
-    return ArtNative_Ext.observeOutPortValue(bridge.initialization_api.setPoint_Id).asInstanceOf[Option[TempControlSoftwareSystem.SetPoint_i_Payload]]
+    return ArtNative.observeOutPortValue(Arch.TempControlSoftwareSystem_p_Instance_tcproc_operatorInterface.initialization_api.setPoint_Id).asInstanceOf[Option[TempControlSoftwareSystem.SetPoint_i_Payload]]
   }
 
 }

@@ -4,7 +4,7 @@ import org.sireum._
 import a.Arrays._
 
 // This file will not be overwritten so is safe to edit
-class Consumer_proc_consumer_Test extends Consumer_proc_consumer_TestApi {
+class Consumer_proc_consumer_Test extends Consumer_proc_consumer_ScalaTest {
 
   test("Example Unit Test for Initialise Entry Point"){
     // Initialise Entry Point doesn't read input port values, so just proceed with

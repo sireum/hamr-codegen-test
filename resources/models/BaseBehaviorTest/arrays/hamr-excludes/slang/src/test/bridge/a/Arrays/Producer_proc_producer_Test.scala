@@ -4,7 +4,7 @@ import org.sireum._
 import a.Arrays._
 
 // This file will not be overwritten so is safe to edit
-class Producer_proc_producer_Test extends Producer_proc_producer_TestApi {
+class Producer_proc_producer_Test extends Producer_proc_producer_ScalaTest {
 
   test("Example Unit Test for Initialise Entry Point"){
     // Initialise Entry Point doesn't read input port values, so just proceed with

@@ -49,7 +49,8 @@ object TempControl_i_tcproc_tempControl {
       Ensures(
         // BEGIN INITIALIZES ENSURES
         // guarantee defautSetPoint
-        currentSetPoint.low.degrees == 70.0f && currentSetPoint.high.degrees == 80.0f,
+        currentSetPoint.low.degrees == 70.0f &&
+          currentSetPoint.high.degrees == 80.0f,
         // guarantee defaultFanStates
         currentFanState == CoolingFan.FanCmd.Off,
         // guarantee defaultLatestTemp

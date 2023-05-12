@@ -308,7 +308,7 @@ object CodeGenTest {
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     aadlRootDir = None(),
-    experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
+    experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF, ExperimentalOptions.DISABLE_SLANG_CHECK)
   )
 
   def filterTestsSet(): Option[B] = {

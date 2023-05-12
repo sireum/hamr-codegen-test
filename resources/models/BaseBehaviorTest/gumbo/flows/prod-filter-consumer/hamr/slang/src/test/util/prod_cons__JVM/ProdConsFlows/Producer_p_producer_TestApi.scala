@@ -1,11 +1,31 @@
+// #Sireum
+
 package prod_cons__JVM.ProdConsFlows
 
 import org.sireum._
-import art.{ArtNative_Ext, Empty}
+import art.{Art, ArtNative, Empty}
 import prod_cons__JVM._
 
 // This file was auto-generated.  Do not edit
-abstract class Producer_p_producer_TestApi extends BridgeTestSuite[Producer_p_producer_Bridge](Arch.s_i_Instance_p_producer) {
+@msig trait Producer_p_producer_TestApi {
+
+  def BeforeEntrypoint(): Unit = {
+    Art.initTest(Arch.s_i_Instance_p_producer)
+  }
+
+  def AfterEntrypoint(): Unit = {
+    Art.finalizeTest(Arch.s_i_Instance_p_producer)
+  }
+
+  def testCompute(): Unit = {
+    Art.manuallyClearOutput()
+    Art.testCompute(Arch.s_i_Instance_p_producer)
+  }
+
+  def testInitialise(): Unit = {
+    Art.manuallyClearOutput()
+    Art.testInitialise(Arch.s_i_Instance_p_producer)
+  }
 
   /** helper function to check Producer_p_producer's
    * output ports.  Use named arguments to check subsets of the output ports.
@@ -14,15 +34,15 @@ abstract class Producer_p_producer_TestApi extends BridgeTestSuite[Producer_p_pr
    * @param b_out method that will be called with the payloads to be sent
    *        on the outgoing event data port 'b_out'.
    */
-  def check_concrete_output(a_out: ISZ[Base_Types.Float_32] => B = a_outParam => {T},
-                            b_out: ISZ[Base_Types.Float_32] => B = b_outParam => {T}): Unit = {
+  def check_concrete_output(a_out: ISZ[Base_Types.Float_32] => B,
+                            b_out: ISZ[Base_Types.Float_32] => B): Unit = {
     var testFailures: ISZ[ST] = ISZ()
 
     var a_outValue: ISZ[Base_Types.Float_32] = ISZ()
     // TODO: event data port getter should return all of the events/payloads
     //       received on event data ports when queue sizes > 1 support is added
     //       to ART
-    if(get_a_out().nonEmpty) a_outValue = a_outValue :+ get_a_out().get
+    if(get_a_out().nonEmpty) { a_outValue = a_outValue :+ get_a_out().get }
     if(!a_out(a_outValue)) {
       testFailures = testFailures :+ st"'a_out' did not match expected: received ${a_outValue.size} events with the following payloads ${a_outValue}"
     }
@@ -30,7 +50,7 @@ abstract class Producer_p_producer_TestApi extends BridgeTestSuite[Producer_p_pr
     // TODO: event data port getter should return all of the events/payloads
     //       received on event data ports when queue sizes > 1 support is added
     //       to ART
-    if(get_b_out().nonEmpty) b_outValue = b_outValue :+ get_b_out().get
+    if(get_b_out().nonEmpty) { b_outValue = b_outValue :+ get_b_out().get }
     if(!b_out(b_outValue)) {
       testFailures = testFailures :+ st"'b_out' did not match expected: received ${b_outValue.size} events with the following payloads ${b_outValue}"
     }
@@ -43,7 +63,7 @@ abstract class Producer_p_producer_TestApi extends BridgeTestSuite[Producer_p_pr
   def get_a_out(): Option[Base_Types.Float_32] = {
     val value: Option[Base_Types.Float_32] = get_a_out_payload() match {
       case Some(Base_Types.Float_32_Payload(v)) => Some(v)
-      case Some(v) => fail(s"Unexpected payload on port a_out.  Expecting 'Base_Types.Float_32_Payload' but received ${v}")
+      case Some(v) => halt(s"Unexpected payload on port a_out.  Expecting 'Base_Types.Float_32_Payload' but received ${v}")
       case _ => None[Base_Types.Float_32]()
     }
     return value
@@ -51,14 +71,14 @@ abstract class Producer_p_producer_TestApi extends BridgeTestSuite[Producer_p_pr
 
   // payload getter for out EventDataPort
   def get_a_out_payload(): Option[Base_Types.Float_32_Payload] = {
-    return ArtNative_Ext.observeOutPortValue(bridge.initialization_api.a_out_Id).asInstanceOf[Option[Base_Types.Float_32_Payload]]
+    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_producer.initialization_api.a_out_Id).asInstanceOf[Option[Base_Types.Float_32_Payload]]
   }
 
   // getter for out EventDataPort
   def get_b_out(): Option[Base_Types.Float_32] = {
     val value: Option[Base_Types.Float_32] = get_b_out_payload() match {
       case Some(Base_Types.Float_32_Payload(v)) => Some(v)
-      case Some(v) => fail(s"Unexpected payload on port b_out.  Expecting 'Base_Types.Float_32_Payload' but received ${v}")
+      case Some(v) => halt(s"Unexpected payload on port b_out.  Expecting 'Base_Types.Float_32_Payload' but received ${v}")
       case _ => None[Base_Types.Float_32]()
     }
     return value
@@ -66,7 +86,7 @@ abstract class Producer_p_producer_TestApi extends BridgeTestSuite[Producer_p_pr
 
   // payload getter for out EventDataPort
   def get_b_out_payload(): Option[Base_Types.Float_32_Payload] = {
-    return ArtNative_Ext.observeOutPortValue(bridge.initialization_api.b_out_Id).asInstanceOf[Option[Base_Types.Float_32_Payload]]
+    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_producer.initialization_api.b_out_Id).asInstanceOf[Option[Base_Types.Float_32_Payload]]
   }
 
 }

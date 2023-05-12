@@ -18,12 +18,13 @@ exit /B %errorlevel%
 
 import org.sireum._
 
-val hamrDir = Os.slashDir / "hamr"
+val hamrDir = Os.slashDir.up / "hamr"
 val slangDir = hamrDir / "slang"
 
 val toKeep: ops.ISZOps[Os.Path] = ops.ISZOps(ISZ(
-      slangDir / "src" / "main" / "component",
-      slangDir / "src" / "test" / "bridge"))
+  slangDir / "src" / "main" / "component",
+  slangDir / "src" / "test" / "bridge",
+  slangDir / ".idea"))
 
 
 def rec(p: Os.Path): Unit = {

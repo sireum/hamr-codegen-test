@@ -1,17 +1,20 @@
 package org.sireum.hamr.codegen.test.normal
 
 import org.sireum._
-import org.sireum.$internal.RC
 import org.sireum.hamr.codegen.common.util.CodeGenPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
+import org.sireum.hamr.codegen.test.util.TestMode
 
 class CodeGenTest_Base extends CodeGenTest {
 
-  override def generateExpected: B = if (super.generateExpected) T else F
+  override def generateExpected: B = super.generateExpected || F
 
-  //override def filter: B = if(super.filter) T else F
-  //override def filters: ISZ[String] = ISZ("nested_")
+  override def filter: B = super.filter || F
+  override def filters: ISZ[String] = ISZ("Do-not-embed")
+
+  override def testModes: _root_.org.sireum.ISZ[TestMode.Type] =
+    super.testModes // :+ TestMode.tipe :+ TestMode.compile
 
   val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
 

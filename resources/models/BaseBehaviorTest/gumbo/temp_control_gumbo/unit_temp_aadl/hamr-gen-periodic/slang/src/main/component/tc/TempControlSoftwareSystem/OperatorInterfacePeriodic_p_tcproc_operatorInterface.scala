@@ -15,7 +15,7 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface {
     api.logDebug("Example debug logging")
     api.logError("Example error logging")
 
-    api.put_setPoint(TempControlSoftwareSystem.SetPoint_i.example())
+    api.put_setPoint(DefaultValues.defaultSetPoint)
   }
 
   def timeTriggered(api: OperatorInterfacePeriodic_p_Operational_Api): Unit = {
@@ -23,6 +23,8 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface {
 
     val apiUsage_currentTemp: Option[TempSensor.Temperature_i] = api.get_currentTemp()
     api.logInfo(s"Received on currentTemp: ${apiUsage_currentTemp}")
+
+    api.put_setPoint(DefaultValues.defaultSetPoint)
   }
 
   def activate(api: OperatorInterfacePeriodic_p_Operational_Api): Unit = { }

@@ -16,7 +16,9 @@ object TempSensor_s_tcproc_tempSensor {
   @pure def createFahrenheit(degrees: Base_Types.Float_32): TempSensor.Temperature_i = {
     Contract(
       Requires(degrees >= GUMBO_Definitions.GUMBO__Library.absoluteZeroF()),
-      Ensures(Res[TempSensor.Temperature_i].degrees == degrees && Res[TempSensor.Temperature_i].unit == TempSensor.Unit.Fahrenheit && Res[TempSensor.Temperature_i] == TempSensor.Temperature_i(degrees, TempSensor.Unit.Fahrenheit))
+      Ensures(Res[TempSensor.Temperature_i].degrees == degrees &&
+        Res[TempSensor.Temperature_i].unit == TempSensor.Unit.Fahrenheit &&
+        Res[TempSensor.Temperature_i] == TempSensor.Temperature_i(degrees, TempSensor.Unit.Fahrenheit))
     )
     return TempSensor.Temperature_i(degrees, TempSensor.Unit.Fahrenheit)
   }
@@ -35,7 +37,12 @@ object TempSensor_s_tcproc_tempSensor {
       Ensures(
         // BEGIN INITIALIZES ENSURES
         // guarantee initializes
-        GUMBO_Definitions.GUMBO__Library.isFahrenheit(api.currentTemp) && api.currentTemp.degrees == 72.0f && api.currentTemp.degrees == TempSensor_s_tcproc_tempSensor.defaultTempDegrees() && api.currentTemp == TempSensor_s_tcproc_tempSensor.createFahrenheit(72.0f) && api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees(), TempSensor.Unit.Fahrenheit) && api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees(), TempSensor.Unit.Fahrenheit),
+        GUMBO_Definitions.GUMBO__Library.isFahrenheit(api.currentTemp) &&
+          api.currentTemp.degrees == 72.0f &&
+          api.currentTemp.degrees == TempSensor_s_tcproc_tempSensor.defaultTempDegrees() &&
+          api.currentTemp == TempSensor_s_tcproc_tempSensor.createFahrenheit(72.0f) &&
+          api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees(), TempSensor.Unit.Fahrenheit) &&
+          api.currentTemp == TempSensor.Temperature_i(TempSensor_s_tcproc_tempSensor.defaultTempDegrees(), TempSensor.Unit.Fahrenheit),
         // guarantee g1
         //   Testing MustSend with event port, initializes so no event expected
         !(api.tempChanged.nonEmpty),

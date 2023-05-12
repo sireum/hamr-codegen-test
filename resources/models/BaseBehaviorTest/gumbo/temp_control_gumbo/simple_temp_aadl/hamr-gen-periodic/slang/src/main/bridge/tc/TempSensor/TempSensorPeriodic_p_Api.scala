@@ -8,7 +8,8 @@ import tc._
 
 object TempSensorPeriodic_p_Api {
   @strictpure def Sensor_Temperature_Range(currentTemp: TempSensor.Temperature_i): B =
-    currentTemp.degrees >= -50.0f && currentTemp.degrees <= 150.0f
+    currentTemp.degrees >= -50.0f &&
+      currentTemp.degrees <= 150.0f
 }
 
 import TempSensorPeriodic_p_Api._

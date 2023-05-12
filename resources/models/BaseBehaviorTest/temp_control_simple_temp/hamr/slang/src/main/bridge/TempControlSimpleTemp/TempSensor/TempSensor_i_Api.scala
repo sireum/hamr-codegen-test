@@ -8,7 +8,8 @@ import TempControlSimpleTemp._
 
 object TempSensor_i_Api {
   @strictpure def SensorTemperatureRange(currentTemp: TempSensor.Temperature_i): B =
-    currentTemp.degrees >= -50.0f && currentTemp.degrees <= 150.0f
+    currentTemp.degrees >= -50.0f &&
+      currentTemp.degrees <= 150.0f
 }
 
 import TempSensor_i_Api._

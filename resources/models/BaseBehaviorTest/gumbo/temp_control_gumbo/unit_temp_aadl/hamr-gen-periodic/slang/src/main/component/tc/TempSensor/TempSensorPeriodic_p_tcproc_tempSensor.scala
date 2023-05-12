@@ -14,7 +14,8 @@ object TempSensorPeriodic_p_tcproc_tempSensor {
       Ensures(
         // BEGIN INITIALIZES ENSURES
         // guarantee initializes
-        GUMBO_Definitions.GUMBO__Library.isFahrenheit(api.currentTemp) && api.currentTemp.degrees == 72.0f
+        GUMBO_Definitions.GUMBO__Library.isFahrenheit(api.currentTemp) &&
+          api.currentTemp.degrees == 72.0f
         // END INITIALIZES ENSURES
       )
     )

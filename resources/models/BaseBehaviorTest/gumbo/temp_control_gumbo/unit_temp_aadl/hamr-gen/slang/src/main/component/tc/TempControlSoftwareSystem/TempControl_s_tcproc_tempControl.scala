@@ -37,7 +37,8 @@ object TempControl_s_tcproc_tempControl {
       Ensures(
         // BEGIN INITIALIZES ENSURES
         // guarantee defautSetPoint
-        currentSetPoint.low.degrees == 70.0f && currentSetPoint.high.degrees == 80.0f,
+        currentSetPoint.low.degrees == 70.0f &&
+          currentSetPoint.high.degrees == 80.0f,
         // guarantee defaultFanStates
         currentFanState == CoolingFan.FanCmd.Off,
         // guarantee defaultLatestTemp
@@ -112,11 +113,15 @@ object TempControl_s_tcproc_tempControl {
         //   If the current temperature is greater than or equal to the
         //   current low set point and less than or equal to the current high set point,
         //   then the current fan state is maintained.
-        (latestTemp.degrees >= currentSetPoint.low.degrees & latestTemp.degrees <= currentSetPoint.high.degrees) ->: (currentFanState == In(currentFanState)),
+        (latestTemp.degrees >= currentSetPoint.low.degrees &
+           latestTemp.degrees <= currentSetPoint.high.degrees) ->: (currentFanState == In(currentFanState)),
         // guarantee mustSendFanCmd
         //   If the local record of the fan state was updated,
         //   then send a fan command event with this updated value.
-        (In(currentFanState) != currentFanState) ->: (api.fanCmd.nonEmpty && api.fanCmd.get == currentFanState) && (currentFanState == In(currentFanState)) ->: api.fanCmd.isEmpty && (In(currentFanState) != currentFanState) ->: api.fanCmd.nonEmpty,
+        (In(currentFanState) != currentFanState) ->: (api.fanCmd.nonEmpty &&
+           api.fanCmd.get == currentFanState) &&
+          (currentFanState == In(currentFanState)) ->: api.fanCmd.isEmpty &&
+          (In(currentFanState) != currentFanState) ->: api.fanCmd.nonEmpty,
         // guarantees setPointNotModified
         currentSetPoint == In(currentSetPoint),
         // guarantees lastTempNotModified
@@ -178,11 +183,15 @@ object TempControl_s_tcproc_tempControl {
         //   If the current temperature is greater than or equal to the
         //   current low set point and less than or equal to the current high set point,
         //   then the current fan state is maintained.
-        (latestTemp.degrees >= currentSetPoint.low.degrees & latestTemp.degrees <= currentSetPoint.high.degrees) ->: (currentFanState == In(currentFanState)),
+        (latestTemp.degrees >= currentSetPoint.low.degrees &
+           latestTemp.degrees <= currentSetPoint.high.degrees) ->: (currentFanState == In(currentFanState)),
         // guarantee mustSendFanCmd
         //   If the local record of the fan state was updated,
         //   then send a fan command event with this updated value.
-        (In(currentFanState) != currentFanState) ->: (api.fanCmd.nonEmpty && api.fanCmd.get == currentFanState) && (currentFanState == In(currentFanState)) ->: api.fanCmd.isEmpty && (In(currentFanState) != currentFanState) ->: api.fanCmd.nonEmpty,
+        (In(currentFanState) != currentFanState) ->: (api.fanCmd.nonEmpty &&
+           api.fanCmd.get == currentFanState) &&
+          (currentFanState == In(currentFanState)) ->: api.fanCmd.isEmpty &&
+          (In(currentFanState) != currentFanState) ->: api.fanCmd.nonEmpty,
         // guarantees setPointChanged
         currentSetPoint == api.setPoint,
         // guarantees latestTempNotModified
@@ -235,11 +244,15 @@ object TempControl_s_tcproc_tempControl {
         //   If the current temperature is greater than or equal to the
         //   current low set point and less than or equal to the current high set point,
         //   then the current fan state is maintained.
-        (latestTemp.degrees >= currentSetPoint.low.degrees & latestTemp.degrees <= currentSetPoint.high.degrees) ->: (currentFanState == In(currentFanState)),
+        (latestTemp.degrees >= currentSetPoint.low.degrees &
+           latestTemp.degrees <= currentSetPoint.high.degrees) ->: (currentFanState == In(currentFanState)),
         // guarantee mustSendFanCmd
         //   If the local record of the fan state was updated,
         //   then send a fan command event with this updated value.
-        (In(currentFanState) != currentFanState) ->: (api.fanCmd.nonEmpty && api.fanCmd.get == currentFanState) && (currentFanState == In(currentFanState)) ->: api.fanCmd.isEmpty && (In(currentFanState) != currentFanState) ->: api.fanCmd.nonEmpty,
+        (In(currentFanState) != currentFanState) ->: (api.fanCmd.nonEmpty &&
+           api.fanCmd.get == currentFanState) &&
+          (currentFanState == In(currentFanState)) ->: api.fanCmd.isEmpty &&
+          (In(currentFanState) != currentFanState) ->: api.fanCmd.nonEmpty,
         // guarantees tempChanged
         latestTemp == api.currentTemp,
         // guarantees setPointNotModified

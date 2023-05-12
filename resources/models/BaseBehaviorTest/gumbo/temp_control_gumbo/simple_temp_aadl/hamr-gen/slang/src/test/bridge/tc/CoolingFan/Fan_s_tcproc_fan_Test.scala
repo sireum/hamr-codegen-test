@@ -4,7 +4,7 @@ import org.sireum._
 import tc.CoolingFan._
 
 // This file will not be overwritten so is safe to edit
-class Fan_s_tcproc_fan_Test extends Fan_s_tcproc_fan_TestApi {
+class Fan_s_tcproc_fan_Test extends Fan_s_tcproc_fan_ScalaTest {
 
   test("Example Unit Test for Initialise Entry Point"){
     // Initialise Entry Point doesn't read input port values, so just proceed with

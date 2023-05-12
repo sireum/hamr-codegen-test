@@ -4,7 +4,7 @@ import org.sireum._
 import TempControlSimpleTemp.TempControlSoftwareSystem._
 
 // This file will not be overwritten so is safe to edit
-class OperatorInterface_i_tcproc_operatorInterface_Test extends OperatorInterface_i_tcproc_operatorInterface_TestApi {
+class OperatorInterface_i_tcproc_operatorInterface_Test extends OperatorInterface_i_tcproc_operatorInterface_ScalaTest {
 
   test("Example Unit Test for Initialise Entry Point"){
     // Initialise Entry Point doesn't read input port values, so just proceed with

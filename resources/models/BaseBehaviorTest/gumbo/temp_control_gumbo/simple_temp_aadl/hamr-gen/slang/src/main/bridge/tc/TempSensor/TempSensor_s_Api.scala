@@ -8,7 +8,12 @@ import tc._
 
 object TempSensor_s_Api {
   @strictpure def Sensor_Temperature_Range(currentTemp: TempSensor.Temperature_i): B =
-    currentTemp.degrees >= -50.0f && currentTemp.degrees <= 150.0f && currentTemp.degrees >= TempSensor_s_tcproc_tempSensor.minTempDegrees() && currentTemp.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() && currentTemp.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() && GUMBO_Definitions.GUMBO__Library.inRange(currentTemp)
+    currentTemp.degrees >= -50.0f &&
+      currentTemp.degrees <= 150.0f &&
+      currentTemp.degrees >= TempSensor_s_tcproc_tempSensor.minTempDegrees() &&
+      currentTemp.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() &&
+      currentTemp.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() &&
+      GUMBO_Definitions.GUMBO__Library.inRange(currentTemp)
 }
 
 import TempSensor_s_Api._

@@ -19,7 +19,9 @@ object SetPoint_i {
   val low: TempSensor.Temperature_i,
   val high: TempSensor.Temperature_i) {
   @spec def SetPointDataInvariant = Invariant(
-    low.degrees >= 50.0f & high.degrees <= 110.0f & low.degrees <= high.degrees
+    low.degrees >= 50.0f &
+      high.degrees <= 110.0f &
+      low.degrees <= high.degrees
   )
 }
 

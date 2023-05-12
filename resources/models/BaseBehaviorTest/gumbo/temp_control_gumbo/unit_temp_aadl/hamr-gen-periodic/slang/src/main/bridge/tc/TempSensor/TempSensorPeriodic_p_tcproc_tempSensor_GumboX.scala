@@ -12,7 +12,9 @@ object TempSensorPeriodic_p_tcproc_tempSensor_GumboX {
     * guarantee Sensor_Temperature_Range
     */
   @strictpure def I_Guar_currentTemp(currentTemp: TempSensor.Temperature_i): B =
-    GUMBO_Definitions.GUMBO__Library.isFahrenheit(currentTemp) && currentTemp.degrees >= -50.0f && currentTemp.degrees <= 150.0f
+    GUMBO_Definitions.GUMBO__Library.isFahrenheit(currentTemp) &&
+      currentTemp.degrees >= -50.0f &&
+      currentTemp.degrees <= 150.0f
 
   // I_Guar-Guard: Integration constraint on tempSensor's outgoing data port currentTemp
   @strictpure def I_Guar_Guard_currentTemp(currentTemp: Option[TempSensor.Temperature_i]): B =
@@ -21,26 +23,45 @@ object TempSensorPeriodic_p_tcproc_tempSensor_GumboX {
   /** Initialize Entrypoint Contract
     *
     * guarantees initializes
-    * @param api_currentTemp port variable
+    * @param api_currentTemp outgoing data port
     */
   @strictpure def initialize_initializes (
       api_currentTemp: TempSensor.Temperature_i): B =
-    GUMBO_Definitions.GUMBO__Library.isFahrenheit(api_currentTemp) && api_currentTemp.degrees == 72.0f
+    GUMBO_Definitions.GUMBO__Library.isFahrenheit(api_currentTemp) &&
+      api_currentTemp.degrees == 72.0f
+
+  /** IEP-Guar: Initialize Entrypoint Contracts for tempSensor
+    *
+    * @param api_currentTemp outgoing data port
+    */
+  @strictpure def initialize_IEP_Guar (
+      api_currentTemp: TempSensor.Temperature_i): B =
+    initialize_initializes(api_currentTemp)
 
   /** IEP-Post: Initialize Entrypoint Post-Condition
     *
-    * @param api_currentTemp port variable
-    * @param currentTemp_IEP_Guar port variable
+    * @param api_currentTemp outgoing data port
     */
   @strictpure def inititialize_IEP_Post (
-      api_currentTemp: TempSensor.Temperature_i,
-      currentTemp_IEP_Guar: Option[TempSensor.Temperature_i]): B =
-    (// I-Guar-Guard: Integration constraints for tempSensor's outgoing ports
-     I_Guar_Guard_currentTemp(currentTemp_IEP_Guar) &
+      api_currentTemp: TempSensor.Temperature_i): B =
+    (// D-Inv-Guard: Datatype invariants for the types associated with tempSensor's state variables and outgoing ports
+     TempSensor.Temperature_i_GumboX.D_Inv_Temperature_i(api_currentTemp) & 
 
-     // D-Inv-Guard: Datatype invariants for the types associated with tempSensor outgoing ports
-     TempSensor.Temperature_i_GumboX.D_Inv_Guard_Temperature_i(currentTemp_IEP_Guar) &
+     // I-Guar-Guard: Integration constraints for tempSensor's outgoing ports"
+     I_Guar_currentTemp(api_currentTemp) & 
 
      // IEP-Guar: Initialize Entrypoint contract for tempSensor
-     initialize_initializes(api_currentTemp))
+     initialize_IEP_Guar(api_currentTemp))
+
+  /** CEP-Post: Compute Entrypoint Post-Condition for tempSensor
+    *
+    * @param api_currentTemp outgoing data port
+    */
+  @strictpure def compute_CEP_Post (
+      api_currentTemp: TempSensor.Temperature_i): B =
+    (// D-Inv-Guard: Datatype invariants for the types associated with tempSensor's state variables and outgoing ports
+     TempSensor.Temperature_i_GumboX.D_Inv_Temperature_i(api_currentTemp) & 
+
+     // I-Guar-Guard: Integration constraints for tempSensor's outgoing ports
+     I_Guar_currentTemp(api_currentTemp))
 }
