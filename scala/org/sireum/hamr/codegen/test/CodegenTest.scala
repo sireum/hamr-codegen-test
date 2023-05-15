@@ -108,14 +108,15 @@ trait CodeGenTest extends CodegenTestSuite {
     assert(config.slangOutputCDir.isEmpty, s"hmm, why custom c dir ${config.slangOutputCDir}")
     assert(config.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${config.camkesOutputDir}")
 
-    if (verbose) {
-      println(s"Test Modes: ${testModes}")
-    }
-
     var testOps = config(
       aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value),
       packageName = if (config.packageName.nonEmpty) config.packageName else Some(testName)
     )
+
+    if (verbose) {
+      println(s"Test Modes: ${testModes}")
+      testOps = testOps(verbose = T)
+    }
 
     if (TestUtil.isSlang(testOps.platform)) {
       testOps = testOps(slangOutputDir = Some((resultsDir / "slang").canon.value))
