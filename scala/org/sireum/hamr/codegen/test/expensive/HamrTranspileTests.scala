@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test.expensive
 
 import org.sireum._
-import org.sireum.hamr.codegen.common.util.CodeGenPlatform
+import org.sireum.hamr.codegen.common.util.{CodeGenPlatform, ExperimentalOptions}
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 
@@ -29,13 +29,18 @@ class HamrTranspileTests extends CodeGenTest {
     for (platform <- proj._4) {
       // append classname so it doesn't use the expected results from the 'normal' tests
       val testName = s"${getClass.getSimpleName}_${proj._1}--${platform}"
+      val ops = baseOptions(
+        platform = platform,
+        runTranspiler = T)
       test(
         testName = testName,
         modelDir = proj._2,
         airFile = Some(proj._3),
-        ops = baseOptions(
-          platform = platform,
-          runTranspiler = T),
+
+        // kekinian also runs these tests so disable slang check until it's included
+        // in kekinian's dist
+        ops = ops(experimentalOptions = ops.experimentalOptions :+ ExperimentalOptions.DISABLE_SLANG_CHECK),
+
         description = None(),
         modelUri = None(),
         expectedErrorReasons = ISZ())
