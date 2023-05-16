@@ -152,10 +152,6 @@ trait CodeGenTest extends CodegenTestSuite {
       }
     )
 
-    if (verbose) {
-      reporter.printMessages()
-    }
-
     if (expectedErrorReasons.isEmpty) {
       assert(!reporter.hasError, "Expecting no errors but codegen did not complete successfully")
     }

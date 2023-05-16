@@ -26,6 +26,8 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
   }
 
   override def testModes: ISZ[TestMode.Type] = {
+    println(s"""\nRemoving ${TestMode.generated_unit_tests} test mode from ${this.getClass.getSimpleName}
+               |as testComputeCB may try to fetch from unpopulated outgoing data ports\n""".stripMargin)
     return (superModes :+ TestMode.logika) - TestMode.generated_unit_tests
   }
 

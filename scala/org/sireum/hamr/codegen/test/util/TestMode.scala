@@ -37,7 +37,7 @@ object TestModeHelper {
           TestMode.byName(ops.StringOps(cand).trim) match {
             case Some(x) => ret = ret :+ x
             case _ =>
-              cprintln(T, s"$cand is not a valid test mode.  Found in env var testmodes")
+              halt(s"$cand is not a valid test mode.  Found in env var testmodes")
           }
         }
       case _ =>

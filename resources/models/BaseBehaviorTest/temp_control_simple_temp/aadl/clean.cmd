@@ -1,4 +1,4 @@
-::#! 2> /dev/null                                   #
+::/*#! 2> /dev/null                                 #
 @ 2>/dev/null # 2>nul & echo off & goto BOF         #
 if [ -z ${SIREUM_HOME} ]; then                      #
   echo "Please set SIREUM_HOME env var"             #
@@ -13,7 +13,7 @@ if not defined SIREUM_HOME (
 )
 %SIREUM_HOME%\\bin\\sireum.bat slang run "%0" %*
 exit /B %errorlevel%
-::!#
+::!#*/
 // #Sireum
 
 import org.sireum._
@@ -23,10 +23,13 @@ val slangDir = hamrDir / "slang"
 
 val toKeep = ops.ISZOps(ISZ(
   (slangDir / "src" / "main" / "component"),
-  (slangDir / "src" / "test" / "bridge")
+  (slangDir / "src" / "test" / "bridge"),
+  (slangDir / ".idea")
 ))
 
 def rec(p: Os.Path): Unit = {
+  assert (p.exists, s"$p doesn't exist")
+
   if(p.isFile && !toKeep.contains(p)) {
     println(s"Removing file ${p.value}")
     p.remove()

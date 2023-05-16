@@ -790,8 +790,85 @@
         "slang\/src\/main\/component\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def activate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def deactivate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def recover(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee orOutput\n        api.actuate == (api.channel1 | api.channel2)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def activate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def deactivate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def recover(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
+              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+            }
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX {\n  \/** Compute Entrypoint Contract\n    *\n    * guarantees orOutput\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_spec_orOutput_guarantee(\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    api_actuate == (api_channel1 | api_channel2)\n\n  \/** CEP-T-Guar: Top-level guarantee contracts for orLogic's compute entrypoint\n    *\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_CEP_T_Guar (\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    compute_spec_orOutput_guarantee(api_channel1, api_channel2, api_actuate)\n\n  \/** CEP-Post: Compute Entrypoint Post-Condition for orLogic\n    *\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_CEP_Post (\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    (\/\/ CEP-Guar: guarantee clauses of orLogic's compute entrypoint\n     compute_CEP_T_Guar (api_channel1, api_channel2, api_actuate))\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_TestHarness.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\n\n\/\/ This file was auto-generated.  Do not edit\n@msig trait OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_TestHarness extends OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_TestApi {\n  def testComputeCB(\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean): GumboXResult.Type = {\n    \/\/ Step 1 [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state\n    \/\/   orLogic does not have incoming ports or state variables\n\n    \/\/ Step 2 [CheckPre]: check\/filter based on pre-condition.\n    \/\/   orLogic's compute entry point does not have top level assume clauses\n\n    \/\/ Step 3 [PutInPorts]: put values on the input ports\n    put_channel1(api_channel1)\n    put_channel2(api_channel2)\n\n    \/\/ Step 4 [InvokeEntryPoint]: invoke the entry point test method\n    testCompute()\n\n    \/\/ Step 5 [RetrieveOutState]: retrieve values of the output ports via get operations and GUMBO declared local state variables\n    val api_actuate: Base_Types.Boolean = get_actuate().get\n\n    \/\/ Step 6 [CheckPost]: invoke the oracle function\n    val postResult = RTS_aadl__JVM.Actuation.OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX.compute_CEP_Post(api_channel1, api_channel2, api_actuate)\n    if (!postResult) {\n      return GumboXResult.Post_Condition_Fail\n    }\n\n    return GumboXResult.Post_Condition_Pass\n  }\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_TestHarness_ScalaTest.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.scalatest.{BeforeAndAfterEach, OneInstancePerTest}\nimport org.scalatest.funsuite.AnyFunSuite\nimport org.sireum.$internal.MutableMarker\n\n\/\/ This file was auto-generated.  Do not edit\nabstract class OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_TestHarness_ScalaTest extends\n  AnyFunSuite with OneInstancePerTest with BeforeAndAfterEach with\n  OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_TestHarness {\n\n  var clonable: Boolean = true\n  var owned: Boolean = false\n\n  override def string: org.sireum.String = {\n    this.toString()\n  }\n\n  override def $clonable: Boolean = {\n    return clonable\n  }\n\n  override def $clonable_=(b: Boolean): MutableMarker = {\n    clonable = b\n    return this\n  }\n\n  override def $owned: Boolean = {\n    return owned\n  }\n\n  override def $owned_=(b: Boolean): MutableMarker = {\n    owned = b\n    return this\n  }\n\n  override def $clone: MutableMarker = {\n    \/\/ not expecting users to want to clone realizations of this abstract class\n    return this\n  }\n\n  override def beforeEach(): Unit = {\n    BeforeEntrypoint()\n  }\n\n  override def afterEach(): Unit = {\n    AfterEntrypoint()\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n\/\/ SlangCheck test container to hold the incoming port values for orLogic\n@datatype class OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer (\n  val api_channel1: B,\n  val api_channel2: B)\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/bridge\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_Tests.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.Actuation._\nimport RTS_aadl__JVM.GumboXUtil\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\nclass OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_Tests extends OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_TestHarness_ScalaTest {\n\n  val failOnUnsatPreconditions: B = F\n\n  {\n    val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n    val ranLibchannel1: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n    val ranLibchannel2: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n    \/\/ getInputs - needed\n    def getInputs(): Option[OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer] = {\n      try {\n        val api_channel1 = ranLibchannel1.next_B()\n        val api_channel2 = ranLibchannel2.next_B()\n\n        return Some(OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer(api_channel1,api_channel2))\n      } catch {\n        case e: AssertionError => return None()\n      }\n    }\n\n    for (i <- 0 to 100) {\n      this.registerTest(i.toString) {\n        var retry: B = T\n\n        var j: Z = 0\n        while (j < GumboXUtil.numRetries && retry) {\n          getInputs() match {\n            case Some(o) =>\n\n              println(st\"\"\"${if (j > 0) s\"Retry $j: \" else \"\"}Testing with\n                        |    channel1 = $o.api_channel1\n                        |    channel2 = $o.api_channel2\"\"\".render)\n\n              testComputeCB(o.api_channel1, o.api_channel2) match {\n                case GumboXResult.Pre_Condition_Unsat =>\n                case GumboXResult.Post_Condition_Fail =>\n                  fail (\"Post condition did not hold\")\n                  retry = F\n                case GumboXResult.Post_Condition_Pass =>\n                  \/\/ success\n                  println (\"Success!\")\n                  retry = F\n              }\n            case _ =>\n          }\n          j = j + 1\n        }\n\n        if (retry) {\n          if (failOnUnsatPreconditions) {\n            fail (\"Unable to satisfy precondition\")\n          } else {\n            cprintln(T, \"Unable to satisfy precondition\")\n          }\n        }\n      }\n    }\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_SlangCheck_TestRunner.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\n@record class OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_SlangCheck_TestRunner\n  extends Random.Gen.TestRunner[OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer]\n  with OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_GumboX_TestHarness {\n\n  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n  val ranLibchannel1: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n  val ranLibchannel2: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n  override def next(): OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer = {\n    val api_channel1 = ranLibchannel1.next_B()\n    val api_channel2 = ranLibchannel2.next_B()\n    return OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer(\n      api_channel1, api_channel2\n    )\n  }\n\n  override def toCompactJson(o: OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer): String = {\n    return RTS_aadl__JVM.JSON.fromActuationOrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer(o, T)\n  }\n\n  override def fromJson(json: String): OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer = {\n    RTS_aadl__JVM.JSON.toActuationOrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer(json) match {\n      case Either.Left(o) => return o\n      case Either.Right(msg) => halt(msg.string)\n    }\n  }\n\n  override def test(o: OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer): B = {\n    BeforeEntrypoint()\n    val r: B = testComputeCB(o.api_channel1, o.api_channel2) match {\n      case GumboXResult.Pre_Condition_Unsat => T\n      case GumboXResult.Post_Condition_Fail => F\n      case GumboXResult.Post_Condition_Pass => T\n    }\n    AfterEntrypoint()\n    return r\n  }\n}",
+          "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [
@@ -1261,8 +1338,85 @@
         "slang\/src\/main\/component\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def activate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def deactivate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def recover(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee orOutput\n        api.actuate == (api.channel1 | api.channel2)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def activate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def deactivate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def recover(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
+              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+            }
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX {\n  \/** Compute Entrypoint Contract\n    *\n    * guarantees orOutput\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_spec_orOutput_guarantee(\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    api_actuate == (api_channel1 | api_channel2)\n\n  \/** CEP-T-Guar: Top-level guarantee contracts for orLogic's compute entrypoint\n    *\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_CEP_T_Guar (\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    compute_spec_orOutput_guarantee(api_channel1, api_channel2, api_actuate)\n\n  \/** CEP-Post: Compute Entrypoint Post-Condition for orLogic\n    *\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_CEP_Post (\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    (\/\/ CEP-Guar: guarantee clauses of orLogic's compute entrypoint\n     compute_CEP_T_Guar (api_channel1, api_channel2, api_actuate))\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_TestHarness.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\n\n\/\/ This file was auto-generated.  Do not edit\n@msig trait OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_TestHarness extends OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_TestApi {\n  def testComputeCB(\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean): GumboXResult.Type = {\n    \/\/ Step 1 [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state\n    \/\/   orLogic does not have incoming ports or state variables\n\n    \/\/ Step 2 [CheckPre]: check\/filter based on pre-condition.\n    \/\/   orLogic's compute entry point does not have top level assume clauses\n\n    \/\/ Step 3 [PutInPorts]: put values on the input ports\n    put_channel1(api_channel1)\n    put_channel2(api_channel2)\n\n    \/\/ Step 4 [InvokeEntryPoint]: invoke the entry point test method\n    testCompute()\n\n    \/\/ Step 5 [RetrieveOutState]: retrieve values of the output ports via get operations and GUMBO declared local state variables\n    val api_actuate: Base_Types.Boolean = get_actuate().get\n\n    \/\/ Step 6 [CheckPost]: invoke the oracle function\n    val postResult = RTS_aadl__JVM.Actuation.OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX.compute_CEP_Post(api_channel1, api_channel2, api_actuate)\n    if (!postResult) {\n      return GumboXResult.Post_Condition_Fail\n    }\n\n    return GumboXResult.Post_Condition_Pass\n  }\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_TestHarness_ScalaTest.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.scalatest.{BeforeAndAfterEach, OneInstancePerTest}\nimport org.scalatest.funsuite.AnyFunSuite\nimport org.sireum.$internal.MutableMarker\n\n\/\/ This file was auto-generated.  Do not edit\nabstract class OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_TestHarness_ScalaTest extends\n  AnyFunSuite with OneInstancePerTest with BeforeAndAfterEach with\n  OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_TestHarness {\n\n  var clonable: Boolean = true\n  var owned: Boolean = false\n\n  override def string: org.sireum.String = {\n    this.toString()\n  }\n\n  override def $clonable: Boolean = {\n    return clonable\n  }\n\n  override def $clonable_=(b: Boolean): MutableMarker = {\n    clonable = b\n    return this\n  }\n\n  override def $owned: Boolean = {\n    return owned\n  }\n\n  override def $owned_=(b: Boolean): MutableMarker = {\n    owned = b\n    return this\n  }\n\n  override def $clone: MutableMarker = {\n    \/\/ not expecting users to want to clone realizations of this abstract class\n    return this\n  }\n\n  override def beforeEach(): Unit = {\n    BeforeEntrypoint()\n  }\n\n  override def afterEach(): Unit = {\n    AfterEntrypoint()\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n\/\/ SlangCheck test container to hold the incoming port values for orLogic\n@datatype class OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer (\n  val api_channel1: B,\n  val api_channel2: B)\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/bridge\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_Tests.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.Actuation._\nimport RTS_aadl__JVM.GumboXUtil\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\nclass OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_Tests extends OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_TestHarness_ScalaTest {\n\n  val failOnUnsatPreconditions: B = F\n\n  {\n    val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n    val ranLibchannel1: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n    val ranLibchannel2: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n    \/\/ getInputs - needed\n    def getInputs(): Option[OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer] = {\n      try {\n        val api_channel1 = ranLibchannel1.next_B()\n        val api_channel2 = ranLibchannel2.next_B()\n\n        return Some(OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer(api_channel1,api_channel2))\n      } catch {\n        case e: AssertionError => return None()\n      }\n    }\n\n    for (i <- 0 to 100) {\n      this.registerTest(i.toString) {\n        var retry: B = T\n\n        var j: Z = 0\n        while (j < GumboXUtil.numRetries && retry) {\n          getInputs() match {\n            case Some(o) =>\n\n              println(st\"\"\"${if (j > 0) s\"Retry $j: \" else \"\"}Testing with\n                        |    channel1 = $o.api_channel1\n                        |    channel2 = $o.api_channel2\"\"\".render)\n\n              testComputeCB(o.api_channel1, o.api_channel2) match {\n                case GumboXResult.Pre_Condition_Unsat =>\n                case GumboXResult.Post_Condition_Fail =>\n                  fail (\"Post condition did not hold\")\n                  retry = F\n                case GumboXResult.Post_Condition_Pass =>\n                  \/\/ success\n                  println (\"Success!\")\n                  retry = F\n              }\n            case _ =>\n          }\n          j = j + 1\n        }\n\n        if (retry) {\n          if (failOnUnsatPreconditions) {\n            fail (\"Unable to satisfy precondition\")\n          } else {\n            cprintln(T, \"Unable to satisfy precondition\")\n          }\n        }\n      }\n    }\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_SlangCheck_TestRunner.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\n@record class OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_SlangCheck_TestRunner\n  extends Random.Gen.TestRunner[OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer]\n  with OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_GumboX_TestHarness {\n\n  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n  val ranLibchannel1: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n  val ranLibchannel2: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n  override def next(): OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer = {\n    val api_channel1 = ranLibchannel1.next_B()\n    val api_channel2 = ranLibchannel2.next_B()\n    return OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer(\n      api_channel1, api_channel2\n    )\n  }\n\n  override def toCompactJson(o: OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer): String = {\n    return RTS_aadl__JVM.JSON.fromActuationOrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer(o, T)\n  }\n\n  override def fromJson(json: String): OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer = {\n    RTS_aadl__JVM.JSON.toActuationOrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer(json) match {\n      case Either.Left(o) => return o\n      case Either.Right(msg) => halt(msg.string)\n    }\n  }\n\n  override def test(o: OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer): B = {\n    BeforeEntrypoint()\n    val r: B = testComputeCB(o.api_channel1, o.api_channel2) match {\n      case GumboXResult.Pre_Condition_Unsat => T\n      case GumboXResult.Post_Condition_Fail => F\n      case GumboXResult.Post_Condition_Pass => T\n    }\n    AfterEntrypoint()\n    return r\n  }\n}",
+          "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [
@@ -1321,8 +1475,85 @@
         "slang\/src\/main\/component\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def activate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def deactivate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def recover(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee orOutput\n        api.actuate == (api.channel1 | api.channel2)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def activate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def deactivate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def recover(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
+              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+            }
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX {\n  \/** Compute Entrypoint Contract\n    *\n    * guarantees orOutput\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_spec_orOutput_guarantee(\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    api_actuate == (api_channel1 | api_channel2)\n\n  \/** CEP-T-Guar: Top-level guarantee contracts for orLogic's compute entrypoint\n    *\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_CEP_T_Guar (\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    compute_spec_orOutput_guarantee(api_channel1, api_channel2, api_actuate)\n\n  \/** CEP-Post: Compute Entrypoint Post-Condition for orLogic\n    *\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_CEP_Post (\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    (\/\/ CEP-Guar: guarantee clauses of orLogic's compute entrypoint\n     compute_CEP_T_Guar (api_channel1, api_channel2, api_actuate))\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_TestHarness.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\n\n\/\/ This file was auto-generated.  Do not edit\n@msig trait OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_TestHarness extends OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_TestApi {\n  def testComputeCB(\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean): GumboXResult.Type = {\n    \/\/ Step 1 [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state\n    \/\/   orLogic does not have incoming ports or state variables\n\n    \/\/ Step 2 [CheckPre]: check\/filter based on pre-condition.\n    \/\/   orLogic's compute entry point does not have top level assume clauses\n\n    \/\/ Step 3 [PutInPorts]: put values on the input ports\n    put_channel1(api_channel1)\n    put_channel2(api_channel2)\n\n    \/\/ Step 4 [InvokeEntryPoint]: invoke the entry point test method\n    testCompute()\n\n    \/\/ Step 5 [RetrieveOutState]: retrieve values of the output ports via get operations and GUMBO declared local state variables\n    val api_actuate: Base_Types.Boolean = get_actuate().get\n\n    \/\/ Step 6 [CheckPost]: invoke the oracle function\n    val postResult = RTS_aadl__JVM.Actuation.OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX.compute_CEP_Post(api_channel1, api_channel2, api_actuate)\n    if (!postResult) {\n      return GumboXResult.Post_Condition_Fail\n    }\n\n    return GumboXResult.Post_Condition_Pass\n  }\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_TestHarness_ScalaTest.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.scalatest.{BeforeAndAfterEach, OneInstancePerTest}\nimport org.scalatest.funsuite.AnyFunSuite\nimport org.sireum.$internal.MutableMarker\n\n\/\/ This file was auto-generated.  Do not edit\nabstract class OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_TestHarness_ScalaTest extends\n  AnyFunSuite with OneInstancePerTest with BeforeAndAfterEach with\n  OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_TestHarness {\n\n  var clonable: Boolean = true\n  var owned: Boolean = false\n\n  override def string: org.sireum.String = {\n    this.toString()\n  }\n\n  override def $clonable: Boolean = {\n    return clonable\n  }\n\n  override def $clonable_=(b: Boolean): MutableMarker = {\n    clonable = b\n    return this\n  }\n\n  override def $owned: Boolean = {\n    return owned\n  }\n\n  override def $owned_=(b: Boolean): MutableMarker = {\n    owned = b\n    return this\n  }\n\n  override def $clone: MutableMarker = {\n    \/\/ not expecting users to want to clone realizations of this abstract class\n    return this\n  }\n\n  override def beforeEach(): Unit = {\n    BeforeEntrypoint()\n  }\n\n  override def afterEach(): Unit = {\n    AfterEntrypoint()\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n\/\/ SlangCheck test container to hold the incoming port values for orLogic\n@datatype class OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer (\n  val api_channel1: B,\n  val api_channel2: B)\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/bridge\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_Tests.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.Actuation._\nimport RTS_aadl__JVM.GumboXUtil\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\nclass OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_Tests extends OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_TestHarness_ScalaTest {\n\n  val failOnUnsatPreconditions: B = F\n\n  {\n    val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n    val ranLibchannel1: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n    val ranLibchannel2: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n    \/\/ getInputs - needed\n    def getInputs(): Option[OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer] = {\n      try {\n        val api_channel1 = ranLibchannel1.next_B()\n        val api_channel2 = ranLibchannel2.next_B()\n\n        return Some(OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer(api_channel1,api_channel2))\n      } catch {\n        case e: AssertionError => return None()\n      }\n    }\n\n    for (i <- 0 to 100) {\n      this.registerTest(i.toString) {\n        var retry: B = T\n\n        var j: Z = 0\n        while (j < GumboXUtil.numRetries && retry) {\n          getInputs() match {\n            case Some(o) =>\n\n              println(st\"\"\"${if (j > 0) s\"Retry $j: \" else \"\"}Testing with\n                        |    channel1 = $o.api_channel1\n                        |    channel2 = $o.api_channel2\"\"\".render)\n\n              testComputeCB(o.api_channel1, o.api_channel2) match {\n                case GumboXResult.Pre_Condition_Unsat =>\n                case GumboXResult.Post_Condition_Fail =>\n                  fail (\"Post condition did not hold\")\n                  retry = F\n                case GumboXResult.Post_Condition_Pass =>\n                  \/\/ success\n                  println (\"Success!\")\n                  retry = F\n              }\n            case _ =>\n          }\n          j = j + 1\n        }\n\n        if (retry) {\n          if (failOnUnsatPreconditions) {\n            fail (\"Unable to satisfy precondition\")\n          } else {\n            cprintln(T, \"Unable to satisfy precondition\")\n          }\n        }\n      }\n    }\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_SlangCheck_TestRunner.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\n@record class OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_SlangCheck_TestRunner\n  extends Random.Gen.TestRunner[OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer]\n  with OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_GumboX_TestHarness {\n\n  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n  val ranLibchannel1: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n  val ranLibchannel2: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n  override def next(): OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer = {\n    val api_channel1 = ranLibchannel1.next_B()\n    val api_channel2 = ranLibchannel2.next_B()\n    return OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer(\n      api_channel1, api_channel2\n    )\n  }\n\n  override def toCompactJson(o: OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer): String = {\n    return RTS_aadl__JVM.JSON.fromActuationOrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer(o, T)\n  }\n\n  override def fromJson(json: String): OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer = {\n    RTS_aadl__JVM.JSON.toActuationOrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer(json) match {\n      case Either.Left(o) => return o\n      case Either.Right(msg) => halt(msg.string)\n    }\n  }\n\n  override def test(o: OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer): B = {\n    BeforeEntrypoint()\n    val r: B = testComputeCB(o.api_channel1, o.api_channel2) match {\n      case GumboXResult.Pre_Condition_Unsat => T\n      case GumboXResult.Post_Condition_Fail => F\n      case GumboXResult.Post_Condition_Pass => T\n    }\n    AfterEntrypoint()\n    return r\n  }\n}",
+          "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [
@@ -1393,8 +1624,85 @@
         "slang\/src\/main\/component\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator {\n\n  def initialise(api: Actuator_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_output(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: Actuator_i_Operational_Api): Unit = {\n    \/\/ example api usage\n\n    val apiUsage_input: Option[Base_Types.Boolean] = api.get_input()\n    api.logInfo(s\"Received on data port input: ${apiUsage_input}\")\n    val apiUsage_manualActuatorInput: Option[Base_Types.Boolean] = api.get_manualActuatorInput()\n    api.logInfo(s\"Received on data port manualActuatorInput: ${apiUsage_manualActuatorInput}\")\n  }\n\n  def activate(api: Actuator_i_Operational_Api): Unit = { }\n\n  def deactivate(api: Actuator_i_Operational_Api): Unit = { }\n\n  def finalise(api: Actuator_i_Operational_Api): Unit = { }\n\n  def recover(api: Actuator_i_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator {\n\n  def initialise(api: Actuator_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_output(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: Actuator_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee actuatorOutput\n        api.output == (api.input | api.manualActuatorInput)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_input: Option[Base_Types.Boolean] = api.get_input()\n    api.logInfo(s\"Received on data port input: ${apiUsage_input}\")\n    val apiUsage_manualActuatorInput: Option[Base_Types.Boolean] = api.get_manualActuatorInput()\n    api.logInfo(s\"Received on data port manualActuatorInput: ${apiUsage_manualActuatorInput}\")\n  }\n\n  def activate(api: Actuator_i_Operational_Api): Unit = { }\n\n  def deactivate(api: Actuator_i_Operational_Api): Unit = { }\n\n  def finalise(api: Actuator_i_Operational_Api): Unit = { }\n\n  def recover(api: Actuator_i_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
+              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+            }
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX {\n  \/** Compute Entrypoint Contract\n    *\n    * guarantees actuatorOutput\n    * @param api_input incoming data port\n    * @param api_manualActuatorInput incoming data port\n    * @param api_output outgoing data port\n    *\/\n  @strictpure def compute_spec_actuatorOutput_guarantee(\n      api_input: Base_Types.Boolean,\n      api_manualActuatorInput: Base_Types.Boolean,\n      api_output: Base_Types.Boolean): B =\n    api_output == (api_input | api_manualActuatorInput)\n\n  \/** CEP-T-Guar: Top-level guarantee contracts for actuator's compute entrypoint\n    *\n    * @param api_input incoming data port\n    * @param api_manualActuatorInput incoming data port\n    * @param api_output outgoing data port\n    *\/\n  @strictpure def compute_CEP_T_Guar (\n      api_input: Base_Types.Boolean,\n      api_manualActuatorInput: Base_Types.Boolean,\n      api_output: Base_Types.Boolean): B =\n    compute_spec_actuatorOutput_guarantee(api_input, api_manualActuatorInput, api_output)\n\n  \/** CEP-Post: Compute Entrypoint Post-Condition for actuator\n    *\n    * @param api_input incoming data port\n    * @param api_manualActuatorInput incoming data port\n    * @param api_output outgoing data port\n    *\/\n  @strictpure def compute_CEP_Post (\n      api_input: Base_Types.Boolean,\n      api_manualActuatorInput: Base_Types.Boolean,\n      api_output: Base_Types.Boolean): B =\n    (\/\/ CEP-Guar: guarantee clauses of actuator's compute entrypoint\n     compute_CEP_T_Guar (api_input, api_manualActuatorInput, api_output))\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_TestHarness.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\n\n\/\/ This file was auto-generated.  Do not edit\n@msig trait Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_TestHarness extends Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_TestApi {\n  def testComputeCB(\n      api_input: Base_Types.Boolean,\n      api_manualActuatorInput: Base_Types.Boolean): GumboXResult.Type = {\n    \/\/ Step 1 [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state\n    \/\/   actuator does not have incoming ports or state variables\n\n    \/\/ Step 2 [CheckPre]: check\/filter based on pre-condition.\n    \/\/   actuator's compute entry point does not have top level assume clauses\n\n    \/\/ Step 3 [PutInPorts]: put values on the input ports\n    put_input(api_input)\n    put_manualActuatorInput(api_manualActuatorInput)\n\n    \/\/ Step 4 [InvokeEntryPoint]: invoke the entry point test method\n    testCompute()\n\n    \/\/ Step 5 [RetrieveOutState]: retrieve values of the output ports via get operations and GUMBO declared local state variables\n    val api_output: Base_Types.Boolean = get_output().get\n\n    \/\/ Step 6 [CheckPost]: invoke the oracle function\n    val postResult = RTS_aadl__JVM.Actuation.Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX.compute_CEP_Post(api_input, api_manualActuatorInput, api_output)\n    if (!postResult) {\n      return GumboXResult.Post_Condition_Fail\n    }\n\n    return GumboXResult.Post_Condition_Pass\n  }\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_TestHarness_ScalaTest.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.scalatest.{BeforeAndAfterEach, OneInstancePerTest}\nimport org.scalatest.funsuite.AnyFunSuite\nimport org.sireum.$internal.MutableMarker\n\n\/\/ This file was auto-generated.  Do not edit\nabstract class Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_TestHarness_ScalaTest extends\n  AnyFunSuite with OneInstancePerTest with BeforeAndAfterEach with\n  Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_TestHarness {\n\n  var clonable: Boolean = true\n  var owned: Boolean = false\n\n  override def string: org.sireum.String = {\n    this.toString()\n  }\n\n  override def $clonable: Boolean = {\n    return clonable\n  }\n\n  override def $clonable_=(b: Boolean): MutableMarker = {\n    clonable = b\n    return this\n  }\n\n  override def $owned: Boolean = {\n    return owned\n  }\n\n  override def $owned_=(b: Boolean): MutableMarker = {\n    owned = b\n    return this\n  }\n\n  override def $clone: MutableMarker = {\n    \/\/ not expecting users to want to clone realizations of this abstract class\n    return this\n  }\n\n  override def beforeEach(): Unit = {\n    BeforeEntrypoint()\n  }\n\n  override def afterEach(): Unit = {\n    AfterEntrypoint()\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n\/\/ SlangCheck test container to hold the incoming port values for actuator\n@datatype class Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer (\n  val api_input: B,\n  val api_manualActuatorInput: B)\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/bridge\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_Tests.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.Actuation._\nimport RTS_aadl__JVM.GumboXUtil\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\nclass Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_Tests extends Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_TestHarness_ScalaTest {\n\n  val failOnUnsatPreconditions: B = F\n\n  {\n    val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n    val ranLibinput: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n    val ranLibmanualActuatorInput: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n    \/\/ getInputs - needed\n    def getInputs(): Option[Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer] = {\n      try {\n        val api_input = ranLibinput.next_B()\n        val api_manualActuatorInput = ranLibmanualActuatorInput.next_B()\n\n        return Some(Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer(api_input,api_manualActuatorInput))\n      } catch {\n        case e: AssertionError => return None()\n      }\n    }\n\n    for (i <- 0 to 100) {\n      this.registerTest(i.toString) {\n        var retry: B = T\n\n        var j: Z = 0\n        while (j < GumboXUtil.numRetries && retry) {\n          getInputs() match {\n            case Some(o) =>\n\n              println(st\"\"\"${if (j > 0) s\"Retry $j: \" else \"\"}Testing with\n                        |    input = $o.api_input\n                        |    manualActuatorInput = $o.api_manualActuatorInput\"\"\".render)\n\n              testComputeCB(o.api_input, o.api_manualActuatorInput) match {\n                case GumboXResult.Pre_Condition_Unsat =>\n                case GumboXResult.Post_Condition_Fail =>\n                  fail (\"Post condition did not hold\")\n                  retry = F\n                case GumboXResult.Post_Condition_Pass =>\n                  \/\/ success\n                  println (\"Success!\")\n                  retry = F\n              }\n            case _ =>\n          }\n          j = j + 1\n        }\n\n        if (retry) {\n          if (failOnUnsatPreconditions) {\n            fail (\"Unable to satisfy precondition\")\n          } else {\n            cprintln(T, \"Unable to satisfy precondition\")\n          }\n        }\n      }\n    }\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_SlangCheck_TestRunner.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\n@record class Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_SlangCheck_TestRunner\n  extends Random.Gen.TestRunner[Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer]\n  with Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_GumboX_TestHarness {\n\n  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n  val ranLibinput: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n  val ranLibmanualActuatorInput: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n  override def next(): Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer = {\n    val api_input = ranLibinput.next_B()\n    val api_manualActuatorInput = ranLibmanualActuatorInput.next_B()\n    return Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer(\n      api_input, api_manualActuatorInput\n    )\n  }\n\n  override def toCompactJson(o: Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer): String = {\n    return RTS_aadl__JVM.JSON.fromActuationActuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer(o, T)\n  }\n\n  override def fromJson(json: String): Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer = {\n    RTS_aadl__JVM.JSON.toActuationActuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer(json) match {\n      case Either.Left(o) => return o\n      case Either.Right(msg) => halt(msg.string)\n    }\n  }\n\n  override def test(o: Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer): B = {\n    BeforeEntrypoint()\n    val r: B = testComputeCB(o.api_input, o.api_manualActuatorInput) match {\n      case GumboXResult.Pre_Condition_Unsat => T\n      case GumboXResult.Post_Condition_Fail => F\n      case GumboXResult.Post_Condition_Pass => T\n    }\n    AfterEntrypoint()\n    return r\n  }\n}",
+          "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [
@@ -1453,8 +1761,85 @@
         "slang\/src\/main\/component\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def activate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def deactivate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def recover(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee orOutput\n        api.actuate == (api.channel1 | api.channel2)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def activate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def deactivate(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n\n  def recover(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
+              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+            }
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX {\n  \/** Compute Entrypoint Contract\n    *\n    * guarantees orOutput\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_spec_orOutput_guarantee(\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    api_actuate == (api_channel1 | api_channel2)\n\n  \/** CEP-T-Guar: Top-level guarantee contracts for orLogic's compute entrypoint\n    *\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_CEP_T_Guar (\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    compute_spec_orOutput_guarantee(api_channel1, api_channel2, api_actuate)\n\n  \/** CEP-Post: Compute Entrypoint Post-Condition for orLogic\n    *\n    * @param api_channel1 incoming data port\n    * @param api_channel2 incoming data port\n    * @param api_actuate outgoing data port\n    *\/\n  @strictpure def compute_CEP_Post (\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean,\n      api_actuate: Base_Types.Boolean): B =\n    (\/\/ CEP-Guar: guarantee clauses of orLogic's compute entrypoint\n     compute_CEP_T_Guar (api_channel1, api_channel2, api_actuate))\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_TestHarness.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\n\n\/\/ This file was auto-generated.  Do not edit\n@msig trait OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_TestHarness extends OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_TestApi {\n  def testComputeCB(\n      api_channel1: Base_Types.Boolean,\n      api_channel2: Base_Types.Boolean): GumboXResult.Type = {\n    \/\/ Step 1 [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state\n    \/\/   orLogic does not have incoming ports or state variables\n\n    \/\/ Step 2 [CheckPre]: check\/filter based on pre-condition.\n    \/\/   orLogic's compute entry point does not have top level assume clauses\n\n    \/\/ Step 3 [PutInPorts]: put values on the input ports\n    put_channel1(api_channel1)\n    put_channel2(api_channel2)\n\n    \/\/ Step 4 [InvokeEntryPoint]: invoke the entry point test method\n    testCompute()\n\n    \/\/ Step 5 [RetrieveOutState]: retrieve values of the output ports via get operations and GUMBO declared local state variables\n    val api_actuate: Base_Types.Boolean = get_actuate().get\n\n    \/\/ Step 6 [CheckPost]: invoke the oracle function\n    val postResult = RTS_aadl__JVM.Actuation.OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX.compute_CEP_Post(api_channel1, api_channel2, api_actuate)\n    if (!postResult) {\n      return GumboXResult.Post_Condition_Fail\n    }\n\n    return GumboXResult.Post_Condition_Pass\n  }\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_TestHarness_ScalaTest.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.scalatest.{BeforeAndAfterEach, OneInstancePerTest}\nimport org.scalatest.funsuite.AnyFunSuite\nimport org.sireum.$internal.MutableMarker\n\n\/\/ This file was auto-generated.  Do not edit\nabstract class OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_TestHarness_ScalaTest extends\n  AnyFunSuite with OneInstancePerTest with BeforeAndAfterEach with\n  OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_TestHarness {\n\n  var clonable: Boolean = true\n  var owned: Boolean = false\n\n  override def string: org.sireum.String = {\n    this.toString()\n  }\n\n  override def $clonable: Boolean = {\n    return clonable\n  }\n\n  override def $clonable_=(b: Boolean): MutableMarker = {\n    clonable = b\n    return this\n  }\n\n  override def $owned: Boolean = {\n    return owned\n  }\n\n  override def $owned_=(b: Boolean): MutableMarker = {\n    owned = b\n    return this\n  }\n\n  override def $clone: MutableMarker = {\n    \/\/ not expecting users to want to clone realizations of this abstract class\n    return this\n  }\n\n  override def beforeEach(): Unit = {\n    BeforeEntrypoint()\n  }\n\n  override def afterEach(): Unit = {\n    AfterEntrypoint()\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n\/\/ SlangCheck test container to hold the incoming port values for orLogic\n@datatype class OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer (\n  val api_channel1: B,\n  val api_channel2: B)\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/bridge\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_Tests.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.Actuation._\nimport RTS_aadl__JVM.GumboXUtil\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\nclass OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_Tests extends OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_TestHarness_ScalaTest {\n\n  val failOnUnsatPreconditions: B = F\n\n  {\n    val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n    val ranLibchannel1: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n    val ranLibchannel2: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n    \/\/ getInputs - needed\n    def getInputs(): Option[OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer] = {\n      try {\n        val api_channel1 = ranLibchannel1.next_B()\n        val api_channel2 = ranLibchannel2.next_B()\n\n        return Some(OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer(api_channel1,api_channel2))\n      } catch {\n        case e: AssertionError => return None()\n      }\n    }\n\n    for (i <- 0 to 100) {\n      this.registerTest(i.toString) {\n        var retry: B = T\n\n        var j: Z = 0\n        while (j < GumboXUtil.numRetries && retry) {\n          getInputs() match {\n            case Some(o) =>\n\n              println(st\"\"\"${if (j > 0) s\"Retry $j: \" else \"\"}Testing with\n                        |    channel1 = $o.api_channel1\n                        |    channel2 = $o.api_channel2\"\"\".render)\n\n              testComputeCB(o.api_channel1, o.api_channel2) match {\n                case GumboXResult.Pre_Condition_Unsat =>\n                case GumboXResult.Post_Condition_Fail =>\n                  fail (\"Post condition did not hold\")\n                  retry = F\n                case GumboXResult.Post_Condition_Pass =>\n                  \/\/ success\n                  println (\"Success!\")\n                  retry = F\n              }\n            case _ =>\n          }\n          j = j + 1\n        }\n\n        if (retry) {\n          if (failOnUnsatPreconditions) {\n            fail (\"Unable to satisfy precondition\")\n          } else {\n            cprintln(T, \"Unable to satisfy precondition\")\n          }\n        }\n      }\n    }\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_SlangCheck_TestRunner.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\n@record class OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_SlangCheck_TestRunner\n  extends Random.Gen.TestRunner[OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer]\n  with OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_GumboX_TestHarness {\n\n  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n  val ranLibchannel1: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n  val ranLibchannel2: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n  override def next(): OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer = {\n    val api_channel1 = ranLibchannel1.next_B()\n    val api_channel2 = ranLibchannel2.next_B()\n    return OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer(\n      api_channel1, api_channel2\n    )\n  }\n\n  override def toCompactJson(o: OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer): String = {\n    return RTS_aadl__JVM.JSON.fromActuationOrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer(o, T)\n  }\n\n  override def fromJson(json: String): OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer = {\n    RTS_aadl__JVM.JSON.toActuationOrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer(json) match {\n      case Either.Left(o) => return o\n      case Either.Right(msg) => halt(msg.string)\n    }\n  }\n\n  override def test(o: OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer): B = {\n    BeforeEntrypoint()\n    val r: B = testComputeCB(o.api_channel1, o.api_channel2) match {\n      case GumboXResult.Pre_Condition_Unsat => T\n      case GumboXResult.Post_Condition_Fail => F\n      case GumboXResult.Post_Condition_Pass => T\n    }\n    AfterEntrypoint()\n    return r\n  }\n}",
+          "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [
@@ -1513,8 +1898,85 @@
         "slang\/src\/main\/component\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator {\n\n  def initialise(api: Actuator_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_output(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: Actuator_i_Operational_Api): Unit = {\n    \/\/ example api usage\n\n    val apiUsage_input: Option[Base_Types.Boolean] = api.get_input()\n    api.logInfo(s\"Received on data port input: ${apiUsage_input}\")\n    val apiUsage_manualActuatorInput: Option[Base_Types.Boolean] = api.get_manualActuatorInput()\n    api.logInfo(s\"Received on data port manualActuatorInput: ${apiUsage_manualActuatorInput}\")\n  }\n\n  def activate(api: Actuator_i_Operational_Api): Unit = { }\n\n  def deactivate(api: Actuator_i_Operational_Api): Unit = { }\n\n  def finalise(api: Actuator_i_Operational_Api): Unit = { }\n\n  def recover(api: Actuator_i_Operational_Api): Unit = { }\n}\n",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator {\n\n  def initialise(api: Actuator_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_output(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: Actuator_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee actuatorOutput\n        api.output == (api.input | api.manualActuatorInput)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_input: Option[Base_Types.Boolean] = api.get_input()\n    api.logInfo(s\"Received on data port input: ${apiUsage_input}\")\n    val apiUsage_manualActuatorInput: Option[Base_Types.Boolean] = api.get_manualActuatorInput()\n    api.logInfo(s\"Received on data port manualActuatorInput: ${apiUsage_manualActuatorInput}\")\n  }\n\n  def activate(api: Actuator_i_Operational_Api): Unit = { }\n\n  def deactivate(api: Actuator_i_Operational_Api): Unit = { }\n\n  def finalise(api: Actuator_i_Operational_Api): Unit = { }\n\n  def recover(api: Actuator_i_Operational_Api): Unit = { }\n}\n",
           "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
+              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+            }
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/bridge\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\nobject Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX {\n  \/** Compute Entrypoint Contract\n    *\n    * guarantees actuatorOutput\n    * @param api_input incoming data port\n    * @param api_manualActuatorInput incoming data port\n    * @param api_output outgoing data port\n    *\/\n  @strictpure def compute_spec_actuatorOutput_guarantee(\n      api_input: Base_Types.Boolean,\n      api_manualActuatorInput: Base_Types.Boolean,\n      api_output: Base_Types.Boolean): B =\n    api_output == (api_input | api_manualActuatorInput)\n\n  \/** CEP-T-Guar: Top-level guarantee contracts for actuator's compute entrypoint\n    *\n    * @param api_input incoming data port\n    * @param api_manualActuatorInput incoming data port\n    * @param api_output outgoing data port\n    *\/\n  @strictpure def compute_CEP_T_Guar (\n      api_input: Base_Types.Boolean,\n      api_manualActuatorInput: Base_Types.Boolean,\n      api_output: Base_Types.Boolean): B =\n    compute_spec_actuatorOutput_guarantee(api_input, api_manualActuatorInput, api_output)\n\n  \/** CEP-Post: Compute Entrypoint Post-Condition for actuator\n    *\n    * @param api_input incoming data port\n    * @param api_manualActuatorInput incoming data port\n    * @param api_output outgoing data port\n    *\/\n  @strictpure def compute_CEP_Post (\n      api_input: Base_Types.Boolean,\n      api_manualActuatorInput: Base_Types.Boolean,\n      api_output: Base_Types.Boolean): B =\n    (\/\/ CEP-Guar: guarantee clauses of actuator's compute entrypoint\n     compute_CEP_T_Guar (api_input, api_manualActuatorInput, api_output))\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_TestHarness.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\n\n\/\/ This file was auto-generated.  Do not edit\n@msig trait Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_TestHarness extends Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_TestApi {\n  def testComputeCB(\n      api_input: Base_Types.Boolean,\n      api_manualActuatorInput: Base_Types.Boolean): GumboXResult.Type = {\n    \/\/ Step 1 [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state\n    \/\/   actuator does not have incoming ports or state variables\n\n    \/\/ Step 2 [CheckPre]: check\/filter based on pre-condition.\n    \/\/   actuator's compute entry point does not have top level assume clauses\n\n    \/\/ Step 3 [PutInPorts]: put values on the input ports\n    put_input(api_input)\n    put_manualActuatorInput(api_manualActuatorInput)\n\n    \/\/ Step 4 [InvokeEntryPoint]: invoke the entry point test method\n    testCompute()\n\n    \/\/ Step 5 [RetrieveOutState]: retrieve values of the output ports via get operations and GUMBO declared local state variables\n    val api_output: Base_Types.Boolean = get_output().get\n\n    \/\/ Step 6 [CheckPost]: invoke the oracle function\n    val postResult = RTS_aadl__JVM.Actuation.Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX.compute_CEP_Post(api_input, api_manualActuatorInput, api_output)\n    if (!postResult) {\n      return GumboXResult.Post_Condition_Fail\n    }\n\n    return GumboXResult.Post_Condition_Pass\n  }\n}\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_TestHarness_ScalaTest.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.scalatest.{BeforeAndAfterEach, OneInstancePerTest}\nimport org.scalatest.funsuite.AnyFunSuite\nimport org.sireum.$internal.MutableMarker\n\n\/\/ This file was auto-generated.  Do not edit\nabstract class Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_TestHarness_ScalaTest extends\n  AnyFunSuite with OneInstancePerTest with BeforeAndAfterEach with\n  Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_TestHarness {\n\n  var clonable: Boolean = true\n  var owned: Boolean = false\n\n  override def string: org.sireum.String = {\n    this.toString()\n  }\n\n  override def $clonable: Boolean = {\n    return clonable\n  }\n\n  override def $clonable_=(b: Boolean): MutableMarker = {\n    clonable = b\n    return this\n  }\n\n  override def $owned: Boolean = {\n    return owned\n  }\n\n  override def $owned_=(b: Boolean): MutableMarker = {\n    owned = b\n    return this\n  }\n\n  override def $clone: MutableMarker = {\n    \/\/ not expecting users to want to clone realizations of this abstract class\n    return this\n  }\n\n  override def beforeEach(): Unit = {\n    BeforeEntrypoint()\n  }\n\n  override def afterEach(): Unit = {\n    AfterEntrypoint()\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file was auto-generated.  Do not edit\n\n\/\/ SlangCheck test container to hold the incoming port values for actuator\n@datatype class Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer (\n  val api_input: B,\n  val api_manualActuatorInput: B)\n",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/bridge\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_Tests.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "package RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.Actuation._\nimport RTS_aadl__JVM.GumboXUtil\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\nclass Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_Tests extends Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_TestHarness_ScalaTest {\n\n  val failOnUnsatPreconditions: B = F\n\n  {\n    val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n    val ranLibinput: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n    val ranLibmanualActuatorInput: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n    \/\/ getInputs - needed\n    def getInputs(): Option[Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer] = {\n      try {\n        val api_input = ranLibinput.next_B()\n        val api_manualActuatorInput = ranLibmanualActuatorInput.next_B()\n\n        return Some(Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer(api_input,api_manualActuatorInput))\n      } catch {\n        case e: AssertionError => return None()\n      }\n    }\n\n    for (i <- 0 to 100) {\n      this.registerTest(i.toString) {\n        var retry: B = T\n\n        var j: Z = 0\n        while (j < GumboXUtil.numRetries && retry) {\n          getInputs() match {\n            case Some(o) =>\n\n              println(st\"\"\"${if (j > 0) s\"Retry $j: \" else \"\"}Testing with\n                        |    input = $o.api_input\n                        |    manualActuatorInput = $o.api_manualActuatorInput\"\"\".render)\n\n              testComputeCB(o.api_input, o.api_manualActuatorInput) match {\n                case GumboXResult.Pre_Condition_Unsat =>\n                case GumboXResult.Post_Condition_Fail =>\n                  fail (\"Post condition did not hold\")\n                  retry = F\n                case GumboXResult.Post_Condition_Pass =>\n                  \/\/ success\n                  println (\"Success!\")\n                  retry = F\n              }\n            case _ =>\n          }\n          j = j + 1\n        }\n\n        if (retry) {\n          if (failOnUnsatPreconditions) {\n            fail (\"Unable to satisfy precondition\")\n          } else {\n            cprintln(T, \"Unable to satisfy precondition\")\n          }\n        }\n      }\n    }\n  }\n}",
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "markers" : [
+          ]
+        }
+      ],
+      [
+        "slang\/src\/test\/util\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_SlangCheck_TestRunner.scala",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM.GumboXUtil.GumboXResult\nimport RTS_aadl__JVM.RandomLib\nimport org.sireum.Random.Gen64\nimport org.sireum.Random.Impl.Xoshiro256\n\n\/\/ This file was auto-generated.  Do not edit\n@record class Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_SlangCheck_TestRunner\n  extends Random.Gen.TestRunner[Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer]\n  with Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_GumboX_TestHarness {\n\n  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)\n  val ranLibinput: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n  val ranLibmanualActuatorInput: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))\n\n  override def next(): Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer = {\n    val api_input = ranLibinput.next_B()\n    val api_manualActuatorInput = ranLibmanualActuatorInput.next_B()\n    return Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer(\n      api_input, api_manualActuatorInput\n    )\n  }\n\n  override def toCompactJson(o: Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer): String = {\n    return RTS_aadl__JVM.JSON.fromActuationActuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer(o, T)\n  }\n\n  override def fromJson(json: String): Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer = {\n    RTS_aadl__JVM.JSON.toActuationActuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer(json) match {\n      case Either.Left(o) => return o\n      case Either.Right(msg) => halt(msg.string)\n    }\n  }\n\n  override def test(o: Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer): B = {\n    BeforeEntrypoint()\n    val r: B = testComputeCB(o.api_input, o.api_manualActuatorInput) match {\n      case GumboXResult.Pre_Condition_Unsat => T\n      case GumboXResult.Post_Condition_Fail => F\n      case GumboXResult.Post_Condition_Pass => T\n    }\n    AfterEntrypoint()\n    return r\n  }\n}",
+          "overwrite" : true,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [
@@ -1765,7 +2227,7 @@
         "slang\/bin\/sergen.cmd",
         {
           "type" : "ITestResource",
-          "content" : "::\/*#! 2> \/dev\/null                                   #\r\n@ 2>\/dev\/null # 2>nul & echo off & goto BOF           #\r\nif [ -z ${SIREUM_HOME} ]; then                        #\r\n  echo \"Please set SIREUM_HOME env var\"               #\r\n  exit -1                                             #\r\nfi                                                    #\r\nexec ${SIREUM_HOME}\/bin\/sireum slang run \"$0\" \"$@\"    #\r\n:BOF\r\nsetlocal\r\nif not defined SIREUM_HOME (\r\n  echo Please set SIREUM_HOME env var\r\n  exit \/B -1\r\n)\r\n%SIREUM_HOME%\\\\bin\\\\sireum.bat slang run \"%0\" %*\r\nexit \/B %errorlevel%\r\n::!#*\/\r\n\/\/ #Sireum\r\n\r\nimport org.sireum._\r\n\r\nval sireum = Os.path(Os.env(\"SIREUM_HOME\").get) \/ \"bin\" \/ (if (Os.isWin) \"sireum.bat\" else \"sireum\")\r\n\r\n\/\/ create serializers\/deserializers for the Slang types used in the project\r\n\r\nval files: ISZ[String] = ISZ(\"..\/src\/main\/data\/RTS_aadl__JVM\/Base_Types.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit1_temperatureLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit1_pressureLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit1_saturationLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit2_temperatureLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit2_pressureLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit2_saturationLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/art\/art\/DataContent.scala\")\r\n\r\nval toolargs: String = st\"${(files, \" \")}\".render\r\n\r\nproc\"$sireum tools sergen -p RTS_aadl__JVM -m json,msgpack -o ${Os.slashDir.up}\/src\/main\/data\/RTS_aadl__JVM $toolargs\".at(Os.slashDir).console.runCheck()\r\n",
+          "content" : "::\/*#! 2> \/dev\/null                                   #\r\n@ 2>\/dev\/null # 2>nul & echo off & goto BOF           #\r\nif [ -z ${SIREUM_HOME} ]; then                        #\r\n  echo \"Please set SIREUM_HOME env var\"               #\r\n  exit -1                                             #\r\nfi                                                    #\r\nexec ${SIREUM_HOME}\/bin\/sireum slang run \"$0\" \"$@\"    #\r\n:BOF\r\nsetlocal\r\nif not defined SIREUM_HOME (\r\n  echo Please set SIREUM_HOME env var\r\n  exit \/B -1\r\n)\r\n%SIREUM_HOME%\\\\bin\\\\sireum.bat slang run \"%0\" %*\r\nexit \/B %errorlevel%\r\n::!#*\/\r\n\/\/ #Sireum\r\n\r\nimport org.sireum._\r\n\r\nval sireum = Os.path(Os.env(\"SIREUM_HOME\").get) \/ \"bin\" \/ (if (Os.isWin) \"sireum.bat\" else \"sireum\")\r\n\r\n\/\/ create serializers\/deserializers for the Slang types used in the project\r\n\r\nval files: ISZ[String] = ISZ(\"..\/src\/main\/data\/RTS_aadl__JVM\/Base_Types.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit1_temperatureLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit1_pressureLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit1_saturationLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit2_temperatureLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit2_pressureLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/CoincidenceLogic_i_actuationSubsystem_actuationUnit2_saturationLogic_coincidenceLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/data\/RTS_aadl__JVM\/Actuation\/Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_SlangCheckContainer.scala\",\r\n                             \"..\/src\/main\/art\/art\/DataContent.scala\")\r\n\r\nval toolargs: String = st\"${(files, \" \")}\".render\r\n\r\nproc\"$sireum tools sergen -p RTS_aadl__JVM -m json,msgpack -o ${Os.slashDir.up}\/src\/main\/data\/RTS_aadl__JVM $toolargs\".at(Os.slashDir).console.runCheck()\r\n",
           "overwrite" : true,
           "makeExecutable" : true,
           "makeCRLF" : true,
