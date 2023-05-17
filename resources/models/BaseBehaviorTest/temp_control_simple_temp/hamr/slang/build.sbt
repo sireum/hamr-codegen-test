@@ -45,7 +45,7 @@ lazy val TempControlSoftwareSystem_i_Instance = slangEmbeddedProject("TempContro
 val scalaVer = "2.13.10"
 
 // versions.properties key: org.scalatest%%scalatest%%
-val scalaTestVersion = "3.2.15"
+val scalaTestVersion = "3.2.16"
 
 // versions.properties key: org.sireum%%scalac-plugin%
 // https://github.com/sireum/scalac-plugin/tree/4.20230423.6c31343
@@ -53,8 +53,8 @@ val sireumScalacVersion = "4.20230423.6c31343"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/6b0f087
-val kekinianVersion = "6b0f087"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/c52b6f7
+val kekinianVersion = "c52b6f7"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"
