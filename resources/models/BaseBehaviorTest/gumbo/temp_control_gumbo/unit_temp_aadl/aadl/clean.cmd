@@ -1,4 +1,4 @@
-::#! 2> /dev/null                                   #
+::/*#! 2> /dev/null                                 #
 @ 2>/dev/null # 2>nul & echo off & goto BOF         #
 if [ -z ${SIREUM_HOME} ]; then                      #
   echo "Please set SIREUM_HOME env var"             #
@@ -13,7 +13,7 @@ if not defined SIREUM_HOME (
 )
 %SIREUM_HOME%\\bin\\sireum.bat slang run "%0" %*
 exit /B %errorlevel%
-::!#
+::!#*/
 // #Sireum
 
 import org.sireum._
@@ -25,7 +25,9 @@ val hamrDir: Os.Path =
 val slangDir = hamrDir / "slang"
 
 val toKeep = ops.ISZOps(ISZ(
-  (slangDir / "src" / "main" / "component"),
+  (slangDir / "src" / "main" / "component" / "tc" / "CoolingFan"),
+  (slangDir / "src" / "main" / "component" / "tc" / "TempControlSoftwareSystem"),
+  (slangDir / "src" / "main" / "component" / "tc" / "TempSensor"),
   (slangDir / "src" / "test" / "bridge"),
 ))
 

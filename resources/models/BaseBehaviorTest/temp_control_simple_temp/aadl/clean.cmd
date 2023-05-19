@@ -22,7 +22,9 @@ val hamrDir = Os.slashDir.up / "hamr"
 val slangDir = hamrDir / "slang"
 
 val toKeep = ops.ISZOps(ISZ(
-  (slangDir / "src" / "main" / "component"),
+  (slangDir / "src" / "main" / "component" / "TempControlSimpleTemp" / "CoolingFan"),
+  (slangDir / "src" / "main" / "component" / "TempControlSimpleTemp" / "TempControlSoftwareSystem"),
+  (slangDir / "src" / "main" / "component" / "TempControlSimpleTemp" / "TempSensor"),
   (slangDir / "src" / "test" / "bridge"),
   (slangDir / ".idea")
 ))
