@@ -14,5 +14,8 @@ object GUMBO__Library {
 
   @strictpure def gdefaultTempDegrees(): Base_Types.Float_32 = 72.0f
 
-  @strictpure def gTempSensorRange(tempy: TempSensor.Temperature_i): Base_Types.Boolean = tempy.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() && tempy.degrees <= TempSensor.GUMBO__Library.gmaxTempDegrees() && tempy.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() && tempy.degrees <= TempSensor.GUMBO__Library.gmaxTempDegrees()
+  @strictpure def gTempSensorRange(tempy: TempSensor.Temperature_i): Base_Types.Boolean = tempy.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() &&
+    tempy.degrees <= TempSensor.GUMBO__Library.gmaxTempDegrees() &&
+    tempy.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() &&
+    tempy.degrees <= TempSensor.GUMBO__Library.gmaxTempDegrees()
 }

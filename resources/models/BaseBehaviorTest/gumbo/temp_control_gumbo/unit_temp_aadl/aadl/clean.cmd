@@ -25,29 +25,25 @@ val hamrDir: Os.Path =
 val slangDir = hamrDir / "slang"
 
 val toKeep = ops.ISZOps(ISZ(
-  (slangDir / "src" / "main" / "component" / "tc" / "CoolingFan"),
-  (slangDir / "src" / "main" / "component" / "tc" / "TempControlSoftwareSystem"),
-  (slangDir / "src" / "main" / "component" / "tc" / "TempSensor"),
-  (slangDir / "src" / "test" / "bridge"),
+  slangDir / "src" / "main" / "component",
+  slangDir / "src" / "test" / "bridge",
+  slangDir / ".idea"
 ))
 
-
-def rec(p: Os.Path): Unit = {
-  if(p.isFile && !toKeep.contains(p)) {
-    println(s"Removing file ${p.value}")
-    p.remove()
+def rec(p: Os.Path, onlyDelAutoGen: B): Unit = {
+  if(p.isFile) {
+    if ((!toKeep.contains(p) && !onlyDelAutoGen) || ops.StringOps(p.read).contains("do not edit")) {
+      p.remove()
+      println(s"Removed file: $p")
+    }
   } else {
-    if (toKeep.contains(p)) {
-      return
-    } else {
-      for(pp <- p.list) {
-        rec(pp)
-      }
-      if(p.list.isEmpty) {
-        println(s"Removing directory ${p.value}")
-        p.removeAll()
-      }
+    for (pp <- p.list) {
+      rec(pp, toKeep.contains(p) || onlyDelAutoGen)
+    }
+    if (p.list.isEmpty) {
+      p.removeAll()
+      println(s"Removed empty directory: $p")
     }
   }
 }
-rec(hamrDir)
+rec(slangDir, F)

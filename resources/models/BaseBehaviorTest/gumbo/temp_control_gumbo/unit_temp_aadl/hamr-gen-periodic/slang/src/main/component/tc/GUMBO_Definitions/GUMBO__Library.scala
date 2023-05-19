@@ -14,7 +14,11 @@ object GUMBO__Library {
 
   @strictpure def atLeastAbsoluteZeroRaw(value: Base_Types.Float_32, unit: TempSensor.Unit.Type): Base_Types.Boolean = if (unit == TempSensor.Unit.Kelvin) value >= 0.0f else if (unit == TempSensor.Unit.Celsius) value >= -273.0f else value >= -459.67f
 
-  @strictpure def inRange(temp: TempSensor.Temperature_i): Base_Types.Boolean = GUMBO_Definitions.GUMBO__Library.isFahrenheit(temp) && temp.degrees >= -50.0f && temp.degrees <= 150.0f && temp.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() && temp.degrees <= TempSensor.GUMBO__Library.gmaxTempDegrees()
+  @strictpure def inRange(temp: TempSensor.Temperature_i): Base_Types.Boolean = GUMBO_Definitions.GUMBO__Library.isFahrenheit(temp) &&
+    temp.degrees >= -50.0f &&
+    temp.degrees <= 150.0f &&
+    temp.degrees >= TempSensor.GUMBO__Library.gminTempDegrees() &&
+    temp.degrees <= TempSensor.GUMBO__Library.gmaxTempDegrees()
 
   @pure def toFahrenheit(temp: TempSensor.Temperature_i): TempSensor.Temperature_i = {
     Contract(
