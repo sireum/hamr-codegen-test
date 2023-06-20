@@ -28,10 +28,10 @@ val files: ISZ[String] = ISZ("../src/main/data/tc/TempSensor/Unit.scala",
                              "../src/main/data/tc/CoolingFan/FanAck.scala",
                              "../src/main/data/tc/TempControlSoftwareSystem/SetPoint_i.scala",
                              "../src/main/data/tc/Base_Types.scala",
-                             "../src/main/data/tc/TempSensor/TempSensorPeriodic_p_tcproc_tempSensor_SlangCheckContainer.scala",
-                             "../src/main/data/tc/CoolingFan/FanPeriodic_p_tcproc_fan_SlangCheckContainer.scala",
-                             "../src/main/data/tc/TempControlSoftwareSystem/TempControlPeriodic_p_tcproc_tempControl_SlangCheckContainer.scala",
-                             "../src/main/data/tc/TempControlSoftwareSystem/OperatorInterfacePeriodic_p_tcproc_operatorInterface_SlangCheckContainer.scala",
+                             "../src/main/data/tc/TempSensor/TempSensorPeriodic_p_tcproc_tempSensor_DSC_TestVectors.scala",
+                             "../src/main/data/tc/CoolingFan/FanPeriodic_p_tcproc_fan_DSC_TestVectors.scala",
+                             "../src/main/data/tc/TempControlSoftwareSystem/TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectors.scala",
+                             "../src/main/data/tc/TempControlSoftwareSystem/OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVectors.scala",
                              "../src/main/art/art/DataContent.scala")
 
 val toolargs: String = st"${(files, " ")}".render

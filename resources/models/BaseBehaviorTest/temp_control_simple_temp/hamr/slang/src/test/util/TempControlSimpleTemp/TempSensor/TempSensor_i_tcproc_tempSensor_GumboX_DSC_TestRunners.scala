@@ -1,0 +1,49 @@
+// #Sireum
+
+package TempControlSimpleTemp.TempSensor
+
+import org.sireum._
+import TempControlSimpleTemp.GumboXUtil.GumboXResult
+import TempControlSimpleTemp.RandomLib
+import org.sireum.Random.Gen64
+import org.sireum.Random.Impl.Xoshiro256
+
+// This file was auto-generated.  Do not edit
+
+// Distribute SlangCheck test runners
+
+@record class TempSensor_i_tcproc_tempSensor_GumboX_DSC_TestRunner
+  extends Random.Gen.TestRunner[TempSensor_i_tcproc_tempSensor_DSC_TestVector]
+  with TempSensor_i_tcproc_tempSensor_GumboX_TestHarness {
+
+  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
+
+  override def next(): TempSensor_i_tcproc_tempSensor_DSC_TestVector = {
+    return TempSensor_i_tcproc_tempSensor_DSC_TestVector(
+    )
+  }
+
+  override def toCompactJson(o: TempSensor_i_tcproc_tempSensor_DSC_TestVector): String = {
+    return TempControlSimpleTemp.JSON.fromTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(o, T)
+  }
+
+  override def fromJson(json: String): TempSensor_i_tcproc_tempSensor_DSC_TestVector = {
+    TempControlSimpleTemp.JSON.toTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(json) match {
+      case Either.Left(o) => return o
+      case Either.Right(msg) => halt(msg.string)
+    }
+  }
+
+  override def test(o: TempSensor_i_tcproc_tempSensor_DSC_TestVector): B = {
+    BeforeEntrypoint()
+    val r: B = testComputeCB() match {
+      case GumboXResult.Pre_Condition_Unsat =>
+        TempControlSimpleTemp.DSC_RecordUnsatPre.report(TempControlSimpleTemp.JSON.fromTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(o, T))
+        T
+      case GumboXResult.Post_Condition_Fail => F
+      case GumboXResult.Post_Condition_Pass => T
+    }
+    AfterEntrypoint()
+    return r
+  }
+}

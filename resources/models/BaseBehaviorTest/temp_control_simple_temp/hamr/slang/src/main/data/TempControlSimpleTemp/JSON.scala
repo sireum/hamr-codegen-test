@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from Temperature_i.scala, FanCmd.scala, FanAck.scala, SetPoint_i.scala, Base_Types.scala, TempSensor_i_tcproc_tempSensor_SlangCheckContainer.scala, OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer.scala, DataContent.scala
+// This file is auto-generated from Temperature_i.scala, FanCmd.scala, FanAck.scala, SetPoint_i.scala, Base_Types.scala, TempSensor_i_tcproc_tempSensor_DSC_TestVectors.scala, OperatorInterface_i_tcproc_operatorInterface_DSC_TestVectors.scala, DataContent.scala
 
 package TempControlSimpleTemp
 
@@ -189,15 +189,15 @@ object JSON {
       ))
     }
 
-    @pure def printTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainer(o: TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer): ST = {
+    @pure def printTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(o: TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector): ST = {
       return printObject(ISZ(
-        ("type", st""""TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer"""")
+        ("type", st""""TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector"""")
       ))
     }
 
-    @pure def printTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer(o: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer): ST = {
+    @pure def printTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVector(o: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector): ST = {
       return printObject(ISZ(
-        ("type", st""""TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer""""),
+        ("type", st""""TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector""""),
         ("api_tempChanged", printOption(F, o.api_tempChanged, print_artEmpty _)),
         ("api_currentTemp", printTempSensorTemperature_i(o.api_currentTemp))
       ))
@@ -619,26 +619,26 @@ object JSON {
       return Base_Types.Bits_Payload(value)
     }
 
-    def parseTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainer(): TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer = {
-      val r = parseTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainerT(F)
+    def parseTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(): TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector = {
+      val r = parseTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVectorT(F)
       return r
     }
 
-    def parseTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainerT(typeParsed: B): TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer = {
+    def parseTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVectorT(typeParsed: B): TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector = {
       if (!typeParsed) {
-        parser.parseObjectType("TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer")
+        parser.parseObjectType("TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector")
       }
-      return TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer()
+      return TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector()
     }
 
-    def parseTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer(): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer = {
-      val r = parseTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainerT(F)
+    def parseTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVector(): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector = {
+      val r = parseTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVectorT(F)
       return r
     }
 
-    def parseTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainerT(typeParsed: B): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer = {
+    def parseTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVectorT(typeParsed: B): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector = {
       if (!typeParsed) {
-        parser.parseObjectType("TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer")
+        parser.parseObjectType("TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector")
       }
       parser.parseObjectKey("api_tempChanged")
       val api_tempChanged = parser.parseOption(parse_artEmpty _)
@@ -646,7 +646,7 @@ object JSON {
       parser.parseObjectKey("api_currentTemp")
       val api_currentTemp = parseTempSensorTemperature_i()
       parser.parseObjectNext()
-      return TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer(api_tempChanged, api_currentTemp)
+      return TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector(api_tempChanged, api_currentTemp)
     }
 
     def parse_artDataContent(): art.DataContent = {
@@ -1102,8 +1102,8 @@ object JSON {
     return r
   }
 
-  def fromTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainer(o: TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer, isCompact: B): String = {
-    val st = Printer.printTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainer(o)
+  def fromTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(o: TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector, isCompact: B): String = {
+    val st = Printer.printTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(o)
     if (isCompact) {
       return st.renderCompact
     } else {
@@ -1111,17 +1111,17 @@ object JSON {
     }
   }
 
-  def toTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainer(s: String): Either[TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer, Json.ErrorMsg] = {
-    def fTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainer(parser: Parser): TempSensor.TempSensor_i_tcproc_tempSensor_SlangCheckContainer = {
-      val r = parser.parseTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainer()
+  def toTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(s: String): Either[TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector, Json.ErrorMsg] = {
+    def fTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(parser: Parser): TempSensor.TempSensor_i_tcproc_tempSensor_DSC_TestVector = {
+      val r = parser.parseTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector()
       return r
     }
-    val r = to(s, fTempSensorTempSensor_i_tcproc_tempSensor_SlangCheckContainer _)
+    val r = to(s, fTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector _)
     return r
   }
 
-  def fromTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer(o: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer, isCompact: B): String = {
-    val st = Printer.printTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer(o)
+  def fromTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVector(o: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector, isCompact: B): String = {
+    val st = Printer.printTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVector(o)
     if (isCompact) {
       return st.renderCompact
     } else {
@@ -1129,12 +1129,12 @@ object JSON {
     }
   }
 
-  def toTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer(s: String): Either[TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer, Json.ErrorMsg] = {
-    def fTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer(parser: Parser): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer = {
-      val r = parser.parseTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer()
+  def toTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVector(s: String): Either[TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector, Json.ErrorMsg] = {
+    def fTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVector(parser: Parser): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_DSC_TestVector = {
+      val r = parser.parseTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVector()
       return r
     }
-    val r = to(s, fTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_SlangCheckContainer _)
+    val r = to(s, fTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_DSC_TestVector _)
     return r
   }
 
