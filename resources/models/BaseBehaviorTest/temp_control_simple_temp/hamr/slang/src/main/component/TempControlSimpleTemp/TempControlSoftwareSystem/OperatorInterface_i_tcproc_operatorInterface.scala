@@ -15,7 +15,7 @@ object OperatorInterface_i_tcproc_operatorInterface {
     api.logDebug("Example debug logging")
     api.logError("Example error logging")
 
-    api.put_setPoint(TempControlSoftwareSystem.SetPoint_i.example())
+    api.put_setPoint(Defs.initialSetPoint)
   }
 
   def timeTriggered(api: OperatorInterface_i_Operational_Api): Unit = {
