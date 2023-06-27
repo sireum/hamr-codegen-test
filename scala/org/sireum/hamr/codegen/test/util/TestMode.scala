@@ -13,6 +13,10 @@ import org.sireum._
 
   "ive" // generate ive project info for Slang projects
 
+  "sergen" // generate serializer/deserializers
+
+  "slangcheck" // generate slangcheck artifacts
+
   "compile" // compile Slang and Linux projects
 
   "logika" // run proyek logika on Slang projects

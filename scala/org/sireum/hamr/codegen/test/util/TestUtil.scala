@@ -566,6 +566,14 @@ object TestUtil {
     return isSlang(config.platform) && (!config.noProyekIve || ops.ISZOps(testModes).contains(TestMode.ive))
   }
 
+  def shouldSergen(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+    return ops.ISZOps(testModes).contains(TestMode.sergen) && isSlang(config.platform) && !config.noEmbedArt
+  }
+
+  def shouldSlangCheck(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+    return ops.ISZOps(testModes).contains(TestMode.slangcheck) && isSlang(config.platform) && !config.noEmbedArt
+  }
+
   def onOptions(options: ISZ[CMakeOption]): ISZ[String] = {
     return options.map(o => s"-D${o.name}=ON")
   }

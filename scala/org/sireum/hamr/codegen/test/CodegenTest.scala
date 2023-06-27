@@ -3,7 +3,7 @@ package org.sireum.hamr.codegen.test
 import org.sireum._
 import org.sireum.hamr.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen._
-import org.sireum.hamr.codegen.common.containers.{ProyekIveConfig, TranspilerConfig}
+import org.sireum.hamr.codegen.common.containers.{SireumProyekIveOption, SireumSlangTranspilersCOption, SireumToolsSergenOption, SireumToolsSlangcheckGeneratorOption}
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil => CommonTestUtil}
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
@@ -28,7 +28,7 @@ trait CodeGenTest extends CodegenTestSuite {
   //   testmodes=generated_unit_test,compile,camkes sireum proyek test ...
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
     ISZ(TestMode.codegen)
-    //ISZ(TestMode.codegen, TestMode.smt2)
+  //ISZ(TestMode.codegen, TestMode.smt2)
 
   def filter: B = if (filterTestsSet().nonEmpty) filterTestsSet().get else F
 
@@ -142,12 +142,19 @@ trait CodeGenTest extends CodegenTestSuite {
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
     val results: CodeGenResults = CodeGen.codeGen(model, testOps, ArsitPlugin.defaultPlugins, reporter,
-      if (TestUtil.shouldTranspile(testOps, testModes)) transpile(testOps) _ else (TranspilerConfig, Reporter) => {
+      if (TestUtil.shouldTranspile(testOps, testModes)) transpile(testOps) _ else (SireumSlangTranspilersCOption, Reporter) => {
         println("Dummy transpiler");
         0
       },
-      if (TestUtil.shouldProyekIve(testOps, testModes)) proyekive(testOps) _ else (ProyekIveConfig) => {
+      if (TestUtil.shouldProyekIve(testOps, testModes)) proyekive(testOps) _ else (SireumProyekIveOption) => {
         println("Dummy Proyek IVE");
+        0
+      },
+      if (TestUtil.shouldSergen(testOps, testModes)) sergen(testOps) _ else (SireumToolsSergenOption, Reporter) => {
+        0
+      }
+      ,
+      if (TestUtil.shouldSlangCheck(testOps, testModes)) slangcheck(testOps) _ else (SireumToolsSlangcheckGeneratorOption, Reporter) => {
         0
       }
     )
@@ -316,7 +323,7 @@ object CodeGenTest {
     return if (Os.env(FILTER).nonEmpty) return Some(Os.env(FILTER).get.native.toBoolean) else None()
   }
 
-  def proyekive(config: CodeGenConfig)(pc: ProyekIveConfig): Z = {
+  def proyekive(config: CodeGenConfig)(pc: SireumProyekIveOption): Z = {
     var args: ISZ[String] = ISZ()
 
     def addKey(key: String): Unit = {
@@ -356,7 +363,61 @@ object CodeGenTest {
 
   }
 
-  def transpile(config: CodeGenConfig)(tc: TranspilerConfig, reporter: Reporter): Z = {
+  def slangcheck(config: CodeGenConfig)(sc: SireumToolsSlangcheckGeneratorOption, reporter: Reporter): Z = {
+    var args: ISZ[String] = ISZ()
+
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
+
+    val pathSep: String = Os.pathSep
+
+    add("--output-dir", sc.outputDir.get)
+    assert(sc.testDir.isEmpty, "Need to handle slangcheck test dir option")
+    args = args ++ sc.args
+
+    val sireum: Os.Path = TestUtil.getSireum
+
+    args = ISZ[String](sireum.value, "tools", "slangcheck", "generator") ++ args
+
+    val results = Os.proc(args).console.run()
+    return results.exitCode
+  }
+
+  def sergen(config: CodeGenConfig)(tc: SireumToolsSergenOption, reporter: Reporter): Z = {
+    var args: ISZ[String] = ISZ()
+
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
+
+    val pathSep: String = Os.pathSep
+
+    add("--modes", st"${(for(m <- tc.modes) yield ops.StringOps(m.name).firstToLower, ",")}".render)
+    add("--package", st"${(tc.packageName, ".")}".render)
+    assert(tc.name.isEmpty, "Need to handle sergen custom names")
+    assert(tc.license.isEmpty, "Need to handle sergen license")
+    add("--output-dir", tc.outputDir.get)
+
+    args = args ++ tc.args
+
+    val sireum: Os.Path = TestUtil.getSireum
+
+    args = ISZ[String](sireum.value, "tools", "sergen") ++ args
+
+    val results = Os.proc(args).console.run()
+    return results.exitCode
+  }
+
+  def transpile(config: CodeGenConfig)(tc: SireumSlangTranspilersCOption, reporter: Reporter): Z = {
     var args: ISZ[String] = ISZ()
 
     def addKey(key: String): Unit = {

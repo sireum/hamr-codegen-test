@@ -133,13 +133,20 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     val reporter = Reporter.create
 
     val results: CodeGenResults = CodeGen.codeGen(model, testOptions, ArsitPlugin.defaultPlugins(), reporter,
-      (TranspilerConfig, reporter) => {
+      (SireumSlangTranspilersCOption, Reporter) => {
         0
       },
-      (ProyekIveConfig) => {
+      (SireumProyekIveOption) => {
+        0
+      },
+      (SireumToolsSergenOption, Reporter) => {
+        0
+      },
+      (SireumToolsSlangcheckGeneratorOption, Reporter) => {
         0
       }
     )
+
     var success = !reporter.hasError
     if (success) {
       success = TestUtil.runAdditionalTasks(
