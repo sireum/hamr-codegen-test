@@ -20,7 +20,7 @@ import org.sireum.Random.Impl.Xoshiro256
   val ranLibfanCmd: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
   override def next(): FanPeriodic_p_tcproc_fan_DSC_TestVector = {
-    val api_fanCmd = ranLibfanCmd.next_CoolingFanFanCmdType()
+    val api_fanCmd = ranLibfanCmd.nextCoolingFanFanCmdType()
     return FanPeriodic_p_tcproc_fan_DSC_TestVector(
       api_fanCmd
     )

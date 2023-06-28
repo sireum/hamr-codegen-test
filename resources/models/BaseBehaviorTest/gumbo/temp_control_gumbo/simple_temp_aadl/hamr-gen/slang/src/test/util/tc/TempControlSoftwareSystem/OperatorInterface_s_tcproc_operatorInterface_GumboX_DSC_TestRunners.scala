@@ -21,8 +21,8 @@ import org.sireum.Random.Impl.Xoshiro256
   val ranLibcurrentTemp: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
   override def next(): OperatorInterface_s_tcproc_operatorInterface_DSC_TestVector = {
-    val api_tempChanged = Some(ranLibtempChanged.next_artEmpty()) // TODO: call option's next once slang check supports traits
-    val api_currentTemp = ranLibcurrentTemp.next_TempSensorTemperature_i()
+    val api_tempChanged = ranLibtempChanged.nextOption_artEmpty()
+    val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
     return OperatorInterface_s_tcproc_operatorInterface_DSC_TestVector(
       api_tempChanged, api_currentTemp
     )

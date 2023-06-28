@@ -83,11 +83,13 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
     var _testModes = testModes
     if (justRegenerate) {
+      _testModes = testModes.filter(f => f == TestMode.slangcheck || f == TestMode.sergen)
+
       println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
       println("!!  Ignoring Test Modes : Just Regenerating  !!")
       println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
-      _testModes = ISZ()
+      println()
+      println(s"  _testModes=${_testModes}")
     }
 
     testOptions.aadlRootDir match {
@@ -139,12 +141,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
       (SireumProyekIveOption) => {
         0
       },
-      (SireumToolsSergenOption, Reporter) => {
-        0
-      },
-      (SireumToolsSlangcheckGeneratorOption, Reporter) => {
-        0
-      }
+      TestUtil.sergen(testOptions) _,
+      TestUtil.slangcheck(testOptions) _
     )
 
     var success = !reporter.hasError

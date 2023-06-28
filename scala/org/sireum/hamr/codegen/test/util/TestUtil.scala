@@ -4,6 +4,7 @@ import org.scalatest.BeforeAndAfterAll
 import org.sireum._
 import org.sireum.hamr.act.templates.SlangEmbeddedTemplate
 import org.sireum.hamr.act.util.CMakeOption
+import org.sireum.hamr.codegen.common.containers.{SireumProyekIveOption, SireumSlangTranspilersCOption, SireumToolsSergenOption, SireumToolsSlangcheckGeneratorOption}
 import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenPlatform}
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.ir.{Aadl, JSON}
@@ -605,6 +606,156 @@ object TestUtil {
       case Some(string"com.jetbrains.intellij.ce") => T
       case _ => F
     }
+
+
+  def proyekive(config: CodeGenConfig)(pc: SireumProyekIveOption): Z = {
+    var args: ISZ[String] = ISZ()
+
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
+
+    val pathSep: String = Os.pathSep
+
+    if (pc.force) addKey("--force")
+    add("--edition", ops.StringOps(pc.edition.name).firstToLower)
+    if (pc.ignoreRuntime) addKey("--ignore-runtime")
+    if (pc.json.nonEmpty) add("--json", pc.json.get)
+    if (pc.name.nonEmpty) add("--name", pc.name.get)
+    if (pc.outputDirName.nonEmpty) add("--out", pc.outputDirName.get)
+    if (pc.project.nonEmpty) add("--project", pc.project.get)
+    if (pc.slice.nonEmpty) add("--slice", st"""${(pc.slice, ",")}""".render)
+    if (pc.symlink) addKey("--symlink")
+    if (pc.versions.nonEmpty) add("--versions", st"""${(pc.versions, pathSep)}""".render)
+    if (pc.cache.nonEmpty) add("--cache", pc.cache.get)
+    if (pc.docs) addKey("--no-docs")
+    if (pc.sources) addKey("--no-sources")
+    if (pc.repositories.nonEmpty) add("--repositories", st"""${(pc.repositories, ",")}""".render)
+    if (pc.args.nonEmpty) args = args ++ pc.args
+
+    val sireum: Os.Path = TestUtil.getSireum
+
+    args = ISZ[String](sireum.value, "proyek", "ive") ++ args
+
+    println("Generating IVE project via callback ...")
+    val results = Os.proc(args).console.run()
+
+    return results.exitCode
+
+  }
+
+  def slangcheck(config: CodeGenConfig)(sc: SireumToolsSlangcheckGeneratorOption, reporter: Reporter): Z = {
+    var args: ISZ[String] = ISZ()
+
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
+
+    val pathSep: String = Os.pathSep
+
+    add("--package", st"${(sc.packageName, ".")}".render)
+    add("--output-dir", sc.outputDir.get)
+    assert(sc.testDir.isEmpty, "Need to handle slangcheck test dir option")
+    args = args ++ sc.args
+
+    val sireum: Os.Path = TestUtil.getSireum
+
+    args = ISZ[String](sireum.value, "tools", "slangcheck", "generator") ++ args
+
+    val results = Os.proc(args).echo.console.run()
+    return results.exitCode
+  }
+
+  def sergen(config: CodeGenConfig)(tc: SireumToolsSergenOption, reporter: Reporter): Z = {
+    var args: ISZ[String] = ISZ()
+
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
+
+    val pathSep: String = Os.pathSep
+
+    add("--modes", st"${(for (m <- tc.modes) yield ops.StringOps(m.name).firstToLower, ",")}".render)
+    add("--package", st"${(tc.packageName, ".")}".render)
+    assert(tc.name.isEmpty, "Need to handle sergen custom names")
+    assert(tc.license.isEmpty, "Need to handle sergen license")
+    add("--output-dir", tc.outputDir.get)
+
+    args = args ++ tc.args
+
+    val sireum: Os.Path = TestUtil.getSireum
+
+    args = ISZ[String](sireum.value, "tools", "sergen") ++ args
+
+    val results = Os.proc(args).echo.console.run()
+
+    return results.exitCode
+  }
+
+  def transpile(config: CodeGenConfig)(tc: SireumSlangTranspilersCOption, reporter: Reporter): Z = {
+    var args: ISZ[String] = ISZ()
+
+    def addKey(key: String): Unit = {
+      args = args :+ key
+    }
+
+    def add(key: String, value: String): Unit = {
+      args = args :+ key :+ value
+    }
+
+    val pathSep: String = Os.pathSep
+
+    args = args :+ "--sourcepath" :+ st"""${(tc.sourcepath, pathSep)}""".render
+    tc.output.map(s => add("--output-dir", s))
+    tc.projectName.map(s => add("--name", s))
+    addKey("--strict-aliasing")
+    add("--apps", st"""${(tc.apps, ",")}""".render)
+    add("--fingerprint", tc.fingerprint.string)
+    add("--bits", tc.bitWidth.string)
+    add("--string-size", tc.maxStringSize.string)
+    add("--sequence-size", tc.maxArraySize.string)
+    if (tc.customArraySizes.nonEmpty) add("--sequence", st"""${(tc.customArraySizes, ";")}""".render)
+    if (tc.customConstants.nonEmpty) add("--constants", st"""${(tc.customConstants, ";")}""".render)
+    if (tc.forwarding.nonEmpty) add("--forward", st"""${(tc.forwarding, ",")}""".render)
+    tc.stackSize.map(s => add("--stack-size", s))
+    if (tc.stableTypeId) addKey("--stable-type-id")
+    if (tc.exts.nonEmpty) add("--exts", st"""${(tc.exts, pathSep)}""".render)
+    if (tc.libOnly) addKey("--lib-only")
+    if (tc.verbose) addKey("--verbose")
+    if (tc.cmakeIncludes.nonEmpty) add("--cmake-includes", st"""${(tc.cmakeIncludes, ",")}""".render)
+
+    //args.foreach(p => println(p))
+
+    val sireum: Os.Path = TestUtil.getSireum
+
+    args = ISZ[String](sireum.value, "slang", "transpiler", "c") ++ args
+
+    // transpiler callback method will be expensive for sel4 projects since
+    // each will be done in separate JVM instances (unlike when run from
+    // OSATE or via the transpile scripts) so only do it when explicitly requested
+    val ret: Z = if (Os.envs.contains("ALSO_TRANSPILE_VIA_CALLBACKS")) {
+      println(s"Transpiling ${config.platform} via callback ...")
+      val results = Os.proc(args).console.run()
+      results.exitCode
+    } else {
+      0
+    }
+
+    return ret
+  }
+
 }
 
 

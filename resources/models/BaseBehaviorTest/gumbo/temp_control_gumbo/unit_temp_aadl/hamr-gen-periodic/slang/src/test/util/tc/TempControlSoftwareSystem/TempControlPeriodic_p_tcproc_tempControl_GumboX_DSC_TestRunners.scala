@@ -22,9 +22,9 @@ import org.sireum.Random.Impl.Xoshiro256
   val ranLibsetPoint: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
   override def next(): TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector = {
-    val api_currentTemp = ranLibcurrentTemp.next_TempSensorTemperature_i()
-    val api_fanAck = ranLibfanAck.next_CoolingFanFanAckType()
-    val api_setPoint = ranLibsetPoint.next_TempControlSoftwareSystemSetPoint_i()
+    val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
+    val api_fanAck = ranLibfanAck.nextCoolingFanFanAckType()
+    val api_setPoint = ranLibsetPoint.nextTempControlSoftwareSystemSetPoint_i()
     return TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(
       api_currentTemp, api_fanAck, api_setPoint
     )
@@ -66,10 +66,10 @@ import org.sireum.Random.Impl.Xoshiro256
   val ranLibsetPoint: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
   override def next(): TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL = {
-    val In_latestFanCmd = ranLiblatestFanCmd.next_CoolingFanFanCmdType()
-    val api_currentTemp = ranLibcurrentTemp.next_TempSensorTemperature_i()
-    val api_fanAck = ranLibfanAck.next_CoolingFanFanAckType()
-    val api_setPoint = ranLibsetPoint.next_TempControlSoftwareSystemSetPoint_i()
+    val In_latestFanCmd = ranLiblatestFanCmd.nextCoolingFanFanCmdType()
+    val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
+    val api_fanAck = ranLibfanAck.nextCoolingFanFanAckType()
+    val api_setPoint = ranLibsetPoint.nextTempControlSoftwareSystemSetPoint_i()
     return TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(
       In_latestFanCmd, api_currentTemp, api_fanAck, api_setPoint
     )

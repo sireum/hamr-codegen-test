@@ -8,7 +8,7 @@ ignore = F
 #   https://github.com/sireum/hamr-codegen-test/blob/master/scala/org/sireum/hamr/codegen/test/util/TestMode.scala
 # these will be combined with anything set via the environment variable test modes
 #   e.g. export testmodes=phantom,logika
-testModes = phantom,generated_unit_tests, logika
+testModes = phantom,generated_unit_tests, logika, sergen, slangcheck
 
 # airFile is optional and optional String. Test will be ignored if not provided and phantom is not used
 # or if phantom is unable to generate AIR

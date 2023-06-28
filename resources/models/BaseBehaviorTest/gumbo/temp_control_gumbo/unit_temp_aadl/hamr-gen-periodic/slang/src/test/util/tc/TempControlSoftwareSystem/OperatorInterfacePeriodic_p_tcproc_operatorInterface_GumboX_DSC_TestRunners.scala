@@ -20,7 +20,7 @@ import org.sireum.Random.Impl.Xoshiro256
   val ranLibcurrentTemp: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
   override def next(): OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector = {
-    val api_currentTemp = ranLibcurrentTemp.next_TempSensorTemperature_i()
+    val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
     return OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector(
       api_currentTemp
     )

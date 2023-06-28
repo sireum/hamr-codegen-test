@@ -19,7 +19,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Z())
+      continue = f(param.nextZ())
 
       if (!continue) {
         return Jen.End
@@ -38,7 +38,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_B())
+      continue = f(param.nextB())
 
       if (!continue) {
         return Jen.End
@@ -57,7 +57,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_C())
+      continue = f(param.nextC())
 
       if (!continue) {
         return Jen.End
@@ -76,7 +76,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_R())
+      continue = f(param.nextR())
 
       if (!continue) {
         return Jen.End
@@ -95,7 +95,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_F32())
+      continue = f(param.nextF32())
 
       if (!continue) {
         return Jen.End
@@ -114,7 +114,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_F64())
+      continue = f(param.nextF64())
 
       if (!continue) {
         return Jen.End
@@ -133,7 +133,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_S8())
+      continue = f(param.nextS8())
 
       if (!continue) {
         return Jen.End
@@ -152,7 +152,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_S16())
+      continue = f(param.nextS16())
 
       if (!continue) {
         return Jen.End
@@ -171,7 +171,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_S32())
+      continue = f(param.nextS32())
 
       if (!continue) {
         return Jen.End
@@ -190,7 +190,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_S64())
+      continue = f(param.nextS64())
 
       if (!continue) {
         return Jen.End
@@ -209,7 +209,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_U8())
+      continue = f(param.nextU8())
 
       if (!continue) {
         return Jen.End
@@ -228,7 +228,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_U16())
+      continue = f(param.nextU16())
 
       if (!continue) {
         return Jen.End
@@ -247,7 +247,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_U32())
+      continue = f(param.nextU32())
 
       if (!continue) {
         return Jen.End
@@ -266,7 +266,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_U64())
+      continue = f(param.nextU64())
 
       if (!continue) {
         return Jen.End
@@ -281,7 +281,26 @@ DataContent.scala
 }
 
 
-@record class Gen_artEmpty(param: RandomLibI) extends MJen[art.Empty] {
+@record class Gen__artDataContent(param: RandomLibI) extends MJen[art.DataContent] {
+  override def generate(f: art.DataContent => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.next_artDataContent())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen__artEmpty(param: RandomLibI) extends MJen[art.Empty] {
   override def generate(f: art.Empty => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
     while (T) {
@@ -305,7 +324,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesBoolean_Payload())
+      continue = f(param.nextBase_TypesBoolean_Payload())
 
       if (!continue) {
         return Jen.End
@@ -324,7 +343,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesInteger_Payload())
+      continue = f(param.nextBase_TypesInteger_Payload())
 
       if (!continue) {
         return Jen.End
@@ -343,7 +362,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesInteger_8_Payload())
+      continue = f(param.nextBase_TypesInteger_8_Payload())
 
       if (!continue) {
         return Jen.End
@@ -362,7 +381,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesInteger_16_Payload())
+      continue = f(param.nextBase_TypesInteger_16_Payload())
 
       if (!continue) {
         return Jen.End
@@ -381,7 +400,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesInteger_32_Payload())
+      continue = f(param.nextBase_TypesInteger_32_Payload())
 
       if (!continue) {
         return Jen.End
@@ -400,7 +419,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesInteger_64_Payload())
+      continue = f(param.nextBase_TypesInteger_64_Payload())
 
       if (!continue) {
         return Jen.End
@@ -419,7 +438,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesUnsigned_8_Payload())
+      continue = f(param.nextBase_TypesUnsigned_8_Payload())
 
       if (!continue) {
         return Jen.End
@@ -438,7 +457,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesUnsigned_16_Payload())
+      continue = f(param.nextBase_TypesUnsigned_16_Payload())
 
       if (!continue) {
         return Jen.End
@@ -457,7 +476,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesUnsigned_32_Payload())
+      continue = f(param.nextBase_TypesUnsigned_32_Payload())
 
       if (!continue) {
         return Jen.End
@@ -476,7 +495,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesUnsigned_64_Payload())
+      continue = f(param.nextBase_TypesUnsigned_64_Payload())
 
       if (!continue) {
         return Jen.End
@@ -495,7 +514,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesFloat_Payload())
+      continue = f(param.nextBase_TypesFloat_Payload())
 
       if (!continue) {
         return Jen.End
@@ -514,7 +533,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesFloat_32_Payload())
+      continue = f(param.nextBase_TypesFloat_32_Payload())
 
       if (!continue) {
         return Jen.End
@@ -533,7 +552,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesFloat_64_Payload())
+      continue = f(param.nextBase_TypesFloat_64_Payload())
 
       if (!continue) {
         return Jen.End
@@ -552,7 +571,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesCharacter_Payload())
+      continue = f(param.nextBase_TypesCharacter_Payload())
 
       if (!continue) {
         return Jen.End
@@ -571,7 +590,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesString_Payload())
+      continue = f(param.nextBase_TypesString_Payload())
 
       if (!continue) {
         return Jen.End
@@ -590,7 +609,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesBits_Payload())
+      continue = f(param.nextBase_TypesBits_Payload())
 
       if (!continue) {
         return Jen.End

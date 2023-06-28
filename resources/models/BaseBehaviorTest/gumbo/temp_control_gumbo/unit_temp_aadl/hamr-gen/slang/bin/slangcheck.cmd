@@ -41,8 +41,12 @@ val files: ISZ[String] = ISZ("../src/main/data/tc/TempSensor/Unit.scala",
                              "../src/main/data/tc/CoolingFan/FanAck.scala",
                              "../src/main/data/tc/TempControlSoftwareSystem/SetPoint_i.scala",
                              "../src/main/data/tc/Base_Types.scala",
+                             "../src/main/component/tc/GUMBO_Definitions/GUMBO__Library.scala",
+                             "../src/main/component/tc/TempSensor/GUMBO__Library.scala",
+                             "../src/main/data/tc/TempSensor/TempSensor_s_tcproc_tempSensor_DSC_TestVectors.scala",
+                             "../src/main/data/tc/TempControlSoftwareSystem/OperatorInterface_s_tcproc_operatorInterface_DSC_TestVectors.scala",
                              "../src/main/art/art/DataContent.scala")
 
 val toolargs: String = st"${(files, " ")}".render
 
-proc"java -jar $slangCheckJar tools slangcheck -p tc -o ../src/main/data $toolargs".at(Os.slashDir).console.runCheck()
+proc"java -jar $slangCheckJar tools slangcheck -p tc -o ../src/main/data/tc $toolargs".at(Os.slashDir).console.runCheck()

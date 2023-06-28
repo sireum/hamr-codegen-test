@@ -29,7 +29,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Z())
+      continue = f(param.nextZ())
 
       if (!continue) {
         return Jen.End
@@ -48,7 +48,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_B())
+      continue = f(param.nextB())
 
       if (!continue) {
         return Jen.End
@@ -67,7 +67,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_C())
+      continue = f(param.nextC())
 
       if (!continue) {
         return Jen.End
@@ -86,7 +86,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_R())
+      continue = f(param.nextR())
 
       if (!continue) {
         return Jen.End
@@ -105,7 +105,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_F32())
+      continue = f(param.nextF32())
 
       if (!continue) {
         return Jen.End
@@ -124,7 +124,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_F64())
+      continue = f(param.nextF64())
 
       if (!continue) {
         return Jen.End
@@ -143,7 +143,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_S8())
+      continue = f(param.nextS8())
 
       if (!continue) {
         return Jen.End
@@ -162,7 +162,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_S16())
+      continue = f(param.nextS16())
 
       if (!continue) {
         return Jen.End
@@ -181,7 +181,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_S32())
+      continue = f(param.nextS32())
 
       if (!continue) {
         return Jen.End
@@ -200,7 +200,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_S64())
+      continue = f(param.nextS64())
 
       if (!continue) {
         return Jen.End
@@ -219,7 +219,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_U8())
+      continue = f(param.nextU8())
 
       if (!continue) {
         return Jen.End
@@ -238,7 +238,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_U16())
+      continue = f(param.nextU16())
 
       if (!continue) {
         return Jen.End
@@ -257,7 +257,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_U32())
+      continue = f(param.nextU32())
 
       if (!continue) {
         return Jen.End
@@ -276,7 +276,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_U64())
+      continue = f(param.nextU64())
 
       if (!continue) {
         return Jen.End
@@ -291,12 +291,12 @@ DataContent.scala
 }
 
 
-@record class Gen_Base_TypesBoolean_Payload(param: RandomLibI) extends MJen[Base_Types.Boolean_Payload] {
-  override def generate(f: Base_Types.Boolean_Payload => Jen.Action): Jen.Action = {
+@record class Gen__artDataContent(param: RandomLibI) extends MJen[art.DataContent] {
+  override def generate(f: art.DataContent => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_Base_TypesBoolean_Payload())
+      continue = f(param.next_artDataContent())
 
       if (!continue) {
         return Jen.End
@@ -310,292 +310,7 @@ DataContent.scala
   }
 }
 
-@record class Gen_Base_TypesInteger_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_Payload] {
-  override def generate(f: Base_Types.Integer_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesInteger_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesInteger_8_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_8_Payload] {
-  override def generate(f: Base_Types.Integer_8_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesInteger_8_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesInteger_16_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_16_Payload] {
-  override def generate(f: Base_Types.Integer_16_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesInteger_16_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesInteger_32_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_32_Payload] {
-  override def generate(f: Base_Types.Integer_32_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesInteger_32_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesInteger_64_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_64_Payload] {
-  override def generate(f: Base_Types.Integer_64_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesInteger_64_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesUnsigned_8_Payload(param: RandomLibI) extends MJen[Base_Types.Unsigned_8_Payload] {
-  override def generate(f: Base_Types.Unsigned_8_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesUnsigned_8_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesUnsigned_16_Payload(param: RandomLibI) extends MJen[Base_Types.Unsigned_16_Payload] {
-  override def generate(f: Base_Types.Unsigned_16_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesUnsigned_16_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesUnsigned_32_Payload(param: RandomLibI) extends MJen[Base_Types.Unsigned_32_Payload] {
-  override def generate(f: Base_Types.Unsigned_32_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesUnsigned_32_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesUnsigned_64_Payload(param: RandomLibI) extends MJen[Base_Types.Unsigned_64_Payload] {
-  override def generate(f: Base_Types.Unsigned_64_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesUnsigned_64_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesFloat_Payload(param: RandomLibI) extends MJen[Base_Types.Float_Payload] {
-  override def generate(f: Base_Types.Float_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesFloat_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesFloat_32_Payload(param: RandomLibI) extends MJen[Base_Types.Float_32_Payload] {
-  override def generate(f: Base_Types.Float_32_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesFloat_32_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesFloat_64_Payload(param: RandomLibI) extends MJen[Base_Types.Float_64_Payload] {
-  override def generate(f: Base_Types.Float_64_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesFloat_64_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesCharacter_Payload(param: RandomLibI) extends MJen[Base_Types.Character_Payload] {
-  override def generate(f: Base_Types.Character_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesCharacter_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesString_Payload(param: RandomLibI) extends MJen[Base_Types.String_Payload] {
-  override def generate(f: Base_Types.String_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesString_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_Base_TypesBits_Payload(param: RandomLibI) extends MJen[Base_Types.Bits_Payload] {
-  override def generate(f: Base_Types.Bits_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_Base_TypesBits_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_artEmpty(param: RandomLibI) extends MJen[art.Empty] {
+@record class Gen__artEmpty(param: RandomLibI) extends MJen[art.Empty] {
   override def generate(f: art.Empty => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
     while (T) {
@@ -614,50 +329,316 @@ DataContent.scala
   }
 }
 
+@record class Gen_Base_TypesBoolean_Payload(param: RandomLibI) extends MJen[Base_Types.Boolean_Payload] {
+  override def generate(f: Base_Types.Boolean_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesBoolean_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesInteger_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_Payload] {
+  override def generate(f: Base_Types.Integer_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesInteger_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesInteger_8_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_8_Payload] {
+  override def generate(f: Base_Types.Integer_8_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesInteger_8_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesInteger_16_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_16_Payload] {
+  override def generate(f: Base_Types.Integer_16_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesInteger_16_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesInteger_32_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_32_Payload] {
+  override def generate(f: Base_Types.Integer_32_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesInteger_32_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesInteger_64_Payload(param: RandomLibI) extends MJen[Base_Types.Integer_64_Payload] {
+  override def generate(f: Base_Types.Integer_64_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesInteger_64_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesUnsigned_8_Payload(param: RandomLibI) extends MJen[Base_Types.Unsigned_8_Payload] {
+  override def generate(f: Base_Types.Unsigned_8_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesUnsigned_8_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesUnsigned_16_Payload(param: RandomLibI) extends MJen[Base_Types.Unsigned_16_Payload] {
+  override def generate(f: Base_Types.Unsigned_16_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesUnsigned_16_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesUnsigned_32_Payload(param: RandomLibI) extends MJen[Base_Types.Unsigned_32_Payload] {
+  override def generate(f: Base_Types.Unsigned_32_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesUnsigned_32_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesUnsigned_64_Payload(param: RandomLibI) extends MJen[Base_Types.Unsigned_64_Payload] {
+  override def generate(f: Base_Types.Unsigned_64_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesUnsigned_64_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesFloat_Payload(param: RandomLibI) extends MJen[Base_Types.Float_Payload] {
+  override def generate(f: Base_Types.Float_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesFloat_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesFloat_32_Payload(param: RandomLibI) extends MJen[Base_Types.Float_32_Payload] {
+  override def generate(f: Base_Types.Float_32_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesFloat_32_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesFloat_64_Payload(param: RandomLibI) extends MJen[Base_Types.Float_64_Payload] {
+  override def generate(f: Base_Types.Float_64_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesFloat_64_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesCharacter_Payload(param: RandomLibI) extends MJen[Base_Types.Character_Payload] {
+  override def generate(f: Base_Types.Character_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesCharacter_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesString_Payload(param: RandomLibI) extends MJen[Base_Types.String_Payload] {
+  override def generate(f: Base_Types.String_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesString_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Base_TypesBits_Payload(param: RandomLibI) extends MJen[Base_Types.Bits_Payload] {
+  override def generate(f: Base_Types.Bits_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBase_TypesBits_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
 @record class Gen_BuildingControlFanAckType(param: RandomLibI) extends MJen[BuildingControl.FanAck.Type] {
   override def generate(f: BuildingControl.FanAck.Type => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_BuildingControlFanAckType())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_BuildingControlFanCmdType(param: RandomLibI) extends MJen[BuildingControl.FanCmd.Type] {
-  override def generate(f: BuildingControl.FanCmd.Type => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_BuildingControlFanCmdType())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_BuildingControlFanCmd_Payload(param: RandomLibI) extends MJen[BuildingControl.FanCmd_Payload] {
-  override def generate(f: BuildingControl.FanCmd_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.next_BuildingControlFanCmd_Payload())
+      continue = f(param.nextBuildingControlFanAckType())
 
       if (!continue) {
         return Jen.End
@@ -676,7 +657,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_BuildingControlFanAck_Payload())
+      continue = f(param.nextBuildingControlFanAck_Payload())
 
       if (!continue) {
         return Jen.End
@@ -690,12 +671,12 @@ DataContent.scala
   }
 }
 
-@record class Gen_BuildingControlTempUnitType(param: RandomLibI) extends MJen[BuildingControl.TempUnit.Type] {
-  override def generate(f: BuildingControl.TempUnit.Type => Jen.Action): Jen.Action = {
+@record class Gen_BuildingControlFanCmdType(param: RandomLibI) extends MJen[BuildingControl.FanCmd.Type] {
+  override def generate(f: BuildingControl.FanCmd.Type => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_BuildingControlTempUnitType())
+      continue = f(param.nextBuildingControlFanCmdType())
 
       if (!continue) {
         return Jen.End
@@ -709,12 +690,12 @@ DataContent.scala
   }
 }
 
-@record class Gen_BuildingControlTempUnit_Payload(param: RandomLibI) extends MJen[BuildingControl.TempUnit_Payload] {
-  override def generate(f: BuildingControl.TempUnit_Payload => Jen.Action): Jen.Action = {
+@record class Gen_BuildingControlFanCmd_Payload(param: RandomLibI) extends MJen[BuildingControl.FanCmd_Payload] {
+  override def generate(f: BuildingControl.FanCmd_Payload => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_BuildingControlTempUnit_Payload())
+      continue = f(param.nextBuildingControlFanCmd_Payload())
 
       if (!continue) {
         return Jen.End
@@ -733,7 +714,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_BuildingControlSetPoint_impl())
+      continue = f(param.nextBuildingControlSetPoint_impl())
 
       if (!continue) {
         return Jen.End
@@ -752,7 +733,45 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_BuildingControlSetPoint_impl_Payload())
+      continue = f(param.nextBuildingControlSetPoint_impl_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_BuildingControlTempUnitType(param: RandomLibI) extends MJen[BuildingControl.TempUnit.Type] {
+  override def generate(f: BuildingControl.TempUnit.Type => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBuildingControlTempUnitType())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_BuildingControlTempUnit_Payload(param: RandomLibI) extends MJen[BuildingControl.TempUnit_Payload] {
+  override def generate(f: BuildingControl.TempUnit_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextBuildingControlTempUnit_Payload())
 
       if (!continue) {
         return Jen.End
@@ -771,7 +790,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_BuildingControlTemperature_impl())
+      continue = f(param.nextBuildingControlTemperature_impl())
 
       if (!continue) {
         return Jen.End
@@ -790,7 +809,7 @@ DataContent.scala
     var continue = Jen.Continue
     while (T) {
 
-      continue = f(param.next_BuildingControlTemperature_impl_Payload())
+      continue = f(param.nextBuildingControlTemperature_impl_Payload())
 
       if (!continue) {
         return Jen.End

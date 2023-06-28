@@ -23,7 +23,7 @@ class FanPeriodic_p_tcproc_fan_GumboX_Tests extends FanPeriodic_p_tcproc_fan_Gum
 
   def getTestVector(): Option[FanPeriodic_p_tcproc_fan_DSC_TestVector] = {
     try {
-      val api_fanCmd = ranLibfanCmd.next_CoolingFanFanCmdType()
+      val api_fanCmd = ranLibfanCmd.nextCoolingFanFanCmdType()
 
       return Some(FanPeriodic_p_tcproc_fan_DSC_TestVector(api_fanCmd))
     } catch {

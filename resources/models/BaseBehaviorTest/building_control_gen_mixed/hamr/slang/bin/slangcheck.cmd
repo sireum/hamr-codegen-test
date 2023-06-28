@@ -45,4 +45,4 @@ val files: ISZ[String] = ISZ("../src/main/data/bc/BuildingControl/TempUnit.scala
 
 val toolargs: String = st"${(files, " ")}".render
 
-proc"java -jar $slangCheckJar tools slangcheck -p bc -o ../src/main/data $toolargs".at(Os.slashDir).console.runCheck()
+proc"java -jar $slangCheckJar tools slangcheck -p bc -o ../src/main/data/bc $toolargs".at(Os.slashDir).console.runCheck()

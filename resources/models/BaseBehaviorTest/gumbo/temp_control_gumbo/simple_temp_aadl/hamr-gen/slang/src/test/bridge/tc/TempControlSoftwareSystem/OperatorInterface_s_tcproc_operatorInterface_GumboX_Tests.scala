@@ -24,8 +24,8 @@ class OperatorInterface_s_tcproc_operatorInterface_GumboX_Tests extends Operator
 
   def getTestVector(): Option[OperatorInterface_s_tcproc_operatorInterface_DSC_TestVector] = {
     try {
-      val api_tempChanged = Some(ranLibtempChanged.next_artEmpty()) // TODO: call option's next once slang check supports traits
-      val api_currentTemp = ranLibcurrentTemp.next_TempSensorTemperature_i()
+      val api_tempChanged = ranLibtempChanged.nextOption_artEmpty()
+      val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
 
       return Some(OperatorInterface_s_tcproc_operatorInterface_DSC_TestVector(api_tempChanged,api_currentTemp))
     } catch {

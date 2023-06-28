@@ -26,9 +26,9 @@ class TempControlPeriodic_p_tcproc_tempControl_GumboX_Tests extends TempControlP
 
   def getTestVector(): Option[TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector] = {
     try {
-      val api_currentTemp = ranLibcurrentTemp.next_TempSensorTemperature_i()
-      val api_fanAck = ranLibfanAck.next_CoolingFanFanAckType()
-      val api_setPoint = ranLibsetPoint.next_TempControlSoftwareSystemSetPoint_i()
+      val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
+      val api_fanAck = ranLibfanAck.nextCoolingFanFanAckType()
+      val api_setPoint = ranLibsetPoint.nextTempControlSoftwareSystemSetPoint_i()
 
       return Some(TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(api_currentTemp,api_fanAck,api_setPoint))
     } catch {
@@ -40,10 +40,10 @@ class TempControlPeriodic_p_tcproc_tempControl_GumboX_Tests extends TempControlP
 
   def getTestVectorwL(): Option[TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL] = {
     try {
-      val In_latestFanCmd = ranLiblatestFanCmd.next_CoolingFanFanCmdType()
-      val api_currentTemp = ranLibcurrentTemp.next_TempSensorTemperature_i()
-      val api_fanAck = ranLibfanAck.next_CoolingFanFanAckType()
-      val api_setPoint = ranLibsetPoint.next_TempControlSoftwareSystemSetPoint_i()
+      val In_latestFanCmd = ranLiblatestFanCmd.nextCoolingFanFanCmdType()
+      val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
+      val api_fanAck = ranLibfanAck.nextCoolingFanFanAckType()
+      val api_setPoint = ranLibsetPoint.nextTempControlSoftwareSystemSetPoint_i()
 
       return Some(TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(In_latestFanCmd,api_currentTemp,api_fanAck,api_setPoint))
     } catch {

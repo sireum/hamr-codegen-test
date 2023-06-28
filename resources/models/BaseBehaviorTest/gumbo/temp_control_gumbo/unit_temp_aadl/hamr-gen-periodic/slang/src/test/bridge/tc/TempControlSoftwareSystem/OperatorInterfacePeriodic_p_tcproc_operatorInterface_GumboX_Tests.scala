@@ -23,7 +23,7 @@ class OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_Tests extends 
 
   def getTestVector(): Option[OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector] = {
     try {
-      val api_currentTemp = ranLibcurrentTemp.next_TempSensorTemperature_i()
+      val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
 
       return Some(OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector(api_currentTemp))
     } catch {
