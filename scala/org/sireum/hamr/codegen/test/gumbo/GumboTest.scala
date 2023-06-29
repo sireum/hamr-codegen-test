@@ -30,7 +30,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
              |via the example behavior code that Codegen generates for compute entrypoints.\n""".stripMargin)
 
   override def testModes: ISZ[TestMode.Type] = {
-    return (superModes :+ TestMode.logika) - TestMode.generated_unit_tests
+    return (superModes :+ TestMode.sergen :+ TestMode.slangcheck :+ TestMode.logika) - TestMode.generated_unit_tests
   }
 
   override def afterAll(): Unit = {

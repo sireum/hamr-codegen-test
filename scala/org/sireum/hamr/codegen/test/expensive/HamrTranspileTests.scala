@@ -4,10 +4,13 @@ import org.sireum._
 import org.sireum.hamr.codegen.common.util.{CodeGenPlatform, ExperimentalOptions}
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
+import org.sireum.hamr.codegen.test.util.TestMode
 
 class HamrTranspileTests extends CodeGenTest {
 
   override def generateExpected: B = if (super.generateExpected) T else F
+
+  override def testModes: ISZ[TestMode.Type] = super.testModes :+ TestMode.sergen :+ TestMode.slangcheck
 
   val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
 

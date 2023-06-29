@@ -976,6 +976,18 @@
         }
       ],
       [
+        "slang\/bin\/slangcheck.cmd",
+        {
+          "type" : "ITestResource",
+          "content" : "::\/*#! 2> \/dev\/null                                   #\r\n@ 2>\/dev\/null # 2>nul & echo off & goto BOF           #\r\nif [ -z ${SIREUM_HOME} ]; then                        #\r\n  echo \"Please set SIREUM_HOME env var\"               #\r\n  exit -1                                             #\r\nfi                                                    #\r\nexec ${SIREUM_HOME}\/bin\/sireum slang run \"$0\" \"$@\"    #\r\n:BOF\r\nsetlocal\r\nif not defined SIREUM_HOME (\r\n  echo Please set SIREUM_HOME env var\r\n  exit \/B -1\r\n)\r\n%SIREUM_HOME%\\\\bin\\\\sireum.bat slang run \"%0\" %*\r\nexit \/B %errorlevel%\r\n::!#*\/\r\n\/\/ #Sireum\r\n\r\nimport org.sireum._\r\n\r\nval sireum = Os.path(Os.env(\"SIREUM_HOME\").get) \/ \"bin\" \/ (if (Os.isWin) \"sireum.bat\" else \"sireum\")\r\n\r\n\/\/ create SlangCheck generators for the types used in the project\r\n\r\nval slangCheckJar: Os.Path = {\r\n  Os.env(\"SLANG_CHECK_JAR\") match {\r\n    case Some(p) =>\r\n      val cand = Os.path(p)\r\n      if (!cand.exists) {\r\n        halt(s\"SLANG_CHECK_JAR is not a file: $p\")\r\n      } else {\r\n        cand\r\n      }\r\n    case _ => halt(s\"SLANG_CHECK_JAR is not defined\")\r\n  }\r\n}\r\n\r\nval files: ISZ[String] = ISZ(\"..\/src\/main\/data\/urgency__Linux\/Base_Types.scala\",\r\n                             \"..\/src\/main\/art\/art\/DataContent.scala\")\r\n\r\nval toolargs: String = st\"${(files, \" \")}\".render\r\n\r\nproc\"java -jar $slangCheckJar tools slangcheck -p urgency__Linux -o ..\/src\/main\/data\/urgency__Linux $toolargs\".at(Os.slashDir).console.runCheck()\r\n",
+          "overwrite" : true,
+          "makeExecutable" : true,
+          "makeCRLF" : true,
+          "markers" : [
+          ]
+        }
+      ],
+      [
         "slang\/bin\/project.cmd",
         {
           "type" : "ITestResource",
@@ -1043,18 +1055,6 @@
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
-          "markers" : [
-          ]
-        }
-      ],
-      [
-        "slang\/bin\/slangcheck.cmd",
-        {
-          "type" : "ITestResource",
-          "content" : "::\/*#! 2> \/dev\/null                                   #\r\n@ 2>\/dev\/null # 2>nul & echo off & goto BOF           #\r\nif [ -z ${SIREUM_HOME} ]; then                        #\r\n  echo \"Please set SIREUM_HOME env var\"               #\r\n  exit -1                                             #\r\nfi                                                    #\r\nexec ${SIREUM_HOME}\/bin\/sireum slang run \"$0\" \"$@\"    #\r\n:BOF\r\nsetlocal\r\nif not defined SIREUM_HOME (\r\n  echo Please set SIREUM_HOME env var\r\n  exit \/B -1\r\n)\r\n%SIREUM_HOME%\\\\bin\\\\sireum.bat slang run \"%0\" %*\r\nexit \/B %errorlevel%\r\n::!#*\/\r\n\/\/ #Sireum\r\n\r\nimport org.sireum._\r\n\r\nval sireum = Os.path(Os.env(\"SIREUM_HOME\").get) \/ \"bin\" \/ (if (Os.isWin) \"sireum.bat\" else \"sireum\")\r\n\r\n\/\/ create SlangCheck generators for the types used in the project\r\n\r\nval slangCheckJar: Os.Path = {\r\n  Os.env(\"SLANG_CHECK_JAR\") match {\r\n    case Some(p) =>\r\n      val cand = Os.path(p)\r\n      if (!cand.exists) {\r\n        halt(s\"SLANG_CHECK_JAR is not a file: $p\")\r\n      } else {\r\n        cand\r\n      }\r\n    case _ => halt(s\"SLANG_CHECK_JAR is not defined\")\r\n  }\r\n}\r\n\r\nval files: ISZ[String] = ISZ(\"..\/src\/main\/data\/urgency__Linux\/Base_Types.scala\",\r\n                             \"..\/src\/main\/art\/art\/DataContent.scala\")\r\n\r\nval toolargs: String = st\"${(files, \" \")}\".render\r\n\r\nproc\"java -jar $slangCheckJar tools slangcheck -p urgency__Linux -o ..\/src\/main\/data $toolargs\".at(Os.slashDir).console.runCheck()\r\n",
-          "overwrite" : true,
-          "makeExecutable" : true,
-          "makeCRLF" : true,
           "markers" : [
           ]
         }

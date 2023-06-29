@@ -670,7 +670,7 @@ object TestUtil {
 
     args = ISZ[String](sireum.value, "tools", "slangcheck", "generator") ++ args
 
-    val results = Os.proc(args).echo.console.run()
+    val results = Os.proc(args).console.run()
     return results.exitCode
   }
 
@@ -699,7 +699,7 @@ object TestUtil {
 
     args = ISZ[String](sireum.value, "tools", "sergen") ++ args
 
-    val results = Os.proc(args).echo.console.run()
+    val results = Os.proc(args).console.run()
 
     return results.exitCode
   }
