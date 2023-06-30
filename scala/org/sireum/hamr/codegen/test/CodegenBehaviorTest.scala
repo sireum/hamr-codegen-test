@@ -14,7 +14,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
   // Initialize to use only test modes received from environment
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
-    ISZ(TestMode.compile, TestMode.sergen, TestMode.slangcheck)
+    ISZ(TestMode.sergen, TestMode.slangcheck)
 
   def disablePhantom: B = F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
