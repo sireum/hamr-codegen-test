@@ -39,12 +39,12 @@ import a._
   val integers_Id : Art.PortId) extends Consumer_Api {
 
   // Logika spec var representing port state for incoming event data port
-  @spec var coordinates: Arrays.Array_of_Coordinates = $
+  @spec var coordinates: Option[Arrays.Array_of_Coordinates] = $
 
   def get_coordinates() : Option[Arrays.Array_of_Coordinates] = {
     Contract(
       Ensures(
-        Res == Some(coordinates)
+        Res == coordinates
       )
     )
     val value : Option[Arrays.Array_of_Coordinates] = Art.getValue(coordinates_Id) match {
@@ -58,12 +58,12 @@ import a._
   }
 
   // Logika spec var representing port state for incoming event data port
-  @spec var vector_of_coordinates: Arrays.Vector_of_Coordinates = $
+  @spec var vector_of_coordinates: Option[Arrays.Vector_of_Coordinates] = $
 
   def get_vector_of_coordinates() : Option[Arrays.Vector_of_Coordinates] = {
     Contract(
       Ensures(
-        Res == Some(vector_of_coordinates)
+        Res == vector_of_coordinates
       )
     )
     val value : Option[Arrays.Vector_of_Coordinates] = Art.getValue(vector_of_coordinates_Id) match {
@@ -77,12 +77,12 @@ import a._
   }
 
   // Logika spec var representing port state for incoming event data port
-  @spec var integers: Arrays.Array_of_Integers = $
+  @spec var integers: Option[Arrays.Array_of_Integers] = $
 
   def get_integers() : Option[Arrays.Array_of_Integers] = {
     Contract(
       Ensures(
-        Res == Some(integers)
+        Res == integers
       )
     )
     val value : Option[Arrays.Array_of_Integers] = Art.getValue(integers_Id) match {

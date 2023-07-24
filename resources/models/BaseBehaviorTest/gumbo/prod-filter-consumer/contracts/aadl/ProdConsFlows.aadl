@@ -1,0 +1,209 @@
+package ProdConsFlows
+public
+	
+	with Base_Types;
+	
+	system s
+	end s;
+	
+	system implementation s.i
+		subcomponents
+			p: process p.i;
+	end s.i;
+	
+	process p
+		
+	end p;
+	
+	process implementation p.i
+		subcomponents
+			producer: thread Producer;
+			filterp: thread Filter.p;
+			filters: thread Filter.s;
+			consumer: thread Consumer;
+		connections
+			c1: port producer.a_data_out -> filterp.a_data_in;
+			c2: port producer.a_data_out -> filters.a_data_in;
+						
+			c3: port producer.b_event_data_out -> filterp.b_event_data_in;
+			c4: port producer.b_event_data_out -> filters.b_event_data_in;
+			
+			c5: port producer.c_event_data_out -> filterp.c_event_data_in;
+			c6: port producer.c_event_data_out -> filters.c_event_data_in;
+			
+			c7: port producer.d_event_out -> filterp.d_event_in;
+			c8: port producer.d_event_out -> filters.d_event_in;
+			
+			
+			c9: port filterp.e_data_out -> consumer.e_data_in;
+			c10: port filters.e_data_out -> consumer.e_data_in;
+			
+			c11: port filterp.f_event_data_out -> consumer.f_event_data_in;
+			c12: port filters.f_event_data_out -> consumer.f_event_data_in;
+			
+			c13: port filterp.g_event_data_out -> consumer.g_event_data_in;
+			c14: port filters.g_event_data_out -> consumer.g_event_data_in;
+			
+			c15: port filterp.h_event_out -> consumer.h_event_in;
+			c16: port filters.h_event_out -> consumer.h_event_in;
+	end p.i;
+	
+	thread Producer
+		features
+	 		a_data_out: out data port Container.i;
+			
+			b_event_data_out: out event data port Container.i;
+			c_event_data_out: out event data port Container.i;
+			
+			d_event_out: out event port;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 1 sec;			
+	end Producer;
+	
+	thread Filter
+		features
+			a_data_in: in data port Container.i;
+			
+			b_event_data_in: in event data port Container.i;
+			c_event_data_in: in event data port Container.i;
+			
+			d_event_in: in event port;
+			
+			
+			e_data_out: out data port Container.i;
+			
+			f_event_data_out: out event data port Container.i;
+			g_event_data_out: out event data port Container.i;
+			
+			h_event_out: out event port;
+	end Filter;
+	
+	-- GENERAL OBSERVATIONS:
+	--
+	-- Figuring out why contract based testing pre/posts were failing
+	-- is a pain as there's no indication what failed (e.g. a datatype invariant,
+	-- a intergration constraint, etc.
+	
+	thread implementation Filter.p
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 1 sec;
+		annex GUMBO {**
+			integration
+				assume a_gt_10 "Value received on a will always be greater than 10" :
+					a_data_in.value > 10;
+				
+				assume b_gt_8 "Value received on b will always be greater than 8" :
+					b_event_data_in.value > 8;
+					
+				guarantee e_gt_6 "Values placed on e must always be greate than 6" :
+					e_data_out.value > 6;
+					
+				guarantee f_gt_4 "Values placed on f must always be greate than 4" :
+					f_event_data_out.value > 4;
+					
+			initialize
+				guarantee e_data_out_initializes "Must initialize outgoing data ports.
+												|Perhaps this should be a built-in emitted Logika check
+												|to match GUMBOX. e.g., GUMBOX adds post checks
+												|that ensures all outgoing data/event-data ports satisify
+												|data type invariants and/or integration constraints
+												|regardless of whether a component has contracts":
+					e_data_out.value == 7;
+				
+			compute
+			  cases
+					case data_in "a_data_in 'flows to' e_data_out":
+					  assume T; -- FIXME: assume clause is required via the grammar
+						guarantee a_data_in == e_data_out;
+						
+					case b_event_data "If an event was received on b then its value
+										|is propagated to f":
+						
+						-- use an assume clause to ensure b received an event.  Could also be
+						-- done via an implication in the guarantee clause
+						assume HasEvent(b_event_data_in); 
+						
+						-- This is what I want to write but currently the kekinian side of things
+						-- expect the second argument to be the expected value that was placed on f
+						-- rather than a boolen expression.
+						--guarantee MustSend(f_event_data_out, b_event_data_in == f_event_data_out);
+					
+						-- or maybe rewrite MustSend such that the second arg is a bool expression in which you can only refer
+						-- to outgoing event data ports that were listed in the first arg
+						--guarantee MustSend([f_event_data_out], 
+						--                     f_event_data_out == b_event_data_in.value, -- this would be valid
+						--	                   g_event_data_out == f_event_data_out       -- but this would be rejected as g is not referenced
+						
+						-- or maybe a function passing approach 
+						--guarantee MustSend([f_event_data_out, g_event_data_out], (f,g) => f.value == g.value)
+						
+						-- bascially I want another guard against f being empty so I relaxed my
+						-- original restrictions that only allowed HasEvent to refer to incoming event ports 
+						guarantee HasEvent(f_event_data_out) && f_event_data_out.value == b_event_data_in.value;
+						 
+		**};
+			
+	end Filter.p;
+	
+	thread implementation Filter.s
+		properties
+			Dispatch_Protocol => Sporadic;
+		annex GUMBO {**
+				
+			integration
+				assume a_gt_10 "Value received on a will always be greater than 10" :
+					a_data_in.value > 10;
+				
+				assume b_gt_8 "Value received on b will always be greater than 8" :
+					b_event_data_in.value > 8;
+					
+				guarantee e_gt_6 "Values placed on e must always be greate than 6" :
+					e_data_out.value > 6;
+					
+				guarantee f_gt_4 "Values placed on f must always be greate than 4" :
+					f_event_data_out.value > 4;
+									
+			initialize
+			    -- no difference for initialize, would be nice if common contracts could be expressed in the
+			    -- component type with specialization/refinements allowed in the component implementations 
+				guarantee e_data_out_initializes "Must initialize outgoing data ports.
+												|Perhaps this should be a built-in emitted check.":
+					e_data_out.value == 7;
+					
+			compute
+				handle b_event_data_in:
+				    -- now the handler behaves like 'assume HasEvent(b_event_data_in)'
+					guarantee propagate_b "If an event was received on b then it's value
+											|is propagated to f":
+						HasEvent(f_event_data_out) && f_event_data_out == b_event_data_in;			
+		**};
+	end Filter.s;
+	
+	thread Consumer
+		features
+			e_data_in: in data port Container.i;
+			
+			f_event_data_in: in event data port Container.i;
+			g_event_data_in: in event data port Container.i;
+			
+			h_event_in: in event port;
+	end Consumer;
+	
+	data Container
+	end Container;
+	
+	data implementation Container.i
+		subcomponents
+			value: data Base_Types::Integer;
+		annex GUMBO {**
+			invariants
+				inv gtZero "Must be greater than zero":
+					value > 0;
+				--inv lteNine "Must be less than or equal to nine":
+				--	value <= 9;
+		**};
+	end Container.i;
+	
+end ProdConsFlows;

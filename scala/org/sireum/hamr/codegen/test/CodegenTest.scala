@@ -22,6 +22,8 @@ trait CodeGenTest extends CodegenTestSuite {
 
   def generateExpected: B = F
 
+  assert (generateExpected.->:(!TestUtil.isCI), s"generateExpected must be false when pushed to github")
+
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
   // e.g. from command line:

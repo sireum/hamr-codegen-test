@@ -7,6 +7,7 @@ import art._
 import tc._
 
 object TempSensorPeriodic_p_Api {
+  // guarantee Sensor_Temperature_Range
   @strictpure def Sensor_Temperature_Range(currentTemp: TempSensor.Temperature_i): B =
     GUMBO_Definitions.GUMBO__Library.isFahrenheit(currentTemp) &&
       currentTemp.degrees >= -50.0f &&

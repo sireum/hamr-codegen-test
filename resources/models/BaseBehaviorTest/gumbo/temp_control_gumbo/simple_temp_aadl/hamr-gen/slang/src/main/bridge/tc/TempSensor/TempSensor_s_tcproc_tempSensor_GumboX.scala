@@ -25,7 +25,7 @@ object TempSensor_s_tcproc_tempSensor_GumboX {
 
   /** Initialize Entrypoint Contract
     *
-    * guarantees initializes
+    * guarantee initializes
     * @param api_currentTemp outgoing data port
     */
   @strictpure def initialize_initializes (
@@ -37,7 +37,7 @@ object TempSensor_s_tcproc_tempSensor_GumboX {
 
   /** Initialize Entrypoint Contract
     *
-    * guarantees g1
+    * guarantee g1
     *   Testing MustSend with event port, initializes so no event expected
     * @param api_tempChanged outgoing event port
     */
@@ -47,7 +47,7 @@ object TempSensor_s_tcproc_tempSensor_GumboX {
 
   /** Initialize Entrypoint Contract
     *
-    * guarantees g2
+    * guarantee g2
     *   Testing NoSend with event port, initializes so no event expected
     * @param api_tempChanged outgoing event port
     */

@@ -21,7 +21,7 @@ object TempControl_i_tcproc_tempControl_GumboX {
 
   /** Initialize Entrypoint Contract
     *
-    * guarantees defautSetPoint
+    * guarantee defautSetPoint
     * @param currentSetPoint post-state state variable
     */
   @strictpure def initialize_defautSetPoint (
@@ -31,7 +31,7 @@ object TempControl_i_tcproc_tempControl_GumboX {
 
   /** Initialize Entrypoint Contract
     *
-    * guarantees defaultFanStates
+    * guarantee defaultFanStates
     * @param currentFanState post-state state variable
     */
   @strictpure def initialize_defaultFanStates (
@@ -40,7 +40,7 @@ object TempControl_i_tcproc_tempControl_GumboX {
 
   /** Initialize Entrypoint Contract
     *
-    * guarantees defaultLatestTemp
+    * guarantee defaultLatestTemp
     * @param latestTemp post-state state variable
     */
   @strictpure def initialize_defaultLatestTemp (
@@ -111,7 +111,7 @@ object TempControl_i_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * guarantees TC_Req_01
+    * guarantee TC_Req_01
     *   If the current temperature is less than the set point, then the fan state shall be Off.
     * @param currentFanState post-state state variable
     * @param currentSetPoint post-state state variable
@@ -125,7 +125,7 @@ object TempControl_i_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * guarantees TC_Req_02
+    * guarantee TC_Req_02
     *   If the current temperature is greater than the set point,
     *   then the fan state shall be On.
     * @param currentFanState post-state state variable
