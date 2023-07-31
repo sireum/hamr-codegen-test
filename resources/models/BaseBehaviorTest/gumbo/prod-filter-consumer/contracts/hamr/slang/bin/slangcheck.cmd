@@ -28,7 +28,8 @@ val files: ISZ[String] = ISZ("../src/main/data/prod_cons__JVM/ProdConsFlows/Cont
                              "../src/main/data/prod_cons__JVM/Base_Types.scala",
                              "../src/main/data/prod_cons__JVM/ProdConsFlows/Producer_p_producer_DSC_TestVectors.scala",
                              "../src/main/data/prod_cons__JVM/ProdConsFlows/Filter_p_p_filterp_DSC_TestVectors.scala",
-                             "../src/main/art/art/DataContent.scala")
+                             "../src/main/art/art/DataContent.scala",
+                             "../src/main/data/prod_cons__JVM/Aux_Types.scala")
 
 val toolargs: String = st"${(files, " ")}".render
 

@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from TempUnit.scala, Temperature_impl.scala, SetPoint_impl.scala, FanAck.scala, FanCmd.scala, Base_Types.scala, DataContent.scala
+// This file is auto-generated from TempUnit.scala, Temperature_impl.scala, SetPoint_impl.scala, FanAck.scala, FanCmd.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
 
 package bc
 

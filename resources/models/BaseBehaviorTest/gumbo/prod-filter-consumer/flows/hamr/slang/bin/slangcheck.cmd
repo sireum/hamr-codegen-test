@@ -25,7 +25,8 @@ val sireum = Os.path(Os.env("SIREUM_HOME").get) / "bin" / (if (Os.isWin) "sireum
 // create SlangCheck generators for the Slang types used in the project
 
 val files: ISZ[String] = ISZ("../src/main/data/prod_cons__JVM/Base_Types.scala",
-                             "../src/main/art/art/DataContent.scala")
+                             "../src/main/art/art/DataContent.scala",
+                             "../src/main/data/prod_cons__JVM/Aux_Types.scala")
 
 val toolargs: String = st"${(files, " ")}".render
 

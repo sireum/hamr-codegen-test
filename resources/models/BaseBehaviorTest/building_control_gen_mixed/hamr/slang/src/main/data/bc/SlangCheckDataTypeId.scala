@@ -22,6 +22,8 @@ Base_Types.scala
 
 DataContent.scala
 
+Aux_Types.scala
+
 */
 
 @enum object _artDataContent_DataTypeId {

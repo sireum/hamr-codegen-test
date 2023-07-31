@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from Coordinate_Impl.scala, Array_of_Coordinates.scala, Vector_of_Coordinates.scala, Array_of_Integers.scala, Base_Types.scala, DataContent.scala
+// This file is auto-generated from Coordinate_Impl.scala, Array_of_Coordinates.scala, Vector_of_Coordinates.scala, Array_of_Integers.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
 
 package a
 

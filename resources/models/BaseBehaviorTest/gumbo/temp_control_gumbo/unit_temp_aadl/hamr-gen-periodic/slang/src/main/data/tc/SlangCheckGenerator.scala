@@ -34,6 +34,8 @@ OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVectors.scala
 
 DataContent.scala
 
+Aux_Types.scala
+
 */
 
 @record class Gen_Z(param: RandomLibI) extends MJen[Z] {

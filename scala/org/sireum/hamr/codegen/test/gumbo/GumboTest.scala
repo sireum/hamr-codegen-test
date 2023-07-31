@@ -11,7 +11,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
 
   val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
 
-  override def generateExpected: B = if (super.generateExpected) T else F
+  override def generateExpected: B = super.generateExpected || F
 
   val phantomReady: B = T
 

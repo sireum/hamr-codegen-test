@@ -22,6 +22,8 @@ Base_Types.scala
 
 DataContent.scala
 
+Aux_Types.scala
+
 */
 
 @record class Gen_Z(param: RandomLibI) extends MJen[Z] {

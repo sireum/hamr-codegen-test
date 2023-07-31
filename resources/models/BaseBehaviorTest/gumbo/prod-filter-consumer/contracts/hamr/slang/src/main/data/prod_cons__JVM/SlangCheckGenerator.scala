@@ -18,6 +18,8 @@ Filter_p_p_filterp_DSC_TestVectors.scala
 
 DataContent.scala
 
+Aux_Types.scala
+
 */
 
 @record class Gen_Z(param: RandomLibI) extends MJen[Z] {

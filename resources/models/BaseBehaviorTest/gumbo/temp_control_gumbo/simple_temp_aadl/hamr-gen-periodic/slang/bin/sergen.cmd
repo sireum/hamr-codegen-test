@@ -35,7 +35,8 @@ val files: ISZ[String] = ISZ("../src/main/data/tc/TempSensor/Temperature_i.scala
                              "../src/main/data/tc/CoolingFan/FanPeriodic_p_tcproc_fan_DSC_TestVectors.scala",
                              "../src/main/data/tc/TempControlSoftwareSystem/TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectors.scala",
                              "../src/main/data/tc/TempControlSoftwareSystem/OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVectors.scala",
-                             "../src/main/art/art/DataContent.scala")
+                             "../src/main/art/art/DataContent.scala",
+                             "../src/main/data/tc/Aux_Types.scala")
 
 val toolargs: String = st"${(files, " ")}".render
 

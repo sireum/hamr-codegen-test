@@ -8,7 +8,7 @@ import org.sireum.hamr.codegen.test.util.TestMode
 
 class HamrTranspileTests extends CodeGenTest {
 
-  override def generateExpected: B = if (super.generateExpected) T else F
+  override def generateExpected: B = super.generateExpected || F
 
   override def testModes: ISZ[TestMode.Type] = super.testModes :+ TestMode.sergen :+ TestMode.slangcheck
 
@@ -39,11 +39,7 @@ class HamrTranspileTests extends CodeGenTest {
         testName = testName,
         modelDir = proj._2,
         airFile = Some(proj._3),
-
-        // kekinian also runs these tests so disable slang check until it's included
-        // in kekinian's dist
-        ops = ops(experimentalOptions = ops.experimentalOptions :+ ExperimentalOptions.DISABLE_SLANG_CHECK),
-
+        ops = ops,
         description = None(),
         modelUri = None(),
         expectedErrorReasons = ISZ())

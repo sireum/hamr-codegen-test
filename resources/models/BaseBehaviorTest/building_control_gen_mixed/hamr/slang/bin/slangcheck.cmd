@@ -30,7 +30,8 @@ val files: ISZ[String] = ISZ("../src/main/data/bc/BuildingControl/TempUnit.scala
                              "../src/main/data/bc/BuildingControl/FanAck.scala",
                              "../src/main/data/bc/BuildingControl/FanCmd.scala",
                              "../src/main/data/bc/Base_Types.scala",
-                             "../src/main/art/art/DataContent.scala")
+                             "../src/main/art/art/DataContent.scala",
+                             "../src/main/data/bc/Aux_Types.scala")
 
 val toolargs: String = st"${(files, " ")}".render
 

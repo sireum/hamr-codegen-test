@@ -27,8 +27,8 @@ class Filter_p_p_filterp_GumboX_Tests extends Filter_p_p_filterp_GumboX_TestHarn
   def getTestVector(): Option[Filter_p_p_filterp_DSC_TestVector] = {
     try {
       val api_d_event_in = ranLibd_event_in.nextOption_artEmpty()
-      val api_b_event_data_in = ranLibb_event_data_in.nextOption_ProdConsFlowsContainer_i()
-      val api_c_event_data_in = ranLibc_event_data_in.nextOption_ProdConsFlowsContainer_i()
+      val api_b_event_data_in = ranLibb_event_data_in.nextOptionProdConsFlowsContainer_i()
+      val api_c_event_data_in = ranLibc_event_data_in.nextOptionProdConsFlowsContainer_i()
       val api_a_data_in = ranLiba_data_in.nextProdConsFlowsContainer_i()
 
       return Some(Filter_p_p_filterp_DSC_TestVector(api_d_event_in,api_b_event_data_in,api_c_event_data_in,api_a_data_in))

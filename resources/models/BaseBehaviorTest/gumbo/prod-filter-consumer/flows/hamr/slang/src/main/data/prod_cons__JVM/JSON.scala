@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from Base_Types.scala, DataContent.scala
+// This file is auto-generated from Base_Types.scala, DataContent.scala, Aux_Types.scala
 
 package prod_cons__JVM
 

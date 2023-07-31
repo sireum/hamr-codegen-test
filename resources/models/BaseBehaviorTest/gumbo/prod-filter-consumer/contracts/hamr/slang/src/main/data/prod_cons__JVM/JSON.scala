@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from Container_i.scala, Base_Types.scala, Producer_p_producer_DSC_TestVectors.scala, Filter_p_p_filterp_DSC_TestVectors.scala, DataContent.scala
+// This file is auto-generated from Container_i.scala, Base_Types.scala, Producer_p_producer_DSC_TestVectors.scala, Filter_p_p_filterp_DSC_TestVectors.scala, DataContent.scala, Aux_Types.scala
 
 package prod_cons__JVM
 

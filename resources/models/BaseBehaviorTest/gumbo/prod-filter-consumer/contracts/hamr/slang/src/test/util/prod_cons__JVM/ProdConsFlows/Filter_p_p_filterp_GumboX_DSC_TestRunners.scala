@@ -24,8 +24,8 @@ import org.sireum.Random.Impl.Xoshiro256
 
   override def next(): Filter_p_p_filterp_DSC_TestVector = {
     val api_d_event_in = ranLibd_event_in.nextOption_artEmpty()
-    val api_b_event_data_in = ranLibb_event_data_in.nextOption_ProdConsFlowsContainer_i()
-    val api_c_event_data_in = ranLibc_event_data_in.nextOption_ProdConsFlowsContainer_i()
+    val api_b_event_data_in = ranLibb_event_data_in.nextOptionProdConsFlowsContainer_i()
+    val api_c_event_data_in = ranLibc_event_data_in.nextOptionProdConsFlowsContainer_i()
     val api_a_data_in = ranLiba_data_in.nextProdConsFlowsContainer_i()
     return Filter_p_p_filterp_DSC_TestVector(
       api_d_event_in, api_b_event_data_in, api_c_event_data_in, api_a_data_in

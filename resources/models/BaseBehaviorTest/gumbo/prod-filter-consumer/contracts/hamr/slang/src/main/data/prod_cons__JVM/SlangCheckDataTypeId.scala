@@ -18,6 +18,8 @@ Filter_p_p_filterp_DSC_TestVectors.scala
 
 DataContent.scala
 
+Aux_Types.scala
+
 */
 
 @enum object _artDataContent_DataTypeId {
