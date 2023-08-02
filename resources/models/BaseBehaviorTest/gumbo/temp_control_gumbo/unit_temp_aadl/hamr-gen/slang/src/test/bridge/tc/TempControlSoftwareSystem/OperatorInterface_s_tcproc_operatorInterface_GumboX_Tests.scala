@@ -64,9 +64,9 @@ class OperatorInterface_s_tcproc_operatorInterface_GumboX_Tests extends Operator
             case Some(o) =>
 
               if (verbose) {
-                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with
-                            |    tempChanged = $o.api_tempChanged
-                            |    currentTemp = $o.api_currentTemp""".render)
+                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with:
+                            |  api_tempChanged = ${o.api_tempChanged.string}
+                            |  api_currentTemp = ${o.api_currentTemp.string}""".render)
               }
 
               testComputeCB(o.api_tempChanged, o.api_currentTemp) match {

@@ -45,8 +45,8 @@ class FanPeriodic_p_tcproc_fan_GumboX_Tests extends FanPeriodic_p_tcproc_fan_Gum
             case Some(o) =>
 
               if (verbose) {
-                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with
-                            |    fanCmd = $o.api_fanCmd""".render)
+                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with:
+                            |  api_fanCmd = ${o.api_fanCmd.string}""".render)
               }
 
               testComputeCB(o.api_fanCmd) match {

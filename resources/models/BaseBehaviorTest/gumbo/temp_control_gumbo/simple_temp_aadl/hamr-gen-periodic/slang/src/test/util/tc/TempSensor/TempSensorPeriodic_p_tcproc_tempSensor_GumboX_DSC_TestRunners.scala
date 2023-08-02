@@ -16,6 +16,8 @@ import org.sireum.Random.Impl.Xoshiro256
   extends Random.Gen.TestRunner[TempSensorPeriodic_p_tcproc_tempSensor_DSC_TestVector]
   with TempSensorPeriodic_p_tcproc_tempSensor_GumboX_TestHarness {
 
+  val verbose: B = F
+
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
 
   override def next(): TempSensorPeriodic_p_tcproc_tempSensor_DSC_TestVector = {

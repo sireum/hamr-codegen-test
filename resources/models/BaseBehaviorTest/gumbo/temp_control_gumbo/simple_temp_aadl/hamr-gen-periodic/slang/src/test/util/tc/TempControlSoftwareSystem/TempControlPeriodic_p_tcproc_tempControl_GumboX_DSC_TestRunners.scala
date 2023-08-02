@@ -16,6 +16,8 @@ import org.sireum.Random.Impl.Xoshiro256
   extends Random.Gen.TestRunner[TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector]
   with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
+  val verbose: B = F
+
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLibcurrentTemp: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLibfanAck: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
@@ -58,6 +60,8 @@ import org.sireum.Random.Impl.Xoshiro256
 @record class TempControlPeriodic_p_tcproc_tempControl_GumboX_DSC_TestRunnerwL
   extends Random.Gen.TestRunner[TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL]
   with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
+
+  val verbose: B = F
 
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLiblatestFanCmd: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))

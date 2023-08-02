@@ -68,11 +68,11 @@ class Filter_p_p_filterp_GumboX_Tests extends Filter_p_p_filterp_GumboX_TestHarn
             case Some(o) =>
 
               if (verbose) {
-                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with
-                            |    d_event_in = $o.api_d_event_in
-                            |    b_event_data_in = $o.api_b_event_data_in
-                            |    c_event_data_in = $o.api_c_event_data_in
-                            |    a_data_in = $o.api_a_data_in""".render)
+                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with:
+                            |  api_d_event_in = ${o.api_d_event_in.string}
+                            |  api_b_event_data_in = ${o.api_b_event_data_in.string}
+                            |  api_c_event_data_in = ${o.api_c_event_data_in.string}
+                            |  api_a_data_in = ${o.api_a_data_in.string}""".render)
               }
 
               testComputeCB(o.api_d_event_in, o.api_b_event_data_in, o.api_c_event_data_in, o.api_a_data_in) match {

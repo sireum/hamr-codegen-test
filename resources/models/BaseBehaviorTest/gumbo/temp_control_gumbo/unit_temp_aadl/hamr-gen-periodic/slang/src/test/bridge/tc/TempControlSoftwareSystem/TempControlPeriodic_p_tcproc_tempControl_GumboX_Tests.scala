@@ -82,10 +82,10 @@ class TempControlPeriodic_p_tcproc_tempControl_GumboX_Tests extends TempControlP
             case Some(o) =>
 
               if (verbose) {
-                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with
-                            |    currentTemp = $o.api_currentTemp
-                            |    fanAck = $o.api_fanAck
-                            |    setPoint = $o.api_setPoint""".render)
+                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with:
+                            |  api_currentTemp = ${o.api_currentTemp.string}
+                            |  api_fanAck = ${o.api_fanAck.string}
+                            |  api_setPoint = ${o.api_setPoint.string}""".render)
               }
 
               testComputeCB(o.api_currentTemp, o.api_fanAck, o.api_setPoint) match {
@@ -127,11 +127,11 @@ class TempControlPeriodic_p_tcproc_tempControl_GumboX_Tests extends TempControlP
             case Some(o) =>
 
               if (verbose) {
-                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with
-                            |    latestFanCmd = $o.In_latestFanCmd
-                            |    currentTemp = $o.api_currentTemp
-                            |    fanAck = $o.api_fanAck
-                            |    setPoint = $o.api_setPoint""".render)
+                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with:
+                            |  In_latestFanCmd = ${o.In_latestFanCmd.string}
+                            |  api_currentTemp = ${o.api_currentTemp.string}
+                            |  api_fanAck = ${o.api_fanAck.string}
+                            |  api_setPoint = ${o.api_setPoint.string}""".render)
               }
 
               testComputeCBwL(o.In_latestFanCmd, o.api_currentTemp, o.api_fanAck, o.api_setPoint) match {

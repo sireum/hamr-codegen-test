@@ -16,6 +16,8 @@ import org.sireum.Random.Impl.Xoshiro256
   extends Random.Gen.TestRunner[OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector]
   with OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_TestHarness {
 
+  val verbose: B = F
+
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLibcurrentTemp: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 

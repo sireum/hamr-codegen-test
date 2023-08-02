@@ -16,6 +16,8 @@ import org.sireum.Random.Impl.Xoshiro256
   extends Random.Gen.TestRunner[Producer_p_producer_DSC_TestVector]
   with Producer_p_producer_GumboX_TestHarness {
 
+  val verbose: B = F
+
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
 
   override def next(): Producer_p_producer_DSC_TestVector = {

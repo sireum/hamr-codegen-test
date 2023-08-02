@@ -62,8 +62,8 @@ class OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_Tests extends 
             case Some(o) =>
 
               if (verbose) {
-                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with
-                            |    currentTemp = $o.api_currentTemp""".render)
+                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with:
+                            |  api_currentTemp = ${o.api_currentTemp.string}""".render)
               }
 
               testComputeCB(o.api_currentTemp) match {
