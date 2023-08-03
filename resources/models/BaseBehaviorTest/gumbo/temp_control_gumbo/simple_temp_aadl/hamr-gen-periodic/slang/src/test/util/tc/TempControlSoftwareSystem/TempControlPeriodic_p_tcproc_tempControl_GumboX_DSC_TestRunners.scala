@@ -45,7 +45,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   override def test(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector): B = {
     BeforeEntrypoint()
-    val r: B = testComputeCB(o.api_currentTemp, o.api_fanAck, o.api_setPoint) match {
+    val r: B = testComputeCBV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
         tc.DSC_RecordUnsatPre.report(tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(o, T))
         T
@@ -92,7 +92,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   override def test(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL): B = {
     BeforeEntrypoint()
-    val r: B = testComputeCBwL(o.In_latestFanCmd, o.api_currentTemp, o.api_fanAck, o.api_setPoint) match {
+    val r: B = testComputeCBwLV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
         tc.DSC_RecordUnsatPre.report(tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(o, T))
         T

@@ -14,9 +14,9 @@ class Filter_p_p_filterp_GumboX_Tests extends Filter_p_p_filterp_GumboX_TestHarn
   // set failOnUnsatPreconditions to T if the unit tests should fail when either
   // SlangCheck is never able to satisfy a datatype's filter or the generated
   // test vectors are never able to satisfy an entry point's assume pre-condition
-  val failOnUnsatPreconditions: B = F
+  var failOnUnsatPreconditions: B = F
 
-  val verbose: B = F
+  var verbose: B = F
 
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLibd_event_in: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
@@ -24,7 +24,7 @@ class Filter_p_p_filterp_GumboX_Tests extends Filter_p_p_filterp_GumboX_TestHarn
   val ranLibc_event_data_in: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLiba_data_in: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
-  def getTestVector(): Option[Filter_p_p_filterp_DSC_TestVector] = {
+  def next(): Option[Filter_p_p_filterp_DSC_TestVector] = {
     try {
       val api_d_event_in = ranLibd_event_in.nextOption_artEmpty()
       val api_b_event_data_in = ranLibb_event_data_in.nextOptionProdConsFlowsContainer_i()
@@ -57,25 +57,32 @@ class Filter_p_p_filterp_GumboX_Tests extends Filter_p_p_filterp_GumboX_TestHarn
   }
 
   {
-
     for (i <- 0 to GumboXUtil.numTests) {
       this.registerTest(s"testComputeCB_$i") {
         var retry: B = T
 
         var j: Z = 0
         while (j < GumboXUtil.numTestVectorGenRetries && retry) {
-          getTestVector() match {
+          next() match {
             case Some(o) =>
 
-              if (verbose) {
-                println(st"""${if (j > 0) s"Retry $j: " else ""}Testing with:
-                            |  api_d_event_in = ${o.api_d_event_in.string}
-                            |  api_b_event_data_in = ${o.api_b_event_data_in.string}
-                            |  api_c_event_data_in = ${o.api_c_event_data_in.string}
-                            |  api_a_data_in = ${o.api_a_data_in.string}""".render)
+              if (verbose && j > 0) {
+                println(s"Retry $j:")
               }
 
-              testComputeCB(o.api_d_event_in, o.api_b_event_data_in, o.api_c_event_data_in, o.api_a_data_in) match {
+              val results = testComputeCBV(o)
+
+              if (verbose) {
+                val tq = "\"\"\""
+                println(st"""Replay Unit Test:
+                            |  test("Replay testComputeCB_$i") {
+                            |    val json = st${tq}${prod_cons__JVM.JSON.fromProdConsFlowsFilter_p_p_filterp_DSC_TestVector(o, T)}${tq}.render
+                            |    val testVector = prod_cons__JVM.JSON.toProdConsFlowsFilter_p_p_filterp_DSC_TestVector(json).left
+                            |    assert (testComputeCBV(testVector) == prod_cons__JVM.GumboXUtil.GumboXResult.$results)
+                            |  }""".render)
+              }
+
+              results match {
                 case GumboXResult.Pre_Condition_Unsat =>
                 case GumboXResult.Post_Condition_Fail =>
                   fail ("Post condition did not hold")

@@ -43,7 +43,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   override def test(o: OperatorInterface_s_tcproc_operatorInterface_DSC_TestVector): B = {
     BeforeEntrypoint()
-    val r: B = testComputeCB(o.api_tempChanged, o.api_currentTemp) match {
+    val r: B = testComputeCBV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
         tc.DSC_RecordUnsatPre.report(tc.JSON.fromTempControlSoftwareSystemOperatorInterface_s_tcproc_operatorInterface_DSC_TestVector(o, T))
         T

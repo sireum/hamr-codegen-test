@@ -14,6 +14,12 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
     */
   def testInitialiseCB(
       ): GumboXResult.Type = {
+
+    if (verbose) {
+      println(st"""Pre State Values:
+                  """.render)
+    }
+
     // [InvokeEntryPoint]: invoke the entry point test method
     testInitialise()
 
@@ -33,17 +39,18 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = prod_cons__JVM.ProdConsFlows.Producer_p_producer_GumboX.inititialize_IEP_Post(api_d_event_out, api_b_event_data_out, api_c_event_data_out, api_a_data_out)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
   }
 
   /** Contract-based test harness for the compute entry point
     */
   def testComputeCB(
       ): GumboXResult.Type = {
+
     // [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state
     //   producer does not have incoming ports or state variables
 
@@ -52,6 +59,11 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
 
     // [PutInPorts]: put values on the input ports
     //   producer does not have incoming ports
+
+    if (verbose) {
+      println(st"""Pre State Values:
+                  """.render)
+    }
 
     // [InvokeEntryPoint]: invoke the entry point test method
     testCompute()
@@ -72,10 +84,10 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = prod_cons__JVM.ProdConsFlows.Producer_p_producer_GumboX.compute_CEP_Post(api_d_event_out, api_b_event_data_out, api_c_event_data_out, api_a_data_out)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
   }
 }

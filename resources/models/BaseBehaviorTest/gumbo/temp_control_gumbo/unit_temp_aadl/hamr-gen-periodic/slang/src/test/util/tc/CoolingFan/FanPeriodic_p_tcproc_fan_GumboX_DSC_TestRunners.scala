@@ -41,7 +41,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   override def test(o: FanPeriodic_p_tcproc_fan_DSC_TestVector): B = {
     BeforeEntrypoint()
-    val r: B = testComputeCB(o.api_fanCmd) match {
+    val r: B = testComputeCBV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
         tc.DSC_RecordUnsatPre.report(tc.JSON.fromCoolingFanFanPeriodic_p_tcproc_fan_DSC_TestVector(o, T))
         T

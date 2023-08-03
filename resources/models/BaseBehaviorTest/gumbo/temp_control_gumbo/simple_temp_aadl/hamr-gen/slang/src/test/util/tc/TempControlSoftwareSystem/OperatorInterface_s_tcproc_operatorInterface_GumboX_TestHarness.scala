@@ -14,6 +14,12 @@ import tc.GumboXUtil.GumboXResult
     */
   def testInitialiseCB(
       ): GumboXResult.Type = {
+
+    if (verbose) {
+      println(st"""Pre State Values:
+                  """.render)
+    }
+
     // [InvokeEntryPoint]: invoke the entry point test method
     testInitialise()
 
@@ -27,11 +33,22 @@ import tc.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = tc.TempControlSoftwareSystem.OperatorInterface_s_tcproc_operatorInterface_GumboX.inititialize_IEP_Post(api_setPoint)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
+  }
+
+  def testComputeCBJ(json: String): GumboXResult.Type = {
+    tc.JSON.toTempControlSoftwareSystemOperatorInterface_s_tcproc_operatorInterface_DSC_TestVector(json) match {
+      case Either.Left(o) => return testComputeCBV(o)
+      case Either.Right(msg) => halt(msg.string)
+    }
+  }
+
+  def testComputeCBV(o: OperatorInterface_s_tcproc_operatorInterface_DSC_TestVector): GumboXResult.Type = {
+    return testComputeCB(o.api_tempChanged,o.api_currentTemp)
   }
 
   /** Contract-based test harness for the compute entry point
@@ -41,6 +58,7 @@ import tc.GumboXUtil.GumboXResult
   def testComputeCB(
       api_tempChanged: Option[art.Empty],
       api_currentTemp: TempSensor.Temperature_i): GumboXResult.Type = {
+
     // [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state
     //   operatorInterface does not have incoming ports or state variables
 
@@ -56,6 +74,12 @@ import tc.GumboXUtil.GumboXResult
     }
     put_currentTemp(api_currentTemp)
 
+    if (verbose) {
+      println(st"""Pre State Values:
+                  |  api_tempChanged = ${api_tempChanged.string}
+                  |  api_currentTemp = ${api_currentTemp.string}""".render)
+    }
+
     // [InvokeEntryPoint]: invoke the entry point test method
     testCompute()
 
@@ -69,10 +93,10 @@ import tc.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = tc.TempControlSoftwareSystem.OperatorInterface_s_tcproc_operatorInterface_GumboX.compute_CEP_Post(api_setPoint)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
   }
 }

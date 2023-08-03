@@ -14,6 +14,12 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
     */
   def testInitialiseCB(
       ): GumboXResult.Type = {
+
+    if (verbose) {
+      println(st"""Pre State Values:
+                  """.render)
+    }
+
     // [InvokeEntryPoint]: invoke the entry point test method
     testInitialise()
 
@@ -33,11 +39,22 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = prod_cons__JVM.ProdConsFlows.Filter_p_p_filterp_GumboX.inititialize_IEP_Post(api_h_event_out, api_f_event_data_out, api_g_event_data_out, api_e_data_out)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
+  }
+
+  def testComputeCBJ(json: String): GumboXResult.Type = {
+    prod_cons__JVM.JSON.toProdConsFlowsFilter_p_p_filterp_DSC_TestVector(json) match {
+      case Either.Left(o) => return testComputeCBV(o)
+      case Either.Right(msg) => halt(msg.string)
+    }
+  }
+
+  def testComputeCBV(o: Filter_p_p_filterp_DSC_TestVector): GumboXResult.Type = {
+    return testComputeCB(o.api_d_event_in,o.api_b_event_data_in,o.api_c_event_data_in,o.api_a_data_in)
   }
 
   /** Contract-based test harness for the compute entry point
@@ -51,6 +68,7 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
       api_b_event_data_in: Option[ProdConsFlows.Container_i],
       api_c_event_data_in: Option[ProdConsFlows.Container_i],
       api_a_data_in: ProdConsFlows.Container_i): GumboXResult.Type = {
+
     // [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state
     //   filterp does not have incoming ports or state variables
 
@@ -72,6 +90,14 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
     }
     put_a_data_in(api_a_data_in)
 
+    if (verbose) {
+      println(st"""Pre State Values:
+                  |  api_d_event_in = ${api_d_event_in.string}
+                  |  api_b_event_data_in = ${api_b_event_data_in.string}
+                  |  api_c_event_data_in = ${api_c_event_data_in.string}
+                  |  api_a_data_in = ${api_a_data_in.string}""".render)
+    }
+
     // [InvokeEntryPoint]: invoke the entry point test method
     testCompute()
 
@@ -91,10 +117,10 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = prod_cons__JVM.ProdConsFlows.Filter_p_p_filterp_GumboX.compute_CEP_Post(api_b_event_data_in, api_a_data_in, api_h_event_out, api_f_event_data_out, api_g_event_data_out, api_e_data_out)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
   }
 }

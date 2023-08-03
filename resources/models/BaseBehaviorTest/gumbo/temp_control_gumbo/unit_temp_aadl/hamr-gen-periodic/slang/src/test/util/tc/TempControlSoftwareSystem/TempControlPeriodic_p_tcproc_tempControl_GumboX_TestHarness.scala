@@ -14,6 +14,12 @@ import tc.GumboXUtil.GumboXResult
     */
   def testInitialiseCB(
       ): GumboXResult.Type = {
+
+    if (verbose) {
+      println(st"""Pre State Values:
+                  """.render)
+    }
+
     // [InvokeEntryPoint]: invoke the entry point test method
     testInitialise()
 
@@ -29,11 +35,22 @@ import tc.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = tc.TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl_GumboX.inititialize_IEP_Post(latestFanCmd, api_fanCmd)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
+  }
+
+  def testComputeCBJ(json: String): GumboXResult.Type = {
+    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(json) match {
+      case Either.Left(o) => return testComputeCBV(o)
+      case Either.Right(msg) => halt(msg.string)
+    }
+  }
+
+  def testComputeCBV(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector): GumboXResult.Type = {
+    return testComputeCB(o.api_currentTemp,o.api_fanAck,o.api_setPoint)
   }
 
   /** Contract-based test harness for the compute entry point
@@ -45,6 +62,7 @@ import tc.GumboXUtil.GumboXResult
       api_currentTemp: TempSensor.Temperature_i,
       api_fanAck: CoolingFan.FanAck.Type,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i): GumboXResult.Type = {
+
     // [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state
     val In_latestFanCmd: CoolingFan.FanCmd.Type = tc.TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl.latestFanCmd
 
@@ -59,6 +77,14 @@ import tc.GumboXUtil.GumboXResult
     put_fanAck(api_fanAck)
     put_setPoint(api_setPoint)
 
+    if (verbose) {
+      println(st"""Pre State Values:
+                  |  In_latestFanCmd = ${In_latestFanCmd.string}
+                  |  api_currentTemp = ${api_currentTemp.string}
+                  |  api_fanAck = ${api_fanAck.string}
+                  |  api_setPoint = ${api_setPoint.string}""".render)
+    }
+
     // [InvokeEntryPoint]: invoke the entry point test method
     testCompute()
 
@@ -74,11 +100,22 @@ import tc.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = tc.TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl_GumboX.compute_CEP_Post(In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
+  }
+
+  def testComputeCBwLJ(json: String): GumboXResult.Type = {
+    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(json) match {
+      case Either.Left(o) => return testComputeCBwLV(o)
+      case Either.Right(msg) => halt(msg.string)
+    }
+  }
+
+  def testComputeCBwLV(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL): GumboXResult.Type = {
+    return testComputeCBwL(o.In_latestFanCmd,o.api_currentTemp,o.api_fanAck,o.api_setPoint)
   }
 
   /** Contract-based test harness for the compute entry point
@@ -92,6 +129,7 @@ import tc.GumboXUtil.GumboXResult
       api_currentTemp: TempSensor.Temperature_i,
       api_fanAck: CoolingFan.FanAck.Type,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i): GumboXResult.Type = {
+
     // [CheckPre]: check/filter based on pre-condition.
     val CEP_Pre_Result: B = tc.TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl_GumboX.compute_CEP_Pre (In_latestFanCmd, api_currentTemp, api_fanAck, api_setPoint)
     if (!CEP_Pre_Result) {
@@ -106,6 +144,14 @@ import tc.GumboXUtil.GumboXResult
     // [SetInStateVars]: set the pre-state values of state variables
     tc.TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl.latestFanCmd = In_latestFanCmd
 
+    if (verbose) {
+      println(st"""Pre State Values:
+                  |  In_latestFanCmd = ${In_latestFanCmd.string}
+                  |  api_currentTemp = ${api_currentTemp.string}
+                  |  api_fanAck = ${api_fanAck.string}
+                  |  api_setPoint = ${api_setPoint.string}""".render)
+    }
+
     // [InvokeEntryPoint]: invoke the entry point test method
     testCompute()
 
@@ -121,10 +167,10 @@ import tc.GumboXUtil.GumboXResult
 
     // [CheckPost]: invoke the oracle function
     val postResult = tc.TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl_GumboX.compute_CEP_Post(In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
-    if (!postResult) {
-      return GumboXResult.Post_Condition_Fail
-    }
+    val result: GumboXResult.Type =
+      if (!postResult) GumboXResult.Post_Condition_Fail
+      else GumboXResult.Post_Condition_Pass
 
-    return GumboXResult.Post_Condition_Pass
+    return result
   }
 }

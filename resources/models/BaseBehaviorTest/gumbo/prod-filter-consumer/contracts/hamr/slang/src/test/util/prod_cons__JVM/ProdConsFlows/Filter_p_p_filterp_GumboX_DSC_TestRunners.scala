@@ -47,7 +47,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   override def test(o: Filter_p_p_filterp_DSC_TestVector): B = {
     BeforeEntrypoint()
-    val r: B = testComputeCB(o.api_d_event_in, o.api_b_event_data_in, o.api_c_event_data_in, o.api_a_data_in) match {
+    val r: B = testComputeCBV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
         prod_cons__JVM.DSC_RecordUnsatPre.report(prod_cons__JVM.JSON.fromProdConsFlowsFilter_p_p_filterp_DSC_TestVector(o, T))
         T
