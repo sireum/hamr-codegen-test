@@ -134,7 +134,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
     val reporter = Reporter.create
 
-    val results: CodeGenResults = CodeGen.codeGen(model, testOptions, ArsitPlugin.defaultPlugins(), reporter,
+    val results: CodeGenResults = CodeGen.codeGen(model, testOptions, ArsitPlugin.gumboEnhancedPlugins(), reporter,
       (SireumSlangTranspilersCOption, Reporter) => {
         0
       },
