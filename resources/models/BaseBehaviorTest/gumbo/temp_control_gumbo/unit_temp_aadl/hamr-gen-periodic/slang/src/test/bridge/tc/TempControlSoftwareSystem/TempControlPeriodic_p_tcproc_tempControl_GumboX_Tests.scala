@@ -24,13 +24,13 @@ class TempControlPeriodic_p_tcproc_tempControl_GumboX_Tests extends TempControlP
   val ranLibsetPoint: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLiblatestFanCmd: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
-  def next(): Option[TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector] = {
+  def next(): Option[TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P] = {
     try {
       val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
       val api_fanAck = ranLibfanAck.nextCoolingFanFanAckType()
       val api_setPoint = ranLibsetPoint.nextTempControlSoftwareSystemSetPoint_i()
 
-      return Some(TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(api_currentTemp,api_fanAck,api_setPoint))
+      return Some(TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(api_currentTemp,api_fanAck,api_setPoint))
     } catch {
       case e: AssertionError =>
        // SlangCheck was unable to satisfy a datatype's filter
@@ -38,14 +38,14 @@ class TempControlPeriodic_p_tcproc_tempControl_GumboX_Tests extends TempControlP
     }
   }
 
-  def nextwL(): Option[TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL] = {
+  def nextwL(): Option[TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS] = {
     try {
       val In_latestFanCmd = ranLiblatestFanCmd.nextCoolingFanFanCmdType()
       val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
       val api_fanAck = ranLibfanAck.nextCoolingFanFanAckType()
       val api_setPoint = ranLibsetPoint.nextTempControlSoftwareSystemSetPoint_i()
 
-      return Some(TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(In_latestFanCmd,api_currentTemp,api_fanAck,api_setPoint))
+      return Some(TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(In_latestFanCmd,api_currentTemp,api_fanAck,api_setPoint))
     } catch {
       case e: AssertionError =>
        // SlangCheck was unable to satisfy a datatype's filter
@@ -90,8 +90,8 @@ class TempControlPeriodic_p_tcproc_tempControl_GumboX_Tests extends TempControlP
                 val tq = "\"\"\""
                 println(st"""Replay Unit Test:
                             |  test("Replay testComputeCB_$i") {
-                            |    val json = st${tq}${tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(o, T)}${tq}.render
-                            |    val testVector = tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(json).left
+                            |    val json = st${tq}${tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(o, T)}${tq}.render
+                            |    val testVector = tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(json).left
                             |    assert (testComputeCBV(testVector) == tc.GumboXUtil.GumboXResult.$results)
                             |  }""".render)
               }
@@ -143,8 +143,8 @@ class TempControlPeriodic_p_tcproc_tempControl_GumboX_Tests extends TempControlP
                 val tq = "\"\"\""
                 println(st"""Replay Unit Test:
                             |  test("Replay testComputeCBwL_$i") {
-                            |    val json = st${tq}${tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(o, T)}${tq}.render
-                            |    val testVector = tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(json).left
+                            |    val json = st${tq}${tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(o, T)}${tq}.render
+                            |    val testVector = tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(json).left
                             |    assert (testComputeCBwLV(testVector) == tc.GumboXUtil.GumboXResult.$results)
                             |  }""".render)
               }

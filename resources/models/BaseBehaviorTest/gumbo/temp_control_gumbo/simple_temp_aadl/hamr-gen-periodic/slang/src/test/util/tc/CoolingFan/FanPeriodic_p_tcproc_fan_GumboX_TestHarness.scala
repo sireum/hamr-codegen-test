@@ -11,13 +11,13 @@ import tc.GumboXUtil.GumboXResult
   def verbose: B
 
   def testComputeCBJ(json: String): GumboXResult.Type = {
-    tc.JSON.toCoolingFanFanPeriodic_p_tcproc_fan_DSC_TestVector(json) match {
+    tc.JSON.toCoolingFanFanPeriodic_p_tcproc_fan_PreState_Container(json) match {
       case Either.Left(o) => return testComputeCBV(o)
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  def testComputeCBV(o: FanPeriodic_p_tcproc_fan_DSC_TestVector): GumboXResult.Type = {
+  def testComputeCBV(o: FanPeriodic_p_tcproc_fan_PreState_Container): GumboXResult.Type = {
     return testComputeCB(o.api_fanCmd)
   }
 

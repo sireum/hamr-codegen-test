@@ -79,22 +79,22 @@ import bc._
 
   // setter for in DataPort
   def put_currentTemp(value : BuildingControl.Temperature_impl): Unit = {
-    ArtNative.insertInPortValue(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.operational_api.currentTemp_Id, BuildingControl.Temperature_impl_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.operational_api.currentTemp_Id, BuildingControl.Temperature_impl_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_fanAck(value : BuildingControl.FanAck.Type): Unit = {
-    ArtNative.insertInPortValue(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.operational_api.fanAck_Id, BuildingControl.FanAck_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.operational_api.fanAck_Id, BuildingControl.FanAck_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_setPoint(value : BuildingControl.SetPoint_impl): Unit = {
-    ArtNative.insertInPortValue(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.operational_api.setPoint_Id, BuildingControl.SetPoint_impl_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.operational_api.setPoint_Id, BuildingControl.SetPoint_impl_Payload(value))
   }
 
   // setter for in EventPort
   def put_tempChanged(): Unit = {
-    ArtNative.insertInPortValue(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.operational_api.tempChanged_Id, Empty())
+    ArtNative.insertInInfrastructurePort(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.operational_api.tempChanged_Id, Empty())
   }
 
   // getter for out EventDataPort
@@ -109,7 +109,7 @@ import bc._
 
   // payload getter for out EventDataPort
   def get_fanCmd_payload(): Option[BuildingControl.FanCmd_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.initialization_api.fanCmd_Id).asInstanceOf[Option[BuildingControl.FanCmd_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.BuildingControlDemo_i_Instance_tcp_tempControl.initialization_api.fanCmd_Id).asInstanceOf[Option[BuildingControl.FanCmd_Payload]]
   }
 
 }

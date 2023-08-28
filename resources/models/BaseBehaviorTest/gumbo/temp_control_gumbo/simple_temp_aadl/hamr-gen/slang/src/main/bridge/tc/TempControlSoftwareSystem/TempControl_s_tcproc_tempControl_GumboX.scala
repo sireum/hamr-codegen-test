@@ -82,6 +82,17 @@ object TempControl_s_tcproc_tempControl_GumboX {
      // IEP-Guar: Initialize Entrypoint contract for tempControl
      initialize_IEP_Guar(currentFanState, currentSetPoint, latestTemp, api_fanCmd))
 
+  /** IEP-Post: Initialize Entrypoint Post-Condition via container
+    *
+    * @param post Container holding the value of incoming ports and the pre-state values of state variables
+    */
+  @strictpure def inititialize_IEP_Post_Container (post: TempControl_s_tcproc_tempControl_PostState_Container_PS): B =
+    inititialize_IEP_Post (
+      currentFanState = post.currentFanState,
+      currentSetPoint = post.currentSetPoint,
+      latestTemp = post.latestTemp,
+      api_fanCmd = post.api_fanCmd)
+
   /** Compute Entrypoint Contract
     *
     * assumes Test
@@ -127,6 +138,20 @@ object TempControl_s_tcproc_tempControl_GumboX {
 
      // CEP-Assm: assume clauses of tempControl's compute entrypoint
      compute_CEP_T_Assm ())
+
+  /** CEP-Pre: Compute Entrypoint Pre-Condition for tempControl via container
+    *
+    * @param pre Container holding the value of incoming ports and the pre-state values of state variables
+    */
+  @strictpure def compute_CEP_Pre_Container(pre: TempControl_s_tcproc_tempControl_PreState_Container_PS): B =
+    compute_CEP_Pre(
+      In_currentFanState = pre.In_currentFanState,
+      In_currentSetPoint = pre.In_currentSetPoint,
+      In_latestTemp = pre.In_latestTemp,
+      api_tempChanged = pre.api_tempChanged,
+      api_fanAck = pre.api_fanAck,
+      api_setPoint = pre.api_setPoint,
+      api_currentTemp = pre.api_currentTemp)
 
   /** Compute Entrypoint Contract
     *
@@ -239,4 +264,21 @@ object TempControl_s_tcproc_tempControl_GumboX {
 
      // CEP-Guar: guarantee clauses of tempControl's compute entrypoint
      compute_CEP_T_Guar (In_currentFanState, currentFanState, currentSetPoint, latestTemp, api_fanCmd))
+
+  /** CEP-Post: Compute Entrypoint Post-Condition for tempControl via containers
+    *
+    * @param pre Container holding the values of incoming ports and the pre-state values of state variables
+    * @param post Container holding the values of outgoing ports and the post-state values of state variables
+    */
+  @strictpure def compute_CEP_Post_Container(
+      pre: TempControl_s_tcproc_tempControl_PreState_Container_PS,
+      post: TempControl_s_tcproc_tempControl_PostState_Container_PS): B =
+    compute_CEP_Post(
+      In_currentFanState = pre.In_currentFanState,
+      In_currentSetPoint = pre.In_currentSetPoint,
+      In_latestTemp = pre.In_latestTemp,
+      currentFanState = post.currentFanState,
+      currentSetPoint = post.currentSetPoint,
+      latestTemp = post.latestTemp,
+      api_fanCmd = post.api_fanCmd)
 }

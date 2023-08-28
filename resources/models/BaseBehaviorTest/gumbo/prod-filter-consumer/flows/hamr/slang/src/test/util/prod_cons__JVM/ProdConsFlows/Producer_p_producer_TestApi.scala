@@ -71,7 +71,7 @@ import prod_cons__JVM._
 
   // payload getter for out EventDataPort
   def get_a_out_payload(): Option[Base_Types.Float_32_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_producer.initialization_api.a_out_Id).asInstanceOf[Option[Base_Types.Float_32_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_producer.initialization_api.a_out_Id).asInstanceOf[Option[Base_Types.Float_32_Payload]]
   }
 
   // getter for out EventDataPort
@@ -86,7 +86,7 @@ import prod_cons__JVM._
 
   // payload getter for out EventDataPort
   def get_b_out_payload(): Option[Base_Types.Float_32_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_producer.initialization_api.b_out_Id).asInstanceOf[Option[Base_Types.Float_32_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_producer.initialization_api.b_out_Id).asInstanceOf[Option[Base_Types.Float_32_Payload]]
   }
 
 }

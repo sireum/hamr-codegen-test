@@ -48,12 +48,12 @@ import prod_cons__JVM._
 
   // setter for in EventDataPort
   def put_a_in(value : Base_Types.Float_32): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_consumer.operational_api.a_in_Id, Base_Types.Float_32_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.a_in_Id, Base_Types.Float_32_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_b_in(value : Base_Types.Float_32): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_consumer.operational_api.b_in_Id, Base_Types.Float_32_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.b_in_Id, Base_Types.Float_32_Payload(value))
   }
 
 }

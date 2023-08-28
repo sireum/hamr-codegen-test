@@ -21,11 +21,11 @@ class FanPeriodic_p_tcproc_fan_GumboX_Tests extends FanPeriodic_p_tcproc_fan_Gum
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLibfanCmd: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
-  def next(): Option[FanPeriodic_p_tcproc_fan_DSC_TestVector] = {
+  def next(): Option[FanPeriodic_p_tcproc_fan_PreState_Container_P] = {
     try {
       val api_fanCmd = ranLibfanCmd.nextCoolingFanFanCmdType()
 
-      return Some(FanPeriodic_p_tcproc_fan_DSC_TestVector(api_fanCmd))
+      return Some(FanPeriodic_p_tcproc_fan_PreState_Container_P(api_fanCmd))
     } catch {
       case e: AssertionError =>
        // SlangCheck was unable to satisfy a datatype's filter
@@ -53,8 +53,8 @@ class FanPeriodic_p_tcproc_fan_GumboX_Tests extends FanPeriodic_p_tcproc_fan_Gum
                 val tq = "\"\"\""
                 println(st"""Replay Unit Test:
                             |  test("Replay testComputeCB_$i") {
-                            |    val json = st${tq}${tc.JSON.fromCoolingFanFanPeriodic_p_tcproc_fan_DSC_TestVector(o, T)}${tq}.render
-                            |    val testVector = tc.JSON.toCoolingFanFanPeriodic_p_tcproc_fan_DSC_TestVector(json).left
+                            |    val json = st${tq}${tc.JSON.fromCoolingFanFanPeriodic_p_tcproc_fan_PreState_Container_P(o, T)}${tq}.render
+                            |    val testVector = tc.JSON.toCoolingFanFanPeriodic_p_tcproc_fan_PreState_Container_P(json).left
                             |    assert (testComputeCBV(testVector) == tc.GumboXUtil.GumboXResult.$results)
                             |  }""".render)
               }

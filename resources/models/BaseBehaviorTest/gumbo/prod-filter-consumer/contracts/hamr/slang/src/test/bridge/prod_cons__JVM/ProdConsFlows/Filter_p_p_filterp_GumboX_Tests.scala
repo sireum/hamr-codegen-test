@@ -24,14 +24,14 @@ class Filter_p_p_filterp_GumboX_Tests extends Filter_p_p_filterp_GumboX_TestHarn
   val ranLibc_event_data_in: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLiba_data_in: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
-  def next(): Option[Filter_p_p_filterp_DSC_TestVector] = {
+  def next(): Option[Filter_p_p_filterp_PreState_Container_P] = {
     try {
       val api_d_event_in = ranLibd_event_in.nextOption_artEmpty()
       val api_b_event_data_in = ranLibb_event_data_in.nextOptionProdConsFlowsContainer_i()
       val api_c_event_data_in = ranLibc_event_data_in.nextOptionProdConsFlowsContainer_i()
       val api_a_data_in = ranLiba_data_in.nextProdConsFlowsContainer_i()
 
-      return Some(Filter_p_p_filterp_DSC_TestVector(api_d_event_in,api_b_event_data_in,api_c_event_data_in,api_a_data_in))
+      return Some(Filter_p_p_filterp_PreState_Container_P(api_d_event_in,api_b_event_data_in,api_c_event_data_in,api_a_data_in))
     } catch {
       case e: AssertionError =>
        // SlangCheck was unable to satisfy a datatype's filter
@@ -76,8 +76,8 @@ class Filter_p_p_filterp_GumboX_Tests extends Filter_p_p_filterp_GumboX_TestHarn
                 val tq = "\"\"\""
                 println(st"""Replay Unit Test:
                             |  test("Replay testComputeCB_$i") {
-                            |    val json = st${tq}${prod_cons__JVM.JSON.fromProdConsFlowsFilter_p_p_filterp_DSC_TestVector(o, T)}${tq}.render
-                            |    val testVector = prod_cons__JVM.JSON.toProdConsFlowsFilter_p_p_filterp_DSC_TestVector(json).left
+                            |    val json = st${tq}${prod_cons__JVM.JSON.fromProdConsFlowsFilter_p_p_filterp_PreState_Container_P(o, T)}${tq}.render
+                            |    val testVector = prod_cons__JVM.JSON.toProdConsFlowsFilter_p_p_filterp_PreState_Container_P(json).left
                             |    assert (testComputeCBV(testVector) == prod_cons__JVM.GumboXUtil.GumboXResult.$results)
                             |  }""".render)
               }

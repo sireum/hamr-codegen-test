@@ -20,10 +20,10 @@ class TempSensor_i_tcproc_tempSensor_GumboX_Tests extends TempSensor_i_tcproc_te
 
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
 
-  def next(): Option[TempSensor_i_tcproc_tempSensor_DSC_TestVector] = {
+  def next(): Option[TempSensor_i_tcproc_tempSensor_PreState_Container_P] = {
     try {
 
-      return Some(TempSensor_i_tcproc_tempSensor_DSC_TestVector())
+      return Some(TempSensor_i_tcproc_tempSensor_PreState_Container_P())
     } catch {
       case e: AssertionError =>
        // SlangCheck was unable to satisfy a datatype's filter

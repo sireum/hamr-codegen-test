@@ -41,13 +41,13 @@ import tc.GumboXUtil.GumboXResult
   }
 
   def testComputeCBJ(json: String): GumboXResult.Type = {
-    tc.JSON.toTempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector(json) match {
+    tc.JSON.toTempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container(json) match {
       case Either.Left(o) => return testComputeCBV(o)
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  def testComputeCBV(o: OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector): GumboXResult.Type = {
+  def testComputeCBV(o: OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container): GumboXResult.Type = {
     return testComputeCB(o.api_currentTemp)
   }
 

@@ -20,10 +20,10 @@ class Producer_p_producer_GumboX_Tests extends Producer_p_producer_GumboX_TestHa
 
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
 
-  def next(): Option[Producer_p_producer_DSC_TestVector] = {
+  def next(): Option[Producer_p_producer_PreState_Container_P] = {
     try {
 
-      return Some(Producer_p_producer_DSC_TestVector())
+      return Some(Producer_p_producer_PreState_Container_P())
     } catch {
       case e: AssertionError =>
        // SlangCheck was unable to satisfy a datatype's filter

@@ -87,7 +87,7 @@ import prod_cons__JVM._
 
   // payload getter for out DataPort
   def get_a_data_out_payload(): Option[ProdConsFlows.Container_i_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_producer.initialization_api.a_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_producer.initialization_api.a_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
   }
 
   // getter for out EventDataPort
@@ -102,7 +102,7 @@ import prod_cons__JVM._
 
   // payload getter for out EventDataPort
   def get_b_event_data_out_payload(): Option[ProdConsFlows.Container_i_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_producer.initialization_api.b_event_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_producer.initialization_api.b_event_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
   }
 
   // getter for out EventDataPort
@@ -117,7 +117,7 @@ import prod_cons__JVM._
 
   // payload getter for out EventDataPort
   def get_c_event_data_out_payload(): Option[ProdConsFlows.Container_i_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_producer.initialization_api.c_event_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_producer.initialization_api.c_event_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
   }
 
   // getter for out EventPort
@@ -132,7 +132,7 @@ import prod_cons__JVM._
 
   // payload getter for out EventPort
   def get_d_event_out_payload(): Option[Empty] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_producer.initialization_api.d_event_out_Id).asInstanceOf[Option[Empty]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_producer.initialization_api.d_event_out_Id).asInstanceOf[Option[Empty]]
   }
 
 }

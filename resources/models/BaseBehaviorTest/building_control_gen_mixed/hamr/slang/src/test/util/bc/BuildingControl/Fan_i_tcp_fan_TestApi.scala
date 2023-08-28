@@ -62,7 +62,7 @@ import bc._
 
   // setter for in EventDataPort
   def put_fanCmd(value : BuildingControl.FanCmd.Type): Unit = {
-    ArtNative.insertInPortValue(Arch.BuildingControlDemo_i_Instance_tcp_fan.operational_api.fanCmd_Id, BuildingControl.FanCmd_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.BuildingControlDemo_i_Instance_tcp_fan.operational_api.fanCmd_Id, BuildingControl.FanCmd_Payload(value))
   }
 
   // getter for out EventDataPort
@@ -77,7 +77,7 @@ import bc._
 
   // payload getter for out EventDataPort
   def get_fanAck_payload(): Option[BuildingControl.FanAck_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.BuildingControlDemo_i_Instance_tcp_fan.initialization_api.fanAck_Id).asInstanceOf[Option[BuildingControl.FanAck_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.BuildingControlDemo_i_Instance_tcp_fan.initialization_api.fanAck_Id).asInstanceOf[Option[BuildingControl.FanAck_Payload]]
   }
 
 }

@@ -47,14 +47,14 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
   }
 
   def testComputeCBJ(json: String): GumboXResult.Type = {
-    prod_cons__JVM.JSON.toProdConsFlowsFilter_p_p_filterp_DSC_TestVector(json) match {
+    prod_cons__JVM.JSON.toProdConsFlowsFilter_p_p_filterp_PreState_Container(json) match {
       case Either.Left(o) => return testComputeCBV(o)
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  def testComputeCBV(o: Filter_p_p_filterp_DSC_TestVector): GumboXResult.Type = {
-    return testComputeCB(o.api_d_event_in,o.api_b_event_data_in,o.api_c_event_data_in,o.api_a_data_in)
+  def testComputeCBV(o: Filter_p_p_filterp_PreState_Container): GumboXResult.Type = {
+    return testComputeCB(o.api_d_event_in, o.api_b_event_data_in, o.api_c_event_data_in, o.api_a_data_in)
   }
 
   /** Contract-based test harness for the compute entry point

@@ -13,34 +13,34 @@ import org.sireum.Random.Impl.Xoshiro256
 // Distribute SlangCheck test runners
 
 @record class TempSensor_i_tcproc_tempSensor_GumboX_DSC_TestRunner
-  extends Random.Gen.TestRunner[TempSensor_i_tcproc_tempSensor_DSC_TestVector]
+  extends Random.Gen.TestRunner[TempSensor_i_tcproc_tempSensor_PreState_Container_P]
   with TempSensor_i_tcproc_tempSensor_GumboX_TestHarness {
 
   val verbose: B = F
 
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
 
-  override def next(): TempSensor_i_tcproc_tempSensor_DSC_TestVector = {
-    return TempSensor_i_tcproc_tempSensor_DSC_TestVector(
+  override def next(): TempSensor_i_tcproc_tempSensor_PreState_Container_P = {
+    return TempSensor_i_tcproc_tempSensor_PreState_Container_P(
     )
   }
 
-  override def toCompactJson(o: TempSensor_i_tcproc_tempSensor_DSC_TestVector): String = {
-    return TempControlSimpleTemp.JSON.fromTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(o, T)
+  override def toCompactJson(o: TempSensor_i_tcproc_tempSensor_PreState_Container_P): String = {
+    return TempControlSimpleTemp.JSON.fromTempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(o, T)
   }
 
-  override def fromJson(json: String): TempSensor_i_tcproc_tempSensor_DSC_TestVector = {
-    TempControlSimpleTemp.JSON.toTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(json) match {
+  override def fromJson(json: String): TempSensor_i_tcproc_tempSensor_PreState_Container_P = {
+    TempControlSimpleTemp.JSON.toTempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(json) match {
       case Either.Left(o) => return o
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  override def test(o: TempSensor_i_tcproc_tempSensor_DSC_TestVector): B = {
+  override def test(o: TempSensor_i_tcproc_tempSensor_PreState_Container_P): B = {
     BeforeEntrypoint()
     val r: B = testComputeCB() match {
       case GumboXResult.Pre_Condition_Unsat =>
-        TempControlSimpleTemp.DSC_RecordUnsatPre.report(TempControlSimpleTemp.JSON.fromTempSensorTempSensor_i_tcproc_tempSensor_DSC_TestVector(o, T))
+        TempControlSimpleTemp.DSC_RecordUnsatPre.report(TempControlSimpleTemp.JSON.fromTempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(o, T))
         T
       case GumboXResult.Post_Condition_Fail => F
       case GumboXResult.Post_Condition_Pass => T

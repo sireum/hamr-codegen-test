@@ -106,22 +106,22 @@ import prod_cons__JVM._
 
   // setter for in DataPort
   def put_a_data_in(value : ProdConsFlows.Container_i): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_filterp.operational_api.a_data_in_Id, ProdConsFlows.Container_i_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_filterp.operational_api.a_data_in_Id, ProdConsFlows.Container_i_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_b_event_data_in(value : ProdConsFlows.Container_i): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_filterp.operational_api.b_event_data_in_Id, ProdConsFlows.Container_i_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_filterp.operational_api.b_event_data_in_Id, ProdConsFlows.Container_i_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_c_event_data_in(value : ProdConsFlows.Container_i): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_filterp.operational_api.c_event_data_in_Id, ProdConsFlows.Container_i_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_filterp.operational_api.c_event_data_in_Id, ProdConsFlows.Container_i_Payload(value))
   }
 
   // setter for in EventPort
   def put_d_event_in(): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_filterp.operational_api.d_event_in_Id, Empty())
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_filterp.operational_api.d_event_in_Id, Empty())
   }
 
   // getter for out DataPort
@@ -136,7 +136,7 @@ import prod_cons__JVM._
 
   // payload getter for out DataPort
   def get_e_data_out_payload(): Option[ProdConsFlows.Container_i_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_filterp.initialization_api.e_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_filterp.initialization_api.e_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
   }
 
   // getter for out EventDataPort
@@ -151,7 +151,7 @@ import prod_cons__JVM._
 
   // payload getter for out EventDataPort
   def get_f_event_data_out_payload(): Option[ProdConsFlows.Container_i_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_filterp.initialization_api.f_event_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_filterp.initialization_api.f_event_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
   }
 
   // getter for out EventDataPort
@@ -166,7 +166,7 @@ import prod_cons__JVM._
 
   // payload getter for out EventDataPort
   def get_g_event_data_out_payload(): Option[ProdConsFlows.Container_i_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_filterp.initialization_api.g_event_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_filterp.initialization_api.g_event_data_out_Id).asInstanceOf[Option[ProdConsFlows.Container_i_Payload]]
   }
 
   // getter for out EventPort
@@ -181,7 +181,7 @@ import prod_cons__JVM._
 
   // payload getter for out EventPort
   def get_h_event_out_payload(): Option[Empty] = {
-    return ArtNative.observeOutPortValue(Arch.s_i_Instance_p_filterp.initialization_api.h_event_out_Id).asInstanceOf[Option[Empty]]
+    return ArtNative.observeOutInfrastructurePort(Arch.s_i_Instance_p_filterp.initialization_api.h_event_out_Id).asInstanceOf[Option[Empty]]
   }
 
 }

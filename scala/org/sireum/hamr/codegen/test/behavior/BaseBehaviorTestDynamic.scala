@@ -8,6 +8,8 @@ class BaseBehaviorTestDynamic extends CodegenBehaviorTest {
 
   override def disablePhantom: B = super.disablePhantom || F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
+  override def justRegenerate: B = super.justRegenerate || F
+
   override def filter: B = super.filter || F
 
   override def filters: ISZ[String] = ISZ("consumer-contracts")

@@ -26,8 +26,10 @@ val sireum = Os.path(Os.env("SIREUM_HOME").get) / "bin" / (if (Os.isWin) "sireum
 
 val files: ISZ[String] = ISZ("../src/main/data/prod_cons__JVM/ProdConsFlows/Container_i.scala",
                              "../src/main/data/prod_cons__JVM/Base_Types.scala",
-                             "../src/main/data/prod_cons__JVM/ProdConsFlows/Producer_p_producer_DSC_TestVectors.scala",
-                             "../src/main/data/prod_cons__JVM/ProdConsFlows/Filter_p_p_filterp_DSC_TestVectors.scala",
+                             "../src/main/data/prod_cons__JVM/ProdConsFlows/Producer_p_producer__Containers.scala",
+                             "../src/main/data/prod_cons__JVM/ProdConsFlows/Filter_p_p_filterp__Containers.scala",
+                             "../src/main/data/prod_cons__JVM/ProdConsFlows/Filter_s_p_filters__Containers.scala",
+                             "../src/main/data/prod_cons__JVM/ProdConsFlows/Consumer_p_consumer__Containers.scala",
                              "../src/main/art/art/DataContent.scala",
                              "../src/main/data/prod_cons__JVM/Aux_Types.scala")
 

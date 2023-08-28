@@ -13,7 +13,7 @@ import org.sireum.Random.Impl.Xoshiro256
 // Distribute SlangCheck test runners
 
 @record class TempControlPeriodic_p_tcproc_tempControl_GumboX_DSC_TestRunner
-  extends Random.Gen.TestRunner[TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector]
+  extends Random.Gen.TestRunner[TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P]
   with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
   val verbose: B = F
@@ -23,31 +23,31 @@ import org.sireum.Random.Impl.Xoshiro256
   val ranLibfanAck: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLibsetPoint: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
-  override def next(): TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector = {
+  override def next(): TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P = {
     val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
     val api_fanAck = ranLibfanAck.nextCoolingFanFanAckType()
     val api_setPoint = ranLibsetPoint.nextTempControlSoftwareSystemSetPoint_i()
-    return TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(
+    return TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(
       api_currentTemp, api_fanAck, api_setPoint
     )
   }
 
-  override def toCompactJson(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector): String = {
-    return tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(o, T)
+  override def toCompactJson(o: TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P): String = {
+    return tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(o, T)
   }
 
-  override def fromJson(json: String): TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector = {
-    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(json) match {
+  override def fromJson(json: String): TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P = {
+    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(json) match {
       case Either.Left(o) => return o
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  override def test(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector): B = {
+  override def test(o: TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P): B = {
     BeforeEntrypoint()
     val r: B = testComputeCBV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
-        tc.DSC_RecordUnsatPre.report(tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(o, T))
+        tc.DSC_RecordUnsatPre.report(tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(o, T))
         T
       case GumboXResult.Post_Condition_Fail => F
       case GumboXResult.Post_Condition_Pass => T
@@ -58,7 +58,7 @@ import org.sireum.Random.Impl.Xoshiro256
 }
 
 @record class TempControlPeriodic_p_tcproc_tempControl_GumboX_DSC_TestRunnerwL
-  extends Random.Gen.TestRunner[TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL]
+  extends Random.Gen.TestRunner[TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS]
   with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
   val verbose: B = F
@@ -69,32 +69,32 @@ import org.sireum.Random.Impl.Xoshiro256
   val ranLibfanAck: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLibsetPoint: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
-  override def next(): TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL = {
+  override def next(): TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS = {
     val In_latestFanCmd = ranLiblatestFanCmd.nextCoolingFanFanCmdType()
     val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
     val api_fanAck = ranLibfanAck.nextCoolingFanFanAckType()
     val api_setPoint = ranLibsetPoint.nextTempControlSoftwareSystemSetPoint_i()
-    return TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(
+    return TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(
       In_latestFanCmd, api_currentTemp, api_fanAck, api_setPoint
     )
   }
 
-  override def toCompactJson(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL): String = {
-    return tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(o, T)
+  override def toCompactJson(o: TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS): String = {
+    return tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(o, T)
   }
 
-  override def fromJson(json: String): TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL = {
-    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(json) match {
+  override def fromJson(json: String): TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS = {
+    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(json) match {
       case Either.Left(o) => return o
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  override def test(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL): B = {
+  override def test(o: TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS): B = {
     BeforeEntrypoint()
     val r: B = testComputeCBwLV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
-        tc.DSC_RecordUnsatPre.report(tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(o, T))
+        tc.DSC_RecordUnsatPre.report(tc.JSON.fromTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(o, T))
         T
       case GumboXResult.Post_Condition_Fail => F
       case GumboXResult.Post_Condition_Pass => T

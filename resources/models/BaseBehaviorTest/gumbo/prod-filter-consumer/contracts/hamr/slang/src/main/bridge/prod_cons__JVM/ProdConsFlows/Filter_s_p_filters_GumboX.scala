@@ -104,6 +104,17 @@ object Filter_s_p_filters_GumboX {
      // IEP-Guar: Initialize Entrypoint contract for filters
      initialize_IEP_Guar(api_h_event_out, api_f_event_data_out, api_g_event_data_out, api_e_data_out))
 
+  /** IEP-Post: Initialize Entrypoint Post-Condition via container
+    *
+    * @param post Container holding the value of incoming ports and the pre-state values of state variables
+    */
+  @strictpure def inititialize_IEP_Post_Container (post: Filter_s_p_filters_PostState_Container_PS): B =
+    inititialize_IEP_Post (
+      api_h_event_out = post.api_h_event_out,
+      api_f_event_data_out = post.api_f_event_data_out,
+      api_g_event_data_out = post.api_g_event_data_out,
+      api_e_data_out = post.api_e_data_out)
+
   /** CEP-Pre: Compute Entrypoint Pre-Condition for filters
     *
     * @param api_d_event_in incoming event port
@@ -125,6 +136,17 @@ object Filter_s_p_filters_GumboX {
      I_Assm_Guard_a_data_in(api_a_data_in) & 
      I_Assm_Guard_b_event_data_in(api_b_event_data_in))
 
+  /** CEP-Pre: Compute Entrypoint Pre-Condition for filters via container
+    *
+    * @param pre Container holding the value of incoming ports and the pre-state values of state variables
+    */
+  @strictpure def compute_CEP_Pre_Container(pre: Filter_s_p_filters_PreState_Container_PS): B =
+    compute_CEP_Pre(
+      api_d_event_in = pre.api_d_event_in,
+      api_b_event_data_in = pre.api_b_event_data_in,
+      api_c_event_data_in = pre.api_c_event_data_in,
+      api_a_data_in = pre.api_a_data_in)
+
   /** CEP-Post: Compute Entrypoint Post-Condition for filters
     *
     * @param api_h_event_out outgoing event port
@@ -145,4 +167,18 @@ object Filter_s_p_filters_GumboX {
      // I-Guar-Guard: Integration constraints for filters's outgoing ports
      I_Guar_e_data_out(api_e_data_out) & 
      I_Guar_Guard_f_event_data_out(api_f_event_data_out))
+
+  /** CEP-Post: Compute Entrypoint Post-Condition for filters via containers
+    *
+    * @param pre Container holding the values of incoming ports and the pre-state values of state variables
+    * @param post Container holding the values of outgoing ports and the post-state values of state variables
+    */
+  @strictpure def compute_CEP_Post_Container(
+      pre: Filter_s_p_filters_PreState_Container_PS,
+      post: Filter_s_p_filters_PostState_Container_PS): B =
+    compute_CEP_Post(
+      api_h_event_out = post.api_h_event_out,
+      api_f_event_data_out = post.api_f_event_data_out,
+      api_g_event_data_out = post.api_g_event_data_out,
+      api_e_data_out = post.api_e_data_out)
 }

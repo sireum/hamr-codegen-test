@@ -55,17 +55,17 @@ import a._
 
   // setter for in EventDataPort
   def put_coordinates(value : Arrays.Array_of_Coordinates): Unit = {
-    ArtNative.insertInPortValue(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.coordinates_Id, Arrays.Array_of_Coordinates_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.coordinates_Id, Arrays.Array_of_Coordinates_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_vector_of_coordinates(value : Arrays.Vector_of_Coordinates): Unit = {
-    ArtNative.insertInPortValue(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.vector_of_coordinates_Id, Arrays.Vector_of_Coordinates_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.vector_of_coordinates_Id, Arrays.Vector_of_Coordinates_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_integers(value : Arrays.Array_of_Integers): Unit = {
-    ArtNative.insertInPortValue(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.integers_Id, Arrays.Array_of_Integers_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.PC_Sys_Impl_Instance_proc_consumer.operational_api.integers_Id, Arrays.Array_of_Integers_Payload(value))
   }
 
 }

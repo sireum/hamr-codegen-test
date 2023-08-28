@@ -23,4 +23,15 @@ object Consumer_p_consumer_GumboX {
      ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_f_event_data_in) & 
      ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_g_event_data_in) & 
      ProdConsFlows.Container_i_GumboX.D_Inv_Container_i(api_e_data_in))
+
+  /** CEP-Pre: Compute Entrypoint Pre-Condition for consumer via container
+    *
+    * @param pre Container holding the value of incoming ports and the pre-state values of state variables
+    */
+  @strictpure def compute_CEP_Pre_Container(pre: Consumer_p_consumer_PreState_Container_PS): B =
+    compute_CEP_Pre(
+      api_h_event_in = pre.api_h_event_in,
+      api_f_event_data_in = pre.api_f_event_data_in,
+      api_g_event_data_in = pre.api_g_event_data_in,
+      api_e_data_in = pre.api_e_data_in)
 }

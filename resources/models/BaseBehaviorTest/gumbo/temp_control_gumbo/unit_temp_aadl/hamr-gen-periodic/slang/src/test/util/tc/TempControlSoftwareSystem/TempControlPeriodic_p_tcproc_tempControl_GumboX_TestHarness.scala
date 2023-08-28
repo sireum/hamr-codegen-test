@@ -43,14 +43,14 @@ import tc.GumboXUtil.GumboXResult
   }
 
   def testComputeCBJ(json: String): GumboXResult.Type = {
-    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVector(json) match {
+    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container(json) match {
       case Either.Left(o) => return testComputeCBV(o)
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  def testComputeCBV(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVector): GumboXResult.Type = {
-    return testComputeCB(o.api_currentTemp,o.api_fanAck,o.api_setPoint)
+  def testComputeCBV(o: TempControlPeriodic_p_tcproc_tempControl_PreState_Container): GumboXResult.Type = {
+    return testComputeCB(o.api_currentTemp, o.api_fanAck, o.api_setPoint)
   }
 
   /** Contract-based test harness for the compute entry point
@@ -108,14 +108,14 @@ import tc.GumboXUtil.GumboXResult
   }
 
   def testComputeCBwLJ(json: String): GumboXResult.Type = {
-    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL(json) match {
+    tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(json) match {
       case Either.Left(o) => return testComputeCBwLV(o)
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  def testComputeCBwLV(o: TempControlPeriodic_p_tcproc_tempControl_DSC_TestVectorwL): GumboXResult.Type = {
-    return testComputeCBwL(o.In_latestFanCmd,o.api_currentTemp,o.api_fanAck,o.api_setPoint)
+  def testComputeCBwLV(o: TempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS): GumboXResult.Type = {
+    return testComputeCBwL(o.In_latestFanCmd, o.api_currentTemp, o.api_fanAck, o.api_setPoint)
   }
 
   /** Contract-based test harness for the compute entry point

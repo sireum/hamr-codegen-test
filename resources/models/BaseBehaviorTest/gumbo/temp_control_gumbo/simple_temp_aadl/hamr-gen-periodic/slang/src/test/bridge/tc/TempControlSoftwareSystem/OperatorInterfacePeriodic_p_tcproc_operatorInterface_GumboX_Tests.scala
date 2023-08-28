@@ -21,11 +21,11 @@ class OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_Tests extends 
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLibcurrentTemp: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
-  def next(): Option[OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector] = {
+  def next(): Option[OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P] = {
     try {
       val api_currentTemp = ranLibcurrentTemp.nextTempSensorTemperature_i()
 
-      return Some(OperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector(api_currentTemp))
+      return Some(OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P(api_currentTemp))
     } catch {
       case e: AssertionError =>
        // SlangCheck was unable to satisfy a datatype's filter
@@ -70,8 +70,8 @@ class OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_Tests extends 
                 val tq = "\"\"\""
                 println(st"""Replay Unit Test:
                             |  test("Replay testComputeCB_$i") {
-                            |    val json = st${tq}${tc.JSON.fromTempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector(o, T)}${tq}.render
-                            |    val testVector = tc.JSON.toTempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_DSC_TestVector(json).left
+                            |    val json = st${tq}${tc.JSON.fromTempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P(o, T)}${tq}.render
+                            |    val testVector = tc.JSON.toTempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P(json).left
                             |    assert (testComputeCBV(testVector) == tc.GumboXUtil.GumboXResult.$results)
                             |  }""".render)
               }

@@ -13,34 +13,34 @@ import org.sireum.Random.Impl.Xoshiro256
 // Distribute SlangCheck test runners
 
 @record class Producer_p_producer_GumboX_DSC_TestRunner
-  extends Random.Gen.TestRunner[Producer_p_producer_DSC_TestVector]
+  extends Random.Gen.TestRunner[Producer_p_producer_PreState_Container_P]
   with Producer_p_producer_GumboX_TestHarness {
 
   val verbose: B = F
 
   val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
 
-  override def next(): Producer_p_producer_DSC_TestVector = {
-    return Producer_p_producer_DSC_TestVector(
+  override def next(): Producer_p_producer_PreState_Container_P = {
+    return Producer_p_producer_PreState_Container_P(
     )
   }
 
-  override def toCompactJson(o: Producer_p_producer_DSC_TestVector): String = {
-    return prod_cons__JVM.JSON.fromProdConsFlowsProducer_p_producer_DSC_TestVector(o, T)
+  override def toCompactJson(o: Producer_p_producer_PreState_Container_P): String = {
+    return prod_cons__JVM.JSON.fromProdConsFlowsProducer_p_producer_PreState_Container_P(o, T)
   }
 
-  override def fromJson(json: String): Producer_p_producer_DSC_TestVector = {
-    prod_cons__JVM.JSON.toProdConsFlowsProducer_p_producer_DSC_TestVector(json) match {
+  override def fromJson(json: String): Producer_p_producer_PreState_Container_P = {
+    prod_cons__JVM.JSON.toProdConsFlowsProducer_p_producer_PreState_Container_P(json) match {
       case Either.Left(o) => return o
       case Either.Right(msg) => halt(msg.string)
     }
   }
 
-  override def test(o: Producer_p_producer_DSC_TestVector): B = {
+  override def test(o: Producer_p_producer_PreState_Container_P): B = {
     BeforeEntrypoint()
     val r: B = testComputeCB() match {
       case GumboXResult.Pre_Condition_Unsat =>
-        prod_cons__JVM.DSC_RecordUnsatPre.report(prod_cons__JVM.JSON.fromProdConsFlowsProducer_p_producer_DSC_TestVector(o, T))
+        prod_cons__JVM.DSC_RecordUnsatPre.report(prod_cons__JVM.JSON.fromProdConsFlowsProducer_p_producer_PreState_Container_P(o, T))
         T
       case GumboXResult.Post_Condition_Fail => F
       case GumboXResult.Post_Condition_Pass => T

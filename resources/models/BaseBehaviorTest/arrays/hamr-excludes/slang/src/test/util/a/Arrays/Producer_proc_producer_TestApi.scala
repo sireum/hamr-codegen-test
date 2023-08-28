@@ -82,7 +82,7 @@ import a._
 
   // payload getter for out EventDataPort
   def get_coordinates_payload(): Option[Arrays.Array_of_Coordinates_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.PC_Sys_Impl_Instance_proc_producer.initialization_api.coordinates_Id).asInstanceOf[Option[Arrays.Array_of_Coordinates_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.PC_Sys_Impl_Instance_proc_producer.initialization_api.coordinates_Id).asInstanceOf[Option[Arrays.Array_of_Coordinates_Payload]]
   }
 
   // getter for out EventDataPort
@@ -97,7 +97,7 @@ import a._
 
   // payload getter for out EventDataPort
   def get_vector_of_coordinates_payload(): Option[Arrays.Vector_of_Coordinates_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.PC_Sys_Impl_Instance_proc_producer.initialization_api.vector_of_coordinates_Id).asInstanceOf[Option[Arrays.Vector_of_Coordinates_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.PC_Sys_Impl_Instance_proc_producer.initialization_api.vector_of_coordinates_Id).asInstanceOf[Option[Arrays.Vector_of_Coordinates_Payload]]
   }
 
   // getter for out EventDataPort
@@ -112,7 +112,7 @@ import a._
 
   // payload getter for out EventDataPort
   def get_integers_payload(): Option[Arrays.Array_of_Integers_Payload] = {
-    return ArtNative.observeOutPortValue(Arch.PC_Sys_Impl_Instance_proc_producer.initialization_api.integers_Id).asInstanceOf[Option[Arrays.Array_of_Integers_Payload]]
+    return ArtNative.observeOutInfrastructurePort(Arch.PC_Sys_Impl_Instance_proc_producer.initialization_api.integers_Id).asInstanceOf[Option[Arrays.Array_of_Integers_Payload]]
   }
 
 }

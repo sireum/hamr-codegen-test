@@ -58,22 +58,22 @@ import prod_cons__JVM._
 
   // setter for in DataPort
   def put_e_data_in(value : ProdConsFlows.Container_i): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_consumer.operational_api.e_data_in_Id, ProdConsFlows.Container_i_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.e_data_in_Id, ProdConsFlows.Container_i_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_f_event_data_in(value : ProdConsFlows.Container_i): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_consumer.operational_api.f_event_data_in_Id, ProdConsFlows.Container_i_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.f_event_data_in_Id, ProdConsFlows.Container_i_Payload(value))
   }
 
   // setter for in EventDataPort
   def put_g_event_data_in(value : ProdConsFlows.Container_i): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_consumer.operational_api.g_event_data_in_Id, ProdConsFlows.Container_i_Payload(value))
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.g_event_data_in_Id, ProdConsFlows.Container_i_Payload(value))
   }
 
   // setter for in EventPort
   def put_h_event_in(): Unit = {
-    ArtNative.insertInPortValue(Arch.s_i_Instance_p_consumer.operational_api.h_event_in_Id, Empty())
+    ArtNative.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.h_event_in_Id, Empty())
   }
 
 }

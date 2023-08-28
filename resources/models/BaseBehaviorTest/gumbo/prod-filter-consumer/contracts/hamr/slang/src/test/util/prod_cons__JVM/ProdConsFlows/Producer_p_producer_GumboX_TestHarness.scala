@@ -46,6 +46,17 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
     return result
   }
 
+  def testComputeCBJ(json: String): GumboXResult.Type = {
+    prod_cons__JVM.JSON.toProdConsFlowsProducer_p_producer_PreState_Container(json) match {
+      case Either.Left(o) => return testComputeCBV(o)
+      case Either.Right(msg) => halt(msg.string)
+    }
+  }
+
+  def testComputeCBV(o: Producer_p_producer_PreState_Container): GumboXResult.Type = {
+    return testComputeCB()
+  }
+
   /** Contract-based test harness for the compute entry point
     */
   def testComputeCB(
