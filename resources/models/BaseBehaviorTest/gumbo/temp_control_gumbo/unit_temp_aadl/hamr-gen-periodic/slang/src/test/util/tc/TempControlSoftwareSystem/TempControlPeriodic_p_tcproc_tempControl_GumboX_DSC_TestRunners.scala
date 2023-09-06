@@ -18,7 +18,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   val verbose: B = F
 
-  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
+  var seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLibcurrentTemp: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLibfanAck: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLibsetPoint: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
@@ -63,7 +63,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   val verbose: B = F
 
-  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
+  var seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLiblatestFanCmd: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLibcurrentTemp: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
   val ranLibfanAck: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))

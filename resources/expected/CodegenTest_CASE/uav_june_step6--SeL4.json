@@ -1879,20 +1879,20 @@
         "slang\/src\/main\/architecture\/uav_june_step6__SeL4\/Platform.scala",
         {
           "type" : "ITestResource",
-          "content" : "\/\/ #Sireum\n\npackage uav_june_step6__SeL4\n\nimport org.sireum._\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject Platform {\n\n  def setup(): Unit = {\n    \/\/ BEGIN PLATFORM SETUP\n    \/\/ END PLATFORM SETUP\n  }\n\n  def tearDown(): Unit = {\n    \/\/ BEGIN PLATFORM TEARDOWN\n    \/\/ END PLATFORM TEARDOWN\n  }\n}",
+          "content" : "\/\/ #Sireum\n\npackage uav_june_step6__SeL4\n\nimport org.sireum._\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject Platform {\n\n  def setup(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM SETUP\n    \/\/ END MARKER PLATFORM SETUP\n  }\n\n  def tearDown(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM TEARDOWN\n    \/\/ END MARKER PLATFORM TEARDOWN\n  }\n}",
           "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "markers" : [
             {
               "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN PLATFORM SETUP",
-              "endMarker" : "\/\/ END PLATFORM SETUP"
+              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM SETUP",
+              "endMarker" : "\/\/ END MARKER PLATFORM SETUP"
             },
             {
               "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN PLATFORM TEARDOWN",
-              "endMarker" : "\/\/ END PLATFORM TEARDOWN"
+              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM TEARDOWN",
+              "endMarker" : "\/\/ END MARKER PLATFORM TEARDOWN"
             }
           ]
         }

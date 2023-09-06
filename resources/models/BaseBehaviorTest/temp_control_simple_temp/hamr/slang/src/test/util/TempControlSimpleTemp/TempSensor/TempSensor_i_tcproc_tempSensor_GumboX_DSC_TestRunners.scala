@@ -18,7 +18,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   val verbose: B = F
 
-  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
+  var seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
 
   override def next(): TempSensor_i_tcproc_tempSensor_PreState_Container_P = {
     return TempSensor_i_tcproc_tempSensor_PreState_Container_P(
@@ -38,7 +38,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   override def test(o: TempSensor_i_tcproc_tempSensor_PreState_Container_P): B = {
     BeforeEntrypoint()
-    val r: B = testComputeCB() match {
+    val r: B = testComputeCBV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
         TempControlSimpleTemp.DSC_RecordUnsatPre.report(TempControlSimpleTemp.JSON.fromTempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(o, T))
         T

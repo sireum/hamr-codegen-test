@@ -18,7 +18,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   val verbose: B = F
 
-  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
+  var seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLibcurrentTemp: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
   override def next(): OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P = {

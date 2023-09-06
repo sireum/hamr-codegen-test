@@ -40,7 +40,7 @@ Aux_Types.scala
 
   // ========  Z ==========
     def get_Config_Z: Config_Z
-    def set_Config_Z(config: Config_Z): Unit
+    def set_Config_Z(config: Config_Z): RandomLib
 
     def nextZ(): Z = {
       val conf = get_Config_Z
@@ -104,7 +104,7 @@ Aux_Types.scala
 
   // ========  B ==========}
     def get_Config_B: Config_B
-    def set_Config_B(config: Config_B): Unit
+    def set_Config_B(config: Config_B): RandomLib
 
     def nextB(): B = {
       var r = gen.nextB()
@@ -135,7 +135,7 @@ Aux_Types.scala
 
   // ========  C ==========}
     def get_Config_C: Config_C
-    def set_Config_C(config: Config_C): Unit
+    def set_Config_C(config: Config_C): RandomLib
 
     def nextC(): C = {
       var r = gen.nextC()
@@ -166,7 +166,7 @@ Aux_Types.scala
 
   // ========  R ==========
     def get_Config_R: Config_R
-    def set_Config_R(config: Config_R): Unit
+    def set_Config_R(config: Config_R): RandomLib
 
     def nextR(): R = {
       val conf = get_Config_R
@@ -230,7 +230,7 @@ Aux_Types.scala
 
   // ========  F32 ==========
     def get_Config_F32: Config_F32
-    def set_Config_F32(config: Config_F32): Unit
+    def set_Config_F32(config: Config_F32): RandomLib
 
     def nextF32(): F32 = {
       val conf = get_Config_F32
@@ -294,7 +294,7 @@ Aux_Types.scala
 
   // ========  F64 ==========
     def get_Config_F64: Config_F64
-    def set_Config_F64(config: Config_F64): Unit
+    def set_Config_F64(config: Config_F64): RandomLib
 
     def nextF64(): F64 = {
       val conf = get_Config_F64
@@ -358,7 +358,7 @@ Aux_Types.scala
 
   // ========  S8 ==========
     def get_Config_S8: Config_S8
-    def set_Config_S8(config: Config_S8): Unit
+    def set_Config_S8(config: Config_S8): RandomLib
 
     def nextS8(): S8 = {
       val conf = get_Config_S8
@@ -422,7 +422,7 @@ Aux_Types.scala
 
   // ========  S16 ==========
     def get_Config_S16: Config_S16
-    def set_Config_S16(config: Config_S16): Unit
+    def set_Config_S16(config: Config_S16): RandomLib
 
     def nextS16(): S16 = {
       val conf = get_Config_S16
@@ -486,7 +486,7 @@ Aux_Types.scala
 
   // ========  S32 ==========
     def get_Config_S32: Config_S32
-    def set_Config_S32(config: Config_S32): Unit
+    def set_Config_S32(config: Config_S32): RandomLib
 
     def nextS32(): S32 = {
       val conf = get_Config_S32
@@ -550,7 +550,7 @@ Aux_Types.scala
 
   // ========  S64 ==========
     def get_Config_S64: Config_S64
-    def set_Config_S64(config: Config_S64): Unit
+    def set_Config_S64(config: Config_S64): RandomLib
 
     def nextS64(): S64 = {
       val conf = get_Config_S64
@@ -614,7 +614,7 @@ Aux_Types.scala
 
   // ========  U8 ==========
     def get_Config_U8: Config_U8
-    def set_Config_U8(config: Config_U8): Unit
+    def set_Config_U8(config: Config_U8): RandomLib
 
     def nextU8(): U8 = {
       val conf = get_Config_U8
@@ -678,7 +678,7 @@ Aux_Types.scala
 
   // ========  U16 ==========
     def get_Config_U16: Config_U16
-    def set_Config_U16(config: Config_U16): Unit
+    def set_Config_U16(config: Config_U16): RandomLib
 
     def nextU16(): U16 = {
       val conf = get_Config_U16
@@ -742,7 +742,7 @@ Aux_Types.scala
 
   // ========  U32 ==========
     def get_Config_U32: Config_U32
-    def set_Config_U32(config: Config_U32): Unit
+    def set_Config_U32(config: Config_U32): RandomLib
 
     def nextU32(): U32 = {
       val conf = get_Config_U32
@@ -806,7 +806,7 @@ Aux_Types.scala
 
   // ========  U64 ==========
     def get_Config_U64: Config_U64
-    def set_Config_U64(config: Config_U64): Unit
+    def set_Config_U64(config: Config_U64): RandomLib
 
     def nextU64(): U64 = {
       val conf = get_Config_U64
@@ -881,7 +881,7 @@ Aux_Types.scala
   // ============= art.DataContent ===================
 
   def get_Config__artDataContent: Config__artDataContent
-  def set_Config__artDataContent(config: Config__artDataContent): Unit
+  def set_Config__artDataContent(config: Config__artDataContent): RandomLib
 
   def next_artDataContent(): art.DataContent = {
     var callEnum: ISZ[_artDataContent_DataTypeId.Type] = ISZ(_artDataContent_DataTypeId.Base_TypesBits_Payload_Id, _artDataContent_DataTypeId.Base_TypesBoolean_Payload_Id, _artDataContent_DataTypeId.Base_TypesCharacter_Payload_Id, _artDataContent_DataTypeId.Base_TypesFloat_32_Payload_Id, _artDataContent_DataTypeId.Base_TypesFloat_64_Payload_Id, _artDataContent_DataTypeId.Base_TypesFloat_Payload_Id, _artDataContent_DataTypeId.Base_TypesInteger_16_Payload_Id, _artDataContent_DataTypeId.Base_TypesInteger_32_Payload_Id, _artDataContent_DataTypeId.Base_TypesInteger_64_Payload_Id, _artDataContent_DataTypeId.Base_TypesInteger_8_Payload_Id, _artDataContent_DataTypeId.Base_TypesInteger_Payload_Id, _artDataContent_DataTypeId.Base_TypesString_Payload_Id, _artDataContent_DataTypeId.Base_TypesUnsigned_16_Payload_Id, _artDataContent_DataTypeId.Base_TypesUnsigned_32_Payload_Id, _artDataContent_DataTypeId.Base_TypesUnsigned_64_Payload_Id, _artDataContent_DataTypeId.Base_TypesUnsigned_8_Payload_Id, _artDataContent_DataTypeId.CoolingFanFanAck_Payload_Id, _artDataContent_DataTypeId.CoolingFanFanCmd_Payload_Id, _artDataContent_DataTypeId.CoolingFanFan_i_tcproc_fan_PostState_Container_P_Id, _artDataContent_DataTypeId.CoolingFanFan_i_tcproc_fan_PostState_Container_PS_Id, _artDataContent_DataTypeId.CoolingFanFan_i_tcproc_fan_PreState_Container_P_Id, _artDataContent_DataTypeId.CoolingFanFan_i_tcproc_fan_PreState_Container_PS_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemSetPoint_i_Payload_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P_Id, _artDataContent_DataTypeId.TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS_Id, _artDataContent_DataTypeId.TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P_Id, _artDataContent_DataTypeId.TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS_Id, _artDataContent_DataTypeId.TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P_Id, _artDataContent_DataTypeId.TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS_Id, _artDataContent_DataTypeId.TempSensorTemperature_i_Payload_Id, _artDataContent_DataTypeId._artEmpty_Id)
@@ -1048,7 +1048,7 @@ Aux_Types.scala
   // ============= art.Empty ===================
 
   def get_Config__artEmpty: Config__artEmpty
-  def set_Config__artEmpty(config: Config__artEmpty): Unit
+  def set_Config__artEmpty(config: Config__artEmpty): RandomLib
 
   def next_artEmpty(): art.Empty = {
 
@@ -1083,7 +1083,7 @@ Aux_Types.scala
   // ============= Base_Types.Boolean_Payload ===================
 
   def get_Config_Base_TypesBoolean_Payload: Config_Base_TypesBoolean_Payload
-  def set_Config_Base_TypesBoolean_Payload(config: Config_Base_TypesBoolean_Payload): Unit
+  def set_Config_Base_TypesBoolean_Payload(config: Config_Base_TypesBoolean_Payload): RandomLib
 
   def nextBase_TypesBoolean_Payload(): Base_Types.Boolean_Payload = {
     var value: B = nextB()
@@ -1121,7 +1121,7 @@ Aux_Types.scala
   // ============= Base_Types.Integer_Payload ===================
 
   def get_Config_Base_TypesInteger_Payload: Config_Base_TypesInteger_Payload
-  def set_Config_Base_TypesInteger_Payload(config: Config_Base_TypesInteger_Payload): Unit
+  def set_Config_Base_TypesInteger_Payload(config: Config_Base_TypesInteger_Payload): RandomLib
 
   def nextBase_TypesInteger_Payload(): Base_Types.Integer_Payload = {
     var value: Z = nextZ()
@@ -1159,7 +1159,7 @@ Aux_Types.scala
   // ============= Base_Types.Integer_8_Payload ===================
 
   def get_Config_Base_TypesInteger_8_Payload: Config_Base_TypesInteger_8_Payload
-  def set_Config_Base_TypesInteger_8_Payload(config: Config_Base_TypesInteger_8_Payload): Unit
+  def set_Config_Base_TypesInteger_8_Payload(config: Config_Base_TypesInteger_8_Payload): RandomLib
 
   def nextBase_TypesInteger_8_Payload(): Base_Types.Integer_8_Payload = {
     var value: S8 = nextS8()
@@ -1197,7 +1197,7 @@ Aux_Types.scala
   // ============= Base_Types.Integer_16_Payload ===================
 
   def get_Config_Base_TypesInteger_16_Payload: Config_Base_TypesInteger_16_Payload
-  def set_Config_Base_TypesInteger_16_Payload(config: Config_Base_TypesInteger_16_Payload): Unit
+  def set_Config_Base_TypesInteger_16_Payload(config: Config_Base_TypesInteger_16_Payload): RandomLib
 
   def nextBase_TypesInteger_16_Payload(): Base_Types.Integer_16_Payload = {
     var value: S16 = nextS16()
@@ -1235,7 +1235,7 @@ Aux_Types.scala
   // ============= Base_Types.Integer_32_Payload ===================
 
   def get_Config_Base_TypesInteger_32_Payload: Config_Base_TypesInteger_32_Payload
-  def set_Config_Base_TypesInteger_32_Payload(config: Config_Base_TypesInteger_32_Payload): Unit
+  def set_Config_Base_TypesInteger_32_Payload(config: Config_Base_TypesInteger_32_Payload): RandomLib
 
   def nextBase_TypesInteger_32_Payload(): Base_Types.Integer_32_Payload = {
     var value: S32 = nextS32()
@@ -1273,7 +1273,7 @@ Aux_Types.scala
   // ============= Base_Types.Integer_64_Payload ===================
 
   def get_Config_Base_TypesInteger_64_Payload: Config_Base_TypesInteger_64_Payload
-  def set_Config_Base_TypesInteger_64_Payload(config: Config_Base_TypesInteger_64_Payload): Unit
+  def set_Config_Base_TypesInteger_64_Payload(config: Config_Base_TypesInteger_64_Payload): RandomLib
 
   def nextBase_TypesInteger_64_Payload(): Base_Types.Integer_64_Payload = {
     var value: S64 = nextS64()
@@ -1311,7 +1311,7 @@ Aux_Types.scala
   // ============= Base_Types.Unsigned_8_Payload ===================
 
   def get_Config_Base_TypesUnsigned_8_Payload: Config_Base_TypesUnsigned_8_Payload
-  def set_Config_Base_TypesUnsigned_8_Payload(config: Config_Base_TypesUnsigned_8_Payload): Unit
+  def set_Config_Base_TypesUnsigned_8_Payload(config: Config_Base_TypesUnsigned_8_Payload): RandomLib
 
   def nextBase_TypesUnsigned_8_Payload(): Base_Types.Unsigned_8_Payload = {
     var value: U8 = nextU8()
@@ -1349,7 +1349,7 @@ Aux_Types.scala
   // ============= Base_Types.Unsigned_16_Payload ===================
 
   def get_Config_Base_TypesUnsigned_16_Payload: Config_Base_TypesUnsigned_16_Payload
-  def set_Config_Base_TypesUnsigned_16_Payload(config: Config_Base_TypesUnsigned_16_Payload): Unit
+  def set_Config_Base_TypesUnsigned_16_Payload(config: Config_Base_TypesUnsigned_16_Payload): RandomLib
 
   def nextBase_TypesUnsigned_16_Payload(): Base_Types.Unsigned_16_Payload = {
     var value: U16 = nextU16()
@@ -1387,7 +1387,7 @@ Aux_Types.scala
   // ============= Base_Types.Unsigned_32_Payload ===================
 
   def get_Config_Base_TypesUnsigned_32_Payload: Config_Base_TypesUnsigned_32_Payload
-  def set_Config_Base_TypesUnsigned_32_Payload(config: Config_Base_TypesUnsigned_32_Payload): Unit
+  def set_Config_Base_TypesUnsigned_32_Payload(config: Config_Base_TypesUnsigned_32_Payload): RandomLib
 
   def nextBase_TypesUnsigned_32_Payload(): Base_Types.Unsigned_32_Payload = {
     var value: U32 = nextU32()
@@ -1425,7 +1425,7 @@ Aux_Types.scala
   // ============= Base_Types.Unsigned_64_Payload ===================
 
   def get_Config_Base_TypesUnsigned_64_Payload: Config_Base_TypesUnsigned_64_Payload
-  def set_Config_Base_TypesUnsigned_64_Payload(config: Config_Base_TypesUnsigned_64_Payload): Unit
+  def set_Config_Base_TypesUnsigned_64_Payload(config: Config_Base_TypesUnsigned_64_Payload): RandomLib
 
   def nextBase_TypesUnsigned_64_Payload(): Base_Types.Unsigned_64_Payload = {
     var value: U64 = nextU64()
@@ -1463,7 +1463,7 @@ Aux_Types.scala
   // ============= Base_Types.Float_Payload ===================
 
   def get_Config_Base_TypesFloat_Payload: Config_Base_TypesFloat_Payload
-  def set_Config_Base_TypesFloat_Payload(config: Config_Base_TypesFloat_Payload): Unit
+  def set_Config_Base_TypesFloat_Payload(config: Config_Base_TypesFloat_Payload): RandomLib
 
   def nextBase_TypesFloat_Payload(): Base_Types.Float_Payload = {
     var value: R = nextR()
@@ -1501,7 +1501,7 @@ Aux_Types.scala
   // ============= Base_Types.Float_32_Payload ===================
 
   def get_Config_Base_TypesFloat_32_Payload: Config_Base_TypesFloat_32_Payload
-  def set_Config_Base_TypesFloat_32_Payload(config: Config_Base_TypesFloat_32_Payload): Unit
+  def set_Config_Base_TypesFloat_32_Payload(config: Config_Base_TypesFloat_32_Payload): RandomLib
 
   def nextBase_TypesFloat_32_Payload(): Base_Types.Float_32_Payload = {
     var value: F32 = nextF32()
@@ -1539,7 +1539,7 @@ Aux_Types.scala
   // ============= Base_Types.Float_64_Payload ===================
 
   def get_Config_Base_TypesFloat_64_Payload: Config_Base_TypesFloat_64_Payload
-  def set_Config_Base_TypesFloat_64_Payload(config: Config_Base_TypesFloat_64_Payload): Unit
+  def set_Config_Base_TypesFloat_64_Payload(config: Config_Base_TypesFloat_64_Payload): RandomLib
 
   def nextBase_TypesFloat_64_Payload(): Base_Types.Float_64_Payload = {
     var value: F64 = nextF64()
@@ -1577,7 +1577,7 @@ Aux_Types.scala
   // ============= Base_Types.Character_Payload ===================
 
   def get_Config_Base_TypesCharacter_Payload: Config_Base_TypesCharacter_Payload
-  def set_Config_Base_TypesCharacter_Payload(config: Config_Base_TypesCharacter_Payload): Unit
+  def set_Config_Base_TypesCharacter_Payload(config: Config_Base_TypesCharacter_Payload): RandomLib
 
   def nextBase_TypesCharacter_Payload(): Base_Types.Character_Payload = {
     var value: C = nextC()
@@ -1615,7 +1615,7 @@ Aux_Types.scala
   // ============= Base_Types.String_Payload ===================
 
   def get_Config_Base_TypesString_Payload: Config_Base_TypesString_Payload
-  def set_Config_Base_TypesString_Payload(config: Config_Base_TypesString_Payload): Unit
+  def set_Config_Base_TypesString_Payload(config: Config_Base_TypesString_Payload): RandomLib
 
   def nextBase_TypesString_Payload(): Base_Types.String_Payload = {
     var value: String = nextString()
@@ -1653,7 +1653,7 @@ Aux_Types.scala
   // ============= Base_Types.Bits_Payload ===================
 
   def get_Config_Base_TypesBits_Payload: Config_Base_TypesBits_Payload
-  def set_Config_Base_TypesBits_Payload(config: Config_Base_TypesBits_Payload): Unit
+  def set_Config_Base_TypesBits_Payload(config: Config_Base_TypesBits_Payload): RandomLib
 
   def nextBase_TypesBits_Payload(): Base_Types.Bits_Payload = {
     var value: ISZ[B] = nextISZB()
@@ -1691,7 +1691,7 @@ Aux_Types.scala
   // ============= CoolingFan.FanAck.Type ===================
 
   def get_Config_CoolingFanFanAckType: Config_CoolingFanFanAckType
-  def set_Config_CoolingFanFanAckType(config: Config_CoolingFanFanAckType): Unit
+  def set_Config_CoolingFanFanAckType(config: Config_CoolingFanFanAckType): RandomLib
 
   def nextCoolingFanFanAckType(): CoolingFan.FanAck.Type = {
 
@@ -1728,7 +1728,7 @@ Aux_Types.scala
   // ============= CoolingFan.FanAck_Payload ===================
 
   def get_Config_CoolingFanFanAck_Payload: Config_CoolingFanFanAck_Payload
-  def set_Config_CoolingFanFanAck_Payload(config: Config_CoolingFanFanAck_Payload): Unit
+  def set_Config_CoolingFanFanAck_Payload(config: Config_CoolingFanFanAck_Payload): RandomLib
 
   def nextCoolingFanFanAck_Payload(): CoolingFan.FanAck_Payload = {
     var value: CoolingFan.FanAck.Type = nextCoolingFanFanAckType()
@@ -1766,7 +1766,7 @@ Aux_Types.scala
   // ============= CoolingFan.FanCmd.Type ===================
 
   def get_Config_CoolingFanFanCmdType: Config_CoolingFanFanCmdType
-  def set_Config_CoolingFanFanCmdType(config: Config_CoolingFanFanCmdType): Unit
+  def set_Config_CoolingFanFanCmdType(config: Config_CoolingFanFanCmdType): RandomLib
 
   def nextCoolingFanFanCmdType(): CoolingFan.FanCmd.Type = {
 
@@ -1803,7 +1803,7 @@ Aux_Types.scala
   // ============= CoolingFan.FanCmd_Payload ===================
 
   def get_Config_CoolingFanFanCmd_Payload: Config_CoolingFanFanCmd_Payload
-  def set_Config_CoolingFanFanCmd_Payload(config: Config_CoolingFanFanCmd_Payload): Unit
+  def set_Config_CoolingFanFanCmd_Payload(config: Config_CoolingFanFanCmd_Payload): RandomLib
 
   def nextCoolingFanFanCmd_Payload(): CoolingFan.FanCmd_Payload = {
     var value: CoolingFan.FanCmd.Type = nextCoolingFanFanCmdType()
@@ -1841,7 +1841,7 @@ Aux_Types.scala
   // ============= CoolingFan.Fan_i_tcproc_fan_PreState_Container ===================
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PreState_Container: Config_CoolingFanFan_i_tcproc_fan_PreState_Container
-  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container): Unit
+  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container): RandomLib
 
   def nextCoolingFanFan_i_tcproc_fan_PreState_Container(): CoolingFan.Fan_i_tcproc_fan_PreState_Container = {
     var callEnum: ISZ[CoolingFanFan_i_tcproc_fan_PreState_Container_DataTypeId.Type] = ISZ(CoolingFanFan_i_tcproc_fan_PreState_Container_DataTypeId.CoolingFanFan_i_tcproc_fan_PreState_Container_P_Id, CoolingFanFan_i_tcproc_fan_PreState_Container_DataTypeId.CoolingFanFan_i_tcproc_fan_PreState_Container_PS_Id)
@@ -1903,7 +1903,7 @@ Aux_Types.scala
   // ============= CoolingFan.Fan_i_tcproc_fan_PreState_Container_P ===================
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P
-  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P): Unit
+  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P): RandomLib
 
   def nextCoolingFanFan_i_tcproc_fan_PreState_Container_P(): CoolingFan.Fan_i_tcproc_fan_PreState_Container_P = {
     var api_fanCmd: Option[CoolingFan.FanCmd.Type] = nextOptionCoolingFanFanCmdType()
@@ -1941,7 +1941,7 @@ Aux_Types.scala
   // ============= CoolingFan.Fan_i_tcproc_fan_PreState_Container_PS ===================
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS
-  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS): Unit
+  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS): RandomLib
 
   def nextCoolingFanFan_i_tcproc_fan_PreState_Container_PS(): CoolingFan.Fan_i_tcproc_fan_PreState_Container_PS = {
     var api_fanCmd: Option[CoolingFan.FanCmd.Type] = nextOptionCoolingFanFanCmdType()
@@ -1979,7 +1979,7 @@ Aux_Types.scala
   // ============= CoolingFan.Fan_i_tcproc_fan_PostState_Container ===================
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PostState_Container: Config_CoolingFanFan_i_tcproc_fan_PostState_Container
-  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container): Unit
+  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container): RandomLib
 
   def nextCoolingFanFan_i_tcproc_fan_PostState_Container(): CoolingFan.Fan_i_tcproc_fan_PostState_Container = {
     var callEnum: ISZ[CoolingFanFan_i_tcproc_fan_PostState_Container_DataTypeId.Type] = ISZ(CoolingFanFan_i_tcproc_fan_PostState_Container_DataTypeId.CoolingFanFan_i_tcproc_fan_PostState_Container_P_Id, CoolingFanFan_i_tcproc_fan_PostState_Container_DataTypeId.CoolingFanFan_i_tcproc_fan_PostState_Container_PS_Id)
@@ -2041,7 +2041,7 @@ Aux_Types.scala
   // ============= CoolingFan.Fan_i_tcproc_fan_PostState_Container_P ===================
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P
-  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P): Unit
+  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P): RandomLib
 
   def nextCoolingFanFan_i_tcproc_fan_PostState_Container_P(): CoolingFan.Fan_i_tcproc_fan_PostState_Container_P = {
     var api_fanAck: Option[CoolingFan.FanAck.Type] = nextOptionCoolingFanFanAckType()
@@ -2079,7 +2079,7 @@ Aux_Types.scala
   // ============= CoolingFan.Fan_i_tcproc_fan_PostState_Container_PS ===================
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS
-  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS): Unit
+  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS): RandomLib
 
   def nextCoolingFanFan_i_tcproc_fan_PostState_Container_PS(): CoolingFan.Fan_i_tcproc_fan_PostState_Container_PS = {
     var api_fanAck: Option[CoolingFan.FanAck.Type] = nextOptionCoolingFanFanAckType()
@@ -2117,7 +2117,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container ===================
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container): Unit
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container): RandomLib
 
   def nextTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container(): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container = {
     var callEnum: ISZ[TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_DataTypeId.Type] = ISZ(TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_DataTypeId.TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P_Id, TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_DataTypeId.TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS_Id)
@@ -2179,7 +2179,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_P ===================
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P): Unit
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P): RandomLib
 
   def nextTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P(): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_P = {
     var api_tempChanged: Option[art.Empty] = nextOption_artEmpty()
@@ -2220,7 +2220,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS ===================
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS): Unit
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS): RandomLib
 
   def nextTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS(): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS = {
     var api_tempChanged: Option[art.Empty] = nextOption_artEmpty()
@@ -2261,7 +2261,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container ===================
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container): Unit
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container): RandomLib
 
   def nextTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container(): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container = {
     var callEnum: ISZ[TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_DataTypeId.Type] = ISZ(TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_DataTypeId.TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P_Id, TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_DataTypeId.TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS_Id)
@@ -2323,7 +2323,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container_P ===================
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P): Unit
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P): RandomLib
 
   def nextTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P(): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container_P = {
     var api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i] = nextOptionTempControlSoftwareSystemSetPoint_i()
@@ -2361,7 +2361,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS ===================
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS): Unit
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS): RandomLib
 
   def nextTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS(): TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS = {
     var api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i] = nextOptionTempControlSoftwareSystemSetPoint_i()
@@ -2399,7 +2399,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.SetPoint_i ===================
 
   def get_Config_TempControlSoftwareSystemSetPoint_i: Config_TempControlSoftwareSystemSetPoint_i
-  def set_Config_TempControlSoftwareSystemSetPoint_i(config: Config_TempControlSoftwareSystemSetPoint_i): Unit
+  def set_Config_TempControlSoftwareSystemSetPoint_i(config: Config_TempControlSoftwareSystemSetPoint_i): RandomLib
 
   def nextTempControlSoftwareSystemSetPoint_i(): TempControlSoftwareSystem.SetPoint_i = {
     var low: TempSensor.Temperature_i = nextTempSensorTemperature_i()
@@ -2440,7 +2440,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.SetPoint_i_Payload ===================
 
   def get_Config_TempControlSoftwareSystemSetPoint_i_Payload: Config_TempControlSoftwareSystemSetPoint_i_Payload
-  def set_Config_TempControlSoftwareSystemSetPoint_i_Payload(config: Config_TempControlSoftwareSystemSetPoint_i_Payload): Unit
+  def set_Config_TempControlSoftwareSystemSetPoint_i_Payload(config: Config_TempControlSoftwareSystemSetPoint_i_Payload): RandomLib
 
   def nextTempControlSoftwareSystemSetPoint_i_Payload(): TempControlSoftwareSystem.SetPoint_i_Payload = {
     var value: TempControlSoftwareSystem.SetPoint_i = nextTempControlSoftwareSystemSetPoint_i()
@@ -2478,7 +2478,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container ===================
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container): Unit
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container): RandomLib
 
   def nextTempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container(): TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container = {
     var callEnum: ISZ[TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_DataTypeId.Type] = ISZ(TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_DataTypeId.TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P_Id, TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_DataTypeId.TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS_Id)
@@ -2540,7 +2540,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container_P ===================
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P): Unit
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P): RandomLib
 
   def nextTempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P(): TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container_P = {
     var api_tempChanged: Option[art.Empty] = nextOption_artEmpty()
@@ -2587,7 +2587,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container_PS ===================
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS): Unit
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS): RandomLib
 
   def nextTempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS(): TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container_PS = {
     var In_currentFanState: CoolingFan.FanCmd.Type = nextCoolingFanFanCmdType()
@@ -2643,7 +2643,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container ===================
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container): Unit
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container): RandomLib
 
   def nextTempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container(): TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container = {
     var callEnum: ISZ[TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_DataTypeId.Type] = ISZ(TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_DataTypeId.TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P_Id, TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_DataTypeId.TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS_Id)
@@ -2705,7 +2705,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container_P ===================
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P): Unit
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P): RandomLib
 
   def nextTempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P(): TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container_P = {
     var api_fanCmd: Option[CoolingFan.FanCmd.Type] = nextOptionCoolingFanFanCmdType()
@@ -2743,7 +2743,7 @@ Aux_Types.scala
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container_PS ===================
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS): Unit
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS): RandomLib
 
   def nextTempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS(): TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container_PS = {
     var currentFanState: CoolingFan.FanCmd.Type = nextCoolingFanFanCmdType()
@@ -2790,7 +2790,7 @@ Aux_Types.scala
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container ===================
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container): Unit
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container): RandomLib
 
   def nextTempSensorTempSensor_i_tcproc_tempSensor_PreState_Container(): TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container = {
     var callEnum: ISZ[TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_DataTypeId.Type] = ISZ(TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_DataTypeId.TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P_Id, TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_DataTypeId.TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS_Id)
@@ -2852,7 +2852,7 @@ Aux_Types.scala
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container_P ===================
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P): Unit
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P): RandomLib
 
   def nextTempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(): TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container_P = {
 
@@ -2887,7 +2887,7 @@ Aux_Types.scala
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container_PS ===================
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS): Unit
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS): RandomLib
 
   def nextTempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS(): TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container_PS = {
 
@@ -2922,7 +2922,7 @@ Aux_Types.scala
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container ===================
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container): Unit
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container): RandomLib
 
   def nextTempSensorTempSensor_i_tcproc_tempSensor_PostState_Container(): TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container = {
     var callEnum: ISZ[TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_DataTypeId.Type] = ISZ(TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_DataTypeId.TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P_Id, TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_DataTypeId.TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS_Id)
@@ -2984,7 +2984,7 @@ Aux_Types.scala
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container_P ===================
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P): Unit
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P): RandomLib
 
   def nextTempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P(): TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container_P = {
     var api_tempChanged: Option[art.Empty] = nextOption_artEmpty()
@@ -3025,7 +3025,7 @@ Aux_Types.scala
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container_PS ===================
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS): Unit
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS): RandomLib
 
   def nextTempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS(): TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container_PS = {
     var api_tempChanged: Option[art.Empty] = nextOption_artEmpty()
@@ -3066,7 +3066,7 @@ Aux_Types.scala
   // ============= TempSensor.Temperature_i ===================
 
   def get_Config_TempSensorTemperature_i: Config_TempSensorTemperature_i
-  def set_Config_TempSensorTemperature_i(config: Config_TempSensorTemperature_i): Unit
+  def set_Config_TempSensorTemperature_i(config: Config_TempSensorTemperature_i): RandomLib
 
   def nextTempSensorTemperature_i(): TempSensor.Temperature_i = {
     var degrees: F32 = nextF32()
@@ -3104,7 +3104,7 @@ Aux_Types.scala
   // ============= TempSensor.Temperature_i_Payload ===================
 
   def get_Config_TempSensorTemperature_i_Payload: Config_TempSensorTemperature_i_Payload
-  def set_Config_TempSensorTemperature_i_Payload(config: Config_TempSensorTemperature_i_Payload): Unit
+  def set_Config_TempSensorTemperature_i_Payload(config: Config_TempSensorTemperature_i_Payload): RandomLib
 
   def nextTempSensorTemperature_i_Payload(): TempSensor.Temperature_i_Payload = {
     var value: TempSensor.Temperature_i = nextTempSensorTemperature_i()
@@ -3214,8 +3214,9 @@ Aux_Types.scala
   var config_Z: Config_Z = Config_Z(None(), None(), 100, _verbose, alwaysTrue_Z _)
   def get_Config_Z: Config_Z = {return config_Z}
 
-  def set_Config_Z(config: Config_Z): Unit ={
+  def set_Config_Z(config: Config_Z): RandomLib ={
     config_Z = config
+    return this
   }
 
   // ============= B ===================
@@ -3224,8 +3225,9 @@ Aux_Types.scala
   var config_B: Config_B = Config_B(100, _verbose, alwaysTrue_B _)
   def get_Config_B: Config_B = {return config_B}
 
-  def set_Config_B(config: Config_B): Unit ={
+  def set_Config_B(config: Config_B): RandomLib ={
     config_B = config
+    return this
   }
 
   // ============= C ===================
@@ -3234,8 +3236,9 @@ Aux_Types.scala
   var config_C: Config_C = Config_C(100, _verbose, alwaysTrue_C _)
   def get_Config_C: Config_C = {return config_C}
 
-  def set_Config_C(config: Config_C): Unit ={
+  def set_Config_C(config: Config_C): RandomLib ={
     config_C = config
+    return this
   }
 
   // ============= R ===================
@@ -3244,8 +3247,9 @@ Aux_Types.scala
   var config_R: Config_R = Config_R(None(), None(), 100, _verbose, alwaysTrue_R _)
   def get_Config_R: Config_R = {return config_R}
 
-  def set_Config_R(config: Config_R): Unit ={
+  def set_Config_R(config: Config_R): RandomLib ={
     config_R = config
+    return this
   }
 
   // ============= F32 ===================
@@ -3254,8 +3258,9 @@ Aux_Types.scala
   var config_F32: Config_F32 = Config_F32(None(), None(), 100, _verbose, alwaysTrue_F32 _)
   def get_Config_F32: Config_F32 = {return config_F32}
 
-  def set_Config_F32(config: Config_F32): Unit ={
+  def set_Config_F32(config: Config_F32): RandomLib ={
     config_F32 = config
+    return this
   }
 
   // ============= F64 ===================
@@ -3264,8 +3269,9 @@ Aux_Types.scala
   var config_F64: Config_F64 = Config_F64(None(), None(), 100, _verbose, alwaysTrue_F64 _)
   def get_Config_F64: Config_F64 = {return config_F64}
 
-  def set_Config_F64(config: Config_F64): Unit ={
+  def set_Config_F64(config: Config_F64): RandomLib ={
     config_F64 = config
+    return this
   }
 
   // ============= S8 ===================
@@ -3274,8 +3280,9 @@ Aux_Types.scala
   var config_S8: Config_S8 = Config_S8(None(), None(), 100, _verbose, alwaysTrue_S8 _)
   def get_Config_S8: Config_S8 = {return config_S8}
 
-  def set_Config_S8(config: Config_S8): Unit ={
+  def set_Config_S8(config: Config_S8): RandomLib ={
     config_S8 = config
+    return this
   }
 
   // ============= S16 ===================
@@ -3284,8 +3291,9 @@ Aux_Types.scala
   var config_S16: Config_S16 = Config_S16(None(), None(), 100, _verbose, alwaysTrue_S16 _)
   def get_Config_S16: Config_S16 = {return config_S16}
 
-  def set_Config_S16(config: Config_S16): Unit ={
+  def set_Config_S16(config: Config_S16): RandomLib ={
     config_S16 = config
+    return this
   }
 
   // ============= S32 ===================
@@ -3294,8 +3302,9 @@ Aux_Types.scala
   var config_S32: Config_S32 = Config_S32(None(), None(), 100, _verbose, alwaysTrue_S32 _)
   def get_Config_S32: Config_S32 = {return config_S32}
 
-  def set_Config_S32(config: Config_S32): Unit ={
+  def set_Config_S32(config: Config_S32): RandomLib ={
     config_S32 = config
+    return this
   }
 
   // ============= S64 ===================
@@ -3304,8 +3313,9 @@ Aux_Types.scala
   var config_S64: Config_S64 = Config_S64(None(), None(), 100, _verbose, alwaysTrue_S64 _)
   def get_Config_S64: Config_S64 = {return config_S64}
 
-  def set_Config_S64(config: Config_S64): Unit ={
+  def set_Config_S64(config: Config_S64): RandomLib ={
     config_S64 = config
+    return this
   }
 
   // ============= U8 ===================
@@ -3314,8 +3324,9 @@ Aux_Types.scala
   var config_U8: Config_U8 = Config_U8(None(), None(), 100, _verbose, alwaysTrue_U8 _)
   def get_Config_U8: Config_U8 = {return config_U8}
 
-  def set_Config_U8(config: Config_U8): Unit ={
+  def set_Config_U8(config: Config_U8): RandomLib ={
     config_U8 = config
+    return this
   }
 
   // ============= U16 ===================
@@ -3324,8 +3335,9 @@ Aux_Types.scala
   var config_U16: Config_U16 = Config_U16(None(), None(), 100, _verbose, alwaysTrue_U16 _)
   def get_Config_U16: Config_U16 = {return config_U16}
 
-  def set_Config_U16(config: Config_U16): Unit ={
+  def set_Config_U16(config: Config_U16): RandomLib ={
     config_U16 = config
+    return this
   }
 
   // ============= U32 ===================
@@ -3334,8 +3346,9 @@ Aux_Types.scala
   var config_U32: Config_U32 = Config_U32(None(), None(), 100, _verbose, alwaysTrue_U32 _)
   def get_Config_U32: Config_U32 = {return config_U32}
 
-  def set_Config_U32(config: Config_U32): Unit ={
+  def set_Config_U32(config: Config_U32): RandomLib ={
     config_U32 = config
+    return this
   }
 
   // ============= U64 ===================
@@ -3344,8 +3357,9 @@ Aux_Types.scala
   var config_U64: Config_U64 = Config_U64(None(), None(), 100, _verbose, alwaysTrue_U64 _)
   def get_Config_U64: Config_U64 = {return config_U64}
 
-  def set_Config_U64(config: Config_U64): Unit ={
+  def set_Config_U64(config: Config_U64): RandomLib ={
     config_U64 = config
+    return this
   }
 
   // ============= art.DataContent ===================
@@ -3355,8 +3369,9 @@ Aux_Types.scala
 
   def get_Config__artDataContent: Config__artDataContent = {return config__artDataContent}
 
-  def set_Config__artDataContent(config: Config__artDataContent): Unit ={
+  def set_Config__artDataContent(config: Config__artDataContent): RandomLib ={
     config__artDataContent = config
+    return this
   }
 
   // ============= art.Empty ===================
@@ -3366,8 +3381,9 @@ Aux_Types.scala
 
   def get_Config__artEmpty: Config__artEmpty = {return config__artEmpty}
 
-  def set_Config__artEmpty(config: Config__artEmpty): Unit ={
+  def set_Config__artEmpty(config: Config__artEmpty): RandomLib ={
     config__artEmpty = config
+    return this
   }
 
   // ============= Base_Types.Boolean_Payload ===================
@@ -3377,8 +3393,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesBoolean_Payload: Config_Base_TypesBoolean_Payload = {return config_Base_TypesBoolean_Payload}
 
-  def set_Config_Base_TypesBoolean_Payload(config: Config_Base_TypesBoolean_Payload): Unit ={
+  def set_Config_Base_TypesBoolean_Payload(config: Config_Base_TypesBoolean_Payload): RandomLib ={
     config_Base_TypesBoolean_Payload = config
+    return this
   }
 
   // ============= Base_Types.Integer_Payload ===================
@@ -3388,8 +3405,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesInteger_Payload: Config_Base_TypesInteger_Payload = {return config_Base_TypesInteger_Payload}
 
-  def set_Config_Base_TypesInteger_Payload(config: Config_Base_TypesInteger_Payload): Unit ={
+  def set_Config_Base_TypesInteger_Payload(config: Config_Base_TypesInteger_Payload): RandomLib ={
     config_Base_TypesInteger_Payload = config
+    return this
   }
 
   // ============= Base_Types.Integer_8_Payload ===================
@@ -3399,8 +3417,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesInteger_8_Payload: Config_Base_TypesInteger_8_Payload = {return config_Base_TypesInteger_8_Payload}
 
-  def set_Config_Base_TypesInteger_8_Payload(config: Config_Base_TypesInteger_8_Payload): Unit ={
+  def set_Config_Base_TypesInteger_8_Payload(config: Config_Base_TypesInteger_8_Payload): RandomLib ={
     config_Base_TypesInteger_8_Payload = config
+    return this
   }
 
   // ============= Base_Types.Integer_16_Payload ===================
@@ -3410,8 +3429,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesInteger_16_Payload: Config_Base_TypesInteger_16_Payload = {return config_Base_TypesInteger_16_Payload}
 
-  def set_Config_Base_TypesInteger_16_Payload(config: Config_Base_TypesInteger_16_Payload): Unit ={
+  def set_Config_Base_TypesInteger_16_Payload(config: Config_Base_TypesInteger_16_Payload): RandomLib ={
     config_Base_TypesInteger_16_Payload = config
+    return this
   }
 
   // ============= Base_Types.Integer_32_Payload ===================
@@ -3421,8 +3441,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesInteger_32_Payload: Config_Base_TypesInteger_32_Payload = {return config_Base_TypesInteger_32_Payload}
 
-  def set_Config_Base_TypesInteger_32_Payload(config: Config_Base_TypesInteger_32_Payload): Unit ={
+  def set_Config_Base_TypesInteger_32_Payload(config: Config_Base_TypesInteger_32_Payload): RandomLib ={
     config_Base_TypesInteger_32_Payload = config
+    return this
   }
 
   // ============= Base_Types.Integer_64_Payload ===================
@@ -3432,8 +3453,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesInteger_64_Payload: Config_Base_TypesInteger_64_Payload = {return config_Base_TypesInteger_64_Payload}
 
-  def set_Config_Base_TypesInteger_64_Payload(config: Config_Base_TypesInteger_64_Payload): Unit ={
+  def set_Config_Base_TypesInteger_64_Payload(config: Config_Base_TypesInteger_64_Payload): RandomLib ={
     config_Base_TypesInteger_64_Payload = config
+    return this
   }
 
   // ============= Base_Types.Unsigned_8_Payload ===================
@@ -3443,8 +3465,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesUnsigned_8_Payload: Config_Base_TypesUnsigned_8_Payload = {return config_Base_TypesUnsigned_8_Payload}
 
-  def set_Config_Base_TypesUnsigned_8_Payload(config: Config_Base_TypesUnsigned_8_Payload): Unit ={
+  def set_Config_Base_TypesUnsigned_8_Payload(config: Config_Base_TypesUnsigned_8_Payload): RandomLib ={
     config_Base_TypesUnsigned_8_Payload = config
+    return this
   }
 
   // ============= Base_Types.Unsigned_16_Payload ===================
@@ -3454,8 +3477,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesUnsigned_16_Payload: Config_Base_TypesUnsigned_16_Payload = {return config_Base_TypesUnsigned_16_Payload}
 
-  def set_Config_Base_TypesUnsigned_16_Payload(config: Config_Base_TypesUnsigned_16_Payload): Unit ={
+  def set_Config_Base_TypesUnsigned_16_Payload(config: Config_Base_TypesUnsigned_16_Payload): RandomLib ={
     config_Base_TypesUnsigned_16_Payload = config
+    return this
   }
 
   // ============= Base_Types.Unsigned_32_Payload ===================
@@ -3465,8 +3489,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesUnsigned_32_Payload: Config_Base_TypesUnsigned_32_Payload = {return config_Base_TypesUnsigned_32_Payload}
 
-  def set_Config_Base_TypesUnsigned_32_Payload(config: Config_Base_TypesUnsigned_32_Payload): Unit ={
+  def set_Config_Base_TypesUnsigned_32_Payload(config: Config_Base_TypesUnsigned_32_Payload): RandomLib ={
     config_Base_TypesUnsigned_32_Payload = config
+    return this
   }
 
   // ============= Base_Types.Unsigned_64_Payload ===================
@@ -3476,8 +3501,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesUnsigned_64_Payload: Config_Base_TypesUnsigned_64_Payload = {return config_Base_TypesUnsigned_64_Payload}
 
-  def set_Config_Base_TypesUnsigned_64_Payload(config: Config_Base_TypesUnsigned_64_Payload): Unit ={
+  def set_Config_Base_TypesUnsigned_64_Payload(config: Config_Base_TypesUnsigned_64_Payload): RandomLib ={
     config_Base_TypesUnsigned_64_Payload = config
+    return this
   }
 
   // ============= Base_Types.Float_Payload ===================
@@ -3487,8 +3513,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesFloat_Payload: Config_Base_TypesFloat_Payload = {return config_Base_TypesFloat_Payload}
 
-  def set_Config_Base_TypesFloat_Payload(config: Config_Base_TypesFloat_Payload): Unit ={
+  def set_Config_Base_TypesFloat_Payload(config: Config_Base_TypesFloat_Payload): RandomLib ={
     config_Base_TypesFloat_Payload = config
+    return this
   }
 
   // ============= Base_Types.Float_32_Payload ===================
@@ -3498,8 +3525,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesFloat_32_Payload: Config_Base_TypesFloat_32_Payload = {return config_Base_TypesFloat_32_Payload}
 
-  def set_Config_Base_TypesFloat_32_Payload(config: Config_Base_TypesFloat_32_Payload): Unit ={
+  def set_Config_Base_TypesFloat_32_Payload(config: Config_Base_TypesFloat_32_Payload): RandomLib ={
     config_Base_TypesFloat_32_Payload = config
+    return this
   }
 
   // ============= Base_Types.Float_64_Payload ===================
@@ -3509,8 +3537,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesFloat_64_Payload: Config_Base_TypesFloat_64_Payload = {return config_Base_TypesFloat_64_Payload}
 
-  def set_Config_Base_TypesFloat_64_Payload(config: Config_Base_TypesFloat_64_Payload): Unit ={
+  def set_Config_Base_TypesFloat_64_Payload(config: Config_Base_TypesFloat_64_Payload): RandomLib ={
     config_Base_TypesFloat_64_Payload = config
+    return this
   }
 
   // ============= Base_Types.Character_Payload ===================
@@ -3520,8 +3549,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesCharacter_Payload: Config_Base_TypesCharacter_Payload = {return config_Base_TypesCharacter_Payload}
 
-  def set_Config_Base_TypesCharacter_Payload(config: Config_Base_TypesCharacter_Payload): Unit ={
+  def set_Config_Base_TypesCharacter_Payload(config: Config_Base_TypesCharacter_Payload): RandomLib ={
     config_Base_TypesCharacter_Payload = config
+    return this
   }
 
   // ============= Base_Types.String_Payload ===================
@@ -3531,8 +3561,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesString_Payload: Config_Base_TypesString_Payload = {return config_Base_TypesString_Payload}
 
-  def set_Config_Base_TypesString_Payload(config: Config_Base_TypesString_Payload): Unit ={
+  def set_Config_Base_TypesString_Payload(config: Config_Base_TypesString_Payload): RandomLib ={
     config_Base_TypesString_Payload = config
+    return this
   }
 
   // ============= Base_Types.Bits_Payload ===================
@@ -3542,8 +3573,9 @@ Aux_Types.scala
 
   def get_Config_Base_TypesBits_Payload: Config_Base_TypesBits_Payload = {return config_Base_TypesBits_Payload}
 
-  def set_Config_Base_TypesBits_Payload(config: Config_Base_TypesBits_Payload): Unit ={
+  def set_Config_Base_TypesBits_Payload(config: Config_Base_TypesBits_Payload): RandomLib ={
     config_Base_TypesBits_Payload = config
+    return this
   }
 
   // ============= CoolingFan.FanAck.Type ===================
@@ -3553,8 +3585,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFanAckType: Config_CoolingFanFanAckType = {return config_CoolingFanFanAckType}
 
-  def set_Config_CoolingFanFanAckType(config: Config_CoolingFanFanAckType): Unit ={
+  def set_Config_CoolingFanFanAckType(config: Config_CoolingFanFanAckType): RandomLib ={
     config_CoolingFanFanAckType = config
+    return this
   }
 
   // ============= CoolingFan.FanAck_Payload ===================
@@ -3564,8 +3597,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFanAck_Payload: Config_CoolingFanFanAck_Payload = {return config_CoolingFanFanAck_Payload}
 
-  def set_Config_CoolingFanFanAck_Payload(config: Config_CoolingFanFanAck_Payload): Unit ={
+  def set_Config_CoolingFanFanAck_Payload(config: Config_CoolingFanFanAck_Payload): RandomLib ={
     config_CoolingFanFanAck_Payload = config
+    return this
   }
 
   // ============= CoolingFan.FanCmd.Type ===================
@@ -3575,8 +3609,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFanCmdType: Config_CoolingFanFanCmdType = {return config_CoolingFanFanCmdType}
 
-  def set_Config_CoolingFanFanCmdType(config: Config_CoolingFanFanCmdType): Unit ={
+  def set_Config_CoolingFanFanCmdType(config: Config_CoolingFanFanCmdType): RandomLib ={
     config_CoolingFanFanCmdType = config
+    return this
   }
 
   // ============= CoolingFan.FanCmd_Payload ===================
@@ -3586,8 +3621,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFanCmd_Payload: Config_CoolingFanFanCmd_Payload = {return config_CoolingFanFanCmd_Payload}
 
-  def set_Config_CoolingFanFanCmd_Payload(config: Config_CoolingFanFanCmd_Payload): Unit ={
+  def set_Config_CoolingFanFanCmd_Payload(config: Config_CoolingFanFanCmd_Payload): RandomLib ={
     config_CoolingFanFanCmd_Payload = config
+    return this
   }
 
   // ============= CoolingFan.Fan_i_tcproc_fan_PreState_Container ===================
@@ -3597,8 +3633,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PreState_Container: Config_CoolingFanFan_i_tcproc_fan_PreState_Container = {return config_CoolingFanFan_i_tcproc_fan_PreState_Container}
 
-  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container): Unit ={
+  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container): RandomLib ={
     config_CoolingFanFan_i_tcproc_fan_PreState_Container = config
+    return this
   }
 
   // ============= CoolingFan.Fan_i_tcproc_fan_PreState_Container_P ===================
@@ -3608,8 +3645,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P = {return config_CoolingFanFan_i_tcproc_fan_PreState_Container_P}
 
-  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P): Unit ={
+  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P): RandomLib ={
     config_CoolingFanFan_i_tcproc_fan_PreState_Container_P = config
+    return this
   }
 
   // ============= CoolingFan.Fan_i_tcproc_fan_PreState_Container_PS ===================
@@ -3619,8 +3657,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS = {return config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS}
 
-  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS): Unit ={
+  def set_Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS(config: Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS): RandomLib ={
     config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS = config
+    return this
   }
 
   // ============= CoolingFan.Fan_i_tcproc_fan_PostState_Container ===================
@@ -3630,8 +3669,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PostState_Container: Config_CoolingFanFan_i_tcproc_fan_PostState_Container = {return config_CoolingFanFan_i_tcproc_fan_PostState_Container}
 
-  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container): Unit ={
+  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container): RandomLib ={
     config_CoolingFanFan_i_tcproc_fan_PostState_Container = config
+    return this
   }
 
   // ============= CoolingFan.Fan_i_tcproc_fan_PostState_Container_P ===================
@@ -3641,8 +3681,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P = {return config_CoolingFanFan_i_tcproc_fan_PostState_Container_P}
 
-  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P): Unit ={
+  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P): RandomLib ={
     config_CoolingFanFan_i_tcproc_fan_PostState_Container_P = config
+    return this
   }
 
   // ============= CoolingFan.Fan_i_tcproc_fan_PostState_Container_PS ===================
@@ -3652,8 +3693,9 @@ Aux_Types.scala
 
   def get_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS = {return config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS}
 
-  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS): Unit ={
+  def set_Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS(config: Config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS): RandomLib ={
     config_CoolingFanFan_i_tcproc_fan_PostState_Container_PS = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container ===================
@@ -3663,8 +3705,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container = {return config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container}
 
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container): Unit ={
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container): RandomLib ={
     config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_P ===================
@@ -3674,8 +3717,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P = {return config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P}
 
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P): Unit ={
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P): RandomLib ={
     config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS ===================
@@ -3685,8 +3729,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS = {return config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS}
 
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS): Unit ={
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS): RandomLib ={
     config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container ===================
@@ -3696,8 +3741,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container = {return config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container}
 
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container): Unit ={
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container): RandomLib ={
     config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container_P ===================
@@ -3707,8 +3753,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P = {return config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P}
 
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P): Unit ={
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P): RandomLib ={
     config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS ===================
@@ -3718,8 +3765,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS = {return config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS}
 
-  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS): Unit ={
+  def set_Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS(config: Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS): RandomLib ={
     config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_PS = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.SetPoint_i ===================
@@ -3729,8 +3777,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemSetPoint_i: Config_TempControlSoftwareSystemSetPoint_i = {return config_TempControlSoftwareSystemSetPoint_i}
 
-  def set_Config_TempControlSoftwareSystemSetPoint_i(config: Config_TempControlSoftwareSystemSetPoint_i): Unit ={
+  def set_Config_TempControlSoftwareSystemSetPoint_i(config: Config_TempControlSoftwareSystemSetPoint_i): RandomLib ={
     config_TempControlSoftwareSystemSetPoint_i = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.SetPoint_i_Payload ===================
@@ -3740,8 +3789,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemSetPoint_i_Payload: Config_TempControlSoftwareSystemSetPoint_i_Payload = {return config_TempControlSoftwareSystemSetPoint_i_Payload}
 
-  def set_Config_TempControlSoftwareSystemSetPoint_i_Payload(config: Config_TempControlSoftwareSystemSetPoint_i_Payload): Unit ={
+  def set_Config_TempControlSoftwareSystemSetPoint_i_Payload(config: Config_TempControlSoftwareSystemSetPoint_i_Payload): RandomLib ={
     config_TempControlSoftwareSystemSetPoint_i_Payload = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container ===================
@@ -3751,8 +3801,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container = {return config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container}
 
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container): Unit ={
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container): RandomLib ={
     config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container_P ===================
@@ -3762,8 +3813,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P = {return config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P}
 
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P): Unit ={
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P): RandomLib ={
     config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_P = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PreState_Container_PS ===================
@@ -3773,8 +3825,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS = {return config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS}
 
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS): Unit ={
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS): RandomLib ={
     config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PreState_Container_PS = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container ===================
@@ -3784,8 +3837,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container = {return config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container}
 
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container): Unit ={
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container): RandomLib ={
     config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container_P ===================
@@ -3795,8 +3849,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P = {return config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P}
 
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P): Unit ={
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P): RandomLib ={
     config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_P = config
+    return this
   }
 
   // ============= TempControlSoftwareSystem.TempControl_i_tcproc_tempControl_PostState_Container_PS ===================
@@ -3806,8 +3861,9 @@ Aux_Types.scala
 
   def get_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS = {return config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS}
 
-  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS): Unit ={
+  def set_Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS(config: Config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS): RandomLib ={
     config_TempControlSoftwareSystemTempControl_i_tcproc_tempControl_PostState_Container_PS = config
+    return this
   }
 
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container ===================
@@ -3817,8 +3873,9 @@ Aux_Types.scala
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container = {return config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container}
 
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container): Unit ={
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container): RandomLib ={
     config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container = config
+    return this
   }
 
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container_P ===================
@@ -3828,8 +3885,9 @@ Aux_Types.scala
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P = {return config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P}
 
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P): Unit ={
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P): RandomLib ={
     config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_P = config
+    return this
   }
 
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PreState_Container_PS ===================
@@ -3839,8 +3897,9 @@ Aux_Types.scala
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS = {return config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS}
 
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS): Unit ={
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS): RandomLib ={
     config_TempSensorTempSensor_i_tcproc_tempSensor_PreState_Container_PS = config
+    return this
   }
 
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container ===================
@@ -3850,8 +3909,9 @@ Aux_Types.scala
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container = {return config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container}
 
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container): Unit ={
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container): RandomLib ={
     config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container = config
+    return this
   }
 
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container_P ===================
@@ -3861,8 +3921,9 @@ Aux_Types.scala
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P = {return config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P}
 
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P): Unit ={
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P): RandomLib ={
     config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_P = config
+    return this
   }
 
   // ============= TempSensor.TempSensor_i_tcproc_tempSensor_PostState_Container_PS ===================
@@ -3872,8 +3933,9 @@ Aux_Types.scala
 
   def get_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS = {return config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS}
 
-  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS): Unit ={
+  def set_Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS(config: Config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS): RandomLib ={
     config_TempSensorTempSensor_i_tcproc_tempSensor_PostState_Container_PS = config
+    return this
   }
 
   // ============= TempSensor.Temperature_i ===================
@@ -3883,8 +3945,9 @@ Aux_Types.scala
 
   def get_Config_TempSensorTemperature_i: Config_TempSensorTemperature_i = {return config_TempSensorTemperature_i}
 
-  def set_Config_TempSensorTemperature_i(config: Config_TempSensorTemperature_i): Unit ={
+  def set_Config_TempSensorTemperature_i(config: Config_TempSensorTemperature_i): RandomLib ={
     config_TempSensorTemperature_i = config
+    return this
   }
 
   // ============= TempSensor.Temperature_i_Payload ===================
@@ -3894,8 +3957,9 @@ Aux_Types.scala
 
   def get_Config_TempSensorTemperature_i_Payload: Config_TempSensorTemperature_i_Payload = {return config_TempSensorTemperature_i_Payload}
 
-  def set_Config_TempSensorTemperature_i_Payload(config: Config_TempSensorTemperature_i_Payload): Unit ={
+  def set_Config_TempSensorTemperature_i_Payload(config: Config_TempSensorTemperature_i_Payload): RandomLib ={
     config_TempSensorTemperature_i_Payload = config
+    return this
   }
 }
 

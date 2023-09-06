@@ -18,7 +18,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   val verbose: B = F
 
-  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
+  var seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
   val ranLibfanCmd: RandomLib = RandomLib(Random.Gen64Impl(Xoshiro256.createSeed(seedGen.genU64())))
 
   override def next(): FanPeriodic_p_tcproc_fan_PreState_Container_P = {

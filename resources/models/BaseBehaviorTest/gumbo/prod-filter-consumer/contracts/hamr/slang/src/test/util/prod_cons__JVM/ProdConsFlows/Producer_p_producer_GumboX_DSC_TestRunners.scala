@@ -18,7 +18,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   val verbose: B = F
 
-  val seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
+  var seedGen: Gen64 = Random.Gen64Impl(Xoshiro256.create)
 
   override def next(): Producer_p_producer_PreState_Container_P = {
     return Producer_p_producer_PreState_Container_P(
@@ -38,7 +38,7 @@ import org.sireum.Random.Impl.Xoshiro256
 
   override def test(o: Producer_p_producer_PreState_Container_P): B = {
     BeforeEntrypoint()
-    val r: B = testComputeCB() match {
+    val r: B = testComputeCBV(o) match {
       case GumboXResult.Pre_Condition_Unsat =>
         prod_cons__JVM.DSC_RecordUnsatPre.report(prod_cons__JVM.JSON.fromProdConsFlowsProducer_p_producer_PreState_Container_P(o, T))
         T
