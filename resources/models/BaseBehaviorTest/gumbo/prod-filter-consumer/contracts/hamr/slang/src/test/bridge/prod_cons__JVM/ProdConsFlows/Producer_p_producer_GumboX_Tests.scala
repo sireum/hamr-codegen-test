@@ -18,6 +18,13 @@ class Producer_p_producer_GumboX_Tests extends Producer_p_producer_GumboX_TestHa
   // test vectors are never able to satisfy an entry point's assume pre-condition
   override val failOnUnsatPreconditions: B = F
 
+  // profiles that will be used for the initialise tests
+  override def getInitialiseProfiles: MSZ[Producer_p_producer_Profile] = {
+    return MSZ(getDefaultInitialiseProfile)
+  }
+
   // profiles that will be used to generate the incoming port values
-  override def getProfiles_P: ISZ[Producer_p_producer_Profile_P] = ISZ(getDefaultProfile_P)
+  override def getProfiles_P: MSZ[Producer_p_producer_Profile_P] = {
+    return MSZ(getDefaultProfile_P)
+  }
 }
