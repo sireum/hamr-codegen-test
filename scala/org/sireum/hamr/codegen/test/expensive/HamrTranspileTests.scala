@@ -4,13 +4,34 @@ import org.sireum._
 import org.sireum.hamr.codegen.common.util.{CodeGenPlatform, ExperimentalOptions}
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
-import org.sireum.hamr.codegen.test.util.TestMode
+import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 
 class HamrTranspileTests extends CodeGenTest {
 
   override def generateExpected: B = super.generateExpected || F
 
-  override def testModes: ISZ[TestMode.Type] = super.testModes :+ TestMode.sergen :+ TestMode.slangcheck
+  val isKekinianCi: B = {
+    Os.env("GITHUB_REPOSITORY") match {
+      case Some(r) if r == string"sireum/kekinian" =>
+        val buildcmd = TestUtil.getCodegenDir / "bin" / "build.cmd"
+        val results = proc"$buildcmd install-sbt-mill".at(TestUtil.getCodegenDir).console.run()
+        if (!results.ok) {
+          println(results.err)
+          assert(F, s"${getClass.getName} attempt to install sbt and mill failed: ${results.exitCode}")
+        }
+        T
+      case _ => F
+    }
+  }
+
+  override def testModes: ISZ[TestMode.Type] = {
+    (super.testModes :+ TestMode.sergen :+ TestMode.slangcheck) ++ (
+      // if we're kekinian and on github then also compile proyek projects via sbt and mill
+      // so that regressions introduced by changes to sireum's dependencies, e.g. Java,
+      // are caught when they are pushed
+      if (isKekinianCi) ISZ(TestMode.compile)
+      else ISZ())
+  }
 
   val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
 
