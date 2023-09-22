@@ -14,7 +14,7 @@ class HamrTranspileTests extends CodeGenTest {
     Os.env("GITHUB_REPOSITORY") match {
       case Some(r) if r == string"sireum/kekinian" =>
         val buildcmd = TestUtil.getCodegenDir / "bin" / "build.cmd"
-        val results = proc"$buildcmd install-sbt-mill".at(TestUtil.getCodegenDir).console.run()
+        val results = proc"$buildcmd install-sbt-mill".at(TestUtil.getCodegenDir).run()
         if (!results.ok) {
           println(results.err)
           assert(F, s"${getClass.getName} attempt to install sbt and mill failed: ${results.exitCode}")
