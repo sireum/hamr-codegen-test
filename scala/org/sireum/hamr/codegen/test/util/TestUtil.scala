@@ -350,11 +350,15 @@ object TestUtil {
 
       //noinspection DfaConstantConditions
       if (isLinux(testOps.platform) && keepGoing && performAction("C compile")) {
-        println("Compiling C project via script ...")
-        val compileScript = fetch("compile.cmd", cOutDir.get)
+        if (Os.isWin && !cygwinInstalled()) {
+          println("Cygwin not detected, skipping C compilation")
+        } else {
+          println("Compiling C project via script ...")
+          val compileScript = fetch("compile.cmd", cOutDir.get)
 
-        val cCompileResults = vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None(), "c-compile")
-        _check(cCompileResults, "C Compilation failed")
+          val cCompileResults = vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None(), "c-compile")
+          _check(cCompileResults, "C Compilation failed")
+        }
       }
     }
 
@@ -756,6 +760,9 @@ object TestUtil {
     return ret
   }
 
+  def cygwinInstalled(): B = {
+    return proc"reg query HKEY_LOCAL_MACHINE\\Software\\Cygwin\\setup /v rootdir".run().ok
+  }
 }
 
 
