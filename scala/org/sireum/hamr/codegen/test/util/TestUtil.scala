@@ -327,7 +327,7 @@ object TestUtil {
           val sbt = getCodegenDir / "bin" / os / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
           if (sbt.exists) {
             println("Compiling Slang project via sbt ...")
-            val sbtResults = vproc(s"$sbt compile --batch", projectCmd.up.up, ISZ(), None(), "sbt-compile")
+            val sbtResults = vproc(s"$sbt compile --batch", projectCmd.up.up, for(e <- Os.envs.entries) yield (e._1, e._2), None(), "sbt-compile")
             _check(sbtResults, "sbt compilation failed")
           } else {
             eprintln(s"sbt not found at $sbt.")
@@ -339,7 +339,7 @@ object TestUtil {
           val mill = getCodegenDir / "bin" / os / (if (Os.isWin) "mill.bat" else "mill")
           if (mill.exists && keepGoing) {
             println("Compiling Slang project via mill ...")
-            val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, ISZ(), None(), "mill-compile")
+            val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, for(e <- Os.envs.entries) yield (e._1, e._2), None(), "mill-compile")
             _check(sbtResults, "mill compilation failed")
           } else {
             eprintln(s"mill not found at $mill.")
