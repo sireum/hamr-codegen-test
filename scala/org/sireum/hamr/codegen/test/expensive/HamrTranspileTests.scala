@@ -1,12 +1,13 @@
 package org.sireum.hamr.codegen.test.expensive
 
+import org.scalatest.BeforeAndAfterAll
 import org.sireum._
 import org.sireum.hamr.codegen.common.util.{CodeGenPlatform, ExperimentalOptions}
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 
-class HamrTranspileTests extends CodeGenTest {
+class HamrTranspileTests extends CodeGenTest with BeforeAndAfterAll {
 
   override def generateExpected: B = super.generateExpected || F
 
@@ -64,6 +65,21 @@ class HamrTranspileTests extends CodeGenTest {
         description = None(),
         modelUri = None(),
         expectedErrorReasons = ISZ())
+    }
+  }
+
+  override def afterAll(): Unit = {
+    if (Os.isWin && isKekinianCi) {
+      val binDir = TestUtil.getCodegenDir / "bin" / "win"
+      val resultsDir = TestUtil.getCodegenDir / "jvm" / "src" / "test" / "results"
+      if (binDir.exists) {
+        binDir.removeAll()
+        println(s"Removed ${binDir}")
+      }
+      if (resultsDir.exists) {
+        resultsDir.removeAll()
+        println(s"Removed $resultsDir")
+      }
     }
   }
 }
