@@ -20,9 +20,9 @@ object Consumer_p_consumer_GumboX {
       api_g_event_data_in: Option[ProdConsFlows.Container_i],
       api_e_data_in: ProdConsFlows.Container_i): B =
     (// D-Inv-Guard: Datatype invariants for the types associated with consumer's state variables and incoming ports
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_f_event_data_in) & 
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_g_event_data_in) & 
-     ProdConsFlows.Container_i_GumboX.D_Inv_Container_i(api_e_data_in))
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_in))
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for consumer via container
     *

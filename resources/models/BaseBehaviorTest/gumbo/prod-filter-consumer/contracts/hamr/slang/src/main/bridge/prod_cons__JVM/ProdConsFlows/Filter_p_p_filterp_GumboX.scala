@@ -97,9 +97,9 @@ object Filter_p_p_filterp_GumboX {
       api_g_event_data_out: Option[ProdConsFlows.Container_i],
       api_e_data_out: ProdConsFlows.Container_i): B =
     (// D-Inv-Guard: Datatype invariants for the types associated with filterp's state variables and outgoing ports
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_f_event_data_out) &
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_g_event_data_out) &
-     ProdConsFlows.Container_i_GumboX.D_Inv_Container_i(api_e_data_out) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_out) &
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_out) &
+     ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_out) & 
 
      // I-Guar-Guard: Integration constraints for filterp's outgoing ports"
      I_Guar_e_data_out(api_e_data_out) &
@@ -132,9 +132,9 @@ object Filter_p_p_filterp_GumboX {
       api_c_event_data_in: Option[ProdConsFlows.Container_i],
       api_a_data_in: ProdConsFlows.Container_i): B =
     (// D-Inv-Guard: Datatype invariants for the types associated with filterp's state variables and incoming ports
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_b_event_data_in) & 
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_c_event_data_in) & 
-     ProdConsFlows.Container_i_GumboX.D_Inv_Container_i(api_a_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_b_event_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_c_event_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Container_i(api_a_data_in) & 
 
      // I-Assm-Guard: Integration constraints for filterp's incoming ports
      I_Assm_Guard_a_data_in(api_a_data_in) & 
@@ -207,9 +207,9 @@ object Filter_p_p_filterp_GumboX {
       api_g_event_data_out: Option[ProdConsFlows.Container_i],
       api_e_data_out: ProdConsFlows.Container_i): B =
     (// D-Inv-Guard: Datatype invariants for the types associated with filterp's state variables and outgoing ports
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_f_event_data_out) & 
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_g_event_data_out) & 
-     ProdConsFlows.Container_i_GumboX.D_Inv_Container_i(api_e_data_out) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_out) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_out) & 
+     ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_out) & 
 
      // I-Guar-Guard: Integration constraints for filterp's outgoing ports
      I_Guar_e_data_out(api_e_data_out) & 

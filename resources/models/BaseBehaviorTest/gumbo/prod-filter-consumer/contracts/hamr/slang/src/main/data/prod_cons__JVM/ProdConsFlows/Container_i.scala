@@ -12,6 +12,22 @@ object Container_i {
     return ProdConsFlows.Container_i(
       value = Base_Types.Integer_example())
   }
+
+  /** invariant gtZero
+    *   Must be greater than zero
+    */
+  @strictpure def gtZero_Invariant(value: ProdConsFlows.Container_i): B =
+    value.value > 0
+
+  /** D-Inv Data Invariant for ProdConsFlows.Container_i
+    */
+  @strictpure def D_Inv_Container_i(value: ProdConsFlows.Container_i): B =
+    (gtZero_Invariant(value))
+
+  /** D-Inv-Guard Data Invariant for ProdConsFlows.Container_i
+    */
+  @strictpure def D_Inv_Guard_Container_i(value: Option[ProdConsFlows.Container_i]): B =
+    value.nonEmpty -->: D_Inv_Container_i(value.get)
 }
 
 @datatype class Container_i(

@@ -20,9 +20,9 @@ object Producer_p_producer_GumboX {
       api_c_event_data_out: Option[ProdConsFlows.Container_i],
       api_a_data_out: ProdConsFlows.Container_i): B =
     (// D-Inv-Guard: Datatype invariants for the types associated with producer's state variables and outgoing ports
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_b_event_data_out) &
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_c_event_data_out) &
-     ProdConsFlows.Container_i_GumboX.D_Inv_Container_i(api_a_data_out))
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_b_event_data_out) &
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_c_event_data_out) &
+     ProdConsFlows.Container_i.D_Inv_Container_i(api_a_data_out))
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -48,9 +48,9 @@ object Producer_p_producer_GumboX {
       api_c_event_data_out: Option[ProdConsFlows.Container_i],
       api_a_data_out: ProdConsFlows.Container_i): B =
     (// D-Inv-Guard: Datatype invariants for the types associated with producer's state variables and outgoing ports
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_b_event_data_out) & 
-     ProdConsFlows.Container_i_GumboX.D_Inv_Guard_Container_i(api_c_event_data_out) & 
-     ProdConsFlows.Container_i_GumboX.D_Inv_Container_i(api_a_data_out))
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_b_event_data_out) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_c_event_data_out) & 
+     ProdConsFlows.Container_i.D_Inv_Container_i(api_a_data_out))
 
   /** CEP-Post: Compute Entrypoint Post-Condition for producer via containers
     *
