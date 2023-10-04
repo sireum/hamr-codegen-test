@@ -3476,7 +3476,7 @@ Aux_Types.scala
   // ============= ProdConsFlows.Container_i ===================
   def alwaysTrue_ProdConsFlowsContainer_i(v: ProdConsFlows.Container_i): B = {return T}
 
-  var config_ProdConsFlowsContainer_i: Config_ProdConsFlowsContainer_i = Config_ProdConsFlowsContainer_i(100, _verbose, ProdConsFlows.Container_i.D_Inv_Container_i _)
+  var config_ProdConsFlowsContainer_i: Config_ProdConsFlowsContainer_i = Config_ProdConsFlowsContainer_i(100, _verbose, prod_cons__JVM.ProdConsFlows.Container_i.D_Inv_Container_i _)
 
   def get_Config_ProdConsFlowsContainer_i: Config_ProdConsFlowsContainer_i = {return config_ProdConsFlowsContainer_i}
 
