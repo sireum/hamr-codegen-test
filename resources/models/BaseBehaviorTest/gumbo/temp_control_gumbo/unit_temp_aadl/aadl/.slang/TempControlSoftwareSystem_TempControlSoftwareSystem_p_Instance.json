@@ -11266,8 +11266,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -11570,8 +11569,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -12388,8 +12386,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -13774,8 +13771,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -15521,8 +15517,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "Pure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -19544,8 +19539,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -20266,8 +20260,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -20570,8 +20563,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -20874,8 +20866,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
@@ -21178,8 +21169,7 @@
               "type" : "org.sireum.lang.ast.Purity",
               "value" : "StrictPure"
             },
-            "hasOverride" : false,
-            "isHelper" : false,
+            "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
               "isPure" : true,
