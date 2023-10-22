@@ -54,6 +54,8 @@ void a_ScheduleProviderI_getStaticSchedule(STACK_FRAME art_scheduling_static_Sch
 }
 
 void fillInSlot(IS_5AA467 slotSequence, int index, Z bridgeId, int length) {
-  slotSequence->value[index].bridgeId = bridgeId;
-  slotSequence->value[index].length = length;
+  // TODO: need to refactor to adjust to 2023.10 Slang changes
+  exit(1);
+  //slotSequence->value[index].bridgeId = bridgeId;
+  //slotSequence->value[index].length = length;
 }

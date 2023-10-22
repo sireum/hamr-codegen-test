@@ -45,13 +45,13 @@ trait SlangEmbeddedModule extends ScalaModule {
   val scalaTestVersion = "3.2.17"
 
   // versions.properties key: org.sireum%%scalac-plugin%
-  // https://github.com/sireum/scalac-plugin/tree/4.20231006.2564954
-  val sireumScalacVersion = "4.20231006.2564954"
+  // https://github.com/sireum/scalac-plugin/tree/4.20231016.39e53e1
+  val sireumScalacVersion = "4.20231016.39e53e1"
 
 
   // refer to https://github.com/sireum/kekinian/releases to get the latest
-  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/b0cf3cb57a
-  val kekinianVersion = "b0cf3cb57a"
+  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/b34482191a
+  val kekinianVersion = "b34482191a"
 
 
   val inspectorVersion = "0.6-SNAPSHOT"
@@ -109,6 +109,7 @@ trait slangEmbeddedProject extends SlangEmbeddedModule {
     final override def millSourcePath = super.millSourcePath / os.up / os.up / "src" / "test"
 
     override def sources = T.sources( millSourcePath / "bridge",
+                                      millSourcePath / "system",
                                       millSourcePath / "util" )
 
     override def ivyDeps = Agg(ivy"org.scalatest::scalatest::${scalaTestVersion}")
