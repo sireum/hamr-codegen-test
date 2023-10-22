@@ -76,6 +76,7 @@ trait SlangEmbeddedModule extends ScalaModule {
 
   override def ivyDeps = Agg(
     ivy"org.sireum.kekinian::library::${kekinianVersion}",
+    ivy"org.sireum.kekinian::hamr-vision::${kekinianVersion}",
 
     // Jetbrains UI Designer
     ivy"com.intellij:forms_rt:${formsRtVersion}"

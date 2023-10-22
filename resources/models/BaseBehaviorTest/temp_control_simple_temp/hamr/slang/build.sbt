@@ -74,7 +74,8 @@ val commonSettings = Seq(
   addCompilerPlugin("org.sireum" %% "scalac-plugin" % sireumScalacVersion),
   ThisBuild / evictionErrorLevel := Level.Warn,
   libraryDependencies ++= Seq(
-    "org.sireum.kekinian" %% "library" % kekinianVersion withSources()
+    "org.sireum.kekinian" %% "library" % kekinianVersion withSources(),
+    "org.sireum.kekinian" %% "hamr-vision" % kekinianVersion withSources()
   )
 )
 
