@@ -28,6 +28,7 @@ object Cli {
     val args: ISZ[String],
     val msgpack: B,
     val verbose: B,
+    val runtimeMonitoring: B,
     val platform: CodegenHamrPlatform.Type,
     val outputDir: Option[String],
     val packageName: Option[String],
@@ -87,6 +88,8 @@ import Cli._
           |    --msgpack            Input serialized using Msgpack (otherwise JSON
           |                           assumed)
           |-v, --verbose            Enable verbose mode
+          |-m, --runtime-monitoring    
+          |                          Enable runtime monitoring
           |-p, --platform           Target platform (expects one of { JVM, Linux, Cygwin,
           |                           MacOS, seL4, seL4_Only, seL4_TB }; default: JVM)
           |-h, --help               Display this information
@@ -132,6 +135,7 @@ import Cli._
 
     var msgpack: B = false
     var verbose: B = false
+    var runtimeMonitoring: B = false
     var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
     var outputDir: Option[String] = Some(".")
     var packageName: Option[String] = None[String]()
@@ -168,6 +172,12 @@ import Cli._
            val o: Option[B] = { j = j - 1; Some(!verbose) }
            o match {
              case Some(v) => verbose = v
+             case _ => return None()
+           }
+         } else if (arg == "-m" || arg == "--runtime-monitoring") {
+           val o: Option[B] = { j = j - 1; Some(!runtimeMonitoring) }
+           o match {
+             case Some(v) => runtimeMonitoring = v
              case _ => return None()
            }
          } else if (arg == "-p" || arg == "--platform") {
@@ -287,7 +297,7 @@ import Cli._
         isOption = F
       }
     }
-    return Some(CodegenOption(help, parseArguments(args, j), msgpack, verbose, platform, outputDir, packageName, noProyekIve, noEmbedArt, devicesAsThreads, genSbtMill, slangAuxCodeDirs, slangOutputCDir, excludeComponentImpl, bitWidth, maxStringSize, maxArraySize, runTranspiler, camkesOutputDir, camkesAuxCodeDirs, aadlRootDir, experimentalOptions))
+    return Some(CodegenOption(help, parseArguments(args, j), msgpack, verbose, runtimeMonitoring, platform, outputDir, packageName, noProyekIve, noEmbedArt, devicesAsThreads, genSbtMill, slangAuxCodeDirs, slangOutputCDir, excludeComponentImpl, bitWidth, maxStringSize, maxArraySize, runTranspiler, camkesOutputDir, camkesAuxCodeDirs, aadlRootDir, experimentalOptions))
   }
 
   def parseArguments(args: ISZ[String], i: Z): ISZ[String] = {

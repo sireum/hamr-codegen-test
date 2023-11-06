@@ -241,6 +241,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     ipc = CodeGenIpcMechanism.SharedMemory,
 
     verbose = F,
+    runtimeMonitoring = F,
     platform = CodeGenPlatform.JVM,
     slangOutputDir = None(),
     packageName = None(),
@@ -347,6 +348,7 @@ object CodegenBehaviorTest {
           ipc = CodeGenIpcMechanism.SharedMemory,
 
           verbose = opts.verbose,
+          runtimeMonitoring = opts.runtimeMonitoring,
           platform = platform,
           slangOutputDir = canon(opts.outputDir),
           packageName = opts.packageName,

@@ -28,4 +28,5 @@ phantomOptions = --main-package ./packages/TempControlSoftwareSystem.aadl \
 # same options as 'sireum hamr codegen', paths should be relative to the .hamrtest file
 hamrArgs = --package-name tc \
            --no-proyek-ive \
+           --runtime-monitoring \
            --output-dir ../hamr-gen/slang

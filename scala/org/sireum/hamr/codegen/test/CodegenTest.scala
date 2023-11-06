@@ -301,6 +301,7 @@ object CodeGenTest {
     writeOutResources = T,
     ipc = CodeGenIpcMechanism.SharedMemory,
 
+    runtimeMonitoring = F,
     verbose = F,
     platform = CodeGenPlatform.JVM,
     slangOutputDir = None(),

@@ -81,6 +81,11 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform),
         None(), None(), ISZ())
 
+      test(s"$name--${platform}--runtime-monitoring", modelDir, model,
+        baseOptions(platform = platform,
+          runtimeMonitoring = T),
+        None(), None(), ISZ())
+
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
@@ -102,8 +107,13 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform),
         None(), None(), ISZ())
 
+      test(s"$name--${platform}--runtime-monitoring", modelDir, model,
+        baseOptions(platform = platform,
+          runtimeMonitoring = T),
+        None(), None(), ISZ())
+
       platform = CodeGenPlatform.JVM
-      test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
+      test(s"$name--${platform}-Do-notembed-art", modelDir, model,
         baseOptions(platform = platform,
           noEmbedArt = T),
         None(), None(), ISZ())
