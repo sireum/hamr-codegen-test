@@ -41,4 +41,6 @@ val files: ISZ[String] = ISZ("../src/main/data/tc/TempSensor/Unit.scala",
 
 val toolargs: String = st"${(files, " ")}".render
 
-proc"$sireum tools sergen -p tc -m json,msgpack -o ${Os.slashDir.up}/src/main/data/tc $toolargs".at(Os.slashDir).console.runCheck()
+(Os.slashDir.up / "src" / "main" / "util" / "tc").mkdirAll()
+
+proc"$sireum tools sergen -p tc -m json,msgpack -o ${Os.slashDir.up}/src/main/util/tc $toolargs".at(Os.slashDir).console.runCheck()

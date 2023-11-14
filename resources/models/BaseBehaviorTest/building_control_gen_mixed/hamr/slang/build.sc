@@ -50,8 +50,8 @@ trait SlangEmbeddedModule extends ScalaModule {
 
 
   // refer to https://github.com/sireum/kekinian/releases to get the latest
-  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/6b8228395c
-  val kekinianVersion = "6b8228395c"
+  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/bcd97dc7d9
+  val kekinianVersion = "bcd97dc7d9"
 
 
   val inspectorVersion = "0.6-SNAPSHOT"
@@ -100,7 +100,8 @@ trait slangEmbeddedProject extends SlangEmbeddedModule {
     millSourcePath / os.up / "src" / "main" / "component",
     millSourcePath / os.up / "src" / "main" / "data",
     millSourcePath / os.up / "src" / "main" / "nix",
-    millSourcePath / os.up / "src" / "main" / "seL4Nix"
+    millSourcePath / os.up / "src" / "main" / "seL4Nix",
+    millSourcePath / os.up / "src" / "main" / "util"
   )
 
   override def sources = T.sources(contributedSources)

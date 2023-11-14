@@ -34,4 +34,6 @@ val files: ISZ[String] = ISZ("../src/main/data/a/Arrays/Coordinate_Impl.scala",
 
 val toolargs: String = st"${(files, " ")}".render
 
-proc"$sireum tools sergen -p a -m json,msgpack -o ${Os.slashDir.up}/src/main/data/a $toolargs".at(Os.slashDir).console.runCheck()
+(Os.slashDir.up / "src" / "main" / "util" / "a").mkdirAll()
+
+proc"$sireum tools sergen -p a -m json,msgpack -o ${Os.slashDir.up}/src/main/util/a $toolargs".at(Os.slashDir).console.runCheck()

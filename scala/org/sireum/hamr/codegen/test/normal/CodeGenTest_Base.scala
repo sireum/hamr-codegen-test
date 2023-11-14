@@ -113,7 +113,7 @@ class CodeGenTest_Base extends CodeGenTest {
         None(), None(), ISZ())
 
       platform = CodeGenPlatform.JVM
-      test(s"$name--${platform}-Do-notembed-art", modelDir, model,
+      test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
         baseOptions(platform = platform,
           noEmbedArt = T),
         None(), None(), ISZ())

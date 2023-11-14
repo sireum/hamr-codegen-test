@@ -672,6 +672,8 @@ object TestUtil {
 
     val sireum: Os.Path = TestUtil.getSireum
 
+    Os.path(sc.outputDir.get).mkdirAll()
+
     args = ISZ[String](sireum.value, "tools", "slangcheck", "generator") ++ args
 
     val results = Os.proc(args).console.run()
@@ -702,6 +704,8 @@ object TestUtil {
     val sireum: Os.Path = TestUtil.getSireum
 
     args = ISZ[String](sireum.value, "tools", "sergen") ++ args
+
+    Os.path(tc.outputDir.get).mkdirAll()
 
     val results = Os.proc(args).console.run()
 

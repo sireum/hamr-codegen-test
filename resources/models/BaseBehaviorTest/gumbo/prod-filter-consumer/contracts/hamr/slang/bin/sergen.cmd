@@ -35,4 +35,6 @@ val files: ISZ[String] = ISZ("../src/main/data/prod_cons__JVM/ProdConsFlows/Cont
 
 val toolargs: String = st"${(files, " ")}".render
 
-proc"$sireum tools sergen -p prod_cons__JVM -m json,msgpack -o ${Os.slashDir.up}/src/main/data/prod_cons__JVM $toolargs".at(Os.slashDir).console.runCheck()
+(Os.slashDir.up / "src" / "main" / "util" / "prod_cons__JVM").mkdirAll()
+
+proc"$sireum tools sergen -p prod_cons__JVM -m json,msgpack -o ${Os.slashDir.up}/src/main/util/prod_cons__JVM $toolargs".at(Os.slashDir).console.runCheck()

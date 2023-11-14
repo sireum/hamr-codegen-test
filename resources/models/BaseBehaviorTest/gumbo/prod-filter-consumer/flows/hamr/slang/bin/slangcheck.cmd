@@ -30,4 +30,6 @@ val files: ISZ[String] = ISZ("../src/main/data/prod_cons__JVM/Base_Types.scala",
 
 val toolargs: String = st"${(files, " ")}".render
 
-proc"$sireum proyek slangcheck -p prod_cons__JVM -o ${Os.slashDir.up}/src/main/data/prod_cons__JVM ${Os.slashDir.up} $toolargs".at(Os.slashDir).console.runCheck()
+(Os.slashDir.up / "src" / "main" / "util" / "prod_cons__JVM").mkdirAll()
+
+proc"$sireum proyek slangcheck -p prod_cons__JVM -o ${Os.slashDir.up}/src/main/util/prod_cons__JVM ${Os.slashDir.up} $toolargs".at(Os.slashDir).console.runCheck()

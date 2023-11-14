@@ -38,4 +38,6 @@ val files: ISZ[String] = ISZ("../src/main/data/TempControlSimpleTemp/TempSensor/
 
 val toolargs: String = st"${(files, " ")}".render
 
-proc"$sireum tools sergen -p TempControlSimpleTemp -m json,msgpack -o ${Os.slashDir.up}/src/main/data/TempControlSimpleTemp $toolargs".at(Os.slashDir).console.runCheck()
+(Os.slashDir.up / "src" / "main" / "util" / "TempControlSimpleTemp").mkdirAll()
+
+proc"$sireum tools sergen -p TempControlSimpleTemp -m json,msgpack -o ${Os.slashDir.up}/src/main/util/TempControlSimpleTemp $toolargs".at(Os.slashDir).console.runCheck()

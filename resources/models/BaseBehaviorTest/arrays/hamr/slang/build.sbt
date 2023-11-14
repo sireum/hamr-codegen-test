@@ -53,8 +53,8 @@ val sireumScalacVersion = "4.20231016.39e53e1"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/6b8228395c
-val kekinianVersion = "6b8228395c"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/bcd97dc7d9
+val kekinianVersion = "bcd97dc7d9"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"
@@ -88,6 +88,7 @@ val slangEmbeddedSettings = Seq(
   Compile / unmanagedSourceDirectories += baseDirectory.value / "src/main/data",
   Compile / unmanagedSourceDirectories += baseDirectory.value / "src/main/nix",
   Compile / unmanagedSourceDirectories += baseDirectory.value / "src/main/seL4Nix",
+  Compile / unmanagedSourceDirectories += baseDirectory.value / "src/main/util",
 
   Compile / unmanagedSourceDirectories in Test += baseDirectory.value / "src/test/bridge",
   Compile / unmanagedSourceDirectories in Test += baseDirectory.value / "src/test/system",
