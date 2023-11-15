@@ -3,26 +3,41 @@ package tc.runtimemonitor
 import org.sireum._
 import art.Art._
 
+import java.awt.GraphicsEnvironment
+
 // This file will not be overwritten so is safe to edit
 
 object RuntimeMonitor_Ext {
 
-  val baseListeners: ISZ[RuntimeMonitorListener] = ISZ(
+  /** you use the java.awt.headless system property to enable/disable guis.
+    * e.g. in scala test context
+    *
+    *   override def beforeEach(): Unit = {
+    *     System.setProperty("java.awt.headless", "true")
+    *     super.beforeEach()
+    *   }
+    *
+    */
 
-    // add/remove listeners here
+  val baseListeners: ISZ[RuntimeMonitorListener] =
+    if (GraphicsEnvironment.isHeadless) ISZ()
+    else {
+      ISZ(
+        // add/remove listeners here
 
 
-    // BEGIN MARKER RUNTIME MONITORING
+        // BEGIN MARKER RUNTIME MONITORING
 
-    // if you don't want to use the following runtime monitors then surround this marker block
-    // with a block comment /** .. **/ to prevent codegen from emitting an error if it's rerun
+        // if you don't want to use the following runtime monitors then surround this marker block
+        // with a block comment /** .. **/ to prevent codegen from emitting an error if it's rerun
 
-    new GumboXRuntimeMonitor_Ext(),
+        new GumboXRuntimeMonitor_Ext(),
 
-    new HamrVisionRuntimeMonitor(HamrVision.cp)
+        new HamrVisionRuntimeMonitor(HamrVision.cp)
 
-    // END MARKER RUNTIME MONITORING
-  )
+        // END MARKER RUNTIME MONITORING
+      )
+    }
 
   var externalListeners: ISZ[RuntimeMonitorListener] = ISZ()
 
