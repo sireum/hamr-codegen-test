@@ -81,11 +81,6 @@ class CodeGenTest_Base extends CodeGenTest {
         baseOptions(platform = platform),
         None(), None(), ISZ())
 
-      test(s"$name--${platform}--runtime-monitoring", modelDir, model,
-        baseOptions(platform = platform,
-          runtimeMonitoring = T),
-        None(), None(), ISZ())
-
       platform = CodeGenPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),

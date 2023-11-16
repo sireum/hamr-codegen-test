@@ -82,9 +82,13 @@ object TestUtil {
   }
 
   val osateDir: Option[Os.Path] = {
-    val d = getCodegenDir / "bin" / os / s"osate${if (Os.isMac) ".app" else ""}"
-    if (d.exists) Some(d)
-    else None()
+    Os.env("OSATE_HOME") match {
+      case Some(s) => Some(Os.path(s))
+      case _ =>
+        val d = getCodegenDir / "bin" / os / s"osate${if (Os.isMac) ".app" else ""}"
+        if (d.exists) Some(d)
+        else None()
+      }
   }
 
   def getModel(airFile: Option[Os.Path],

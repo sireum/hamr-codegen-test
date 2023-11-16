@@ -94,7 +94,9 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
     testOptions.aadlRootDir match {
       case Some(e) =>
-        val clean = Os.path(e) / "clean.cmd"
+        val clean =
+          if ((Os.path(e) / "clean.cmd").exists) Os.path(e) / "clean.cmd"
+          else Os.path(e) / "bin" / "clean.cmd"
         if (clean.exists) {
           println(s"Cleaning $testName")
           val p = proc"$clean $testName".at(clean.up)

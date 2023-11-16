@@ -12,7 +12,7 @@ class BaseBehaviorTestDynamic extends CodegenBehaviorTest {
 
   override def filter: B = super.filter || F
 
-  override def filters: ISZ[String] = ISZ("consumer-contracts")
+  override def filters: ISZ[String] = ISZ("isolette")
 
   // set base directory for AADL models to be used in behavior tests
   val modelsDirs = TestUtil.getRootDirectory(getClass) / "resources" / "models"
