@@ -19,11 +19,12 @@ class GumboXRuntimeMonitor_Ext extends JFrame with RuntimeMonitorListener {
   var jtable: JTable = _
   var model: TableModel = _
   var scrollToBottom: B = T
+  val threadNickNames = GumboXRuntimeMonitor.threadNickNames
 
   def init(modelInfo: ModelInfo): Unit = {
     this.setTitle("GumboX Runtime Monitor")
 
-    model = new TableModel(GumboXRuntimeMonitor.threadNickNames)
+    model = new TableModel()
     jtable = new JTable()
     jtable.setModel(model)
 
@@ -150,8 +151,15 @@ class GumboXRuntimeMonitor_Ext extends JFrame with RuntimeMonitorListener {
     SwingUtilities.invokeLater(() => dispatch(bridge, observationKind, pre, Some(post)))
   }
 
-  def dispatch(bridge: art.Art.BridgeId, observationKind: ObservationKind.Type, pre: Option[art.DataContent], post: Option[art.DataContent]): Unit = {
-    model.addRow(Row(bridge, observationKind,
+  def dispatch(bridgeId: art.Art.BridgeId, observationKind: ObservationKind.Type, pre: Option[art.DataContent], post: Option[art.DataContent]): Unit = {
+    val componentName = threadNickNames.get(bridgeId) match {
+      case Some(nickName) => nickName.native
+      case _ => bridgeId.string.native
+    }
+    val s = observationKind.string.native
+    val simpleKind = s.substring(s.lastIndexOf("_") + 1, s.length)
+    model.addRow(Row(bridgeId, observationKind,
+      componentName, simpleKind,
       GumboXDispatcher.checkContract(observationKind, pre, post),
       if (pre.nonEmpty) Some(JSON.from_artDataContent(pre.get, T)) else None(),
       if (post.nonEmpty) Some(JSON.from_artDataContent(post.get, T)) else None()))
@@ -173,9 +181,10 @@ class GumboXRuntimeMonitor_Ext extends JFrame with RuntimeMonitorListener {
   override def $clone: MutableMarker = this
 }
 
-case class Row(bridgeId: BridgeId, observationKind: ObservationKind.Type, result: Boolean, pre: Option[String], post: Option[String])
+case class Row(bridgeId: BridgeId, observationKind: ObservationKind.Type,
+               componentName: String, simpleKind: String, result: Boolean, pre: Option[String], post: Option[String])
 
-class TableModel(threadNickNames: Map[BridgeId, String]) extends AbstractTableModel {
+class TableModel() extends AbstractTableModel {
   val columnNames = Array("Component", "Kind", "Satisified")
 
   var data: ISZ[Row] = ISZ()
@@ -203,13 +212,8 @@ class TableModel(threadNickNames: Map[BridgeId, String]) extends AbstractTableMo
 
   override def getValueAt(rowIndex: Int, columnIndex: Int): Object = {
     return columnIndex match {
-      case 0 =>
-        val bridgeId = data(rowIndex).bridgeId
-        threadNickNames.get(bridgeId) match {
-          case Some(nickName) => nickName.native
-          case _ => bridgeId.string.native
-        }
-      case 1 => data(rowIndex).observationKind.string.native
+      case 0 => data(rowIndex).componentName.native
+      case 1 => data(rowIndex).simpleKind.native
       case 2 => data(rowIndex).result.string.native
       case _ => halt("Infeasible")
     }
