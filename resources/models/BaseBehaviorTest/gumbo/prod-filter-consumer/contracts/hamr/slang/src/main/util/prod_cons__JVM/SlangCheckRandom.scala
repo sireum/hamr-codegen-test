@@ -1706,6 +1706,54 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
+  //=================== ISZ[B] =====================
+  def get_Config_ISZB: Config_ISZB
+  def set_Config_ISZB(config: Config_ISZB): RandomLib
+
+  def nextISZB(): ISZ[B] = {
+
+    var length: Z = gen.nextZBetween(0, get_numElement)
+    var v: ISZ[B] = ISZ()
+    for (r <- 0 until length) {
+      v = v :+ nextB()
+    }
+
+    if(get_Config_ISZB.attempts >= 0) {
+     for(i <- 0 to get_Config_ISZB.attempts) {
+        if(get_Config_ISZB.filter(v)) {
+          return v
+        }
+        if (get_Config_ISZB.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+
+        length = gen.nextZBetween(0, get_numElement)
+        v = ISZ()
+        for (r <- 0 until length) {
+           v = v :+ nextB()
+        }
+     }
+    } else {
+     while(T) {
+       if(get_Config_ISZB.filter(v)) {
+         return v
+       }
+       if (get_Config_ISZB.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+
+       length = gen.nextZBetween(0, get_numElement)
+       v = ISZ()
+       for (r <- 0 until length) {
+          v = v :+ nextB()
+       }
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
   // ============= Base_Types.Bits_Payload ===================
 
   def get_Config_Base_TypesBits_Payload: Config_Base_TypesBits_Payload
@@ -1802,6 +1850,108 @@ Aux_Types.scala
        }
      }
     }
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  //=================== Option[art.Empty] =====================
+  def get_Config_Option_artEmpty: Config_Option_artEmpty
+  def set_Config_Option_artEmpty(config: Config_Option_artEmpty): RandomLib
+
+  def nextOption_artEmpty(): Option[art.Empty] = {
+
+    var none: Z = gen.nextZBetween(0,1)
+    var v: Option[art.Empty] = if(none == 0) {
+      Some(next_artEmpty())
+    } else {
+      None()
+    }
+
+    if(get_Config_Option_artEmpty.attempts >= 0) {
+     for(i <- 0 to get_Config_Option_artEmpty.attempts) {
+        if(get_Config_Option_artEmpty.filter(v)) {
+          return v
+        }
+        if (get_Config_Option_artEmpty.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+
+        none = gen.nextZBetween(0,1)
+        v = if(none == 0) {
+           Some(next_artEmpty())
+        } else {
+           None()
+        }
+     }
+    } else {
+     while(T) {
+       if(get_Config_Option_artEmpty.filter(v)) {
+         return v
+       }
+       if (get_Config_Option_artEmpty.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+
+       none = gen.nextZBetween(0,1)
+       v = if(none == 0) {
+          Some(next_artEmpty())
+       } else {
+          None()
+       }
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  //=================== Option[ProdConsFlows.Container_i] =====================
+  def get_Config_OptionProdConsFlowsContainer_i: Config_OptionProdConsFlowsContainer_i
+  def set_Config_OptionProdConsFlowsContainer_i(config: Config_OptionProdConsFlowsContainer_i): RandomLib
+
+  def nextOptionProdConsFlowsContainer_i(): Option[ProdConsFlows.Container_i] = {
+
+    var none: Z = gen.nextZBetween(0,1)
+    var v: Option[ProdConsFlows.Container_i] = if(none == 0) {
+      Some(nextProdConsFlowsContainer_i())
+    } else {
+      None()
+    }
+
+    if(get_Config_OptionProdConsFlowsContainer_i.attempts >= 0) {
+     for(i <- 0 to get_Config_OptionProdConsFlowsContainer_i.attempts) {
+        if(get_Config_OptionProdConsFlowsContainer_i.filter(v)) {
+          return v
+        }
+        if (get_Config_OptionProdConsFlowsContainer_i.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+
+        none = gen.nextZBetween(0,1)
+        v = if(none == 0) {
+           Some(nextProdConsFlowsContainer_i())
+        } else {
+           None()
+        }
+     }
+    } else {
+     while(T) {
+       if(get_Config_OptionProdConsFlowsContainer_i.filter(v)) {
+         return v
+       }
+       if (get_Config_OptionProdConsFlowsContainer_i.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+
+       none = gen.nextZBetween(0,1)
+       v = if(none == 0) {
+          Some(nextProdConsFlowsContainer_i())
+       } else {
+          None()
+       }
+     }
+    }
+
     assert(F, "Requirements too strict to generate")
     halt("Requirements too strict to generate")
   }
@@ -3020,37 +3170,6 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
-  //=================== ISZ[B] =====================
-
-  def nextISZB(): ISZ[B] = {
-    val length: Z = gen.nextZBetween(0, get_numElement)
-    var temp: ISZ[B] = ISZ()
-    for (r <- 0 until length) {
-      temp = temp :+ nextB()
-    }
-
-    return temp
-  }
-
-  def nextOption_artEmpty(): Option[art.Empty] = {
-    val none: Z = gen.nextZBetween(0,1)
-
-    if(none == 0) {
-      return Some(next_artEmpty())
-    } else {
-      return None()
-    }
-  }
-
-  def nextOptionProdConsFlowsContainer_i(): Option[ProdConsFlows.Container_i] = {
-    val none: Z = gen.nextZBetween(0,1)
-
-    if(none == 0) {
-      return Some(nextProdConsFlowsContainer_i())
-    } else {
-      return None()
-    }
-  }
 }
 
 @record class RandomLib(val gen: org.sireum.Random.Gen) extends RandomLibI {
@@ -3440,6 +3559,17 @@ Aux_Types.scala
     return this
   }
 
+  // ============= ISZ[B] ===================
+  def alwaysTrue_ISZB(v: ISZ[B]): B = {return T}
+
+  var config_ISZB: Config_ISZB = Config_ISZB(0, 20, 100, _verbose, alwaysTrue_ISZB _)
+  def get_Config_ISZB: Config_ISZB = {return config_ISZB}
+
+  def set_Config_ISZB(config: Config_ISZB): RandomLib ={
+    config_ISZB = config
+    return this
+  }
+
   // ============= Base_Types.Bits_Payload ===================
   def alwaysTrue_Base_TypesBits_Payload(v: Base_Types.Bits_Payload): B = {return T}
 
@@ -3461,6 +3591,28 @@ Aux_Types.scala
 
   def set_Config_ProdConsFlowsConsumer_p_consumer_PreState_Container(config: Config_ProdConsFlowsConsumer_p_consumer_PreState_Container): RandomLib ={
     config_ProdConsFlowsConsumer_p_consumer_PreState_Container = config
+    return this
+  }
+
+  // ============= Option[art.Empty] ===================
+  def alwaysTrue_Option_artEmpty(v: Option[art.Empty]): B = {return T}
+
+  var config_Option_artEmpty: Config_Option_artEmpty = Config_Option_artEmpty(0, 20, 100, _verbose, alwaysTrue_Option_artEmpty _)
+  def get_Config_Option_artEmpty: Config_Option_artEmpty = {return config_Option_artEmpty}
+
+  def set_Config_Option_artEmpty(config: Config_Option_artEmpty): RandomLib ={
+    config_Option_artEmpty = config
+    return this
+  }
+
+  // ============= Option[ProdConsFlows.Container_i] ===================
+  def alwaysTrue_OptionProdConsFlowsContainer_i(v: Option[ProdConsFlows.Container_i]): B = {return T}
+
+  var config_OptionProdConsFlowsContainer_i: Config_OptionProdConsFlowsContainer_i = Config_OptionProdConsFlowsContainer_i(0, 20, 100, _verbose, alwaysTrue_OptionProdConsFlowsContainer_i _)
+  def get_Config_OptionProdConsFlowsContainer_i: Config_OptionProdConsFlowsContainer_i = {return config_OptionProdConsFlowsContainer_i}
+
+  def set_Config_OptionProdConsFlowsContainer_i(config: Config_OptionProdConsFlowsContainer_i): RandomLib ={
+    config_OptionProdConsFlowsContainer_i = config
     return this
   }
 

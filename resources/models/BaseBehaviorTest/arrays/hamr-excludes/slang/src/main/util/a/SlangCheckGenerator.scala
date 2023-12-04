@@ -348,6 +348,25 @@ Aux_Types.scala
   }
 }
 
+@record class Gen_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl(param: RandomLibI) extends MJen[IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl]] {
+  override def generate(f: IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextISArraysArray_of_CoordinatesIArraysCoordinate_Impl())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
 @record class Gen_ArraysArray_of_Coordinates(param: RandomLibI) extends MJen[Arrays.Array_of_Coordinates] {
   override def generate(f: Arrays.Array_of_Coordinates => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
@@ -373,6 +392,25 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextArraysArray_of_Coordinates_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_ISArraysArray_of_IntegersIZ(param: RandomLibI) extends MJen[IS[Arrays.Array_of_Integers.I, Z]] {
+  override def generate(f: IS[Arrays.Array_of_Integers.I, Z] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextISArraysArray_of_IntegersIZ())
 
       if (!continue) {
         return Jen.End
@@ -449,6 +487,25 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextArraysCoordinate_Impl_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_ISZZ(param: RandomLibI) extends MJen[ISZ[Z]] {
+  override def generate(f: ISZ[Z] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextISZZ())
 
       if (!continue) {
         return Jen.End
@@ -772,6 +829,25 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextBase_TypesString_Payload())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_ISZB(param: RandomLibI) extends MJen[ISZ[B]] {
+  override def generate(f: ISZ[B] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextISZB())
 
       if (!continue) {
         return Jen.End

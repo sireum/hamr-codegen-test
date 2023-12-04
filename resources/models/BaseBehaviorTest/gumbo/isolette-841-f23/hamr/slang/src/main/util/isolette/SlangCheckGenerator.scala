@@ -671,6 +671,25 @@ Aux_Types.scala
   }
 }
 
+@record class Gen_ISZB(param: RandomLibI) extends MJen[ISZ[B]] {
+  override def generate(f: ISZ[B] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextISZB())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
 @record class Gen_Base_TypesBits_Payload(param: RandomLibI) extends MJen[Base_Types.Bits_Payload] {
   override def generate(f: Base_Types.Bits_Payload => Jen.Action): Jen.Action = {
     var continue = Jen.Continue

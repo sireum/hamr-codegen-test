@@ -56,9 +56,13 @@ Aux_Types.scala
 
 @datatype class Config__artEmpty(attempts: Z, verbose: B, filter: art.Empty => B) {}
 
+@datatype class Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl] => B) {}
+
 @datatype class Config_ArraysArray_of_Coordinates(attempts: Z, verbose: B, filter: Arrays.Array_of_Coordinates => B) {}
 
 @datatype class Config_ArraysArray_of_Coordinates_Payload(attempts: Z, verbose: B, filter: Arrays.Array_of_Coordinates_Payload => B) {}
+
+@datatype class Config_ISArraysArray_of_IntegersIZ(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: IS[Arrays.Array_of_Integers.I, Z] => B) {}
 
 @datatype class Config_ArraysArray_of_Integers(attempts: Z, verbose: B, filter: Arrays.Array_of_Integers => B) {}
 
@@ -67,6 +71,8 @@ Aux_Types.scala
 @datatype class Config_ArraysCoordinate_Impl(attempts: Z, verbose: B, filter: Arrays.Coordinate_Impl => B) {}
 
 @datatype class Config_ArraysCoordinate_Impl_Payload(attempts: Z, verbose: B, filter: Arrays.Coordinate_Impl_Payload => B) {}
+
+@datatype class Config_ISZZ(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: ISZ[Z] => B) {}
 
 @datatype class Config_ArraysVector_of_Coordinates(attempts: Z, verbose: B, filter: Arrays.Vector_of_Coordinates => B) {}
 
@@ -101,6 +107,8 @@ Aux_Types.scala
 @datatype class Config_Base_TypesCharacter_Payload(attempts: Z, verbose: B, filter: Base_Types.Character_Payload => B) {}
 
 @datatype class Config_Base_TypesString_Payload(attempts: Z, verbose: B, filter: Base_Types.String_Payload => B) {}
+
+@datatype class Config_ISZB(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: ISZ[B] => B) {}
 
 @datatype class Config_Base_TypesBits_Payload(attempts: Z, verbose: B, filter: Base_Types.Bits_Payload => B) {}
 

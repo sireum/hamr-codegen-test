@@ -88,9 +88,15 @@ Aux_Types.scala
 
 @datatype class Config_Base_TypesString_Payload(attempts: Z, verbose: B, filter: Base_Types.String_Payload => B) {}
 
+@datatype class Config_ISZB(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: ISZ[B] => B) {}
+
 @datatype class Config_Base_TypesBits_Payload(attempts: Z, verbose: B, filter: Base_Types.Bits_Payload => B) {}
 
 @datatype class Config_ProdConsFlowsConsumer_p_consumer_PreState_Container(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[ProdConsFlowsConsumer_p_consumer_PreState_Container_DataTypeId.Type], filter: ProdConsFlows.Consumer_p_consumer_PreState_Container => B) {}
+
+@datatype class Config_Option_artEmpty(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: Option[art.Empty] => B) {}
+
+@datatype class Config_OptionProdConsFlowsContainer_i(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: Option[ProdConsFlows.Container_i] => B) {}
 
 @datatype class Config_ProdConsFlowsConsumer_p_consumer_PreState_Container_P(attempts: Z, verbose: B, filter: ProdConsFlows.Consumer_p_consumer_PreState_Container_P => B) {}
 

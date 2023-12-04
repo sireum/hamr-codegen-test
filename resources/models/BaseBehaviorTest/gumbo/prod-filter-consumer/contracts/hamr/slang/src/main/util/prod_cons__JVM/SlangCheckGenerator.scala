@@ -635,6 +635,25 @@ Aux_Types.scala
   }
 }
 
+@record class Gen_ISZB(param: RandomLibI) extends MJen[ISZ[B]] {
+  override def generate(f: ISZ[B] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextISZB())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
 @record class Gen_Base_TypesBits_Payload(param: RandomLibI) extends MJen[Base_Types.Bits_Payload] {
   override def generate(f: Base_Types.Bits_Payload => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
@@ -660,6 +679,44 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextProdConsFlowsConsumer_p_consumer_PreState_Container())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_Option_artEmpty(param: RandomLibI) extends MJen[Option[art.Empty]] {
+  override def generate(f: Option[art.Empty] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextOption_artEmpty())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_OptionProdConsFlowsContainer_i(param: RandomLibI) extends MJen[Option[ProdConsFlows.Container_i]] {
+  override def generate(f: Option[ProdConsFlows.Container_i] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextOptionProdConsFlowsContainer_i())
 
       if (!continue) {
         return Jen.End

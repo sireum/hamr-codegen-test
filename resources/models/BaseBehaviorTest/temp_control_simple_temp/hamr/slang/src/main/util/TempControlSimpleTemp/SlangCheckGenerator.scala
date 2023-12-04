@@ -641,6 +641,25 @@ Aux_Types.scala
   }
 }
 
+@record class Gen_ISZB(param: RandomLibI) extends MJen[ISZ[B]] {
+  override def generate(f: ISZ[B] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextISZB())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
 @record class Gen_Base_TypesBits_Payload(param: RandomLibI) extends MJen[Base_Types.Bits_Payload] {
   override def generate(f: Base_Types.Bits_Payload => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
@@ -755,6 +774,25 @@ Aux_Types.scala
   }
 }
 
+@record class Gen_OptionCoolingFanFanCmdType(param: RandomLibI) extends MJen[Option[CoolingFan.FanCmd.Type]] {
+  override def generate(f: Option[CoolingFan.FanCmd.Type] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextOptionCoolingFanFanCmdType())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
 @record class Gen_CoolingFanFan_i_tcproc_fan_PreState_Container_P(param: RandomLibI) extends MJen[CoolingFan.Fan_i_tcproc_fan_PreState_Container_P] {
   override def generate(f: CoolingFan.Fan_i_tcproc_fan_PreState_Container_P => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
@@ -799,6 +837,25 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextCoolingFanFan_i_tcproc_fan_PostState_Container())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_OptionCoolingFanFanAckType(param: RandomLibI) extends MJen[Option[CoolingFan.FanAck.Type]] {
+  override def generate(f: Option[CoolingFan.FanAck.Type] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextOptionCoolingFanFanAckType())
 
       if (!continue) {
         return Jen.End
@@ -869,6 +926,25 @@ Aux_Types.scala
   }
 }
 
+@record class Gen_Option_artEmpty(param: RandomLibI) extends MJen[Option[art.Empty]] {
+  override def generate(f: Option[art.Empty] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextOption_artEmpty())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
 @record class Gen_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P(param: RandomLibI) extends MJen[TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_P] {
   override def generate(f: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_P => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
@@ -913,6 +989,25 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextTempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_OptionTempControlSoftwareSystemSetPoint_i(param: RandomLibI) extends MJen[Option[TempControlSoftwareSystem.SetPoint_i]] {
+  override def generate(f: Option[TempControlSoftwareSystem.SetPoint_i] => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextOptionTempControlSoftwareSystemSetPoint_i())
 
       if (!continue) {
         return Jen.End

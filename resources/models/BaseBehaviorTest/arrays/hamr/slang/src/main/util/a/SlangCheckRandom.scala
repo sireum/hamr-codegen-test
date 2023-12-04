@@ -1095,6 +1095,54 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
+  //=================== IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl] =====================
+  def get_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl: Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl
+  def set_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl(config: Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl): RandomLib
+
+  def nextISArraysArray_of_CoordinatesIArraysCoordinate_Impl(): IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl] = {
+
+    var length: Z = gen.nextZBetween(0, get_numElement)
+    var v: IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl] = IS()
+    for (r <- 0 until length) {
+      v = v :+ nextArraysCoordinate_Impl()
+    }
+
+    if(get_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl.attempts >= 0) {
+     for(i <- 0 to get_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl.attempts) {
+        if(get_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl.filter(v)) {
+          return v
+        }
+        if (get_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+
+        length = gen.nextZBetween(0, get_numElement)
+        v = IS()
+        for (r <- 0 until length) {
+           v = v :+ nextArraysCoordinate_Impl()
+        }
+     }
+    } else {
+     while(T) {
+       if(get_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl.filter(v)) {
+         return v
+       }
+       if (get_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+
+       length = gen.nextZBetween(0, get_numElement)
+       v = IS()
+       for (r <- 0 until length) {
+          v = v :+ nextArraysCoordinate_Impl()
+       }
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
   // ============= Arrays.Array_of_Coordinates ===================
 
   def get_Config_ArraysArray_of_Coordinates: Config_ArraysArray_of_Coordinates
@@ -1164,6 +1212,54 @@ Aux_Types.scala
        }
        value = nextArraysArray_of_Coordinates()
        v = Arrays.Array_of_Coordinates_Payload(value)
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  //=================== IS[Arrays.Array_of_Integers.I, Z] =====================
+  def get_Config_ISArraysArray_of_IntegersIZ: Config_ISArraysArray_of_IntegersIZ
+  def set_Config_ISArraysArray_of_IntegersIZ(config: Config_ISArraysArray_of_IntegersIZ): RandomLib
+
+  def nextISArraysArray_of_IntegersIZ(): IS[Arrays.Array_of_Integers.I, Z] = {
+
+    var length: Z = gen.nextZBetween(0, get_numElement)
+    var v: IS[Arrays.Array_of_Integers.I, Z] = IS()
+    for (r <- 0 until length) {
+      v = v :+ nextZ()
+    }
+
+    if(get_Config_ISArraysArray_of_IntegersIZ.attempts >= 0) {
+     for(i <- 0 to get_Config_ISArraysArray_of_IntegersIZ.attempts) {
+        if(get_Config_ISArraysArray_of_IntegersIZ.filter(v)) {
+          return v
+        }
+        if (get_Config_ISArraysArray_of_IntegersIZ.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+
+        length = gen.nextZBetween(0, get_numElement)
+        v = IS()
+        for (r <- 0 until length) {
+           v = v :+ nextZ()
+        }
+     }
+    } else {
+     while(T) {
+       if(get_Config_ISArraysArray_of_IntegersIZ.filter(v)) {
+         return v
+       }
+       if (get_Config_ISArraysArray_of_IntegersIZ.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+
+       length = gen.nextZBetween(0, get_numElement)
+       v = IS()
+       for (r <- 0 until length) {
+          v = v :+ nextZ()
+       }
      }
     }
 
@@ -1322,6 +1418,54 @@ Aux_Types.scala
        }
        value = nextArraysCoordinate_Impl()
        v = Arrays.Coordinate_Impl_Payload(value)
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  //=================== ISZ[Z] =====================
+  def get_Config_ISZZ: Config_ISZZ
+  def set_Config_ISZZ(config: Config_ISZZ): RandomLib
+
+  def nextISZZ(): ISZ[Z] = {
+
+    var length: Z = gen.nextZBetween(0, get_numElement)
+    var v: ISZ[Z] = ISZ()
+    for (r <- 0 until length) {
+      v = v :+ nextZ()
+    }
+
+    if(get_Config_ISZZ.attempts >= 0) {
+     for(i <- 0 to get_Config_ISZZ.attempts) {
+        if(get_Config_ISZZ.filter(v)) {
+          return v
+        }
+        if (get_Config_ISZZ.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+
+        length = gen.nextZBetween(0, get_numElement)
+        v = ISZ()
+        for (r <- 0 until length) {
+           v = v :+ nextZ()
+        }
+     }
+    } else {
+     while(T) {
+       if(get_Config_ISZZ.filter(v)) {
+         return v
+       }
+       if (get_Config_ISZZ.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+
+       length = gen.nextZBetween(0, get_numElement)
+       v = ISZ()
+       for (r <- 0 until length) {
+          v = v :+ nextZ()
+       }
      }
     }
 
@@ -1975,6 +2119,54 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
+  //=================== ISZ[B] =====================
+  def get_Config_ISZB: Config_ISZB
+  def set_Config_ISZB(config: Config_ISZB): RandomLib
+
+  def nextISZB(): ISZ[B] = {
+
+    var length: Z = gen.nextZBetween(0, get_numElement)
+    var v: ISZ[B] = ISZ()
+    for (r <- 0 until length) {
+      v = v :+ nextB()
+    }
+
+    if(get_Config_ISZB.attempts >= 0) {
+     for(i <- 0 to get_Config_ISZB.attempts) {
+        if(get_Config_ISZB.filter(v)) {
+          return v
+        }
+        if (get_Config_ISZB.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+
+        length = gen.nextZBetween(0, get_numElement)
+        v = ISZ()
+        for (r <- 0 until length) {
+           v = v :+ nextB()
+        }
+     }
+    } else {
+     while(T) {
+       if(get_Config_ISZB.filter(v)) {
+         return v
+       }
+       if (get_Config_ISZB.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+
+       length = gen.nextZBetween(0, get_numElement)
+       v = ISZ()
+       for (r <- 0 until length) {
+          v = v :+ nextB()
+       }
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
   // ============= Base_Types.Bits_Payload ===================
 
   def get_Config_Base_TypesBits_Payload: Config_Base_TypesBits_Payload
@@ -2013,53 +2205,6 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
-  //=================== IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl] =====================
-
-  def nextISArraysArray_of_CoordinatesIArraysCoordinate_Impl(): IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl] = {
-    val length: Z = gen.nextZBetween(0, get_numElement)
-    var temp: IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl] = IS()
-    for (r <- 0 until length) {
-      temp = temp :+ nextArraysCoordinate_Impl()
-    }
-
-    return temp
-  }
-
-  //=================== IS[Arrays.Array_of_Integers.I, Z] =====================
-
-  def nextISArraysArray_of_IntegersIZ(): IS[Arrays.Array_of_Integers.I, Z] = {
-    val length: Z = gen.nextZBetween(0, get_numElement)
-    var temp: IS[Arrays.Array_of_Integers.I, Z] = IS()
-    for (r <- 0 until length) {
-      temp = temp :+ nextZ()
-    }
-
-    return temp
-  }
-
-  //=================== ISZ[Z] =====================
-
-  def nextISZZ(): ISZ[Z] = {
-    val length: Z = gen.nextZBetween(0, get_numElement)
-    var temp: ISZ[Z] = ISZ()
-    for (r <- 0 until length) {
-      temp = temp :+ nextZ()
-    }
-
-    return temp
-  }
-
-  //=================== ISZ[B] =====================
-
-  def nextISZB(): ISZ[B] = {
-    val length: Z = gen.nextZBetween(0, get_numElement)
-    var temp: ISZ[B] = ISZ()
-    for (r <- 0 until length) {
-      temp = temp :+ nextB()
-    }
-
-    return temp
-  }
 }
 
 @record class RandomLib(val gen: org.sireum.Random.Gen) extends RandomLibI {
@@ -2269,6 +2414,17 @@ Aux_Types.scala
     return this
   }
 
+  // ============= IS[Arrays.Array_of_Coordinates.I] ===================
+  def alwaysTrue_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl(v: IS[Arrays.Array_of_Coordinates.I, Arrays.Coordinate_Impl]): B = {return T}
+
+  var config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl: Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl = Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl(0, 20, 100, _verbose, alwaysTrue_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl _)
+  def get_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl: Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl = {return config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl}
+
+  def set_Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl(config: Config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl): RandomLib ={
+    config_ISArraysArray_of_CoordinatesIArraysCoordinate_Impl = config
+    return this
+  }
+
   // ============= Arrays.Array_of_Coordinates ===================
   def alwaysTrue_ArraysArray_of_Coordinates(v: Arrays.Array_of_Coordinates): B = {return T}
 
@@ -2290,6 +2446,17 @@ Aux_Types.scala
 
   def set_Config_ArraysArray_of_Coordinates_Payload(config: Config_ArraysArray_of_Coordinates_Payload): RandomLib ={
     config_ArraysArray_of_Coordinates_Payload = config
+    return this
+  }
+
+  // ============= IS[Arrays.Array_of_Integers.I] ===================
+  def alwaysTrue_ISArraysArray_of_IntegersIZ(v: IS[Arrays.Array_of_Integers.I, Z]): B = {return T}
+
+  var config_ISArraysArray_of_IntegersIZ: Config_ISArraysArray_of_IntegersIZ = Config_ISArraysArray_of_IntegersIZ(0, 20, 100, _verbose, alwaysTrue_ISArraysArray_of_IntegersIZ _)
+  def get_Config_ISArraysArray_of_IntegersIZ: Config_ISArraysArray_of_IntegersIZ = {return config_ISArraysArray_of_IntegersIZ}
+
+  def set_Config_ISArraysArray_of_IntegersIZ(config: Config_ISArraysArray_of_IntegersIZ): RandomLib ={
+    config_ISArraysArray_of_IntegersIZ = config
     return this
   }
 
@@ -2338,6 +2505,17 @@ Aux_Types.scala
 
   def set_Config_ArraysCoordinate_Impl_Payload(config: Config_ArraysCoordinate_Impl_Payload): RandomLib ={
     config_ArraysCoordinate_Impl_Payload = config
+    return this
+  }
+
+  // ============= ISZ[Z] ===================
+  def alwaysTrue_ISZZ(v: ISZ[Z]): B = {return T}
+
+  var config_ISZZ: Config_ISZZ = Config_ISZZ(0, 20, 100, _verbose, alwaysTrue_ISZZ _)
+  def get_Config_ISZZ: Config_ISZZ = {return config_ISZZ}
+
+  def set_Config_ISZZ(config: Config_ISZZ): RandomLib ={
+    config_ISZZ = config
     return this
   }
 
@@ -2542,6 +2720,17 @@ Aux_Types.scala
 
   def set_Config_Base_TypesString_Payload(config: Config_Base_TypesString_Payload): RandomLib ={
     config_Base_TypesString_Payload = config
+    return this
+  }
+
+  // ============= ISZ[B] ===================
+  def alwaysTrue_ISZB(v: ISZ[B]): B = {return T}
+
+  var config_ISZB: Config_ISZB = Config_ISZB(0, 20, 100, _verbose, alwaysTrue_ISZB _)
+  def get_Config_ISZB: Config_ISZB = {return config_ISZB}
+
+  def set_Config_ISZB(config: Config_ISZB): RandomLib ={
+    config_ISZB = config
     return this
   }
 

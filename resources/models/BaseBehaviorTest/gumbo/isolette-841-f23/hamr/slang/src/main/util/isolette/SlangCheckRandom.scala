@@ -1856,6 +1856,54 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
+  //=================== ISZ[B] =====================
+  def get_Config_ISZB: Config_ISZB
+  def set_Config_ISZB(config: Config_ISZB): RandomLib
+
+  def nextISZB(): ISZ[B] = {
+
+    var length: Z = gen.nextZBetween(0, get_numElement)
+    var v: ISZ[B] = ISZ()
+    for (r <- 0 until length) {
+      v = v :+ nextB()
+    }
+
+    if(get_Config_ISZB.attempts >= 0) {
+     for(i <- 0 to get_Config_ISZB.attempts) {
+        if(get_Config_ISZB.filter(v)) {
+          return v
+        }
+        if (get_Config_ISZB.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+
+        length = gen.nextZBetween(0, get_numElement)
+        v = ISZ()
+        for (r <- 0 until length) {
+           v = v :+ nextB()
+        }
+     }
+    } else {
+     while(T) {
+       if(get_Config_ISZB.filter(v)) {
+         return v
+       }
+       if (get_Config_ISZB.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+
+       length = gen.nextZBetween(0, get_numElement)
+       v = ISZ()
+       for (r <- 0 until length) {
+          v = v :+ nextB()
+       }
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
   // ============= Base_Types.Bits_Payload ===================
 
   def get_Config_Base_TypesBits_Payload: Config_Base_TypesBits_Payload
@@ -5991,17 +6039,6 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
-  //=================== ISZ[B] =====================
-
-  def nextISZB(): ISZ[B] = {
-    val length: Z = gen.nextZBetween(0, get_numElement)
-    var temp: ISZ[B] = ISZ()
-    for (r <- 0 until length) {
-      temp = temp :+ nextB()
-    }
-
-    return temp
-  }
 }
 
 @record class RandomLib(val gen: org.sireum.Random.Gen) extends RandomLibI {
@@ -6388,6 +6425,17 @@ Aux_Types.scala
 
   def set_Config_Base_TypesString_Payload(config: Config_Base_TypesString_Payload): RandomLib ={
     config_Base_TypesString_Payload = config
+    return this
+  }
+
+  // ============= ISZ[B] ===================
+  def alwaysTrue_ISZB(v: ISZ[B]): B = {return T}
+
+  var config_ISZB: Config_ISZB = Config_ISZB(0, 20, 100, _verbose, alwaysTrue_ISZB _)
+  def get_Config_ISZB: Config_ISZB = {return config_ISZB}
+
+  def set_Config_ISZB(config: Config_ISZB): RandomLib ={
+    config_ISZB = config
     return this
   }
 

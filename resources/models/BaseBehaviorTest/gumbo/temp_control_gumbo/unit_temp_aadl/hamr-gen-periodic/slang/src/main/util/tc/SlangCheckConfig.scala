@@ -100,6 +100,8 @@ Aux_Types.scala
 
 @datatype class Config_Base_TypesString_Payload(attempts: Z, verbose: B, filter: Base_Types.String_Payload => B) {}
 
+@datatype class Config_ISZB(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: ISZ[B] => B) {}
+
 @datatype class Config_Base_TypesBits_Payload(attempts: Z, verbose: B, filter: Base_Types.Bits_Payload => B) {}
 
 @datatype class Config_CoolingFanFanAckType(attempts: Z, verbose: B, filter: CoolingFan.FanAck.Type => B) {}

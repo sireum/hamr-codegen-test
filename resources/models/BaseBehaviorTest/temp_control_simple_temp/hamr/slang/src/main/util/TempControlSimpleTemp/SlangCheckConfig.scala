@@ -94,6 +94,8 @@ Aux_Types.scala
 
 @datatype class Config_Base_TypesString_Payload(attempts: Z, verbose: B, filter: Base_Types.String_Payload => B) {}
 
+@datatype class Config_ISZB(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: ISZ[B] => B) {}
+
 @datatype class Config_Base_TypesBits_Payload(attempts: Z, verbose: B, filter: Base_Types.Bits_Payload => B) {}
 
 @datatype class Config_CoolingFanFanAckType(attempts: Z, verbose: B, filter: CoolingFan.FanAck.Type => B) {}
@@ -106,11 +108,15 @@ Aux_Types.scala
 
 @datatype class Config_CoolingFanFan_i_tcproc_fan_PreState_Container(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[CoolingFanFan_i_tcproc_fan_PreState_Container_DataTypeId.Type], filter: CoolingFan.Fan_i_tcproc_fan_PreState_Container => B) {}
 
+@datatype class Config_OptionCoolingFanFanCmdType(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: Option[CoolingFan.FanCmd.Type] => B) {}
+
 @datatype class Config_CoolingFanFan_i_tcproc_fan_PreState_Container_P(attempts: Z, verbose: B, filter: CoolingFan.Fan_i_tcproc_fan_PreState_Container_P => B) {}
 
 @datatype class Config_CoolingFanFan_i_tcproc_fan_PreState_Container_PS(attempts: Z, verbose: B, filter: CoolingFan.Fan_i_tcproc_fan_PreState_Container_PS => B) {}
 
 @datatype class Config_CoolingFanFan_i_tcproc_fan_PostState_Container(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[CoolingFanFan_i_tcproc_fan_PostState_Container_DataTypeId.Type], filter: CoolingFan.Fan_i_tcproc_fan_PostState_Container => B) {}
+
+@datatype class Config_OptionCoolingFanFanAckType(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: Option[CoolingFan.FanAck.Type] => B) {}
 
 @datatype class Config_CoolingFanFan_i_tcproc_fan_PostState_Container_P(attempts: Z, verbose: B, filter: CoolingFan.Fan_i_tcproc_fan_PostState_Container_P => B) {}
 
@@ -118,11 +124,15 @@ Aux_Types.scala
 
 @datatype class Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_DataTypeId.Type], filter: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container => B) {}
 
+@datatype class Config_Option_artEmpty(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: Option[art.Empty] => B) {}
+
 @datatype class Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_P(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_P => B) {}
 
 @datatype class Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS => B) {}
 
 @datatype class Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_DataTypeId.Type], filter: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container => B) {}
+
+@datatype class Config_OptionTempControlSoftwareSystemSetPoint_i(minSize: Z, maxSize: Z, attempts: Z, verbose: B, filter: Option[TempControlSoftwareSystem.SetPoint_i] => B) {}
 
 @datatype class Config_TempControlSoftwareSystemOperatorInterface_i_tcproc_operatorInterface_PostState_Container_P(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.OperatorInterface_i_tcproc_operatorInterface_PostState_Container_P => B) {}
 
