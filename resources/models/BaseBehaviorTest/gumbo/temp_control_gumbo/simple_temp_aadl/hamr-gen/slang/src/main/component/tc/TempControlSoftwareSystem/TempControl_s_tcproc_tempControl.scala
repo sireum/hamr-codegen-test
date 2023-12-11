@@ -91,7 +91,9 @@ object TempControl_s_tcproc_tempControl {
         api.fanCmd.isEmpty,
         // assume Test
         //   Just testing assume+guarantee along with handlers
-        3 + 2 == 5
+        3 + 2 == 5,
+        // assume Refer_to_state_var_in_sporadic_general_assume
+        (In(currentSetPoint)).low.degrees <= (In(currentSetPoint)).high.degrees
         // END COMPUTE REQUIRES fanAck
       ),
       Modifies(
@@ -161,7 +163,9 @@ object TempControl_s_tcproc_tempControl {
         api.fanCmd.isEmpty,
         // assume Test
         //   Just testing assume+guarantee along with handlers
-        3 + 2 == 5
+        3 + 2 == 5,
+        // assume Refer_to_state_var_in_sporadic_general_assume
+        (In(currentSetPoint)).low.degrees <= (In(currentSetPoint)).high.degrees
         // END COMPUTE REQUIRES setPoint
       ),
       Modifies(
@@ -225,7 +229,9 @@ object TempControl_s_tcproc_tempControl {
         api.fanCmd.isEmpty,
         // assume Test
         //   Just testing assume+guarantee along with handlers
-        3 + 2 == 5
+        3 + 2 == 5,
+        // assume Refer_to_state_var_in_sporadic_general_assume
+        (In(currentSetPoint)).low.degrees <= (In(currentSetPoint)).high.degrees
         // END COMPUTE REQUIRES tempChanged
       ),
       Modifies(

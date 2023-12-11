@@ -9,6 +9,16 @@ import tc._
 object Fan_s_tcproc_fan {
 
   def initialise(api: Fan_s_Initialization_Api): Unit = {
+    Contract(
+      Requires(
+        // BEGIN INITIALIZES REQUIRES
+        // assume AADL_Requirement
+        //   All outgoing event ports must be empty
+        api.fanAck.isEmpty
+        // END INITIALIZES REQUIRES
+      ),
+      Modifies(api)
+    )
     // The Initialize Entry Point must initialize all component local state and all output data ports.
 
     // initialize component local state
@@ -20,6 +30,18 @@ object Fan_s_tcproc_fan {
 
   def handle_fanCmd(api: Fan_s_Operational_Api, value : CoolingFan.FanCmd.Type): Unit = {
     Contract(
+      Requires(
+        // BEGIN COMPUTE REQUIRES fanCmd
+        // assume HAMR-Guarantee built-in
+        //   The spec var corresponding to the handled event must be non-empty and
+        //   the passed in payload must be the same as the spec var's value
+        api.fanCmd.nonEmpty &&
+        api.fanCmd.get == value,
+        // assume AADL_Requirement
+        //   All outgoing event ports must be empty
+        api.fanAck.isEmpty
+        // END COMPUTE REQUIRES fanCmd
+      ),
       Modifies(api)
     )
     // log the received fan command

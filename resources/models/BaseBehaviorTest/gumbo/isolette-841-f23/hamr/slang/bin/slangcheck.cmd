@@ -56,3 +56,6 @@ val toolargs: String = st"${(files, " ")}".render
 (Os.slashDir.up / "src" / "main" / "util" / "isolette").mkdirAll()
 
 proc"$sireum proyek slangcheck -p isolette -o ${Os.slashDir.up}/src/main/util/isolette ${Os.slashDir.up} $toolargs".at(Os.slashDir).console.runCheck()
+
+// call to the tools version of SlangCheck which does not invoke Tipe
+//proc"$sireum tools slangcheck generator -p isolette -o ${Os.slashDir.up}/src/main/util/isolette $toolargs".at(Os.slashDir).console.runCheck()

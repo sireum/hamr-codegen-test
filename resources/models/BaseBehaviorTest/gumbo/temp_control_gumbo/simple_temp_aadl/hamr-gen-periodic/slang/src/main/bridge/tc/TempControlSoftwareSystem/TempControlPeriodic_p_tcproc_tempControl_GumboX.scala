@@ -70,6 +70,24 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
       latestFanCmd = post.latestFanCmd,
       api_fanCmd = post.api_fanCmd)
 
+  /** Compute Entrypoint Contract
+    *
+    * assumes Refer_to_state_var_in_periodic_general_assume
+    * @param In_latestFanCmd pre-state state variable
+    */
+  @strictpure def compute_spec_Refer_to_state_var_in_periodic_general_assume_assume(
+      In_latestFanCmd: CoolingFan.FanCmd.Type): B =
+    In_latestFanCmd == CoolingFan.FanCmd.Off ||
+      In_latestFanCmd == CoolingFan.FanCmd.On
+
+  /** CEP-T-Assm: Top-level assume contracts for tempControl's compute entrypoint
+    *
+    * @param In_latestFanCmd pre-state state variable
+    */
+  @strictpure def compute_CEP_T_Assm (
+      In_latestFanCmd: CoolingFan.FanCmd.Type): B =
+    compute_spec_Refer_to_state_var_in_periodic_general_assume_assume(In_latestFanCmd)
+
   /** CEP-Pre: Compute Entrypoint Pre-Condition for tempControl
     *
     * @param In_latestFanCmd pre-state state variable
@@ -87,7 +105,10 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
      TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(api_setPoint) & 
 
      // I-Assm-Guard: Integration constraints for tempControl's incoming ports
-     I_Assm_Guard_currentTemp(api_currentTemp))
+     I_Assm_Guard_currentTemp(api_currentTemp) & 
+
+     // CEP-Assm: assume clauses of tempControl's compute entrypoint
+     compute_CEP_T_Assm (In_latestFanCmd))
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for tempControl via container
     *
@@ -177,6 +198,18 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
     compute_spec_altCurrentTempGTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd) &
     compute_spec_altCurrentTempInRange_guarantee(In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
 
+  /** guarantee Refer_to_state_var_in_periodic_case_assume
+    * @param In_latestFanCmd pre-state state variable
+    * @param latestFanCmd post-state state variable
+    */
+  @strictpure def compute_case_Refer_to_state_var_in_periodic_case_assume(
+      In_latestFanCmd: CoolingFan.FanCmd.Type,
+      latestFanCmd: CoolingFan.FanCmd.Type): B =
+    (In_latestFanCmd == CoolingFan.FanCmd.Off ||
+       In_latestFanCmd == CoolingFan.FanCmd.On) -->:
+      (latestFanCmd == CoolingFan.FanCmd.Off ||
+         latestFanCmd == CoolingFan.FanCmd.On)
+
   /** guarantee currentTempLTSetPoint
     *   If current temperature is less than
     *   the current low set point, then the fan state shall be Off
@@ -246,6 +279,7 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
       api_currentTemp: TempSensor.Temperature_i,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
+    compute_case_Refer_to_state_var_in_periodic_case_assume(In_latestFanCmd, latestFanCmd) &
     compute_case_currentTempLTSetPoint(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd) &
     compute_case_currentTempGTSetPoint(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd) &
     compute_case_currentTempInRange(In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)

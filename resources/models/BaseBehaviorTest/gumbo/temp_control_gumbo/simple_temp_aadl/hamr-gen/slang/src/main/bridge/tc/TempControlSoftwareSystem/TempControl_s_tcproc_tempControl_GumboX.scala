@@ -102,12 +102,23 @@ object TempControl_s_tcproc_tempControl_GumboX {
       ): B =
     3 + 2 == 5
 
+  /** Compute Entrypoint Contract
+    *
+    * assumes Refer_to_state_var_in_sporadic_general_assume
+    * @param In_currentSetPoint pre-state state variable
+    */
+  @strictpure def compute_spec_Refer_to_state_var_in_sporadic_general_assume_assume(
+      In_currentSetPoint: TempControlSoftwareSystem.SetPoint_i): B =
+    In_currentSetPoint.low.degrees <= In_currentSetPoint.high.degrees
+
   /** CEP-T-Assm: Top-level assume contracts for tempControl's compute entrypoint
     *
+    * @param In_currentSetPoint pre-state state variable
     */
   @strictpure def compute_CEP_T_Assm (
-      ): B =
-    compute_spec_Test_assume()
+      In_currentSetPoint: TempControlSoftwareSystem.SetPoint_i): B =
+    compute_spec_Test_assume() &
+    compute_spec_Refer_to_state_var_in_sporadic_general_assume_assume(In_currentSetPoint)
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for tempControl
     *
@@ -137,7 +148,7 @@ object TempControl_s_tcproc_tempControl_GumboX {
      I_Assm_Guard_currentTemp(api_currentTemp) & 
 
      // CEP-Assm: assume clauses of tempControl's compute entrypoint
-     compute_CEP_T_Assm ())
+     compute_CEP_T_Assm (In_currentSetPoint))
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for tempControl via container
     *

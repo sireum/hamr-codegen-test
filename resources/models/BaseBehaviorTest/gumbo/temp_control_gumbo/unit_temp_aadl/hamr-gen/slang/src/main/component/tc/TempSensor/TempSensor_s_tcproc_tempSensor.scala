@@ -16,8 +16,8 @@ object TempSensor_s_tcproc_tempSensor {
   @pure def createFahrenheit(degrees: Base_Types.Float_32): TempSensor.Temperature_i = {
     Contract(
       Requires(degrees >= GUMBO_Definitions.GUMBO__Library.absoluteZeroF()),
-      Ensures(Res[TempSensor.Temperature_i].degrees == degrees &&
-        Res[TempSensor.Temperature_i].unit == TempSensor.Unit.Fahrenheit &&
+      Ensures((Res[TempSensor.Temperature_i]).degrees == degrees &&
+        (Res[TempSensor.Temperature_i]).unit == TempSensor.Unit.Fahrenheit &&
         Res[TempSensor.Temperature_i] == TempSensor.Temperature_i(degrees, TempSensor.Unit.Fahrenheit))
     )
     return TempSensor.Temperature_i(degrees, TempSensor.Unit.Fahrenheit)

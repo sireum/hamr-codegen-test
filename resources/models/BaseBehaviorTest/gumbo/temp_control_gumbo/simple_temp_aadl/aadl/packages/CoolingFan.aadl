@@ -53,6 +53,13 @@ public
       Dispatch_Protocol => Sporadic;
       -- incoming messages are assumed to have a minimum separation time of 1 sec
       Period => 1 sec;
+    annex GUMBO {**
+    	-- TODO: should grammar and/or sym resolver disallow empty intiialize and compute?
+    	initialize
+    	
+    	compute
+    	
+    **};
   end Fan;
 
   thread implementation Fan.s
@@ -82,6 +89,13 @@ public
       -- execution of the fan thread is activated by the arrival of messages on the event data port
       Dispatch_Protocol => Periodic;
       Period => 1 sec;
+    annex GUMBO {**
+    	-- TODO: should grammar and/or sym resolver disallow empty intiialize and compute?
+    	initialize
+    	
+    	compute
+    	
+    **};      
   end FanPeriodic;
 
   thread implementation FanPeriodic.p

@@ -22,7 +22,7 @@ object GUMBO__Library {
 
   @pure def toFahrenheit(temp: TempSensor.Temperature_i): TempSensor.Temperature_i = {
     Contract(
-      Ensures(GUMBO_Definitions.GUMBO__Library.isFahrenheit(Res[TempSensor.Temperature_i]),if (temp.unit == TempSensor.Unit.Kelvin) 1.8f * (temp.degrees - 273.0f) + 32.0f == Res[TempSensor.Temperature_i].degrees else if (temp.unit == TempSensor.Unit.Celsius) temp.degrees * 1.8f + 32.0f == Res[TempSensor.Temperature_i].degrees else temp.degrees == Res[TempSensor.Temperature_i].degrees)
+      Ensures(GUMBO_Definitions.GUMBO__Library.isFahrenheit(Res[TempSensor.Temperature_i]),if (temp.unit == TempSensor.Unit.Kelvin) 1.8f * (temp.degrees - 273.0f) + 32.0f == (Res[TempSensor.Temperature_i]).degrees else if (temp.unit == TempSensor.Unit.Celsius) temp.degrees * 1.8f + 32.0f == (Res[TempSensor.Temperature_i]).degrees else temp.degrees == (Res[TempSensor.Temperature_i]).degrees)
     )
     return if (temp.unit == TempSensor.Unit.Kelvin) TempSensor.Temperature_i(1.8f * (temp.degrees - 273.0f) + 32.0f, TempSensor.Unit.Fahrenheit) else if (temp.unit == TempSensor.Unit.Celsius) TempSensor.Temperature_i(temp.degrees * 1.8f + 32.0f, TempSensor.Unit.Fahrenheit) else temp
   }

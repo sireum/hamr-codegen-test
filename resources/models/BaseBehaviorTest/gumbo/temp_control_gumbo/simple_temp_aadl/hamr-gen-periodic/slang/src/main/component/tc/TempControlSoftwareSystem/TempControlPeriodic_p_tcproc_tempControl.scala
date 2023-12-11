@@ -41,6 +41,13 @@ object TempControlPeriodic_p_tcproc_tempControl {
 
   def timeTriggered(api: TempControlPeriodic_p_Operational_Api): Unit = {
     Contract(
+      Requires(
+        // BEGIN COMPUTE REQUIRES timeTriggered
+        // assume Refer_to_state_var_in_periodic_general_assume
+        In(latestFanCmd) == CoolingFan.FanCmd.Off ||
+          In(latestFanCmd) == CoolingFan.FanCmd.On
+        // END COMPUTE REQUIRES timeTriggered
+      ),
       Modifies(
         api,
         // BEGIN COMPUTE MODIFIES timeTriggered
@@ -67,6 +74,10 @@ object TempControlPeriodic_p_tcproc_tempControl {
            api.currentTemp.degrees <= api.setPoint.high.degrees) -->:
           (latestFanCmd == In(latestFanCmd) &
             api.fanCmd == latestFanCmd),
+        // case Refer_to_state_var_in_periodic_case_assume
+        (In(latestFanCmd) == CoolingFan.FanCmd.Off ||
+           In(latestFanCmd) == CoolingFan.FanCmd.On) -->: (latestFanCmd == CoolingFan.FanCmd.Off ||
+          latestFanCmd == CoolingFan.FanCmd.On),
         // case currentTempLTSetPoint
         //   If current temperature is less than
         //   the current low set point, then the fan state shall be Off
