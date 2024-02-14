@@ -1,5 +1,5 @@
 // #Sireum #Logika
-// @ Logika: --par --par-branch-mode all --par-branch --strictpure-mode flip --timeout 7
+// @ Logika: --par --par-branch --strictpure-mode flip --timeout 7
 
 // FIXME 'flipping' globablly leads to encoding errors like
 //; Output:
@@ -78,7 +78,7 @@ object Filter_p_p_filterp {
       //assert (api.get_b_event_data_in().get.value > 8)
 
       // can't do global 'flipping' but local flipping allows smt to prove b's value satisfies f's integration constraint
-      setOptions("Logika", """--par --par-branch-mode all --par-branch --strictpure-mode flip --timeout 7""")
+      setOptions("Logika", """--par --par-branch --strictpure-mode flip --timeout 7""")
 
       api.put_f_event_data_out(api.get_b_event_data_in().get)
       api.logInfo("Periodic Filter compute: b_event_data_in nonEmpty so placed it on f_event_data_out")
