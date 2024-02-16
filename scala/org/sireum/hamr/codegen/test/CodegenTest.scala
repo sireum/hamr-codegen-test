@@ -282,7 +282,7 @@ trait CodeGenTest extends CodegenTestSuite {
 
     if (Os.env("GITHUB_ACTIONS").nonEmpty ) {
       // 2024.02.16 -- running out of space in camkes docker container on github
-      rootExpectedDir.removeAll()
+      rootTestOutputDir.removeAll()
     }
 
     assert(allEqual, s"Mismatches in ${rootTestOutputDir.canon.toUri}")
