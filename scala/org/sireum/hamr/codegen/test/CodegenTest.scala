@@ -22,7 +22,7 @@ trait CodeGenTest extends CodegenTestSuite {
 
   def generateExpected: B = F
 
-  assert (generateExpected.->:(!TestUtil.isCI), s"generateExpected must be false when pushed to github")
+  assert (!generateExpected || !TestUtil.isCI, "generateExpected must be false when pushed to github")
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
 
@@ -278,6 +278,11 @@ trait CodeGenTest extends CodegenTestSuite {
       println(
         st"""Test Description: ${description.get}
             |----------------""".render)
+    }
+
+    if (Os.env("GITHUB_ACTIONS").nonEmpty ) {
+      // 2024.02.16 -- running out of space in camkes docker container on github
+      rootExpectedDir.removeAll()
     }
 
     assert(allEqual, s"Mismatches in ${rootTestOutputDir.canon.toUri}")

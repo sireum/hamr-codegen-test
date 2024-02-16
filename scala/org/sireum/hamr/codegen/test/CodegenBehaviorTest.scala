@@ -160,6 +160,11 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
       success = success && !reporter.hasError
     }
 
+    if (Os.env("GITHUB_ACTIONS").nonEmpty ) {
+      // 2024.02.16 -- running out of space in camkes docker container on github
+      (slangOutputDir / "out").removeAll()
+    }
+
     assert(success, s"Test failed: ${testName}")
   }
 

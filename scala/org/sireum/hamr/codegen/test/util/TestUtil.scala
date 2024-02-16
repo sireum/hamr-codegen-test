@@ -142,7 +142,14 @@ object TestUtil {
       assert(ops.StringOps(results.out).contains("HAMR plugin API compatibility check passed!"), "OSATE cli plugin did not emit expected api check message")
 
       assert(check(testName, results, "Phantom did not complete successfully"), "Check did not return OK")
-      outputFile.read
+      val ret = outputFile.read
+
+      if (Os.env("GITHUB_ACTIONS").nonEmpty ) {
+        // 2024.02.16 -- running out of space in camkes docker container on github
+        tempDir.removeAll()
+      }
+
+      ret
     } else {
       airFile.get.read
     }
