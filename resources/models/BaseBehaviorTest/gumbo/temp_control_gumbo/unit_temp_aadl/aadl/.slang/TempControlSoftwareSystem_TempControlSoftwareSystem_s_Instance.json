@@ -451,7 +451,10 @@
                           "modifiers" : [],
                           "sig" : {
                             "type" : "org.sireum.lang.ast.MethodSig",
-                            "isPure" : true,
+                            "purity" : {
+                              "type" : "org.sireum.lang.ast.Purity",
+                              "value" : "StrictPure"
+                            },
                             "id" : {
                               "type" : "org.sireum.lang.ast.Id",
                               "value" : "minTempDegrees",
@@ -754,7 +757,10 @@
                           "modifiers" : [],
                           "sig" : {
                             "type" : "org.sireum.lang.ast.MethodSig",
-                            "isPure" : true,
+                            "purity" : {
+                              "type" : "org.sireum.lang.ast.Purity",
+                              "value" : "StrictPure"
+                            },
                             "id" : {
                               "type" : "org.sireum.lang.ast.Id",
                               "value" : "defaultTempDegrees",
@@ -1057,7 +1063,10 @@
                           "modifiers" : [],
                           "sig" : {
                             "type" : "org.sireum.lang.ast.MethodSig",
-                            "isPure" : true,
+                            "purity" : {
+                              "type" : "org.sireum.lang.ast.Purity",
+                              "value" : "Pure"
+                            },
                             "id" : {
                               "type" : "org.sireum.lang.ast.Id",
                               "value" : "createFahrenheit",
@@ -16427,7 +16436,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "absoluteZeroF",
@@ -16730,7 +16742,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "atLeastAbsoluteZero",
@@ -17547,7 +17562,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "atLeastAbsoluteZeroRaw",
@@ -18932,7 +18950,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "inRange",
@@ -20678,7 +20699,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "Pure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "toFahrenheit",
@@ -24700,7 +24724,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "isFahrenheit",
@@ -25421,7 +25448,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "gminTempDegrees",
@@ -25724,7 +25754,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "gmaxTempDegrees",
@@ -26027,7 +26060,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "gdefaultTempDegrees",
@@ -26330,7 +26366,10 @@
             "modifiers" : [],
             "sig" : {
               "type" : "org.sireum.lang.ast.MethodSig",
-              "isPure" : true,
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
               "id" : {
                 "type" : "org.sireum.lang.ast.Id",
                 "value" : "gTempSensorRange",
