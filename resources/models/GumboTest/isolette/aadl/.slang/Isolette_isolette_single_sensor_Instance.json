@@ -3042,7 +3042,10 @@
                               "modifiers" : [],
                               "sig" : {
                                 "type" : "org.sireum.lang.ast.MethodSig",
-                                "isPure" : true,
+                                "purity" : {
+                                  "type" : "org.sireum.lang.ast.Purity",
+                                  "value" : "StrictPure"
+                                },
                                 "id" : {
                                   "type" : "org.sireum.lang.ast.Id",
                                   "value" : "ROUND",
@@ -3748,6 +3751,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -4029,6 +4035,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -4298,6 +4307,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -4541,6 +4553,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -4808,6 +4823,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -5051,6 +5069,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -5318,6 +5339,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -5561,6 +5585,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -5828,6 +5855,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -6157,6 +6187,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -6552,6 +6585,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "|",
@@ -6852,6 +6888,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -6878,6 +6917,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -7449,6 +7491,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "op" : "&",
@@ -7749,6 +7794,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "attr" : {
@@ -7775,6 +7823,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -7801,6 +7852,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -7827,6 +7881,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -8015,6 +8072,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "->:",
@@ -8261,6 +8321,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&",
@@ -8505,6 +8568,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -8531,6 +8597,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -8557,6 +8626,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -9757,6 +9829,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -10024,6 +10099,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -10305,6 +10383,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -10460,6 +10541,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -10729,6 +10813,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -10972,6 +11059,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -11241,6 +11331,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -11485,6 +11578,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -11511,6 +11607,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -11754,6 +11853,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -12023,6 +12125,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -12267,6 +12372,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -12293,6 +12401,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -12536,6 +12647,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -12805,6 +12919,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -13051,6 +13168,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&",
@@ -13295,6 +13415,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -13321,6 +13444,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -13347,6 +13473,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -13500,6 +13629,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -13767,6 +13899,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -14010,6 +14145,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -14960,6 +15098,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -15244,6 +15385,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -15497,6 +15641,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "attr" : {
@@ -15523,6 +15670,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -15823,6 +15973,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -15849,6 +16002,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "-->:",
@@ -16095,6 +16251,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -16339,6 +16498,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -16365,6 +16527,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -16391,6 +16556,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -16658,6 +16826,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -16911,6 +17082,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "attr" : {
@@ -16937,6 +17111,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -17237,6 +17414,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -17263,6 +17443,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "-->:",
@@ -17509,6 +17692,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -17753,6 +17939,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -17779,6 +17968,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -17805,6 +17997,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -18072,6 +18267,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -18319,6 +18517,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -18619,6 +18820,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -18645,6 +18849,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "-->:",
@@ -18891,6 +19098,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -19135,6 +19345,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -19161,6 +19374,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -19187,6 +19403,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -19454,6 +19673,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -19701,6 +19923,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -20001,6 +20226,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -20027,6 +20255,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "-->:",
@@ -20273,6 +20504,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -20517,6 +20751,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -20543,6 +20780,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -20569,6 +20809,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -20836,6 +21079,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -21081,6 +21327,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&&",
@@ -21325,6 +21574,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -21351,6 +21603,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -25892,7 +26147,10 @@
                               "modifiers" : [],
                               "sig" : {
                                 "type" : "org.sireum.lang.ast.MethodSig",
-                                "isPure" : true,
+                                "purity" : {
+                                  "type" : "org.sireum.lang.ast.Purity",
+                                  "value" : "StrictPure"
+                                },
                                 "id" : {
                                   "type" : "org.sireum.lang.ast.Id",
                                   "value" : "timeout_condition_satisfied",
@@ -26440,6 +26698,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -26724,6 +26985,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -26967,6 +27231,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -27234,6 +27501,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -27477,6 +27747,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -27744,6 +28017,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -27987,6 +28263,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -28312,6 +28591,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "|",
@@ -28612,6 +28894,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -28638,6 +28923,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -29070,6 +29358,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -29370,6 +29661,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -29396,6 +29690,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -29535,6 +29832,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -29723,6 +30023,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "-->:",
@@ -29969,6 +30272,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&",
@@ -30213,6 +30519,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -30239,6 +30548,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -30265,6 +30577,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -30471,6 +30786,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -31060,7 +31378,10 @@
                               "modifiers" : [],
                               "sig" : {
                                 "type" : "org.sireum.lang.ast.MethodSig",
-                                "isPure" : true,
+                                "purity" : {
+                                  "type" : "org.sireum.lang.ast.Purity",
+                                  "value" : "StrictPure"
+                                },
                                 "id" : {
                                   "type" : "org.sireum.lang.ast.Id",
                                   "value" : "timeout_condition_satisfied",
@@ -31608,6 +31929,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -31874,6 +32198,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -32160,6 +32487,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -32404,6 +32734,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -32430,6 +32763,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&&",
@@ -32674,6 +33010,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -32700,6 +33039,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -32969,6 +33311,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : ">",
@@ -33019,6 +33364,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -33288,6 +33636,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -33533,6 +33884,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -33777,6 +34131,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -33803,6 +34160,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -34072,6 +34432,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -34318,6 +34681,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "||",
@@ -34562,6 +34928,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -34588,6 +34957,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -34614,6 +34986,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -34859,6 +35234,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -35103,6 +35481,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -35129,6 +35510,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -35398,6 +35782,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -35646,6 +36033,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "op" : "&&",
@@ -35916,6 +36306,9 @@
                                             "typedOpt" : {
                                               "type" : "None"
                                             }
+                                          },
+                                          "opPosOpt" : {
+                                            "type" : "None"
                                           }
                                         },
                                         "attr" : {
@@ -35942,6 +36335,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "attr" : {
@@ -35968,6 +36364,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "||",
@@ -36240,6 +36639,9 @@
                                             "typedOpt" : {
                                               "type" : "None"
                                             }
+                                          },
+                                          "opPosOpt" : {
+                                            "type" : "None"
                                           }
                                         },
                                         "attr" : {
@@ -36266,6 +36668,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "op" : "&&",
@@ -36510,6 +36915,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "attr" : {
@@ -36536,6 +36944,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -36562,6 +36973,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -36588,6 +37002,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -36743,6 +37160,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -36897,6 +37317,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -36923,6 +37346,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -37194,6 +37620,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&",
@@ -37464,6 +37893,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "attr" : {
@@ -37490,6 +37922,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -37516,6 +37951,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -37786,6 +38224,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -37812,6 +38253,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -37838,6 +38282,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -38083,6 +38530,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -38327,6 +38777,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -38353,6 +38806,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -38620,6 +39076,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -38865,6 +39324,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "&",
@@ -39109,6 +39571,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -39135,6 +39600,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -39617,7 +40085,10 @@
                               "modifiers" : [],
                               "sig" : {
                                 "type" : "org.sireum.lang.ast.MethodSig",
-                                "isPure" : true,
+                                "purity" : {
+                                  "type" : "org.sireum.lang.ast.Purity",
+                                  "value" : "StrictPure"
+                                },
                                 "id" : {
                                   "type" : "org.sireum.lang.ast.Id",
                                   "value" : "timeout_condition_satisfied",
@@ -40166,6 +40637,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -40450,6 +40924,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -40703,6 +41180,9 @@
                                           "typedOpt" : {
                                             "type" : "None"
                                           }
+                                        },
+                                        "opPosOpt" : {
+                                          "type" : "None"
                                         }
                                       },
                                       "attr" : {
@@ -40729,6 +41209,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "&&",
@@ -41029,6 +41512,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -41055,6 +41541,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "-->:",
@@ -41299,6 +41788,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -41325,6 +41817,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -41592,6 +42087,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -41839,6 +42337,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "op" : "||",
@@ -42139,6 +42640,9 @@
                                         "typedOpt" : {
                                           "type" : "None"
                                         }
+                                      },
+                                      "opPosOpt" : {
+                                        "type" : "None"
                                       }
                                     },
                                     "attr" : {
@@ -42165,6 +42669,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "op" : "-->:",
@@ -42409,6 +42916,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -42435,6 +42945,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
@@ -42702,6 +43215,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "guarantees" : {
@@ -43034,6 +43550,9 @@
                                       "typedOpt" : {
                                         "type" : "None"
                                       }
+                                    },
+                                    "opPosOpt" : {
+                                      "type" : "None"
                                     }
                                   },
                                   "attr" : {
@@ -43060,6 +43579,9 @@
                                     "typedOpt" : {
                                       "type" : "None"
                                     }
+                                  },
+                                  "opPosOpt" : {
+                                    "type" : "None"
                                   }
                                 },
                                 "posOpt" : {
