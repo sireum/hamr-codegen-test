@@ -220,8 +220,8 @@ object TestUtil {
         def c(t: Option[String]): Option[Os.Path] = if (t.isEmpty) None() else Some(Os.path(t.get))
         ((c(testOps.slangOutputDir), c(testOps.slangOutputCDir), c(testOps.camkesOutputDir)))
       } else {
-        def commonPath(paths: List[String]): String = {
-          def common(al: List[String], bl: List[String]): List[String] = (al, bl) match {
+        def commonPath(paths: scala.List[String]): String = {
+          def common(al: scala.List[String], bl: scala.List[String]): scala.List[String] = (al, bl) match {
             case (a :: as, b :: bs) if a == b => a :: common(as, bs)
             case _ => Nil
           }
@@ -229,7 +229,7 @@ object TestUtil {
           else paths.map(m => ops.StringOps(m).split(c => c == C('/')).elements.toList).reduceLeft(common).mkString("/")
         }
 
-        val l = List(testOps.slangOutputDir, testOps.slangOutputCDir, testOps.camkesOutputDir).flatten(a => if (a.isEmpty) List() else List(Os.path(a.get).toUri))
+        val l = scala.List(testOps.slangOutputDir, testOps.slangOutputCDir, testOps.camkesOutputDir).flatten(a => if (a.isEmpty) scala.List() else scala.List(Os.path(a.get).toUri))
         val rootDir: Os.Path = Os.uriToPath(commonPath(l))
 
         // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
