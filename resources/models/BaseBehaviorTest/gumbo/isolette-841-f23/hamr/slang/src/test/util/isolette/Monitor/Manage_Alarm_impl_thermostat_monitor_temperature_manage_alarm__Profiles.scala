@@ -18,18 +18,20 @@ import isolette.RandomLib
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var api_current_tempWstatus: RandomLib,
-  var api_lower_alarm_temp: RandomLib,
-  var api_monitor_mode: RandomLib,
-  var api_upper_alarm_temp: RandomLib)
+  var api_current_tempWstatus: RandomLib, // random lib for generating Isolette_Data_Model.TempWstatus_impl
+  var api_lower_alarm_temp: RandomLib, // random lib for generating Isolette_Data_Model.Temp_impl
+  var api_monitor_mode: RandomLib, // random lib for generating Isolette_Data_Model.Monitor_Mode
+  var api_upper_alarm_temp: RandomLib // random lib for generating Isolette_Data_Model.Temp_impl
+  )
 
 // Profile with generators for state variables and incoming ports
 @record class Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_Profile_PS(
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var In_lastCmd: RandomLib,
-  var api_current_tempWstatus: RandomLib,
-  var api_lower_alarm_temp: RandomLib,
-  var api_monitor_mode: RandomLib,
-  var api_upper_alarm_temp: RandomLib)
+  var In_lastCmd: RandomLib, // random lib for generating Isolette_Data_Model.On_Off
+  var api_current_tempWstatus: RandomLib, // random lib for generating Isolette_Data_Model.TempWstatus_impl
+  var api_lower_alarm_temp: RandomLib, // random lib for generating Isolette_Data_Model.Temp_impl
+  var api_monitor_mode: RandomLib, // random lib for generating Isolette_Data_Model.Monitor_Mode
+  var api_upper_alarm_temp: RandomLib // random lib for generating Isolette_Data_Model.Temp_impl
+  )

@@ -18,11 +18,13 @@ import tc.RandomLib
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var api_fanCmd: RandomLib)
+  var api_fanCmd: RandomLib // random lib for generating CoolingFan.FanCmd
+  )
 
 // Profile with generators for state variables and incoming ports
 @record class Fan_s_tcproc_fan_Profile_PS(
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var api_fanCmd: RandomLib)
+  var api_fanCmd: RandomLib // random lib for generating CoolingFan.FanCmd
+  )

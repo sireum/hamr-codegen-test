@@ -18,20 +18,22 @@ import TempControlSimpleTemp.RandomLib
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var api_tempChanged: RandomLib,
-  var api_fanAck: RandomLib,
-  var api_setPoint: RandomLib,
-  var api_currentTemp: RandomLib)
+  var api_tempChanged: RandomLib, // random lib for generating art.Empty
+  var api_fanAck: RandomLib, // random lib for generating CoolingFan.FanAck
+  var api_setPoint: RandomLib, // random lib for generating TempControlSoftwareSystem.SetPoint_i
+  var api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
+  )
 
 // Profile with generators for state variables and incoming ports
 @record class TempControl_i_tcproc_tempControl_Profile_PS(
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var In_currentFanState: RandomLib,
-  var In_currentSetPoint: RandomLib,
-  var In_latestTemp: RandomLib,
-  var api_tempChanged: RandomLib,
-  var api_fanAck: RandomLib,
-  var api_setPoint: RandomLib,
-  var api_currentTemp: RandomLib)
+  var In_currentFanState: RandomLib, // random lib for generating CoolingFan.FanCmd
+  var In_currentSetPoint: RandomLib, // random lib for generating TempControlSoftwareSystem.SetPoint_i
+  var In_latestTemp: RandomLib, // random lib for generating TempSensor.Temperature_i
+  var api_tempChanged: RandomLib, // random lib for generating art.Empty
+  var api_fanAck: RandomLib, // random lib for generating CoolingFan.FanAck
+  var api_setPoint: RandomLib, // random lib for generating TempControlSoftwareSystem.SetPoint_i
+  var api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
+  )

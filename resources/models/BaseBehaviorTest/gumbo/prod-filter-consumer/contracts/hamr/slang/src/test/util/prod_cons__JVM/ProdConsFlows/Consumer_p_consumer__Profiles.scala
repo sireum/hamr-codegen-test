@@ -18,17 +18,19 @@ import prod_cons__JVM.RandomLib
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var api_h_event_in: RandomLib,
-  var api_f_event_data_in: RandomLib,
-  var api_g_event_data_in: RandomLib,
-  var api_e_data_in: RandomLib)
+  var api_h_event_in: RandomLib, // random lib for generating art.Empty
+  var api_f_event_data_in: RandomLib, // random lib for generating ProdConsFlows.Container_i
+  var api_g_event_data_in: RandomLib, // random lib for generating ProdConsFlows.Container_i
+  var api_e_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
+  )
 
 // Profile with generators for state variables and incoming ports
 @record class Consumer_p_consumer_Profile_PS(
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var api_h_event_in: RandomLib,
-  var api_f_event_data_in: RandomLib,
-  var api_g_event_data_in: RandomLib,
-  var api_e_data_in: RandomLib)
+  var api_h_event_in: RandomLib, // random lib for generating art.Empty
+  var api_f_event_data_in: RandomLib, // random lib for generating ProdConsFlows.Container_i
+  var api_g_event_data_in: RandomLib, // random lib for generating ProdConsFlows.Container_i
+  var api_e_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
+  )

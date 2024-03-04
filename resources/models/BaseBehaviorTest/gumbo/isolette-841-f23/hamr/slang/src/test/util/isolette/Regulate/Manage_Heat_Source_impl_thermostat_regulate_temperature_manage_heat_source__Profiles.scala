@@ -18,18 +18,20 @@ import isolette.RandomLib
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var api_current_tempWstatus: RandomLib,
-  var api_lower_desired_temp: RandomLib,
-  var api_regulator_mode: RandomLib,
-  var api_upper_desired_temp: RandomLib)
+  var api_current_tempWstatus: RandomLib, // random lib for generating Isolette_Data_Model.TempWstatus_impl
+  var api_lower_desired_temp: RandomLib, // random lib for generating Isolette_Data_Model.Temp_impl
+  var api_regulator_mode: RandomLib, // random lib for generating Isolette_Data_Model.Regulator_Mode
+  var api_upper_desired_temp: RandomLib // random lib for generating Isolette_Data_Model.Temp_impl
+  )
 
 // Profile with generators for state variables and incoming ports
 @record class Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_Profile_PS(
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var In_lastCmd: RandomLib,
-  var api_current_tempWstatus: RandomLib,
-  var api_lower_desired_temp: RandomLib,
-  var api_regulator_mode: RandomLib,
-  var api_upper_desired_temp: RandomLib)
+  var In_lastCmd: RandomLib, // random lib for generating Isolette_Data_Model.On_Off
+  var api_current_tempWstatus: RandomLib, // random lib for generating Isolette_Data_Model.TempWstatus_impl
+  var api_lower_desired_temp: RandomLib, // random lib for generating Isolette_Data_Model.Temp_impl
+  var api_regulator_mode: RandomLib, // random lib for generating Isolette_Data_Model.Regulator_Mode
+  var api_upper_desired_temp: RandomLib // random lib for generating Isolette_Data_Model.Temp_impl
+  )

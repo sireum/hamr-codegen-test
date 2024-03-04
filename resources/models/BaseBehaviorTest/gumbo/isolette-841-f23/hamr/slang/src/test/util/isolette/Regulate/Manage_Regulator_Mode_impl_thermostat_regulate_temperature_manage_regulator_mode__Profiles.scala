@@ -18,16 +18,18 @@ import isolette.RandomLib
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var api_current_tempWstatus: RandomLib,
-  var api_interface_failure: RandomLib,
-  var api_internal_failure: RandomLib)
+  var api_current_tempWstatus: RandomLib, // random lib for generating Isolette_Data_Model.TempWstatus_impl
+  var api_interface_failure: RandomLib, // random lib for generating Isolette_Data_Model.Failure_Flag_impl
+  var api_internal_failure: RandomLib // random lib for generating Isolette_Data_Model.Failure_Flag_impl
+  )
 
 // Profile with generators for state variables and incoming ports
 @record class Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_Profile_PS(
   val name: String,
   val numTests: Z, // number of tests to generate
   var numTestVectorGenRetries: Z, // number of test vector generation retries
-  var In_lastRegulatorMode: RandomLib,
-  var api_current_tempWstatus: RandomLib,
-  var api_interface_failure: RandomLib,
-  var api_internal_failure: RandomLib)
+  var In_lastRegulatorMode: RandomLib, // random lib for generating Isolette_Data_Model.Regulator_Mode
+  var api_current_tempWstatus: RandomLib, // random lib for generating Isolette_Data_Model.TempWstatus_impl
+  var api_interface_failure: RandomLib, // random lib for generating Isolette_Data_Model.Failure_Flag_impl
+  var api_internal_failure: RandomLib // random lib for generating Isolette_Data_Model.Failure_Flag_impl
+  )
