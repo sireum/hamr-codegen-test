@@ -32,6 +32,8 @@ OperatorInterface_s_tcproc_operatorInterface__Containers.scala
 
 ObservationKind.scala
 
+Container.scala
+
 DataContent.scala
 
 Aux_Types.scala
@@ -177,5 +179,9 @@ Aux_Types.scala
 @datatype class Config_TempSensorTemperature_i_Payload(attempts: Z, verbose: B, filter: TempSensor.Temperature_i_Payload => B) {}
 
 @datatype class Config_runtimemonitorObservationKindType(attempts: Z, verbose: B, filter: runtimemonitor.ObservationKind.Type => B) {}
+
+@datatype class Config_utilContainer(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[utilContainer_DataTypeId.Type], filter: util.Container => B) {}
+
+@datatype class Config_utilEmptyContainer(attempts: Z, verbose: B, filter: util.EmptyContainer => B) {}
 
 

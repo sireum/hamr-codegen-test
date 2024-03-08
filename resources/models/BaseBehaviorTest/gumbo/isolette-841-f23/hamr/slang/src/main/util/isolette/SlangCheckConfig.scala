@@ -56,6 +56,8 @@ Heat_Source_impl_heat_source_cpi_heat_controller__Containers.scala
 
 ObservationKind.scala
 
+Container.scala
+
 DataContent.scala
 
 Aux_Types.scala
@@ -305,5 +307,9 @@ Aux_Types.scala
 @datatype class Config_RegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(attempts: Z, verbose: B, filter: Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS => B) {}
 
 @datatype class Config_runtimemonitorObservationKindType(attempts: Z, verbose: B, filter: runtimemonitor.ObservationKind.Type => B) {}
+
+@datatype class Config_utilContainer(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[utilContainer_DataTypeId.Type], filter: util.Container => B) {}
+
+@datatype class Config_utilEmptyContainer(attempts: Z, verbose: B, filter: util.EmptyContainer => B) {}
 
 

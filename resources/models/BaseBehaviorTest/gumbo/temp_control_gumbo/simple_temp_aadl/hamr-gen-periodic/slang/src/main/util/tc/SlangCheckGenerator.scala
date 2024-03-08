@@ -32,6 +32,8 @@ OperatorInterfacePeriodic_p_tcproc_operatorInterface__Containers.scala
 
 ObservationKind.scala
 
+Container.scala
+
 DataContent.scala
 
 Aux_Types.scala
@@ -1299,6 +1301,44 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextruntimemonitorObservationKindType())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_utilContainer(param: RandomLibI) extends MJen[util.Container] {
+  override def generate(f: util.Container => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextutilContainer())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_utilEmptyContainer(param: RandomLibI) extends MJen[util.EmptyContainer] {
+  override def generate(f: util.EmptyContainer => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextutilEmptyContainer())
 
       if (!continue) {
         return Jen.End

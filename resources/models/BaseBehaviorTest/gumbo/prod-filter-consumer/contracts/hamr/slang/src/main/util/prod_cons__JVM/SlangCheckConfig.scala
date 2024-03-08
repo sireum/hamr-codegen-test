@@ -20,6 +20,8 @@ Filter_s_p_filters__Containers.scala
 
 Consumer_p_consumer__Containers.scala
 
+Container.scala
+
 DataContent.scala
 
 Aux_Types.scala
@@ -147,5 +149,9 @@ Aux_Types.scala
 @datatype class Config_ProdConsFlowsProducer_p_producer_PostState_Container_P(attempts: Z, verbose: B, filter: ProdConsFlows.Producer_p_producer_PostState_Container_P => B) {}
 
 @datatype class Config_ProdConsFlowsProducer_p_producer_PostState_Container_PS(attempts: Z, verbose: B, filter: ProdConsFlows.Producer_p_producer_PostState_Container_PS => B) {}
+
+@datatype class Config_utilContainer(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[utilContainer_DataTypeId.Type], filter: util.Container => B) {}
+
+@datatype class Config_utilEmptyContainer(attempts: Z, verbose: B, filter: util.EmptyContainer => B) {}
 
 

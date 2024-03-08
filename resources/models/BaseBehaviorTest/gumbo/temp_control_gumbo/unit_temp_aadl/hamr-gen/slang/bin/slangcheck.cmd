@@ -36,6 +36,7 @@ val files: ISZ[String] = ISZ("../src/main/data/tc/TempSensor/Unit.scala",
                              "../src/main/data/tc/CoolingFan/Fan_s_tcproc_fan__Containers.scala",
                              "../src/main/data/tc/TempControlSoftwareSystem/TempControl_s_tcproc_tempControl__Containers.scala",
                              "../src/main/data/tc/TempControlSoftwareSystem/OperatorInterface_s_tcproc_operatorInterface__Containers.scala",
+                             "../src/main/util/tc/util/Container.scala",
                              "../src/main/art/art/DataContent.scala",
                              "../src/main/data/tc/Aux_Types.scala")
 

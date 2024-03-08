@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from Container_i.scala, Base_Types.scala, Producer_p_producer__Containers.scala, Filter_p_p_filterp__Containers.scala, Filter_s_p_filters__Containers.scala, Consumer_p_consumer__Containers.scala, DataContent.scala, Aux_Types.scala
+// This file is auto-generated from Container_i.scala, Base_Types.scala, Producer_p_producer__Containers.scala, Filter_p_p_filterp__Containers.scala, Filter_s_p_filters__Containers.scala, Consumer_p_consumer__Containers.scala, Container.scala, DataContent.scala, Aux_Types.scala
 
 package prod_cons__JVM
 
@@ -79,7 +79,9 @@ object MsgPack {
 
     val ProdConsFlowsConsumer_p_consumer_PostState_Container_PS: Z = 1
 
-    val _artEmpty: Z = 2
+    val utilEmptyContainer: Z = 2
+
+    val _artEmpty: Z = 3
 
   }
 
@@ -351,6 +353,32 @@ object MsgPack {
       writer.writeZ(Constants.ProdConsFlowsConsumer_p_consumer_PostState_Container_PS)
     }
 
+    def writeutilContainer(o: util.Container): Unit = {
+      o match {
+        case o: util.EmptyContainer => writeutilEmptyContainer(o)
+        case o: ProdConsFlows.Filter_p_p_filterp_PreState_Container_P => writeProdConsFlowsFilter_p_p_filterp_PreState_Container_P(o)
+        case o: ProdConsFlows.Filter_s_p_filters_PreState_Container_P => writeProdConsFlowsFilter_s_p_filters_PreState_Container_P(o)
+        case o: ProdConsFlows.Filter_p_p_filterp_PreState_Container_PS => writeProdConsFlowsFilter_p_p_filterp_PreState_Container_PS(o)
+        case o: ProdConsFlows.Filter_s_p_filters_PreState_Container_PS => writeProdConsFlowsFilter_s_p_filters_PreState_Container_PS(o)
+        case o: ProdConsFlows.Filter_p_p_filterp_PostState_Container_P => writeProdConsFlowsFilter_p_p_filterp_PostState_Container_P(o)
+        case o: ProdConsFlows.Filter_s_p_filters_PostState_Container_P => writeProdConsFlowsFilter_s_p_filters_PostState_Container_P(o)
+        case o: ProdConsFlows.Filter_p_p_filterp_PostState_Container_PS => writeProdConsFlowsFilter_p_p_filterp_PostState_Container_PS(o)
+        case o: ProdConsFlows.Filter_s_p_filters_PostState_Container_PS => writeProdConsFlowsFilter_s_p_filters_PostState_Container_PS(o)
+        case o: ProdConsFlows.Producer_p_producer_PreState_Container_P => writeProdConsFlowsProducer_p_producer_PreState_Container_P(o)
+        case o: ProdConsFlows.Producer_p_producer_PreState_Container_PS => writeProdConsFlowsProducer_p_producer_PreState_Container_PS(o)
+        case o: ProdConsFlows.Consumer_p_consumer_PreState_Container_P => writeProdConsFlowsConsumer_p_consumer_PreState_Container_P(o)
+        case o: ProdConsFlows.Consumer_p_consumer_PreState_Container_PS => writeProdConsFlowsConsumer_p_consumer_PreState_Container_PS(o)
+        case o: ProdConsFlows.Producer_p_producer_PostState_Container_P => writeProdConsFlowsProducer_p_producer_PostState_Container_P(o)
+        case o: ProdConsFlows.Producer_p_producer_PostState_Container_PS => writeProdConsFlowsProducer_p_producer_PostState_Container_PS(o)
+        case o: ProdConsFlows.Consumer_p_consumer_PostState_Container_P => writeProdConsFlowsConsumer_p_consumer_PostState_Container_P(o)
+        case o: ProdConsFlows.Consumer_p_consumer_PostState_Container_PS => writeProdConsFlowsConsumer_p_consumer_PostState_Container_PS(o)
+      }
+    }
+
+    def writeutilEmptyContainer(o: util.EmptyContainer): Unit = {
+      writer.writeZ(Constants.utilEmptyContainer)
+    }
+
     def write_artDataContent(o: art.DataContent): Unit = {
       o match {
         case o: art.Empty => write_artEmpty(o)
@@ -370,6 +398,7 @@ object MsgPack {
         case o: Base_Types.Character_Payload => writeBase_TypesCharacter_Payload(o)
         case o: Base_Types.String_Payload => writeBase_TypesString_Payload(o)
         case o: Base_Types.Bits_Payload => writeBase_TypesBits_Payload(o)
+        case o: util.EmptyContainer => writeutilEmptyContainer(o)
         case o: ProdConsFlows.Container_i_Payload => writeProdConsFlowsContainer_i_Payload(o)
         case o: ProdConsFlows.Filter_p_p_filterp_PreState_Container_P => writeProdConsFlowsFilter_p_p_filterp_PreState_Container_P(o)
         case o: ProdConsFlows.Filter_s_p_filters_PreState_Container_P => writeProdConsFlowsFilter_s_p_filters_PreState_Container_P(o)
@@ -992,6 +1021,46 @@ object MsgPack {
       return ProdConsFlows.Consumer_p_consumer_PostState_Container_PS()
     }
 
+    def readutilContainer(): util.Container = {
+      val i = reader.curr
+      val t = reader.readZ()
+      t match {
+        case Constants.utilEmptyContainer => val r = readutilEmptyContainerT(T); return r
+        case Constants.ProdConsFlowsFilter_p_p_filterp_PreState_Container_P => val r = readProdConsFlowsFilter_p_p_filterp_PreState_Container_PT(T); return r
+        case Constants.ProdConsFlowsFilter_s_p_filters_PreState_Container_P => val r = readProdConsFlowsFilter_s_p_filters_PreState_Container_PT(T); return r
+        case Constants.ProdConsFlowsFilter_p_p_filterp_PreState_Container_PS => val r = readProdConsFlowsFilter_p_p_filterp_PreState_Container_PST(T); return r
+        case Constants.ProdConsFlowsFilter_s_p_filters_PreState_Container_PS => val r = readProdConsFlowsFilter_s_p_filters_PreState_Container_PST(T); return r
+        case Constants.ProdConsFlowsFilter_p_p_filterp_PostState_Container_P => val r = readProdConsFlowsFilter_p_p_filterp_PostState_Container_PT(T); return r
+        case Constants.ProdConsFlowsFilter_s_p_filters_PostState_Container_P => val r = readProdConsFlowsFilter_s_p_filters_PostState_Container_PT(T); return r
+        case Constants.ProdConsFlowsFilter_p_p_filterp_PostState_Container_PS => val r = readProdConsFlowsFilter_p_p_filterp_PostState_Container_PST(T); return r
+        case Constants.ProdConsFlowsFilter_s_p_filters_PostState_Container_PS => val r = readProdConsFlowsFilter_s_p_filters_PostState_Container_PST(T); return r
+        case Constants.ProdConsFlowsProducer_p_producer_PreState_Container_P => val r = readProdConsFlowsProducer_p_producer_PreState_Container_PT(T); return r
+        case Constants.ProdConsFlowsProducer_p_producer_PreState_Container_PS => val r = readProdConsFlowsProducer_p_producer_PreState_Container_PST(T); return r
+        case Constants.ProdConsFlowsConsumer_p_consumer_PreState_Container_P => val r = readProdConsFlowsConsumer_p_consumer_PreState_Container_PT(T); return r
+        case Constants.ProdConsFlowsConsumer_p_consumer_PreState_Container_PS => val r = readProdConsFlowsConsumer_p_consumer_PreState_Container_PST(T); return r
+        case Constants.ProdConsFlowsProducer_p_producer_PostState_Container_P => val r = readProdConsFlowsProducer_p_producer_PostState_Container_PT(T); return r
+        case Constants.ProdConsFlowsProducer_p_producer_PostState_Container_PS => val r = readProdConsFlowsProducer_p_producer_PostState_Container_PST(T); return r
+        case Constants.ProdConsFlowsConsumer_p_consumer_PostState_Container_P => val r = readProdConsFlowsConsumer_p_consumer_PostState_Container_PT(T); return r
+        case Constants.ProdConsFlowsConsumer_p_consumer_PostState_Container_PS => val r = readProdConsFlowsConsumer_p_consumer_PostState_Container_PST(T); return r
+        case _ =>
+          reader.error(i, s"$t is not a valid type of util.Container.")
+          val r = readProdConsFlowsConsumer_p_consumer_PostState_Container_PST(T)
+          return r
+      }
+    }
+
+    def readutilEmptyContainer(): util.EmptyContainer = {
+      val r = readutilEmptyContainerT(F)
+      return r
+    }
+
+    def readutilEmptyContainerT(typeParsed: B): util.EmptyContainer = {
+      if (!typeParsed) {
+        reader.expectZ(Constants.utilEmptyContainer)
+      }
+      return util.EmptyContainer()
+    }
+
     def read_artDataContent(): art.DataContent = {
       val i = reader.curr
       val t = reader.readZ()
@@ -1013,6 +1082,7 @@ object MsgPack {
         case Constants.Base_TypesCharacter_Payload => val r = readBase_TypesCharacter_PayloadT(T); return r
         case Constants.Base_TypesString_Payload => val r = readBase_TypesString_PayloadT(T); return r
         case Constants.Base_TypesBits_Payload => val r = readBase_TypesBits_PayloadT(T); return r
+        case Constants.utilEmptyContainer => val r = readutilEmptyContainerT(T); return r
         case Constants.ProdConsFlowsContainer_i_Payload => val r = readProdConsFlowsContainer_i_PayloadT(T); return r
         case Constants.ProdConsFlowsFilter_p_p_filterp_PreState_Container_P => val r = readProdConsFlowsFilter_p_p_filterp_PreState_Container_PT(T); return r
         case Constants.ProdConsFlowsFilter_s_p_filters_PreState_Container_P => val r = readProdConsFlowsFilter_s_p_filters_PreState_Container_PT(T); return r
@@ -1688,6 +1758,36 @@ object MsgPack {
       return r
     }
     val r = to(data, fProdConsFlowsConsumer_p_consumer_PostState_Container_PS _)
+    return r
+  }
+
+  def fromutilContainer(o: util.Container, pooling: B): ISZ[U8] = {
+    val w = Writer.Default(MessagePack.writer(pooling))
+    w.writeutilContainer(o)
+    return w.result
+  }
+
+  def toutilContainer(data: ISZ[U8]): Either[util.Container, MessagePack.ErrorMsg] = {
+    def futilContainer(reader: Reader): util.Container = {
+      val r = reader.readutilContainer()
+      return r
+    }
+    val r = to(data, futilContainer _)
+    return r
+  }
+
+  def fromutilEmptyContainer(o: util.EmptyContainer, pooling: B): ISZ[U8] = {
+    val w = Writer.Default(MessagePack.writer(pooling))
+    w.writeutilEmptyContainer(o)
+    return w.result
+  }
+
+  def toutilEmptyContainer(data: ISZ[U8]): Either[util.EmptyContainer, MessagePack.ErrorMsg] = {
+    def futilEmptyContainer(reader: Reader): util.EmptyContainer = {
+      val r = reader.readutilEmptyContainer()
+      return r
+    }
+    val r = to(data, futilEmptyContainer _)
     return r
   }
 
