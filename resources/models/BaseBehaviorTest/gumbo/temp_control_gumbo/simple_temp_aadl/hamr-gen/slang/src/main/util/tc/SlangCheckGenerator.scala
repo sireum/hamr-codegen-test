@@ -1371,25 +1371,6 @@ Aux_Types.scala
   }
 }
 
-@record class Gen_runtimemonitorObservationKindType(param: RandomLibI) extends MJen[runtimemonitor.ObservationKind.Type] {
-  override def generate(f: runtimemonitor.ObservationKind.Type => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.nextruntimemonitorObservationKindType())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
 @record class Gen_utilContainer(param: RandomLibI) extends MJen[util.Container] {
   override def generate(f: util.Container => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
@@ -1415,6 +1396,25 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextutilEmptyContainer())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_runtimemonitorObservationKindType(param: RandomLibI) extends MJen[runtimemonitor.ObservationKind.Type] {
+  override def generate(f: runtimemonitor.ObservationKind.Type => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextruntimemonitorObservationKindType())
 
       if (!continue) {
         return Jen.End
