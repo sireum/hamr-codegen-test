@@ -85,7 +85,7 @@ object Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulat
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_Profile,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_GumboX_TestHarness {
 
@@ -101,7 +101,7 @@ object Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulat
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_Profile_P,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_GumboX_TestHarness {
 
@@ -117,7 +117,7 @@ object Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulat
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_Profile_PS,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_GumboX_TestHarness {
 

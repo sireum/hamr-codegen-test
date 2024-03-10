@@ -63,7 +63,7 @@ object Filter_p_p_filterp_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Filter_p_p_filterp_Profile,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Filter_p_p_filterp_GumboX_TestHarness {
 
@@ -79,7 +79,7 @@ object Filter_p_p_filterp_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Filter_p_p_filterp_Profile_P,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Filter_p_p_filterp_GumboX_TestHarness {
 

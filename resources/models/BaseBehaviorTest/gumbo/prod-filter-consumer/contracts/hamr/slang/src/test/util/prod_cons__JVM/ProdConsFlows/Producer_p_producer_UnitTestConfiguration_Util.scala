@@ -59,7 +59,7 @@ object Producer_p_producer_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Producer_p_producer_Profile,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Producer_p_producer_GumboX_TestHarness {
 
@@ -75,7 +75,7 @@ object Producer_p_producer_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Producer_p_producer_Profile_P,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Producer_p_producer_GumboX_TestHarness {
 

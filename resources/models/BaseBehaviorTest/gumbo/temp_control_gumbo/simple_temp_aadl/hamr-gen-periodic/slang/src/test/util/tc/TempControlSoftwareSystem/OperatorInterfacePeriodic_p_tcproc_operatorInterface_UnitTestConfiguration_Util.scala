@@ -60,7 +60,7 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_UnitTestConfiguratio
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_TestHarness {
 
@@ -76,7 +76,7 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_UnitTestConfiguratio
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_TestHarness {
 

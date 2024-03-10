@@ -87,7 +87,7 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_UnitTestCon
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_Profile,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX_TestHarness {
 
@@ -103,7 +103,7 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_UnitTestCon
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_Profile_P,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX_TestHarness {
 
@@ -119,7 +119,7 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_UnitTestCon
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_Profile_PS,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX_TestHarness {
 

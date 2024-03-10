@@ -61,7 +61,7 @@ object OperatorInterface_s_tcproc_operatorInterface_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: OperatorInterface_s_tcproc_operatorInterface_Profile,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with OperatorInterface_s_tcproc_operatorInterface_GumboX_TestHarness {
 
@@ -77,7 +77,7 @@ object OperatorInterface_s_tcproc_operatorInterface_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: OperatorInterface_s_tcproc_operatorInterface_Profile_P,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with OperatorInterface_s_tcproc_operatorInterface_GumboX_TestHarness {
 

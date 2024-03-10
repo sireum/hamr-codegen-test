@@ -59,7 +59,7 @@ object TempSensorPeriodic_p_tcproc_tempSensor_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: TempSensorPeriodic_p_tcproc_tempSensor_Profile,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempSensorPeriodic_p_tcproc_tempSensor_GumboX_TestHarness {
 
@@ -75,7 +75,7 @@ object TempSensorPeriodic_p_tcproc_tempSensor_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: TempSensorPeriodic_p_tcproc_tempSensor_Profile_P,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempSensorPeriodic_p_tcproc_tempSensor_GumboX_TestHarness {
 

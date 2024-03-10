@@ -85,7 +85,7 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
@@ -101,7 +101,7 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile_P,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
@@ -117,7 +117,7 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Profile,
+  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile_PS,
   var genReplay: (Container, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
