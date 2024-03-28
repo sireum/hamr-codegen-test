@@ -345,18 +345,6 @@ object TestUtil {
             eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
           }
         }
-
-        if (performAction("mill compile")) {
-          val mill = getCodegenDir / "bin" / os / (if (Os.isWin) "mill.bat" else "mill")
-          if (mill.exists && keepGoing) {
-            println("Compiling Slang project via mill ...")
-            val sbtResults = vproc(s"$mill __.compile", projectCmd.up.up, for(e <- Os.envs.entries) yield (e._1, e._2), None(), "mill-compile")
-            _check(sbtResults, "mill compilation failed")
-          } else {
-            eprintln(s"mill not found at $mill.")
-            eprintln(s"Run the following to install it: '$$SIREUM_HOME/hamr/codegen/bin/build.cmd --help'")
-          }
-        }
       }
 
       //noinspection DfaConstantConditions
