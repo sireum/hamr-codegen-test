@@ -29,11 +29,11 @@ val files: ISZ[String] = ISZ("../src/main/data/TempControlSimpleTemp/TempSensor/
                              "../src/main/data/TempControlSimpleTemp/CoolingFan/FanAck.scala",
                              "../src/main/data/TempControlSimpleTemp/TempControlSoftwareSystem/SetPoint_i.scala",
                              "../src/main/data/TempControlSimpleTemp/Base_Types.scala",
-                             "../src/main/data/TempControlSimpleTemp/TempSensor/TempSensor_i_tcproc_tempSensor__Containers.scala",
-                             "../src/main/data/TempControlSimpleTemp/CoolingFan/Fan_i_tcproc_fan__Containers.scala",
-                             "../src/main/data/TempControlSimpleTemp/TempControlSoftwareSystem/TempControl_i_tcproc_tempControl__Containers.scala",
-                             "../src/main/data/TempControlSimpleTemp/TempControlSoftwareSystem/OperatorInterface_i_tcproc_operatorInterface__Containers.scala",
-                             "../src/main/data/TempControlSimpleTemp/util/Container.scala",
+                             "../src/main/util/TempControlSimpleTemp/TempSensor/TempSensor_i_tcproc_tempSensor_Containers.scala",
+                             "../src/main/util/TempControlSimpleTemp/CoolingFan/Fan_i_tcproc_fan_Containers.scala",
+                             "../src/main/util/TempControlSimpleTemp/TempControlSoftwareSystem/TempControl_i_tcproc_tempControl_Containers.scala",
+                             "../src/main/util/TempControlSimpleTemp/TempControlSoftwareSystem/OperatorInterface_i_tcproc_operatorInterface_Containers.scala",
+                             "../src/main/util/TempControlSimpleTemp/util/Container.scala",
                              "../src/main/art/art/DataContent.scala",
                              "../src/main/data/TempControlSimpleTemp/Aux_Types.scala")
 

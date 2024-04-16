@@ -22,13 +22,13 @@ GUMBO__Library.scala
 
 GUMBO__Library.scala
 
-TempSensorPeriodic_p_tcproc_tempSensor__Containers.scala
+TempSensorPeriodic_p_tcproc_tempSensor_Containers.scala
 
-FanPeriodic_p_tcproc_fan__Containers.scala
+FanPeriodic_p_tcproc_fan_Containers.scala
 
-TempControlPeriodic_p_tcproc_tempControl__Containers.scala
+TempControlPeriodic_p_tcproc_tempControl_Containers.scala
 
-OperatorInterfacePeriodic_p_tcproc_operatorInterface__Containers.scala
+OperatorInterfacePeriodic_p_tcproc_operatorInterface_Containers.scala
 
 ObservationKind.scala
 

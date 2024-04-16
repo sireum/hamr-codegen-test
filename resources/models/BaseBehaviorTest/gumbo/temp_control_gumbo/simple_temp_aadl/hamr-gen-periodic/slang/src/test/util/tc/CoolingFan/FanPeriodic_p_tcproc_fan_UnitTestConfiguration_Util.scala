@@ -16,6 +16,10 @@ object FanPeriodic_p_tcproc_fan_UnitTestConfiguration_Util {
     return RandomLib(Random.Gen64Impl(Xoshiro256.create))
   }
 
+  val tq: String = "\"\"\""
+
+  type DefaultComputeProfile = FanPeriodic_p_tcproc_fan_Profile_P
+
   def defaultComputeConfig: FanPeriodic_p_tcproc_fan_Compute_UnitTestConfiguration = {
     return (FanPeriodic_p_tcproc_fan_Compute_UnitTestConfiguration (
       verbose = F,
@@ -25,14 +29,17 @@ object FanPeriodic_p_tcproc_fan_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = FanPeriodic_p_tcproc_fan_Profile_P (
-        name = "Compute_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
-        numTestVectorGenRetries = 100, // needed for old framework,
+        name = "Compute_Default_Profile",
         api_fanCmd = freshRandomLib
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => Some(
-        st"""val testVector = tc.JSON.toCoolingFanFanPeriodic_p_tcproc_fan_PreState_Container_P(json).left
-            |assert (testComputeCBV(testVector) == results)""".render))
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
+       st"""Replay Unit Test:
+            |  test("Replay: $testName") {
+            |    val results = tc.GumboXUtil.GumboXResult.$r
+            |    val json = st${tq}${tc.JSON.fromutilContainer(c, T)}${tq}.render
+            |    val testVector = tc.JSON.toCoolingFanFanPeriodic_p_tcproc_fan_PreState_Container_P(json).left
+            |    assert (testComputeCBV(testVector) == results)
+            |  }""".render))
     )
   }
 }
@@ -44,8 +51,8 @@ object FanPeriodic_p_tcproc_fan_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: FanPeriodic_p_tcproc_fan_Profile_P,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: FanPeriodic_p_tcproc_fan_Profile_P_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with FanPeriodic_p_tcproc_fan_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {

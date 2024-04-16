@@ -24,13 +24,13 @@ GUMBO__Library.scala
 
 GUMBO__Library.scala
 
-TempSensor_s_tcproc_tempSensor__Containers.scala
+TempSensor_s_tcproc_tempSensor_Containers.scala
 
-Fan_s_tcproc_fan__Containers.scala
+Fan_s_tcproc_fan_Containers.scala
 
-TempControl_s_tcproc_tempControl__Containers.scala
+TempControl_s_tcproc_tempControl_Containers.scala
 
-OperatorInterface_s_tcproc_operatorInterface__Containers.scala
+OperatorInterface_s_tcproc_operatorInterface_Containers.scala
 
 Container.scala
 
@@ -1971,6 +1971,239 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
+  // ============= TempControlSoftwareSystem.SetPoint_i ===================
+
+  def get_Config_TempControlSoftwareSystemSetPoint_i: Config_TempControlSoftwareSystemSetPoint_i
+  def set_Config_TempControlSoftwareSystemSetPoint_i(config: Config_TempControlSoftwareSystemSetPoint_i): RandomLib
+
+  def nextTempControlSoftwareSystemSetPoint_i(): TempControlSoftwareSystem.SetPoint_i = {
+    var low: TempSensor.Temperature_i = nextTempSensorTemperature_i()
+    var high: TempSensor.Temperature_i = nextTempSensorTemperature_i()
+
+    var v: TempControlSoftwareSystem.SetPoint_i = TempControlSoftwareSystem.SetPoint_i(low, high)
+
+    if(get_Config_TempControlSoftwareSystemSetPoint_i.attempts >= 0) {
+     for(i <- 0 to get_Config_TempControlSoftwareSystemSetPoint_i.attempts) {
+        if(get_Config_TempControlSoftwareSystemSetPoint_i.filter(v)) {
+          return v
+        }
+        if (get_Config_TempControlSoftwareSystemSetPoint_i.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+        low = nextTempSensorTemperature_i()
+        high = nextTempSensorTemperature_i()
+        v = TempControlSoftwareSystem.SetPoint_i(low, high)
+     }
+    } else {
+     while(T) {
+       if(get_Config_TempControlSoftwareSystemSetPoint_i.filter(v)) {
+         return v
+       }
+       if (get_Config_TempControlSoftwareSystemSetPoint_i.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+       low = nextTempSensorTemperature_i()
+       high = nextTempSensorTemperature_i()
+       v = TempControlSoftwareSystem.SetPoint_i(low, high)
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  // ============= TempControlSoftwareSystem.SetPoint_i_Payload ===================
+
+  def get_Config_TempControlSoftwareSystemSetPoint_i_Payload: Config_TempControlSoftwareSystemSetPoint_i_Payload
+  def set_Config_TempControlSoftwareSystemSetPoint_i_Payload(config: Config_TempControlSoftwareSystemSetPoint_i_Payload): RandomLib
+
+  def nextTempControlSoftwareSystemSetPoint_i_Payload(): TempControlSoftwareSystem.SetPoint_i_Payload = {
+    var value: TempControlSoftwareSystem.SetPoint_i = nextTempControlSoftwareSystemSetPoint_i()
+
+    var v: TempControlSoftwareSystem.SetPoint_i_Payload = TempControlSoftwareSystem.SetPoint_i_Payload(value)
+
+    if(get_Config_TempControlSoftwareSystemSetPoint_i_Payload.attempts >= 0) {
+     for(i <- 0 to get_Config_TempControlSoftwareSystemSetPoint_i_Payload.attempts) {
+        if(get_Config_TempControlSoftwareSystemSetPoint_i_Payload.filter(v)) {
+          return v
+        }
+        if (get_Config_TempControlSoftwareSystemSetPoint_i_Payload.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+        value = nextTempControlSoftwareSystemSetPoint_i()
+        v = TempControlSoftwareSystem.SetPoint_i_Payload(value)
+     }
+    } else {
+     while(T) {
+       if(get_Config_TempControlSoftwareSystemSetPoint_i_Payload.filter(v)) {
+         return v
+       }
+       if (get_Config_TempControlSoftwareSystemSetPoint_i_Payload.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+       value = nextTempControlSoftwareSystemSetPoint_i()
+       v = TempControlSoftwareSystem.SetPoint_i_Payload(value)
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  // ============= TempSensor.Temperature_i ===================
+
+  def get_Config_TempSensorTemperature_i: Config_TempSensorTemperature_i
+  def set_Config_TempSensorTemperature_i(config: Config_TempSensorTemperature_i): RandomLib
+
+  def nextTempSensorTemperature_i(): TempSensor.Temperature_i = {
+    var degrees: F32 = nextF32()
+    var unit: TempSensor.Unit.Type = nextTempSensorUnitType()
+
+    var v: TempSensor.Temperature_i = TempSensor.Temperature_i(degrees, unit)
+
+    if(get_Config_TempSensorTemperature_i.attempts >= 0) {
+     for(i <- 0 to get_Config_TempSensorTemperature_i.attempts) {
+        if(get_Config_TempSensorTemperature_i.filter(v)) {
+          return v
+        }
+        if (get_Config_TempSensorTemperature_i.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+        degrees = nextF32()
+        unit = nextTempSensorUnitType()
+        v = TempSensor.Temperature_i(degrees, unit)
+     }
+    } else {
+     while(T) {
+       if(get_Config_TempSensorTemperature_i.filter(v)) {
+         return v
+       }
+       if (get_Config_TempSensorTemperature_i.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+       degrees = nextF32()
+       unit = nextTempSensorUnitType()
+       v = TempSensor.Temperature_i(degrees, unit)
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  // ============= TempSensor.Temperature_i_Payload ===================
+
+  def get_Config_TempSensorTemperature_i_Payload: Config_TempSensorTemperature_i_Payload
+  def set_Config_TempSensorTemperature_i_Payload(config: Config_TempSensorTemperature_i_Payload): RandomLib
+
+  def nextTempSensorTemperature_i_Payload(): TempSensor.Temperature_i_Payload = {
+    var value: TempSensor.Temperature_i = nextTempSensorTemperature_i()
+
+    var v: TempSensor.Temperature_i_Payload = TempSensor.Temperature_i_Payload(value)
+
+    if(get_Config_TempSensorTemperature_i_Payload.attempts >= 0) {
+     for(i <- 0 to get_Config_TempSensorTemperature_i_Payload.attempts) {
+        if(get_Config_TempSensorTemperature_i_Payload.filter(v)) {
+          return v
+        }
+        if (get_Config_TempSensorTemperature_i_Payload.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+        value = nextTempSensorTemperature_i()
+        v = TempSensor.Temperature_i_Payload(value)
+     }
+    } else {
+     while(T) {
+       if(get_Config_TempSensorTemperature_i_Payload.filter(v)) {
+         return v
+       }
+       if (get_Config_TempSensorTemperature_i_Payload.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+       value = nextTempSensorTemperature_i()
+       v = TempSensor.Temperature_i_Payload(value)
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  // ============= TempSensor.Unit.Type ===================
+
+  def get_Config_TempSensorUnitType: Config_TempSensorUnitType
+  def set_Config_TempSensorUnitType(config: Config_TempSensorUnitType): RandomLib
+
+  def nextTempSensorUnitType(): TempSensor.Unit.Type = {
+
+    var ordinal: Z = gen.nextZBetween(0, tc.TempSensor.Unit.numOfElements-1)
+
+    var v: TempSensor.Unit.Type = tc.TempSensor.Unit.byOrdinal(ordinal).get
+    if(get_Config_TempSensorUnitType.attempts >= 0) {
+     for(i <- 0 to get_Config_TempSensorUnitType.attempts) {
+       if(get_Config_TempSensorUnitType.filter(v)) {
+        return v
+       }
+       if (get_Config_TempSensorUnitType.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+       ordinal= gen.nextZBetween(0, tc.TempSensor.Unit.numOfElements-1)
+       v = tc.TempSensor.Unit.byOrdinal(ordinal).get
+     }
+    } else {
+     while(T){
+       if(get_Config_TempSensorUnitType.filter(v)) {
+        return v
+       }
+       if (get_Config_TempSensorUnitType.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+       ordinal= gen.nextZBetween(0, tc.TempSensor.Unit.numOfElements-1)
+       v = tc.TempSensor.Unit.byOrdinal(ordinal).get
+     }
+    }
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
+  // ============= TempSensor.Unit_Payload ===================
+
+  def get_Config_TempSensorUnit_Payload: Config_TempSensorUnit_Payload
+  def set_Config_TempSensorUnit_Payload(config: Config_TempSensorUnit_Payload): RandomLib
+
+  def nextTempSensorUnit_Payload(): TempSensor.Unit_Payload = {
+    var value: TempSensor.Unit.Type = nextTempSensorUnitType()
+
+    var v: TempSensor.Unit_Payload = TempSensor.Unit_Payload(value)
+
+    if(get_Config_TempSensorUnit_Payload.attempts >= 0) {
+     for(i <- 0 to get_Config_TempSensorUnit_Payload.attempts) {
+        if(get_Config_TempSensorUnit_Payload.filter(v)) {
+          return v
+        }
+        if (get_Config_TempSensorUnit_Payload.verbose) {
+          println(s"Retrying for failing value: $v")
+        }
+        value = nextTempSensorUnitType()
+        v = TempSensor.Unit_Payload(value)
+     }
+    } else {
+     while(T) {
+       if(get_Config_TempSensorUnit_Payload.filter(v)) {
+         return v
+       }
+       if (get_Config_TempSensorUnit_Payload.verbose) {
+         println(s"Retrying for failing value: $v")
+       }
+       value = nextTempSensorUnitType()
+       v = TempSensor.Unit_Payload(value)
+     }
+    }
+
+    assert(F, "Requirements too strict to generate")
+    halt("Requirements too strict to generate")
+  }
+
   // ============= CoolingFan.Fan_s_tcproc_fan_PreState_Container ===================
 
   def get_Config_CoolingFanFan_s_tcproc_fan_PreState_Container: Config_CoolingFanFan_s_tcproc_fan_PreState_Container
@@ -2733,85 +2966,6 @@ Aux_Types.scala
     halt("Requirements too strict to generate")
   }
 
-  // ============= TempControlSoftwareSystem.SetPoint_i ===================
-
-  def get_Config_TempControlSoftwareSystemSetPoint_i: Config_TempControlSoftwareSystemSetPoint_i
-  def set_Config_TempControlSoftwareSystemSetPoint_i(config: Config_TempControlSoftwareSystemSetPoint_i): RandomLib
-
-  def nextTempControlSoftwareSystemSetPoint_i(): TempControlSoftwareSystem.SetPoint_i = {
-    var low: TempSensor.Temperature_i = nextTempSensorTemperature_i()
-    var high: TempSensor.Temperature_i = nextTempSensorTemperature_i()
-
-    var v: TempControlSoftwareSystem.SetPoint_i = TempControlSoftwareSystem.SetPoint_i(low, high)
-
-    if(get_Config_TempControlSoftwareSystemSetPoint_i.attempts >= 0) {
-     for(i <- 0 to get_Config_TempControlSoftwareSystemSetPoint_i.attempts) {
-        if(get_Config_TempControlSoftwareSystemSetPoint_i.filter(v)) {
-          return v
-        }
-        if (get_Config_TempControlSoftwareSystemSetPoint_i.verbose) {
-          println(s"Retrying for failing value: $v")
-        }
-        low = nextTempSensorTemperature_i()
-        high = nextTempSensorTemperature_i()
-        v = TempControlSoftwareSystem.SetPoint_i(low, high)
-     }
-    } else {
-     while(T) {
-       if(get_Config_TempControlSoftwareSystemSetPoint_i.filter(v)) {
-         return v
-       }
-       if (get_Config_TempControlSoftwareSystemSetPoint_i.verbose) {
-         println(s"Retrying for failing value: $v")
-       }
-       low = nextTempSensorTemperature_i()
-       high = nextTempSensorTemperature_i()
-       v = TempControlSoftwareSystem.SetPoint_i(low, high)
-     }
-    }
-
-    assert(F, "Requirements too strict to generate")
-    halt("Requirements too strict to generate")
-  }
-
-  // ============= TempControlSoftwareSystem.SetPoint_i_Payload ===================
-
-  def get_Config_TempControlSoftwareSystemSetPoint_i_Payload: Config_TempControlSoftwareSystemSetPoint_i_Payload
-  def set_Config_TempControlSoftwareSystemSetPoint_i_Payload(config: Config_TempControlSoftwareSystemSetPoint_i_Payload): RandomLib
-
-  def nextTempControlSoftwareSystemSetPoint_i_Payload(): TempControlSoftwareSystem.SetPoint_i_Payload = {
-    var value: TempControlSoftwareSystem.SetPoint_i = nextTempControlSoftwareSystemSetPoint_i()
-
-    var v: TempControlSoftwareSystem.SetPoint_i_Payload = TempControlSoftwareSystem.SetPoint_i_Payload(value)
-
-    if(get_Config_TempControlSoftwareSystemSetPoint_i_Payload.attempts >= 0) {
-     for(i <- 0 to get_Config_TempControlSoftwareSystemSetPoint_i_Payload.attempts) {
-        if(get_Config_TempControlSoftwareSystemSetPoint_i_Payload.filter(v)) {
-          return v
-        }
-        if (get_Config_TempControlSoftwareSystemSetPoint_i_Payload.verbose) {
-          println(s"Retrying for failing value: $v")
-        }
-        value = nextTempControlSoftwareSystemSetPoint_i()
-        v = TempControlSoftwareSystem.SetPoint_i_Payload(value)
-     }
-    } else {
-     while(T) {
-       if(get_Config_TempControlSoftwareSystemSetPoint_i_Payload.filter(v)) {
-         return v
-       }
-       if (get_Config_TempControlSoftwareSystemSetPoint_i_Payload.verbose) {
-         println(s"Retrying for failing value: $v")
-       }
-       value = nextTempControlSoftwareSystemSetPoint_i()
-       v = TempControlSoftwareSystem.SetPoint_i_Payload(value)
-     }
-    }
-
-    assert(F, "Requirements too strict to generate")
-    halt("Requirements too strict to generate")
-  }
-
   // ============= TempControlSoftwareSystem.TempControl_s_tcproc_tempControl_PreState_Container ===================
 
   def get_Config_TempControlSoftwareSystemTempControl_s_tcproc_tempControl_PreState_Container: Config_TempControlSoftwareSystemTempControl_s_tcproc_tempControl_PreState_Container
@@ -3393,160 +3547,6 @@ Aux_Types.scala
        api_tempChanged = nextOption_artEmpty()
        api_currentTemp = nextTempSensorTemperature_i()
        v = TempSensor.TempSensor_s_tcproc_tempSensor_PostState_Container_PS(api_tempChanged, api_currentTemp)
-     }
-    }
-
-    assert(F, "Requirements too strict to generate")
-    halt("Requirements too strict to generate")
-  }
-
-  // ============= TempSensor.Temperature_i ===================
-
-  def get_Config_TempSensorTemperature_i: Config_TempSensorTemperature_i
-  def set_Config_TempSensorTemperature_i(config: Config_TempSensorTemperature_i): RandomLib
-
-  def nextTempSensorTemperature_i(): TempSensor.Temperature_i = {
-    var degrees: F32 = nextF32()
-    var unit: TempSensor.Unit.Type = nextTempSensorUnitType()
-
-    var v: TempSensor.Temperature_i = TempSensor.Temperature_i(degrees, unit)
-
-    if(get_Config_TempSensorTemperature_i.attempts >= 0) {
-     for(i <- 0 to get_Config_TempSensorTemperature_i.attempts) {
-        if(get_Config_TempSensorTemperature_i.filter(v)) {
-          return v
-        }
-        if (get_Config_TempSensorTemperature_i.verbose) {
-          println(s"Retrying for failing value: $v")
-        }
-        degrees = nextF32()
-        unit = nextTempSensorUnitType()
-        v = TempSensor.Temperature_i(degrees, unit)
-     }
-    } else {
-     while(T) {
-       if(get_Config_TempSensorTemperature_i.filter(v)) {
-         return v
-       }
-       if (get_Config_TempSensorTemperature_i.verbose) {
-         println(s"Retrying for failing value: $v")
-       }
-       degrees = nextF32()
-       unit = nextTempSensorUnitType()
-       v = TempSensor.Temperature_i(degrees, unit)
-     }
-    }
-
-    assert(F, "Requirements too strict to generate")
-    halt("Requirements too strict to generate")
-  }
-
-  // ============= TempSensor.Temperature_i_Payload ===================
-
-  def get_Config_TempSensorTemperature_i_Payload: Config_TempSensorTemperature_i_Payload
-  def set_Config_TempSensorTemperature_i_Payload(config: Config_TempSensorTemperature_i_Payload): RandomLib
-
-  def nextTempSensorTemperature_i_Payload(): TempSensor.Temperature_i_Payload = {
-    var value: TempSensor.Temperature_i = nextTempSensorTemperature_i()
-
-    var v: TempSensor.Temperature_i_Payload = TempSensor.Temperature_i_Payload(value)
-
-    if(get_Config_TempSensorTemperature_i_Payload.attempts >= 0) {
-     for(i <- 0 to get_Config_TempSensorTemperature_i_Payload.attempts) {
-        if(get_Config_TempSensorTemperature_i_Payload.filter(v)) {
-          return v
-        }
-        if (get_Config_TempSensorTemperature_i_Payload.verbose) {
-          println(s"Retrying for failing value: $v")
-        }
-        value = nextTempSensorTemperature_i()
-        v = TempSensor.Temperature_i_Payload(value)
-     }
-    } else {
-     while(T) {
-       if(get_Config_TempSensorTemperature_i_Payload.filter(v)) {
-         return v
-       }
-       if (get_Config_TempSensorTemperature_i_Payload.verbose) {
-         println(s"Retrying for failing value: $v")
-       }
-       value = nextTempSensorTemperature_i()
-       v = TempSensor.Temperature_i_Payload(value)
-     }
-    }
-
-    assert(F, "Requirements too strict to generate")
-    halt("Requirements too strict to generate")
-  }
-
-  // ============= TempSensor.Unit.Type ===================
-
-  def get_Config_TempSensorUnitType: Config_TempSensorUnitType
-  def set_Config_TempSensorUnitType(config: Config_TempSensorUnitType): RandomLib
-
-  def nextTempSensorUnitType(): TempSensor.Unit.Type = {
-
-    var ordinal: Z = gen.nextZBetween(0, tc.TempSensor.Unit.numOfElements-1)
-
-    var v: TempSensor.Unit.Type = tc.TempSensor.Unit.byOrdinal(ordinal).get
-    if(get_Config_TempSensorUnitType.attempts >= 0) {
-     for(i <- 0 to get_Config_TempSensorUnitType.attempts) {
-       if(get_Config_TempSensorUnitType.filter(v)) {
-        return v
-       }
-       if (get_Config_TempSensorUnitType.verbose) {
-         println(s"Retrying for failing value: $v")
-       }
-       ordinal= gen.nextZBetween(0, tc.TempSensor.Unit.numOfElements-1)
-       v = tc.TempSensor.Unit.byOrdinal(ordinal).get
-     }
-    } else {
-     while(T){
-       if(get_Config_TempSensorUnitType.filter(v)) {
-        return v
-       }
-       if (get_Config_TempSensorUnitType.verbose) {
-         println(s"Retrying for failing value: $v")
-       }
-       ordinal= gen.nextZBetween(0, tc.TempSensor.Unit.numOfElements-1)
-       v = tc.TempSensor.Unit.byOrdinal(ordinal).get
-     }
-    }
-    assert(F, "Requirements too strict to generate")
-    halt("Requirements too strict to generate")
-  }
-
-  // ============= TempSensor.Unit_Payload ===================
-
-  def get_Config_TempSensorUnit_Payload: Config_TempSensorUnit_Payload
-  def set_Config_TempSensorUnit_Payload(config: Config_TempSensorUnit_Payload): RandomLib
-
-  def nextTempSensorUnit_Payload(): TempSensor.Unit_Payload = {
-    var value: TempSensor.Unit.Type = nextTempSensorUnitType()
-
-    var v: TempSensor.Unit_Payload = TempSensor.Unit_Payload(value)
-
-    if(get_Config_TempSensorUnit_Payload.attempts >= 0) {
-     for(i <- 0 to get_Config_TempSensorUnit_Payload.attempts) {
-        if(get_Config_TempSensorUnit_Payload.filter(v)) {
-          return v
-        }
-        if (get_Config_TempSensorUnit_Payload.verbose) {
-          println(s"Retrying for failing value: $v")
-        }
-        value = nextTempSensorUnitType()
-        v = TempSensor.Unit_Payload(value)
-     }
-    } else {
-     while(T) {
-       if(get_Config_TempSensorUnit_Payload.filter(v)) {
-         return v
-       }
-       if (get_Config_TempSensorUnit_Payload.verbose) {
-         println(s"Retrying for failing value: $v")
-       }
-       value = nextTempSensorUnitType()
-       v = TempSensor.Unit_Payload(value)
      }
     }
 
@@ -4156,6 +4156,78 @@ Aux_Types.scala
     return this
   }
 
+  // ============= TempControlSoftwareSystem.SetPoint_i ===================
+  def alwaysTrue_TempControlSoftwareSystemSetPoint_i(v: TempControlSoftwareSystem.SetPoint_i): B = {return T}
+
+  var config_TempControlSoftwareSystemSetPoint_i: Config_TempControlSoftwareSystemSetPoint_i = Config_TempControlSoftwareSystemSetPoint_i(100, _verbose, tc.TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i _)
+
+  def get_Config_TempControlSoftwareSystemSetPoint_i: Config_TempControlSoftwareSystemSetPoint_i = {return config_TempControlSoftwareSystemSetPoint_i}
+
+  def set_Config_TempControlSoftwareSystemSetPoint_i(config: Config_TempControlSoftwareSystemSetPoint_i): RandomLib ={
+    config_TempControlSoftwareSystemSetPoint_i = config
+    return this
+  }
+
+  // ============= TempControlSoftwareSystem.SetPoint_i_Payload ===================
+  def alwaysTrue_TempControlSoftwareSystemSetPoint_i_Payload(v: TempControlSoftwareSystem.SetPoint_i_Payload): B = {return T}
+
+  var config_TempControlSoftwareSystemSetPoint_i_Payload: Config_TempControlSoftwareSystemSetPoint_i_Payload = Config_TempControlSoftwareSystemSetPoint_i_Payload(100, _verbose, alwaysTrue_TempControlSoftwareSystemSetPoint_i_Payload _)
+
+  def get_Config_TempControlSoftwareSystemSetPoint_i_Payload: Config_TempControlSoftwareSystemSetPoint_i_Payload = {return config_TempControlSoftwareSystemSetPoint_i_Payload}
+
+  def set_Config_TempControlSoftwareSystemSetPoint_i_Payload(config: Config_TempControlSoftwareSystemSetPoint_i_Payload): RandomLib ={
+    config_TempControlSoftwareSystemSetPoint_i_Payload = config
+    return this
+  }
+
+  // ============= TempSensor.Temperature_i ===================
+  def alwaysTrue_TempSensorTemperature_i(v: TempSensor.Temperature_i): B = {return T}
+
+  var config_TempSensorTemperature_i: Config_TempSensorTemperature_i = Config_TempSensorTemperature_i(100, _verbose, tc.TempSensor.Temperature_i.D_Inv_Temperature_i _)
+
+  def get_Config_TempSensorTemperature_i: Config_TempSensorTemperature_i = {return config_TempSensorTemperature_i}
+
+  def set_Config_TempSensorTemperature_i(config: Config_TempSensorTemperature_i): RandomLib ={
+    config_TempSensorTemperature_i = config
+    return this
+  }
+
+  // ============= TempSensor.Temperature_i_Payload ===================
+  def alwaysTrue_TempSensorTemperature_i_Payload(v: TempSensor.Temperature_i_Payload): B = {return T}
+
+  var config_TempSensorTemperature_i_Payload: Config_TempSensorTemperature_i_Payload = Config_TempSensorTemperature_i_Payload(100, _verbose, alwaysTrue_TempSensorTemperature_i_Payload _)
+
+  def get_Config_TempSensorTemperature_i_Payload: Config_TempSensorTemperature_i_Payload = {return config_TempSensorTemperature_i_Payload}
+
+  def set_Config_TempSensorTemperature_i_Payload(config: Config_TempSensorTemperature_i_Payload): RandomLib ={
+    config_TempSensorTemperature_i_Payload = config
+    return this
+  }
+
+  // ============= TempSensor.Unit.Type ===================
+  def alwaysTrue_TempSensorUnitType(v: TempSensor.Unit.Type): B = {return T}
+
+  var config_TempSensorUnitType: Config_TempSensorUnitType = Config_TempSensorUnitType(100, _verbose, alwaysTrue_TempSensorUnitType _)
+
+  def get_Config_TempSensorUnitType: Config_TempSensorUnitType = {return config_TempSensorUnitType}
+
+  def set_Config_TempSensorUnitType(config: Config_TempSensorUnitType): RandomLib ={
+    config_TempSensorUnitType = config
+    return this
+  }
+
+  // ============= TempSensor.Unit_Payload ===================
+  def alwaysTrue_TempSensorUnit_Payload(v: TempSensor.Unit_Payload): B = {return T}
+
+  var config_TempSensorUnit_Payload: Config_TempSensorUnit_Payload = Config_TempSensorUnit_Payload(100, _verbose, alwaysTrue_TempSensorUnit_Payload _)
+
+  def get_Config_TempSensorUnit_Payload: Config_TempSensorUnit_Payload = {return config_TempSensorUnit_Payload}
+
+  def set_Config_TempSensorUnit_Payload(config: Config_TempSensorUnit_Payload): RandomLib ={
+    config_TempSensorUnit_Payload = config
+    return this
+  }
+
   // ============= CoolingFan.Fan_s_tcproc_fan_PreState_Container ===================
   def alwaysTrue_CoolingFanFan_s_tcproc_fan_PreState_Container(v: CoolingFan.Fan_s_tcproc_fan_PreState_Container): B = {return T}
 
@@ -4344,30 +4416,6 @@ Aux_Types.scala
     return this
   }
 
-  // ============= TempControlSoftwareSystem.SetPoint_i ===================
-  def alwaysTrue_TempControlSoftwareSystemSetPoint_i(v: TempControlSoftwareSystem.SetPoint_i): B = {return T}
-
-  var config_TempControlSoftwareSystemSetPoint_i: Config_TempControlSoftwareSystemSetPoint_i = Config_TempControlSoftwareSystemSetPoint_i(100, _verbose, tc.TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i _)
-
-  def get_Config_TempControlSoftwareSystemSetPoint_i: Config_TempControlSoftwareSystemSetPoint_i = {return config_TempControlSoftwareSystemSetPoint_i}
-
-  def set_Config_TempControlSoftwareSystemSetPoint_i(config: Config_TempControlSoftwareSystemSetPoint_i): RandomLib ={
-    config_TempControlSoftwareSystemSetPoint_i = config
-    return this
-  }
-
-  // ============= TempControlSoftwareSystem.SetPoint_i_Payload ===================
-  def alwaysTrue_TempControlSoftwareSystemSetPoint_i_Payload(v: TempControlSoftwareSystem.SetPoint_i_Payload): B = {return T}
-
-  var config_TempControlSoftwareSystemSetPoint_i_Payload: Config_TempControlSoftwareSystemSetPoint_i_Payload = Config_TempControlSoftwareSystemSetPoint_i_Payload(100, _verbose, alwaysTrue_TempControlSoftwareSystemSetPoint_i_Payload _)
-
-  def get_Config_TempControlSoftwareSystemSetPoint_i_Payload: Config_TempControlSoftwareSystemSetPoint_i_Payload = {return config_TempControlSoftwareSystemSetPoint_i_Payload}
-
-  def set_Config_TempControlSoftwareSystemSetPoint_i_Payload(config: Config_TempControlSoftwareSystemSetPoint_i_Payload): RandomLib ={
-    config_TempControlSoftwareSystemSetPoint_i_Payload = config
-    return this
-  }
-
   // ============= TempControlSoftwareSystem.TempControl_s_tcproc_tempControl_PreState_Container ===================
   def alwaysTrue_TempControlSoftwareSystemTempControl_s_tcproc_tempControl_PreState_Container(v: TempControlSoftwareSystem.TempControl_s_tcproc_tempControl_PreState_Container): B = {return T}
 
@@ -4509,54 +4557,6 @@ Aux_Types.scala
 
   def set_Config_TempSensorTempSensor_s_tcproc_tempSensor_PostState_Container_PS(config: Config_TempSensorTempSensor_s_tcproc_tempSensor_PostState_Container_PS): RandomLib ={
     config_TempSensorTempSensor_s_tcproc_tempSensor_PostState_Container_PS = config
-    return this
-  }
-
-  // ============= TempSensor.Temperature_i ===================
-  def alwaysTrue_TempSensorTemperature_i(v: TempSensor.Temperature_i): B = {return T}
-
-  var config_TempSensorTemperature_i: Config_TempSensorTemperature_i = Config_TempSensorTemperature_i(100, _verbose, tc.TempSensor.Temperature_i.D_Inv_Temperature_i _)
-
-  def get_Config_TempSensorTemperature_i: Config_TempSensorTemperature_i = {return config_TempSensorTemperature_i}
-
-  def set_Config_TempSensorTemperature_i(config: Config_TempSensorTemperature_i): RandomLib ={
-    config_TempSensorTemperature_i = config
-    return this
-  }
-
-  // ============= TempSensor.Temperature_i_Payload ===================
-  def alwaysTrue_TempSensorTemperature_i_Payload(v: TempSensor.Temperature_i_Payload): B = {return T}
-
-  var config_TempSensorTemperature_i_Payload: Config_TempSensorTemperature_i_Payload = Config_TempSensorTemperature_i_Payload(100, _verbose, alwaysTrue_TempSensorTemperature_i_Payload _)
-
-  def get_Config_TempSensorTemperature_i_Payload: Config_TempSensorTemperature_i_Payload = {return config_TempSensorTemperature_i_Payload}
-
-  def set_Config_TempSensorTemperature_i_Payload(config: Config_TempSensorTemperature_i_Payload): RandomLib ={
-    config_TempSensorTemperature_i_Payload = config
-    return this
-  }
-
-  // ============= TempSensor.Unit.Type ===================
-  def alwaysTrue_TempSensorUnitType(v: TempSensor.Unit.Type): B = {return T}
-
-  var config_TempSensorUnitType: Config_TempSensorUnitType = Config_TempSensorUnitType(100, _verbose, alwaysTrue_TempSensorUnitType _)
-
-  def get_Config_TempSensorUnitType: Config_TempSensorUnitType = {return config_TempSensorUnitType}
-
-  def set_Config_TempSensorUnitType(config: Config_TempSensorUnitType): RandomLib ={
-    config_TempSensorUnitType = config
-    return this
-  }
-
-  // ============= TempSensor.Unit_Payload ===================
-  def alwaysTrue_TempSensorUnit_Payload(v: TempSensor.Unit_Payload): B = {return T}
-
-  var config_TempSensorUnit_Payload: Config_TempSensorUnit_Payload = Config_TempSensorUnit_Payload(100, _verbose, alwaysTrue_TempSensorUnit_Payload _)
-
-  def get_Config_TempSensorUnit_Payload: Config_TempSensorUnit_Payload = {return config_TempSensorUnit_Payload}
-
-  def set_Config_TempSensorUnit_Payload(config: Config_TempSensorUnit_Payload): RandomLib ={
-    config_TempSensorUnit_Payload = config
     return this
   }
 

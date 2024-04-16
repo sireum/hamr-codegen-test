@@ -16,6 +16,10 @@ object TempSensorPeriodic_p_tcproc_tempSensor_UnitTestConfiguration_Util {
     return RandomLib(Random.Gen64Impl(Xoshiro256.create))
   }
 
+  val tq: String = "\"\"\""
+
+  type DefaultInitializeProfile = TempSensorPeriodic_p_tcproc_tempSensor_Profile
+
   def defaultInitializeConfig: TempSensorPeriodic_p_tcproc_tempSensor_Initialize_UnitTestConfiguration = {
     return (TempSensorPeriodic_p_tcproc_tempSensor_Initialize_UnitTestConfiguration (
       verbose = F,
@@ -25,12 +29,13 @@ object TempSensorPeriodic_p_tcproc_tempSensor_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = TempSensorPeriodic_p_tcproc_tempSensor_Profile (
-        name = "Initialize_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
+        name = "Initialize_Default_Profile",
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => None())
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => None())
     )
   }
+
+  type DefaultComputeProfile = TempSensorPeriodic_p_tcproc_tempSensor_Profile_P
 
   def defaultComputeConfig: TempSensorPeriodic_p_tcproc_tempSensor_Compute_UnitTestConfiguration = {
     return (TempSensorPeriodic_p_tcproc_tempSensor_Compute_UnitTestConfiguration (
@@ -41,13 +46,16 @@ object TempSensorPeriodic_p_tcproc_tempSensor_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = TempSensorPeriodic_p_tcproc_tempSensor_Profile_P (
-        name = "Compute_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
-        numTestVectorGenRetries = 100, // needed for old framework
+        name = "Compute_Default_Profile",
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => Some(
-        st"""val testVector = tc.JSON.toTempSensorTempSensorPeriodic_p_tcproc_tempSensor_PreState_Container_P(json).left
-            |assert (testComputeCBV(testVector) == results)""".render))
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
+       st"""Replay Unit Test:
+            |  test("Replay: $testName") {
+            |    val results = tc.GumboXUtil.GumboXResult.$r
+            |    val json = st${tq}${tc.JSON.fromutilContainer(c, T)}${tq}.render
+            |    val testVector = tc.JSON.toTempSensorTempSensorPeriodic_p_tcproc_tempSensor_PreState_Container_P(json).left
+            |    assert (testComputeCBV(testVector) == results)
+            |  }""".render))
     )
   }
 }
@@ -59,8 +67,8 @@ object TempSensorPeriodic_p_tcproc_tempSensor_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: TempSensorPeriodic_p_tcproc_tempSensor_Profile,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: TempSensorPeriodic_p_tcproc_tempSensor_Profile_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempSensorPeriodic_p_tcproc_tempSensor_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
@@ -75,8 +83,8 @@ object TempSensorPeriodic_p_tcproc_tempSensor_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: TempSensorPeriodic_p_tcproc_tempSensor_Profile_P,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: TempSensorPeriodic_p_tcproc_tempSensor_Profile_P_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempSensorPeriodic_p_tcproc_tempSensor_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {

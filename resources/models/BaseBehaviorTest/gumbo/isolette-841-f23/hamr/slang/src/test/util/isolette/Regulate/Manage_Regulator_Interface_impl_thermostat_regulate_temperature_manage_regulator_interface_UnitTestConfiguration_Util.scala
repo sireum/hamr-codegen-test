@@ -16,6 +16,10 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
     return RandomLib(Random.Gen64Impl(Xoshiro256.create))
   }
 
+  val tq: String = "\"\"\""
+
+  type DefaultInitializeProfile = Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile
+
   def defaultInitializeConfig: Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Initialize_UnitTestConfiguration = {
     return (Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Initialize_UnitTestConfiguration (
       verbose = F,
@@ -25,12 +29,13 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile (
-        name = "Initialize_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
+        name = "Initialize_Default_Profile",
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => None())
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => None())
     )
   }
+
+  type DefaultComputeProfile = Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile_P
 
   def defaultComputeConfig: Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Compute_UnitTestConfiguration = {
     return (Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Compute_UnitTestConfiguration (
@@ -41,17 +46,20 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile_P (
-        name = "Compute_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
-        numTestVectorGenRetries = 100, // needed for old framework,
+        name = "Compute_Default_Profile",
         api_current_tempWstatus = freshRandomLib,
         api_lower_desired_tempWstatus = freshRandomLib,
         api_regulator_mode = freshRandomLib,
         api_upper_desired_tempWstatus = freshRandomLib
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => Some(
-        st"""val testVector = isolette.JSON.toRegulateManage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PreState_Container_P(json).left
-            |assert (testComputeCBV(testVector) == results)""".render))
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
+       st"""Replay Unit Test:
+            |  test("Replay: $testName") {
+            |    val results = isolette.GumboXUtil.GumboXResult.$r
+            |    val json = st${tq}${isolette.JSON.fromutilContainer(c, T)}${tq}.render
+            |    val testVector = isolette.JSON.toRegulateManage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PreState_Container_P(json).left
+            |    assert (testComputeCBV(testVector) == results)
+            |  }""".render))
     )
   }
 }
@@ -63,8 +71,8 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
@@ -79,8 +87,8 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile_P,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile_P_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {

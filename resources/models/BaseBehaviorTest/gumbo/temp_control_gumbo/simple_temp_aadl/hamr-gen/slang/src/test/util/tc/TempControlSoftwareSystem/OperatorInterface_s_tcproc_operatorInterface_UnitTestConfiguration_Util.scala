@@ -16,6 +16,10 @@ object OperatorInterface_s_tcproc_operatorInterface_UnitTestConfiguration_Util {
     return RandomLib(Random.Gen64Impl(Xoshiro256.create))
   }
 
+  val tq: String = "\"\"\""
+
+  type DefaultInitializeProfile = OperatorInterface_s_tcproc_operatorInterface_Profile
+
   def defaultInitializeConfig: OperatorInterface_s_tcproc_operatorInterface_Initialize_UnitTestConfiguration = {
     return (OperatorInterface_s_tcproc_operatorInterface_Initialize_UnitTestConfiguration (
       verbose = F,
@@ -25,12 +29,13 @@ object OperatorInterface_s_tcproc_operatorInterface_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = OperatorInterface_s_tcproc_operatorInterface_Profile (
-        name = "Initialize_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
+        name = "Initialize_Default_Profile",
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => None())
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => None())
     )
   }
+
+  type DefaultComputeProfile = OperatorInterface_s_tcproc_operatorInterface_Profile_P
 
   def defaultComputeConfig: OperatorInterface_s_tcproc_operatorInterface_Compute_UnitTestConfiguration = {
     return (OperatorInterface_s_tcproc_operatorInterface_Compute_UnitTestConfiguration (
@@ -41,15 +46,18 @@ object OperatorInterface_s_tcproc_operatorInterface_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = OperatorInterface_s_tcproc_operatorInterface_Profile_P (
-        name = "Compute_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
-        numTestVectorGenRetries = 100, // needed for old framework,
+        name = "Compute_Default_Profile",
         api_tempChanged = freshRandomLib,
         api_currentTemp = freshRandomLib
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => Some(
-        st"""val testVector = tc.JSON.toTempControlSoftwareSystemOperatorInterface_s_tcproc_operatorInterface_PreState_Container_P(json).left
-            |assert (testComputeCBV(testVector) == results)""".render))
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
+       st"""Replay Unit Test:
+            |  test("Replay: $testName") {
+            |    val results = tc.GumboXUtil.GumboXResult.$r
+            |    val json = st${tq}${tc.JSON.fromutilContainer(c, T)}${tq}.render
+            |    val testVector = tc.JSON.toTempControlSoftwareSystemOperatorInterface_s_tcproc_operatorInterface_PreState_Container_P(json).left
+            |    assert (testComputeCBV(testVector) == results)
+            |  }""".render))
     )
   }
 }
@@ -61,8 +69,8 @@ object OperatorInterface_s_tcproc_operatorInterface_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: OperatorInterface_s_tcproc_operatorInterface_Profile,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: OperatorInterface_s_tcproc_operatorInterface_Profile_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with OperatorInterface_s_tcproc_operatorInterface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
@@ -77,8 +85,8 @@ object OperatorInterface_s_tcproc_operatorInterface_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: OperatorInterface_s_tcproc_operatorInterface_Profile_P,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: OperatorInterface_s_tcproc_operatorInterface_Profile_P_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with OperatorInterface_s_tcproc_operatorInterface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {

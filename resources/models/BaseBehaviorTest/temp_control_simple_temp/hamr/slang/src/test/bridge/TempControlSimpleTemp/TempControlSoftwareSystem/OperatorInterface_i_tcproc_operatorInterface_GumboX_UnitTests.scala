@@ -48,15 +48,8 @@ class OperatorInterface_i_tcproc_operatorInterface_GumboX_UnitTests extends Oper
               val results = c.test(o)
 
               if (verbose) {
-                c.genReplay(o, results) match {
-                  case Some(s) =>
-                    val tq = "\"\"\""
-                    println(st"""Replay Unit Test:
-                                |  test("Replay: $testName") {
-                                |    val results = TempControlSimpleTemp.GumboXUtil.GumboXResult.$results
-                                |    val json = st${tq}${TempControlSimpleTemp.JSON.fromutilContainer(o, T)}${tq}.render
-                                |    $s
-                                |  }""".render)
+                c.genReplay(o, testName, results) match {
+                  case Some(s) => println(s)
                   case _ =>
                 }
               }

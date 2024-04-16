@@ -16,6 +16,10 @@ object Filter_p_p_filterp_UnitTestConfiguration_Util {
     return RandomLib(Random.Gen64Impl(Xoshiro256.create))
   }
 
+  val tq: String = "\"\"\""
+
+  type DefaultInitializeProfile = Filter_p_p_filterp_Profile
+
   def defaultInitializeConfig: Filter_p_p_filterp_Initialize_UnitTestConfiguration = {
     return (Filter_p_p_filterp_Initialize_UnitTestConfiguration (
       verbose = F,
@@ -25,12 +29,13 @@ object Filter_p_p_filterp_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = Filter_p_p_filterp_Profile (
-        name = "Initialize_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
+        name = "Initialize_Default_Profile",
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => None())
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => None())
     )
   }
+
+  type DefaultComputeProfile = Filter_p_p_filterp_Profile_P
 
   def defaultComputeConfig: Filter_p_p_filterp_Compute_UnitTestConfiguration = {
     return (Filter_p_p_filterp_Compute_UnitTestConfiguration (
@@ -41,17 +46,20 @@ object Filter_p_p_filterp_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = Filter_p_p_filterp_Profile_P (
-        name = "Compute_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
-        numTestVectorGenRetries = 100, // needed for old framework,
+        name = "Compute_Default_Profile",
         api_d_event_in = freshRandomLib,
         api_b_event_data_in = freshRandomLib,
         api_c_event_data_in = freshRandomLib,
         api_a_data_in = freshRandomLib
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => Some(
-        st"""val testVector = prod_cons__JVM.JSON.toProdConsFlowsFilter_p_p_filterp_PreState_Container_P(json).left
-            |assert (testComputeCBV(testVector) == results)""".render))
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
+       st"""Replay Unit Test:
+            |  test("Replay: $testName") {
+            |    val results = prod_cons__JVM.GumboXUtil.GumboXResult.$r
+            |    val json = st${tq}${prod_cons__JVM.JSON.fromutilContainer(c, T)}${tq}.render
+            |    val testVector = prod_cons__JVM.JSON.toProdConsFlowsFilter_p_p_filterp_PreState_Container_P(json).left
+            |    assert (testComputeCBV(testVector) == results)
+            |  }""".render))
     )
   }
 }
@@ -63,8 +71,8 @@ object Filter_p_p_filterp_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Filter_p_p_filterp_Profile,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: Filter_p_p_filterp_Profile_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Filter_p_p_filterp_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
@@ -79,8 +87,8 @@ object Filter_p_p_filterp_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: Filter_p_p_filterp_Profile_P,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: Filter_p_p_filterp_Profile_P_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with Filter_p_p_filterp_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {

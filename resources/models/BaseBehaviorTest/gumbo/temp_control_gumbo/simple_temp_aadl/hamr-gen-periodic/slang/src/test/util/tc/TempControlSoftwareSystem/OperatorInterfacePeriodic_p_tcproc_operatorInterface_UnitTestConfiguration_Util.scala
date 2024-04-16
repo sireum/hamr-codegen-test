@@ -16,6 +16,10 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_UnitTestConfiguratio
     return RandomLib(Random.Gen64Impl(Xoshiro256.create))
   }
 
+  val tq: String = "\"\"\""
+
+  type DefaultInitializeProfile = OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile
+
   def defaultInitializeConfig: OperatorInterfacePeriodic_p_tcproc_operatorInterface_Initialize_UnitTestConfiguration = {
     return (OperatorInterfacePeriodic_p_tcproc_operatorInterface_Initialize_UnitTestConfiguration (
       verbose = F,
@@ -25,12 +29,13 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_UnitTestConfiguratio
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile (
-        name = "Initialize_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
+        name = "Initialize_Default_Profile",
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => None())
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => None())
     )
   }
+
+  type DefaultComputeProfile = OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P
 
   def defaultComputeConfig: OperatorInterfacePeriodic_p_tcproc_operatorInterface_Compute_UnitTestConfiguration = {
     return (OperatorInterfacePeriodic_p_tcproc_operatorInterface_Compute_UnitTestConfiguration (
@@ -41,14 +46,17 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_UnitTestConfiguratio
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P (
-        name = "Compute_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
-        numTestVectorGenRetries = 100, // needed for old framework,
+        name = "Compute_Default_Profile",
         api_currentTemp = freshRandomLib
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => Some(
-        st"""val testVector = tc.JSON.toTempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P(json).left
-            |assert (testComputeCBV(testVector) == results)""".render))
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
+       st"""Replay Unit Test:
+            |  test("Replay: $testName") {
+            |    val results = tc.GumboXUtil.GumboXResult.$r
+            |    val json = st${tq}${tc.JSON.fromutilContainer(c, T)}${tq}.render
+            |    val testVector = tc.JSON.toTempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P(json).left
+            |    assert (testComputeCBV(testVector) == results)
+            |  }""".render))
     )
   }
 }
@@ -60,8 +68,8 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_UnitTestConfiguratio
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
@@ -76,8 +84,8 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_UnitTestConfiguratio
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {

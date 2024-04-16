@@ -22,13 +22,13 @@ GUMBO__Library.scala
 
 GUMBO__Library.scala
 
-TempSensorPeriodic_p_tcproc_tempSensor__Containers.scala
+TempSensorPeriodic_p_tcproc_tempSensor_Containers.scala
 
-FanPeriodic_p_tcproc_fan__Containers.scala
+FanPeriodic_p_tcproc_fan_Containers.scala
 
-TempControlPeriodic_p_tcproc_tempControl__Containers.scala
+TempControlPeriodic_p_tcproc_tempControl_Containers.scala
 
-OperatorInterfacePeriodic_p_tcproc_operatorInterface__Containers.scala
+OperatorInterfacePeriodic_p_tcproc_operatorInterface_Containers.scala
 
 ObservationKind.scala
 
@@ -114,6 +114,14 @@ Aux_Types.scala
 
 @datatype class Config_CoolingFanFanCmd_Payload(attempts: Z, verbose: B, filter: CoolingFan.FanCmd_Payload => B) {}
 
+@datatype class Config_TempControlSoftwareSystemSetPoint_i(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.SetPoint_i => B) {}
+
+@datatype class Config_TempControlSoftwareSystemSetPoint_i_Payload(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.SetPoint_i_Payload => B) {}
+
+@datatype class Config_TempSensorTemperature_i(attempts: Z, verbose: B, filter: TempSensor.Temperature_i => B) {}
+
+@datatype class Config_TempSensorTemperature_i_Payload(attempts: Z, verbose: B, filter: TempSensor.Temperature_i_Payload => B) {}
+
 @datatype class Config_CoolingFanFanPeriodic_p_tcproc_fan_PreState_Container(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[CoolingFanFanPeriodic_p_tcproc_fan_PreState_Container_DataTypeId.Type], filter: CoolingFan.FanPeriodic_p_tcproc_fan_PreState_Container => B) {}
 
 @datatype class Config_CoolingFanFanPeriodic_p_tcproc_fan_PreState_Container_P(attempts: Z, verbose: B, filter: CoolingFan.FanPeriodic_p_tcproc_fan_PreState_Container_P => B) {}
@@ -137,10 +145,6 @@ Aux_Types.scala
 @datatype class Config_TempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_PostState_Container_P(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.OperatorInterfacePeriodic_p_tcproc_operatorInterface_PostState_Container_P => B) {}
 
 @datatype class Config_TempControlSoftwareSystemOperatorInterfacePeriodic_p_tcproc_operatorInterface_PostState_Container_PS(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.OperatorInterfacePeriodic_p_tcproc_operatorInterface_PostState_Container_PS => B) {}
-
-@datatype class Config_TempControlSoftwareSystemSetPoint_i(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.SetPoint_i => B) {}
-
-@datatype class Config_TempControlSoftwareSystemSetPoint_i_Payload(attempts: Z, verbose: B, filter: TempControlSoftwareSystem.SetPoint_i_Payload => B) {}
 
 @datatype class Config_TempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[TempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_DataTypeId.Type], filter: TempControlSoftwareSystem.TempControlPeriodic_p_tcproc_tempControl_PreState_Container => B) {}
 
@@ -166,14 +170,10 @@ Aux_Types.scala
 
 @datatype class Config_TempSensorTempSensorPeriodic_p_tcproc_tempSensor_PostState_Container_PS(attempts: Z, verbose: B, filter: TempSensor.TempSensorPeriodic_p_tcproc_tempSensor_PostState_Container_PS => B) {}
 
-@datatype class Config_TempSensorTemperature_i(attempts: Z, verbose: B, filter: TempSensor.Temperature_i => B) {}
-
-@datatype class Config_TempSensorTemperature_i_Payload(attempts: Z, verbose: B, filter: TempSensor.Temperature_i_Payload => B) {}
+@datatype class Config_runtimemonitorObservationKindType(attempts: Z, verbose: B, filter: runtimemonitor.ObservationKind.Type => B) {}
 
 @datatype class Config_utilContainer(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[utilContainer_DataTypeId.Type], filter: util.Container => B) {}
 
 @datatype class Config_utilEmptyContainer(attempts: Z, verbose: B, filter: util.EmptyContainer => B) {}
-
-@datatype class Config_runtimemonitorObservationKindType(attempts: Z, verbose: B, filter: runtimemonitor.ObservationKind.Type => B) {}
 
 

@@ -16,6 +16,10 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
     return RandomLib(Random.Gen64Impl(Xoshiro256.create))
   }
 
+  val tq: String = "\"\"\""
+
+  type DefaultInitializeProfile = TempControlPeriodic_p_tcproc_tempControl_Profile
+
   def defaultInitializeConfig: TempControlPeriodic_p_tcproc_tempControl_Initialize_UnitTestConfiguration = {
     return (TempControlPeriodic_p_tcproc_tempControl_Initialize_UnitTestConfiguration (
       verbose = F,
@@ -25,12 +29,13 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = TempControlPeriodic_p_tcproc_tempControl_Profile (
-        name = "Initialize_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
+        name = "Initialize_Default_Profile",
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => None())
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => None())
     )
   }
+
+  type DefaultComputeProfile = TempControlPeriodic_p_tcproc_tempControl_Profile_P
 
   def defaultComputeConfig: TempControlPeriodic_p_tcproc_tempControl_Compute_UnitTestConfiguration = {
     return (TempControlPeriodic_p_tcproc_tempControl_Compute_UnitTestConfiguration (
@@ -41,18 +46,23 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = TempControlPeriodic_p_tcproc_tempControl_Profile_P (
-        name = "Compute_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
-        numTestVectorGenRetries = 100, // needed for old framework,
+        name = "Compute_Default_Profile",
         api_currentTemp = freshRandomLib,
         api_fanAck = freshRandomLib,
         api_setPoint = freshRandomLib
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => Some(
-        st"""val testVector = tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(json).left
-            |assert (testComputeCBV(testVector) == results)""".render))
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
+       st"""Replay Unit Test:
+            |  test("Replay: $testName") {
+            |    val results = tc.GumboXUtil.GumboXResult.$r
+            |    val json = st${tq}${tc.JSON.fromutilContainer(c, T)}${tq}.render
+            |    val testVector = tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_P(json).left
+            |    assert (testComputeCBV(testVector) == results)
+            |  }""".render))
     )
   }
+
+  type DefaultComputewLProfile = TempControlPeriodic_p_tcproc_tempControl_Profile_PS
 
   def defaultComputewLConfig: TempControlPeriodic_p_tcproc_tempControl_ComputewL_UnitTestConfiguration = {
     return (TempControlPeriodic_p_tcproc_tempControl_ComputewL_UnitTestConfiguration (
@@ -63,17 +73,20 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
       numTestVectorGenRetries = 100,
       failOnUnsatPreconditions = F,
       profile = TempControlPeriodic_p_tcproc_tempControl_Profile_PS (
-        name = "ComputewL_Default_Profile", // needed for old framework
-        numTests = 100, // needed for old framework
-        numTestVectorGenRetries = 100, // needed for old framework,
+        name = "ComputewL_Default_Profile",
         In_latestFanCmd = freshRandomLib,
         api_currentTemp = freshRandomLib,
         api_fanAck = freshRandomLib,
         api_setPoint = freshRandomLib
       ),
-      genReplay = (c: Container, r: GumboXResult.Type) => Some(
-        st"""val testVector = tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(json).left
-            |assert (testComputeCBwLV(testVector) == results)""".render))
+      genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
+       st"""Replay Unit Test:
+            |  test("Replay: $testName") {
+            |    val results = tc.GumboXUtil.GumboXResult.$r
+            |    val json = st${tq}${tc.JSON.fromutilContainer(c, T)}${tq}.render
+            |    val testVector = tc.JSON.toTempControlSoftwareSystemTempControlPeriodic_p_tcproc_tempControl_PreState_Container_PS(json).left
+            |    assert (testComputeCBwLV(testVector) == results)
+            |  }""".render))
     )
   }
 }
@@ -85,8 +98,8 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
@@ -101,8 +114,8 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile_P,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile_P_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
@@ -117,8 +130,8 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
   var numTests: Z,
   var numTestVectorGenRetries: Z,
   var failOnUnsatPreconditions: B,
-  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile_PS,
-  var genReplay: (Container, GumboXResult.Type) => Option[String])
+  var profile: TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait,
+  var genReplay: (Container, String, GumboXResult.Type) => Option[String])
   extends UnitTestConfigurationBatch with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
