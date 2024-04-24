@@ -31,8 +31,7 @@ class Consumer_p_consumer_GumboX_UnitTests extends Consumer_p_consumer_GumboX_Te
         c.profile.next match {
           case (cp: Consumer_p_consumer_PreState_Container) =>
             // only allow one incoming event
-            if ((cp.api_f_event_data_in.nonEmpty |^ cp.api_g_event_data_in.nonEmpty |^ cp.api_h_event_in.nonEmpty) &&
-              !(cp.api_f_event_data_in.nonEmpty && cp.api_g_event_data_in.nonEmpty && cp.api_h_event_in.nonEmpty))
+            if (ops.ISZOps(ISZ(cp.api_f_event_data_in.nonEmpty, cp.api_g_event_data_in.nonEmpty, cp.api_h_event_in.nonEmpty)).filter(p => p).size == 1)
               return Some(cp)
             else return None()
           case c =>

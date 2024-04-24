@@ -11,12 +11,12 @@ class TempControl_s_tcproc_tempControl_GumboX_UnitTests extends TempControl_s_tc
 
   // set verbose to T to see pre/post state values and generated unit tests
   // that can be copied/pasted to replay a test
-  val verbose: B = T
+  val verbose: B = F
 
   // set failOnUnsatPreconditions to T if the unit tests should fail when either
   // SlangCheck is never able to satisfy a datatype's filter or the generated
   // test vectors are never able to satisfy an entry point's assume pre-condition
-  val failOnUnsatPreconditions: B = T
+  val failOnUnsatPreconditions: B = F
 
   def configs: MSZ[UnitTestConfigurationBatch] = {
     //
@@ -70,8 +70,7 @@ class TempControl_s_tcproc_tempControl_GumboX_UnitTests extends TempControl_s_tc
         c.profile.next match {
           case (cp: TempControl_s_tcproc_tempControl_PreState_Container) =>
             // only allow one incoming event
-            if ((cp.api_fanAck.nonEmpty |^ cp.api_setPoint.nonEmpty |^ cp.api_tempChanged.nonEmpty) &&
-              !(cp.api_fanAck.nonEmpty && cp.api_setPoint.nonEmpty && cp.api_tempChanged.nonEmpty))
+            if (ops.ISZOps(ISZ(cp.api_fanAck.nonEmpty, cp.api_setPoint.nonEmpty, cp.api_tempChanged.nonEmpty)).filter(p => p).size == 1)
               return Some(cp)
             else return None()
           case c =>

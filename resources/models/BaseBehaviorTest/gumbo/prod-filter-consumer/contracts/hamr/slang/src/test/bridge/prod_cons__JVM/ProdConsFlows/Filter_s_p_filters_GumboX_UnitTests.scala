@@ -32,8 +32,7 @@ class Filter_s_p_filters_GumboX_UnitTests extends Filter_s_p_filters_GumboX_Test
         c.profile.next match {
           case (cp: Filter_s_p_filters_PreState_Container) =>
             // only allow one incoming event
-            if ((cp.api_b_event_data_in.nonEmpty |^ cp.api_c_event_data_in.nonEmpty |^ cp.api_d_event_in.nonEmpty) &&
-              !(cp.api_b_event_data_in.nonEmpty && cp.api_c_event_data_in.nonEmpty && cp.api_d_event_in.nonEmpty))
+            if (ops.ISZOps(ISZ(cp.api_b_event_data_in.nonEmpty, cp.api_c_event_data_in.nonEmpty, cp.api_d_event_in.nonEmpty)).filter(p => p).size == 1)
               return Some(cp)
             else return None()
           case c =>

@@ -31,8 +31,7 @@ class Fan_s_tcproc_fan_GumboX_UnitTests extends Fan_s_tcproc_fan_GumboX_TestHarn
         c.profile.next match {
           case (cp: Fan_s_tcproc_fan_PreState_Container) =>
             // only allow one incoming event
-            if ((cp.api_fanCmd.nonEmpty) &&
-              !(cp.api_fanCmd.nonEmpty))
+            if (ops.ISZOps(ISZ(cp.api_fanCmd.nonEmpty)).filter(p => p).size == 1)
               return Some(cp)
             else return None()
           case c =>

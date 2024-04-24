@@ -70,8 +70,7 @@ class TempControl_s_tcproc_tempControl_GumboX_UnitTests extends TempControl_s_tc
         c.profile.next match {
           case (cp: TempControl_s_tcproc_tempControl_PreState_Container) =>
             // only allow one incoming event
-            if ((cp.api_fanAck.nonEmpty |^ cp.api_setPoint.nonEmpty |^ cp.api_tempChanged.nonEmpty) &&
-              !(cp.api_fanAck.nonEmpty && cp.api_setPoint.nonEmpty && cp.api_tempChanged.nonEmpty))
+            if (ops.ISZOps(ISZ(cp.api_fanAck.nonEmpty, cp.api_setPoint.nonEmpty, cp.api_tempChanged.nonEmpty)).filter(p => p).size == 1)
               return Some(cp)
             else return None()
           case c =>
