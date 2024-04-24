@@ -88,6 +88,6 @@ object Producer_p_producer_UnitTestConfiguration_Util {
   extends UnitTestConfigurationBatch with Producer_p_producer_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[Producer_p_producer_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[Producer_p_producer_PreState_Container])
   }
 }

@@ -36,7 +36,7 @@ import tc.RandomLib
 }
 
 // Profile with generators for state variables and incoming ports
-@msig trait TempSensorPeriodic_p_tcproc_tempSensor_Profile_PS_Trait extends Profile {
+@msig trait TempSensorPeriodic_p_tcproc_tempSensor_Profile_PS_Trait extends TempSensorPeriodic_p_tcproc_tempSensor_Profile_P_Trait {
 }
 
 @record class TempSensorPeriodic_p_tcproc_tempSensor_Profile_PS(

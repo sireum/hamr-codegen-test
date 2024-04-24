@@ -36,7 +36,7 @@ import TempControlSimpleTemp.RandomLib
 }
 
 // Profile with generators for state variables and incoming ports
-@msig trait TempSensor_i_tcproc_tempSensor_Profile_PS_Trait extends Profile {
+@msig trait TempSensor_i_tcproc_tempSensor_Profile_PS_Trait extends TempSensor_i_tcproc_tempSensor_Profile_P_Trait {
 }
 
 @record class TempSensor_i_tcproc_tempSensor_Profile_PS(

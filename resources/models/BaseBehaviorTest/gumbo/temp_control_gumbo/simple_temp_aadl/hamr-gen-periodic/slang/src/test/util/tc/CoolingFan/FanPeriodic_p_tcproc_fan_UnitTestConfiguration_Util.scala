@@ -56,6 +56,6 @@ object FanPeriodic_p_tcproc_fan_UnitTestConfiguration_Util {
   extends UnitTestConfigurationBatch with FanPeriodic_p_tcproc_fan_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[FanPeriodic_p_tcproc_fan_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[FanPeriodic_p_tcproc_fan_PreState_Container])
   }
 }

@@ -56,7 +56,7 @@ object Filter_s_p_filters {
         //   If an event was received on b then it's value
         //   is propagated to f
         api.f_event_data_out.nonEmpty &&
-          api.f_event_data_out.get == value
+          api.f_event_data_out.get == api.b_event_data_in.get
         // END COMPUTE ENSURES b_event_data_in
       )
     )

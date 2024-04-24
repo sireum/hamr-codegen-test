@@ -116,7 +116,7 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
     }
 
     // [CheckPost]: invoke the oracle function
-    val postResult = prod_cons__JVM.ProdConsFlows.Filter_p_p_filterp_GumboX.compute_CEP_Post(api_b_event_data_in, api_a_data_in, api_h_event_out, api_f_event_data_out, api_g_event_data_out, api_e_data_out)
+    val postResult = prod_cons__JVM.ProdConsFlows.Filter_p_p_filterp_GumboX.compute_CEP_Post(api_d_event_in, api_b_event_data_in, api_c_event_data_in, api_a_data_in, api_h_event_out, api_f_event_data_out, api_g_event_data_out, api_e_data_out)
     val result: GumboXResult.Type =
       if (!postResult) GumboXResult.Post_Condition_Fail
       else GumboXResult.Post_Condition_Pass

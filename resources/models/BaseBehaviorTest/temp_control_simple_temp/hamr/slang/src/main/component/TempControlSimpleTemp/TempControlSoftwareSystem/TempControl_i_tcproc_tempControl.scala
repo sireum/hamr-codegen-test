@@ -1,4 +1,4 @@
-// #Sireum
+// #Sireum #Logika
 
 package TempControlSimpleTemp.TempControlSoftwareSystem
 
@@ -54,7 +54,7 @@ object TempControl_i_tcproc_tempControl {
         // guarantee defaultFanStates
         currentFanState == CoolingFan.FanCmd.Off,
         // guarantee defaultLatestTemp
-        latestTemp.degrees == 75.0f
+        latestTemp.degrees == 72.0f
         // END INITIALIZES ENSURES
       )
     )
@@ -66,7 +66,7 @@ object TempControl_i_tcproc_tempControl {
     //currentSetPoint = TempControlSoftwareSystem.Defs.initialSetPoint
     //currentFanState = TempControlSoftwareSystem.Defs.initialFanState
     //latestTemp = TempSensor.Defs.defaultTemp
-    currentSetPoint = SetPoint_i(Temperature_i(55f), Temperature_i(100f))
+    currentSetPoint = SetPoint_i(Temperature_i(70f), Temperature_i(80f))
     currentFanState = FanCmd.Off
     latestTemp = Temperature_i(72f)
 
@@ -97,7 +97,15 @@ object TempControl_i_tcproc_tempControl {
         api.fanAck.get == value,
         // assume AADL_Requirement
         //   All outgoing event ports must be empty
-        api.fanCmd.isEmpty
+        api.fanCmd.isEmpty,
+        // assume a1
+        //   If the previously received currentTemp was less than the previously
+        //   received setPoint then the last fan command must have been Off
+        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        // assume a2
+        //   If the previously received currentTemp was more than the previously
+        //   received setPoint then the last fan command must have been On
+        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On)
         // END COMPUTE REQUIRES fanAck
       ),
       Modifies(
@@ -149,7 +157,15 @@ object TempControl_i_tcproc_tempControl {
         api.setPoint.get == value,
         // assume AADL_Requirement
         //   All outgoing event ports must be empty
-        api.fanCmd.isEmpty
+        api.fanCmd.isEmpty,
+        // assume a1
+        //   If the previously received currentTemp was less than the previously
+        //   received setPoint then the last fan command must have been Off
+        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        // assume a2
+        //   If the previously received currentTemp was more than the previously
+        //   received setPoint then the last fan command must have been On
+        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On)
         // END COMPUTE REQUIRES setPoint
       ),
       Modifies(
@@ -169,7 +185,7 @@ object TempControl_i_tcproc_tempControl {
         //   then the fan state shall be On.
         (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On),
         // guarantees setPointChanged
-        currentSetPoint == value
+        currentSetPoint == api.setPoint.get
         // END COMPUTE ENSURES setPoint
       )
     )
@@ -200,7 +216,15 @@ object TempControl_i_tcproc_tempControl {
         api.tempChanged.nonEmpty,
         // assume AADL_Requirement
         //   All outgoing event ports must be empty
-        api.fanCmd.isEmpty
+        api.fanCmd.isEmpty,
+        // assume a1
+        //   If the previously received currentTemp was less than the previously
+        //   received setPoint then the last fan command must have been Off
+        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        // assume a2
+        //   If the previously received currentTemp was more than the previously
+        //   received setPoint then the last fan command must have been On
+        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On)
         // END COMPUTE REQUIRES tempChanged
       ),
       Modifies(
@@ -244,15 +268,54 @@ object TempControl_i_tcproc_tempControl {
   //
   //--------------------------------------------
 
+  //--------------------------------------------
+  //
+  //  p e r f o r m _ f a n _ c o n t r o l
+  //
+  //  Helper function to control the fan after
+  //    change to current temperature, or
+  //    change to set point.
+  //
+  //--------------------------------------------
+
   def perform_fan_control(api: TempControl_i_Operational_Api) : Unit = {
+    Contract(
+      // For now we need to manually specify that we assume that output event ports are empty at start of method.
+      // This is because if we do not call "put value" on them, we need to be able to conclude that the ports are still empty
+      // in the post-condition.
+      Requires(api.fanCmd.isEmpty),
+      Modifies(api, // modifies api.fancmd (since we don't have precise frame conditions for records, we have to assume that all
+        // ghost variables for ports are modified
+        currentFanState),
+      Ensures(// current have to "manually" give frame-condition for all input data-like port states
+        api.currentTemp == In(api).currentTemp,
+
+        api.setPoint == In(api).setPoint,
+
+        api.fanAck == In(api).fanAck,
+        // post-conditions - control logic
+        (latestTemp.degrees < currentSetPoint.low.degrees) ->:
+          (currentFanState == FanCmd.Off),
+        (latestTemp.degrees > currentSetPoint.high.degrees) ->:
+          (currentFanState == FanCmd.On),
+        // The following clause combines the control law logic with the logic for decided if we need to send a fan command
+        //  (i.e., did our desired state for fan change).   It might be cleaner (better compositional reasoning) to
+        // separate these.
+        (latestTemp.degrees >= currentSetPoint.low.degrees & latestTemp.degrees <= currentSetPoint.high.degrees)
+          ->: (currentFanState == In(currentFanState) & api.fanCmd == None[FanCmd.Type]()),
+        // post-condition - communication logic
+        (currentFanState != In(currentFanState)) ->: (api.fanCmd == Some(currentFanState)),
+        (currentFanState == In(currentFanState)) ->: (api.fanCmd.isEmpty)
+      )
+    )
     val oldFanState = currentFanState
     if (latestTemp.degrees < currentSetPoint.low.degrees) {
       // if current temp is below low set point,
-      currentFanState = FanCmd.Off
+      currentFanState = CoolingFan.FanCmd.Off
       api.logInfo("Set fan command: Off")
     } else if (latestTemp.degrees > currentSetPoint.high.degrees) {
       // if current temp exceeds high set point,
-      currentFanState = FanCmd.On
+      currentFanState = CoolingFan.FanCmd.On
       api.logInfo("Set fan command: On")
     } else {
       api.logInfo("Fan state unchanged")

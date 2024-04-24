@@ -9,8 +9,8 @@ import TempControlSimpleTemp._
 object TempControl_i_Api {
   // assume currentTempRange
   @strictpure def currentTempRange(currentTemp: TempSensor.Temperature_i): B =
-    currentTemp.degrees >= -70.0f &
-      currentTemp.degrees <= 180.0f
+    currentTemp.degrees >= -128.6f &
+      currentTemp.degrees <= 134.0f
 }
 
 import TempControl_i_Api._

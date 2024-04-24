@@ -192,7 +192,9 @@ object Filter_p_p_filterp_GumboX {
 
   /** CEP-Post: Compute Entrypoint Post-Condition for filterp
     *
+    * @param api_d_event_in incoming event port
     * @param api_b_event_data_in incoming event data port
+    * @param api_c_event_data_in incoming event data port
     * @param api_a_data_in incoming data port
     * @param api_h_event_out outgoing event port
     * @param api_f_event_data_out outgoing event data port
@@ -200,13 +202,18 @@ object Filter_p_p_filterp_GumboX {
     * @param api_e_data_out outgoing data port
     */
   @strictpure def compute_CEP_Post (
+      api_d_event_in: Option[art.Empty],
       api_b_event_data_in: Option[ProdConsFlows.Container_i],
+      api_c_event_data_in: Option[ProdConsFlows.Container_i],
       api_a_data_in: ProdConsFlows.Container_i,
       api_h_event_out: Option[art.Empty],
       api_f_event_data_out: Option[ProdConsFlows.Container_i],
       api_g_event_data_out: Option[ProdConsFlows.Container_i],
       api_e_data_out: ProdConsFlows.Container_i): B =
     (// D-Inv-Guard: Datatype invariants for the types associated with filterp's state variables and outgoing ports
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_b_event_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_c_event_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Container_i(api_a_data_in) & 
      ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_out) & 
      ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_out) & 
      ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_out) & 
@@ -227,7 +234,9 @@ object Filter_p_p_filterp_GumboX {
       pre: Filter_p_p_filterp_PreState_Container_PS,
       post: Filter_p_p_filterp_PostState_Container_PS): B =
     compute_CEP_Post(
+      api_d_event_in = pre.api_d_event_in,
       api_b_event_data_in = pre.api_b_event_data_in,
+      api_c_event_data_in = pre.api_c_event_data_in,
       api_a_data_in = pre.api_a_data_in,
       api_h_event_out = post.api_h_event_out,
       api_f_event_data_out = post.api_f_event_data_out,

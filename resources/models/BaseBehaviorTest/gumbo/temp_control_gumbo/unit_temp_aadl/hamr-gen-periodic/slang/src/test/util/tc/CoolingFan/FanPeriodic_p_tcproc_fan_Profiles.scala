@@ -38,7 +38,7 @@ import tc.RandomLib
 }
 
 // Profile with generators for state variables and incoming ports
-@msig trait FanPeriodic_p_tcproc_fan_Profile_PS_Trait extends Profile {
+@msig trait FanPeriodic_p_tcproc_fan_Profile_PS_Trait extends FanPeriodic_p_tcproc_fan_Profile_P_Trait {
   def api_fanCmd: RandomLib // random lib for generating CoolingFan.FanCmd
 }
 

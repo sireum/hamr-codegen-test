@@ -119,7 +119,7 @@ object Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulat
   extends UnitTestConfigurationBatch with Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container])
   }
 }
 

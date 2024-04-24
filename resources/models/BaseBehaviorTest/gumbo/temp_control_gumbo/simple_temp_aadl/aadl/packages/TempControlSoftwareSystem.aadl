@@ -259,6 +259,16 @@ public
       compute  -- behaviors for COMPUTE Entrypoint
         modifies currentSetPoint, currentFanState, latestTemp;
         
+        assume
+        	a1 "If the previously received currentTemp was less than the previously
+        	   |received setPoint then the last fan command must have been Off":
+        	  ((latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan::FanCmd.Off));
+
+		assume
+			a2 "If the previously received currentTemp was more than the previously
+        	   |received setPoint then the last fan command must have been On":
+              ((latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan::FanCmd.On));
+                      
         assume Test "Just testing assume+guarantee along with handlers":
           (3 + 2) == 5;
           

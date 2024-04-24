@@ -47,7 +47,7 @@ import prod_cons__JVM.RandomLib
 }
 
 // Profile with generators for state variables and incoming ports
-@msig trait Consumer_p_consumer_Profile_PS_Trait extends Profile {
+@msig trait Consumer_p_consumer_Profile_PS_Trait extends Consumer_p_consumer_Profile_P_Trait {
   def api_h_event_in: RandomLib // random lib for generating art.Empty
   def api_f_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_g_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i

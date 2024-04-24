@@ -92,6 +92,6 @@ object Filter_p_p_filterp_UnitTestConfiguration_Util {
   extends UnitTestConfigurationBatch with Filter_p_p_filterp_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[Filter_p_p_filterp_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[Filter_p_p_filterp_PreState_Container])
   }
 }

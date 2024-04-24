@@ -119,7 +119,7 @@ object TempControlPeriodic_p_tcproc_tempControl_UnitTestConfiguration_Util {
   extends UnitTestConfigurationBatch with TempControlPeriodic_p_tcproc_tempControl_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[TempControlPeriodic_p_tcproc_tempControl_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[TempControlPeriodic_p_tcproc_tempControl_PreState_Container])
   }
 }
 

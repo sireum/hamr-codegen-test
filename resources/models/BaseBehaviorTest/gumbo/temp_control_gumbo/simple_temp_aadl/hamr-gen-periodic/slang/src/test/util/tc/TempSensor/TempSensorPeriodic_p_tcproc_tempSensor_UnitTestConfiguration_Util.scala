@@ -88,6 +88,6 @@ object TempSensorPeriodic_p_tcproc_tempSensor_UnitTestConfiguration_Util {
   extends UnitTestConfigurationBatch with TempSensorPeriodic_p_tcproc_tempSensor_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[TempSensorPeriodic_p_tcproc_tempSensor_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[TempSensorPeriodic_p_tcproc_tempSensor_PreState_Container])
   }
 }

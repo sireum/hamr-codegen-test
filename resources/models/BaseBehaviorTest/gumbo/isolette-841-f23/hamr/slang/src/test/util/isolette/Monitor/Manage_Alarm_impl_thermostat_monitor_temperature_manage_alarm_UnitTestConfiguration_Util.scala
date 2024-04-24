@@ -121,7 +121,7 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_UnitTestCon
   extends UnitTestConfigurationBatch with Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container])
   }
 }
 

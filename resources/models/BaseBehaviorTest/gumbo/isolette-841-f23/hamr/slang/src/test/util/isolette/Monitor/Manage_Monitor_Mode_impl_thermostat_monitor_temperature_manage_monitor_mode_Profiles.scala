@@ -44,7 +44,7 @@ import isolette.RandomLib
 }
 
 // Profile with generators for state variables and incoming ports
-@msig trait Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_Profile_PS_Trait extends Profile {
+@msig trait Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_Profile_PS_Trait extends Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_Profile_P_Trait {
   def In_lastMonitorMode: RandomLib // random lib for generating Isolette_Data_Model.Monitor_Mode
   def api_current_tempWstatus: RandomLib // random lib for generating Isolette_Data_Model.TempWstatus_impl
   def api_interface_failure: RandomLib // random lib for generating Isolette_Data_Model.Failure_Flag_impl

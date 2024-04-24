@@ -121,7 +121,7 @@ object Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_sourc
   extends UnitTestConfigurationBatch with Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container])
   }
 }
 

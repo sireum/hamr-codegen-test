@@ -44,7 +44,7 @@ import tc.RandomLib
 }
 
 // Profile with generators for state variables and incoming ports
-@msig trait TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait extends Profile {
+@msig trait TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait extends TempControlPeriodic_p_tcproc_tempControl_Profile_P_Trait {
   def In_latestFanCmd: RandomLib // random lib for generating CoolingFan.FanCmd
   def api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
   def api_fanAck: RandomLib // random lib for generating CoolingFan.FanAck

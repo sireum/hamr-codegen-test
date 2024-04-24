@@ -34,4 +34,35 @@ object Consumer_p_consumer_GumboX {
       api_f_event_data_in = pre.api_f_event_data_in,
       api_g_event_data_in = pre.api_g_event_data_in,
       api_e_data_in = pre.api_e_data_in)
+
+  /** CEP-Post: Compute Entrypoint Post-Condition for consumer
+    *
+    * @param api_h_event_in incoming event port
+    * @param api_f_event_data_in incoming event data port
+    * @param api_g_event_data_in incoming event data port
+    * @param api_e_data_in incoming data port
+    */
+  @strictpure def compute_CEP_Post (
+      api_h_event_in: Option[art.Empty],
+      api_f_event_data_in: Option[ProdConsFlows.Container_i],
+      api_g_event_data_in: Option[ProdConsFlows.Container_i],
+      api_e_data_in: ProdConsFlows.Container_i): B =
+    (// D-Inv-Guard: Datatype invariants for the types associated with consumer's state variables and outgoing ports
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_in) & 
+     ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_in))
+
+  /** CEP-Post: Compute Entrypoint Post-Condition for consumer via containers
+    *
+    * @param pre Container holding the values of incoming ports and the pre-state values of state variables
+    * @param post Container holding the values of outgoing ports and the post-state values of state variables
+    */
+  @strictpure def compute_CEP_Post_Container(
+      pre: Consumer_p_consumer_PreState_Container_PS,
+      post: Consumer_p_consumer_PostState_Container_PS): B =
+    compute_CEP_Post(
+      api_h_event_in = pre.api_h_event_in,
+      api_f_event_data_in = pre.api_f_event_data_in,
+      api_g_event_data_in = pre.api_g_event_data_in,
+      api_e_data_in = pre.api_e_data_in)
 }

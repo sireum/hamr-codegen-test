@@ -18,8 +18,8 @@ class TempControl_i_tcproc_tempControl_Test extends TempControl_i_tcproc_tempCon
 
     // assert that then Controller's view of the fan is set to off
     assert(TempControl_i_tcproc_tempControl.currentFanState == FanCmd.Off)
-    // assert that then Controller's initial set point is set to (55,100)
-    assert(TempControl_i_tcproc_tempControl.currentSetPoint == SetPoint_i(Temperature_i(55f), Temperature_i(100f)))
+    // assert that then Controller's initial set point is set to (70,80)
+    assert(TempControl_i_tcproc_tempControl.currentSetPoint == SetPoint_i(Temperature_i(70f), Temperature_i(80f)))
     // assert that then Controller's initial latestTemp value is set to 72.0
     assert(TempControl_i_tcproc_tempControl.latestTemp == Temperature_i(72.0f))
   }

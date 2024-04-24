@@ -2431,7 +2431,7 @@
                                     "beginColumn" : 14,
                                     "endLine" : 153,
                                     "endColumn" : 29,
-                                    "offset" : 7966,
+                                    "offset" : 7967,
                                     "length" : 15
                                   }
                                 }
@@ -2451,7 +2451,7 @@
                                   "beginColumn" : 14,
                                   "endLine" : 153,
                                   "endColumn" : 29,
-                                  "offset" : 7966,
+                                  "offset" : 7967,
                                   "length" : 15
                                 }
                               },
@@ -2482,7 +2482,7 @@
                                     "beginColumn" : 31,
                                     "endLine" : 153,
                                     "endColumn" : 46,
-                                    "offset" : 7983,
+                                    "offset" : 7984,
                                     "length" : 15
                                   }
                                 }
@@ -2502,7 +2502,7 @@
                                   "beginColumn" : 31,
                                   "endLine" : 153,
                                   "endColumn" : 46,
-                                  "offset" : 7983,
+                                  "offset" : 7984,
                                   "length" : 15
                                 }
                               },
@@ -2533,7 +2533,7 @@
                                     "beginColumn" : 48,
                                     "endLine" : 153,
                                     "endColumn" : 58,
-                                    "offset" : 8000,
+                                    "offset" : 8001,
                                     "length" : 10
                                   }
                                 }
@@ -2553,7 +2553,7 @@
                                   "beginColumn" : 48,
                                   "endLine" : 153,
                                   "endColumn" : 58,
-                                  "offset" : 8000,
+                                  "offset" : 8001,
                                   "length" : 10
                                 }
                               },
@@ -2604,7 +2604,7 @@
                                                   "beginColumn" : 7,
                                                   "endLine" : 155,
                                                   "endColumn" : 22,
-                                                  "offset" : 8048,
+                                                  "offset" : 8049,
                                                   "length" : 15
                                                 }
                                               }
@@ -2624,7 +2624,7 @@
                                                 "beginColumn" : 7,
                                                 "endLine" : 155,
                                                 "endColumn" : 22,
-                                                "offset" : 8048,
+                                                "offset" : 8049,
                                                 "length" : 15
                                               }
                                             },
@@ -2654,7 +2654,7 @@
                                               "beginColumn" : 23,
                                               "endLine" : 155,
                                               "endColumn" : 34,
-                                              "offset" : 8064,
+                                              "offset" : 8065,
                                               "length" : 11
                                             }
                                           }
@@ -2676,7 +2676,7 @@
                                             "beginColumn" : 7,
                                             "endLine" : 155,
                                             "endColumn" : 34,
-                                            "offset" : 8048,
+                                            "offset" : 8049,
                                             "length" : 27
                                           }
                                         },
@@ -2706,7 +2706,7 @@
                                           "beginColumn" : 27,
                                           "endLine" : 155,
                                           "endColumn" : 34,
-                                          "offset" : 8068,
+                                          "offset" : 8069,
                                           "length" : 7
                                         }
                                       }
@@ -2728,7 +2728,7 @@
                                         "beginColumn" : 7,
                                         "endLine" : 155,
                                         "endColumn" : 34,
-                                        "offset" : 8048,
+                                        "offset" : 8049,
                                         "length" : 27
                                       }
                                     },
@@ -2758,7 +2758,7 @@
                                         "beginColumn" : 38,
                                         "endLine" : 155,
                                         "endColumn" : 47,
-                                        "offset" : 8079,
+                                        "offset" : 8080,
                                         "length" : 9
                                       }
                                     }
@@ -2778,7 +2778,7 @@
                                       "beginColumn" : 7,
                                       "endLine" : 155,
                                       "endColumn" : 47,
-                                      "offset" : 8048,
+                                      "offset" : 8049,
                                       "length" : 40
                                     }
                                   },
@@ -2823,7 +2823,7 @@
                                                   "beginColumn" : 53,
                                                   "endLine" : 155,
                                                   "endColumn" : 68,
-                                                  "offset" : 8094,
+                                                  "offset" : 8095,
                                                   "length" : 15
                                                 }
                                               }
@@ -2843,7 +2843,7 @@
                                                 "beginColumn" : 53,
                                                 "endLine" : 155,
                                                 "endColumn" : 68,
-                                                "offset" : 8094,
+                                                "offset" : 8095,
                                                 "length" : 15
                                               }
                                             },
@@ -2873,7 +2873,7 @@
                                               "beginColumn" : 69,
                                               "endLine" : 155,
                                               "endColumn" : 81,
-                                              "offset" : 8110,
+                                              "offset" : 8111,
                                               "length" : 12
                                             }
                                           }
@@ -2895,7 +2895,7 @@
                                             "beginColumn" : 53,
                                             "endLine" : 155,
                                             "endColumn" : 81,
-                                            "offset" : 8094,
+                                            "offset" : 8095,
                                             "length" : 28
                                           }
                                         },
@@ -2925,7 +2925,7 @@
                                           "beginColumn" : 74,
                                           "endLine" : 155,
                                           "endColumn" : 81,
-                                          "offset" : 8115,
+                                          "offset" : 8116,
                                           "length" : 7
                                         }
                                       }
@@ -2947,7 +2947,7 @@
                                         "beginColumn" : 53,
                                         "endLine" : 155,
                                         "endColumn" : 81,
-                                        "offset" : 8094,
+                                        "offset" : 8095,
                                         "length" : 28
                                       }
                                     },
@@ -2977,7 +2977,7 @@
                                         "beginColumn" : 85,
                                         "endLine" : 155,
                                         "endColumn" : 94,
-                                        "offset" : 8126,
+                                        "offset" : 8127,
                                         "length" : 9
                                       }
                                     }
@@ -2997,7 +2997,7 @@
                                       "beginColumn" : 53,
                                       "endLine" : 155,
                                       "endColumn" : 94,
-                                      "offset" : 8094,
+                                      "offset" : 8095,
                                       "length" : 41
                                     }
                                   },
@@ -3026,7 +3026,7 @@
                                     "beginColumn" : 7,
                                     "endLine" : 155,
                                     "endColumn" : 94,
-                                    "offset" : 8048,
+                                    "offset" : 8049,
                                     "length" : 87
                                   }
                                 },
@@ -3053,7 +3053,7 @@
                                 "beginColumn" : 5,
                                 "endLine" : 155,
                                 "endColumn" : 96,
-                                "offset" : 8016,
+                                "offset" : 8017,
                                 "length" : 121
                               }
                             }
@@ -3085,7 +3085,7 @@
                                         "beginColumn" : 6,
                                         "endLine" : 158,
                                         "endColumn" : 21,
-                                        "offset" : 8180,
+                                        "offset" : 8181,
                                         "length" : 15
                                       }
                                     }
@@ -3105,7 +3105,7 @@
                                       "beginColumn" : 6,
                                       "endLine" : 158,
                                       "endColumn" : 21,
-                                      "offset" : 8180,
+                                      "offset" : 8181,
                                       "length" : 15
                                     }
                                   },
@@ -3145,7 +3145,7 @@
                                                 "beginColumn" : 25,
                                                 "endLine" : 158,
                                                 "endColumn" : 47,
-                                                "offset" : 8199,
+                                                "offset" : 8200,
                                                 "length" : 22
                                               }
                                             }
@@ -3165,7 +3165,7 @@
                                               "beginColumn" : 25,
                                               "endLine" : 158,
                                               "endColumn" : 47,
-                                              "offset" : 8199,
+                                              "offset" : 8200,
                                               "length" : 22
                                             }
                                           },
@@ -3195,7 +3195,7 @@
                                             "beginColumn" : 25,
                                             "endLine" : 158,
                                             "endColumn" : 47,
-                                            "offset" : 8199,
+                                            "offset" : 8200,
                                             "length" : 22
                                           }
                                         }
@@ -3217,7 +3217,7 @@
                                           "beginColumn" : 25,
                                           "endLine" : 158,
                                           "endColumn" : 47,
-                                          "offset" : 8199,
+                                          "offset" : 8200,
                                           "length" : 22
                                         }
                                       },
@@ -3247,7 +3247,7 @@
                                         "beginColumn" : 25,
                                         "endLine" : 158,
                                         "endColumn" : 47,
-                                        "offset" : 8199,
+                                        "offset" : 8200,
                                         "length" : 22
                                       }
                                     }
@@ -3269,7 +3269,7 @@
                                       "beginColumn" : 25,
                                       "endLine" : 158,
                                       "endColumn" : 47,
-                                      "offset" : 8199,
+                                      "offset" : 8200,
                                       "length" : 22
                                     }
                                   },
@@ -3295,7 +3295,7 @@
                                     "beginColumn" : 6,
                                     "endLine" : 158,
                                     "endColumn" : 47,
-                                    "offset" : 8180,
+                                    "offset" : 8181,
                                     "length" : 41
                                   }
                                 },
@@ -3322,7 +3322,7 @@
                                 "beginColumn" : 6,
                                 "endLine" : 158,
                                 "endColumn" : 48,
-                                "offset" : 8147,
+                                "offset" : 8148,
                                 "length" : 75
                               }
                             }
@@ -3358,7 +3358,7 @@
                                             "beginColumn" : 6,
                                             "endLine" : 161,
                                             "endColumn" : 16,
-                                            "offset" : 8266,
+                                            "offset" : 8267,
                                             "length" : 10
                                           }
                                         }
@@ -3378,7 +3378,7 @@
                                           "beginColumn" : 6,
                                           "endLine" : 161,
                                           "endColumn" : 16,
-                                          "offset" : 8266,
+                                          "offset" : 8267,
                                           "length" : 10
                                         }
                                       },
@@ -3408,7 +3408,7 @@
                                         "beginColumn" : 17,
                                         "endLine" : 161,
                                         "endColumn" : 24,
-                                        "offset" : 8277,
+                                        "offset" : 8278,
                                         "length" : 7
                                       }
                                     }
@@ -3430,7 +3430,7 @@
                                       "beginColumn" : 6,
                                       "endLine" : 161,
                                       "endColumn" : 24,
-                                      "offset" : 8266,
+                                      "offset" : 8267,
                                       "length" : 18
                                     }
                                   },
@@ -3445,7 +3445,7 @@
                               "op" : "==",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.LitF32",
-                                "value" : 75.0,
+                                "value" : 72.0,
                                 "attr" : {
                                   "type" : "org.sireum.lang.ast.Attr",
                                   "posOpt" : {
@@ -3460,7 +3460,7 @@
                                       "beginColumn" : 28,
                                       "endLine" : 161,
                                       "endColumn" : 37,
-                                      "offset" : 8288,
+                                      "offset" : 8289,
                                       "length" : 9
                                     }
                                   }
@@ -3480,7 +3480,7 @@
                                     "beginColumn" : 6,
                                     "endLine" : 161,
                                     "endColumn" : 37,
-                                    "offset" : 8266,
+                                    "offset" : 8267,
                                     "length" : 31
                                   }
                                 },
@@ -3507,7 +3507,7 @@
                                 "beginColumn" : 5,
                                 "endLine" : 161,
                                 "endColumn" : 38,
-                                "offset" : 8232,
+                                "offset" : 8233,
                                 "length" : 66
                               }
                             }
@@ -3642,7 +3642,7 @@
                                 "op" : ">=",
                                 "right" : {
                                   "type" : "org.sireum.lang.ast.Exp.LitF32",
-                                  "value" : -70.0,
+                                  "value" : -128.6,
                                   "attr" : {
                                     "type" : "org.sireum.lang.ast.Attr",
                                     "posOpt" : {
@@ -3656,9 +3656,9 @@
                                         "beginLine" : 150,
                                         "beginColumn" : 30,
                                         "endLine" : 150,
-                                        "endColumn" : 40,
+                                        "endColumn" : 41,
                                         "offset" : 7884,
-                                        "length" : 10
+                                        "length" : 11
                                       }
                                     }
                                   }
@@ -3676,9 +3676,9 @@
                                       "beginLine" : 150,
                                       "beginColumn" : 7,
                                       "endLine" : 150,
-                                      "endColumn" : 40,
+                                      "endColumn" : 41,
                                       "offset" : 7861,
-                                      "length" : 33
+                                      "length" : 34
                                     }
                                   },
                                   "resOpt" : {
@@ -3715,10 +3715,10 @@
                                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                               },
                                               "beginLine" : 150,
-                                              "beginColumn" : 45,
+                                              "beginColumn" : 46,
                                               "endLine" : 150,
-                                              "endColumn" : 56,
-                                              "offset" : 7899,
+                                              "endColumn" : 57,
+                                              "offset" : 7900,
                                               "length" : 11
                                             }
                                           }
@@ -3735,10 +3735,10 @@
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
                                             "beginLine" : 150,
-                                            "beginColumn" : 45,
+                                            "beginColumn" : 46,
                                             "endLine" : 150,
-                                            "endColumn" : 56,
-                                            "offset" : 7899,
+                                            "endColumn" : 57,
+                                            "offset" : 7900,
                                             "length" : 11
                                           }
                                         },
@@ -3765,10 +3765,10 @@
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 150,
-                                          "beginColumn" : 57,
+                                          "beginColumn" : 58,
                                           "endLine" : 150,
-                                          "endColumn" : 64,
-                                          "offset" : 7911,
+                                          "endColumn" : 65,
+                                          "offset" : 7912,
                                           "length" : 7
                                         }
                                       }
@@ -3787,10 +3787,10 @@
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 150,
-                                        "beginColumn" : 45,
+                                        "beginColumn" : 46,
                                         "endLine" : 150,
-                                        "endColumn" : 64,
-                                        "offset" : 7899,
+                                        "endColumn" : 65,
+                                        "offset" : 7900,
                                         "length" : 19
                                       }
                                     },
@@ -3805,7 +3805,7 @@
                                 "op" : "<=",
                                 "right" : {
                                   "type" : "org.sireum.lang.ast.Exp.LitF32",
-                                  "value" : 180.0,
+                                  "value" : 134.0,
                                   "attr" : {
                                     "type" : "org.sireum.lang.ast.Attr",
                                     "posOpt" : {
@@ -3817,10 +3817,10 @@
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 150,
-                                        "beginColumn" : 68,
+                                        "beginColumn" : 69,
                                         "endLine" : 150,
-                                        "endColumn" : 78,
-                                        "offset" : 7922,
+                                        "endColumn" : 79,
+                                        "offset" : 7923,
                                         "length" : 10
                                       }
                                     }
@@ -3837,10 +3837,10 @@
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 150,
-                                      "beginColumn" : 45,
+                                      "beginColumn" : 46,
                                       "endLine" : 150,
-                                      "endColumn" : 78,
-                                      "offset" : 7899,
+                                      "endColumn" : 79,
+                                      "offset" : 7900,
                                       "length" : 33
                                     }
                                   },
@@ -3868,9 +3868,9 @@
                                     "beginLine" : 150,
                                     "beginColumn" : 7,
                                     "endLine" : 150,
-                                    "endColumn" : 78,
+                                    "endColumn" : 79,
                                     "offset" : 7861,
-                                    "length" : 71
+                                    "length" : 72
                                   }
                                 },
                                 "resOpt" : {
@@ -3895,9 +3895,9 @@
                                 "beginLine" : 149,
                                 "beginColumn" : 5,
                                 "endLine" : 150,
-                                "endColumn" : 80,
+                                "endColumn" : 81,
                                 "offset" : 7830,
-                                "length" : 104
+                                "length" : 105
                               }
                             }
                           }
@@ -3928,7 +3928,7 @@
                                     "beginColumn" : 14,
                                     "endLine" : 165,
                                     "endColumn" : 29,
-                                    "offset" : 8372,
+                                    "offset" : 8373,
                                     "length" : 15
                                   }
                                 }
@@ -3948,7 +3948,7 @@
                                   "beginColumn" : 14,
                                   "endLine" : 165,
                                   "endColumn" : 29,
-                                  "offset" : 8372,
+                                  "offset" : 8373,
                                   "length" : 15
                                 }
                               },
@@ -3979,7 +3979,7 @@
                                     "beginColumn" : 31,
                                     "endLine" : 165,
                                     "endColumn" : 46,
-                                    "offset" : 8389,
+                                    "offset" : 8390,
                                     "length" : 15
                                   }
                                 }
@@ -3999,7 +3999,7 @@
                                   "beginColumn" : 31,
                                   "endLine" : 165,
                                   "endColumn" : 46,
-                                  "offset" : 8389,
+                                  "offset" : 8390,
                                   "length" : 15
                                 }
                               },
@@ -4030,7 +4030,7 @@
                                     "beginColumn" : 48,
                                     "endLine" : 165,
                                     "endColumn" : 58,
-                                    "offset" : 8406,
+                                    "offset" : 8407,
                                     "length" : 10
                                   }
                                 }
@@ -4050,7 +4050,7 @@
                                   "beginColumn" : 48,
                                   "endLine" : 165,
                                   "endColumn" : 58,
-                                  "offset" : 8406,
+                                  "offset" : 8407,
                                   "length" : 10
                                 }
                               },
@@ -4065,11 +4065,11 @@
                         ],
                         "specs" : [
                           {
-                            "type" : "GclGuarantee",
-                            "id" : "TC_Req_01",
+                            "type" : "GclAssume",
+                            "id" : "a1",
                             "descriptor" : {
                               "type" : "Some",
-                              "value" : "If the current temperature is less than the set point, then the fan state shall be Off."
+                              "value" : "If the previously received currentTemp was less than the previously\n        \t   \t\t|received setPoint then the last fan command must have been Off"
                             },
                             "exp" : {
                               "type" : "org.sireum.lang.ast.Exp.Binary",
@@ -4094,11 +4094,11 @@
                                                 "type" : "Some",
                                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                               },
-                                              "beginLine" : 168,
-                                              "beginColumn" : 7,
-                                              "endLine" : 168,
-                                              "endColumn" : 17,
-                                              "offset" : 8544,
+                                              "beginLine" : 170,
+                                              "beginColumn" : 16,
+                                              "endLine" : 170,
+                                              "endColumn" : 26,
+                                              "offset" : 8618,
                                               "length" : 10
                                             }
                                           }
@@ -4114,11 +4114,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 168,
-                                            "beginColumn" : 7,
-                                            "endLine" : 168,
-                                            "endColumn" : 17,
-                                            "offset" : 8544,
+                                            "beginLine" : 170,
+                                            "beginColumn" : 16,
+                                            "endLine" : 170,
+                                            "endColumn" : 26,
+                                            "offset" : 8618,
                                             "length" : 10
                                           }
                                         },
@@ -4144,11 +4144,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 168,
-                                          "beginColumn" : 18,
-                                          "endLine" : 168,
-                                          "endColumn" : 25,
-                                          "offset" : 8555,
+                                          "beginLine" : 170,
+                                          "beginColumn" : 27,
+                                          "endLine" : 170,
+                                          "endColumn" : 34,
+                                          "offset" : 8629,
                                           "length" : 7
                                         }
                                       }
@@ -4166,11 +4166,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 168,
-                                        "beginColumn" : 7,
-                                        "endLine" : 168,
-                                        "endColumn" : 25,
-                                        "offset" : 8544,
+                                        "beginLine" : 170,
+                                        "beginColumn" : 16,
+                                        "endLine" : 170,
+                                        "endColumn" : 34,
+                                        "offset" : 8618,
                                         "length" : 18
                                       }
                                     },
@@ -4206,11 +4206,11 @@
                                                     "type" : "Some",
                                                     "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                                   },
-                                                  "beginLine" : 168,
-                                                  "beginColumn" : 28,
-                                                  "endLine" : 168,
-                                                  "endColumn" : 43,
-                                                  "offset" : 8565,
+                                                  "beginLine" : 170,
+                                                  "beginColumn" : 37,
+                                                  "endLine" : 170,
+                                                  "endColumn" : 52,
+                                                  "offset" : 8639,
                                                   "length" : 15
                                                 }
                                               }
@@ -4226,11 +4226,11 @@
                                                   "type" : "Some",
                                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                                 },
-                                                "beginLine" : 168,
-                                                "beginColumn" : 28,
-                                                "endLine" : 168,
-                                                "endColumn" : 43,
-                                                "offset" : 8565,
+                                                "beginLine" : 170,
+                                                "beginColumn" : 37,
+                                                "endLine" : 170,
+                                                "endColumn" : 52,
+                                                "offset" : 8639,
                                                 "length" : 15
                                               }
                                             },
@@ -4256,11 +4256,11 @@
                                                 "type" : "Some",
                                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                               },
-                                              "beginLine" : 168,
-                                              "beginColumn" : 44,
-                                              "endLine" : 168,
-                                              "endColumn" : 55,
-                                              "offset" : 8581,
+                                              "beginLine" : 170,
+                                              "beginColumn" : 53,
+                                              "endLine" : 170,
+                                              "endColumn" : 64,
+                                              "offset" : 8655,
                                               "length" : 11
                                             }
                                           }
@@ -4278,11 +4278,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 168,
-                                            "beginColumn" : 28,
-                                            "endLine" : 168,
-                                            "endColumn" : 55,
-                                            "offset" : 8565,
+                                            "beginLine" : 170,
+                                            "beginColumn" : 37,
+                                            "endLine" : 170,
+                                            "endColumn" : 64,
+                                            "offset" : 8639,
                                             "length" : 27
                                           }
                                         },
@@ -4308,11 +4308,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 168,
-                                          "beginColumn" : 48,
-                                          "endLine" : 168,
-                                          "endColumn" : 55,
-                                          "offset" : 8585,
+                                          "beginLine" : 170,
+                                          "beginColumn" : 57,
+                                          "endLine" : 170,
+                                          "endColumn" : 64,
+                                          "offset" : 8659,
                                           "length" : 7
                                         }
                                       }
@@ -4330,11 +4330,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 168,
-                                        "beginColumn" : 28,
-                                        "endLine" : 168,
-                                        "endColumn" : 55,
-                                        "offset" : 8565,
+                                        "beginLine" : 170,
+                                        "beginColumn" : 37,
+                                        "endLine" : 170,
+                                        "endColumn" : 64,
+                                        "offset" : 8639,
                                         "length" : 27
                                       }
                                     },
@@ -4356,11 +4356,11 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
-                                      "beginLine" : 168,
-                                      "beginColumn" : 7,
-                                      "endLine" : 168,
-                                      "endColumn" : 55,
-                                      "offset" : 8544,
+                                      "beginLine" : 170,
+                                      "beginColumn" : 16,
+                                      "endLine" : 170,
+                                      "endColumn" : 64,
+                                      "offset" : 8618,
                                       "length" : 48
                                     }
                                   },
@@ -4393,11 +4393,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 168,
-                                          "beginColumn" : 62,
-                                          "endLine" : 168,
-                                          "endColumn" : 77,
-                                          "offset" : 8599,
+                                          "beginLine" : 170,
+                                          "beginColumn" : 71,
+                                          "endLine" : 170,
+                                          "endColumn" : 86,
+                                          "offset" : 8673,
                                           "length" : 15
                                         }
                                       }
@@ -4413,11 +4413,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 168,
-                                        "beginColumn" : 62,
-                                        "endLine" : 168,
-                                        "endColumn" : 77,
-                                        "offset" : 8599,
+                                        "beginLine" : 170,
+                                        "beginColumn" : 71,
+                                        "endLine" : 170,
+                                        "endColumn" : 86,
+                                        "offset" : 8673,
                                         "length" : 15
                                       }
                                     },
@@ -4453,11 +4453,11 @@
                                                     "type" : "Some",
                                                     "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                                   },
-                                                  "beginLine" : 168,
-                                                  "beginColumn" : 81,
-                                                  "endLine" : 168,
-                                                  "endColumn" : 103,
-                                                  "offset" : 8618,
+                                                  "beginLine" : 170,
+                                                  "beginColumn" : 90,
+                                                  "endLine" : 170,
+                                                  "endColumn" : 112,
+                                                  "offset" : 8692,
                                                   "length" : 22
                                                 }
                                               }
@@ -4473,11 +4473,11 @@
                                                   "type" : "Some",
                                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                                 },
-                                                "beginLine" : 168,
-                                                "beginColumn" : 81,
-                                                "endLine" : 168,
-                                                "endColumn" : 103,
-                                                "offset" : 8618,
+                                                "beginLine" : 170,
+                                                "beginColumn" : 90,
+                                                "endLine" : 170,
+                                                "endColumn" : 112,
+                                                "offset" : 8692,
                                                 "length" : 22
                                               }
                                             },
@@ -4503,11 +4503,11 @@
                                                 "type" : "Some",
                                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                               },
-                                              "beginLine" : 168,
-                                              "beginColumn" : 81,
-                                              "endLine" : 168,
-                                              "endColumn" : 103,
-                                              "offset" : 8618,
+                                              "beginLine" : 170,
+                                              "beginColumn" : 90,
+                                              "endLine" : 170,
+                                              "endColumn" : 112,
+                                              "offset" : 8692,
                                               "length" : 22
                                             }
                                           }
@@ -4525,11 +4525,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 168,
-                                            "beginColumn" : 81,
-                                            "endLine" : 168,
-                                            "endColumn" : 103,
-                                            "offset" : 8618,
+                                            "beginLine" : 170,
+                                            "beginColumn" : 90,
+                                            "endLine" : 170,
+                                            "endColumn" : 112,
+                                            "offset" : 8692,
                                             "length" : 22
                                           }
                                         },
@@ -4555,11 +4555,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 168,
-                                          "beginColumn" : 81,
-                                          "endLine" : 168,
-                                          "endColumn" : 103,
-                                          "offset" : 8618,
+                                          "beginLine" : 170,
+                                          "beginColumn" : 90,
+                                          "endLine" : 170,
+                                          "endColumn" : 112,
+                                          "offset" : 8692,
                                           "length" : 22
                                         }
                                       }
@@ -4577,11 +4577,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 168,
-                                        "beginColumn" : 81,
-                                        "endLine" : 168,
-                                        "endColumn" : 103,
-                                        "offset" : 8618,
+                                        "beginLine" : 170,
+                                        "beginColumn" : 90,
+                                        "endLine" : 170,
+                                        "endColumn" : 112,
+                                        "offset" : 8692,
                                         "length" : 22
                                       }
                                     },
@@ -4603,11 +4603,11 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
-                                      "beginLine" : 168,
-                                      "beginColumn" : 62,
-                                      "endLine" : 168,
-                                      "endColumn" : 103,
-                                      "offset" : 8599,
+                                      "beginLine" : 170,
+                                      "beginColumn" : 71,
+                                      "endLine" : 170,
+                                      "endColumn" : 112,
+                                      "offset" : 8673,
                                       "length" : 41
                                     }
                                   },
@@ -4632,11 +4632,11 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                     },
-                                    "beginLine" : 168,
-                                    "beginColumn" : 7,
-                                    "endLine" : 168,
-                                    "endColumn" : 103,
-                                    "offset" : 8544,
+                                    "beginLine" : 170,
+                                    "beginColumn" : 16,
+                                    "endLine" : 170,
+                                    "endColumn" : 112,
+                                    "offset" : 8618,
                                     "length" : 96
                                   }
                                 },
@@ -4660,20 +4660,20 @@
                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                 },
                                 "beginLine" : 167,
-                                "beginColumn" : 5,
-                                "endLine" : 168,
-                                "endColumn" : 105,
-                                "offset" : 8426,
-                                "length" : 216
+                                "beginColumn" : 11,
+                                "endLine" : 170,
+                                "endColumn" : 115,
+                                "offset" : 8433,
+                                "length" : 284
                               }
                             }
                           },
                           {
-                            "type" : "GclGuarantee",
-                            "id" : "TC_Req_02",
+                            "type" : "GclAssume",
+                            "id" : "a2",
                             "descriptor" : {
                               "type" : "Some",
-                              "value" : "If the current temperature is greater than the set point,\n                                    |then the fan state shall be On."
+                              "value" : "If the previously received currentTemp was more than the previously\n        \t\t\t   |received setPoint then the last fan command must have been On"
                             },
                             "exp" : {
                               "type" : "org.sireum.lang.ast.Exp.Binary",
@@ -4698,11 +4698,11 @@
                                                 "type" : "Some",
                                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                               },
-                                              "beginLine" : 172,
-                                              "beginColumn" : 7,
-                                              "endLine" : 172,
-                                              "endColumn" : 17,
-                                              "offset" : 8804,
+                                              "beginLine" : 175,
+                                              "beginColumn" : 19,
+                                              "endLine" : 175,
+                                              "endColumn" : 29,
+                                              "offset" : 8904,
                                               "length" : 10
                                             }
                                           }
@@ -4718,11 +4718,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 172,
-                                            "beginColumn" : 7,
-                                            "endLine" : 172,
-                                            "endColumn" : 17,
-                                            "offset" : 8804,
+                                            "beginLine" : 175,
+                                            "beginColumn" : 19,
+                                            "endLine" : 175,
+                                            "endColumn" : 29,
+                                            "offset" : 8904,
                                             "length" : 10
                                           }
                                         },
@@ -4748,11 +4748,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 172,
-                                          "beginColumn" : 18,
-                                          "endLine" : 172,
-                                          "endColumn" : 25,
-                                          "offset" : 8815,
+                                          "beginLine" : 175,
+                                          "beginColumn" : 30,
+                                          "endLine" : 175,
+                                          "endColumn" : 37,
+                                          "offset" : 8915,
                                           "length" : 7
                                         }
                                       }
@@ -4770,11 +4770,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 172,
-                                        "beginColumn" : 7,
-                                        "endLine" : 172,
-                                        "endColumn" : 25,
-                                        "offset" : 8804,
+                                        "beginLine" : 175,
+                                        "beginColumn" : 19,
+                                        "endLine" : 175,
+                                        "endColumn" : 37,
+                                        "offset" : 8904,
                                         "length" : 18
                                       }
                                     },
@@ -4810,11 +4810,11 @@
                                                     "type" : "Some",
                                                     "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                                   },
-                                                  "beginLine" : 172,
-                                                  "beginColumn" : 28,
-                                                  "endLine" : 172,
-                                                  "endColumn" : 43,
-                                                  "offset" : 8825,
+                                                  "beginLine" : 175,
+                                                  "beginColumn" : 40,
+                                                  "endLine" : 175,
+                                                  "endColumn" : 55,
+                                                  "offset" : 8925,
                                                   "length" : 15
                                                 }
                                               }
@@ -4830,11 +4830,11 @@
                                                   "type" : "Some",
                                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                                 },
-                                                "beginLine" : 172,
-                                                "beginColumn" : 28,
-                                                "endLine" : 172,
-                                                "endColumn" : 43,
-                                                "offset" : 8825,
+                                                "beginLine" : 175,
+                                                "beginColumn" : 40,
+                                                "endLine" : 175,
+                                                "endColumn" : 55,
+                                                "offset" : 8925,
                                                 "length" : 15
                                               }
                                             },
@@ -4860,11 +4860,11 @@
                                                 "type" : "Some",
                                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                               },
-                                              "beginLine" : 172,
-                                              "beginColumn" : 44,
-                                              "endLine" : 172,
-                                              "endColumn" : 56,
-                                              "offset" : 8841,
+                                              "beginLine" : 175,
+                                              "beginColumn" : 56,
+                                              "endLine" : 175,
+                                              "endColumn" : 68,
+                                              "offset" : 8941,
                                               "length" : 12
                                             }
                                           }
@@ -4882,11 +4882,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 172,
-                                            "beginColumn" : 28,
-                                            "endLine" : 172,
-                                            "endColumn" : 56,
-                                            "offset" : 8825,
+                                            "beginLine" : 175,
+                                            "beginColumn" : 40,
+                                            "endLine" : 175,
+                                            "endColumn" : 68,
+                                            "offset" : 8925,
                                             "length" : 28
                                           }
                                         },
@@ -4912,11 +4912,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 172,
-                                          "beginColumn" : 49,
-                                          "endLine" : 172,
-                                          "endColumn" : 56,
-                                          "offset" : 8846,
+                                          "beginLine" : 175,
+                                          "beginColumn" : 61,
+                                          "endLine" : 175,
+                                          "endColumn" : 68,
+                                          "offset" : 8946,
                                           "length" : 7
                                         }
                                       }
@@ -4934,11 +4934,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 172,
-                                        "beginColumn" : 28,
-                                        "endLine" : 172,
-                                        "endColumn" : 56,
-                                        "offset" : 8825,
+                                        "beginLine" : 175,
+                                        "beginColumn" : 40,
+                                        "endLine" : 175,
+                                        "endColumn" : 68,
+                                        "offset" : 8925,
                                         "length" : 28
                                       }
                                     },
@@ -4960,11 +4960,11 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
-                                      "beginLine" : 172,
-                                      "beginColumn" : 7,
-                                      "endLine" : 172,
-                                      "endColumn" : 56,
-                                      "offset" : 8804,
+                                      "beginLine" : 175,
+                                      "beginColumn" : 19,
+                                      "endLine" : 175,
+                                      "endColumn" : 68,
+                                      "offset" : 8904,
                                       "length" : 49
                                     }
                                   },
@@ -4997,11 +4997,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 172,
-                                          "beginColumn" : 63,
-                                          "endLine" : 172,
-                                          "endColumn" : 78,
-                                          "offset" : 8860,
+                                          "beginLine" : 175,
+                                          "beginColumn" : 75,
+                                          "endLine" : 175,
+                                          "endColumn" : 90,
+                                          "offset" : 8960,
                                           "length" : 15
                                         }
                                       }
@@ -5017,11 +5017,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 172,
-                                        "beginColumn" : 63,
-                                        "endLine" : 172,
-                                        "endColumn" : 78,
-                                        "offset" : 8860,
+                                        "beginLine" : 175,
+                                        "beginColumn" : 75,
+                                        "endLine" : 175,
+                                        "endColumn" : 90,
+                                        "offset" : 8960,
                                         "length" : 15
                                       }
                                     },
@@ -5057,11 +5057,11 @@
                                                     "type" : "Some",
                                                     "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                                   },
-                                                  "beginLine" : 172,
-                                                  "beginColumn" : 82,
-                                                  "endLine" : 172,
-                                                  "endColumn" : 103,
-                                                  "offset" : 8879,
+                                                  "beginLine" : 175,
+                                                  "beginColumn" : 94,
+                                                  "endLine" : 175,
+                                                  "endColumn" : 115,
+                                                  "offset" : 8979,
                                                   "length" : 21
                                                 }
                                               }
@@ -5077,11 +5077,11 @@
                                                   "type" : "Some",
                                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                                 },
-                                                "beginLine" : 172,
-                                                "beginColumn" : 82,
-                                                "endLine" : 172,
-                                                "endColumn" : 103,
-                                                "offset" : 8879,
+                                                "beginLine" : 175,
+                                                "beginColumn" : 94,
+                                                "endLine" : 175,
+                                                "endColumn" : 115,
+                                                "offset" : 8979,
                                                 "length" : 21
                                               }
                                             },
@@ -5107,11 +5107,11 @@
                                                 "type" : "Some",
                                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                               },
-                                              "beginLine" : 172,
-                                              "beginColumn" : 82,
-                                              "endLine" : 172,
-                                              "endColumn" : 103,
-                                              "offset" : 8879,
+                                              "beginLine" : 175,
+                                              "beginColumn" : 94,
+                                              "endLine" : 175,
+                                              "endColumn" : 115,
+                                              "offset" : 8979,
                                               "length" : 21
                                             }
                                           }
@@ -5129,11 +5129,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 172,
-                                            "beginColumn" : 82,
-                                            "endLine" : 172,
-                                            "endColumn" : 103,
-                                            "offset" : 8879,
+                                            "beginLine" : 175,
+                                            "beginColumn" : 94,
+                                            "endLine" : 175,
+                                            "endColumn" : 115,
+                                            "offset" : 8979,
                                             "length" : 21
                                           }
                                         },
@@ -5159,11 +5159,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 172,
-                                          "beginColumn" : 82,
-                                          "endLine" : 172,
-                                          "endColumn" : 103,
-                                          "offset" : 8879,
+                                          "beginLine" : 175,
+                                          "beginColumn" : 94,
+                                          "endLine" : 175,
+                                          "endColumn" : 115,
+                                          "offset" : 8979,
                                           "length" : 21
                                         }
                                       }
@@ -5181,11 +5181,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 172,
-                                        "beginColumn" : 82,
-                                        "endLine" : 172,
-                                        "endColumn" : 103,
-                                        "offset" : 8879,
+                                        "beginLine" : 175,
+                                        "beginColumn" : 94,
+                                        "endLine" : 175,
+                                        "endColumn" : 115,
+                                        "offset" : 8979,
                                         "length" : 21
                                       }
                                     },
@@ -5207,11 +5207,11 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
-                                      "beginLine" : 172,
-                                      "beginColumn" : 63,
-                                      "endLine" : 172,
-                                      "endColumn" : 103,
-                                      "offset" : 8860,
+                                      "beginLine" : 175,
+                                      "beginColumn" : 75,
+                                      "endLine" : 175,
+                                      "endColumn" : 115,
+                                      "offset" : 8960,
                                       "length" : 40
                                     }
                                   },
@@ -5236,11 +5236,11 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                     },
-                                    "beginLine" : 172,
-                                    "beginColumn" : 7,
-                                    "endLine" : 172,
-                                    "endColumn" : 103,
-                                    "offset" : 8804,
+                                    "beginLine" : 175,
+                                    "beginColumn" : 19,
+                                    "endLine" : 175,
+                                    "endColumn" : 115,
+                                    "offset" : 8904,
                                     "length" : 96
                                   }
                                 },
@@ -5263,11 +5263,1219 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                 },
-                                "beginLine" : 170,
+                                "beginLine" : 172,
                                 "beginColumn" : 5,
-                                "endLine" : 172,
+                                "endLine" : 175,
+                                "endColumn" : 118,
+                                "offset" : 8723,
+                                "length" : 280
+                              }
+                            }
+                          },
+                          {
+                            "type" : "GclGuarantee",
+                            "id" : "TC_Req_01",
+                            "descriptor" : {
+                              "type" : "Some",
+                              "value" : "If the current temperature is less than the set point, then the fan state shall be Off."
+                            },
+                            "exp" : {
+                              "type" : "org.sireum.lang.ast.Exp.Binary",
+                              "left" : {
+                                "type" : "org.sireum.lang.ast.Exp.Binary",
+                                "left" : {
+                                  "type" : "org.sireum.lang.ast.Exp.Select",
+                                  "receiverOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "org.sireum.lang.ast.Exp.Ident",
+                                      "id" : {
+                                        "type" : "org.sireum.lang.ast.Id",
+                                        "value" : "latestTemp",
+                                        "attr" : {
+                                          "type" : "org.sireum.lang.ast.Attr",
+                                          "posOpt" : {
+                                            "type" : "Some",
+                                            "value" : {
+                                              "type" : "Position",
+                                              "uriOpt" : {
+                                                "type" : "Some",
+                                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                              },
+                                              "beginLine" : 178,
+                                              "beginColumn" : 7,
+                                              "endLine" : 178,
+                                              "endColumn" : 17,
+                                              "offset" : 9144,
+                                              "length" : 10
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "attr" : {
+                                        "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                        "posOpt" : {
+                                          "type" : "Some",
+                                          "value" : {
+                                            "type" : "Position",
+                                            "uriOpt" : {
+                                              "type" : "Some",
+                                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                            },
+                                            "beginLine" : 178,
+                                            "beginColumn" : 7,
+                                            "endLine" : 178,
+                                            "endColumn" : 17,
+                                            "offset" : 9144,
+                                            "length" : 10
+                                          }
+                                        },
+                                        "resOpt" : {
+                                          "type" : "None"
+                                        },
+                                        "typedOpt" : {
+                                          "type" : "None"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "id" : {
+                                    "type" : "org.sireum.lang.ast.Id",
+                                    "value" : "degrees",
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                          },
+                                          "beginLine" : 178,
+                                          "beginColumn" : 18,
+                                          "endLine" : 178,
+                                          "endColumn" : 25,
+                                          "offset" : 9155,
+                                          "length" : 7
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "targs" : [
+                                  ],
+                                  "attr" : {
+                                    "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                    "posOpt" : {
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 178,
+                                        "beginColumn" : 7,
+                                        "endLine" : 178,
+                                        "endColumn" : 25,
+                                        "offset" : 9144,
+                                        "length" : 18
+                                      }
+                                    },
+                                    "resOpt" : {
+                                      "type" : "None"
+                                    },
+                                    "typedOpt" : {
+                                      "type" : "None"
+                                    }
+                                  }
+                                },
+                                "op" : "<",
+                                "right" : {
+                                  "type" : "org.sireum.lang.ast.Exp.Select",
+                                  "receiverOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "org.sireum.lang.ast.Exp.Select",
+                                      "receiverOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "org.sireum.lang.ast.Exp.Ident",
+                                          "id" : {
+                                            "type" : "org.sireum.lang.ast.Id",
+                                            "value" : "currentSetPoint",
+                                            "attr" : {
+                                              "type" : "org.sireum.lang.ast.Attr",
+                                              "posOpt" : {
+                                                "type" : "Some",
+                                                "value" : {
+                                                  "type" : "Position",
+                                                  "uriOpt" : {
+                                                    "type" : "Some",
+                                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                                  },
+                                                  "beginLine" : 178,
+                                                  "beginColumn" : 28,
+                                                  "endLine" : 178,
+                                                  "endColumn" : 43,
+                                                  "offset" : 9165,
+                                                  "length" : 15
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "attr" : {
+                                            "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                            "posOpt" : {
+                                              "type" : "Some",
+                                              "value" : {
+                                                "type" : "Position",
+                                                "uriOpt" : {
+                                                  "type" : "Some",
+                                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                                },
+                                                "beginLine" : 178,
+                                                "beginColumn" : 28,
+                                                "endLine" : 178,
+                                                "endColumn" : 43,
+                                                "offset" : 9165,
+                                                "length" : 15
+                                              }
+                                            },
+                                            "resOpt" : {
+                                              "type" : "None"
+                                            },
+                                            "typedOpt" : {
+                                              "type" : "None"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "id" : {
+                                        "type" : "org.sireum.lang.ast.Id",
+                                        "value" : "low",
+                                        "attr" : {
+                                          "type" : "org.sireum.lang.ast.Attr",
+                                          "posOpt" : {
+                                            "type" : "Some",
+                                            "value" : {
+                                              "type" : "Position",
+                                              "uriOpt" : {
+                                                "type" : "Some",
+                                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                              },
+                                              "beginLine" : 178,
+                                              "beginColumn" : 44,
+                                              "endLine" : 178,
+                                              "endColumn" : 55,
+                                              "offset" : 9181,
+                                              "length" : 11
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "targs" : [
+                                      ],
+                                      "attr" : {
+                                        "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                        "posOpt" : {
+                                          "type" : "Some",
+                                          "value" : {
+                                            "type" : "Position",
+                                            "uriOpt" : {
+                                              "type" : "Some",
+                                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                            },
+                                            "beginLine" : 178,
+                                            "beginColumn" : 28,
+                                            "endLine" : 178,
+                                            "endColumn" : 55,
+                                            "offset" : 9165,
+                                            "length" : 27
+                                          }
+                                        },
+                                        "resOpt" : {
+                                          "type" : "None"
+                                        },
+                                        "typedOpt" : {
+                                          "type" : "None"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "id" : {
+                                    "type" : "org.sireum.lang.ast.Id",
+                                    "value" : "degrees",
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                          },
+                                          "beginLine" : 178,
+                                          "beginColumn" : 48,
+                                          "endLine" : 178,
+                                          "endColumn" : 55,
+                                          "offset" : 9185,
+                                          "length" : 7
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "targs" : [
+                                  ],
+                                  "attr" : {
+                                    "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                    "posOpt" : {
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 178,
+                                        "beginColumn" : 28,
+                                        "endLine" : 178,
+                                        "endColumn" : 55,
+                                        "offset" : 9165,
+                                        "length" : 27
+                                      }
+                                    },
+                                    "resOpt" : {
+                                      "type" : "None"
+                                    },
+                                    "typedOpt" : {
+                                      "type" : "None"
+                                    }
+                                  }
+                                },
+                                "attr" : {
+                                  "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 178,
+                                      "beginColumn" : 7,
+                                      "endLine" : 178,
+                                      "endColumn" : 55,
+                                      "offset" : 9144,
+                                      "length" : 48
+                                    }
+                                  },
+                                  "resOpt" : {
+                                    "type" : "None"
+                                  },
+                                  "typedOpt" : {
+                                    "type" : "None"
+                                  }
+                                },
+                                "opPosOpt" : {
+                                  "type" : "None"
+                                }
+                              },
+                              "op" : "->:",
+                              "right" : {
+                                "type" : "org.sireum.lang.ast.Exp.Binary",
+                                "left" : {
+                                  "type" : "org.sireum.lang.ast.Exp.Ident",
+                                  "id" : {
+                                    "type" : "org.sireum.lang.ast.Id",
+                                    "value" : "currentFanState",
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                          },
+                                          "beginLine" : 178,
+                                          "beginColumn" : 62,
+                                          "endLine" : 178,
+                                          "endColumn" : 77,
+                                          "offset" : 9199,
+                                          "length" : 15
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr" : {
+                                    "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                    "posOpt" : {
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 178,
+                                        "beginColumn" : 62,
+                                        "endLine" : 178,
+                                        "endColumn" : 77,
+                                        "offset" : 9199,
+                                        "length" : 15
+                                      }
+                                    },
+                                    "resOpt" : {
+                                      "type" : "None"
+                                    },
+                                    "typedOpt" : {
+                                      "type" : "None"
+                                    }
+                                  }
+                                },
+                                "op" : "==",
+                                "right" : {
+                                  "type" : "org.sireum.lang.ast.Exp.Select",
+                                  "receiverOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "org.sireum.lang.ast.Exp.Select",
+                                      "receiverOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "org.sireum.lang.ast.Exp.Ident",
+                                          "id" : {
+                                            "type" : "org.sireum.lang.ast.Id",
+                                            "value" : "CoolingFan",
+                                            "attr" : {
+                                              "type" : "org.sireum.lang.ast.Attr",
+                                              "posOpt" : {
+                                                "type" : "Some",
+                                                "value" : {
+                                                  "type" : "Position",
+                                                  "uriOpt" : {
+                                                    "type" : "Some",
+                                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                                  },
+                                                  "beginLine" : 178,
+                                                  "beginColumn" : 81,
+                                                  "endLine" : 178,
+                                                  "endColumn" : 103,
+                                                  "offset" : 9218,
+                                                  "length" : 22
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "attr" : {
+                                            "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                            "posOpt" : {
+                                              "type" : "Some",
+                                              "value" : {
+                                                "type" : "Position",
+                                                "uriOpt" : {
+                                                  "type" : "Some",
+                                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                                },
+                                                "beginLine" : 178,
+                                                "beginColumn" : 81,
+                                                "endLine" : 178,
+                                                "endColumn" : 103,
+                                                "offset" : 9218,
+                                                "length" : 22
+                                              }
+                                            },
+                                            "resOpt" : {
+                                              "type" : "None"
+                                            },
+                                            "typedOpt" : {
+                                              "type" : "None"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "id" : {
+                                        "type" : "org.sireum.lang.ast.Id",
+                                        "value" : "FanCmd",
+                                        "attr" : {
+                                          "type" : "org.sireum.lang.ast.Attr",
+                                          "posOpt" : {
+                                            "type" : "Some",
+                                            "value" : {
+                                              "type" : "Position",
+                                              "uriOpt" : {
+                                                "type" : "Some",
+                                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                              },
+                                              "beginLine" : 178,
+                                              "beginColumn" : 81,
+                                              "endLine" : 178,
+                                              "endColumn" : 103,
+                                              "offset" : 9218,
+                                              "length" : 22
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "targs" : [
+                                      ],
+                                      "attr" : {
+                                        "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                        "posOpt" : {
+                                          "type" : "Some",
+                                          "value" : {
+                                            "type" : "Position",
+                                            "uriOpt" : {
+                                              "type" : "Some",
+                                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                            },
+                                            "beginLine" : 178,
+                                            "beginColumn" : 81,
+                                            "endLine" : 178,
+                                            "endColumn" : 103,
+                                            "offset" : 9218,
+                                            "length" : 22
+                                          }
+                                        },
+                                        "resOpt" : {
+                                          "type" : "None"
+                                        },
+                                        "typedOpt" : {
+                                          "type" : "None"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "id" : {
+                                    "type" : "org.sireum.lang.ast.Id",
+                                    "value" : "Off",
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                          },
+                                          "beginLine" : 178,
+                                          "beginColumn" : 81,
+                                          "endLine" : 178,
+                                          "endColumn" : 103,
+                                          "offset" : 9218,
+                                          "length" : 22
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "targs" : [
+                                  ],
+                                  "attr" : {
+                                    "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                    "posOpt" : {
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 178,
+                                        "beginColumn" : 81,
+                                        "endLine" : 178,
+                                        "endColumn" : 103,
+                                        "offset" : 9218,
+                                        "length" : 22
+                                      }
+                                    },
+                                    "resOpt" : {
+                                      "type" : "None"
+                                    },
+                                    "typedOpt" : {
+                                      "type" : "None"
+                                    }
+                                  }
+                                },
+                                "attr" : {
+                                  "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 178,
+                                      "beginColumn" : 62,
+                                      "endLine" : 178,
+                                      "endColumn" : 103,
+                                      "offset" : 9199,
+                                      "length" : 41
+                                    }
+                                  },
+                                  "resOpt" : {
+                                    "type" : "None"
+                                  },
+                                  "typedOpt" : {
+                                    "type" : "None"
+                                  }
+                                },
+                                "opPosOpt" : {
+                                  "type" : "None"
+                                }
+                              },
+                              "attr" : {
+                                "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                "posOpt" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 178,
+                                    "beginColumn" : 7,
+                                    "endLine" : 178,
+                                    "endColumn" : 103,
+                                    "offset" : 9144,
+                                    "length" : 96
+                                  }
+                                },
+                                "resOpt" : {
+                                  "type" : "None"
+                                },
+                                "typedOpt" : {
+                                  "type" : "None"
+                                }
+                              },
+                              "opPosOpt" : {
+                                "type" : "None"
+                              }
+                            },
+                            "posOpt" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                },
+                                "beginLine" : 177,
+                                "beginColumn" : 5,
+                                "endLine" : 178,
                                 "endColumn" : 105,
-                                "offset" : 8648,
+                                "offset" : 9026,
+                                "length" : 216
+                              }
+                            }
+                          },
+                          {
+                            "type" : "GclGuarantee",
+                            "id" : "TC_Req_02",
+                            "descriptor" : {
+                              "type" : "Some",
+                              "value" : "If the current temperature is greater than the set point,\n                                    |then the fan state shall be On."
+                            },
+                            "exp" : {
+                              "type" : "org.sireum.lang.ast.Exp.Binary",
+                              "left" : {
+                                "type" : "org.sireum.lang.ast.Exp.Binary",
+                                "left" : {
+                                  "type" : "org.sireum.lang.ast.Exp.Select",
+                                  "receiverOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "org.sireum.lang.ast.Exp.Ident",
+                                      "id" : {
+                                        "type" : "org.sireum.lang.ast.Id",
+                                        "value" : "latestTemp",
+                                        "attr" : {
+                                          "type" : "org.sireum.lang.ast.Attr",
+                                          "posOpt" : {
+                                            "type" : "Some",
+                                            "value" : {
+                                              "type" : "Position",
+                                              "uriOpt" : {
+                                                "type" : "Some",
+                                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                              },
+                                              "beginLine" : 182,
+                                              "beginColumn" : 7,
+                                              "endLine" : 182,
+                                              "endColumn" : 17,
+                                              "offset" : 9404,
+                                              "length" : 10
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "attr" : {
+                                        "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                        "posOpt" : {
+                                          "type" : "Some",
+                                          "value" : {
+                                            "type" : "Position",
+                                            "uriOpt" : {
+                                              "type" : "Some",
+                                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                            },
+                                            "beginLine" : 182,
+                                            "beginColumn" : 7,
+                                            "endLine" : 182,
+                                            "endColumn" : 17,
+                                            "offset" : 9404,
+                                            "length" : 10
+                                          }
+                                        },
+                                        "resOpt" : {
+                                          "type" : "None"
+                                        },
+                                        "typedOpt" : {
+                                          "type" : "None"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "id" : {
+                                    "type" : "org.sireum.lang.ast.Id",
+                                    "value" : "degrees",
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                          },
+                                          "beginLine" : 182,
+                                          "beginColumn" : 18,
+                                          "endLine" : 182,
+                                          "endColumn" : 25,
+                                          "offset" : 9415,
+                                          "length" : 7
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "targs" : [
+                                  ],
+                                  "attr" : {
+                                    "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                    "posOpt" : {
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 182,
+                                        "beginColumn" : 7,
+                                        "endLine" : 182,
+                                        "endColumn" : 25,
+                                        "offset" : 9404,
+                                        "length" : 18
+                                      }
+                                    },
+                                    "resOpt" : {
+                                      "type" : "None"
+                                    },
+                                    "typedOpt" : {
+                                      "type" : "None"
+                                    }
+                                  }
+                                },
+                                "op" : ">",
+                                "right" : {
+                                  "type" : "org.sireum.lang.ast.Exp.Select",
+                                  "receiverOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "org.sireum.lang.ast.Exp.Select",
+                                      "receiverOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "org.sireum.lang.ast.Exp.Ident",
+                                          "id" : {
+                                            "type" : "org.sireum.lang.ast.Id",
+                                            "value" : "currentSetPoint",
+                                            "attr" : {
+                                              "type" : "org.sireum.lang.ast.Attr",
+                                              "posOpt" : {
+                                                "type" : "Some",
+                                                "value" : {
+                                                  "type" : "Position",
+                                                  "uriOpt" : {
+                                                    "type" : "Some",
+                                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                                  },
+                                                  "beginLine" : 182,
+                                                  "beginColumn" : 28,
+                                                  "endLine" : 182,
+                                                  "endColumn" : 43,
+                                                  "offset" : 9425,
+                                                  "length" : 15
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "attr" : {
+                                            "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                            "posOpt" : {
+                                              "type" : "Some",
+                                              "value" : {
+                                                "type" : "Position",
+                                                "uriOpt" : {
+                                                  "type" : "Some",
+                                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                                },
+                                                "beginLine" : 182,
+                                                "beginColumn" : 28,
+                                                "endLine" : 182,
+                                                "endColumn" : 43,
+                                                "offset" : 9425,
+                                                "length" : 15
+                                              }
+                                            },
+                                            "resOpt" : {
+                                              "type" : "None"
+                                            },
+                                            "typedOpt" : {
+                                              "type" : "None"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "id" : {
+                                        "type" : "org.sireum.lang.ast.Id",
+                                        "value" : "high",
+                                        "attr" : {
+                                          "type" : "org.sireum.lang.ast.Attr",
+                                          "posOpt" : {
+                                            "type" : "Some",
+                                            "value" : {
+                                              "type" : "Position",
+                                              "uriOpt" : {
+                                                "type" : "Some",
+                                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                              },
+                                              "beginLine" : 182,
+                                              "beginColumn" : 44,
+                                              "endLine" : 182,
+                                              "endColumn" : 56,
+                                              "offset" : 9441,
+                                              "length" : 12
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "targs" : [
+                                      ],
+                                      "attr" : {
+                                        "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                        "posOpt" : {
+                                          "type" : "Some",
+                                          "value" : {
+                                            "type" : "Position",
+                                            "uriOpt" : {
+                                              "type" : "Some",
+                                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                            },
+                                            "beginLine" : 182,
+                                            "beginColumn" : 28,
+                                            "endLine" : 182,
+                                            "endColumn" : 56,
+                                            "offset" : 9425,
+                                            "length" : 28
+                                          }
+                                        },
+                                        "resOpt" : {
+                                          "type" : "None"
+                                        },
+                                        "typedOpt" : {
+                                          "type" : "None"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "id" : {
+                                    "type" : "org.sireum.lang.ast.Id",
+                                    "value" : "degrees",
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                          },
+                                          "beginLine" : 182,
+                                          "beginColumn" : 49,
+                                          "endLine" : 182,
+                                          "endColumn" : 56,
+                                          "offset" : 9446,
+                                          "length" : 7
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "targs" : [
+                                  ],
+                                  "attr" : {
+                                    "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                    "posOpt" : {
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 182,
+                                        "beginColumn" : 28,
+                                        "endLine" : 182,
+                                        "endColumn" : 56,
+                                        "offset" : 9425,
+                                        "length" : 28
+                                      }
+                                    },
+                                    "resOpt" : {
+                                      "type" : "None"
+                                    },
+                                    "typedOpt" : {
+                                      "type" : "None"
+                                    }
+                                  }
+                                },
+                                "attr" : {
+                                  "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 182,
+                                      "beginColumn" : 7,
+                                      "endLine" : 182,
+                                      "endColumn" : 56,
+                                      "offset" : 9404,
+                                      "length" : 49
+                                    }
+                                  },
+                                  "resOpt" : {
+                                    "type" : "None"
+                                  },
+                                  "typedOpt" : {
+                                    "type" : "None"
+                                  }
+                                },
+                                "opPosOpt" : {
+                                  "type" : "None"
+                                }
+                              },
+                              "op" : "->:",
+                              "right" : {
+                                "type" : "org.sireum.lang.ast.Exp.Binary",
+                                "left" : {
+                                  "type" : "org.sireum.lang.ast.Exp.Ident",
+                                  "id" : {
+                                    "type" : "org.sireum.lang.ast.Id",
+                                    "value" : "currentFanState",
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                          },
+                                          "beginLine" : 182,
+                                          "beginColumn" : 63,
+                                          "endLine" : 182,
+                                          "endColumn" : 78,
+                                          "offset" : 9460,
+                                          "length" : 15
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr" : {
+                                    "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                    "posOpt" : {
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 182,
+                                        "beginColumn" : 63,
+                                        "endLine" : 182,
+                                        "endColumn" : 78,
+                                        "offset" : 9460,
+                                        "length" : 15
+                                      }
+                                    },
+                                    "resOpt" : {
+                                      "type" : "None"
+                                    },
+                                    "typedOpt" : {
+                                      "type" : "None"
+                                    }
+                                  }
+                                },
+                                "op" : "==",
+                                "right" : {
+                                  "type" : "org.sireum.lang.ast.Exp.Select",
+                                  "receiverOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "org.sireum.lang.ast.Exp.Select",
+                                      "receiverOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "org.sireum.lang.ast.Exp.Ident",
+                                          "id" : {
+                                            "type" : "org.sireum.lang.ast.Id",
+                                            "value" : "CoolingFan",
+                                            "attr" : {
+                                              "type" : "org.sireum.lang.ast.Attr",
+                                              "posOpt" : {
+                                                "type" : "Some",
+                                                "value" : {
+                                                  "type" : "Position",
+                                                  "uriOpt" : {
+                                                    "type" : "Some",
+                                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                                  },
+                                                  "beginLine" : 182,
+                                                  "beginColumn" : 82,
+                                                  "endLine" : 182,
+                                                  "endColumn" : 103,
+                                                  "offset" : 9479,
+                                                  "length" : 21
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "attr" : {
+                                            "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                            "posOpt" : {
+                                              "type" : "Some",
+                                              "value" : {
+                                                "type" : "Position",
+                                                "uriOpt" : {
+                                                  "type" : "Some",
+                                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                                },
+                                                "beginLine" : 182,
+                                                "beginColumn" : 82,
+                                                "endLine" : 182,
+                                                "endColumn" : 103,
+                                                "offset" : 9479,
+                                                "length" : 21
+                                              }
+                                            },
+                                            "resOpt" : {
+                                              "type" : "None"
+                                            },
+                                            "typedOpt" : {
+                                              "type" : "None"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "id" : {
+                                        "type" : "org.sireum.lang.ast.Id",
+                                        "value" : "FanCmd",
+                                        "attr" : {
+                                          "type" : "org.sireum.lang.ast.Attr",
+                                          "posOpt" : {
+                                            "type" : "Some",
+                                            "value" : {
+                                              "type" : "Position",
+                                              "uriOpt" : {
+                                                "type" : "Some",
+                                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                              },
+                                              "beginLine" : 182,
+                                              "beginColumn" : 82,
+                                              "endLine" : 182,
+                                              "endColumn" : 103,
+                                              "offset" : 9479,
+                                              "length" : 21
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "targs" : [
+                                      ],
+                                      "attr" : {
+                                        "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                        "posOpt" : {
+                                          "type" : "Some",
+                                          "value" : {
+                                            "type" : "Position",
+                                            "uriOpt" : {
+                                              "type" : "Some",
+                                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                            },
+                                            "beginLine" : 182,
+                                            "beginColumn" : 82,
+                                            "endLine" : 182,
+                                            "endColumn" : 103,
+                                            "offset" : 9479,
+                                            "length" : 21
+                                          }
+                                        },
+                                        "resOpt" : {
+                                          "type" : "None"
+                                        },
+                                        "typedOpt" : {
+                                          "type" : "None"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "id" : {
+                                    "type" : "org.sireum.lang.ast.Id",
+                                    "value" : "On",
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                          },
+                                          "beginLine" : 182,
+                                          "beginColumn" : 82,
+                                          "endLine" : 182,
+                                          "endColumn" : 103,
+                                          "offset" : 9479,
+                                          "length" : 21
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "targs" : [
+                                  ],
+                                  "attr" : {
+                                    "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                    "posOpt" : {
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 182,
+                                        "beginColumn" : 82,
+                                        "endLine" : 182,
+                                        "endColumn" : 103,
+                                        "offset" : 9479,
+                                        "length" : 21
+                                      }
+                                    },
+                                    "resOpt" : {
+                                      "type" : "None"
+                                    },
+                                    "typedOpt" : {
+                                      "type" : "None"
+                                    }
+                                  }
+                                },
+                                "attr" : {
+                                  "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 182,
+                                      "beginColumn" : 63,
+                                      "endLine" : 182,
+                                      "endColumn" : 103,
+                                      "offset" : 9460,
+                                      "length" : 40
+                                    }
+                                  },
+                                  "resOpt" : {
+                                    "type" : "None"
+                                  },
+                                  "typedOpt" : {
+                                    "type" : "None"
+                                  }
+                                },
+                                "opPosOpt" : {
+                                  "type" : "None"
+                                }
+                              },
+                              "attr" : {
+                                "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                "posOpt" : {
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 182,
+                                    "beginColumn" : 7,
+                                    "endLine" : 182,
+                                    "endColumn" : 103,
+                                    "offset" : 9404,
+                                    "length" : 96
+                                  }
+                                },
+                                "resOpt" : {
+                                  "type" : "None"
+                                },
+                                "typedOpt" : {
+                                  "type" : "None"
+                                }
+                              },
+                              "opPosOpt" : {
+                                "type" : "None"
+                              }
+                            },
+                            "posOpt" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                },
+                                "beginLine" : 180,
+                                "beginColumn" : 5,
+                                "endLine" : 182,
+                                "endColumn" : 105,
+                                "offset" : 9248,
                                 "length" : 254
                               }
                             }
@@ -5293,11 +6501,11 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
-                                      "beginLine" : 186,
+                                      "beginLine" : 196,
                                       "beginColumn" : 5,
-                                      "endLine" : 186,
+                                      "endLine" : 196,
                                       "endColumn" : 13,
-                                      "offset" : 9750,
+                                      "offset" : 10350,
                                       "length" : 8
                                     }
                                   }
@@ -5313,11 +6521,11 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                     },
-                                    "beginLine" : 186,
+                                    "beginLine" : 196,
                                     "beginColumn" : 5,
-                                    "endLine" : 186,
+                                    "endLine" : 196,
                                     "endColumn" : 13,
-                                    "offset" : 9750,
+                                    "offset" : 10350,
                                     "length" : 8
                                   }
                                 },
@@ -5345,11 +6553,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 187,
+                                        "beginLine" : 197,
                                         "beginColumn" : 15,
-                                        "endLine" : 187,
+                                        "endLine" : 197,
                                         "endColumn" : 30,
-                                        "offset" : 9781,
+                                        "offset" : 10381,
                                         "length" : 15
                                       }
                                     }
@@ -5365,11 +6573,11 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
-                                      "beginLine" : 187,
+                                      "beginLine" : 197,
                                       "beginColumn" : 15,
-                                      "endLine" : 187,
+                                      "endLine" : 197,
                                       "endColumn" : 30,
-                                      "offset" : 9781,
+                                      "offset" : 10381,
                                       "length" : 15
                                     }
                                   },
@@ -5406,11 +6614,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 190,
+                                            "beginLine" : 200,
                                             "beginColumn" : 7,
-                                            "endLine" : 190,
+                                            "endLine" : 200,
                                             "endColumn" : 22,
-                                            "offset" : 9842,
+                                            "offset" : 10442,
                                             "length" : 15
                                           }
                                         }
@@ -5426,11 +6634,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 190,
+                                          "beginLine" : 200,
                                           "beginColumn" : 7,
-                                          "endLine" : 190,
+                                          "endLine" : 200,
                                           "endColumn" : 22,
-                                          "offset" : 9842,
+                                          "offset" : 10442,
                                           "length" : 15
                                         }
                                       },
@@ -5458,11 +6666,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 190,
+                                            "beginLine" : 200,
                                             "beginColumn" : 26,
-                                            "endLine" : 190,
+                                            "endLine" : 200,
                                             "endColumn" : 34,
-                                            "offset" : 9861,
+                                            "offset" : 10461,
                                             "length" : 8
                                           }
                                         }
@@ -5478,11 +6686,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 190,
+                                          "beginLine" : 200,
                                           "beginColumn" : 26,
-                                          "endLine" : 190,
+                                          "endLine" : 200,
                                           "endColumn" : 34,
-                                          "offset" : 9861,
+                                          "offset" : 10461,
                                           "length" : 8
                                         }
                                       },
@@ -5504,11 +6712,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 190,
+                                        "beginLine" : 200,
                                         "beginColumn" : 7,
-                                        "endLine" : 190,
+                                        "endLine" : 200,
                                         "endColumn" : 34,
-                                        "offset" : 9842,
+                                        "offset" : 10442,
                                         "length" : 27
                                       }
                                     },
@@ -5531,11 +6739,11 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                     },
-                                    "beginLine" : 189,
+                                    "beginLine" : 199,
                                     "beginColumn" : 6,
-                                    "endLine" : 190,
+                                    "endLine" : 200,
                                     "endColumn" : 35,
-                                    "offset" : 9809,
+                                    "offset" : 10409,
                                     "length" : 61
                                   }
                                 }
@@ -5559,11 +6767,11 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
-                                      "beginLine" : 198,
+                                      "beginLine" : 208,
                                       "beginColumn" : 5,
-                                      "endLine" : 198,
+                                      "endLine" : 208,
                                       "endColumn" : 16,
-                                      "offset" : 10059,
+                                      "offset" : 10659,
                                       "length" : 11
                                     }
                                   }
@@ -5579,11 +6787,11 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                     },
-                                    "beginLine" : 198,
+                                    "beginLine" : 208,
                                     "beginColumn" : 5,
-                                    "endLine" : 198,
+                                    "endLine" : 208,
                                     "endColumn" : 16,
-                                    "offset" : 10059,
+                                    "offset" : 10659,
                                     "length" : 11
                                   }
                                 },
@@ -5611,11 +6819,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 199,
+                                        "beginLine" : 209,
                                         "beginColumn" : 15,
-                                        "endLine" : 199,
+                                        "endLine" : 209,
                                         "endColumn" : 25,
-                                        "offset" : 10093,
+                                        "offset" : 10693,
                                         "length" : 10
                                       }
                                     }
@@ -5631,11 +6839,11 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                       },
-                                      "beginLine" : 199,
+                                      "beginLine" : 209,
                                       "beginColumn" : 15,
-                                      "endLine" : 199,
+                                      "endLine" : 209,
                                       "endColumn" : 25,
-                                      "offset" : 10093,
+                                      "offset" : 10693,
                                       "length" : 10
                                     }
                                   },
@@ -5672,11 +6880,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 202,
+                                            "beginLine" : 212,
                                             "beginColumn" : 7,
-                                            "endLine" : 202,
+                                            "endLine" : 212,
                                             "endColumn" : 17,
-                                            "offset" : 10145,
+                                            "offset" : 10745,
                                             "length" : 10
                                           }
                                         }
@@ -5692,11 +6900,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 202,
+                                          "beginLine" : 212,
                                           "beginColumn" : 7,
-                                          "endLine" : 202,
+                                          "endLine" : 212,
                                           "endColumn" : 17,
-                                          "offset" : 10145,
+                                          "offset" : 10745,
                                           "length" : 10
                                         }
                                       },
@@ -5724,11 +6932,11 @@
                                               "type" : "Some",
                                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                             },
-                                            "beginLine" : 202,
+                                            "beginLine" : 212,
                                             "beginColumn" : 21,
-                                            "endLine" : 202,
+                                            "endLine" : 212,
                                             "endColumn" : 32,
-                                            "offset" : 10159,
+                                            "offset" : 10759,
                                             "length" : 11
                                           }
                                         }
@@ -5744,11 +6952,11 @@
                                             "type" : "Some",
                                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                           },
-                                          "beginLine" : 202,
+                                          "beginLine" : 212,
                                           "beginColumn" : 21,
-                                          "endLine" : 202,
+                                          "endLine" : 212,
                                           "endColumn" : 32,
-                                          "offset" : 10159,
+                                          "offset" : 10759,
                                           "length" : 11
                                         }
                                       },
@@ -5770,11 +6978,11 @@
                                           "type" : "Some",
                                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                         },
-                                        "beginLine" : 202,
+                                        "beginLine" : 212,
                                         "beginColumn" : 7,
-                                        "endLine" : 202,
+                                        "endLine" : 212,
                                         "endColumn" : 32,
-                                        "offset" : 10145,
+                                        "offset" : 10745,
                                         "length" : 25
                                       }
                                     },
@@ -5797,11 +7005,11 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                     },
-                                    "beginLine" : 201,
+                                    "beginLine" : 211,
                                     "beginColumn" : 6,
-                                    "endLine" : 202,
+                                    "endLine" : 212,
                                     "endColumn" : 33,
-                                    "offset" : 10116,
+                                    "offset" : 10716,
                                     "length" : 55
                                   }
                                 }
@@ -5865,11 +7073,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 233,
+                        "beginLine" : 243,
                         "beginColumn" : 4,
-                        "endLine" : 233,
+                        "endLine" : 243,
                         "endColumn" : 56,
-                        "offset" : 11214,
+                        "offset" : 11814,
                         "length" : 52
                       }
                     }
@@ -5937,11 +7145,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 236,
+                        "beginLine" : 246,
                         "beginColumn" : 4,
-                        "endLine" : 236,
+                        "endLine" : 246,
                         "endColumn" : 45,
-                        "offset" : 11420,
+                        "offset" : 12020,
                         "length" : 41
                       }
                     }
@@ -6009,11 +7217,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 234,
+                        "beginLine" : 244,
                         "beginColumn" : 4,
-                        "endLine" : 234,
+                        "endLine" : 244,
                         "endColumn" : 31,
-                        "offset" : 11320,
+                        "offset" : 11920,
                         "length" : 27
                       }
                     }
@@ -6122,11 +7330,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 244,
+                        "beginLine" : 254,
                         "beginColumn" : 4,
-                        "endLine" : 244,
+                        "endLine" : 254,
                         "endColumn" : 35,
-                        "offset" : 11958,
+                        "offset" : 12558,
                         "length" : 31
                       }
                     }
@@ -6148,11 +7356,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                           },
-                          "beginLine" : 233,
+                          "beginLine" : 243,
                           "beginColumn" : 4,
-                          "endLine" : 233,
+                          "endLine" : 243,
                           "endColumn" : 56,
-                          "offset" : 11214,
+                          "offset" : 11814,
                           "length" : 52
                         }
                       }
@@ -6176,11 +7384,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 245,
+                        "beginLine" : 255,
                         "beginColumn" : 4,
-                        "endLine" : 245,
+                        "endLine" : 255,
                         "endColumn" : 35,
-                        "offset" : 11993,
+                        "offset" : 12593,
                         "length" : 31
                       }
                     }
@@ -6202,11 +7410,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                           },
-                          "beginLine" : 234,
+                          "beginLine" : 244,
                           "beginColumn" : 4,
-                          "endLine" : 234,
+                          "endLine" : 244,
                           "endColumn" : 31,
-                          "offset" : 11320,
+                          "offset" : 11920,
                           "length" : 27
                         }
                       }
@@ -6230,11 +7438,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 250,
+                        "beginLine" : 260,
                         "beginColumn" : 4,
-                        "endLine" : 250,
+                        "endLine" : 260,
                         "endColumn" : 36,
-                        "offset" : 12339,
+                        "offset" : 12939,
                         "length" : 32
                       }
                     }
@@ -6259,11 +7467,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                           },
-                          "beginLine" : 236,
+                          "beginLine" : 246,
                           "beginColumn" : 4,
-                          "endLine" : 236,
+                          "endLine" : 246,
                           "endColumn" : 45,
-                          "offset" : 11420,
+                          "offset" : 12020,
                           "length" : 41
                         }
                       }
@@ -6570,11 +7778,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                           },
-                          "beginLine" : 233,
+                          "beginLine" : 243,
                           "beginColumn" : 4,
-                          "endLine" : 233,
+                          "endLine" : 243,
                           "endColumn" : 56,
-                          "offset" : 11214,
+                          "offset" : 11814,
                           "length" : 52
                         }
                       }
@@ -6870,11 +8078,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                           },
-                          "beginLine" : 234,
+                          "beginLine" : 244,
                           "beginColumn" : 4,
-                          "endLine" : 234,
+                          "endLine" : 244,
                           "endColumn" : 31,
-                          "offset" : 11320,
+                          "offset" : 11920,
                           "length" : 27
                         }
                       }
@@ -7265,11 +8473,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                           },
-                          "beginLine" : 236,
+                          "beginLine" : 246,
                           "beginColumn" : 4,
-                          "endLine" : 236,
+                          "endLine" : 246,
                           "endColumn" : 45,
-                          "offset" : 11420,
+                          "offset" : 12020,
                           "length" : 41
                         }
                       }
@@ -7650,11 +8858,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 233,
+                        "beginLine" : 243,
                         "beginColumn" : 4,
-                        "endLine" : 233,
+                        "endLine" : 243,
                         "endColumn" : 56,
-                        "offset" : 11214,
+                        "offset" : 11814,
                         "length" : 52
                       }
                     }
@@ -8012,11 +9220,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 234,
+                        "beginLine" : 244,
                         "beginColumn" : 4,
-                        "endLine" : 234,
+                        "endLine" : 244,
                         "endColumn" : 31,
-                        "offset" : 11320,
+                        "offset" : 11920,
                         "length" : 27
                       }
                     }
@@ -8502,11 +9710,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 236,
+                        "beginLine" : 246,
                         "beginColumn" : 4,
-                        "endLine" : 236,
+                        "endLine" : 246,
                         "endColumn" : 45,
-                        "offset" : 11420,
+                        "offset" : 12020,
                         "length" : 41
                       }
                     }
@@ -11017,11 +12225,11 @@
                   "type" : "Some",
                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                 },
-                "beginLine" : 292,
+                "beginLine" : 302,
                 "beginColumn" : 4,
-                "endLine" : 292,
+                "endLine" : 302,
                 "endColumn" : 40,
-                "offset" : 14262,
+                "offset" : 14862,
                 "length" : 36
               }
             }
@@ -11398,11 +12606,11 @@
                   "type" : "Some",
                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                 },
-                "beginLine" : 293,
+                "beginLine" : 303,
                 "beginColumn" : 4,
-                "endLine" : 293,
+                "endLine" : 303,
                 "endColumn" : 41,
-                "offset" : 14302,
+                "offset" : 14902,
                 "length" : 37
               }
             }
@@ -11851,11 +13059,11 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                     },
-                                    "beginLine" : 302,
+                                    "beginLine" : 312,
                                     "beginColumn" : 15,
-                                    "endLine" : 302,
+                                    "endLine" : 312,
                                     "endColumn" : 18,
-                                    "offset" : 14622,
+                                    "offset" : 15222,
                                     "length" : 3
                                   }
                                 }
@@ -11871,11 +13079,11 @@
                                     "type" : "Some",
                                     "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                   },
-                                  "beginLine" : 302,
+                                  "beginLine" : 312,
                                   "beginColumn" : 15,
-                                  "endLine" : 302,
+                                  "endLine" : 312,
                                   "endColumn" : 18,
-                                  "offset" : 14622,
+                                  "offset" : 15222,
                                   "length" : 3
                                 }
                               },
@@ -11901,11 +13109,11 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                 },
-                                "beginLine" : 302,
+                                "beginLine" : 312,
                                 "beginColumn" : 19,
-                                "endLine" : 302,
+                                "endLine" : 312,
                                 "endColumn" : 26,
-                                "offset" : 14626,
+                                "offset" : 15226,
                                 "length" : 7
                               }
                             }
@@ -11923,11 +13131,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                               },
-                              "beginLine" : 302,
+                              "beginLine" : 312,
                               "beginColumn" : 15,
-                              "endLine" : 302,
+                              "endLine" : 312,
                               "endColumn" : 26,
-                              "offset" : 14622,
+                              "offset" : 15222,
                               "length" : 11
                             }
                           },
@@ -11953,11 +13161,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                               },
-                              "beginLine" : 302,
+                              "beginLine" : 312,
                               "beginColumn" : 30,
-                              "endLine" : 302,
+                              "endLine" : 312,
                               "endColumn" : 39,
-                              "offset" : 14637,
+                              "offset" : 15237,
                               "length" : 9
                             }
                           }
@@ -11973,11 +13181,11 @@
                               "type" : "Some",
                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                             },
-                            "beginLine" : 302,
+                            "beginLine" : 312,
                             "beginColumn" : 15,
-                            "endLine" : 302,
+                            "endLine" : 312,
                             "endColumn" : 39,
-                            "offset" : 14622,
+                            "offset" : 15222,
                             "length" : 24
                           }
                         },
@@ -12014,11 +13222,11 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                     },
-                                    "beginLine" : 303,
+                                    "beginLine" : 313,
                                     "beginColumn" : 15,
-                                    "endLine" : 303,
+                                    "endLine" : 313,
                                     "endColumn" : 19,
-                                    "offset" : 14664,
+                                    "offset" : 15264,
                                     "length" : 4
                                   }
                                 }
@@ -12034,11 +13242,11 @@
                                     "type" : "Some",
                                     "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                   },
-                                  "beginLine" : 303,
+                                  "beginLine" : 313,
                                   "beginColumn" : 15,
-                                  "endLine" : 303,
+                                  "endLine" : 313,
                                   "endColumn" : 19,
-                                  "offset" : 14664,
+                                  "offset" : 15264,
                                   "length" : 4
                                 }
                               },
@@ -12064,11 +13272,11 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                 },
-                                "beginLine" : 303,
+                                "beginLine" : 313,
                                 "beginColumn" : 20,
-                                "endLine" : 303,
+                                "endLine" : 313,
                                 "endColumn" : 27,
-                                "offset" : 14669,
+                                "offset" : 15269,
                                 "length" : 7
                               }
                             }
@@ -12086,11 +13294,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                               },
-                              "beginLine" : 303,
+                              "beginLine" : 313,
                               "beginColumn" : 15,
-                              "endLine" : 303,
+                              "endLine" : 313,
                               "endColumn" : 27,
-                              "offset" : 14664,
+                              "offset" : 15264,
                               "length" : 12
                             }
                           },
@@ -12116,11 +13324,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                               },
-                              "beginLine" : 303,
+                              "beginLine" : 313,
                               "beginColumn" : 31,
-                              "endLine" : 303,
+                              "endLine" : 313,
                               "endColumn" : 41,
-                              "offset" : 14680,
+                              "offset" : 15280,
                               "length" : 10
                             }
                           }
@@ -12136,11 +13344,11 @@
                               "type" : "Some",
                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                             },
-                            "beginLine" : 303,
+                            "beginLine" : 313,
                             "beginColumn" : 15,
-                            "endLine" : 303,
+                            "endLine" : 313,
                             "endColumn" : 41,
-                            "offset" : 14664,
+                            "offset" : 15264,
                             "length" : 26
                           }
                         },
@@ -12165,11 +13373,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                           },
-                          "beginLine" : 302,
+                          "beginLine" : 312,
                           "beginColumn" : 15,
-                          "endLine" : 303,
+                          "endLine" : 313,
                           "endColumn" : 41,
-                          "offset" : 14622,
+                          "offset" : 15222,
                           "length" : 68
                         }
                       },
@@ -12206,11 +13414,11 @@
                                     "type" : "Some",
                                     "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                   },
-                                  "beginLine" : 304,
+                                  "beginLine" : 314,
                                   "beginColumn" : 15,
-                                  "endLine" : 304,
+                                  "endLine" : 314,
                                   "endColumn" : 18,
-                                  "offset" : 14708,
+                                  "offset" : 15308,
                                   "length" : 3
                                 }
                               }
@@ -12226,11 +13434,11 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                 },
-                                "beginLine" : 304,
+                                "beginLine" : 314,
                                 "beginColumn" : 15,
-                                "endLine" : 304,
+                                "endLine" : 314,
                                 "endColumn" : 18,
-                                "offset" : 14708,
+                                "offset" : 15308,
                                 "length" : 3
                               }
                             },
@@ -12256,11 +13464,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                               },
-                              "beginLine" : 304,
+                              "beginLine" : 314,
                               "beginColumn" : 19,
-                              "endLine" : 304,
+                              "endLine" : 314,
                               "endColumn" : 26,
-                              "offset" : 14712,
+                              "offset" : 15312,
                               "length" : 7
                             }
                           }
@@ -12278,11 +13486,11 @@
                               "type" : "Some",
                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                             },
-                            "beginLine" : 304,
+                            "beginLine" : 314,
                             "beginColumn" : 15,
-                            "endLine" : 304,
+                            "endLine" : 314,
                             "endColumn" : 26,
-                            "offset" : 14708,
+                            "offset" : 15308,
                             "length" : 11
                           }
                         },
@@ -12314,11 +13522,11 @@
                                     "type" : "Some",
                                     "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                   },
-                                  "beginLine" : 304,
+                                  "beginLine" : 314,
                                   "beginColumn" : 30,
-                                  "endLine" : 304,
+                                  "endLine" : 314,
                                   "endColumn" : 34,
-                                  "offset" : 14723,
+                                  "offset" : 15323,
                                   "length" : 4
                                 }
                               }
@@ -12334,11 +13542,11 @@
                                   "type" : "Some",
                                   "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                                 },
-                                "beginLine" : 304,
+                                "beginLine" : 314,
                                 "beginColumn" : 30,
-                                "endLine" : 304,
+                                "endLine" : 314,
                                 "endColumn" : 34,
-                                "offset" : 14723,
+                                "offset" : 15323,
                                 "length" : 4
                               }
                             },
@@ -12364,11 +13572,11 @@
                                 "type" : "Some",
                                 "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                               },
-                              "beginLine" : 304,
+                              "beginLine" : 314,
                               "beginColumn" : 35,
-                              "endLine" : 304,
+                              "endLine" : 314,
                               "endColumn" : 42,
-                              "offset" : 14728,
+                              "offset" : 15328,
                               "length" : 7
                             }
                           }
@@ -12386,11 +13594,11 @@
                               "type" : "Some",
                               "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                             },
-                            "beginLine" : 304,
+                            "beginLine" : 314,
                             "beginColumn" : 30,
-                            "endLine" : 304,
+                            "endLine" : 314,
                             "endColumn" : 42,
-                            "offset" : 14723,
+                            "offset" : 15323,
                             "length" : 12
                           }
                         },
@@ -12412,11 +13620,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                           },
-                          "beginLine" : 304,
+                          "beginLine" : 314,
                           "beginColumn" : 15,
-                          "endLine" : 304,
+                          "endLine" : 314,
                           "endColumn" : 42,
-                          "offset" : 14708,
+                          "offset" : 15308,
                           "length" : 27
                         }
                       },
@@ -12441,11 +13649,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                         },
-                        "beginLine" : 302,
+                        "beginLine" : 312,
                         "beginColumn" : 15,
-                        "endLine" : 304,
+                        "endLine" : 314,
                         "endColumn" : 42,
-                        "offset" : 14622,
+                        "offset" : 15222,
                         "length" : 113
                       }
                     },
@@ -12468,11 +13676,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
                     },
-                    "beginLine" : 301,
+                    "beginLine" : 311,
                     "beginColumn" : 13,
-                    "endLine" : 304,
+                    "endLine" : 314,
                     "endColumn" : 44,
-                    "offset" : 14555,
+                    "offset" : 15155,
                     "length" : 182
                   }
                 }

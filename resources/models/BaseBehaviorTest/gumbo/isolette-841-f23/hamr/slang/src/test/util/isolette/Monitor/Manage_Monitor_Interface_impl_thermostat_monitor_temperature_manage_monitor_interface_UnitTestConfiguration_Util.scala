@@ -121,7 +121,7 @@ object Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monit
   extends UnitTestConfigurationBatch with Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container])
   }
 }
 

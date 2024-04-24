@@ -147,7 +147,7 @@ public
 
 			integration
 				assume currentTempRange:
-					(currentTemp.degrees >= f32"-70.0") & (currentTemp.degrees <= f32"180.0");
+					(currentTemp.degrees >= f32"-128.6") & (currentTemp.degrees <= f32"134.0");
 			
 			initialize
 				modifies currentSetPoint, currentFanState, latestTemp;
@@ -158,12 +158,22 @@ public
 					currentFanState == CoolingFan::FanCmd.Off;
 				
 				guarantee defaultLatestTemp:
-					latestTemp.degrees == f32"75.0";
+					latestTemp.degrees == f32"72.0";
 					
 					
 			compute  -- behaviors for COMPUTE Entrypoint
 				modifies currentSetPoint, currentFanState, latestTemp;
 			
+        		assume
+        			a1 "If the previously received currentTemp was less than the previously
+        	   		|received setPoint then the last fan command must have been Off":
+        	  		((latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan::FanCmd.Off));
+
+				assume
+					a2 "If the previously received currentTemp was more than the previously
+        			   |received setPoint then the last fan command must have been On":
+              		((latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan::FanCmd.On));
+              			
 				guarantee  TC_Req_01 "If the current temperature is less than the set point, then the fan state shall be Off.":
 					(latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan::FanCmd.Off);
 

@@ -38,7 +38,7 @@ import tc.RandomLib
 }
 
 // Profile with generators for state variables and incoming ports
-@msig trait OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_PS_Trait extends Profile {
+@msig trait OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_PS_Trait extends OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P_Trait {
   def api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
 }
 

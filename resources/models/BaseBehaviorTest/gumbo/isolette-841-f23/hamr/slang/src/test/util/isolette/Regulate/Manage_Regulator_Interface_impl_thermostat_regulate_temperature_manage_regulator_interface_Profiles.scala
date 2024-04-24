@@ -47,7 +47,7 @@ import isolette.RandomLib
 }
 
 // Profile with generators for state variables and incoming ports
-@msig trait Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile_PS_Trait extends Profile {
+@msig trait Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile_PS_Trait extends Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Profile_P_Trait {
   def api_current_tempWstatus: RandomLib // random lib for generating Isolette_Data_Model.TempWstatus_impl
   def api_lower_desired_tempWstatus: RandomLib // random lib for generating Isolette_Data_Model.TempWstatus_impl
   def api_regulator_mode: RandomLib // random lib for generating Isolette_Data_Model.Regulator_Mode

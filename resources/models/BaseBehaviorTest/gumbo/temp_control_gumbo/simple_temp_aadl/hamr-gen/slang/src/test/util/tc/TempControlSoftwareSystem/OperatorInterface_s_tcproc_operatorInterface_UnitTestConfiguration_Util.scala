@@ -90,6 +90,6 @@ object OperatorInterface_s_tcproc_operatorInterface_UnitTestConfiguration_Util {
   extends UnitTestConfigurationBatch with OperatorInterface_s_tcproc_operatorInterface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[OperatorInterface_s_tcproc_operatorInterface_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[OperatorInterface_s_tcproc_operatorInterface_PreState_Container])
   }
 }

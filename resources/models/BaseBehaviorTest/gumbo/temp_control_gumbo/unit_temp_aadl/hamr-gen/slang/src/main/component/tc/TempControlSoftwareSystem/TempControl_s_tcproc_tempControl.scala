@@ -89,6 +89,14 @@ object TempControl_s_tcproc_tempControl {
         // assume AADL_Requirement
         //   All outgoing event ports must be empty
         api.fanCmd.isEmpty,
+        // assume a1
+        //   If the previously received currentTemp was less than the previously
+        //   received setPoint then the last fan command must have been Off
+        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        // assume a2
+        //   If the previously received currentTemp was more than the previously
+        //   received setPoint then the last fan command must have been On
+        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On),
         // assume Test
         //   Just testing assume+guarantee along with handlers
         3 + 2 == 5
@@ -159,6 +167,14 @@ object TempControl_s_tcproc_tempControl {
         // assume AADL_Requirement
         //   All outgoing event ports must be empty
         api.fanCmd.isEmpty,
+        // assume a1
+        //   If the previously received currentTemp was less than the previously
+        //   received setPoint then the last fan command must have been Off
+        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        // assume a2
+        //   If the previously received currentTemp was more than the previously
+        //   received setPoint then the last fan command must have been On
+        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On),
         // assume Test
         //   Just testing assume+guarantee along with handlers
         3 + 2 == 5
@@ -195,7 +211,7 @@ object TempControl_s_tcproc_tempControl {
           (currentFanState == In(currentFanState)) ->: api.fanCmd.isEmpty &&
           (In(currentFanState) != currentFanState) ->: api.fanCmd.nonEmpty,
         // guarantees setPointChanged
-        currentSetPoint == value,
+        currentSetPoint == api.setPoint.get,
         // guarantees latestTempNotModified
         latestTemp == In(latestTemp)
         // END COMPUTE ENSURES setPoint
@@ -223,6 +239,14 @@ object TempControl_s_tcproc_tempControl {
         // assume AADL_Requirement
         //   All outgoing event ports must be empty
         api.fanCmd.isEmpty,
+        // assume a1
+        //   If the previously received currentTemp was less than the previously
+        //   received setPoint then the last fan command must have been Off
+        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        // assume a2
+        //   If the previously received currentTemp was more than the previously
+        //   received setPoint then the last fan command must have been On
+        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On),
         // assume Test
         //   Just testing assume+guarantee along with handlers
         3 + 2 == 5

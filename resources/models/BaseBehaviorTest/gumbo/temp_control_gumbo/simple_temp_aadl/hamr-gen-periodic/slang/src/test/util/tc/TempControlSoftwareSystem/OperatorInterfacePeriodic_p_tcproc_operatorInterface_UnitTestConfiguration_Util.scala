@@ -89,6 +89,6 @@ object OperatorInterfacePeriodic_p_tcproc_operatorInterface_UnitTestConfiguratio
   extends UnitTestConfigurationBatch with OperatorInterfacePeriodic_p_tcproc_operatorInterface_GumboX_TestHarness {
 
   override def test(c: Container): GumboXResult.Type = {
-    return testComputeCBV(c.asInstanceOf[OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P])
+    return testComputeCBV(c.asInstanceOf[OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container])
   }
 }
