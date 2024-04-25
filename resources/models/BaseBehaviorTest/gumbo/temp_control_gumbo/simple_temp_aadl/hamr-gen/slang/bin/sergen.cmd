@@ -31,12 +31,12 @@ val files: ISZ[String] = ISZ("../src/main/data/tc/TempSensor/Temperature_i.scala
                              "../src/main/data/tc/Base_Types.scala",
                              "../src/main/component/tc/GUMBO_Definitions/GUMBO__Library.scala",
                              "../src/main/component/tc/TempSensor/GUMBO__Library.scala",
-                             "../src/main/util/tc/TempSensor/TempSensor_s_tcproc_tempSensor_Containers.scala",
-                             "../src/main/util/tc/CoolingFan/Fan_s_tcproc_fan_Containers.scala",
-                             "../src/main/util/tc/TempControlSoftwareSystem/TempControl_s_tcproc_tempControl_Containers.scala",
-                             "../src/main/util/tc/TempControlSoftwareSystem/OperatorInterface_s_tcproc_operatorInterface_Containers.scala",
+                             "../src/main/data/tc/TempSensor/TempSensor_s_tcproc_tempSensor_Containers.scala",
+                             "../src/main/data/tc/CoolingFan/Fan_s_tcproc_fan_Containers.scala",
+                             "../src/main/data/tc/TempControlSoftwareSystem/TempControl_s_tcproc_tempControl_Containers.scala",
+                             "../src/main/data/tc/TempControlSoftwareSystem/OperatorInterface_s_tcproc_operatorInterface_Containers.scala",
                              "../src/main/util/tc/runtimemonitor/ObservationKind.scala",
-                             "../src/main/util/tc/util/Container.scala",
+                             "../src/main/data/tc/util/Container.scala",
                              "../src/main/art/art/DataContent.scala",
                              "../src/main/data/tc/Aux_Types.scala")
 

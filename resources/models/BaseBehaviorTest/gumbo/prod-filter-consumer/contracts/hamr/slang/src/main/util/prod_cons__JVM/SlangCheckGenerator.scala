@@ -675,44 +675,6 @@ Aux_Types.scala
   }
 }
 
-@record class Gen_ProdConsFlowsContainer_i(param: RandomLibI) extends MJen[ProdConsFlows.Container_i] {
-  override def generate(f: ProdConsFlows.Container_i => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.nextProdConsFlowsContainer_i())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
-@record class Gen_ProdConsFlowsContainer_i_Payload(param: RandomLibI) extends MJen[ProdConsFlows.Container_i_Payload] {
-  override def generate(f: ProdConsFlows.Container_i_Payload => Jen.Action): Jen.Action = {
-    var continue = Jen.Continue
-    while (T) {
-
-      continue = f(param.nextProdConsFlowsContainer_i_Payload())
-
-      if (!continue) {
-        return Jen.End
-      }
-    }
-    return continue
-  }
-
-  override def string: String = {
-    return s""
-  }
-}
-
 @record class Gen_ProdConsFlowsConsumer_p_consumer_PreState_Container(param: RandomLibI) extends MJen[ProdConsFlows.Consumer_p_consumer_PreState_Container] {
   override def generate(f: ProdConsFlows.Consumer_p_consumer_PreState_Container => Jen.Action): Jen.Action = {
     var continue = Jen.Continue
@@ -852,6 +814,44 @@ Aux_Types.scala
     while (T) {
 
       continue = f(param.nextProdConsFlowsConsumer_p_consumer_PostState_Container_PS())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_ProdConsFlowsContainer_i(param: RandomLibI) extends MJen[ProdConsFlows.Container_i] {
+  override def generate(f: ProdConsFlows.Container_i => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextProdConsFlowsContainer_i())
+
+      if (!continue) {
+        return Jen.End
+      }
+    }
+    return continue
+  }
+
+  override def string: String = {
+    return s""
+  }
+}
+
+@record class Gen_ProdConsFlowsContainer_i_Payload(param: RandomLibI) extends MJen[ProdConsFlows.Container_i_Payload] {
+  override def generate(f: ProdConsFlows.Container_i_Payload => Jen.Action): Jen.Action = {
+    var continue = Jen.Continue
+    while (T) {
+
+      continue = f(param.nextProdConsFlowsContainer_i_Payload())
 
       if (!continue) {
         return Jen.End
