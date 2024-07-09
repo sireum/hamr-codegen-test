@@ -1,0 +1,1 @@
+// Isolette_Data_Model.Failure_Flag_impl is a Record

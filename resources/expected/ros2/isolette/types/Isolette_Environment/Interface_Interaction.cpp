@@ -1,0 +1,1 @@
+// Isolette_Environment.Interface_Interaction is a Enum

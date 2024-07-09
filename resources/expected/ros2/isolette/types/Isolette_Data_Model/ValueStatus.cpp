@@ -1,0 +1,1 @@
+// Isolette_Data_Model.ValueStatus is a Enum

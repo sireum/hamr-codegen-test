@@ -1,0 +1,1 @@
+// Isolette_Data_Model.Monitor_Mode is a Enum

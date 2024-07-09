@@ -1,0 +1,1 @@
+// ICE_Types.Alarm_Signal is a Enum

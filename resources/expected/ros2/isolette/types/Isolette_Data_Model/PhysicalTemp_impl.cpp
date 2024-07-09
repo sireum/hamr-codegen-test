@@ -1,0 +1,1 @@
+// Isolette_Data_Model.PhysicalTemp_impl is a Record
