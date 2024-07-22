@@ -1,1 +1,0 @@
-// BuildingControl.FanAck is a Enum

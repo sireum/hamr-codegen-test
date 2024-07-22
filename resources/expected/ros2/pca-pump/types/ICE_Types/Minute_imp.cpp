@@ -1,1 +1,0 @@
-// ICE_Types.Minute_imp is a Record

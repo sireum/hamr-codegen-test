@@ -1,0 +1,166 @@
+#include "wrap_pca_imp_Instance_cpp_pkg/base_headers/wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base_src.hpp"
+
+//=================================================
+//  D O   N O T   E D I T   T H I S   F I L E
+//=================================================
+
+wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base() : Node("wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller")
+{
+    cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::Reentrant);
+    subscription_options_.callback_group = cb_group_;
+
+    // Setting up connections
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Infusion_Flow_Rate_publisher_1 = this->create_publisher<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Infusion_Flow_Rate",
+        10);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Infusion_Flow_Rate_publisher_2 = this->create_publisher<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Infusion_Flow_Rate",
+        10);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Infusion_Flow_Rate_publisher_3 = this->create_publisher<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_max_drug_watcher_Infusion_Flow_Rate",
+        10);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Infusion_Flow_Rate_publisher_4 = this->create_publisher<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_ice_thread_Infusion_Flow_Rate",
+        10);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Square_Bolus_Rate_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Square_Bolus_Rate",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Square_Bolus_Rate, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Patient_Bolus_Rate_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Patient_Bolus_Rate",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Patient_Bolus_Rate, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Basal_Rate_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Basal_Rate",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Basal_Rate, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_VTBI_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_VTBI",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_VTBI, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Door_Open_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Door_Open",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Door_Open, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_System_Status_publisher_1 = this->create_publisher<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_System_Status",
+        10);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_System_Status_publisher_2 = this->create_publisher<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_System_Status",
+        10);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Alarm_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Alarm",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Alarm, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Warning_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Warning",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Warning, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_CP_Bolus_Duration_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_CP_Bolus_Duration",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_CP_Bolus_Duration, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Begin_Infusion_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Begin_Infusion",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Begin_Infusion, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Begin_Priming_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Begin_Priming",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Begin_Priming, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_End_Priming_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_End_Priming",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_End_Priming, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Halt_Infusion_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Halt_Infusion",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Halt_Infusion, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_HW_Detected_Failure_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_HW_Detected_Failure",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_HW_Detected_Failure, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Stop_Pump_Completely_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Stop_Pump_Completely",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Stop_Pump_Completely, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Pump_At_KVO_Rate_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Pump_At_KVO_Rate",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Pump_At_KVO_Rate, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Patient_Request_Not_Too_Soon_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Patient_Request_Not_Too_Soon",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Patient_Request_Not_Too_Soon, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Pause_Infusion_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Pause_Infusion",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Pause_Infusion, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Resume_Infusion_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Resume_Infusion",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Resume_Infusion, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_CP_Clinician_Request_Bolus_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_CP_Clinician_Request_Bolus",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_CP_Clinician_Request_Bolus, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Near_Max_Drug_Per_Hour_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Near_Max_Drug_Per_Hour",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Near_Max_Drug_Per_Hour, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Over_Max_Drug_Per_Hour_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Over_Max_Drug_Per_Hour",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_Over_Max_Drug_Per_Hour, this, std::placeholders::_1), subscription_options_);
+
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_ICE_Stop_Pump_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+        "wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_ICE_Stop_Pump",
+        10,
+        std::bind(&wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::handle_ICE_Stop_Pump, this, std::placeholders::_1), subscription_options_);
+
+}
+
+//=================================================
+//  C o m m u n i c a t i o n
+//=================================================
+
+void wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::put_Infusion_Flow_Rate(example_interfaces::msg::Int32 msg)
+{
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Infusion_Flow_Rate_publisher_1->publish(msg);
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Infusion_Flow_Rate_publisher_2->publish(msg);
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Infusion_Flow_Rate_publisher_3->publish(msg);
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_Infusion_Flow_Rate_publisher_4->publish(msg);
+}
+
+void wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_base::put_System_Status(example_interfaces::msg::Int32 msg)
+{
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_System_Status_publisher_1->publish(msg);
+    wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_rate_controller_System_Status_publisher_2->publish(msg);
+}
+
