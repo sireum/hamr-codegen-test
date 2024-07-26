@@ -15,6 +15,10 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
   val verbose: B = F
 
+  // TODO: The ROS2 setup file is currently hardcoded!  Will need to change
+  val ros2SetupPath: String = "/opt/ros/humble/setup.bash"
+  val buildRosPkgs: B = F
+
   val root = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
   val resourceDir: Os.Path = root / "resources"
   val expectedRoot: Os.Path = resourceDir / "expected" / "ros2"
@@ -52,7 +56,9 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
   def testRos(testName: String, airFile: Os.Path, modelDir: Os.Path, config: CodeGenConfig, verbose: B): Unit = {
     val reporter = Reporter.create
 
-    val filter: Os.Path => B = _ => T
+    val destDir = getResultsDir(testName)
+
+    val filter: Os.Path => B = _ => true
 
     copy(testName, filter)
 
@@ -73,7 +79,6 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
     failureReasons = failureReasons ++ (for (e <- reporter.errors) yield e.text)
 
-    val destDir = getResultsDir(testName)
     destDir.removeAll()
     println(s"Result Dir: ${destDir.up.toUri}")
 
@@ -101,6 +106,21 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     } else {
       if (!compare(testName, filter)) {
         failureReasons = failureReasons :+ "Results did not match expected"
+      }
+    }
+
+    // Currently, the results directory is compared with the expected directory before running "colcon build".
+    // For an unknown reason, the compare() method halts and does not complete when run after building.
+    // Additionally, some details of the building process appear to be version dependent, so comparing before
+    // building is probably preferable - Clint
+    if (buildRosPkgs) {
+      val pkgName = ops.ISZOps(ops.StringOps(results.resources.apply(0).dstPath).split(c => c.toString == "/".toString)).drop(1).apply(0)
+
+      val buildResults = Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName} ${pkgName}_bringup"))
+        .apply(wd = resultsRoot / testName / "results").console.run()
+
+      if (!buildResults.out.toString.contains("Summary: 2 packages finished")) {
+        failureReasons = failureReasons :+ "Colcon build failed"
       }
     }
 
