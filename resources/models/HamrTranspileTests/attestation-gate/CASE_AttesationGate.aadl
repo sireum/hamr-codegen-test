@@ -2,7 +2,7 @@ package CASE_AttestationGate
 public
 	with CMASI;
 	renames CMASI::all;
-	renames AGREE_PLTL::all;
+	--renames AGREE_PLTL::all;
 	with CASE_Scheduling;
 	with CASE_Properties;
 	

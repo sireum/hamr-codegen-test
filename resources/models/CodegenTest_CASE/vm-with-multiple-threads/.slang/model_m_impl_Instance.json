@@ -3284,6 +3284,37 @@
               "type" : "Property",
               "name" : {
                 "type" : "Name",
+                "name" : ["m_impl_Instance", "virt_processor", "CASE_Properties::OS"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/vm-with-multiple-threads\/packages\/CASE_Properties.aadl"
+                    },
+                    "beginLine" : 27,
+                    "beginColumn" : 2,
+                    "endLine" : 28,
+                    "endColumn" : 22,
+                    "offset" : 1171,
+                    "length" : 97
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Linux"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
                 "name" : ["m_impl_Instance", "virt_processor", "Timing_Properties::Period"],
                 "pos" : {
                   "type" : "Some",

@@ -13271,6 +13271,37 @@
               ],
               "appliesTo" : [
               ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["RTS_i_Instance", "rts_processor", "CASE_Properties::OS"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/hardens-seL4-gumboTests\/packages\/CASE_Properties.aadl"
+                    },
+                    "beginLine" : 27,
+                    "beginColumn" : 2,
+                    "endLine" : 28,
+                    "endColumn" : 22,
+                    "offset" : 1171,
+                    "length" : 97
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "seL4"
+                }
+              ],
+              "appliesTo" : [
+              ]
             }
           ],
           "flows" : [
