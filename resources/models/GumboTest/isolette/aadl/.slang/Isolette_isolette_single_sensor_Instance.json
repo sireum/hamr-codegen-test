@@ -3756,26 +3756,48 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 194,
-                                    "beginColumn" : 5,
-                                    "endLine" : 195,
-                                    "endColumn" : 98,
-                                    "offset" : 10832,
-                                    "length" : 107
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 194,
+                                      "beginColumn" : 5,
+                                      "endLine" : 195,
+                                      "endColumn" : 98,
+                                      "offset" : 10832,
+                                      "length" : 107
+                                    }
                                   }
                                 }
                               }
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                  },
+                                  "beginLine" : 193,
+                                  "beginColumn" : 4,
+                                  "endLine" : 195,
+                                  "endColumn" : 98,
+                                  "offset" : 10817,
+                                  "length" : 122
+                                }
+                              }
+                            }
                           }
                         },
                         "integration" : {
@@ -4040,20 +4062,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 200,
-                                    "beginColumn" : 5,
-                                    "endLine" : 200,
-                                    "endColumn" : 111,
-                                    "offset" : 11101,
-                                    "length" : 106
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 200,
+                                      "beginColumn" : 5,
+                                      "endLine" : 200,
+                                      "endColumn" : 111,
+                                      "offset" : 11101,
+                                      "length" : 106
+                                    }
                                   }
                                 }
                               }
@@ -4558,20 +4583,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 205,
-                                    "beginColumn" : 6,
-                                    "endLine" : 208,
-                                    "endColumn" : 77,
-                                    "offset" : 11274,
-                                    "length" : 266
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 205,
+                                      "beginColumn" : 6,
+                                      "endLine" : 208,
+                                      "endColumn" : 77,
+                                      "offset" : 11274,
+                                      "length" : 266
+                                    }
                                   }
                                 }
                               },
@@ -5074,20 +5102,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 210,
-                                    "beginColumn" : 6,
-                                    "endLine" : 213,
-                                    "endColumn" : 75,
-                                    "offset" : 11550,
-                                    "length" : 265
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 210,
+                                      "beginColumn" : 6,
+                                      "endLine" : 213,
+                                      "endColumn" : 75,
+                                      "offset" : 11550,
+                                      "length" : 265
+                                    }
                                   }
                                 }
                               },
@@ -5590,20 +5621,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 215,
-                                    "beginColumn" : 6,
-                                    "endLine" : 218,
-                                    "endColumn" : 79,
-                                    "offset" : 11825,
-                                    "length" : 274
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 215,
+                                      "beginColumn" : 6,
+                                      "endLine" : 218,
+                                      "endColumn" : 79,
+                                      "offset" : 11825,
+                                      "length" : 274
+                                    }
                                   }
                                 }
                               },
@@ -6192,20 +6226,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 222,
-                                    "beginColumn" : 6,
-                                    "endLine" : 226,
-                                    "endColumn" : 74,
-                                    "offset" : 12153,
-                                    "length" : 343
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 222,
+                                      "beginColumn" : 6,
+                                      "endLine" : 226,
+                                      "endColumn" : 74,
+                                      "offset" : 12153,
+                                      "length" : 343
+                                    }
                                   }
                                 }
                               },
@@ -6262,20 +6299,23 @@
                                     }
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 228,
-                                    "beginColumn" : 6,
-                                    "endLine" : 231,
-                                    "endColumn" : 19,
-                                    "offset" : 12506,
-                                    "length" : 153
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 228,
+                                      "beginColumn" : 6,
+                                      "endLine" : 231,
+                                      "endColumn" : 19,
+                                      "offset" : 12506,
+                                      "length" : 153
+                                    }
                                   }
                                 }
                               },
@@ -7029,20 +7069,23 @@
                                     }
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 235,
-                                    "beginColumn" : 6,
-                                    "endLine" : 239,
-                                    "endColumn" : 41,
-                                    "offset" : 12718,
-                                    "length" : 406
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 235,
+                                      "beginColumn" : 6,
+                                      "endLine" : 239,
+                                      "endColumn" : 41,
+                                      "offset" : 12718,
+                                      "length" : 406
+                                    }
                                   }
                                 }
                               },
@@ -7886,20 +7929,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 241,
-                                    "beginColumn" : 6,
-                                    "endLine" : 245,
-                                    "endColumn" : 207,
-                                    "offset" : 13134,
-                                    "length" : 416
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 241,
+                                      "beginColumn" : 6,
+                                      "endLine" : 245,
+                                      "endColumn" : 207,
+                                      "offset" : 13134,
+                                      "length" : 416
+                                    }
                                   }
                                 }
                               },
@@ -8631,20 +8677,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 249,
-                                    "beginColumn" : 6,
-                                    "endLine" : 253,
-                                    "endColumn" : 137,
-                                    "offset" : 13598,
-                                    "length" : 273
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 249,
+                                      "beginColumn" : 6,
+                                      "endLine" : 253,
+                                      "endColumn" : 137,
+                                      "offset" : 13598,
+                                      "length" : 273
+                                    }
                                   }
                                 }
                               },
@@ -8701,20 +8750,23 @@
                                     }
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 255,
-                                    "beginColumn" : 6,
-                                    "endLine" : 260,
-                                    "endColumn" : 19,
-                                    "offset" : 13883,
-                                    "length" : 278
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 255,
+                                      "beginColumn" : 6,
+                                      "endLine" : 260,
+                                      "endColumn" : 19,
+                                      "offset" : 13883,
+                                      "length" : 278
+                                    }
                                   }
                                 }
                               }
@@ -8722,7 +8774,45 @@
                             "handlers" : [
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                  },
+                                  "beginLine" : 198,
+                                  "beginColumn" : 4,
+                                  "endLine" : 260,
+                                  "endColumn" : 19,
+                                  "offset" : 11030,
+                                  "length" : 3131
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                              },
+                              "beginLine" : 189,
+                              "beginColumn" : 4,
+                              "endLine" : 260,
+                              "endColumn" : 19,
+                              "offset" : 10640,
+                              "length" : 3521
+                            }
                           }
                         }
                       }
@@ -9553,20 +9643,23 @@
                             "type" : "GclStateVar",
                             "name" : "lastCmd",
                             "classifier" : "Isolette_Data_Model::On_Off",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                },
-                                "beginLine" : 432,
-                                "beginColumn" : 5,
-                                "endLine" : 432,
-                                "endColumn" : 42,
-                                "offset" : 22533,
-                                "length" : 37
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                  },
+                                  "beginLine" : 432,
+                                  "beginColumn" : 5,
+                                  "endLine" : 432,
+                                  "endColumn" : 42,
+                                  "offset" : 22533,
+                                  "length" : 37
+                                }
                               }
                             }
                           }
@@ -9834,20 +9927,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 436,
-                                    "beginColumn" : 5,
-                                    "endLine" : 437,
-                                    "endColumn" : 62,
-                                    "offset" : 22686,
-                                    "length" : 71
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 436,
+                                      "beginColumn" : 5,
+                                      "endLine" : 437,
+                                      "endColumn" : 62,
+                                      "offset" : 22686,
+                                      "length" : 71
+                                    }
                                   }
                                 }
                               },
@@ -10104,26 +10200,48 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 438,
-                                    "beginColumn" : 5,
-                                    "endLine" : 440,
-                                    "endColumn" : 54,
-                                    "offset" : 22762,
-                                    "length" : 154
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 438,
+                                      "beginColumn" : 5,
+                                      "endLine" : 440,
+                                      "endColumn" : 54,
+                                      "offset" : 22762,
+                                      "length" : 154
+                                    }
                                   }
                                 }
                               }
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                  },
+                                  "beginLine" : 435,
+                                  "beginColumn" : 4,
+                                  "endLine" : 440,
+                                  "endColumn" : 54,
+                                  "offset" : 22671,
+                                  "length" : 245
+                                }
+                              }
+                            }
                           }
                         },
                         "integration" : {
@@ -10388,20 +10506,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 445,
-                                    "beginColumn" : 5,
-                                    "endLine" : 445,
-                                    "endColumn" : 86,
-                                    "offset" : 23096,
-                                    "length" : 81
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 445,
+                                      "beginColumn" : 5,
+                                      "endLine" : 445,
+                                      "endColumn" : 86,
+                                      "offset" : 23096,
+                                      "length" : 81
+                                    }
                                   }
                                 }
                               },
@@ -10546,20 +10667,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 448,
-                                    "beginColumn" : 5,
-                                    "endLine" : 449,
-                                    "endColumn" : 30,
-                                    "offset" : 23281,
-                                    "length" : 90
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 448,
+                                      "beginColumn" : 5,
+                                      "endLine" : 449,
+                                      "endColumn" : 30,
+                                      "offset" : 23281,
+                                      "length" : 90
+                                    }
                                   }
                                 }
                               }
@@ -11064,20 +11188,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 453,
-                                    "beginColumn" : 6,
-                                    "endLine" : 456,
-                                    "endColumn" : 65,
-                                    "offset" : 23395,
-                                    "length" : 250
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 453,
+                                      "beginColumn" : 6,
+                                      "endLine" : 456,
+                                      "endColumn" : 65,
+                                      "offset" : 23395,
+                                      "length" : 250
+                                    }
                                   }
                                 }
                               },
@@ -11858,20 +11985,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 458,
-                                    "beginColumn" : 6,
-                                    "endLine" : 462,
-                                    "endColumn" : 65,
-                                    "offset" : 23655,
-                                    "length" : 389
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 458,
+                                      "beginColumn" : 6,
+                                      "endLine" : 462,
+                                      "endColumn" : 65,
+                                      "offset" : 23655,
+                                      "length" : 389
+                                    }
                                   }
                                 }
                               },
@@ -12652,20 +12782,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 464,
-                                    "beginColumn" : 6,
-                                    "endLine" : 468,
-                                    "endColumn" : 65,
-                                    "offset" : 24054,
-                                    "length" : 393
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 464,
+                                      "beginColumn" : 6,
+                                      "endLine" : 468,
+                                      "endColumn" : 65,
+                                      "offset" : 24054,
+                                      "length" : 393
+                                    }
                                   }
                                 }
                               },
@@ -13634,20 +13767,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 470,
-                                    "beginColumn" : 6,
-                                    "endLine" : 477,
-                                    "endColumn" : 45,
-                                    "offset" : 24457,
-                                    "length" : 537
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 470,
+                                      "beginColumn" : 6,
+                                      "endLine" : 477,
+                                      "endColumn" : 45,
+                                      "offset" : 24457,
+                                      "length" : 537
+                                    }
                                   }
                                 }
                               },
@@ -14150,20 +14286,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 479,
-                                    "beginColumn" : 6,
-                                    "endLine" : 482,
-                                    "endColumn" : 65,
-                                    "offset" : 25004,
-                                    "length" : 253
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 479,
+                                      "beginColumn" : 6,
+                                      "endLine" : 482,
+                                      "endColumn" : 65,
+                                      "offset" : 25004,
+                                      "length" : 253
+                                    }
                                   }
                                 }
                               }
@@ -14171,7 +14310,45 @@
                             "handlers" : [
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                  },
+                                  "beginLine" : 443,
+                                  "beginColumn" : 4,
+                                  "endLine" : 482,
+                                  "endColumn" : 65,
+                                  "offset" : 23013,
+                                  "length" : 2244
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                              },
+                              "beginLine" : 431,
+                              "beginColumn" : 4,
+                              "endLine" : 482,
+                              "endColumn" : 65,
+                              "offset" : 22523,
+                              "length" : 2734
+                            }
                           }
                         }
                       }
@@ -14821,20 +14998,23 @@
                             "type" : "GclStateVar",
                             "name" : "lastRegulatorMode",
                             "classifier" : "Isolette_Data_Model::Regulator_Mode",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                },
-                                "beginLine" : 307,
-                                "beginColumn" : 5,
-                                "endLine" : 307,
-                                "endColumn" : 60,
-                                "offset" : 16070,
-                                "length" : 55
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                  },
+                                  "beginLine" : 307,
+                                  "beginColumn" : 5,
+                                  "endLine" : 307,
+                                  "endColumn" : 60,
+                                  "offset" : 16070,
+                                  "length" : 55
+                                }
                               }
                             }
                           }
@@ -15103,26 +15283,48 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 315,
-                                    "beginColumn" : 5,
-                                    "endLine" : 316,
-                                    "endColumn" : 80,
-                                    "offset" : 16521,
-                                    "length" : 143
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 315,
+                                      "beginColumn" : 5,
+                                      "endLine" : 316,
+                                      "endColumn" : 80,
+                                      "offset" : 16521,
+                                      "length" : 143
+                                    }
                                   }
                                 }
                               }
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                  },
+                                  "beginLine" : 314,
+                                  "beginColumn" : 4,
+                                  "endLine" : 316,
+                                  "endColumn" : 80,
+                                  "offset" : 16506,
+                                  "length" : 158
+                                }
+                              }
+                            }
                           }
                         },
                         "integration" : {
@@ -16561,20 +16763,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 324,
-                                    "beginColumn" : 6,
-                                    "endLine" : 334,
-                                    "endColumn" : 89,
-                                    "offset" : 16861,
-                                    "length" : 776
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 324,
+                                      "beginColumn" : 6,
+                                      "endLine" : 334,
+                                      "endColumn" : 89,
+                                      "offset" : 16861,
+                                      "length" : 776
+                                    }
                                   }
                                 }
                               },
@@ -18002,20 +18207,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 336,
-                                    "beginColumn" : 6,
-                                    "endLine" : 349,
-                                    "endColumn" : 89,
-                                    "offset" : 17647,
-                                    "length" : 870
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 336,
+                                      "beginColumn" : 6,
+                                      "endLine" : 349,
+                                      "endColumn" : 89,
+                                      "offset" : 17647,
+                                      "length" : 870
+                                    }
                                   }
                                 }
                               },
@@ -19408,20 +19616,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 351,
-                                    "beginColumn" : 6,
-                                    "endLine" : 362,
-                                    "endColumn" : 89,
-                                    "offset" : 18541,
-                                    "length" : 773
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 351,
+                                      "beginColumn" : 6,
+                                      "endLine" : 362,
+                                      "endColumn" : 89,
+                                      "offset" : 18541,
+                                      "length" : 773
+                                    }
                                   }
                                 }
                               },
@@ -20814,20 +21025,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 364,
-                                    "beginColumn" : 6,
-                                    "endLine" : 375,
-                                    "endColumn" : 89,
-                                    "offset" : 19324,
-                                    "length" : 809
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 364,
+                                      "beginColumn" : 6,
+                                      "endLine" : 375,
+                                      "endColumn" : 89,
+                                      "offset" : 19324,
+                                      "length" : 809
+                                    }
                                   }
                                 }
                               },
@@ -21608,20 +21822,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
-                                    },
-                                    "beginLine" : 377,
-                                    "beginColumn" : 6,
-                                    "endLine" : 382,
-                                    "endColumn" : 88,
-                                    "offset" : 20143,
-                                    "length" : 525
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                      },
+                                      "beginLine" : 377,
+                                      "beginColumn" : 6,
+                                      "endLine" : 382,
+                                      "endColumn" : 88,
+                                      "offset" : 20143,
+                                      "length" : 525
+                                    }
                                   }
                                 }
                               }
@@ -21629,7 +21846,45 @@
                             "handlers" : [
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                                  },
+                                  "beginLine" : 321,
+                                  "beginColumn" : 4,
+                                  "endLine" : 382,
+                                  "endColumn" : 88,
+                                  "offset" : 16834,
+                                  "length" : 3834
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Regulate.aadl"
+                              },
+                              "beginLine" : 306,
+                              "beginColumn" : 4,
+                              "endLine" : 382,
+                              "endColumn" : 88,
+                              "offset" : 16060,
+                              "length" : 4608
+                            }
                           }
                         }
                       }
@@ -26116,20 +26371,23 @@
                             "type" : "GclStateVar",
                             "name" : "lastCmd",
                             "classifier" : "Isolette_Data_Model::On_Off",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                },
-                                "beginLine" : 130,
-                                "beginColumn" : 5,
-                                "endLine" : 130,
-                                "endColumn" : 42,
-                                "offset" : 7000,
-                                "length" : 37
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 130,
+                                  "beginColumn" : 5,
+                                  "endLine" : 130,
+                                  "endColumn" : 42,
+                                  "offset" : 7000,
+                                  "length" : 37
+                                }
                               }
                             }
                           }
@@ -26703,26 +26961,48 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 142,
-                                    "beginColumn" : 7,
-                                    "endLine" : 143,
-                                    "endColumn" : 94,
-                                    "offset" : 7549,
-                                    "length" : 103
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 142,
+                                      "beginColumn" : 7,
+                                      "endLine" : 143,
+                                      "endColumn" : 94,
+                                      "offset" : 7549,
+                                      "length" : 103
+                                    }
                                   }
                                 }
                               }
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 137,
+                                  "beginColumn" : 6,
+                                  "endLine" : 143,
+                                  "endColumn" : 94,
+                                  "offset" : 7269,
+                                  "length" : 383
+                                }
+                              }
+                            }
                           }
                         },
                         "integration" : {
@@ -27236,20 +27516,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 154,
-                                    "beginColumn" : 7,
-                                    "endLine" : 157,
-                                    "endColumn" : 76,
-                                    "offset" : 8016,
-                                    "length" : 336
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 154,
+                                      "beginColumn" : 7,
+                                      "endLine" : 157,
+                                      "endColumn" : 76,
+                                      "offset" : 8016,
+                                      "length" : 336
+                                    }
                                   }
                                 }
                               },
@@ -27752,20 +28035,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 159,
-                                    "beginColumn" : 7,
-                                    "endLine" : 162,
-                                    "endColumn" : 74,
-                                    "offset" : 8434,
-                                    "length" : 274
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 159,
+                                      "beginColumn" : 7,
+                                      "endLine" : 162,
+                                      "endColumn" : 74,
+                                      "offset" : 8434,
+                                      "length" : 274
+                                    }
                                   }
                                 }
                               },
@@ -28268,20 +28554,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 164,
-                                    "beginColumn" : 7,
-                                    "endLine" : 169,
-                                    "endColumn" : 78,
-                                    "offset" : 8719,
-                                    "length" : 358
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 164,
+                                      "beginColumn" : 7,
+                                      "endLine" : 169,
+                                      "endColumn" : 78,
+                                      "offset" : 8719,
+                                      "length" : 358
+                                    }
                                   }
                                 }
                               },
@@ -29035,20 +29324,23 @@
                                     }
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 172,
-                                    "beginColumn" : 7,
-                                    "endLine" : 177,
-                                    "endColumn" : 42,
-                                    "offset" : 9129,
-                                    "length" : 405
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 172,
+                                      "beginColumn" : 7,
+                                      "endLine" : 177,
+                                      "endColumn" : 42,
+                                      "offset" : 9129,
+                                      "length" : 405
+                                    }
                                   }
                                 }
                               },
@@ -29837,20 +30129,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 179,
-                                    "beginColumn" : 7,
-                                    "endLine" : 185,
-                                    "endColumn" : 43,
-                                    "offset" : 9545,
-                                    "length" : 412
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 179,
+                                      "beginColumn" : 7,
+                                      "endLine" : 185,
+                                      "endColumn" : 43,
+                                      "offset" : 9545,
+                                      "length" : 412
+                                    }
                                   }
                                 }
                               },
@@ -30582,20 +30877,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 189,
-                                    "beginColumn" : 7,
-                                    "endLine" : 196,
-                                    "endColumn" : 67,
-                                    "offset" : 10028,
-                                    "length" : 362
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 189,
+                                      "beginColumn" : 7,
+                                      "endLine" : 196,
+                                      "endColumn" : 67,
+                                      "offset" : 10028,
+                                      "length" : 362
+                                    }
                                   }
                                 }
                               },
@@ -30791,20 +31089,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 198,
-                                    "beginColumn" : 7,
-                                    "endLine" : 202,
-                                    "endColumn" : 40,
-                                    "offset" : 10401,
-                                    "length" : 185
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 198,
+                                      "beginColumn" : 7,
+                                      "endLine" : 202,
+                                      "endColumn" : 40,
+                                      "offset" : 10401,
+                                      "length" : 185
+                                    }
                                   }
                                 }
                               }
@@ -30812,7 +31113,45 @@
                             "handlers" : [
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 150,
+                                  "beginColumn" : 6,
+                                  "endLine" : 202,
+                                  "endColumn" : 40,
+                                  "offset" : 7949,
+                                  "length" : 2637
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                              },
+                              "beginLine" : 129,
+                              "beginColumn" : 4,
+                              "endLine" : 202,
+                              "endColumn" : 40,
+                              "offset" : 6990,
+                              "length" : 3596
+                            }
                           }
                         }
                       }
@@ -31347,20 +31686,23 @@
                             "type" : "GclStateVar",
                             "name" : "lastCmd",
                             "classifier" : "Isolette_Data_Model::On_Off",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                },
-                                "beginLine" : 315,
-                                "beginColumn" : 5,
-                                "endLine" : 315,
-                                "endColumn" : 42,
-                                "offset" : 16044,
-                                "length" : 37
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 315,
+                                  "beginColumn" : 5,
+                                  "endLine" : 315,
+                                  "endColumn" : 42,
+                                  "offset" : 16044,
+                                  "length" : 37
+                                }
                               }
                             }
                           }
@@ -31934,20 +32276,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 322,
-                                    "beginColumn" : 5,
-                                    "endLine" : 323,
-                                    "endColumn" : 83,
-                                    "offset" : 16284,
-                                    "length" : 92
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 322,
+                                      "beginColumn" : 5,
+                                      "endLine" : 323,
+                                      "endColumn" : 83,
+                                      "offset" : 16284,
+                                      "length" : 92
+                                    }
                                   }
                                 }
                               },
@@ -32203,26 +32548,48 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 324,
-                                    "beginColumn" : 5,
-                                    "endLine" : 325,
-                                    "endColumn" : 75,
-                                    "offset" : 16381,
-                                    "length" : 84
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 324,
+                                      "beginColumn" : 5,
+                                      "endLine" : 325,
+                                      "endColumn" : 75,
+                                      "offset" : 16381,
+                                      "length" : 84
+                                    }
                                   }
                                 }
                               }
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 319,
+                                  "beginColumn" : 4,
+                                  "endLine" : 325,
+                                  "endColumn" : 75,
+                                  "offset" : 16168,
+                                  "length" : 297
+                                }
+                              }
+                            }
                           }
                         },
                         "integration" : {
@@ -33044,20 +33411,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 332,
-                                    "beginColumn" : 5,
-                                    "endLine" : 335,
-                                    "endColumn" : 40,
-                                    "offset" : 16602,
-                                    "length" : 187
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 332,
+                                      "beginColumn" : 5,
+                                      "endLine" : 335,
+                                      "endColumn" : 40,
+                                      "offset" : 16602,
+                                      "length" : 187
+                                    }
                                   }
                                 }
                               },
@@ -33369,20 +33739,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 337,
-                                    "beginColumn" : 5,
-                                    "endLine" : 339,
-                                    "endColumn" : 61,
-                                    "offset" : 16798,
-                                    "length" : 192
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 337,
+                                      "beginColumn" : 5,
+                                      "endLine" : 339,
+                                      "endColumn" : 61,
+                                      "offset" : 16798,
+                                      "length" : 192
+                                    }
                                   }
                                 }
                               }
@@ -34165,20 +34538,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 343,
-                                    "beginColumn" : 6,
-                                    "endLine" : 348,
-                                    "endColumn" : 51,
-                                    "offset" : 17012,
-                                    "length" : 302
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 343,
+                                      "beginColumn" : 6,
+                                      "endLine" : 348,
+                                      "endColumn" : 51,
+                                      "offset" : 17012,
+                                      "length" : 302
+                                    }
                                   }
                                 }
                               },
@@ -35515,20 +35891,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 350,
-                                    "beginColumn" : 6,
-                                    "endLine" : 358,
-                                    "endColumn" : 51,
-                                    "offset" : 17324,
-                                    "length" : 551
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 350,
+                                      "beginColumn" : 6,
+                                      "endLine" : 358,
+                                      "endColumn" : 51,
+                                      "offset" : 17324,
+                                      "length" : 551
+                                    }
                                   }
                                 }
                               },
@@ -37351,20 +37730,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 360,
-                                    "beginColumn" : 6,
-                                    "endLine" : 374,
-                                    "endColumn" : 31,
-                                    "offset" : 17889,
-                                    "length" : 883
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 360,
+                                      "beginColumn" : 6,
+                                      "endLine" : 374,
+                                      "endColumn" : 31,
+                                      "offset" : 17889,
+                                      "length" : 883
+                                    }
                                   }
                                 }
                               },
@@ -38811,20 +39193,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 376,
-                                    "beginColumn" : 6,
-                                    "endLine" : 386,
-                                    "endColumn" : 51,
-                                    "offset" : 18786,
-                                    "length" : 654
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 376,
+                                      "beginColumn" : 6,
+                                      "endLine" : 386,
+                                      "endColumn" : 51,
+                                      "offset" : 18786,
+                                      "length" : 654
+                                    }
                                   }
                                 }
                               },
@@ -39605,20 +39990,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 388,
-                                    "beginColumn" : 6,
-                                    "endLine" : 393,
-                                    "endColumn" : 51,
-                                    "offset" : 19454,
-                                    "length" : 305
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 388,
+                                      "beginColumn" : 6,
+                                      "endLine" : 393,
+                                      "endColumn" : 51,
+                                      "offset" : 19454,
+                                      "length" : 305
+                                    }
                                   }
                                 }
                               }
@@ -39626,7 +40014,45 @@
                             "handlers" : [
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 330,
+                                  "beginColumn" : 4,
+                                  "endLine" : 393,
+                                  "endColumn" : 51,
+                                  "offset" : 16589,
+                                  "length" : 3170
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                              },
+                              "beginLine" : 314,
+                              "beginColumn" : 4,
+                              "endLine" : 393,
+                              "endColumn" : 51,
+                              "offset" : 16034,
+                              "length" : 3725
+                            }
                           }
                         }
                       }
@@ -40054,20 +40480,23 @@
                             "type" : "GclStateVar",
                             "name" : "lastMonitorMode",
                             "classifier" : "Isolette_Data_Model::Monitor_Mode",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                },
-                                "beginLine" : 239,
-                                "beginColumn" : 5,
-                                "endLine" : 239,
-                                "endColumn" : 56,
-                                "offset" : 12242,
-                                "length" : 51
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 239,
+                                  "beginColumn" : 5,
+                                  "endLine" : 239,
+                                  "endColumn" : 56,
+                                  "offset" : 12242,
+                                  "length" : 51
+                                }
                               }
                             }
                           }
@@ -40642,26 +41071,48 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 246,
-                                    "beginColumn" : 5,
-                                    "endLine" : 247,
-                                    "endColumn" : 74,
-                                    "offset" : 12496,
-                                    "length" : 162
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 246,
+                                      "beginColumn" : 5,
+                                      "endLine" : 247,
+                                      "endColumn" : 74,
+                                      "offset" : 12496,
+                                      "length" : 162
+                                    }
                                   }
                                 }
                               }
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 245,
+                                  "beginColumn" : 4,
+                                  "endLine" : 247,
+                                  "endColumn" : 74,
+                                  "offset" : 12481,
+                                  "length" : 177
+                                }
+                              }
+                            }
                           }
                         },
                         "integration" : {
@@ -41822,20 +42273,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 252,
-                                    "beginColumn" : 7,
-                                    "endLine" : 259,
-                                    "endColumn" : 82,
-                                    "offset" : 12753,
-                                    "length" : 605
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 252,
+                                      "beginColumn" : 7,
+                                      "endLine" : 259,
+                                      "endColumn" : 82,
+                                      "offset" : 12753,
+                                      "length" : 605
+                                    }
                                   }
                                 }
                               },
@@ -42950,20 +43404,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 261,
-                                    "beginColumn" : 7,
-                                    "endLine" : 269,
-                                    "endColumn" : 82,
-                                    "offset" : 13373,
-                                    "length" : 609
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 261,
+                                      "beginColumn" : 7,
+                                      "endLine" : 269,
+                                      "endColumn" : 82,
+                                      "offset" : 13373,
+                                      "length" : 609
+                                    }
                                   }
                                 }
                               },
@@ -43584,20 +44041,23 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
-                                    },
-                                    "beginLine" : 271,
-                                    "beginColumn" : 7,
-                                    "endLine" : 276,
-                                    "endColumn" : 123,
-                                    "offset" : 14000,
-                                    "length" : 418
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                      },
+                                      "beginLine" : 271,
+                                      "beginColumn" : 7,
+                                      "endLine" : 276,
+                                      "endColumn" : 123,
+                                      "offset" : 14000,
+                                      "length" : 418
+                                    }
                                   }
                                 }
                               }
@@ -43605,7 +44065,45 @@
                             "handlers" : [
                             ],
                             "flows" : [
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                                  },
+                                  "beginLine" : 250,
+                                  "beginColumn" : 5,
+                                  "endLine" : 276,
+                                  "endColumn" : 123,
+                                  "offset" : 12728,
+                                  "length" : 1690
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/isolette-gumbo-tests\/aadl\/packages\/Monitor.aadl"
+                              },
+                              "beginLine" : 238,
+                              "beginColumn" : 4,
+                              "endLine" : 276,
+                              "endColumn" : 123,
+                              "offset" : 12232,
+                              "length" : 2186
+                            }
                           }
                         }
                       }

@@ -45,16 +45,16 @@ lazy val PC_Sys_Impl_Instance = slangEmbeddedProject("PC_Sys_Impl_Instance", "."
 val scalaVer = "2.13.14"
 
 // versions.properties key: org.scalatest%%scalatest%%
-val scalaTestVersion = "3.2.18"
+val scalaTestVersion = "3.2.19"
 
 // versions.properties key: org.sireum%%scalac-plugin%
-// https://github.com/sireum/scalac-plugin/tree/4.20240520.607c43b
-val sireumScalacVersion = "4.20240520.607c43b"
+// https://github.com/sireum/scalac-plugin/tree/4.20240725.7f9e248
+val sireumScalacVersion = "4.20240725.7f9e248"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/43df0eee5c
-val kekinianVersion = "43df0eee5c"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/e0a27067d4
+val kekinianVersion = "e0a27067d4"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"

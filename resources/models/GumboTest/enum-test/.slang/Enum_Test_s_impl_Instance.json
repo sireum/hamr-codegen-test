@@ -333,20 +333,23 @@
                         "type" : "GclStateVar",
                         "name" : "currentSetPoint",
                         "classifier" : "Enum_Test::SetPoint.i",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/enum-test\/Enum_Test.aadl"
-                            },
-                            "beginLine" : 89,
-                            "beginColumn" : 5,
-                            "endLine" : 89,
-                            "endColumn" : 33,
-                            "offset" : 2462,
-                            "length" : 28
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/enum-test\/Enum_Test.aadl"
+                              },
+                              "beginLine" : 89,
+                              "beginColumn" : 5,
+                              "endLine" : 89,
+                              "endColumn" : 33,
+                              "offset" : 2462,
+                              "length" : 28
+                            }
                           }
                         }
                       }
@@ -888,26 +891,48 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/enum-test\/Enum_Test.aadl"
-                                },
-                                "beginLine" : 97,
-                                "beginColumn" : 5,
-                                "endLine" : 98,
-                                "endColumn" : 86,
-                                "offset" : 2767,
-                                "length" : 117
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/enum-test\/Enum_Test.aadl"
+                                  },
+                                  "beginLine" : 97,
+                                  "beginColumn" : 5,
+                                  "endLine" : 98,
+                                  "endColumn" : 86,
+                                  "offset" : 2767,
+                                  "length" : 117
+                                }
                               }
                             }
                           }
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/enum-test\/Enum_Test.aadl"
+                              },
+                              "beginLine" : 95,
+                              "beginColumn" : 4,
+                              "endLine" : 98,
+                              "endColumn" : 86,
+                              "offset" : 2722,
+                              "length" : 162
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -1313,20 +1338,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/enum-test\/Enum_Test.aadl"
-                                },
-                                "beginLine" : 91,
-                                "beginColumn" : 5,
-                                "endLine" : 92,
-                                "endColumn" : 73,
-                                "offset" : 2510,
-                                "length" : 103
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/enum-test\/Enum_Test.aadl"
+                                  },
+                                  "beginLine" : 91,
+                                  "beginColumn" : 5,
+                                  "endLine" : 92,
+                                  "endColumn" : 73,
+                                  "offset" : 2510,
+                                  "length" : 103
+                                }
                               }
                             }
                           },
@@ -1805,28 +1833,69 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/enum-test\/Enum_Test.aadl"
-                                },
-                                "beginLine" : 93,
-                                "beginColumn" : 5,
-                                "endLine" : 94,
-                                "endColumn" : 73,
-                                "offset" : 2618,
-                                "length" : 100
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/enum-test\/Enum_Test.aadl"
+                                  },
+                                  "beginLine" : 93,
+                                  "beginColumn" : 5,
+                                  "endLine" : 94,
+                                  "endColumn" : 73,
+                                  "offset" : 2618,
+                                  "length" : 100
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/enum-test\/Enum_Test.aadl"
+                              },
+                              "beginLine" : 90,
+                              "beginColumn" : 4,
+                              "endLine" : 94,
+                              "endColumn" : 73,
+                              "offset" : 2494,
+                              "length" : 224
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
                       "type" : "None"
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/enum-test\/Enum_Test.aadl"
+                          },
+                          "beginLine" : 88,
+                          "beginColumn" : 4,
+                          "endLine" : 98,
+                          "endColumn" : 86,
+                          "offset" : 2452,
+                          "length" : 432
+                        }
+                      }
                     }
                   }
                 }
@@ -2463,28 +2532,69 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/enum-test\/Enum_Test.aadl"
-                                },
-                                "beginLine" : 110,
-                                "beginColumn" : 5,
-                                "endLine" : 111,
-                                "endColumn" : 73,
-                                "offset" : 3116,
-                                "length" : 106
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/enum-test\/Enum_Test.aadl"
+                                  },
+                                  "beginLine" : 110,
+                                  "beginColumn" : 5,
+                                  "endLine" : 111,
+                                  "endColumn" : 73,
+                                  "offset" : 3116,
+                                  "length" : 106
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/enum-test\/Enum_Test.aadl"
+                              },
+                              "beginLine" : 109,
+                              "beginColumn" : 4,
+                              "endLine" : 111,
+                              "endColumn" : 73,
+                              "offset" : 3100,
+                              "length" : 122
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
                       "type" : "None"
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/enum-test\/Enum_Test.aadl"
+                          },
+                          "beginLine" : 109,
+                          "beginColumn" : 4,
+                          "endLine" : 111,
+                          "endColumn" : 73,
+                          "offset" : 3100,
+                          "length" : 122
+                        }
+                      }
                     }
                   }
                 }
@@ -6289,20 +6399,23 @@
                     }
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/enum-test\/Enum_Test.aadl"
-                    },
-                    "beginLine" : 32,
-                    "beginColumn" : 5,
-                    "endLine" : 36,
-                    "endColumn" : 13,
-                    "offset" : 999,
-                    "length" : 232
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/enum-test\/Enum_Test.aadl"
+                      },
+                      "beginLine" : 32,
+                      "beginColumn" : 5,
+                      "endLine" : 36,
+                      "endColumn" : 13,
+                      "offset" : 999,
+                      "length" : 232
+                    }
                   }
                 }
               }
@@ -6315,6 +6428,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/enum-test\/Enum_Test.aadl"
+                  },
+                  "beginLine" : 31,
+                  "beginColumn" : 4,
+                  "endLine" : 36,
+                  "endColumn" : 13,
+                  "offset" : 984,
+                  "length" : 247
+                }
+              }
             }
           }
         }
@@ -7933,20 +8065,23 @@
                         }
                       }
                     },
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/enum-test\/Enum_Test.aadl"
-                        },
-                        "beginLine" : 32,
-                        "beginColumn" : 5,
-                        "endLine" : 36,
-                        "endColumn" : 13,
-                        "offset" : 999,
-                        "length" : 232
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/enum-test\/Enum_Test.aadl"
+                          },
+                          "beginLine" : 32,
+                          "beginColumn" : 5,
+                          "endLine" : 36,
+                          "endColumn" : 13,
+                          "offset" : 999,
+                          "length" : 232
+                        }
                       }
                     }
                   }
@@ -7959,6 +8094,25 @@
                 },
                 "compute" : {
                   "type" : "None"
+                },
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/enum-test\/Enum_Test.aadl"
+                      },
+                      "beginLine" : 31,
+                      "beginColumn" : 4,
+                      "endLine" : 36,
+                      "endColumn" : 13,
+                      "offset" : 984,
+                      "length" : 247
+                    }
+                  }
                 }
               }
             }
@@ -9554,20 +9708,23 @@
                         }
                       }
                     },
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/enum-test\/Enum_Test.aadl"
-                        },
-                        "beginLine" : 32,
-                        "beginColumn" : 5,
-                        "endLine" : 36,
-                        "endColumn" : 13,
-                        "offset" : 999,
-                        "length" : 232
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/enum-test\/Enum_Test.aadl"
+                          },
+                          "beginLine" : 32,
+                          "beginColumn" : 5,
+                          "endLine" : 36,
+                          "endColumn" : 13,
+                          "offset" : 999,
+                          "length" : 232
+                        }
                       }
                     }
                   }
@@ -9580,6 +9737,25 @@
                 },
                 "compute" : {
                   "type" : "None"
+                },
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/enum-test\/Enum_Test.aadl"
+                      },
+                      "beginLine" : 31,
+                      "beginColumn" : 4,
+                      "endLine" : 36,
+                      "endColumn" : 13,
+                      "offset" : 984,
+                      "length" : 247
+                    }
+                  }
                 }
               }
             }
@@ -10280,20 +10456,23 @@
                     "type" : "None"
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/enum-test\/Enum_Test.aadl"
-                    },
-                    "beginLine" : 54,
-                    "beginColumn" : 5,
-                    "endLine" : 57,
-                    "endColumn" : 36,
-                    "offset" : 1772,
-                    "length" : 131
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/enum-test\/Enum_Test.aadl"
+                      },
+                      "beginLine" : 54,
+                      "beginColumn" : 5,
+                      "endLine" : 57,
+                      "endColumn" : 36,
+                      "offset" : 1772,
+                      "length" : 131
+                    }
                   }
                 }
               }
@@ -10306,6 +10485,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/enum-test\/Enum_Test.aadl"
+                  },
+                  "beginLine" : 53,
+                  "beginColumn" : 4,
+                  "endLine" : 57,
+                  "endColumn" : 36,
+                  "offset" : 1757,
+                  "length" : 146
+                }
+              }
             }
           }
         }

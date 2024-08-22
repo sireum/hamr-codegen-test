@@ -1025,26 +1025,48 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 107,
-                                "beginColumn" : 5,
-                                "endLine" : 113,
-                                "endColumn" : 28,
-                                "offset" : 2892,
-                                "length" : 424
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 107,
+                                  "beginColumn" : 5,
+                                  "endLine" : 113,
+                                  "endColumn" : 28,
+                                  "offset" : 2892,
+                                  "length" : 424
+                                }
                               }
                             }
                           }
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 106,
+                              "beginColumn" : 4,
+                              "endLine" : 113,
+                              "endColumn" : 28,
+                              "offset" : 2877,
+                              "length" : 439
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -1221,20 +1243,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 94,
-                                "beginColumn" : 5,
-                                "endLine" : 95,
-                                "endColumn" : 27,
-                                "offset" : 2444,
-                                "length" : 96
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 94,
+                                  "beginColumn" : 5,
+                                  "endLine" : 95,
+                                  "endColumn" : 27,
+                                  "offset" : 2444,
+                                  "length" : 96
+                                }
                               }
                             }
                           },
@@ -1407,20 +1432,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 97,
-                                "beginColumn" : 5,
-                                "endLine" : 98,
-                                "endColumn" : 32,
-                                "offset" : 2550,
-                                "length" : 99
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 97,
+                                  "beginColumn" : 5,
+                                  "endLine" : 98,
+                                  "endColumn" : 32,
+                                  "offset" : 2550,
+                                  "length" : 99
+                                }
                               }
                             }
                           },
@@ -1593,20 +1621,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 100,
-                                "beginColumn" : 5,
-                                "endLine" : 101,
-                                "endColumn" : 27,
-                                "offset" : 2660,
-                                "length" : 95
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 100,
+                                  "beginColumn" : 5,
+                                  "endLine" : 101,
+                                  "endColumn" : 27,
+                                  "offset" : 2660,
+                                  "length" : 95
+                                }
                               }
                             }
                           },
@@ -1779,24 +1810,46 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 103,
-                                "beginColumn" : 5,
-                                "endLine" : 104,
-                                "endColumn" : 33,
-                                "offset" : 2766,
-                                "length" : 101
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 103,
+                                  "beginColumn" : 5,
+                                  "endLine" : 104,
+                                  "endColumn" : 33,
+                                  "offset" : 2766,
+                                  "length" : 101
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 93,
+                              "beginColumn" : 4,
+                              "endLine" : 104,
+                              "endColumn" : 33,
+                              "offset" : 2428,
+                              "length" : 439
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
@@ -1972,20 +2025,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 117,
-                                "beginColumn" : 6,
-                                "endLine" : 119,
-                                "endColumn" : 41,
-                                "offset" : 3349,
-                                "length" : 157
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 117,
+                                  "beginColumn" : 6,
+                                  "endLine" : 119,
+                                  "endColumn" : 41,
+                                  "offset" : 3349,
+                                  "length" : 157
+                                }
                               }
                             }
                           },
@@ -2548,20 +2604,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 121,
-                                "beginColumn" : 6,
-                                "endLine" : 144,
-                                "endColumn" : 95,
-                                "offset" : 3519,
-                                "length" : 1444
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 121,
+                                  "beginColumn" : 6,
+                                  "endLine" : 144,
+                                  "endColumn" : 95,
+                                  "offset" : 3519,
+                                  "length" : 1444
+                                }
                               }
                             }
                           }
@@ -2569,7 +2628,45 @@
                         "handlers" : [
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 115,
+                              "beginColumn" : 4,
+                              "endLine" : 144,
+                              "endColumn" : 95,
+                              "offset" : 3325,
+                              "length" : 1638
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                          },
+                          "beginLine" : 93,
+                          "beginColumn" : 4,
+                          "endLine" : 144,
+                          "endColumn" : 95,
+                          "offset" : 2428,
+                          "length" : 2535
+                        }
                       }
                     }
                   }
@@ -3190,26 +3287,48 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 171,
-                                "beginColumn" : 5,
-                                "endLine" : 173,
-                                "endColumn" : 28,
-                                "offset" : 5772,
-                                "length" : 162
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 171,
+                                  "beginColumn" : 5,
+                                  "endLine" : 173,
+                                  "endColumn" : 28,
+                                  "offset" : 5772,
+                                  "length" : 162
+                                }
                               }
                             }
                           }
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 168,
+                              "beginColumn" : 4,
+                              "endLine" : 173,
+                              "endColumn" : 28,
+                              "offset" : 5558,
+                              "length" : 376
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -3386,20 +3505,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 156,
-                                "beginColumn" : 5,
-                                "endLine" : 157,
-                                "endColumn" : 27,
-                                "offset" : 5121,
-                                "length" : 96
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 156,
+                                  "beginColumn" : 5,
+                                  "endLine" : 157,
+                                  "endColumn" : 27,
+                                  "offset" : 5121,
+                                  "length" : 96
+                                }
                               }
                             }
                           },
@@ -3572,20 +3694,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 159,
-                                "beginColumn" : 5,
-                                "endLine" : 160,
-                                "endColumn" : 32,
-                                "offset" : 5227,
-                                "length" : 99
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 159,
+                                  "beginColumn" : 5,
+                                  "endLine" : 160,
+                                  "endColumn" : 32,
+                                  "offset" : 5227,
+                                  "length" : 99
+                                }
                               }
                             }
                           },
@@ -3758,20 +3883,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 162,
-                                "beginColumn" : 5,
-                                "endLine" : 163,
-                                "endColumn" : 27,
-                                "offset" : 5337,
-                                "length" : 95
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 162,
+                                  "beginColumn" : 5,
+                                  "endLine" : 163,
+                                  "endColumn" : 27,
+                                  "offset" : 5337,
+                                  "length" : 95
+                                }
                               }
                             }
                           },
@@ -3944,24 +4072,46 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 165,
-                                "beginColumn" : 5,
-                                "endLine" : 166,
-                                "endColumn" : 33,
-                                "offset" : 5443,
-                                "length" : 101
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 165,
+                                  "beginColumn" : 5,
+                                  "endLine" : 166,
+                                  "endColumn" : 33,
+                                  "offset" : 5443,
+                                  "length" : 101
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 155,
+                              "beginColumn" : 4,
+                              "endLine" : 166,
+                              "endColumn" : 33,
+                              "offset" : 5105,
+                              "length" : 439
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
@@ -4341,28 +4491,88 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                    },
-                                    "beginLine" : 178,
-                                    "beginColumn" : 6,
-                                    "endLine" : 180,
-                                    "endColumn" : 73,
-                                    "offset" : 6060,
-                                    "length" : 174
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                      },
+                                      "beginLine" : 178,
+                                      "beginColumn" : 6,
+                                      "endLine" : 180,
+                                      "endColumn" : 73,
+                                      "offset" : 6060,
+                                      "length" : 174
+                                    }
                                   }
                                 }
                               }
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 176,
+                                  "beginColumn" : 5,
+                                  "endLine" : 180,
+                                  "endColumn" : 73,
+                                  "offset" : 5956,
+                                  "length" : 278
+                                }
+                              }
+                            }
                           }
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 175,
+                              "beginColumn" : 4,
+                              "endLine" : 180,
+                              "endColumn" : 73,
+                              "offset" : 5944,
+                              "length" : 290
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                          },
+                          "beginLine" : 155,
+                          "beginColumn" : 4,
+                          "endLine" : 180,
+                          "endColumn" : 73,
+                          "offset" : 5105,
+                          "length" : 1129
+                        }
                       }
                     }
                   }
@@ -11927,20 +12137,23 @@
                     "type" : "None"
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                    },
-                    "beginLine" : 202,
-                    "beginColumn" : 5,
-                    "endLine" : 203,
-                    "endColumn" : 16,
-                    "offset" : 6644,
-                    "length" : 55
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                      },
+                      "beginLine" : 202,
+                      "beginColumn" : 5,
+                      "endLine" : 203,
+                      "endColumn" : 16,
+                      "offset" : 6644,
+                      "length" : 55
+                    }
                   }
                 }
               }
@@ -11953,6 +12166,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                  },
+                  "beginLine" : 201,
+                  "beginColumn" : 4,
+                  "endLine" : 203,
+                  "endColumn" : 16,
+                  "offset" : 6629,
+                  "length" : 70
+                }
+              }
             }
           }
         }

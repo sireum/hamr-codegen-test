@@ -333,20 +333,23 @@
                         "type" : "GclStateVar",
                         "name" : "currentSetPoint",
                         "classifier" : "Initialize_Entrypoint::SetPoint.i",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                            },
-                            "beginLine" : 82,
-                            "beginColumn" : 5,
-                            "endLine" : 82,
-                            "endColumn" : 33,
-                            "offset" : 2264,
-                            "length" : 28
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                              },
+                              "beginLine" : 82,
+                              "beginColumn" : 5,
+                              "endLine" : 82,
+                              "endColumn" : 33,
+                              "offset" : 2264,
+                              "length" : 28
+                            }
                           }
                         }
                       }
@@ -888,20 +891,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                                },
-                                "beginLine" : 90,
-                                "beginColumn" : 5,
-                                "endLine" : 91,
-                                "endColumn" : 86,
-                                "offset" : 2580,
-                                "length" : 117
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                                  },
+                                  "beginLine" : 90,
+                                  "beginColumn" : 5,
+                                  "endLine" : 91,
+                                  "endColumn" : 86,
+                                  "offset" : 2580,
+                                  "length" : 117
+                                }
                               }
                             }
                           },
@@ -14665,26 +14671,48 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                                },
-                                "beginLine" : 93,
-                                "beginColumn" : 5,
-                                "endLine" : 119,
-                                "endColumn" : 39,
-                                "offset" : 2703,
-                                "length" : 2050
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                                  },
+                                  "beginLine" : 93,
+                                  "beginColumn" : 5,
+                                  "endLine" : 119,
+                                  "endColumn" : 39,
+                                  "offset" : 2703,
+                                  "length" : 2050
+                                }
                               }
                             }
                           }
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                              },
+                              "beginLine" : 88,
+                              "beginColumn" : 5,
+                              "endLine" : 119,
+                              "endColumn" : 39,
+                              "offset" : 2535,
+                              "length" : 2218
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -15090,20 +15118,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                                },
-                                "beginLine" : 84,
-                                "beginColumn" : 7,
-                                "endLine" : 85,
-                                "endColumn" : 75,
-                                "offset" : 2316,
-                                "length" : 105
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                                  },
+                                  "beginLine" : 84,
+                                  "beginColumn" : 7,
+                                  "endLine" : 85,
+                                  "endColumn" : 75,
+                                  "offset" : 2316,
+                                  "length" : 105
+                                }
                               }
                             }
                           },
@@ -15582,28 +15613,69 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                                },
-                                "beginLine" : 86,
-                                "beginColumn" : 7,
-                                "endLine" : 87,
-                                "endColumn" : 75,
-                                "offset" : 2428,
-                                "length" : 102
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                                  },
+                                  "beginLine" : 86,
+                                  "beginColumn" : 7,
+                                  "endLine" : 87,
+                                  "endColumn" : 75,
+                                  "offset" : 2428,
+                                  "length" : 102
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                              },
+                              "beginLine" : 83,
+                              "beginColumn" : 6,
+                              "endLine" : 87,
+                              "endColumn" : 75,
+                              "offset" : 2298,
+                              "length" : 232
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
                       "type" : "None"
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                          },
+                          "beginLine" : 81,
+                          "beginColumn" : 4,
+                          "endLine" : 119,
+                          "endColumn" : 39,
+                          "offset" : 2254,
+                          "length" : 2499
+                        }
+                      }
                     }
                   }
                 }
@@ -16240,28 +16312,69 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                                },
-                                "beginLine" : 132,
-                                "beginColumn" : 7,
-                                "endLine" : 133,
-                                "endColumn" : 75,
-                                "offset" : 5013,
-                                "length" : 108
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                                  },
+                                  "beginLine" : 132,
+                                  "beginColumn" : 7,
+                                  "endLine" : 133,
+                                  "endColumn" : 75,
+                                  "offset" : 5013,
+                                  "length" : 108
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                              },
+                              "beginLine" : 131,
+                              "beginColumn" : 6,
+                              "endLine" : 133,
+                              "endColumn" : 75,
+                              "offset" : 4995,
+                              "length" : 126
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
                       "type" : "None"
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                          },
+                          "beginLine" : 131,
+                          "beginColumn" : 6,
+                          "endLine" : 133,
+                          "endColumn" : 75,
+                          "offset" : 4995,
+                          "length" : 126
+                        }
+                      }
                     }
                   }
                 }
@@ -18754,20 +18867,23 @@
                     "type" : "None"
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                    },
-                    "beginLine" : 26,
-                    "beginColumn" : 9,
-                    "endLine" : 27,
-                    "endColumn" : 32,
-                    "offset" : 909,
-                    "length" : 68
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                      },
+                      "beginLine" : 26,
+                      "beginColumn" : 9,
+                      "endLine" : 27,
+                      "endColumn" : 32,
+                      "offset" : 909,
+                      "length" : 68
+                    }
                   }
                 }
               }
@@ -18780,6 +18896,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                  },
+                  "beginLine" : 25,
+                  "beginColumn" : 7,
+                  "endLine" : 27,
+                  "endColumn" : 32,
+                  "offset" : 890,
+                  "length" : 87
+                }
+              }
             }
           }
         }
@@ -19194,20 +19329,23 @@
                         "type" : "None"
                       }
                     },
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                        },
-                        "beginLine" : 26,
-                        "beginColumn" : 9,
-                        "endLine" : 27,
-                        "endColumn" : 32,
-                        "offset" : 909,
-                        "length" : 68
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                          },
+                          "beginLine" : 26,
+                          "beginColumn" : 9,
+                          "endLine" : 27,
+                          "endColumn" : 32,
+                          "offset" : 909,
+                          "length" : 68
+                        }
                       }
                     }
                   }
@@ -19220,6 +19358,25 @@
                 },
                 "compute" : {
                   "type" : "None"
+                },
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                      },
+                      "beginLine" : 25,
+                      "beginColumn" : 7,
+                      "endLine" : 27,
+                      "endColumn" : 32,
+                      "offset" : 890,
+                      "length" : 87
+                    }
+                  }
                 }
               }
             }
@@ -19611,20 +19768,23 @@
                         "type" : "None"
                       }
                     },
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                        },
-                        "beginLine" : 26,
-                        "beginColumn" : 9,
-                        "endLine" : 27,
-                        "endColumn" : 32,
-                        "offset" : 909,
-                        "length" : 68
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                          },
+                          "beginLine" : 26,
+                          "beginColumn" : 9,
+                          "endLine" : 27,
+                          "endColumn" : 32,
+                          "offset" : 909,
+                          "length" : 68
+                        }
                       }
                     }
                   }
@@ -19637,6 +19797,25 @@
                 },
                 "compute" : {
                   "type" : "None"
+                },
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                      },
+                      "beginLine" : 25,
+                      "beginColumn" : 7,
+                      "endLine" : 27,
+                      "endColumn" : 32,
+                      "offset" : 890,
+                      "length" : 87
+                    }
+                  }
                 }
               }
             }
@@ -20337,20 +20516,23 @@
                     "type" : "None"
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
-                    },
-                    "beginLine" : 46,
-                    "beginColumn" : 9,
-                    "endLine" : 49,
-                    "endColumn" : 41,
-                    "offset" : 1512,
-                    "length" : 146
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                      },
+                      "beginLine" : 46,
+                      "beginColumn" : 9,
+                      "endLine" : 49,
+                      "endColumn" : 41,
+                      "offset" : 1512,
+                      "length" : 146
+                    }
                   }
                 }
               }
@@ -20363,6 +20545,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/initialize-entrypoint\/Initialize_Entrypoint.aadl"
+                  },
+                  "beginLine" : 45,
+                  "beginColumn" : 7,
+                  "endLine" : 49,
+                  "endColumn" : 41,
+                  "offset" : 1493,
+                  "length" : 165
+                }
+              }
             }
           }
         }

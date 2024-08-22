@@ -705,20 +705,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/integration-contacts\/Integration_Contracts.aadl"
-                                },
-                                "beginLine" : 82,
-                                "beginColumn" : 7,
-                                "endLine" : 83,
-                                "endColumn" : 82,
-                                "offset" : 2288,
-                                "length" : 112
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                                  },
+                                  "beginLine" : 82,
+                                  "beginColumn" : 7,
+                                  "endLine" : 83,
+                                  "endColumn" : 82,
+                                  "offset" : 2288,
+                                  "length" : 112
+                                }
                               }
                             }
                           },
@@ -1197,28 +1200,69 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/integration-contacts\/Integration_Contracts.aadl"
-                                },
-                                "beginLine" : 84,
-                                "beginColumn" : 7,
-                                "endLine" : 85,
-                                "endColumn" : 85,
-                                "offset" : 2407,
-                                "length" : 112
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                                  },
+                                  "beginLine" : 84,
+                                  "beginColumn" : 7,
+                                  "endLine" : 85,
+                                  "endColumn" : 85,
+                                  "offset" : 2407,
+                                  "length" : 112
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                              },
+                              "beginLine" : 81,
+                              "beginColumn" : 6,
+                              "endLine" : 85,
+                              "endColumn" : 85,
+                              "offset" : 2270,
+                              "length" : 249
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
                       "type" : "None"
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                          },
+                          "beginLine" : 81,
+                          "beginColumn" : 6,
+                          "endLine" : 85,
+                          "endColumn" : 85,
+                          "offset" : 2270,
+                          "length" : 249
+                        }
+                      }
                     }
                   }
                 }
@@ -1820,28 +1864,69 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/integration-contacts\/Integration_Contracts.aadl"
-                                },
-                                "beginLine" : 107,
-                                "beginColumn" : 7,
-                                "endLine" : 108,
-                                "endColumn" : 82,
-                                "offset" : 3101,
-                                "length" : 115
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                                  },
+                                  "beginLine" : 107,
+                                  "beginColumn" : 7,
+                                  "endLine" : 108,
+                                  "endColumn" : 82,
+                                  "offset" : 3101,
+                                  "length" : 115
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                              },
+                              "beginLine" : 106,
+                              "beginColumn" : 6,
+                              "endLine" : 108,
+                              "endColumn" : 82,
+                              "offset" : 3083,
+                              "length" : 133
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
                       "type" : "None"
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                          },
+                          "beginLine" : 106,
+                          "beginColumn" : 6,
+                          "endLine" : 108,
+                          "endColumn" : 82,
+                          "offset" : 3083,
+                          "length" : 133
+                        }
+                      }
                     }
                   }
                 }
@@ -4334,20 +4419,23 @@
                     "type" : "None"
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/integration-contacts\/Integration_Contracts.aadl"
-                    },
-                    "beginLine" : 26,
-                    "beginColumn" : 9,
-                    "endLine" : 27,
-                    "endColumn" : 37,
-                    "offset" : 909,
-                    "length" : 73
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                      },
+                      "beginLine" : 26,
+                      "beginColumn" : 9,
+                      "endLine" : 27,
+                      "endColumn" : 37,
+                      "offset" : 909,
+                      "length" : 73
+                    }
                   }
                 }
               }
@@ -4360,6 +4448,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                  },
+                  "beginLine" : 25,
+                  "beginColumn" : 7,
+                  "endLine" : 27,
+                  "endColumn" : 37,
+                  "offset" : 890,
+                  "length" : 92
+                }
+              }
             }
           }
         }
@@ -4774,20 +4881,23 @@
                         "type" : "None"
                       }
                     },
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/integration-contacts\/Integration_Contracts.aadl"
-                        },
-                        "beginLine" : 26,
-                        "beginColumn" : 9,
-                        "endLine" : 27,
-                        "endColumn" : 37,
-                        "offset" : 909,
-                        "length" : 73
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                          },
+                          "beginLine" : 26,
+                          "beginColumn" : 9,
+                          "endLine" : 27,
+                          "endColumn" : 37,
+                          "offset" : 909,
+                          "length" : 73
+                        }
                       }
                     }
                   }
@@ -4800,6 +4910,25 @@
                 },
                 "compute" : {
                   "type" : "None"
+                },
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                      },
+                      "beginLine" : 25,
+                      "beginColumn" : 7,
+                      "endLine" : 27,
+                      "endColumn" : 37,
+                      "offset" : 890,
+                      "length" : 92
+                    }
+                  }
                 }
               }
             }
@@ -5191,20 +5320,23 @@
                         "type" : "None"
                       }
                     },
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/integration-contacts\/Integration_Contracts.aadl"
-                        },
-                        "beginLine" : 26,
-                        "beginColumn" : 9,
-                        "endLine" : 27,
-                        "endColumn" : 37,
-                        "offset" : 909,
-                        "length" : 73
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                          },
+                          "beginLine" : 26,
+                          "beginColumn" : 9,
+                          "endLine" : 27,
+                          "endColumn" : 37,
+                          "offset" : 909,
+                          "length" : 73
+                        }
                       }
                     }
                   }
@@ -5217,6 +5349,25 @@
                 },
                 "compute" : {
                   "type" : "None"
+                },
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                      },
+                      "beginLine" : 25,
+                      "beginColumn" : 7,
+                      "endLine" : 27,
+                      "endColumn" : 37,
+                      "offset" : 890,
+                      "length" : 92
+                    }
+                  }
                 }
               }
             }
@@ -5917,20 +6068,23 @@
                     "type" : "None"
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/integration-contacts\/Integration_Contracts.aadl"
-                    },
-                    "beginLine" : 46,
-                    "beginColumn" : 9,
-                    "endLine" : 49,
-                    "endColumn" : 41,
-                    "offset" : 1516,
-                    "length" : 156
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                      },
+                      "beginLine" : 46,
+                      "beginColumn" : 9,
+                      "endLine" : 49,
+                      "endColumn" : 41,
+                      "offset" : 1516,
+                      "length" : 156
+                    }
                   }
                 }
               }
@@ -5943,6 +6097,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                  },
+                  "beginLine" : 45,
+                  "beginColumn" : 7,
+                  "endLine" : 49,
+                  "endColumn" : 41,
+                  "offset" : 1497,
+                  "length" : 175
+                }
+              }
             }
           }
         }

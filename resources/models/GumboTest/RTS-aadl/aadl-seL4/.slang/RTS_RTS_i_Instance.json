@@ -18789,20 +18789,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 43,
-                                        "beginColumn" : 4,
-                                        "endLine" : 54,
-                                        "endColumn" : 31,
-                                        "offset" : 1495,
-                                        "length" : 642
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 43,
+                                          "beginColumn" : 4,
+                                          "endLine" : 54,
+                                          "endColumn" : 31,
+                                          "offset" : 1495,
+                                          "length" : 642
+                                        }
                                       }
                                     }
                                   }
@@ -18812,7 +18815,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 41,
+                                      "beginColumn" : 4,
+                                      "endLine" : 54,
+                                      "endColumn" : 31,
+                                      "offset" : 1483,
+                                      "length" : 654
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 41,
+                                  "beginColumn" : 4,
+                                  "endLine" : 54,
+                                  "endColumn" : 31,
+                                  "offset" : 1483,
+                                  "length" : 654
+                                }
                               }
                             }
                           }
@@ -22299,20 +22340,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 43,
-                                        "beginColumn" : 4,
-                                        "endLine" : 54,
-                                        "endColumn" : 31,
-                                        "offset" : 1495,
-                                        "length" : 642
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 43,
+                                          "beginColumn" : 4,
+                                          "endLine" : 54,
+                                          "endColumn" : 31,
+                                          "offset" : 1495,
+                                          "length" : 642
+                                        }
                                       }
                                     }
                                   }
@@ -22322,7 +22366,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 41,
+                                      "beginColumn" : 4,
+                                      "endLine" : 54,
+                                      "endColumn" : 31,
+                                      "offset" : 1483,
+                                      "length" : 654
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 41,
+                                  "beginColumn" : 4,
+                                  "endLine" : 54,
+                                  "endColumn" : 31,
+                                  "offset" : 1483,
+                                  "length" : 654
+                                }
                               }
                             }
                           }
@@ -25809,20 +25891,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 43,
-                                        "beginColumn" : 4,
-                                        "endLine" : 54,
-                                        "endColumn" : 31,
-                                        "offset" : 1495,
-                                        "length" : 642
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 43,
+                                          "beginColumn" : 4,
+                                          "endLine" : 54,
+                                          "endColumn" : 31,
+                                          "offset" : 1495,
+                                          "length" : 642
+                                        }
                                       }
                                     }
                                   }
@@ -25832,7 +25917,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 41,
+                                      "beginColumn" : 4,
+                                      "endLine" : 54,
+                                      "endColumn" : 31,
+                                      "offset" : 1483,
+                                      "length" : 654
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 41,
+                                  "beginColumn" : 4,
+                                  "endLine" : 54,
+                                  "endColumn" : 31,
+                                  "offset" : 1483,
+                                  "length" : 654
+                                }
                               }
                             }
                           }
@@ -28238,20 +28361,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 122,
-                                        "beginColumn" : 4,
-                                        "endLine" : 123,
-                                        "endColumn" : 38,
-                                        "offset" : 4251,
-                                        "length" : 58
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 122,
+                                          "beginColumn" : 4,
+                                          "endLine" : 123,
+                                          "endColumn" : 38,
+                                          "offset" : 4251,
+                                          "length" : 58
+                                        }
                                       }
                                     }
                                   }
@@ -28261,7 +28387,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 120,
+                                      "beginColumn" : 4,
+                                      "endLine" : 123,
+                                      "endColumn" : 38,
+                                      "offset" : 4224,
+                                      "length" : 85
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 120,
+                                  "beginColumn" : 4,
+                                  "endLine" : 123,
+                                  "endColumn" : 38,
+                                  "offset" : 4224,
+                                  "length" : 85
+                                }
                               }
                             }
                           }
@@ -36249,20 +36413,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 43,
-                                        "beginColumn" : 4,
-                                        "endLine" : 54,
-                                        "endColumn" : 31,
-                                        "offset" : 1495,
-                                        "length" : 642
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 43,
+                                          "beginColumn" : 4,
+                                          "endLine" : 54,
+                                          "endColumn" : 31,
+                                          "offset" : 1495,
+                                          "length" : 642
+                                        }
                                       }
                                     }
                                   }
@@ -36272,7 +36439,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 41,
+                                      "beginColumn" : 4,
+                                      "endLine" : 54,
+                                      "endColumn" : 31,
+                                      "offset" : 1483,
+                                      "length" : 654
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 41,
+                                  "beginColumn" : 4,
+                                  "endLine" : 54,
+                                  "endColumn" : 31,
+                                  "offset" : 1483,
+                                  "length" : 654
+                                }
                               }
                             }
                           }
@@ -39759,20 +39964,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 43,
-                                        "beginColumn" : 4,
-                                        "endLine" : 54,
-                                        "endColumn" : 31,
-                                        "offset" : 1495,
-                                        "length" : 642
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 43,
+                                          "beginColumn" : 4,
+                                          "endLine" : 54,
+                                          "endColumn" : 31,
+                                          "offset" : 1495,
+                                          "length" : 642
+                                        }
                                       }
                                     }
                                   }
@@ -39782,7 +39990,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 41,
+                                      "beginColumn" : 4,
+                                      "endLine" : 54,
+                                      "endColumn" : 31,
+                                      "offset" : 1483,
+                                      "length" : 654
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 41,
+                                  "beginColumn" : 4,
+                                  "endLine" : 54,
+                                  "endColumn" : 31,
+                                  "offset" : 1483,
+                                  "length" : 654
+                                }
                               }
                             }
                           }
@@ -43269,20 +43515,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 43,
-                                        "beginColumn" : 4,
-                                        "endLine" : 54,
-                                        "endColumn" : 31,
-                                        "offset" : 1495,
-                                        "length" : 642
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 43,
+                                          "beginColumn" : 4,
+                                          "endLine" : 54,
+                                          "endColumn" : 31,
+                                          "offset" : 1495,
+                                          "length" : 642
+                                        }
                                       }
                                     }
                                   }
@@ -43292,7 +43541,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 41,
+                                      "beginColumn" : 4,
+                                      "endLine" : 54,
+                                      "endColumn" : 31,
+                                      "offset" : 1483,
+                                      "length" : 654
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 41,
+                                  "beginColumn" : 4,
+                                  "endLine" : 54,
+                                  "endColumn" : 31,
+                                  "offset" : 1483,
+                                  "length" : 654
+                                }
                               }
                             }
                           }
@@ -45698,20 +45985,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 122,
-                                        "beginColumn" : 4,
-                                        "endLine" : 123,
-                                        "endColumn" : 38,
-                                        "offset" : 4251,
-                                        "length" : 58
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 122,
+                                          "beginColumn" : 4,
+                                          "endLine" : 123,
+                                          "endColumn" : 38,
+                                          "offset" : 4251,
+                                          "length" : 58
+                                        }
                                       }
                                     }
                                   }
@@ -45721,7 +46011,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 120,
+                                      "beginColumn" : 4,
+                                      "endLine" : 123,
+                                      "endColumn" : 38,
+                                      "offset" : 4224,
+                                      "length" : 85
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 120,
+                                  "beginColumn" : 4,
+                                  "endLine" : 123,
+                                  "endColumn" : 38,
+                                  "offset" : 4224,
+                                  "length" : 85
+                                }
                               }
                             }
                           }
@@ -51908,20 +52236,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 122,
-                                        "beginColumn" : 4,
-                                        "endLine" : 123,
-                                        "endColumn" : 38,
-                                        "offset" : 4251,
-                                        "length" : 58
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 122,
+                                          "beginColumn" : 4,
+                                          "endLine" : 123,
+                                          "endColumn" : 38,
+                                          "offset" : 4251,
+                                          "length" : 58
+                                        }
                                       }
                                     }
                                   }
@@ -51931,7 +52262,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 120,
+                                      "beginColumn" : 4,
+                                      "endLine" : 123,
+                                      "endColumn" : 38,
+                                      "offset" : 4224,
+                                      "length" : 85
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 120,
+                                  "beginColumn" : 4,
+                                  "endLine" : 123,
+                                  "endColumn" : 38,
+                                  "offset" : 4224,
+                                  "length" : 85
+                                }
                               }
                             }
                           }
@@ -53703,20 +54072,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 205,
-                                        "beginColumn" : 4,
-                                        "endLine" : 206,
-                                        "endColumn" : 45,
-                                        "offset" : 7092,
-                                        "length" : 71
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 205,
+                                          "beginColumn" : 4,
+                                          "endLine" : 206,
+                                          "endColumn" : 45,
+                                          "offset" : 7092,
+                                          "length" : 71
+                                        }
                                       }
                                     }
                                   }
@@ -53726,7 +54098,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 203,
+                                      "beginColumn" : 4,
+                                      "endLine" : 206,
+                                      "endColumn" : 45,
+                                      "offset" : 7065,
+                                      "length" : 98
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 203,
+                                  "beginColumn" : 4,
+                                  "endLine" : 206,
+                                  "endColumn" : 45,
+                                  "offset" : 7065,
+                                  "length" : 98
+                                }
                               }
                             }
                           }
@@ -57328,20 +57738,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 122,
-                                        "beginColumn" : 4,
-                                        "endLine" : 123,
-                                        "endColumn" : 38,
-                                        "offset" : 4251,
-                                        "length" : 58
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 122,
+                                          "beginColumn" : 4,
+                                          "endLine" : 123,
+                                          "endColumn" : 38,
+                                          "offset" : 4251,
+                                          "length" : 58
+                                        }
                                       }
                                     }
                                   }
@@ -57351,7 +57764,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 120,
+                                      "beginColumn" : 4,
+                                      "endLine" : 123,
+                                      "endColumn" : 38,
+                                      "offset" : 4224,
+                                      "length" : 85
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 120,
+                                  "beginColumn" : 4,
+                                  "endLine" : 123,
+                                  "endColumn" : 38,
+                                  "offset" : 4224,
+                                  "length" : 85
+                                }
                               }
                             }
                           }
@@ -59123,20 +59574,23 @@
                                         "type" : "None"
                                       }
                                     },
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
-                                        },
-                                        "beginLine" : 205,
-                                        "beginColumn" : 4,
-                                        "endLine" : 206,
-                                        "endColumn" : 45,
-                                        "offset" : 7092,
-                                        "length" : 71
+                                    "attr" : {
+                                      "type" : "Attr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                          },
+                                          "beginLine" : 205,
+                                          "beginColumn" : 4,
+                                          "endLine" : 206,
+                                          "endColumn" : 45,
+                                          "offset" : 7092,
+                                          "length" : 71
+                                        }
                                       }
                                     }
                                   }
@@ -59146,7 +59600,45 @@
                                 "handlers" : [
                                 ],
                                 "flows" : [
-                                ]
+                                ],
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                      },
+                                      "beginLine" : 203,
+                                      "beginColumn" : 4,
+                                      "endLine" : 206,
+                                      "endColumn" : 45,
+                                      "offset" : 7065,
+                                      "length" : 98
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
+                                  },
+                                  "beginLine" : 203,
+                                  "beginColumn" : 4,
+                                  "endLine" : 206,
+                                  "endColumn" : 45,
+                                  "offset" : 7065,
+                                  "length" : 98
+                                }
                               }
                             }
                           }

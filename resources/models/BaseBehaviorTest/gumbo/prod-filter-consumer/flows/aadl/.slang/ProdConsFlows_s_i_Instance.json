@@ -572,20 +572,23 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 48,
-                                "beginColumn" : 5,
-                                "endLine" : 50,
-                                "endColumn" : 17,
-                                "offset" : 962,
-                                "length" : 110
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 48,
+                                  "beginColumn" : 5,
+                                  "endLine" : 50,
+                                  "endColumn" : 17,
+                                  "offset" : 962,
+                                  "length" : 110
+                                }
                               }
                             }
                           },
@@ -651,24 +654,46 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 52,
-                                "beginColumn" : 5,
-                                "endLine" : 54,
-                                "endColumn" : 17,
-                                "offset" : 1083,
-                                "length" : 112
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 52,
+                                  "beginColumn" : 5,
+                                  "endLine" : 54,
+                                  "endColumn" : 17,
+                                  "offset" : 1083,
+                                  "length" : 112
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 47,
+                              "beginColumn" : 4,
+                              "endLine" : 54,
+                              "endColumn" : 17,
+                              "offset" : 947,
+                              "length" : 248
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -749,20 +774,23 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 57,
-                                "beginColumn" : 5,
-                                "endLine" : 59,
-                                "endColumn" : 17,
-                                "offset" : 1222,
-                                "length" : 103
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 57,
+                                  "beginColumn" : 5,
+                                  "endLine" : 59,
+                                  "endColumn" : 17,
+                                  "offset" : 1222,
+                                  "length" : 103
+                                }
                               }
                             }
                           },
@@ -828,24 +856,65 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 61,
-                                "beginColumn" : 5,
-                                "endLine" : 63,
-                                "endColumn" : 17,
-                                "offset" : 1336,
-                                "length" : 85
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 61,
+                                  "beginColumn" : 5,
+                                  "endLine" : 63,
+                                  "endColumn" : 17,
+                                  "offset" : 1336,
+                                  "length" : 85
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 56,
+                              "beginColumn" : 4,
+                              "endLine" : 63,
+                              "endColumn" : 17,
+                              "offset" : 1210,
+                              "length" : 211
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                          },
+                          "beginLine" : 47,
+                          "beginColumn" : 4,
+                          "endLine" : 63,
+                          "endColumn" : 17,
+                          "offset" : 947,
+                          "length" : 474
+                        }
                       }
                     }
                   }
@@ -1556,20 +1625,23 @@
                         "type" : "GclStateVar",
                         "name" : "last_a_in",
                         "classifier" : "Base_Types::Float_32",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                            },
-                            "beginLine" : 78,
-                            "beginColumn" : 5,
-                            "endLine" : 78,
-                            "endColumn" : 37,
-                            "offset" : 1719,
-                            "length" : 32
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 78,
+                              "beginColumn" : 5,
+                              "endLine" : 78,
+                              "endColumn" : 37,
+                              "offset" : 1719,
+                              "length" : 32
+                            }
                           }
                         }
                       },
@@ -1577,20 +1649,23 @@
                         "type" : "GclStateVar",
                         "name" : "last_b_in",
                         "classifier" : "Base_Types::Float_32",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                            },
-                            "beginLine" : 79,
-                            "beginColumn" : 5,
-                            "endLine" : 79,
-                            "endColumn" : 37,
-                            "offset" : 1756,
-                            "length" : 32
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 79,
+                              "beginColumn" : 5,
+                              "endLine" : 79,
+                              "endColumn" : 37,
+                              "offset" : 1756,
+                              "length" : 32
+                            }
                           }
                         }
                       }
@@ -1670,20 +1745,23 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 82,
-                                "beginColumn" : 5,
-                                "endLine" : 84,
-                                "endColumn" : 21,
-                                "offset" : 1811,
-                                "length" : 121
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 82,
+                                  "beginColumn" : 5,
+                                  "endLine" : 84,
+                                  "endColumn" : 21,
+                                  "offset" : 1811,
+                                  "length" : 121
+                                }
                               }
                             }
                           },
@@ -1749,24 +1827,46 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 86,
-                                "beginColumn" : 5,
-                                "endLine" : 88,
-                                "endColumn" : 21,
-                                "offset" : 1943,
-                                "length" : 121
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 86,
+                                  "beginColumn" : 5,
+                                  "endLine" : 88,
+                                  "endColumn" : 21,
+                                  "offset" : 1943,
+                                  "length" : 121
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 81,
+                              "beginColumn" : 4,
+                              "endLine" : 88,
+                              "endColumn" : 21,
+                              "offset" : 1796,
+                              "length" : 268
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -1949,20 +2049,23 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 91,
-                                "beginColumn" : 5,
-                                "endLine" : 93,
-                                "endColumn" : 17,
-                                "offset" : 2086,
-                                "length" : 78
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 91,
+                                  "beginColumn" : 5,
+                                  "endLine" : 93,
+                                  "endColumn" : 17,
+                                  "offset" : 2086,
+                                  "length" : 78
+                                }
                               }
                             }
                           },
@@ -2130,24 +2233,65 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 95,
-                                "beginColumn" : 5,
-                                "endLine" : 97,
-                                "endColumn" : 17,
-                                "offset" : 2175,
-                                "length" : 77
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 95,
+                                  "beginColumn" : 5,
+                                  "endLine" : 97,
+                                  "endColumn" : 17,
+                                  "offset" : 2175,
+                                  "length" : 77
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 90,
+                              "beginColumn" : 4,
+                              "endLine" : 97,
+                              "endColumn" : 17,
+                              "offset" : 2074,
+                              "length" : 178
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                          },
+                          "beginLine" : 77,
+                          "beginColumn" : 4,
+                          "endLine" : 97,
+                          "endColumn" : 17,
+                          "offset" : 1709,
+                          "length" : 543
+                        }
                       }
                     }
                   }
@@ -2823,20 +2967,23 @@
                         "type" : "GclStateVar",
                         "name" : "last_a_in",
                         "classifier" : "Base_Types::Float_32",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                            },
-                            "beginLine" : 78,
-                            "beginColumn" : 5,
-                            "endLine" : 78,
-                            "endColumn" : 37,
-                            "offset" : 1719,
-                            "length" : 32
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 78,
+                              "beginColumn" : 5,
+                              "endLine" : 78,
+                              "endColumn" : 37,
+                              "offset" : 1719,
+                              "length" : 32
+                            }
                           }
                         }
                       },
@@ -2844,20 +2991,23 @@
                         "type" : "GclStateVar",
                         "name" : "last_b_in",
                         "classifier" : "Base_Types::Float_32",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                            },
-                            "beginLine" : 79,
-                            "beginColumn" : 5,
-                            "endLine" : 79,
-                            "endColumn" : 37,
-                            "offset" : 1756,
-                            "length" : 32
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 79,
+                              "beginColumn" : 5,
+                              "endLine" : 79,
+                              "endColumn" : 37,
+                              "offset" : 1756,
+                              "length" : 32
+                            }
                           }
                         }
                       }
@@ -2937,20 +3087,23 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 82,
-                                "beginColumn" : 5,
-                                "endLine" : 84,
-                                "endColumn" : 21,
-                                "offset" : 1811,
-                                "length" : 121
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 82,
+                                  "beginColumn" : 5,
+                                  "endLine" : 84,
+                                  "endColumn" : 21,
+                                  "offset" : 1811,
+                                  "length" : 121
+                                }
                               }
                             }
                           },
@@ -3016,24 +3169,46 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 86,
-                                "beginColumn" : 5,
-                                "endLine" : 88,
-                                "endColumn" : 21,
-                                "offset" : 1943,
-                                "length" : 121
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 86,
+                                  "beginColumn" : 5,
+                                  "endLine" : 88,
+                                  "endColumn" : 21,
+                                  "offset" : 1943,
+                                  "length" : 121
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 81,
+                              "beginColumn" : 4,
+                              "endLine" : 88,
+                              "endColumn" : 21,
+                              "offset" : 1796,
+                              "length" : 268
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -3216,20 +3391,23 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 91,
-                                "beginColumn" : 5,
-                                "endLine" : 93,
-                                "endColumn" : 17,
-                                "offset" : 2086,
-                                "length" : 78
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 91,
+                                  "beginColumn" : 5,
+                                  "endLine" : 93,
+                                  "endColumn" : 17,
+                                  "offset" : 2086,
+                                  "length" : 78
+                                }
                               }
                             }
                           },
@@ -3397,24 +3575,65 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 95,
-                                "beginColumn" : 5,
-                                "endLine" : 97,
-                                "endColumn" : 17,
-                                "offset" : 2175,
-                                "length" : 77
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 95,
+                                  "beginColumn" : 5,
+                                  "endLine" : 97,
+                                  "endColumn" : 17,
+                                  "offset" : 2175,
+                                  "length" : 77
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 90,
+                              "beginColumn" : 4,
+                              "endLine" : 97,
+                              "endColumn" : 17,
+                              "offset" : 2074,
+                              "length" : 178
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                          },
+                          "beginLine" : 77,
+                          "beginColumn" : 4,
+                          "endLine" : 97,
+                          "endColumn" : 17,
+                          "offset" : 1709,
+                          "length" : 543
+                        }
                       }
                     }
                   }
@@ -3783,20 +4002,23 @@
                         "type" : "GclStateVar",
                         "name" : "from_b",
                         "classifier" : "Base_Types::Float_32",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                            },
-                            "beginLine" : 120,
-                            "beginColumn" : 5,
-                            "endLine" : 120,
-                            "endColumn" : 34,
-                            "offset" : 2653,
-                            "length" : 29
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 120,
+                              "beginColumn" : 5,
+                              "endLine" : 120,
+                              "endColumn" : 34,
+                              "offset" : 2653,
+                              "length" : 29
+                            }
                           }
                         }
                       }
@@ -3886,20 +4108,23 @@
                             ],
                             "to" : [
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 122,
-                                "beginColumn" : 5,
-                                "endLine" : 126,
-                                "endColumn" : 12,
-                                "offset" : 2698,
-                                "length" : 251
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 122,
+                                  "beginColumn" : 5,
+                                  "endLine" : 126,
+                                  "endColumn" : 12,
+                                  "offset" : 2698,
+                                  "length" : 251
+                                }
                               }
                             }
                           },
@@ -4016,24 +4241,65 @@
                                 }
                               }
                             ],
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
-                                },
-                                "beginLine" : 128,
-                                "beginColumn" : 5,
-                                "endLine" : 130,
-                                "endColumn" : 18,
-                                "offset" : 2955,
-                                "length" : 83
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                                  },
+                                  "beginLine" : 128,
+                                  "beginColumn" : 5,
+                                  "endLine" : 130,
+                                  "endColumn" : 18,
+                                  "offset" : 2955,
+                                  "length" : 83
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                              },
+                              "beginLine" : 121,
+                              "beginColumn" : 4,
+                              "endLine" : 130,
+                              "endColumn" : 18,
+                              "offset" : 2686,
+                              "length" : 352
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/prod-cons-flows_flows\/ProdConsFlows.aadl"
+                          },
+                          "beginLine" : 119,
+                          "beginColumn" : 4,
+                          "endLine" : 130,
+                          "endColumn" : 18,
+                          "offset" : 2643,
+                          "length" : 395
+                        }
                       }
                     }
                   }

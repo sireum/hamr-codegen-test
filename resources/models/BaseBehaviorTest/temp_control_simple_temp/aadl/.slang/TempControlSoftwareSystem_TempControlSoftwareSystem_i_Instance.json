@@ -617,26 +617,48 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
-                                },
-                                "beginLine" : 73,
-                                "beginColumn" : 5,
-                                "endLine" : 74,
-                                "endColumn" : 39,
-                                "offset" : 3815,
-                                "length" : 61
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                                  },
+                                  "beginLine" : 73,
+                                  "beginColumn" : 5,
+                                  "endLine" : 74,
+                                  "endColumn" : 39,
+                                  "offset" : 3815,
+                                  "length" : 61
+                                }
                               }
                             }
                           }
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                              },
+                              "beginLine" : 72,
+                              "beginColumn" : 4,
+                              "endLine" : 74,
+                              "endColumn" : 39,
+                              "offset" : 3800,
+                              "length" : 76
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -1007,28 +1029,69 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
-                                },
-                                "beginLine" : 69,
-                                "beginColumn" : 5,
-                                "endLine" : 70,
-                                "endColumn" : 81,
-                                "offset" : 3651,
-                                "length" : 141
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                                  },
+                                  "beginLine" : 69,
+                                  "beginColumn" : 5,
+                                  "endLine" : 70,
+                                  "endColumn" : 81,
+                                  "offset" : 3651,
+                                  "length" : 141
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                              },
+                              "beginLine" : 68,
+                              "beginColumn" : 4,
+                              "endLine" : 70,
+                              "endColumn" : 81,
+                              "offset" : 3635,
+                              "length" : 157
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
                       "type" : "None"
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                          },
+                          "beginLine" : 68,
+                          "beginColumn" : 4,
+                          "endLine" : 74,
+                          "endColumn" : 39,
+                          "offset" : 3635,
+                          "length" : 241
+                        }
+                      }
                     }
                   }
                 }
@@ -2343,20 +2406,23 @@
                         "type" : "GclStateVar",
                         "name" : "currentSetPoint",
                         "classifier" : "TempControlSoftwareSystem::SetPoint.i",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                            },
-                            "beginLine" : 144,
-                            "beginColumn" : 5,
-                            "endLine" : 144,
-                            "endColumn" : 33,
-                            "offset" : 7697,
-                            "length" : 28
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                              },
+                              "beginLine" : 144,
+                              "beginColumn" : 5,
+                              "endLine" : 144,
+                              "endColumn" : 33,
+                              "offset" : 7697,
+                              "length" : 28
+                            }
                           }
                         }
                       },
@@ -2364,20 +2430,23 @@
                         "type" : "GclStateVar",
                         "name" : "latestTemp",
                         "classifier" : "TempSensor::Temperature.i",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                            },
-                            "beginLine" : 145,
-                            "beginColumn" : 5,
-                            "endLine" : 145,
-                            "endColumn" : 43,
-                            "offset" : 7730,
-                            "length" : 38
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                              },
+                              "beginLine" : 145,
+                              "beginColumn" : 5,
+                              "endLine" : 145,
+                              "endColumn" : 43,
+                              "offset" : 7730,
+                              "length" : 38
+                            }
                           }
                         }
                       },
@@ -2385,20 +2454,23 @@
                         "type" : "GclStateVar",
                         "name" : "currentFanState",
                         "classifier" : "CoolingFan::FanCmd",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                            },
-                            "beginLine" : 146,
-                            "beginColumn" : 5,
-                            "endLine" : 146,
-                            "endColumn" : 41,
-                            "offset" : 7773,
-                            "length" : 36
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                              },
+                              "beginLine" : 146,
+                              "beginColumn" : 5,
+                              "endLine" : 146,
+                              "endColumn" : 41,
+                              "offset" : 7773,
+                              "length" : 36
+                            }
                           }
                         }
                       }
@@ -3041,20 +3113,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                },
-                                "beginLine" : 154,
-                                "beginColumn" : 5,
-                                "endLine" : 155,
-                                "endColumn" : 96,
-                                "offset" : 8017,
-                                "length" : 121
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 154,
+                                  "beginColumn" : 5,
+                                  "endLine" : 155,
+                                  "endColumn" : 96,
+                                  "offset" : 8017,
+                                  "length" : 121
+                                }
                               }
                             }
                           },
@@ -3310,20 +3385,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                },
-                                "beginLine" : 157,
-                                "beginColumn" : 6,
-                                "endLine" : 158,
-                                "endColumn" : 48,
-                                "offset" : 8148,
-                                "length" : 75
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 157,
+                                  "beginColumn" : 6,
+                                  "endLine" : 158,
+                                  "endColumn" : 48,
+                                  "offset" : 8148,
+                                  "length" : 75
+                                }
                               }
                             }
                           },
@@ -3495,26 +3573,48 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                },
-                                "beginLine" : 160,
-                                "beginColumn" : 5,
-                                "endLine" : 161,
-                                "endColumn" : 38,
-                                "offset" : 8233,
-                                "length" : 66
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 160,
+                                  "beginColumn" : 5,
+                                  "endLine" : 161,
+                                  "endColumn" : 38,
+                                  "offset" : 8233,
+                                  "length" : 66
+                                }
                               }
                             }
                           }
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                              },
+                              "beginLine" : 152,
+                              "beginColumn" : 4,
+                              "endLine" : 161,
+                              "endColumn" : 38,
+                              "offset" : 7943,
+                              "length" : 356
+                            }
+                          }
+                        }
                       }
                     },
                     "integration" : {
@@ -3884,24 +3984,46 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                },
-                                "beginLine" : 149,
-                                "beginColumn" : 5,
-                                "endLine" : 150,
-                                "endColumn" : 81,
-                                "offset" : 7830,
-                                "length" : 105
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 149,
+                                  "beginColumn" : 5,
+                                  "endLine" : 150,
+                                  "endColumn" : 81,
+                                  "offset" : 7830,
+                                  "length" : 105
+                                }
                               }
                             }
                           }
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                              },
+                              "beginLine" : 148,
+                              "beginColumn" : 4,
+                              "endLine" : 150,
+                              "endColumn" : 81,
+                              "offset" : 7814,
+                              "length" : 121
+                            }
+                          }
+                        }
                       }
                     },
                     "compute" : {
@@ -4651,20 +4773,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                },
-                                "beginLine" : 167,
-                                "beginColumn" : 11,
-                                "endLine" : 170,
-                                "endColumn" : 115,
-                                "offset" : 8433,
-                                "length" : 284
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 167,
+                                  "beginColumn" : 11,
+                                  "endLine" : 170,
+                                  "endColumn" : 115,
+                                  "offset" : 8433,
+                                  "length" : 284
+                                }
                               }
                             }
                           },
@@ -5255,20 +5380,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                },
-                                "beginLine" : 172,
-                                "beginColumn" : 5,
-                                "endLine" : 175,
-                                "endColumn" : 118,
-                                "offset" : 8723,
-                                "length" : 280
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 172,
+                                  "beginColumn" : 5,
+                                  "endLine" : 175,
+                                  "endColumn" : 118,
+                                  "offset" : 8723,
+                                  "length" : 280
+                                }
                               }
                             }
                           },
@@ -5859,20 +5987,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                },
-                                "beginLine" : 177,
-                                "beginColumn" : 5,
-                                "endLine" : 178,
-                                "endColumn" : 105,
-                                "offset" : 9026,
-                                "length" : 216
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 177,
+                                  "beginColumn" : 5,
+                                  "endLine" : 178,
+                                  "endColumn" : 105,
+                                  "offset" : 9026,
+                                  "length" : 216
+                                }
                               }
                             }
                           },
@@ -6463,20 +6594,23 @@
                                 "type" : "None"
                               }
                             },
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                },
-                                "beginLine" : 180,
-                                "beginColumn" : 5,
-                                "endLine" : 182,
-                                "endColumn" : 105,
-                                "offset" : 9248,
-                                "length" : 254
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 180,
+                                  "beginColumn" : 5,
+                                  "endLine" : 182,
+                                  "endColumn" : 105,
+                                  "offset" : 9248,
+                                  "length" : 254
+                                }
                               }
                             }
                           }
@@ -6731,24 +6865,46 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                    },
-                                    "beginLine" : 199,
-                                    "beginColumn" : 6,
-                                    "endLine" : 200,
-                                    "endColumn" : 35,
-                                    "offset" : 10409,
-                                    "length" : 61
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 199,
+                                      "beginColumn" : 6,
+                                      "endLine" : 200,
+                                      "endColumn" : 35,
+                                      "offset" : 10409,
+                                      "length" : 61
+                                    }
                                   }
                                 }
                               }
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 196,
+                                  "beginColumn" : 5,
+                                  "endLine" : 200,
+                                  "endColumn" : 35,
+                                  "offset" : 10350,
+                                  "length" : 120
+                                }
+                              }
+                            }
                           },
                           {
                             "type" : "GclHandle",
@@ -6997,28 +7153,88 @@
                                     "type" : "None"
                                   }
                                 },
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                                    },
-                                    "beginLine" : 211,
-                                    "beginColumn" : 6,
-                                    "endLine" : 212,
-                                    "endColumn" : 33,
-                                    "offset" : 10716,
-                                    "length" : 55
+                                "attr" : {
+                                  "type" : "Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 211,
+                                      "beginColumn" : 6,
+                                      "endLine" : 212,
+                                      "endColumn" : 33,
+                                      "offset" : 10716,
+                                      "length" : 55
+                                    }
                                   }
                                 }
                               }
-                            ]
+                            ],
+                            "attr" : {
+                              "type" : "Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 208,
+                                  "beginColumn" : 5,
+                                  "endLine" : 212,
+                                  "endColumn" : 33,
+                                  "offset" : 10659,
+                                  "length" : 112
+                                }
+                              }
+                            }
                           }
                         ],
                         "flows" : [
-                        ]
+                        ],
+                        "attr" : {
+                          "type" : "Attr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                              },
+                              "beginLine" : 164,
+                              "beginColumn" : 4,
+                              "endLine" : 212,
+                              "endColumn" : 33,
+                              "offset" : 8315,
+                              "length" : 2456
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                          },
+                          "beginLine" : 143,
+                          "beginColumn" : 4,
+                          "endLine" : 212,
+                          "endColumn" : 33,
+                          "offset" : 7687,
+                          "length" : 3084
+                        }
                       }
                     }
                   }
@@ -11949,20 +12165,23 @@
                     "type" : "None"
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
-                    },
-                    "beginLine" : 131,
-                    "beginColumn" : 5,
-                    "endLine" : 132,
-                    "endColumn" : 30,
-                    "offset" : 6399,
-                    "length" : 42
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                      },
+                      "beginLine" : 131,
+                      "beginColumn" : 5,
+                      "endLine" : 132,
+                      "endColumn" : 30,
+                      "offset" : 6399,
+                      "length" : 42
+                    }
                   }
                 }
               }
@@ -11975,6 +12194,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                  },
+                  "beginLine" : 130,
+                  "beginColumn" : 4,
+                  "endLine" : 132,
+                  "endColumn" : 30,
+                  "offset" : 6384,
+                  "length" : 57
+                }
+              }
             }
           }
         }
@@ -12561,20 +12799,23 @@
                         "type" : "None"
                       }
                     },
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
-                        },
-                        "beginLine" : 131,
-                        "beginColumn" : 5,
-                        "endLine" : 132,
-                        "endColumn" : 30,
-                        "offset" : 6399,
-                        "length" : 42
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                          },
+                          "beginLine" : 131,
+                          "beginColumn" : 5,
+                          "endLine" : 132,
+                          "endColumn" : 30,
+                          "offset" : 6399,
+                          "length" : 42
+                        }
                       }
                     }
                   }
@@ -12587,6 +12828,25 @@
                 },
                 "compute" : {
                   "type" : "None"
+                },
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                      },
+                      "beginLine" : 130,
+                      "beginColumn" : 4,
+                      "endLine" : 132,
+                      "endColumn" : 30,
+                      "offset" : 6384,
+                      "length" : 57
+                    }
+                  }
                 }
               }
             }
@@ -12942,20 +13202,23 @@
                         "type" : "None"
                       }
                     },
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
-                        },
-                        "beginLine" : 131,
-                        "beginColumn" : 5,
-                        "endLine" : 132,
-                        "endColumn" : 30,
-                        "offset" : 6399,
-                        "length" : 42
+                    "attr" : {
+                      "type" : "Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                          },
+                          "beginLine" : 131,
+                          "beginColumn" : 5,
+                          "endLine" : 132,
+                          "endColumn" : 30,
+                          "offset" : 6399,
+                          "length" : 42
+                        }
                       }
                     }
                   }
@@ -12968,6 +13231,25 @@
                 },
                 "compute" : {
                   "type" : "None"
+                },
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempSensor.aadl"
+                      },
+                      "beginLine" : 130,
+                      "beginColumn" : 4,
+                      "endLine" : 132,
+                      "endColumn" : 30,
+                      "offset" : 6384,
+                      "length" : 57
+                    }
+                  }
                 }
               }
             }
@@ -13668,20 +13950,23 @@
                     "type" : "None"
                   }
                 },
-                "posOpt" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
-                    },
-                    "beginLine" : 311,
-                    "beginColumn" : 13,
-                    "endLine" : 314,
-                    "endColumn" : 44,
-                    "offset" : 15155,
-                    "length" : 182
+                "attr" : {
+                  "type" : "Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                      },
+                      "beginLine" : 311,
+                      "beginColumn" : 13,
+                      "endLine" : 314,
+                      "endColumn" : 44,
+                      "offset" : 15155,
+                      "length" : 182
+                    }
                   }
                 }
               }
@@ -13694,6 +13979,25 @@
             },
             "compute" : {
               "type" : "None"
+            },
+            "attr" : {
+              "type" : "Attr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/temp-control-simple-temp-behavior\/packages\/TempControlSoftwareSystem.aadl"
+                  },
+                  "beginLine" : 310,
+                  "beginColumn" : 4,
+                  "endLine" : 314,
+                  "endColumn" : 44,
+                  "offset" : 15132,
+                  "length" : 205
+                }
+              }
             }
           }
         }
