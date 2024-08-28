@@ -32,6 +32,109 @@ class CodeGenTest_Base extends CodeGenTest {
         None(), None(), ISZ())
     }
 
+    { // bit_codec
+      val name = "bit_codec"
+      val modelDir = modelsDir / name
+      val model = Some(modelDir / ".slang" / "Bit_Codec_Bit_Codec_Sys_Impl_Instance.json")
+
+      val packageName: Option[String] = Some("bit_codec")
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      val bo = baseOptions(
+        platform = platform,
+        packageName = packageName,
+        maxStringSize = 300,
+        devicesAsThreads = F
+      )
+      test(s"$name--${platform}", modelDir, model, bo, None(), None(), ISZ())
+
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}", modelDir, model,
+        bo(platform = platform), None(), None(), ISZ())
+
+      test(s"$name--${platform}-excludesImpl", modelDir, model,
+        bo(platform = platform, excludeComponentImpl = T),
+        None(), None(), ISZ())
+
+      platform = CodeGenPlatform.SeL4
+      test(s"$name--${platform}", modelDir, model,
+        bo(platform = platform), None(), None(), ISZ())
+
+      test(s"$name--${platform}-excludesImpl", modelDir, model,
+        bo(platform = platform, excludeComponentImpl = T),
+        None(), None(), ISZ())
+    }
+
+    {
+      val name = "building_control_gen_mixed"
+      val modelDir = modelsDir / name
+      val model = Some(modelDir / ".slang" / "BuildingControl_BuildingControlDemo_i_Instance.json")
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      test(s"$name--${platform}-Embed-Art", modelDir, model,
+        baseOptions(platform = platform),
+        None(), None(), ISZ())
+
+      test(s"$name--${platform}--runtime-monitoring", modelDir, model,
+        baseOptions(platform = platform,
+          runtimeMonitoring = T),
+        None(), None(), ISZ())
+
+      platform = CodeGenPlatform.JVM
+      test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
+        baseOptions(platform = platform,
+          noEmbedArt = T),
+        None(), None(), ISZ())
+
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}-Embed-Art-SharedMemory", modelDir, model,
+        baseOptions(platform = platform),
+        None(), None(), ISZ())
+
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}-Embed-Art-SharedMemory-Excludes", modelDir, model,
+        baseOptions(platform = platform,
+          excludeComponentImpl = T),
+        None(), None(), ISZ())
+
+      platform = CodeGenPlatform.SeL4
+      test(s"$name--${platform}", modelDir, model,
+        baseOptions(platform = platform,
+          excludeComponentImpl = T,
+          devicesAsThreads = F,
+          maxStringSize = 300,
+          packageName = Some("building_control_gen_mixed")
+        ),
+        None(), None(), ISZ())
+
+    }
+
+    { // datatype-examples
+      val name = "datatype-examples"
+      val modelDir = modelsDir / name
+      val model = Some(modelDir / ".slang" / "Datatypes_System_Sys_i_Instance.json")
+
+      val packageName: Option[String] = Some("datatypes")
+
+      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      val bo = baseOptions(
+        platform = platform,
+        packageName = packageName,
+        maxStringSize = 300,
+        devicesAsThreads = F
+      )
+      test(s"$name--${platform}", modelDir, model, bo, None(), None(), ISZ())
+
+      platform = CodeGenPlatform.Linux
+      test(s"$name--${platform}", modelDir, model,
+        bo(platform = platform), None(), None(), ISZ())
+
+      // sel4 does not support Z,R
+      //platform = CodeGenPlatform.SeL4
+      //test(s"$name--${platform}", modelDir, model,
+      //  bo(platform = platform), None(), None(), ISZ())
+    }
+
     {
       val name = "nested_feature_groups"
       val modelDir = modelsDir / name
@@ -90,50 +193,6 @@ class CodeGenTest_Base extends CodeGenTest {
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ())
-    }
-
-    {
-      val name = "building_control_gen_mixed"
-      val modelDir = modelsDir / name
-      val model = Some(modelDir / ".slang" / "BuildingControl_BuildingControlDemo_i_Instance.json")
-
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-      test(s"$name--${platform}-Embed-Art", modelDir, model,
-        baseOptions(platform = platform),
-        None(), None(), ISZ())
-
-      test(s"$name--${platform}--runtime-monitoring", modelDir, model,
-        baseOptions(platform = platform,
-          runtimeMonitoring = T),
-        None(), None(), ISZ())
-
-      platform = CodeGenPlatform.JVM
-      test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
-        baseOptions(platform = platform,
-          noEmbedArt = T),
-        None(), None(), ISZ())
-
-      platform = CodeGenPlatform.Linux
-      test(s"$name--${platform}-Embed-Art-SharedMemory", modelDir, model,
-        baseOptions(platform = platform),
-        None(), None(), ISZ())
-
-      platform = CodeGenPlatform.Linux
-      test(s"$name--${platform}-Embed-Art-SharedMemory-Excludes", modelDir, model,
-        baseOptions(platform = platform,
-          excludeComponentImpl = T),
-        None(), None(), ISZ())
-
-      platform = CodeGenPlatform.SeL4
-      test(s"$name--${platform}", modelDir, model,
-        baseOptions(platform = platform,
-          excludeComponentImpl = T,
-          devicesAsThreads = F,
-          maxStringSize = 300,
-          packageName = Some("building_control_gen_mixed")
-        ),
-        None(), None(), ISZ())
-
     }
 
     { // UAV_ALT tests
@@ -383,38 +442,6 @@ class CodeGenTest_Base extends CodeGenTest {
       )
     }
 
-    { // bit_codec
-      val name = "bit_codec"
-      val modelDir = modelsDir / name
-      val model = Some(modelDir / ".slang" / "Bit_Codec_Bit_Codec_Sys_Impl_Instance.json")
-
-      val packageName: Option[String] = Some("bit_codec")
-
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
-      val bo = baseOptions(
-        platform = platform,
-        packageName = packageName,
-        maxStringSize = 300,
-        devicesAsThreads = F
-      )
-      test(s"$name--${platform}", modelDir, model, bo, None(), None(), ISZ())
-
-      platform = CodeGenPlatform.Linux
-      test(s"$name--${platform}", modelDir, model,
-        bo(platform = platform), None(), None(), ISZ())
-
-      test(s"$name--${platform}-excludesImpl", modelDir, model,
-        bo(platform = platform, excludeComponentImpl = T),
-        None(), None(), ISZ())
-
-      platform = CodeGenPlatform.SeL4
-      test(s"$name--${platform}", modelDir, model,
-        bo(platform = platform), None(), None(), ISZ())
-
-      test(s"$name--${platform}-excludesImpl", modelDir, model,
-        bo(platform = platform, excludeComponentImpl = T),
-        None(), None(), ISZ())
-    }
 
     { // producer filter consumer periodic
       val name = "producer_filter_consumer_periodic"
