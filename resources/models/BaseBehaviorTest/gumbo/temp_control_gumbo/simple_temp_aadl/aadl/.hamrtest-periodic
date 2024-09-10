@@ -29,4 +29,4 @@ phantomOptions = --main-package ./packages/TempControlSoftwareSystem.aadl \
 hamrArgs = --package-name tc \
            --no-proyek-ive \
            --runtime-monitoring \
-           --output-dir ../hamr-gen-periodic/slang
+           --slang-output-dir ../hamr-gen-periodic/slang

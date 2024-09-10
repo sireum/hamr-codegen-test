@@ -111,7 +111,7 @@ trait CodeGenTest extends CodegenTestSuite {
     assert(config.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${config.camkesOutputDir}")
 
     var testOps = config(
-      aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value),
+      workspaceRootDir = if (config.workspaceRootDir.nonEmpty) config.workspaceRootDir else Some(modelDir.canon.value),
       packageName = if (config.packageName.nonEmpty) config.packageName else Some(testName)
     )
 
@@ -137,7 +137,7 @@ trait CodeGenTest extends CodegenTestSuite {
 
     val reporter = Reporter.create
 
-    val model: Aadl = TestUtil.getModel(airFile, phantomOptions, Os.path(testOps.aadlRootDir.get), testModes, testName, verbose)
+    val model: Aadl = TestUtil.getModel(airFile, phantomOptions, Os.path(testOps.workspaceRootDir.get), testModes, testName, verbose)
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
@@ -324,7 +324,7 @@ object CodeGenTest {
     runTranspiler = F,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
-    aadlRootDir = None(),
+    workspaceRootDir = None(),
     experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
   )
 

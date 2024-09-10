@@ -18,4 +18,4 @@ airFile = .slang/BuildingControl_BuildingControlDemo_i_Instance.json
 hamrArgs = --package-name bc \
            --no-proyek-ive \
            --sbt-mill \
-           --output-dir ./hamr/slang
+           --slang-output-dir ./hamr/slang

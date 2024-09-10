@@ -22,4 +22,4 @@ logikaOptions = --rlimit 1700000 \
 # same options as 'sireum hamr codegen', paths should be relative to the .hamrtest file
 hamrArgs = --package-name prod_cons__JVM \
            --no-proyek-ive \
-           --output-dir ../hamr/slang
+           --slang-output-dir ../hamr/slang

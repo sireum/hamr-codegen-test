@@ -32,7 +32,7 @@ def runHamr(): Unit = {
   val os = if(Os.isWin) "win" else if(Os.isLinux) "linux" else if(Os.isMac) "mac" else halt("OS not supported")
   val noRunProyekIve: String = if((sireum.up / os / "idea").exists) "" else "--no-proyek-ive"
 
-  val CODEGEN_ARGS = s"hamr codegen ${noRunProyekIve} --output-dir ${SLANG_DIR} --package-name tc"
+  val CODEGEN_ARGS = s"hamr codegen ${noRunProyekIve} --slang-output-dir ${SLANG_DIR} --package-name tc"
 
   println("Running HAMR Codegen via OSATE")
   proc"${OSATE_HOME} ${PHANTOM_ARGS} ${CODEGEN_ARGS} ${AADL_DIR.value}/.project".console.runCheck()

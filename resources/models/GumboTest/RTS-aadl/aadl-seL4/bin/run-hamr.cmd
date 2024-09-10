@@ -52,7 +52,7 @@ val outDir: String = s"hamr-$suffix"
 val codegenArgs = ISZ("hamr", "codegen",
   "--platform", platform,
   "--package-name", "RTS",
-  "--output-dir", (aadlDir.up / outDir / "slang").string,
+  "--slang-output-dir", (aadlDir.up / outDir / "slang").string,
   "--output-c-dir", (aadlDir.up / outDir / "c").string,
   "--camkes-output-dir", (aadlDir.up / outDir / "camkes").string,  
   "--verbose",

@@ -92,7 +92,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
       println(s"  _testModes=${_testModes}")
     }
 
-    testOptions.aadlRootDir match {
+    testOptions.workspaceRootDir match {
       case Some(e) =>
         val clean =
           if ((Os.path(e) / "clean.cmd").exists) Os.path(e) / "clean.cmd"
@@ -116,15 +116,15 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     //Thread.sleep(1000)
 
     val model = airFile match {
-      case Some(a) => TestUtil.getModel(Some(a), phantomOptions, Os.path(testOptions.aadlRootDir.get), _testModes, testName, verbose)
-      case _ => TestUtil.getModel(phantomOptions, Os.path(testOptions.aadlRootDir.get), _testModes, testName, verbose)
+      case Some(a) => TestUtil.getModel(Some(a), phantomOptions, Os.path(testOptions.workspaceRootDir.get), _testModes, testName, verbose)
+      case _ => TestUtil.getModel(phantomOptions, Os.path(testOptions.workspaceRootDir.get), _testModes, testName, verbose)
     }
 
     if (testDescription.size > 0) {
       cprintln(F, testDescription)
     }
 
-    assert(testOptions.aadlRootDir.nonEmpty, "Currently requires aadlRootDir to be populated")
+    assert(testOptions.workspaceRootDir.nonEmpty, "Currently requires workspaceRootDir to be populated")
     assert(testOptions.slangOutputDir.nonEmpty, "Currently requires slangOutputDir to be populated")
 
     val slangOutputDir = Os.path(testOptions.slangOutputDir.get)
@@ -265,7 +265,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     runTranspiler = F,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
-    aadlRootDir = None(),
+    workspaceRootDir = None(),
     experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
   )
 }
@@ -346,9 +346,10 @@ object CodegenBehaviorTest {
           case CodegenHamrPlatform.SeL4 => CodeGenPlatform.SeL4
           case CodegenHamrPlatform.SeL4_Only => CodeGenPlatform.SeL4_Only
           case CodegenHamrPlatform.SeL4_TB => CodeGenPlatform.SeL4_TB
+          case CodegenHamrPlatform.Ros2 => CodeGenPlatform.Ros2
         }
 
-        val aadlRoot = if (opts.aadlRootDir.isEmpty) canon(Some(".")) else canon(opts.aadlRootDir)
+        val aadlRoot = if (opts.workspaceRootDir.isEmpty) canon(Some(".")) else canon(opts.workspaceRootDir)
 
         Some(CodeGenConfig(
           writeOutResources = T,
@@ -357,7 +358,7 @@ object CodegenBehaviorTest {
           verbose = opts.verbose,
           runtimeMonitoring = opts.runtimeMonitoring,
           platform = platform,
-          slangOutputDir = canon(opts.outputDir),
+          slangOutputDir = canon(opts.slangOutputDir),
           packageName = opts.packageName,
           noProyekIve = opts.noProyekIve,
           noEmbedArt = opts.noEmbedArt,
@@ -372,7 +373,7 @@ object CodegenBehaviorTest {
           runTranspiler = opts.runTranspiler,
           camkesOutputDir = canon(opts.camkesOutputDir),
           camkesAuxCodeDirs = opts.camkesAuxCodeDirs.map(s => canon(Some(s)).get),
-          aadlRootDir = aadlRoot,
+          workspaceRootDir = aadlRoot,
           experimentalOptions = opts.experimentalOptions
         ))
 

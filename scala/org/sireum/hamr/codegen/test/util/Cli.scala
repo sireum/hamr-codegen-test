@@ -9,9 +9,9 @@ import org.sireum._
 
 object Cli {
 
-  @datatype trait HamrCodeGenTopOption
+  @datatype trait HamrCodegenCliTopOption
 
-  @datatype class HelpOption extends HamrCodeGenTopOption
+  @datatype class HelpOption extends HamrCodegenCliTopOption
 
   @enum object CodegenHamrPlatform {
     'JVM
@@ -21,6 +21,7 @@ object Cli {
     'SeL4
     'SeL4_Only
     'SeL4_TB
+    'Ros2
   }
 
   @datatype class CodegenOption(
@@ -30,7 +31,8 @@ object Cli {
     val verbose: B,
     val runtimeMonitoring: B,
     val platform: CodegenHamrPlatform.Type,
-    val outputDir: Option[String],
+    val parseableMessages: B,
+    val slangOutputDir: Option[String],
     val packageName: Option[String],
     val noProyekIve: B,
     val noEmbedArt: B,
@@ -45,9 +47,9 @@ object Cli {
     val runTranspiler: B,
     val camkesOutputDir: Option[String],
     val camkesAuxCodeDirs: ISZ[String],
-    val aadlRootDir: Option[String],
+    val workspaceRootDir: Option[String],
     val experimentalOptions: ISZ[String]
-  ) extends HamrCodeGenTopOption
+  ) extends HamrCodegenCliTopOption
 }
 
 import Cli._
@@ -63,22 +65,23 @@ import Cli._
       case "seL4" => return Some(CodegenHamrPlatform.SeL4)
       case "seL4_Only" => return Some(CodegenHamrPlatform.SeL4_Only)
       case "seL4_TB" => return Some(CodegenHamrPlatform.SeL4_TB)
+      case "ros2" => return Some(CodegenHamrPlatform.Ros2)
       case s =>
-        eprintln(s"Expecting one of the following: { JVM, Linux, Cygwin, MacOS, seL4, seL4_Only, seL4_TB }, but found '$s'.")
+        eprintln(s"Expecting one of the following: { JVM, Linux, Cygwin, MacOS, seL4, seL4_Only, seL4_TB, ros2 }, but found '$s'.")
         return None()
     }
   }
 
   def parseCodegenHamrPlatform(args: ISZ[String], i: Z): Option[CodegenHamrPlatform.Type] = {
     if (i >= args.size) {
-      eprintln("Expecting one of the following: { JVM, Linux, Cygwin, MacOS, seL4, seL4_Only, seL4_TB }, but none found.")
+      eprintln("Expecting one of the following: { JVM, Linux, Cygwin, MacOS, seL4, seL4_Only, seL4_TB, ros2 }, but none found.")
       return None()
     }
     val r = parseCodegenHamrPlatformH(args(i))
     return r
   }
 
-  def parseCodegen(args: ISZ[String], i: Z): Option[HamrCodeGenTopOption] = {
+  def parseCodegen(args: ISZ[String], i: Z): Option[HamrCodegenCliTopOption] = {
     val help =
       st"""Generate code from AADL IR (AIR)
           |
@@ -91,11 +94,14 @@ import Cli._
           |-m, --runtime-monitoring    
           |                          Enable runtime monitoring
           |-p, --platform           Target platform (expects one of { JVM, Linux, Cygwin,
-          |                           MacOS, seL4, seL4_Only, seL4_TB }; default: JVM)
+          |                           MacOS, seL4, seL4_Only, seL4_TB, ros2 }; default:
+          |                           JVM)
+          |    --parseable-messages Print parseable file messages
           |-h, --help               Display this information
           |
           |Slang Options:
-          |-o, --output-dir         Output directory for the generated project files
+          |-o, --slang-output-dir    
+          |                          Output directory for the generated project files
           |                           (expects a path; default is ".")
           |-n, --package-name       Base package name for Slang project (output-dir's
           |                           simple name used if not provided) (expects a string)
@@ -126,8 +132,9 @@ import Cli._
           |    --camkes-aux-code-dirs
           |                          Directories containing C files to be included in
           |                           CAmkES build (expects path strings)
-          |-r, --aadl-root-dir      Root directory containing the AADL project (expects a
-          |                           path)
+          |-r, --workspace-root-dir    
+          |                          Root directory containing the architectural model
+          |                           project (expects a path)
           |
           |Experimental Options:
           |-x, --experimental-options    
@@ -137,7 +144,8 @@ import Cli._
     var verbose: B = false
     var runtimeMonitoring: B = false
     var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
-    var outputDir: Option[String] = Some(".")
+    var parseableMessages: B = false
+    var slangOutputDir: Option[String] = Some(".")
     var packageName: Option[String] = None[String]()
     var noProyekIve: B = false
     var noEmbedArt: B = false
@@ -152,7 +160,7 @@ import Cli._
     var runTranspiler: B = false
     var camkesOutputDir: Option[String] = None[String]()
     var camkesAuxCodeDirs: ISZ[String] = ISZ[String]()
-    var aadlRootDir: Option[String] = None[String]()
+    var workspaceRootDir: Option[String] = None[String]()
     var experimentalOptions: ISZ[String] = ISZ[String]()
     var j = i
     var isOption = T
@@ -186,10 +194,16 @@ import Cli._
              case Some(v) => platform = v
              case _ => return None()
            }
-         } else if (arg == "-o" || arg == "--output-dir") {
+         } else if (arg == "--parseable-messages") {
+           val o: Option[B] = { j = j - 1; Some(!parseableMessages) }
+           o match {
+             case Some(v) => parseableMessages = v
+             case _ => return None()
+           }
+         } else if (arg == "-o" || arg == "--slang-output-dir") {
            val o: Option[Option[String]] = parsePath(args, j + 1)
            o match {
-             case Some(v) => outputDir = v
+             case Some(v) => slangOutputDir = v
              case _ => return None()
            }
          } else if (arg == "-n" || arg == "--package-name") {
@@ -276,10 +290,10 @@ import Cli._
              case Some(v) => camkesAuxCodeDirs = v
              case _ => return None()
            }
-         } else if (arg == "-r" || arg == "--aadl-root-dir") {
+         } else if (arg == "-r" || arg == "--workspace-root-dir") {
            val o: Option[Option[String]] = parsePath(args, j + 1)
            o match {
-             case Some(v) => aadlRootDir = v
+             case Some(v) => workspaceRootDir = v
              case _ => return None()
            }
          } else if (arg == "-x" || arg == "--experimental-options") {
@@ -297,7 +311,7 @@ import Cli._
         isOption = F
       }
     }
-    return Some(CodegenOption(help, parseArguments(args, j), msgpack, verbose, runtimeMonitoring, platform, outputDir, packageName, noProyekIve, noEmbedArt, devicesAsThreads, genSbtMill, slangAuxCodeDirs, slangOutputCDir, excludeComponentImpl, bitWidth, maxStringSize, maxArraySize, runTranspiler, camkesOutputDir, camkesAuxCodeDirs, aadlRootDir, experimentalOptions))
+    return Some(CodegenOption(help, parseArguments(args, j), msgpack, verbose, runtimeMonitoring, platform, parseableMessages, slangOutputDir, packageName, noProyekIve, noEmbedArt, devicesAsThreads, genSbtMill, slangAuxCodeDirs, slangOutputCDir, excludeComponentImpl, bitWidth, maxStringSize, maxArraySize, runTranspiler, camkesOutputDir, camkesAuxCodeDirs, workspaceRootDir, experimentalOptions))
   }
 
   def parseArguments(args: ISZ[String], i: Z): ISZ[String] = {

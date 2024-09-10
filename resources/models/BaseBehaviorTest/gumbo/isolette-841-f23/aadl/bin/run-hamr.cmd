@@ -51,7 +51,7 @@ val excludeComponentImpl = T
 var codegenArgs = ISZ("hamr", "codegen",
   "--platform", platform,
   "--package-name", packageName,
-  "--output-dir", (aadlDir.up / "hamr" / "slang").string,
+  "--slang-output-dir", (aadlDir.up / "hamr" / "slang").string,
   "--output-c-dir", (aadlDir.up / "hamr" / "c").string,
   "--camkes-output-dir", (aadlDir.up / "hamr" / "camkes").string,  
   "--run-transpiler",

@@ -61,7 +61,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val model = TestUtil.getModel(airFile = Some(airFile), phantomOptions = None(), rootAadlDir = modelDir, testModes = ISZ(), testName = testName, verbose = verbose)
 
     var testOps = config(
-      aadlRootDir = if (config.aadlRootDir.nonEmpty) config.aadlRootDir else Some(modelDir.canon.value)
+      workspaceRootDir = if (config.workspaceRootDir.nonEmpty) config.workspaceRootDir else Some(modelDir.canon.value)
     )
 
     val results: CodeGenResults = CodeGen.codeGen(
@@ -132,7 +132,7 @@ object Ros2Tests {
     runTranspiler = F,
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
-    aadlRootDir = None(),
+    workspaceRootDir = None(),
     experimentalOptions = ISZ()
   )
 

@@ -22,4 +22,4 @@ logikaOptions = --rlimit 1700000 \
 hamrArgs = --package-name isolette \
            --runtime-monitoring \
            --no-proyek-ive \
-           --output-dir ../hamr/slang
+           --slang-output-dir ../hamr/slang

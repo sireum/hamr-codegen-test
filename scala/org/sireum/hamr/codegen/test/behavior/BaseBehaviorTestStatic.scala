@@ -32,7 +32,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       testDescription = description,
       testOptions = baseOptions(
         slangOutputDir = Some((modelDir / "hamr" / "slang").value),
-        aadlRootDir = Some((modelDir / "aadl").value),
+        workspaceRootDir = Some((modelDir / "aadl").value),
         packageName = packageName,
         verbose = verbose
       ),
@@ -55,7 +55,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
         packageName = Some("a"),
         slangOutputDir = Some((modelDir / "hamr-excludes" / "slang").value),
         slangOutputCDir = Some((modelDir / "hamr-excludes" / "c").value),
-        aadlRootDir = Some(modelDir.value),
+        workspaceRootDir = Some(modelDir.value),
         verbose = verbose,
         excludeComponentImpl = T,
         maxArraySize = 4
@@ -78,7 +78,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
         packageName = Some("a"),
         slangOutputDir = Some((modelDir / "hamr" / "slang").value),
         slangOutputCDir = Some((modelDir / "hamr" / "c").value),
-        aadlRootDir = Some(modelDir.value),
+        workspaceRootDir = Some(modelDir.value),
         verbose = verbose,
         maxArraySize = 4
       ),
@@ -100,7 +100,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
         testOptions = baseOptions(
           packageName = Some("bc"),
           slangOutputDir = Some((modelDir / "hamr" / "slang").value),
-          aadlRootDir = Some(modelDir.value),
+          workspaceRootDir = Some(modelDir.value),
           verbose = verbose
         ),
         phantomOptions = None(),
