@@ -20,7 +20,7 @@ trait CodeGenTest extends CodegenTestSuite {
 
   import CodeGenTest._
 
-  def generateExpected: B = F
+  def generateExpected: B = Os.env("HAMR_REGEN_EXPECTED").nonEmpty
 
   assert (!generateExpected || !TestUtil.isCI, "generateExpected must be false when pushed to github")
 

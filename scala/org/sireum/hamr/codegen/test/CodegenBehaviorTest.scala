@@ -16,7 +16,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
   def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
     ISZ(TestMode.sergen, TestMode.slangcheck)
 
-  def justRegenerate: B = F // ignore test modes
+  def justRegenerate: B = Os.env("HAMR_REGEN_EXPECTED").nonEmpty // ignore test modes
 
   def disablePhantom: B = F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
