@@ -1,1 +1,0 @@
-// Isolette_Environment.Heat is a Enum

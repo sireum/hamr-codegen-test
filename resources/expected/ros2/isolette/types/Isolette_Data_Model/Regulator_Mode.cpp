@@ -1,1 +1,0 @@
-// Isolette_Data_Model.Regulator_Mode is a Enum

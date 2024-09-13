@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.8)
+project(building_control_cpp_pkg)
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(example_interfaces REQUIRED)
+
+include_directories(include)
+
+add_executable(BuildingControlDemo_i_Instance_tcp_tempSensor_exe src/base_code/BuildingControlDemo_i_Instance_tcp_tempSensor_runner.cpp src/user_code/BuildingControlDemo_i_Instance_tcp_tempSensor_src.cpp src/base_code/BuildingControlDemo_i_Instance_tcp_tempSensor_base_src.cpp)
+ament_target_dependencies(BuildingControlDemo_i_Instance_tcp_tempSensor_exe rclcpp example_interfaces)
+
+add_executable(BuildingControlDemo_i_Instance_tcp_tempControl_exe src/base_code/BuildingControlDemo_i_Instance_tcp_tempControl_runner.cpp src/user_code/BuildingControlDemo_i_Instance_tcp_tempControl_src.cpp src/base_code/BuildingControlDemo_i_Instance_tcp_tempControl_base_src.cpp)
+ament_target_dependencies(BuildingControlDemo_i_Instance_tcp_tempControl_exe rclcpp example_interfaces)
+
+add_executable(BuildingControlDemo_i_Instance_tcp_fan_exe src/base_code/BuildingControlDemo_i_Instance_tcp_fan_runner.cpp src/user_code/BuildingControlDemo_i_Instance_tcp_fan_src.cpp src/base_code/BuildingControlDemo_i_Instance_tcp_fan_base_src.cpp)
+ament_target_dependencies(BuildingControlDemo_i_Instance_tcp_fan_exe rclcpp example_interfaces)
+
+install(TARGETS
+    BuildingControlDemo_i_Instance_tcp_tempSensor_exe
+    BuildingControlDemo_i_Instance_tcp_tempControl_exe
+    BuildingControlDemo_i_Instance_tcp_fan_exe
+    DESTINATION lib/${PROJECT_NAME}
+)
+
+ament_package()

@@ -1,1 +1,0 @@
-// Isolette_Data_Model.On_Off is a Enum

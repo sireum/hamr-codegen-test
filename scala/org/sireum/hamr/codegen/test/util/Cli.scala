@@ -24,6 +24,16 @@ object Cli {
     'Ros2
   }
 
+  @enum object CodegenNodesCodeLanguage {
+    'Python
+    'Cpp
+  }
+
+  @enum object CodegenLaunchCodeLanguage {
+    'Python
+    'Xml
+  }
+
   @datatype class CodegenOption(
     val help: String,
     val args: ISZ[String],
@@ -48,6 +58,11 @@ object Cli {
     val camkesOutputDir: Option[String],
     val camkesAuxCodeDirs: ISZ[String],
     val workspaceRootDir: Option[String],
+    val strictAadlMode: B,
+    val ros2OutputWorkspaceDir: Option[String],
+    val ros2Dir: Option[String],
+    val ros2NodesLanguage: CodegenNodesCodeLanguage.Type,
+    val ros2LaunchLanguage: CodegenLaunchCodeLanguage.Type,
     val experimentalOptions: ISZ[String]
   ) extends HamrCodegenCliTopOption
 }
@@ -78,6 +93,44 @@ import Cli._
       return None()
     }
     val r = parseCodegenHamrPlatformH(args(i))
+    return r
+  }
+
+  def parseCodegenNodesCodeLanguageH(arg: String): Option[CodegenNodesCodeLanguage.Type] = {
+    arg.native match {
+      case "Python" => return Some(CodegenNodesCodeLanguage.Python)
+      case "Cpp" => return Some(CodegenNodesCodeLanguage.Cpp)
+      case s =>
+        eprintln(s"Expecting one of the following: { Python, Cpp }, but found '$s'.")
+        return None()
+    }
+  }
+
+  def parseCodegenNodesCodeLanguage(args: ISZ[String], i: Z): Option[CodegenNodesCodeLanguage.Type] = {
+    if (i >= args.size) {
+      eprintln("Expecting one of the following: { Python, Cpp }, but none found.")
+      return None()
+    }
+    val r = parseCodegenNodesCodeLanguageH(args(i))
+    return r
+  }
+
+  def parseCodegenLaunchCodeLanguageH(arg: String): Option[CodegenLaunchCodeLanguage.Type] = {
+    arg.native match {
+      case "Python" => return Some(CodegenLaunchCodeLanguage.Python)
+      case "Xml" => return Some(CodegenLaunchCodeLanguage.Xml)
+      case s =>
+        eprintln(s"Expecting one of the following: { Python, Xml }, but found '$s'.")
+        return None()
+    }
+  }
+
+  def parseCodegenLaunchCodeLanguage(args: ISZ[String], i: Z): Option[CodegenLaunchCodeLanguage.Type] = {
+    if (i >= args.size) {
+      eprintln("Expecting one of the following: { Python, Xml }, but none found.")
+      return None()
+    }
+    val r = parseCodegenLaunchCodeLanguageH(args(i))
     return r
   }
 
@@ -136,6 +189,21 @@ import Cli._
           |                          Root directory containing the architectural model
           |                           project (expects a path)
           |
+          |ROS2 Options:
+          |    --strict-aadl-mode   Whether to generate strictly AADL-compliant code or
+          |                           not (will probably become obsolete soon)
+          |    --ros2-output-workspace-dir
+          |                          The path to the ROS2 workspace to generate the
+          |                           packages into (expects a path)
+          |-r, --ros2-dir           The path to your ROS2 installation, including the
+          |                           version (../ros/humble) (expects a path)
+          |-p, --ros2-nodes-language    
+          |                          The programming language for the generated node files
+          |                           (expects one of { Python, Cpp }; default: Python)
+          |-p, --ros2-launch-language    
+          |                          The programming language for the launch file (expects
+          |                           one of { Python, Xml }; default: Python)
+          |
           |Experimental Options:
           |-x, --experimental-options    
           |                           (expects a string separated by ";")""".render
@@ -161,6 +229,11 @@ import Cli._
     var camkesOutputDir: Option[String] = None[String]()
     var camkesAuxCodeDirs: ISZ[String] = ISZ[String]()
     var workspaceRootDir: Option[String] = None[String]()
+    var strictAadlMode: B = false
+    var ros2OutputWorkspaceDir: Option[String] = None[String]()
+    var ros2Dir: Option[String] = None[String]()
+    var ros2NodesLanguage: CodegenNodesCodeLanguage.Type = CodegenNodesCodeLanguage.Python
+    var ros2LaunchLanguage: CodegenLaunchCodeLanguage.Type = CodegenLaunchCodeLanguage.Python
     var experimentalOptions: ISZ[String] = ISZ[String]()
     var j = i
     var isOption = T
@@ -296,6 +369,36 @@ import Cli._
              case Some(v) => workspaceRootDir = v
              case _ => return None()
            }
+         } else if (arg == "--strict-aadl-mode") {
+           val o: Option[B] = { j = j - 1; Some(!strictAadlMode) }
+           o match {
+             case Some(v) => strictAadlMode = v
+             case _ => return None()
+           }
+         } else if (arg == "--ros2-output-workspace-dir") {
+           val o: Option[Option[String]] = parsePath(args, j + 1)
+           o match {
+             case Some(v) => ros2OutputWorkspaceDir = v
+             case _ => return None()
+           }
+         } else if (arg == "-r" || arg == "--ros2-dir") {
+           val o: Option[Option[String]] = parsePath(args, j + 1)
+           o match {
+             case Some(v) => ros2Dir = v
+             case _ => return None()
+           }
+         } else if (arg == "-p" || arg == "--ros2-nodes-language") {
+           val o: Option[CodegenNodesCodeLanguage.Type] = parseCodegenNodesCodeLanguage(args, j + 1)
+           o match {
+             case Some(v) => ros2NodesLanguage = v
+             case _ => return None()
+           }
+         } else if (arg == "-p" || arg == "--ros2-launch-language") {
+           val o: Option[CodegenLaunchCodeLanguage.Type] = parseCodegenLaunchCodeLanguage(args, j + 1)
+           o match {
+             case Some(v) => ros2LaunchLanguage = v
+             case _ => return None()
+           }
          } else if (arg == "-x" || arg == "--experimental-options") {
            val o: Option[ISZ[String]] = parseStrings(args, j + 1, ';')
            o match {
@@ -311,7 +414,7 @@ import Cli._
         isOption = F
       }
     }
-    return Some(CodegenOption(help, parseArguments(args, j), msgpack, verbose, runtimeMonitoring, platform, parseableMessages, slangOutputDir, packageName, noProyekIve, noEmbedArt, devicesAsThreads, genSbtMill, slangAuxCodeDirs, slangOutputCDir, excludeComponentImpl, bitWidth, maxStringSize, maxArraySize, runTranspiler, camkesOutputDir, camkesAuxCodeDirs, workspaceRootDir, experimentalOptions))
+    return Some(CodegenOption(help, parseArguments(args, j), msgpack, verbose, runtimeMonitoring, platform, parseableMessages, slangOutputDir, packageName, noProyekIve, noEmbedArt, devicesAsThreads, genSbtMill, slangAuxCodeDirs, slangOutputCDir, excludeComponentImpl, bitWidth, maxStringSize, maxArraySize, runTranspiler, camkesOutputDir, camkesAuxCodeDirs, workspaceRootDir, strictAadlMode, ros2OutputWorkspaceDir, ros2Dir, ros2NodesLanguage, ros2LaunchLanguage, experimentalOptions))
   }
 
   def parseArguments(args: ISZ[String], i: Z): ISZ[String] = {

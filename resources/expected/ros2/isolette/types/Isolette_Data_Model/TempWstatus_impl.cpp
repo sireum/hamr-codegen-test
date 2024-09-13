@@ -1,1 +1,0 @@
-// Isolette_Data_Model.TempWstatus_impl is a Record

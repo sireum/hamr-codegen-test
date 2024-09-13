@@ -1,1 +1,0 @@
-// BuildingControl.Temperature_impl is a Record

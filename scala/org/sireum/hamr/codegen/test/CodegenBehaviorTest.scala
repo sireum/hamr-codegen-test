@@ -4,11 +4,10 @@ import org.sireum._
 import org.sireum.hamr.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.common.util._
-import org.sireum.hamr.codegen.test.util.Cli.{CodegenHamrPlatform, CodegenOption}
+import org.sireum.hamr.codegen.test.util.Cli.CodegenOption
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
 import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
 import org.sireum.message.Reporter
-import org.sireum.test.TestSuite
 
 trait CodegenBehaviorTest extends CodegenTestSuite {
 
@@ -250,12 +249,14 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     verbose = F,
     runtimeMonitoring = F,
     platform = CodeGenPlatform.JVM,
+    //
     slangOutputDir = None(),
     packageName = None(),
     noProyekIve = T,
     noEmbedArt = F,
     devicesAsThreads = T,
     genSbtMill = T,
+    //
     slangAuxCodeDirs = ISZ(),
     slangOutputCDir = None(),
     excludeComponentImpl = F,
@@ -263,9 +264,17 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     maxStringSize = 256,
     maxArraySize = 1,
     runTranspiler = F,
+    //
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     workspaceRootDir = None(),
+    //
+    strictAadlMode = F,
+    ros2OutputWorkspaceDir = None(),
+    ros2Dir = None(),
+    ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
+    ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml,
+    //
     experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
   )
 }
@@ -338,16 +347,6 @@ object CodegenBehaviorTest {
 
     val ret: Option[CodeGenConfig] = util.Cli(Os.pathSepChar).parseCodegen(args, 0) match {
       case Some(opts: CodegenOption) =>
-        val platform = opts.platform match {
-          case CodegenHamrPlatform.JVM => CodeGenPlatform.JVM
-          case CodegenHamrPlatform.Linux => CodeGenPlatform.Linux
-          case CodegenHamrPlatform.Cygwin => CodeGenPlatform.Cygwin
-          case CodegenHamrPlatform.MacOS => CodeGenPlatform.MacOS
-          case CodegenHamrPlatform.SeL4 => CodeGenPlatform.SeL4
-          case CodegenHamrPlatform.SeL4_Only => CodeGenPlatform.SeL4_Only
-          case CodegenHamrPlatform.SeL4_TB => CodeGenPlatform.SeL4_TB
-          case CodegenHamrPlatform.Ros2 => CodeGenPlatform.Ros2
-        }
 
         val aadlRoot = if (opts.workspaceRootDir.isEmpty) canon(Some(".")) else canon(opts.workspaceRootDir)
 
@@ -357,13 +356,15 @@ object CodegenBehaviorTest {
 
           verbose = opts.verbose,
           runtimeMonitoring = opts.runtimeMonitoring,
-          platform = platform,
+          platform = CodeGenPlatform.byName(opts.platform.name).get,
+
           slangOutputDir = canon(opts.slangOutputDir),
           packageName = opts.packageName,
           noProyekIve = opts.noProyekIve,
           noEmbedArt = opts.noEmbedArt,
           devicesAsThreads = opts.devicesAsThreads,
           genSbtMill = opts.genSbtMill,
+          //
           slangAuxCodeDirs = opts.slangAuxCodeDirs.map(s => canon(Some(s)).get),
           slangOutputCDir = canon(opts.slangOutputCDir),
           excludeComponentImpl = opts.excludeComponentImpl,
@@ -371,9 +372,17 @@ object CodegenBehaviorTest {
           maxStringSize = opts.maxStringSize,
           maxArraySize = opts.maxArraySize,
           runTranspiler = opts.runTranspiler,
+          //
           camkesOutputDir = canon(opts.camkesOutputDir),
           camkesAuxCodeDirs = opts.camkesAuxCodeDirs.map(s => canon(Some(s)).get),
           workspaceRootDir = aadlRoot,
+          //
+          strictAadlMode = opts.strictAadlMode,
+          ros2OutputWorkspaceDir = opts.ros2OutputWorkspaceDir,
+          ros2Dir = opts.ros2Dir,
+          ros2NodesLanguage = CodegenNodesCodeLanguage.byName(opts.ros2NodesLanguage.name).get,
+          ros2LaunchLanguage = CodegenLaunchCodeLanguage.byName(opts.ros2LaunchLanguage.name).get,
+          //
           experimentalOptions = opts.experimentalOptions
         ))
 

@@ -1,1 +1,0 @@
-// Physical_Types.Current_imp is a Record

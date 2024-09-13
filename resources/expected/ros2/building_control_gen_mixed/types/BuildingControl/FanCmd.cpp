@@ -1,1 +1,0 @@
-// BuildingControl.FanCmd is a Enum

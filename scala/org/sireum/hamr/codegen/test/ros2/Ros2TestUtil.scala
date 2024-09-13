@@ -12,9 +12,9 @@ trait  Ros2TestUtil {
   def expectedRoot: Os.Path
   def resultsRoot: Os.Path
 
-  def copy(testName: String, filter: Os.Path => B = x => T): Os.Path = {
-    val srcDir = expectedRoot / testName
-    val resultDir = getExpectedDir(testName)
+  def copy(testName: String, filter: Os.Path => B = x => T, strictModeString: String): Os.Path = {
+    val srcDir = expectedRoot / testName / strictModeString
+    val resultDir = getExpectedDir(testName, strictModeString)
     resultDir.removeAll()
 
     for (r <- Os.Path.walk(srcDir, F, F, filter)) {
@@ -24,12 +24,12 @@ trait  Ros2TestUtil {
     return resultDir
   }
 
-  def getExpectedDir(testName: String): Os.Path = resultsRoot / testName / "expected"
-  def getResultsDir(testName: String): Os.Path = resultsRoot / testName / "results"
+  def getExpectedDir(testName: String, strictModeString: String): Os.Path = resultsRoot / testName / "expected" / strictModeString
+  def getResultsDir(testName: String, strictModeString: String): Os.Path = resultsRoot / testName / "results" / strictModeString
 
-  def compare(testName: String, filter: Os.Path => B = _ => T): B = {
-    val expected = getExpectedDir(testName)
-    val results = getResultsDir(testName)
+  def compare(testName: String, filter: Os.Path => B = _ => T, strictModeString: String): B = {
+    val expected = getExpectedDir(testName, strictModeString)
+    val results = getResultsDir(testName, strictModeString)
 
     def toMap(dir: Os.Path): Map[String, Os.Path] = {
       var ret = Map.empty[String, Os.Path]

@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test.ros2
 
 import org.sireum._
-import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults}
+import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage}
 import org.sireum.hamr.codegen.test.util.TestUtil
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
@@ -15,6 +15,10 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
   val verbose: B = F
 
+  // TODO: The ROS2 setup file is currently hardcoded!  Will need to change
+  val ros2SetupPath: String = "/opt/ros/humble/setup.bash"
+  val buildRosPkgs: B = F
+
   val root = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
   val resourceDir: Os.Path = root / "resources"
   val expectedRoot: Os.Path = resourceDir / "expected" / "ros2"
@@ -22,39 +26,71 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
   val codegen_base = resourceDir / "models" / "CodeGenTest_Base"
 
-  "building_control_gen_mixed" in {
+  "building_control_gen_mixed_lax" in {
     val testName = "building_control_gen_mixed"
     val root = codegen_base / testName
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
   }
 
-  "isolette" in {
+  "building_control_gen_mixed_strict" in {
+    val testName = "building_control_gen_mixed"
+    val root = codegen_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
+  }
+
+  "isolette_lax" in {
     val testName = "isolette"
     val root = codegen_base / testName
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
   }
 
-  "pca-pump" in {
+  "isolette_strict" in {
+    val testName = "isolette"
+    val root = codegen_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
+  }
+
+  "pca-pump_lax" in {
     val testName = "pca-pump"
     val root = codegen_base / testName
     val airFile = getAir(root / "pca")
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
+  }
+
+  "pca-pump_strict" in {
+    val testName = "pca-pump"
+    val root = codegen_base / testName
+    val airFile = getAir(root / "pca")
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
   }
 
   def testRos(testName: String, airFile: Os.Path, modelDir: Os.Path, config: CodeGenConfig, verbose: B): Unit = {
     val reporter = Reporter.create
 
-    val filter: Os.Path => B = _ => T
+    val strictMode = config.strictAadlMode
+    val strictModeString = if (strictMode) "strict" else "lax"
 
-    copy(testName, filter)
+    val destDir = getResultsDir(testName, strictModeString)
+
+    val filter: Os.Path => B = _ => true
+
+    copy(testName, filter, strictModeString)
 
     var failureReasons: ISZ[String] = ISZ()
 
@@ -63,6 +99,16 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     var testOps = config(
       workspaceRootDir = if (config.workspaceRootDir.nonEmpty) config.workspaceRootDir else Some(modelDir.canon.value)
     )
+
+    // TODO: Currently hardcoded, since I'm just working on cpp and xml
+    testOps = testOps.apply(
+      ros2OutputWorkspaceDir = Some(destDir.value),
+      ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
+      ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml
+    )
+
+    destDir.removeAll()
+    println(s"Result Dir: ${destDir.up.toUri}")
 
     val results: CodeGenResults = CodeGen.codeGen(
       model = model, options = testOps, plugins = MSZ(), reporter = reporter,
@@ -73,10 +119,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
     failureReasons = failureReasons ++ (for (e <- reporter.errors) yield e.text)
 
-    val destDir = getResultsDir(testName)
-    destDir.removeAll()
-    println(s"Result Dir: ${destDir.up.toUri}")
-
+    /*
     if (!reporter.hasError) {
       for (r <- results.resources) {
         val destFile = destDir / r.dstPath
@@ -90,17 +133,33 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
         }
       }
     }
+    */
 
     if (generateExpected) {
       assert (!isCI, "generateExpected should be F when code is pushed to github")
 
-      val expectedDir = this.expectedRoot / testName
+      val expectedDir = this.expectedRoot / testName / strictModeString
       expectedDir.removeAll()
-      getResultsDir(testName).copyOverTo(expectedDir)
+      getResultsDir(testName, strictModeString).copyOverTo(expectedDir)
       println(s"Replaced: ${expectedDir}")
     } else {
-      if (!compare(testName, filter)) {
+      if (!compare(testName, filter, strictModeString)) {
         failureReasons = failureReasons :+ "Results did not match expected"
+      }
+    }
+
+    // Currently, the results directory is compared with the expected directory before running "colcon build".
+    // For an unknown reason, the compare() method halts and does not complete when run after building.
+    // Additionally, some details of the building process appear to be version dependent, so comparing before
+    // building is probably preferable - Clint
+    if (buildRosPkgs) {
+      val pkgName = ops.ISZOps(ops.StringOps(results.resources.apply(0).dstPath).split(c => c.toString == "/".toString)).drop(1).apply(0)
+
+      val buildResults = Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName} ${pkgName}_bringup"))
+        .apply(wd = resultsRoot / testName / "results" / strictModeString).console.run()
+
+      if (!buildResults.out.toString.contains("Summary: 2 packages finished")) {
+        failureReasons = failureReasons :+ "Colcon build failed"
       }
     }
 
@@ -117,12 +176,14 @@ object Ros2Tests {
     runtimeMonitoring = F,
     verbose = F,
     platform = CodeGenPlatform.Ros2,
+    //
     slangOutputDir = None(),
     packageName = None(),
     noProyekIve = T,
     noEmbedArt = F,
     devicesAsThreads = T,
     genSbtMill = T,
+    //
     slangAuxCodeDirs = ISZ(),
     slangOutputCDir = None(),
     excludeComponentImpl = F,
@@ -130,9 +191,17 @@ object Ros2Tests {
     maxStringSize = 256,
     maxArraySize = 1,
     runTranspiler = F,
+    //
     camkesOutputDir = None(),
     camkesAuxCodeDirs = ISZ(),
     workspaceRootDir = None(),
+    // ros2 options
+    strictAadlMode = F,
+    ros2OutputWorkspaceDir = None(),
+    ros2Dir = None(),
+    ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
+    ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml,
+    //
     experimentalOptions = ISZ()
   )
 
