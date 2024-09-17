@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test.normal
 
 import org.sireum._
-import org.sireum.hamr.codegen.common.util.CodeGenPlatform
+import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.TestMode
@@ -26,7 +26,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "arrays_PC_Sys_Impl_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.Linux
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ())
@@ -39,7 +39,7 @@ class CodeGenTest_Base extends CodeGenTest {
 
       val packageName: Option[String] = Some("bit_codec")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
       val bo = baseOptions(
         platform = platform,
         packageName = packageName,
@@ -48,7 +48,7 @@ class CodeGenTest_Base extends CodeGenTest {
       )
       test(s"$name--${platform}", modelDir, model, bo, None(), None(), ISZ())
 
-      platform = CodeGenPlatform.Linux
+      platform = CodegenHamrPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         bo(platform = platform), None(), None(), ISZ())
 
@@ -56,7 +56,7 @@ class CodeGenTest_Base extends CodeGenTest {
         bo(platform = platform, excludeComponentImpl = T),
         None(), None(), ISZ())
 
-      platform = CodeGenPlatform.SeL4
+      platform = CodegenHamrPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         bo(platform = platform), None(), None(), ISZ())
 
@@ -70,7 +70,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "BuildingControl_BuildingControlDemo_i_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
       test(s"$name--${platform}-Embed-Art", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ())
@@ -80,24 +80,24 @@ class CodeGenTest_Base extends CodeGenTest {
           runtimeMonitoring = T),
         None(), None(), ISZ())
 
-      platform = CodeGenPlatform.JVM
+      platform = CodegenHamrPlatform.JVM
       test(s"$name--${platform}-Do-not-embed-art", modelDir, model,
         baseOptions(platform = platform,
           noEmbedArt = T),
         None(), None(), ISZ())
 
-      platform = CodeGenPlatform.Linux
+      platform = CodegenHamrPlatform.Linux
       test(s"$name--${platform}-Embed-Art-SharedMemory", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ())
 
-      platform = CodeGenPlatform.Linux
+      platform = CodegenHamrPlatform.Linux
       test(s"$name--${platform}-Embed-Art-SharedMemory-Excludes", modelDir, model,
         baseOptions(platform = platform,
           excludeComponentImpl = T),
         None(), None(), ISZ())
 
-      platform = CodeGenPlatform.SeL4
+      platform = CodegenHamrPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform,
           excludeComponentImpl = T,
@@ -116,7 +116,7 @@ class CodeGenTest_Base extends CodeGenTest {
 
       val packageName: Option[String] = Some("datatypes")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
       val bo = baseOptions(
         platform = platform,
         packageName = packageName,
@@ -125,7 +125,7 @@ class CodeGenTest_Base extends CodeGenTest {
       )
       test(s"$name--${platform}", modelDir, model, bo, None(), None(), ISZ())
 
-      platform = CodeGenPlatform.Linux
+      platform = CodegenHamrPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         bo(platform = platform), None(), None(), ISZ())
 
@@ -140,7 +140,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "Nested_Feature_Group_Test_S_impl_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ())
@@ -151,7 +151,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "wbs_wms_impl_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
           platform = platform,
@@ -166,7 +166,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / "pca" / ".slang" / "PCA_System_wrap_pca_imp_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
           platform = platform,
@@ -179,17 +179,17 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "Isolette_isolette_single_sensor_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ())
 
-      platform = CodeGenPlatform.Linux
+      platform = CodegenHamrPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ())
 
-      platform = CodeGenPlatform.SeL4
+      platform = CodegenHamrPlatform.SeL4
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ())
@@ -201,23 +201,23 @@ class CodeGenTest_Base extends CodeGenTest {
       val model = Some(modelDir / ".slang" / "UAV_UAV_Impl_Instance.json")
       val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/tool-eval-2/ACT_Demo_Dec2018_alt")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), uri, ISZ())
 
-      platform = CodeGenPlatform.Linux
+      platform = CodegenHamrPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform,
           maxStringSize = 300),
         None(), uri, ISZ())
 
-      platform = CodeGenPlatform.SeL4_TB
+      platform = CodegenHamrPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), uri, ISZ())
 
-      platform = CodeGenPlatform.SeL4_Only
+      platform = CodegenHamrPlatform.SeL4_Only
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), uri, ISZ())
@@ -232,12 +232,12 @@ class CodeGenTest_Base extends CodeGenTest {
         """Incomplete - Need to introduce pacer component for seL4_Only profile
           |           - Entrypoints not defined in AADL model so CAmkES components will not be dispatched""".stripMargin)
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         description, uri, ISZ())
 
-      platform = CodeGenPlatform.SeL4_Only
+      platform = CodegenHamrPlatform.SeL4_Only
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         description, uri, ISZ())
@@ -248,7 +248,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "UAV_UAV_Impl_Instance.json")
       val uri: Option[String] = Some("https://github.com/ku-sldg/CASETeam/tree/8a96b31cf7b466ee3d558d349f21835e427d37c9/examples/ksu-proprietary/simple-uav-slang-example/uav-project-extern/src/aadl/ACT_Demo_Dec2018")
-      val platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      val platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4
 
       test(s"$name--${platform}", modelDir, model,
         baseOptions(
@@ -278,13 +278,13 @@ class CodeGenTest_Base extends CodeGenTest {
         val model = Some(modelDir / ".slang" / "testdpmon_top_impl_Instance.json")
         val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testdpmon")
 
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+        var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           Some("Data port micro-example - Trusted Build profile"), uri, ISZ()
         )
 
-        platform = CodeGenPlatform.SeL4_Only
+        platform = CodegenHamrPlatform.SeL4_Only
         val jimUri = "https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/experiments/Simple_UAV_Example_domains/CAmkES"
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
@@ -300,13 +300,13 @@ class CodeGenTest_Base extends CodeGenTest {
         val model = Some(modelDir / ".slang" / "testdpmon_top_impl_Instance.json")
         val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testdpmon-periodic")
 
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+        var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           Some("Data port micro-example with periodic threads - Trusted Build profile"), uri, ISZ()
         )
 
-        platform = CodeGenPlatform.SeL4_Only
+        platform = CodegenHamrPlatform.SeL4_Only
         val jimUri = "https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/experiments/Simple_UAV_Example_domains/CAmkES"
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
@@ -323,13 +323,13 @@ class CodeGenTest_Base extends CodeGenTest {
         val model = Some(modelDir / ".slang" / "testepmon_top_impl_Instance.json")
         val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testepmon")
 
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+        var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           Some(s"Event Data port micro-example - Trusted Build profile"), uri, ISZ()
         )
 
-        platform = CodeGenPlatform.SeL4_Only
+        platform = CodegenHamrPlatform.SeL4_Only
         val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-eventdata-monitor"
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
@@ -344,13 +344,13 @@ class CodeGenTest_Base extends CodeGenTest {
           val model = Some(modelDir / ".slang" / "testevent_top_impl_Instance.json")
           val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testevent")
 
-          var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+          var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
           test(s"$name--${platform}", modelDir, model,
             baseOptions(platform = platform),
             Some("Event port micro-example - Trusted Build profile"), uri, ISZ()
           )
 
-          platform = CodeGenPlatform.SeL4_Only
+          platform = CodegenHamrPlatform.SeL4_Only
           val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-direct"
           test(s"$name--${platform}", modelDir, model,
             baseOptions(platform = platform),
@@ -367,13 +367,13 @@ class CodeGenTest_Base extends CodeGenTest {
         val model = Some(modelDir / ".slang" / "testevent_top_impl_Instance.json")
         val uri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/d06e4def37c2ff9388f51b36c18d61fba00bce8e/TA5/unit-tests/AADL/testevent")
 
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+        var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           Some("Event port micro-example - Trusted Build profile"), uri, ISZ()
         )
 
-        platform = CodeGenPlatform.SeL4_Only
+        platform = CodegenHamrPlatform.SeL4_Only
         val ihorUri = "https://github.com/ikuz/camkes/tree/33d68bd75a8c4903932203cc6dba5cf545a8f152/apps/aadl-event-direct"
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
@@ -389,7 +389,7 @@ class CodeGenTest_Base extends CodeGenTest {
         val model = Some(modelDir / ".slang" / "testshare_top_impl_Instance.json")
         val modelUri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testshare")
 
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+        var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           None(), modelUri, ISZ()
@@ -404,7 +404,7 @@ class CodeGenTest_Base extends CodeGenTest {
         val model = Some(modelDir / ".slang" / "testsubprogram_top_impl_Instance.json")
         val modelUri: Option[String] = Some("https://github.com/loonwerks/CASE/tree/a7782a8fb405e6502c5f176d381f50a03f915ca6/TA5/unit-tests/AADL/testsubprogram")
 
-        var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+        var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
         test(s"$name--${platform}", modelDir, model,
           baseOptions(platform = platform),
           None(), modelUri, ISZ()
@@ -417,7 +417,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "periodic_Critical_Impl_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4_TB
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4_TB
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ()
@@ -429,13 +429,13 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "Urgency_Sys_impl_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ()
       )
 
-      platform = CodeGenPlatform.Linux
+      platform = CodegenHamrPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform),
         None(), None(), ISZ()
@@ -448,7 +448,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "PFC_PFC_Sys_Impl_Instance.json")
 
-      val platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      val platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4
       val packageName: Option[String] = Some("pfc_project")
 
       test(s"$name--${platform}", modelDir, model,
@@ -476,7 +476,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "PFC_PFC_Sys_Impl_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4
       val packageName: Option[String] = Some("pfc_project")
 
       test(s"$name--${platform}", modelDir, model,
@@ -504,7 +504,7 @@ class CodeGenTest_Base extends CodeGenTest {
       val modelDir = modelsDir / name
       val model = Some(modelDir / ".slang" / "PFC_PFC_Sys_Impl_Instance.json")
 
-      var platform: CodeGenPlatform.Type = CodeGenPlatform.SeL4
+      var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.SeL4
       val packageName: Option[String] = Some("pfc_project")
 
       test(s"$name--${platform}", modelDir, model,

@@ -2,7 +2,7 @@ package org.sireum.hamr.codegen.test.expensive
 
 import org.scalatest.BeforeAndAfterAll
 import org.sireum._
-import org.sireum.hamr.codegen.common.util.{CodeGenPlatform, ExperimentalOptions}
+import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
@@ -36,15 +36,15 @@ class HamrTranspileTests extends CodeGenTest with BeforeAndAfterAll {
 
   val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
 
-  val (linux, sel4, sel4_tb, sel4_only) = (CodeGenPlatform.Linux, CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
+  val (linux, sel4, sel4_tb, sel4_only) = (CodegenHamrPlatform.Linux, CodegenHamrPlatform.SeL4, CodegenHamrPlatform.SeL4_TB, CodegenHamrPlatform.SeL4_Only)
 
-  def gen(name: String, dir: Os.Path, json: String, platforms: ISZ[CodeGenPlatform.Type]): (String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type]) = {
+  def gen(name: String, dir: Os.Path, json: String, platforms: ISZ[CodegenHamrPlatform.Type]): (String, Os.Path, Os.Path, ISZ[CodegenHamrPlatform.Type]) = {
     val modelDir = dir / name
     val testName = name.native.replaceAll("/", "__")
     return (testName, modelDir, modelDir / ".slang" / json, platforms)
   }
 
-  val tests: ISZ[(String, Os.Path, Os.Path, ISZ[CodeGenPlatform.Type])] = ISZ(
+  val tests: ISZ[(String, Os.Path, Os.Path, ISZ[CodegenHamrPlatform.Type])] = ISZ(
     gen("building_control_gen_mixed", testResources.modelsDir, "BuildingControl_BuildingControlDemo_i_Instance.json", ISZ(linux)),
 
     gen("attestation-gate", testResources.modelsDir, "SysContext_top_Impl_Instance.json", ISZ(sel4)),

@@ -1,13 +1,13 @@
 package org.sireum.hamr.codegen.test.ros2
 
 import org.sireum._
-import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenIpcMechanism, CodeGenPlatform, CodeGenResults, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage}
 import org.sireum.hamr.codegen.test.util.TestUtil
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 import Ros2Tests._
 import org.sireum.hamr.codegen.CodeGen
-import org.sireum.hamr.codegen.common.containers.IResource
+import org.sireum.hamr.codegen.common.util.CodegenResults
+import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 
 class Ros2Tests extends TestSuite with Ros2TestUtil {
 
@@ -80,7 +80,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
   }
 
-  def testRos(testName: String, airFile: Os.Path, modelDir: Os.Path, config: CodeGenConfig, verbose: B): Unit = {
+  def testRos(testName: String, airFile: Os.Path, modelDir: Os.Path, config: CodegenOption, verbose: B): Unit = {
     val reporter = Reporter.create
 
     val strictMode = config.strictAadlMode
@@ -110,8 +110,8 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     destDir.removeAll()
     println(s"Result Dir: ${destDir.up.toUri}")
 
-    val results: CodeGenResults = CodeGen.codeGen(
-      model = model, options = testOps, plugins = MSZ(), reporter = reporter,
+    val results: CodegenResults = CodeGen.codeGen(
+      model = model, shouldWriteOutResources = T, options = testOps, plugins = MSZ(), reporter = reporter,
       transpilerCallback = (_, _) => 0,
       proyekIveCallback = _ => 0,
       sergenCallback = (_, _) => 0,
@@ -169,13 +169,14 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
 
 object Ros2Tests {
-  val baseOptions = CodeGenConfig(
-    writeOutResources = T,
-    ipc = CodeGenIpcMechanism.SharedMemory,
-
-    runtimeMonitoring = F,
+  val baseOptions = CodegenOption(
+    help = "",
+    args = ISZ(),
+    msgpack = F,
     verbose = F,
-    platform = CodeGenPlatform.Ros2,
+    runtimeMonitoring = F,
+    platform = CodegenHamrPlatform.Ros2,
+    parseableMessages = F,
     //
     slangOutputDir = None(),
     packageName = None(),

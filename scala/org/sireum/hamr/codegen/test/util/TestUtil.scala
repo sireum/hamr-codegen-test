@@ -5,7 +5,7 @@ import org.sireum._
 import org.sireum.hamr.act.templates.SlangEmbeddedTemplate
 import org.sireum.hamr.act.util.CMakeOption
 import org.sireum.hamr.codegen.common.containers.{SireumProyekIveOption, SireumSlangTranspilersCOption, SireumToolsSergenOption, SireumToolsSlangcheckGeneratorOption}
-import org.sireum.hamr.codegen.common.util.{CodeGenConfig, CodeGenPlatform}
+import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenOption}
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.ir.{Aadl, JSON}
 import org.sireum.message.Reporter
@@ -176,7 +176,7 @@ object TestUtil {
 
 
   def runAdditionalTasks(testName: String,
-                         testOps: CodeGenConfig,
+                         testOps: CodegenOption,
                          testModes: ISZ[TestMode.Type],
                          logikaOptions: Option[String],
                          verbose: B,
@@ -314,7 +314,7 @@ object TestUtil {
         _check(cTranspileResults, "C transpiling failed")
 
       } else {
-        assert(testOps.platform == CodeGenPlatform.SeL4, s"Hmm, ${testOps.platform}")
+        assert(testOps.platform == CodegenHamrPlatform.SeL4, s"Hmm, ${testOps.platform}")
         val transpileScript = fetch("transpile-sel4.cmd", slangOutDir.get)
 
         println(s"Transpiling ${testOps.platform} via script ...")
@@ -471,7 +471,7 @@ object TestUtil {
 
           var camkesEnv: ISZ[(String, String)] = ISZ()
 
-          if (testOps.platform == CodeGenPlatform.SeL4) {
+          if (testOps.platform == CodegenHamrPlatform.SeL4) {
             val toptions = SlangEmbeddedTemplate.TRANSPILER_OPTIONS.filter(c => c.name != string"NO_PRINT")
             camkesEnv = camkesEnv ++ onOptions(toptions)
           }
@@ -507,74 +507,74 @@ object TestUtil {
     return keepGoing // ie. no failure occurred
   }
 
-  def isLinux(platform: CodeGenPlatform.Type): Boolean = {
+  def isLinux(platform: CodegenHamrPlatform.Type): Boolean = {
     return platform match {
-      case CodeGenPlatform.Linux => T
-      case CodeGenPlatform.MacOS => T
-      case CodeGenPlatform.Cygwin => T
+      case CodegenHamrPlatform.Linux => T
+      case CodegenHamrPlatform.MacOS => T
+      case CodegenHamrPlatform.Cygwin => T
       case _ => F
     }
   }
 
-  def isSeL4(platform: CodeGenPlatform.Type): Boolean = {
+  def isSeL4(platform: CodegenHamrPlatform.Type): Boolean = {
     return platform match {
-      case CodeGenPlatform.SeL4 => T
-      case CodeGenPlatform.SeL4_TB => T
-      case CodeGenPlatform.SeL4_Only => T
+      case CodegenHamrPlatform.SeL4 => T
+      case CodegenHamrPlatform.SeL4_TB => T
+      case CodegenHamrPlatform.SeL4_Only => T
       case _ => F
     }
   }
 
-  def isSlang(platform: CodeGenPlatform.Type): B = {
-    return isLinux(platform) || platform == CodeGenPlatform.JVM || platform == CodeGenPlatform.SeL4
+  def isSlang(platform: CodegenHamrPlatform.Type): B = {
+    return isLinux(platform) || platform == CodegenHamrPlatform.JVM || platform == CodegenHamrPlatform.SeL4
   }
 
-  def shouldCamkes(platform: CodeGenPlatform.Type, testModes: ISZ[TestMode.Type]): B = {
+  def shouldCamkes(platform: CodegenHamrPlatform.Type, testModes: ISZ[TestMode.Type]): B = {
     return isSeL4(platform) && ops.ISZOps(testModes).contains(TestMode.camkes)
   }
 
-  def shouldProve(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+  def shouldProve(config: CodegenOption, testModes: ISZ[TestMode.Type]): B = {
     val platform = config.platform
     return { //
-      (platform == CodeGenPlatform.SeL4 || platform == CodeGenPlatform.SeL4_Only) &&
+      (platform == CodegenHamrPlatform.SeL4 || platform == CodegenHamrPlatform.SeL4_Only) &&
         ops.ISZOps(testModes).contains(TestMode.smt2)
     }
   }
 
-  def shouldCompile(platform: CodeGenPlatform.Type, testModes: ISZ[TestMode.Type]): B = {
+  def shouldCompile(platform: CodegenHamrPlatform.Type, testModes: ISZ[TestMode.Type]): B = {
     return isSlang(platform) && ops.ISZOps(testModes).contains(TestMode.compile)
   }
 
-  def shouldRunGeneratedUnitTests(platform: CodeGenPlatform.Type, testModes: ISZ[TestMode.Type]): B = {
+  def shouldRunGeneratedUnitTests(platform: CodegenHamrPlatform.Type, testModes: ISZ[TestMode.Type]): B = {
     return isSlang(platform) && ops.ISZOps(testModes).contains(TestMode.generated_unit_tests)
   }
 
-  def shouldRunLogika(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+  def shouldRunLogika(config: CodegenOption, testModes: ISZ[TestMode.Type]): B = {
     return isSlang(config.platform) && ops.ISZOps(testModes).contains(TestMode.logika)
   }
 
-  def shouldTipe(testOps: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+  def shouldTipe(testOps: CodegenOption, testModes: ISZ[TestMode.Type]): B = {
     return isSlang(testOps.platform) && ops.ISZOps(testModes).contains(TestMode.tipe) && !testOps.noEmbedArt
   }
 
-  def shouldTranspile(testOps: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+  def shouldTranspile(testOps: CodegenOption, testModes: ISZ[TestMode.Type]): B = {
     val platform = testOps.platform
     val _ops = ops.ISZOps(testModes)
-    return (testOps.runTranspiler && (isLinux(platform) || platform == CodeGenPlatform.SeL4)) ||
-      (_ops.contains(TestMode.transpile) && (isLinux(platform) || platform == CodeGenPlatform.SeL4)) ||
+    return (testOps.runTranspiler && (isLinux(platform) || platform == CodegenHamrPlatform.SeL4)) ||
+      (_ops.contains(TestMode.transpile) && (isLinux(platform) || platform == CodegenHamrPlatform.SeL4)) ||
       (_ops.contains(TestMode.compile) && isLinux(platform)) ||
-      (_ops.contains(TestMode.camkes) && platform == CodeGenPlatform.SeL4)
+      (_ops.contains(TestMode.camkes) && platform == CodegenHamrPlatform.SeL4)
   }
 
-  def shouldProyekIve(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+  def shouldProyekIve(config: CodegenOption, testModes: ISZ[TestMode.Type]): B = {
     return isSlang(config.platform) && (!config.noProyekIve || ops.ISZOps(testModes).contains(TestMode.ive))
   }
 
-  def shouldSergen(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+  def shouldSergen(config: CodegenOption, testModes: ISZ[TestMode.Type]): B = {
     return ops.ISZOps(testModes).contains(TestMode.sergen) && isSlang(config.platform) && !config.noEmbedArt
   }
 
-  def shouldSlangCheck(config: CodeGenConfig, testModes: ISZ[TestMode.Type]): B = {
+  def shouldSlangCheck(config: CodegenOption, testModes: ISZ[TestMode.Type]): B = {
     return ops.ISZOps(testModes).contains(TestMode.slangcheck) && isSlang(config.platform) && !config.noEmbedArt
   }
 
@@ -611,7 +611,7 @@ object TestUtil {
     }
 
 
-  def proyekive(config: CodeGenConfig)(pc: SireumProyekIveOption): Z = {
+  def proyekive(config: CodegenOption)(pc: SireumProyekIveOption): Z = {
     var args: ISZ[String] = ISZ()
 
     def addKey(key: String): Unit = {
@@ -651,7 +651,7 @@ object TestUtil {
 
   }
 
-  def slangcheck(config: CodeGenConfig)(sc: SireumToolsSlangcheckGeneratorOption, reporter: Reporter): Z = {
+  def slangcheck(config: CodegenOption)(sc: SireumToolsSlangcheckGeneratorOption, reporter: Reporter): Z = {
     var args: ISZ[String] = ISZ()
 
     def addKey(key: String): Unit = {
@@ -679,7 +679,7 @@ object TestUtil {
     return results.exitCode
   }
 
-  def sergen(config: CodeGenConfig)(tc: SireumToolsSergenOption, reporter: Reporter): Z = {
+  def sergen(config: CodegenOption)(tc: SireumToolsSergenOption, reporter: Reporter): Z = {
     var args: ISZ[String] = ISZ()
 
     def addKey(key: String): Unit = {
@@ -711,7 +711,7 @@ object TestUtil {
     return results.exitCode
   }
 
-  def transpile(config: CodeGenConfig)(tc: SireumSlangTranspilersCOption, reporter: Reporter): Z = {
+  def transpile(config: CodegenOption)(tc: SireumSlangTranspilersCOption, reporter: Reporter): Z = {
     var args: ISZ[String] = ISZ()
 
     def addKey(key: String): Unit = {

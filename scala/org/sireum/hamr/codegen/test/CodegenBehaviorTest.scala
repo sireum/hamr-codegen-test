@@ -3,8 +3,8 @@ package org.sireum.hamr.codegen.test
 import org.sireum._
 import org.sireum.hamr.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.CodeGen
+import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
-import org.sireum.hamr.codegen.test.util.Cli.CodegenOption
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
 import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
 import org.sireum.message.Reporter
@@ -55,7 +55,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
   def test(testName: String,
            testDescription: String,
-           testOptions: CodeGenConfig,
+           testOptions: CodegenOption,
            testModes: ISZ[TestMode.Type],
            phantomOptions: Option[String],
            logikaOptions: Option[String],
@@ -74,7 +74,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
   def testAir(testName: String,
               testDescription: String,
-              testOptions: CodeGenConfig,
+              testOptions: CodegenOption,
               testModes: ISZ[TestMode.Type],
               phantomOptions: Option[String],
               logikaOptions: Option[String],
@@ -135,7 +135,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
     val reporter = Reporter.create
 
-    val results: CodeGenResults = CodeGen.codeGen(model, testOptions, ArsitPlugin.gumboEnhancedPlugins(), reporter,
+    val results: CodegenResults = CodeGen.codeGen(model, T, testOptions, ArsitPlugin.gumboEnhancedPlugins(), reporter,
       (SireumSlangTranspilersCOption, Reporter) => {
         0
       },
@@ -242,13 +242,14 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
   }
 
 
-  val baseOptions = CodeGenConfig(
-    writeOutResources = T,
-    ipc = CodeGenIpcMechanism.SharedMemory,
-
+  val baseOptions = CodegenOption(
+    help = "",
+    args = ISZ(),
+    msgpack = F,
     verbose = F,
     runtimeMonitoring = F,
-    platform = CodeGenPlatform.JVM,
+    platform = CodegenHamrPlatform.JVM,
+    parseableMessages = F,
     //
     slangOutputDir = None(),
     packageName = None(),
@@ -328,13 +329,13 @@ object CodegenBehaviorTest {
     return ret
   }
 
-  def processHamrArgs(args: String, root: Os.Path): Option[CodeGenConfig] = {
+  def processHamrArgs(args: String, root: Os.Path): Option[CodegenOption] = {
     assert(root.isDir, root)
     val _args: ISZ[String] = ops.StringOps(args).split(c => c == C(' '))
     return processHamrArgsH(_args, root)
   }
 
-  def processHamrArgsH(args: ISZ[String], root: Os.Path): Option[CodeGenConfig] = {
+  def processHamrArgsH(args: ISZ[String], root: Os.Path): Option[CodegenOption] = {
     assert(root.isDir, root)
 
     def canon(opt: Option[String]): Option[String] = {
@@ -345,18 +346,19 @@ object CodegenBehaviorTest {
       return ret
     }
 
-    val ret: Option[CodeGenConfig] = util.Cli(Os.pathSepChar).parseCodegen(args, 0) match {
+    val ret: Option[CodegenOption] = HamrCli(Os.pathSepChar).parseCodegen(args, 0) match {
       case Some(opts: CodegenOption) =>
 
         val aadlRoot = if (opts.workspaceRootDir.isEmpty) canon(Some(".")) else canon(opts.workspaceRootDir)
 
-        Some(CodeGenConfig(
-          writeOutResources = T,
-          ipc = CodeGenIpcMechanism.SharedMemory,
-
+        Some(CodegenOption(
+          help = "",
+          args = ISZ(),
+          msgpack = F,
           verbose = opts.verbose,
           runtimeMonitoring = opts.runtimeMonitoring,
-          platform = CodeGenPlatform.byName(opts.platform.name).get,
+          platform = CodegenHamrPlatform.byName(opts.platform.name).get,
+          parseableMessages = F,
 
           slangOutputDir = canon(opts.slangOutputDir),
           packageName = opts.packageName,

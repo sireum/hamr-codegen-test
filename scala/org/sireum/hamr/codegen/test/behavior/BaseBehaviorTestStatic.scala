@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test.behavior
 
 import org.sireum._
-import org.sireum.hamr.codegen.common.util.CodeGenPlatform
+import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
 import org.sireum.hamr.codegen.test.CodegenBehaviorTest
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 
@@ -51,7 +51,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       testName = s"${modelDir.name}_excludes",
       testDescription = description,
       testOptions = baseOptions(
-        platform = CodeGenPlatform.Linux,
+        platform = CodegenHamrPlatform.Linux,
         packageName = Some("a"),
         slangOutputDir = Some((modelDir / "hamr-excludes" / "slang").value),
         slangOutputCDir = Some((modelDir / "hamr-excludes" / "c").value),
@@ -74,7 +74,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       testName = s"${modelDir.name}",
       testDescription = description,
       testOptions = baseOptions(
-        platform = CodeGenPlatform.Linux,
+        platform = CodegenHamrPlatform.Linux,
         packageName = Some("a"),
         slangOutputDir = Some((modelDir / "hamr" / "slang").value),
         slangOutputCDir = Some((modelDir / "hamr" / "c").value),

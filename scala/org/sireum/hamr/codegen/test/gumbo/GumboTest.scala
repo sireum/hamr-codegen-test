@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test.gumbo
 
 import org.scalatest.BeforeAndAfterAll
-import org.sireum.hamr.codegen.common.util.CodeGenPlatform
+import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.TestMode
@@ -47,7 +47,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val modelDir = testResources.modelsDir / name
     val model = Some(getJson(modelDir))
 
-    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
     testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
@@ -58,7 +58,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val modelDir = testResources.modelsDir / name
     val model = Some(getJson(modelDir))
 
-    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
     testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
@@ -69,7 +69,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val modelDir = testResources.modelsDir / name
     val model = Some(getJson(modelDir))
 
-    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
     testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
@@ -80,7 +80,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val modelDir = testResources.modelsDir / name
     val model = Some(getJson(modelDir))
 
-    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
     testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
@@ -91,7 +91,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val modelDir = testResources.modelsDir / name
     val model = Some(getJson(modelDir))
 
-    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
     testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
@@ -102,7 +102,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val modelDir = testResources.modelsDir / name
     val model = Some(getJson(modelDir))
 
-    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
     testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())
@@ -113,7 +113,7 @@ class GumboTest extends CodeGenTest with BeforeAndAfterAll {
     val modelDir = testResources.modelsDir / name
     val model = Some(getJson(modelDir))
 
-    var platform: CodeGenPlatform.Type = CodeGenPlatform.JVM
+    var platform: CodegenHamrPlatform.Type = CodegenHamrPlatform.JVM
     testAir(s"$name--${platform}", modelDir, model, None(),
       baseOptions(platform = platform),
       None(), None(), ISZ())

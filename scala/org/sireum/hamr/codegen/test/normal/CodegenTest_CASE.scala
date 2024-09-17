@@ -1,14 +1,14 @@
 package org.sireum.hamr.codegen.test.normal
 
 import org.sireum._
-import org.sireum.hamr.codegen.common.util.CodeGenPlatform
+import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
 import org.sireum.hamr.codegen.test.CodeGenTest
 import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
 
 case class TestContainer(testName: String,
                          modelDir: Os.Path,
                          json: Option[Os.Path],
-                         platform: ISZ[CodeGenPlatform.Type],
+                         platform: ISZ[CodegenHamrPlatform.Type],
                          hasVM: B,
                          expectedErrorReasons: ISZ[String])
 
@@ -25,7 +25,7 @@ class CodegenTest_CASE extends CodeGenTest {
   val tests = Tests {
     val id = "case_tool_evaluation"
 
-    val (linux, sel4, sel4_tb, sel4_only) = (CodeGenPlatform.Linux, CodeGenPlatform.SeL4, CodeGenPlatform.SeL4_TB, CodeGenPlatform.SeL4_Only)
+    val (linux, sel4, sel4_tb, sel4_only) = (CodegenHamrPlatform.Linux, CodegenHamrPlatform.SeL4, CodegenHamrPlatform.SeL4_TB, CodegenHamrPlatform.SeL4_Only)
 
     val case_tool_evaluation_dir = testResources.modelsDir
     //val resultDir: Option[String] = Some(getClass.getSimpleName)
@@ -33,19 +33,19 @@ class CodegenTest_CASE extends CodeGenTest {
     def genFail(name: String,
                 json: String,
                 hasVMs: B,
-                platforms: ISZ[CodeGenPlatform.Type],
+                platforms: ISZ[CodegenHamrPlatform.Type],
                 expectedErrorReasons: ISZ[String]): TestContainer = {
       genTest(name, json, hasVMs, platforms, expectedErrorReasons)
     }
 
-    def gen(name: String, json: String, hasVMs: B, platforms: ISZ[CodeGenPlatform.Type]): TestContainer = {
+    def gen(name: String, json: String, hasVMs: B, platforms: ISZ[CodegenHamrPlatform.Type]): TestContainer = {
       genTest(name, json, hasVMs, platforms, ISZ())
     }
 
     def genTest(name: String,
                 json: String,
                 hasVMs: B,
-                platforms: ISZ[CodeGenPlatform.Type],
+                platforms: ISZ[CodegenHamrPlatform.Type],
                 expectedErrorReasons: ISZ[String]): TestContainer = {
       val modelDir = case_tool_evaluation_dir / name
       val testName = name.native.replaceAll("/", "__")

@@ -3,7 +3,7 @@ package org.sireum.hamr.codegen.test
 import org.sireum._
 import org.sireum.hamr.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen._
-import org.sireum.hamr.codegen.common.containers.{SireumProyekIveOption, SireumSlangTranspilersCOption, SireumToolsSergenOption, SireumToolsSlangcheckGeneratorOption}
+import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil => CommonTestUtil}
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
@@ -11,7 +11,6 @@ import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
 import org.sireum.hamr.ir._
 import org.sireum.message._
 import org.sireum.ops.ISZOps
-import org.sireum.test.TestSuite
 
 /** Can regenerate AIR JSON files via 
 * https://github.com/sireum/osate-plugin/blob/d0015531e9d2039f7f186c4fa7a124521ee664b6/org.sireum.aadl.osate.tests/src/org/sireum/aadl/osate/tests/extras/AirUpdater.java#L46-L54
@@ -58,7 +57,7 @@ trait CodeGenTest extends CodegenTestSuite {
   def test(testName: String,
            modelDir: Os.Path,
            airFile: Option[Os.Path],
-           ops: CodeGenConfig,
+           ops: CodegenOption,
            description: Option[String],
            modelUri: Option[String],
            expectedErrorReasons: ISZ[String] // empty if errors not expected
@@ -70,7 +69,7 @@ trait CodeGenTest extends CodegenTestSuite {
                   modelDir: Os.Path,
                   airFile: Option[Os.Path],
                   phantomOptions: Option[String],
-                  ops: CodeGenConfig,
+                  ops: CodegenOption,
                   description: Option[String],
                   modelUri: Option[String],
                   expectedErrorReasons: ISZ[String] // empty if errors not expected
@@ -91,7 +90,7 @@ trait CodeGenTest extends CodegenTestSuite {
               modelDir: Os.Path,
               airFile: Option[Os.Path],
               phantomOptions: Option[String],
-              config: CodeGenConfig,
+              config: CodegenOption,
               description: Option[String],
               modelUri: Option[String],
               expectedErrorReasons: ISZ[String] // empty if errors not expected
@@ -143,7 +142,7 @@ trait CodeGenTest extends CodegenTestSuite {
 
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
-    val results: CodeGenResults = CodeGen.codeGen(model, testOps, ArsitPlugin.gumboEnhancedPlugins, reporter,
+    val results: CodegenResults = CodeGen.codeGen(model, T, testOps, ArsitPlugin.gumboEnhancedPlugins, reporter,
       if (TestUtil.shouldTranspile(testOps, testModes)) TestUtil.transpile(testOps) _ else (SireumSlangTranspilersCOption, Reporter) => {
         println("Dummy transpiler");
         0
@@ -302,13 +301,14 @@ object CodeGenTest {
 
   val FILTER = "FILTER"
 
-  val baseOptions = CodeGenConfig(
-    writeOutResources = T,
-    ipc = CodeGenIpcMechanism.SharedMemory,
-
-    runtimeMonitoring = F,
+  val baseOptions = CodegenOption(
+    help = "",
+    args = ISZ(),
+    msgpack = F,
     verbose = F,
-    platform = CodeGenPlatform.JVM,
+    runtimeMonitoring = F,
+    platform = CodegenHamrPlatform.JVM,
+    parseableMessages = F,
     //
     slangOutputDir = None(),
     packageName = None(),
