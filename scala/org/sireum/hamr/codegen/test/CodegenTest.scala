@@ -142,7 +142,7 @@ trait CodeGenTest extends CodegenTestSuite {
 
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
-    val results: CodegenResults = CodeGen.codeGen(model, T, testOps, ArsitPlugin.gumboEnhancedPlugins, reporter,
+    val results: CodeGenResults = CodeGen.codeGen(model, T, testOps, ArsitPlugin.gumboEnhancedPlugins, reporter,
       if (TestUtil.shouldTranspile(testOps, testModes)) TestUtil.transpile(testOps) _ else (SireumSlangTranspilersCOption, Reporter) => {
         println("Dummy transpiler");
         0

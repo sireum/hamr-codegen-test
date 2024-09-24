@@ -6,7 +6,7 @@ import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 import Ros2Tests._
 import org.sireum.hamr.codegen.CodeGen
-import org.sireum.hamr.codegen.common.util.CodegenResults
+import org.sireum.hamr.codegen.common.util.CodeGenResults
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 
 class Ros2Tests extends TestSuite with Ros2TestUtil {
@@ -110,7 +110,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     destDir.removeAll()
     println(s"Result Dir: ${destDir.up.toUri}")
 
-    val results: CodegenResults = CodeGen.codeGen(
+    val results: CodeGenResults = CodeGen.codeGen(
       model = model, shouldWriteOutResources = T, options = testOps, plugins = MSZ(), reporter = reporter,
       transpilerCallback = (_, _) => 0,
       proyekIveCallback = _ => 0,
