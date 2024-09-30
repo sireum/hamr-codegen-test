@@ -338,7 +338,32 @@ object TestUtil {
           val sbt = getCodegenDir / "bin" / os / "sbt" / "bin" / (if (Os.isWin) "sbt.bat" else "sbt")
           if (sbt.exists) {
             println("Compiling Slang project via sbt ...")
-            val sbtResults = vproc(s"$sbt compile --batch", projectCmd.up.up, for(e <- Os.envs.entries) yield (e._1, e._2), None(), "sbt-compile")
+            val sbtResults: OsProto.Proc.Result = Os.javaHomeOpt(Os.kind, Os.sireumHomeOpt) match {
+              case Some(j) =>
+                if (Os.isWin) {
+                  val s = st"""set JAVA_HOME=$j
+                              |set PATH=%JAVA_HOME\\bin;%PATH
+                              |$sbt compile --batch"""
+                  val bat = projectCmd.up.up / "w.bat"
+                  bat.writeOver(s.render)
+                  val r = vproc(s"$bat", projectCmd.up.up, for(e <- Os.envs.entries) yield (e._1, e._2), None(), "sbt-compile")
+                  bat.remove()
+                  r
+                }
+                else {
+                  val s = st"""#!/usr/bin/env bash
+                              |export JAVA_HOME=$j
+                              |export PATH=$$JAVA_HOME/bin:$$PATH
+                              |$sbt compile --batch"""
+                  val bash = projectCmd.up.up / "w.sh"
+                  bash.writeOver(s.render)
+                  val r = vproc(s"bash $bash", projectCmd.up.up, for(e <- Os.envs.entries) yield (e._1, e._2), None(), "sbt-compile")
+                  bash.remove()
+                  r
+                }
+              case _ =>
+                vproc(s"$sbt compile --batch", projectCmd.up.up, for(e <- Os.envs.entries) yield (e._1, e._2), None(), "sbt-compile")
+            }
             _check(sbtResults, "sbt compilation failed")
           } else {
             eprintln(s"sbt not found at $sbt.")
