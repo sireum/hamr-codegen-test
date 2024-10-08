@@ -10,10 +10,10 @@ isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base::isolette_s
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::OnOff>(
         "isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::OnOff msg) {
             enqueue(infrastructureIn_heat_control, msg);
         },
         subscription_options_);
@@ -43,19 +43,19 @@ isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base::isolette_s
 //  C o m m u n i c a t i o n
 //=================================================
 
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base::get_heat_control() {
+isolette_cpp_pkg_interfaces::msg::OnOff isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base::get_heat_control() {
     MsgType msg = applicationIn_heat_control.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::OnOff>(msg);
 }
 void isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base::sendOut_heat_out(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Heat>(&msg)) {
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port heat_out.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
-void isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base::put_heat_out(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base::put_heat_out(isolette_cpp_pkg_interfaces::msg::Heat msg)
 {
     enqueue(applicationOut_heat_out, msg);
 }

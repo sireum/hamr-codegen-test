@@ -1,0 +1,3 @@
+AlarmType alarm
+WarningType warning
+Integer64 occurrence_time

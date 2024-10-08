@@ -1,5 +1,9 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "isolette_cpp_pkg_interfaces/msg/temp_wstatusimpl.hpp"
+#include "isolette_cpp_pkg_interfaces/msg/monitor_mode.hpp"
+#include "isolette_cpp_pkg_interfaces/msg/tempimpl.hpp"
+#include "isolette_cpp_pkg_interfaces/msg/status.hpp"
+#include "isolette_cpp_pkg_interfaces/msg/failure_flagimpl.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +16,7 @@
 class isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl, isolette_cpp_pkg_interfaces::msg::MonitorMode, isolette_cpp_pkg_interfaces::msg::Tempimpl, isolette_cpp_pkg_interfaces::msg::Status, isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>;
 
     isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base();
 
@@ -24,15 +28,15 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_upper_alarm_temp(example_interfaces::msg::Int32 msg);
-    void put_lower_alarm_temp(example_interfaces::msg::Int32 msg);
-    void put_monitor_status(example_interfaces::msg::Int32 msg);
-    void put_interface_failure(example_interfaces::msg::Int32 msg);
+    void put_upper_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg);
+    void put_lower_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg);
+    void put_monitor_status(isolette_cpp_pkg_interfaces::msg::Status msg);
+    void put_interface_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg);
 
-    example_interfaces::msg::Int32 get_upper_alarm_tempWstatus();
-    example_interfaces::msg::Int32 get_lower_alarm_tempWstatus();
-    example_interfaces::msg::Int32 get_current_tempWstatus();
-    example_interfaces::msg::Int32 get_monitor_mode();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl get_upper_alarm_tempWstatus();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl get_lower_alarm_tempWstatus();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl get_current_tempWstatus();
+    isolette_cpp_pkg_interfaces::msg::MonitorMode get_monitor_mode();
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -73,15 +77,15 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_mode_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::MonitorMode>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_mode_subscription_;
 
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_temp_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_temp_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_status_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_interface_failure_publisher_;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_temp_publisher_;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_temp_publisher_;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::Status>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_status_publisher_;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_interface_failure_publisher_;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r

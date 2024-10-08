@@ -1,0 +1,4 @@
+uint8 temp_unit
+uint8 TEMP_UNIT_FAHRENHEIT=0
+uint8 TEMP_UNIT_CELSIUS=1
+uint8 TEMP_UNIT_KELVIN=2

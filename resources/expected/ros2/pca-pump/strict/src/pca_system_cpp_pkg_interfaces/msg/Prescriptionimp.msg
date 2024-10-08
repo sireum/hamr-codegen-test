@@ -1,0 +1,13 @@
+String patient
+String drug_name
+DrugCodeimp code
+DrugConcentrationimp concentration
+DrugVolumeimp initial_volume
+FlowRateimp basal_flow_rate
+FlowRateimp patient_bolus_rate
+DrugVolumeimp vtbi
+DrugVolumeimp max_drug_per_hour
+Minuteimp minimum_time_between_bolus
+String date_rx_filled
+String prescriber
+String pharmacist

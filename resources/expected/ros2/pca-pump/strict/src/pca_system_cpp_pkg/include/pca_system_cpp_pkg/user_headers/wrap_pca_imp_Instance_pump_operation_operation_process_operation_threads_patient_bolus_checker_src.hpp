@@ -14,7 +14,7 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    void handle_Patient_Button_Request(const example_interfaces::msg::Int32 msg);
+    void handle_Patient_Button_Request(const pca_system_cpp_pkg_interfaces::msg::Empty msg);
 
     //=================================================
     //  Include any additional declarations here

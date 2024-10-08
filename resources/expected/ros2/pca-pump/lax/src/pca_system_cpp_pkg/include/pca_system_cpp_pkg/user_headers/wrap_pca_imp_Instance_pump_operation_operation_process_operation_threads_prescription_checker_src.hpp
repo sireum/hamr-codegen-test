@@ -14,11 +14,11 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    void handle_The_Drug_Record(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_Check_Rx(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_Drug_Not_In_Library(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_Confirm_Soft_Limit_Exception(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_Reject_Soft_Limit_Exception(const example_interfaces::msg::Int32::SharedPtr msg);
+    void handle_The_Drug_Record(const pca_system_cpp_pkg_interfaces::msg::DrugRecordimp::SharedPtr msg);
+    void handle_Check_Rx(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    void handle_Drug_Not_In_Library(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    void handle_Confirm_Soft_Limit_Exception(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    void handle_Reject_Soft_Limit_Exception(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
 
     //=================================================
     //  Include any additional declarations here

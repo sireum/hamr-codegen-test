@@ -1,5 +1,9 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/temperatureimpl.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/fan_ack.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/set_pointimpl.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/fan_cmd.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/empty.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +16,7 @@
 class BuildingControlDemo_i_Instance_tcp_tempControl_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<building_control_cpp_pkg_interfaces::msg::Temperatureimpl, building_control_cpp_pkg_interfaces::msg::FanAck, building_control_cpp_pkg_interfaces::msg::SetPointimpl, building_control_cpp_pkg_interfaces::msg::FanCmd, building_control_cpp_pkg_interfaces::msg::Empty>;
 
     BuildingControlDemo_i_Instance_tcp_tempControl_base();
 
@@ -24,9 +28,9 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_fanCmd(example_interfaces::msg::Int32 msg);
+    void put_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg);
 
-    example_interfaces::msg::Int32 get_currentTemp();
+    building_control_cpp_pkg_interfaces::msg::Temperatureimpl get_currentTemp();
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -49,11 +53,11 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    virtual void handle_fanAck(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_fanAck(const building_control_cpp_pkg_interfaces::msg::FanAck msg) = 0;
     void handle_fanAck_base(MsgType msg);
-    virtual void handle_setPoint(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_setPoint(const building_control_cpp_pkg_interfaces::msg::SetPointimpl msg) = 0;
     void handle_setPoint_base(MsgType msg);
-    virtual void handle_tempChanged(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_tempChanged_base(MsgType msg);
 
     std::queue<MsgType> infrastructureIn_currentTemp;
@@ -73,12 +77,12 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::FanAck>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::Empty>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_;
 
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_;
 
     // Used for thread locking
     std::mutex mutex_;

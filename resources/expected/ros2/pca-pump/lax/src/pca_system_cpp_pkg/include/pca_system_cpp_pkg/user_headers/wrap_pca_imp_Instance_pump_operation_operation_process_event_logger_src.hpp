@@ -14,8 +14,8 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    void handle_Log_Event(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_Get_Event_Log(const example_interfaces::msg::Int32::SharedPtr msg);
+    void handle_Log_Event(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    void handle_Get_Event_Log(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
 
     //=================================================
     //  Include any additional declarations here

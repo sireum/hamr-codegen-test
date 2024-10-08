@@ -10,18 +10,18 @@ BuildingControlDemo_i_Instance_tcp_tempControl_base::BuildingControlDemo_i_Insta
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg) {
             enqueue(infrastructureIn_currentTemp, msg);
         },
         subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanAck>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_fanAck",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](building_control_cpp_pkg_interfaces::msg::FanAck msg) {
             enqueue(infrastructureIn_fanAck, msg);
             std::thread([this]() {
                 std::lock_guard<std::mutex> lock(mutex_);
@@ -34,10 +34,10 @@ BuildingControlDemo_i_Instance_tcp_tempControl_base::BuildingControlDemo_i_Insta
         },
         subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_setPoint",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](building_control_cpp_pkg_interfaces::msg::SetPointimpl msg) {
             enqueue(infrastructureIn_setPoint, msg);
             std::thread([this]() {
                 std::lock_guard<std::mutex> lock(mutex_);
@@ -50,10 +50,10 @@ BuildingControlDemo_i_Instance_tcp_tempControl_base::BuildingControlDemo_i_Insta
         },
         subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Empty>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](building_control_cpp_pkg_interfaces::msg::Empty msg) {
             enqueue(infrastructureIn_tempChanged, msg);
             std::thread([this]() {
                 std::lock_guard<std::mutex> lock(mutex_);
@@ -66,7 +66,7 @@ BuildingControlDemo_i_Instance_tcp_tempControl_base::BuildingControlDemo_i_Insta
         },
         subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>(
         "BuildingControlDemo_i_Instance_tcp_fan_fanCmd",
         1);
 
@@ -86,13 +86,13 @@ BuildingControlDemo_i_Instance_tcp_tempControl_base::BuildingControlDemo_i_Insta
 //  C o m m u n i c a t i o n
 //=================================================
 
-example_interfaces::msg::Int32 BuildingControlDemo_i_Instance_tcp_tempControl_base::get_currentTemp() {
+building_control_cpp_pkg_interfaces::msg::Temperatureimpl BuildingControlDemo_i_Instance_tcp_tempControl_base::get_currentTemp() {
     MsgType msg = applicationIn_currentTemp.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(msg);
 }
 void BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_fanAck_base(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanAck>(&msg)) {
         handle_fanAck(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -101,7 +101,7 @@ void BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_fanAck_base(Msg
 
 void BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_setPoint_base(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::SetPointimpl>(&msg)) {
         handle_setPoint(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port setPoint.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -110,7 +110,7 @@ void BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_setPoint_base(M
 
 void BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_tempChanged_base(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::Empty>(&msg)) {
         handle_tempChanged(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port tempChanged.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -119,14 +119,14 @@ void BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_tempChanged_bas
 
 void BuildingControlDemo_i_Instance_tcp_tempControl_base::sendOut_fanCmd(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanCmd>(&msg)) {
         BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
-void BuildingControlDemo_i_Instance_tcp_tempControl_base::put_fanCmd(example_interfaces::msg::Int32 msg)
+void BuildingControlDemo_i_Instance_tcp_tempControl_base::put_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg)
 {
     enqueue(applicationOut_fanCmd, msg);
 }

@@ -1,5 +1,8 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/drug_library.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/drug_codeimp.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/drug_recordimp.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/empty.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +15,7 @@
 class wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<pca_system_cpp_pkg_interfaces::msg::DrugLibrary, pca_system_cpp_pkg_interfaces::msg::DrugCodeimp, pca_system_cpp_pkg_interfaces::msg::DrugRecordimp, pca_system_cpp_pkg_interfaces::msg::Empty>;
 
     wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_base();
 
@@ -24,8 +27,8 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_The_Drug_Record(example_interfaces::msg::Int32 msg);
-    void put_No_Drug_Found(example_interfaces::msg::Int32 msg);
+    void put_The_Drug_Record(pca_system_cpp_pkg_interfaces::msg::DrugRecordimp msg);
+    void put_No_Drug_Found(pca_system_cpp_pkg_interfaces::msg::Empty msg);
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -48,9 +51,9 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    virtual void handle_Load_Drug_Library(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Load_Drug_Library(const pca_system_cpp_pkg_interfaces::msg::DrugLibrary msg) = 0;
     void handle_Load_Drug_Library_base(MsgType msg);
-    virtual void handle_Get_Drug_Record(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Get_Drug_Record(const pca_system_cpp_pkg_interfaces::msg::DrugCodeimp msg) = 0;
     void handle_Get_Drug_Record_base(MsgType msg);
 
     std::queue<MsgType> infrastructureIn_Load_Drug_Library;
@@ -69,13 +72,13 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_Load_Drug_Library_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_Get_Drug_Record_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::DrugLibrary>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_Load_Drug_Library_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::DrugCodeimp>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_Get_Drug_Record_subscription_;
 
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_The_Drug_Record_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_No_Drug_Found_publisher_1;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_No_Drug_Found_publisher_2;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_No_Drug_Found_publisher_3;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::DrugRecordimp>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_The_Drug_Record_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_No_Drug_Found_publisher_1;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_No_Drug_Found_publisher_2;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_drug_library_No_Drug_Found_publisher_3;
 
     // Used for thread locking
     std::mutex mutex_;

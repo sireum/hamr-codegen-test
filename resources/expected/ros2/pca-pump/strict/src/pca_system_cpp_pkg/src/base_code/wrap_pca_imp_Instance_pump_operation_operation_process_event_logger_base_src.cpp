@@ -10,10 +10,10 @@ wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::wrap_p
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Log_Event_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Log_Event_subscription_ = this->create_subscription<pca_system_cpp_pkg_interfaces::msg::Empty>(
         "wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Log_Event",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](pca_system_cpp_pkg_interfaces::msg::Empty msg) {
             enqueue(infrastructureIn_Log_Event, msg);
             std::thread([this]() {
                 std::lock_guard<std::mutex> lock(mutex_);
@@ -26,10 +26,10 @@ wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::wrap_p
         },
         subscription_options_);
 
-    wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Get_Event_Log_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Get_Event_Log_subscription_ = this->create_subscription<pca_system_cpp_pkg_interfaces::msg::Empty>(
         "wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Get_Event_Log",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](pca_system_cpp_pkg_interfaces::msg::Empty msg) {
             enqueue(infrastructureIn_Get_Event_Log, msg);
             std::thread([this]() {
                 std::lock_guard<std::mutex> lock(mutex_);
@@ -59,7 +59,7 @@ wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::wrap_p
 
 void wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::handle_Log_Event_base(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<pca_system_cpp_pkg_interfaces::msg::Empty>(&msg)) {
         handle_Log_Event(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port Log_Event.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -68,7 +68,7 @@ void wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::h
 
 void wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::handle_Get_Event_Log_base(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<pca_system_cpp_pkg_interfaces::msg::Empty>(&msg)) {
         handle_Get_Event_Log(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port Get_Event_Log.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -77,13 +77,13 @@ void wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::h
 
 void wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::sendOut_The_Event_Log(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<pca_system_cpp_pkg_interfaces::msg::Empty>(&msg)) {
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port The_Event_Log.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
-void wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::put_The_Event_Log(example_interfaces::msg::Int32 msg)
+void wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base::put_The_Event_Log(pca_system_cpp_pkg_interfaces::msg::Empty msg)
 {
     enqueue(applicationOut_The_Event_Log, msg);
 }

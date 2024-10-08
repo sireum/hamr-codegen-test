@@ -8,11 +8,11 @@ BuildingControlDemo_i_Instance_tcp_tempSensor_base::BuildingControlDemo_i_Instan
 {
     cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::Reentrant);
     // Setting up connections
-    BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp",
         1);
 
-    BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::Empty>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged",
         1);
 
@@ -42,7 +42,7 @@ BuildingControlDemo_i_Instance_tcp_tempSensor_base::BuildingControlDemo_i_Instan
 
 void BuildingControlDemo_i_Instance_tcp_tempSensor_base::sendOut_currentTemp(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(&msg)) {
         BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port currentTemp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -51,19 +51,19 @@ void BuildingControlDemo_i_Instance_tcp_tempSensor_base::sendOut_currentTemp(Msg
 
 void BuildingControlDemo_i_Instance_tcp_tempSensor_base::sendOut_tempChanged(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::Empty>(&msg)) {
         BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port tempChanged.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
-void BuildingControlDemo_i_Instance_tcp_tempSensor_base::put_currentTemp(example_interfaces::msg::Int32 msg)
+void BuildingControlDemo_i_Instance_tcp_tempSensor_base::put_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg)
 {
     enqueue(applicationOut_currentTemp, msg);
 }
 
-void BuildingControlDemo_i_Instance_tcp_tempSensor_base::put_tempChanged(example_interfaces::msg::Int32 msg)
+void BuildingControlDemo_i_Instance_tcp_tempSensor_base::put_tempChanged(building_control_cpp_pkg_interfaces::msg::Empty msg)
 {
     enqueue(applicationOut_tempChanged, msg);
 }

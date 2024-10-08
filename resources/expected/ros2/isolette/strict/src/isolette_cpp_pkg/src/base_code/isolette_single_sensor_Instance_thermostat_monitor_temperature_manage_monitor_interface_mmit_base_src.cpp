@@ -10,51 +10,51 @@ isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_in
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_upper_alarm_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_lower_alarm_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_current_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_mode_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::MonitorMode>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_mode",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::MonitorMode msg) {
             enqueue(infrastructureIn_monitor_mode, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_temp_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp",
         1);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_temp_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp",
         1);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_status_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_status_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Status>(
         "isolette_single_sensor_Instance_operator_interface_oip_oit_monitor_status",
         1);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_interface_failure_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_interface_failure_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_mmmt_interface_failure",
         1);
 
@@ -92,25 +92,25 @@ isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_in
 //  C o m m u n i c a t i o n
 //=================================================
 
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_upper_alarm_tempWstatus() {
+isolette_cpp_pkg_interfaces::msg::TempWstatusimpl isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_upper_alarm_tempWstatus() {
     MsgType msg = applicationIn_upper_alarm_tempWstatus.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(msg);
 }
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_lower_alarm_tempWstatus() {
+isolette_cpp_pkg_interfaces::msg::TempWstatusimpl isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_lower_alarm_tempWstatus() {
     MsgType msg = applicationIn_lower_alarm_tempWstatus.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(msg);
 }
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_current_tempWstatus() {
+isolette_cpp_pkg_interfaces::msg::TempWstatusimpl isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_current_tempWstatus() {
     MsgType msg = applicationIn_current_tempWstatus.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(msg);
 }
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_monitor_mode() {
+isolette_cpp_pkg_interfaces::msg::MonitorMode isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_monitor_mode() {
     MsgType msg = applicationIn_monitor_mode.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::MonitorMode>(msg);
 }
 void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::sendOut_upper_alarm_temp(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Tempimpl>(&msg)) {
         isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_temp_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port upper_alarm_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -119,7 +119,7 @@ void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monit
 
 void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::sendOut_lower_alarm_temp(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Tempimpl>(&msg)) {
         isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_temp_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port lower_alarm_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -128,7 +128,7 @@ void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monit
 
 void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::sendOut_monitor_status(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Status>(&msg)) {
         isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_status_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port monitor_status.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -137,29 +137,29 @@ void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monit
 
 void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::sendOut_interface_failure(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(&msg)) {
         isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_interface_failure_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port interface_failure.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
-void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::put_upper_alarm_temp(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::put_upper_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg)
 {
     enqueue(applicationOut_upper_alarm_temp, msg);
 }
 
-void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::put_lower_alarm_temp(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::put_lower_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg)
 {
     enqueue(applicationOut_lower_alarm_temp, msg);
 }
 
-void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::put_monitor_status(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::put_monitor_status(isolette_cpp_pkg_interfaces::msg::Status msg)
 {
     enqueue(applicationOut_monitor_status, msg);
 }
 
-void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::put_interface_failure(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_base::put_interface_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg)
 {
     enqueue(applicationOut_interface_failure, msg);
 }

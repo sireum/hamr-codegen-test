@@ -62,6 +62,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
   }
 
+  // TODO: Fix/implement PCA Pump to-do types
   "pca-pump_lax" in {
     val testName = "pca-pump"
     val root = codegen_base / testName
@@ -71,10 +72,29 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
   }
 
+  // TODO: Fix/implement PCA Pump to-do types
   "pca-pump_strict" in {
     val testName = "pca-pump"
     val root = codegen_base / testName
     val airFile = getAir(root / "pca")
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
+  }
+
+  "datatype-examples_lax" in {
+    val testName = "datatype-examples"
+    val root = codegen_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
+  }
+
+  "datatype-examples_strict" in {
+    val testName = "datatype-examples"
+    val root = codegen_base / testName
+    val airFile = getAir(root)
     assert (root.exists)
 
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
@@ -153,11 +173,19 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     // Additionally, some details of the building process appear to be version dependent, so comparing before
     // building is probably preferable - Clint
     if (buildRosPkgs) {
-      val pkgName = ops.ISZOps(ops.StringOps(results.resources.apply(0).dstPath).split(c => c.toString == "/".toString)).drop(1).apply(0)
+      val longResourcePath = ops.StringOps(results.resources.apply(0).dstPath)
+      val resourcePath = longResourcePath.replaceAllLiterally((resultsRoot / testName / "results" / strictModeString / "src").value, "")
+      val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/".toString).apply(0)
+
+      // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
+      // so I split it up - Clint
+      Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
+        .apply(wd = resultsRoot / testName / "results" / strictModeString).console.run()
 
       val buildResults = Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName} ${pkgName}_bringup"))
         .apply(wd = resultsRoot / testName / "results" / strictModeString).console.run()
 
+      // The last two packages will only finish if the first package finished
       if (!buildResults.out.toString.contains("Summary: 2 packages finished")) {
         failureReasons = failureReasons :+ "Colcon build failed"
       }

@@ -1,5 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/empty.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +12,7 @@
 class wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<pca_system_cpp_pkg_interfaces::msg::Empty>;
 
     wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_base();
 
@@ -24,7 +24,7 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_The_Event_Log(example_interfaces::msg::Int32 msg);
+    void put_The_Event_Log(pca_system_cpp_pkg_interfaces::msg::Empty msg);
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -47,9 +47,9 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    virtual void handle_Log_Event(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Log_Event(const pca_system_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_Log_Event_base(MsgType msg);
-    virtual void handle_Get_Event_Log(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Get_Event_Log(const pca_system_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_Get_Event_Log_base(MsgType msg);
 
     std::queue<MsgType> infrastructureIn_Log_Event;
@@ -65,8 +65,8 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Log_Event_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Get_Event_Log_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Log_Event_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Get_Event_Log_subscription_;
 
 
     // Used for thread locking

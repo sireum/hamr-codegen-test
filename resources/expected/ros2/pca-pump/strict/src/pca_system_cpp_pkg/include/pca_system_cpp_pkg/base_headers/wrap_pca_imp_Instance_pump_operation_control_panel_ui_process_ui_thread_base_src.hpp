@@ -1,5 +1,16 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/empty.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/sound.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/alarm_signal.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/boolean.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/prescriptionimp.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/flow_rateimp.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/string.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/alarm_type.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/warning_type.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/status_type.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/message.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/minuteimp.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +23,7 @@
 class wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<pca_system_cpp_pkg_interfaces::msg::Empty, pca_system_cpp_pkg_interfaces::msg::Sound, pca_system_cpp_pkg_interfaces::msg::AlarmSignal, pca_system_cpp_pkg_interfaces::msg::Boolean, pca_system_cpp_pkg_interfaces::msg::Prescriptionimp, pca_system_cpp_pkg_interfaces::msg::FlowRateimp, pca_system_cpp_pkg_interfaces::msg::String, pca_system_cpp_pkg_interfaces::msg::AlarmType, pca_system_cpp_pkg_interfaces::msg::WarningType, pca_system_cpp_pkg_interfaces::msg::StatusType, pca_system_cpp_pkg_interfaces::msg::Message, pca_system_cpp_pkg_interfaces::msg::Minuteimp>;
 
     wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_base();
 
@@ -24,26 +35,26 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_Image(example_interfaces::msg::Int32 msg);
-    void put_AudioSignal(example_interfaces::msg::Int32 msg);
-    void put_Alarm_Inactivation(example_interfaces::msg::Int32 msg);
-    void put_Bolus_Duration(example_interfaces::msg::Int32 msg);
-    void put_CP_Reset_Alarm(example_interfaces::msg::Int32 msg);
-    void put_Confirm_Soft_Limit_Exception(example_interfaces::msg::Int32 msg);
-    void put_Reject_Soft_Limit_Exception(example_interfaces::msg::Int32 msg);
-    void put_Stop_Button_Pressed(example_interfaces::msg::Int32 msg);
-    void put_Start_Button_Pressed(example_interfaces::msg::Int32 msg);
-    void put_Clinician_Request_Bolus(example_interfaces::msg::Int32 msg);
-    void put_Pause_Infusion(example_interfaces::msg::Int32 msg);
-    void put_Resume_Infusion(example_interfaces::msg::Int32 msg);
-    void put_Turn_Off(example_interfaces::msg::Int32 msg);
+    void put_Image(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_AudioSignal(pca_system_cpp_pkg_interfaces::msg::Sound msg);
+    void put_Alarm_Inactivation(pca_system_cpp_pkg_interfaces::msg::AlarmSignal msg);
+    void put_Bolus_Duration(pca_system_cpp_pkg_interfaces::msg::Minuteimp msg);
+    void put_CP_Reset_Alarm(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Confirm_Soft_Limit_Exception(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Reject_Soft_Limit_Exception(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Stop_Button_Pressed(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Start_Button_Pressed(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Clinician_Request_Bolus(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Pause_Infusion(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Resume_Infusion(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Turn_Off(pca_system_cpp_pkg_interfaces::msg::Empty msg);
 
-    example_interfaces::msg::Int32 get_Remaining_Battery_Time();
-    example_interfaces::msg::Int32 get_Using_Battery_Power();
-    example_interfaces::msg::Int32 get_Prescription();
-    example_interfaces::msg::Int32 get_Infusion_Flow_Rate();
-    example_interfaces::msg::Int32 get_Clinician_Name();
-    example_interfaces::msg::Int32 get_Patient_Name();
+    pca_system_cpp_pkg_interfaces::msg::Empty get_Remaining_Battery_Time();
+    pca_system_cpp_pkg_interfaces::msg::Boolean get_Using_Battery_Power();
+    pca_system_cpp_pkg_interfaces::msg::Prescriptionimp get_Prescription();
+    pca_system_cpp_pkg_interfaces::msg::FlowRateimp get_Infusion_Flow_Rate();
+    pca_system_cpp_pkg_interfaces::msg::String get_Clinician_Name();
+    pca_system_cpp_pkg_interfaces::msg::String get_Patient_Name();
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -66,27 +77,27 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    virtual void handle_Touch(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Touch(const pca_system_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_Touch_base(MsgType msg);
-    virtual void handle_Alarm(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Alarm(const pca_system_cpp_pkg_interfaces::msg::AlarmType msg) = 0;
     void handle_Alarm_base(MsgType msg);
-    virtual void handle_Warning(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Warning(const pca_system_cpp_pkg_interfaces::msg::WarningType msg) = 0;
     void handle_Warning_base(MsgType msg);
-    virtual void handle_System_Status(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_System_Status(const pca_system_cpp_pkg_interfaces::msg::StatusType msg) = 0;
     void handle_System_Status_base(MsgType msg);
-    virtual void handle_Display_Message(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Display_Message(const pca_system_cpp_pkg_interfaces::msg::Message msg) = 0;
     void handle_Display_Message_base(MsgType msg);
-    virtual void handle_Sound_Type(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Sound_Type(const pca_system_cpp_pkg_interfaces::msg::Sound msg) = 0;
     void handle_Sound_Type_base(MsgType msg);
-    virtual void handle_Low_Battery_Warning(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Low_Battery_Warning(const pca_system_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_Low_Battery_Warning_base(MsgType msg);
-    virtual void handle_Hard_Limit_Violated(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Hard_Limit_Violated(const pca_system_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_Hard_Limit_Violated_base(MsgType msg);
-    virtual void handle_Soft_Limit_Warning(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Soft_Limit_Warning(const pca_system_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_Soft_Limit_Warning_base(MsgType msg);
-    virtual void handle_Patient_Request_Not_Too_Soon(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Patient_Request_Not_Too_Soon(const pca_system_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_Patient_Request_Not_Too_Soon_base(MsgType msg);
-    virtual void handle_Patient_Request_Too_Soon(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_Patient_Request_Too_Soon(const pca_system_cpp_pkg_interfaces::msg::Empty msg) = 0;
     void handle_Patient_Request_Too_Soon_base(MsgType msg);
 
     std::queue<MsgType> infrastructureIn_Remaining_Battery_Time;
@@ -168,39 +179,39 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Remaining_Battery_Time_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Using_Battery_Power_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Prescription_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Infusion_Flow_Rate_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Clinician_Name_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Patient_Name_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Touch_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Alarm_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Warning_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_System_Status_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Display_Message_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Sound_Type_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Low_Battery_Warning_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Hard_Limit_Violated_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Soft_Limit_Warning_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Patient_Request_Not_Too_Soon_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Patient_Request_Too_Soon_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Remaining_Battery_Time_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Boolean>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Using_Battery_Power_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Prescriptionimp>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Prescription_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::FlowRateimp>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Infusion_Flow_Rate_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::String>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Clinician_Name_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::String>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Patient_Name_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Touch_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::AlarmType>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Alarm_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::WarningType>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Warning_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::StatusType>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_System_Status_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Message>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Display_Message_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Sound>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Sound_Type_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Low_Battery_Warning_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Hard_Limit_Violated_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Soft_Limit_Warning_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Patient_Request_Not_Too_Soon_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Patient_Request_Too_Soon_subscription_;
 
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Alarm_Inactivation_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Bolus_Duration_publisher_1;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Bolus_Duration_publisher_2;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_CP_Reset_Alarm_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Confirm_Soft_Limit_Exception_publisher_1;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Confirm_Soft_Limit_Exception_publisher_2;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Reject_Soft_Limit_Exception_publisher_1;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Reject_Soft_Limit_Exception_publisher_2;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Stop_Button_Pressed_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Start_Button_Pressed_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Clinician_Request_Bolus_publisher_1;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Clinician_Request_Bolus_publisher_2;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Pause_Infusion_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Resume_Infusion_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Turn_Off_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::AlarmSignal>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Alarm_Inactivation_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Minuteimp>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Bolus_Duration_publisher_1;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Minuteimp>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Bolus_Duration_publisher_2;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_CP_Reset_Alarm_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Confirm_Soft_Limit_Exception_publisher_1;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Confirm_Soft_Limit_Exception_publisher_2;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Reject_Soft_Limit_Exception_publisher_1;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Reject_Soft_Limit_Exception_publisher_2;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Stop_Button_Pressed_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Start_Button_Pressed_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Clinician_Request_Bolus_publisher_1;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Clinician_Request_Bolus_publisher_2;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Pause_Infusion_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Resume_Infusion_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_control_panel_ui_process_ui_thread_Turn_Off_publisher_;
 
     // Used for thread locking
     std::mutex mutex_;

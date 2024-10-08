@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "isolette_cpp_pkg_interfaces/msg/on_off.hpp"
+#include "isolette_cpp_pkg_interfaces/msg/heat.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +13,7 @@
 class isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<isolette_cpp_pkg_interfaces::msg::OnOff, isolette_cpp_pkg_interfaces::msg::Heat>;
 
     isolette_single_sensor_Instance_heat_source_cpi_heat_controller_base();
 
@@ -24,9 +25,9 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_heat_out(example_interfaces::msg::Int32 msg);
+    void put_heat_out(isolette_cpp_pkg_interfaces::msg::Heat msg);
 
-    example_interfaces::msg::Int32 get_heat_control();
+    isolette_cpp_pkg_interfaces::msg::OnOff get_heat_control();
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -52,7 +53,7 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::OnOff>::SharedPtr isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control_subscription_;
 
 
     //=================================================

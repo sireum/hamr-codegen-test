@@ -14,17 +14,17 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    void handle_Touch(const example_interfaces::msg::Int32 msg);
-    void handle_Alarm(const example_interfaces::msg::Int32 msg);
-    void handle_Warning(const example_interfaces::msg::Int32 msg);
-    void handle_System_Status(const example_interfaces::msg::Int32 msg);
-    void handle_Display_Message(const example_interfaces::msg::Int32 msg);
-    void handle_Sound_Type(const example_interfaces::msg::Int32 msg);
-    void handle_Low_Battery_Warning(const example_interfaces::msg::Int32 msg);
-    void handle_Hard_Limit_Violated(const example_interfaces::msg::Int32 msg);
-    void handle_Soft_Limit_Warning(const example_interfaces::msg::Int32 msg);
-    void handle_Patient_Request_Not_Too_Soon(const example_interfaces::msg::Int32 msg);
-    void handle_Patient_Request_Too_Soon(const example_interfaces::msg::Int32 msg);
+    void handle_Touch(const pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void handle_Alarm(const pca_system_cpp_pkg_interfaces::msg::AlarmType msg);
+    void handle_Warning(const pca_system_cpp_pkg_interfaces::msg::WarningType msg);
+    void handle_System_Status(const pca_system_cpp_pkg_interfaces::msg::StatusType msg);
+    void handle_Display_Message(const pca_system_cpp_pkg_interfaces::msg::Message msg);
+    void handle_Sound_Type(const pca_system_cpp_pkg_interfaces::msg::Sound msg);
+    void handle_Low_Battery_Warning(const pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void handle_Hard_Limit_Violated(const pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void handle_Soft_Limit_Warning(const pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void handle_Patient_Request_Not_Too_Soon(const pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void handle_Patient_Request_Too_Soon(const pca_system_cpp_pkg_interfaces::msg::Empty msg);
 
     //=================================================
     //  Include any additional declarations here
