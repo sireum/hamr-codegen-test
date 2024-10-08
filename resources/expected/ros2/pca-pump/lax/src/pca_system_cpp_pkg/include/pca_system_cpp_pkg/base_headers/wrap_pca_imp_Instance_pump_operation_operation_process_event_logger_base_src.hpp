@@ -1,5 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/empty.hpp"
 #include <queue>
 
 //=================================================
@@ -30,14 +30,14 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    virtual void handle_Log_Event(const example_interfaces::msg::Int32::SharedPtr msg) = 0;
-    virtual void handle_Get_Event_Log(const example_interfaces::msg::Int32::SharedPtr msg) = 0;
+    virtual void handle_Log_Event(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg) = 0;
+    virtual void handle_Get_Event_Log(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg) = 0;
 
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Log_Event_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Get_Event_Log_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Log_Event_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_operation_operation_process_event_logger_Get_Event_Log_subscription_;
 
 
 };

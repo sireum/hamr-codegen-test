@@ -1,5 +1,7 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/status_type.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/flow_rateimp.hpp"
+#include "pca_system_cpp_pkg_interfaces/msg/empty.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +14,7 @@
 class wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<pca_system_cpp_pkg_interfaces::msg::StatusType, pca_system_cpp_pkg_interfaces::msg::FlowRateimp, pca_system_cpp_pkg_interfaces::msg::Empty>;
 
     wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_base();
 
@@ -24,17 +26,17 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_Basal_Overinfusion(example_interfaces::msg::Int32 msg);
-    void put_Bolus_Overinfusion(example_interfaces::msg::Int32 msg);
-    void put_Square_Bolus_Overinfusion(example_interfaces::msg::Int32 msg);
-    void put_Basal_Underinfusion(example_interfaces::msg::Int32 msg);
-    void put_Bolus_Underinfusion(example_interfaces::msg::Int32 msg);
-    void put_Square_Bolus_Underinfusion(example_interfaces::msg::Int32 msg);
+    void put_Basal_Overinfusion(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Bolus_Overinfusion(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Square_Bolus_Overinfusion(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Basal_Underinfusion(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Bolus_Underinfusion(pca_system_cpp_pkg_interfaces::msg::Empty msg);
+    void put_Square_Bolus_Underinfusion(pca_system_cpp_pkg_interfaces::msg::Empty msg);
 
-    example_interfaces::msg::Int32 get_System_Status();
-    example_interfaces::msg::Int32 get_Infusion_Flow_Rate();
-    example_interfaces::msg::Int32 get_Upstream_Flow_Rate();
-    example_interfaces::msg::Int32 get_Downstream_Flow_Rate();
+    pca_system_cpp_pkg_interfaces::msg::StatusType get_System_Status();
+    pca_system_cpp_pkg_interfaces::msg::FlowRateimp get_Infusion_Flow_Rate();
+    pca_system_cpp_pkg_interfaces::msg::FlowRateimp get_Upstream_Flow_Rate();
+    pca_system_cpp_pkg_interfaces::msg::FlowRateimp get_Downstream_Flow_Rate();
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -81,17 +83,17 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_System_Status_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Infusion_Flow_Rate_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Upstream_Flow_Rate_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Downstream_Flow_Rate_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::StatusType>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_System_Status_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::FlowRateimp>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Infusion_Flow_Rate_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::FlowRateimp>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Upstream_Flow_Rate_subscription_;
+    rclcpp::Subscription<pca_system_cpp_pkg_interfaces::msg::FlowRateimp>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Downstream_Flow_Rate_subscription_;
 
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Basal_Overinfusion_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Bolus_Overinfusion_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Square_Bolus_Overinfusion_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Basal_Underinfusion_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Bolus_Underinfusion_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Square_Bolus_Underinfusion_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Basal_Overinfusion_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Bolus_Overinfusion_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Square_Bolus_Overinfusion_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Basal_Underinfusion_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Bolus_Underinfusion_publisher_;
+    rclcpp::Publisher<pca_system_cpp_pkg_interfaces::msg::Empty>::SharedPtr wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Square_Bolus_Underinfusion_publisher_;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r

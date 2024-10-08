@@ -1,5 +1,9 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/temperatureimpl.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/fan_ack.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/set_pointimpl.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/fan_cmd.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/empty.hpp"
 #include <queue>
 
 //=================================================
@@ -19,9 +23,9 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_fanCmd(example_interfaces::msg::Int32 msg);
+    void put_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg);
 
-    example_interfaces::msg::Int32::SharedPtr get_currentTemp();
+    building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr get_currentTemp();
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -33,21 +37,21 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    void handle_currentTemp(const example_interfaces::msg::Int32::SharedPtr msg);
-    virtual void handle_fanAck(const example_interfaces::msg::Int32::SharedPtr msg) = 0;
-    virtual void handle_setPoint(const example_interfaces::msg::Int32::SharedPtr msg) = 0;
-    virtual void handle_tempChanged(const example_interfaces::msg::Int32::SharedPtr msg) = 0;
+    void handle_currentTemp(const building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr msg);
+    virtual void handle_fanAck(const building_control_cpp_pkg_interfaces::msg::FanAck::SharedPtr msg) = 0;
+    virtual void handle_setPoint(const building_control_cpp_pkg_interfaces::msg::SetPointimpl::SharedPtr msg) = 0;
+    virtual void handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty::SharedPtr msg) = 0;
 
-    example_interfaces::msg::Int32::SharedPtr currentTemp_msg_holder;
+    building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr currentTemp_msg_holder;
 
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_;
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::FanAck>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::Empty>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_;
 
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_;
 
 };

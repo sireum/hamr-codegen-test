@@ -14,10 +14,10 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    void handle_Scan_Data(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_Authenticate_Clinician(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_Authenticate_Patient(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_Authenticate_Prescription(const example_interfaces::msg::Int32::SharedPtr msg);
+    void handle_Scan_Data(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    void handle_Authenticate_Clinician(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    void handle_Authenticate_Patient(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    void handle_Authenticate_Prescription(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
 
     //=================================================
     //  Include any additional declarations here

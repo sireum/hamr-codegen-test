@@ -10,35 +10,35 @@ isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_base::isolette
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_air_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_air_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl>(
         "isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_air",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl msg) {
             enqueue(infrastructureIn_air, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_1 = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_2 = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_2 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_3 = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_3 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_mmmt_current_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_4 = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_4 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_current_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_5 = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_5 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_current_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_6 = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_6 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus",
         1);
 
@@ -67,13 +67,13 @@ isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_base::isolette
 //  C o m m u n i c a t i o n
 //=================================================
 
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_base::get_air() {
+isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_base::get_air() {
     MsgType msg = applicationIn_air.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl>(msg);
 }
 void isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_base::sendOut_current_tempWstatus(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
         isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_1->publish(*typedMsg);
         isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_2->publish(*typedMsg);
         isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_3->publish(*typedMsg);
@@ -85,7 +85,7 @@ void isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_base::sen
     }
 }
 
-void isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_base::put_current_tempWstatus(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat_base::put_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
     enqueue(applicationOut_current_tempWstatus, msg);
 }

@@ -13,7 +13,7 @@ void BuildingControlDemo_i_Instance_tcp_fan::initialize()
 //=================================================
 //  C o m p u t e    E n t r y    P o i n t
 //=================================================
-void BuildingControlDemo_i_Instance_tcp_fan::handle_fanCmd(const example_interfaces::msg::Int32::SharedPtr msg)
+void BuildingControlDemo_i_Instance_tcp_fan::handle_fanCmd(const building_control_cpp_pkg_interfaces::msg::FanCmd::SharedPtr msg)
 {
     // Handle fanCmd msg
 }

@@ -13,17 +13,17 @@ void BuildingControlDemo_i_Instance_tcp_tempControl::initialize()
 //=================================================
 //  C o m p u t e    E n t r y    P o i n t
 //=================================================
-void BuildingControlDemo_i_Instance_tcp_tempControl::handle_fanAck(const example_interfaces::msg::Int32::SharedPtr msg)
+void BuildingControlDemo_i_Instance_tcp_tempControl::handle_fanAck(const building_control_cpp_pkg_interfaces::msg::FanAck::SharedPtr msg)
 {
     // Handle fanAck msg
 }
 
-void BuildingControlDemo_i_Instance_tcp_tempControl::handle_setPoint(const example_interfaces::msg::Int32::SharedPtr msg)
+void BuildingControlDemo_i_Instance_tcp_tempControl::handle_setPoint(const building_control_cpp_pkg_interfaces::msg::SetPointimpl::SharedPtr msg)
 {
     // Handle setPoint msg
 }
 
-void BuildingControlDemo_i_Instance_tcp_tempControl::handle_tempChanged(const example_interfaces::msg::Int32::SharedPtr msg)
+void BuildingControlDemo_i_Instance_tcp_tempControl::handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty::SharedPtr msg)
 {
     // Handle tempChanged msg
 }

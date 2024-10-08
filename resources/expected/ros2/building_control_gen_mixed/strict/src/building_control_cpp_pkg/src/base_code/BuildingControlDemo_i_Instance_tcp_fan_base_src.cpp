@@ -10,10 +10,10 @@ BuildingControlDemo_i_Instance_tcp_fan_base::BuildingControlDemo_i_Instance_tcp_
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    BuildingControlDemo_i_Instance_tcp_fan_fanCmd_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_fan_fanCmd_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanCmd>(
         "BuildingControlDemo_i_Instance_tcp_fan_fanCmd",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](building_control_cpp_pkg_interfaces::msg::FanCmd msg) {
             enqueue(infrastructureIn_fanCmd, msg);
             std::thread([this]() {
                 std::lock_guard<std::mutex> lock(mutex_);
@@ -26,7 +26,7 @@ BuildingControlDemo_i_Instance_tcp_fan_base::BuildingControlDemo_i_Instance_tcp_
         },
         subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_fan_fanAck_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_fan_fanAck_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanAck>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_fanAck",
         1);
 
@@ -47,7 +47,7 @@ BuildingControlDemo_i_Instance_tcp_fan_base::BuildingControlDemo_i_Instance_tcp_
 
 void BuildingControlDemo_i_Instance_tcp_fan_base::handle_fanCmd_base(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanCmd>(&msg)) {
         handle_fanCmd(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -56,14 +56,14 @@ void BuildingControlDemo_i_Instance_tcp_fan_base::handle_fanCmd_base(MsgType msg
 
 void BuildingControlDemo_i_Instance_tcp_fan_base::sendOut_fanAck(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanAck>(&msg)) {
         BuildingControlDemo_i_Instance_tcp_fan_fanAck_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
-void BuildingControlDemo_i_Instance_tcp_fan_base::put_fanAck(example_interfaces::msg::Int32 msg)
+void BuildingControlDemo_i_Instance_tcp_fan_base::put_fanAck(building_control_cpp_pkg_interfaces::msg::FanAck msg)
 {
     enqueue(applicationOut_fanAck, msg);
 }

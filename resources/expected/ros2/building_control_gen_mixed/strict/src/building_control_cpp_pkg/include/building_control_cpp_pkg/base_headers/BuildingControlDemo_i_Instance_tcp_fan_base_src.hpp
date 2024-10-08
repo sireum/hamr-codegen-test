@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/fan_cmd.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/fan_ack.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +13,7 @@
 class BuildingControlDemo_i_Instance_tcp_fan_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<building_control_cpp_pkg_interfaces::msg::FanCmd, building_control_cpp_pkg_interfaces::msg::FanAck>;
 
     BuildingControlDemo_i_Instance_tcp_fan_base();
 
@@ -24,7 +25,7 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_fanAck(example_interfaces::msg::Int32 msg);
+    void put_fanAck(building_control_cpp_pkg_interfaces::msg::FanAck msg);
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -47,7 +48,7 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    virtual void handle_fanCmd(const example_interfaces::msg::Int32 msg) = 0;
+    virtual void handle_fanCmd(const building_control_cpp_pkg_interfaces::msg::FanCmd msg) = 0;
     void handle_fanCmd_base(MsgType msg);
 
     std::queue<MsgType> infrastructureIn_fanCmd;
@@ -61,9 +62,9 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_fan_fanCmd_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::FanCmd>::SharedPtr BuildingControlDemo_i_Instance_tcp_fan_fanCmd_subscription_;
 
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_fan_fanAck_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::FanAck>::SharedPtr BuildingControlDemo_i_Instance_tcp_fan_fanAck_publisher_;
 
     // Used for thread locking
     std::mutex mutex_;

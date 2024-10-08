@@ -14,7 +14,7 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    void handle_fanCmd(const example_interfaces::msg::Int32 msg);
+    void handle_fanCmd(const building_control_cpp_pkg_interfaces::msg::FanCmd msg);
 
     //=================================================
     //  Include any additional declarations here
