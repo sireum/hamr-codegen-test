@@ -13,7 +13,7 @@ void wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_pa
 //=================================================
 //  C o m p u t e    E n t r y    P o i n t
 //=================================================
-void wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_patient_bolus_checker::handle_Patient_Button_Request(const example_interfaces::msg::Int32::SharedPtr msg)
+void wrap_pca_imp_Instance_pump_operation_operation_process_operation_threads_patient_bolus_checker::handle_Patient_Button_Request(const pca_system_cpp_pkg_interfaces::msg::Empty::SharedPtr msg)
 {
     // Handle Patient_Button_Request msg
 }

@@ -13,12 +13,12 @@ void wrap_pca_imp_Instance_pump_operation_operation_process_drug_library::initia
 //=================================================
 //  C o m p u t e    E n t r y    P o i n t
 //=================================================
-void wrap_pca_imp_Instance_pump_operation_operation_process_drug_library::handle_Load_Drug_Library(const example_interfaces::msg::Int32::SharedPtr msg)
+void wrap_pca_imp_Instance_pump_operation_operation_process_drug_library::handle_Load_Drug_Library(const pca_system_cpp_pkg_interfaces::msg::DrugLibrary::SharedPtr msg)
 {
     // Handle Load_Drug_Library msg
 }
 
-void wrap_pca_imp_Instance_pump_operation_operation_process_drug_library::handle_Get_Drug_Record(const example_interfaces::msg::Int32::SharedPtr msg)
+void wrap_pca_imp_Instance_pump_operation_operation_process_drug_library::handle_Get_Drug_Record(const pca_system_cpp_pkg_interfaces::msg::DrugCodeimp::SharedPtr msg)
 {
     // Handle Get_Drug_Record msg
 }

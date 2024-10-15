@@ -10,51 +10,51 @@ isolette_single_sensor_Instance_operator_interface_oip_oit_base::isolette_single
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_operator_interface_oip_oit_regulator_status_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_operator_interface_oip_oit_regulator_status_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Status>(
         "isolette_single_sensor_Instance_operator_interface_oip_oit_regulator_status",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::Status msg) {
             enqueue(infrastructureIn_regulator_status, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_monitor_status_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_operator_interface_oip_oit_monitor_status_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Status>(
         "isolette_single_sensor_Instance_operator_interface_oip_oit_monitor_status",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::Status msg) {
             enqueue(infrastructureIn_monitor_status, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_display_temperature_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_operator_interface_oip_oit_display_temperature_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
         "isolette_single_sensor_Instance_operator_interface_oip_oit_display_temperature",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::Tempimpl msg) {
             enqueue(infrastructureIn_display_temperature, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_alarm_control_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_operator_interface_oip_oit_alarm_control_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::OnOff>(
         "isolette_single_sensor_Instance_operator_interface_oip_oit_alarm_control",
         1,
-        [this](example_interfaces::msg::Int32 msg) {
+        [this](isolette_cpp_pkg_interfaces::msg::OnOff msg) {
             enqueue(infrastructureIn_alarm_control, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_lower_desired_tempWstatus_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_operator_interface_oip_oit_lower_desired_tempWstatus_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_desired_tempWstatus_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_desired_tempWstatus_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1 = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2 = this->create_publisher<example_interfaces::msg::Int32>(
+    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus",
         1);
 
@@ -92,25 +92,25 @@ isolette_single_sensor_Instance_operator_interface_oip_oit_base::isolette_single
 //  C o m m u n i c a t i o n
 //=================================================
 
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_operator_interface_oip_oit_base::get_regulator_status() {
+isolette_cpp_pkg_interfaces::msg::Status isolette_single_sensor_Instance_operator_interface_oip_oit_base::get_regulator_status() {
     MsgType msg = applicationIn_regulator_status.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::Status>(msg);
 }
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_operator_interface_oip_oit_base::get_monitor_status() {
+isolette_cpp_pkg_interfaces::msg::Status isolette_single_sensor_Instance_operator_interface_oip_oit_base::get_monitor_status() {
     MsgType msg = applicationIn_monitor_status.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::Status>(msg);
 }
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_operator_interface_oip_oit_base::get_display_temperature() {
+isolette_cpp_pkg_interfaces::msg::Tempimpl isolette_single_sensor_Instance_operator_interface_oip_oit_base::get_display_temperature() {
     MsgType msg = applicationIn_display_temperature.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::Tempimpl>(msg);
 }
-example_interfaces::msg::Int32 isolette_single_sensor_Instance_operator_interface_oip_oit_base::get_alarm_control() {
+isolette_cpp_pkg_interfaces::msg::OnOff isolette_single_sensor_Instance_operator_interface_oip_oit_base::get_alarm_control() {
     MsgType msg = applicationIn_alarm_control.front();
-    return std::get<example_interfaces::msg::Int32>(msg);
+    return std::get<isolette_cpp_pkg_interfaces::msg::OnOff>(msg);
 }
 void isolette_single_sensor_Instance_operator_interface_oip_oit_base::sendOut_lower_desired_tempWstatus(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
         isolette_single_sensor_Instance_operator_interface_oip_oit_lower_desired_tempWstatus_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port lower_desired_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -119,7 +119,7 @@ void isolette_single_sensor_Instance_operator_interface_oip_oit_base::sendOut_lo
 
 void isolette_single_sensor_Instance_operator_interface_oip_oit_base::sendOut_upper_desired_tempWstatus(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
         isolette_single_sensor_Instance_operator_interface_oip_oit_upper_desired_tempWstatus_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port upper_desired_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
@@ -128,7 +128,7 @@ void isolette_single_sensor_Instance_operator_interface_oip_oit_base::sendOut_up
 
 void isolette_single_sensor_Instance_operator_interface_oip_oit_base::sendOut_lower_alarm_tempWstatus(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port lower_alarm_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -136,7 +136,7 @@ void isolette_single_sensor_Instance_operator_interface_oip_oit_base::sendOut_lo
 
 void isolette_single_sensor_Instance_operator_interface_oip_oit_base::sendOut_upper_alarm_tempWstatus(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<example_interfaces::msg::Int32>(&msg)) {
+    if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
         isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1->publish(*typedMsg);
         isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2->publish(*typedMsg);
     } else {
@@ -144,22 +144,22 @@ void isolette_single_sensor_Instance_operator_interface_oip_oit_base::sendOut_up
     }
 }
 
-void isolette_single_sensor_Instance_operator_interface_oip_oit_base::put_lower_desired_tempWstatus(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_operator_interface_oip_oit_base::put_lower_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
     enqueue(applicationOut_lower_desired_tempWstatus, msg);
 }
 
-void isolette_single_sensor_Instance_operator_interface_oip_oit_base::put_upper_desired_tempWstatus(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_operator_interface_oip_oit_base::put_upper_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
     enqueue(applicationOut_upper_desired_tempWstatus, msg);
 }
 
-void isolette_single_sensor_Instance_operator_interface_oip_oit_base::put_lower_alarm_tempWstatus(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_operator_interface_oip_oit_base::put_lower_alarm_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
     enqueue(applicationOut_lower_alarm_tempWstatus, msg);
 }
 
-void isolette_single_sensor_Instance_operator_interface_oip_oit_base::put_upper_alarm_tempWstatus(example_interfaces::msg::Int32 msg)
+void isolette_single_sensor_Instance_operator_interface_oip_oit_base::put_upper_alarm_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
     enqueue(applicationOut_upper_alarm_tempWstatus, msg);
 }

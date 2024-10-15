@@ -8,11 +8,11 @@ BuildingControlDemo_i_Instance_tcp_tempSensor_base::BuildingControlDemo_i_Instan
 {
     cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::Reentrant);
     // Setting up connections
-    BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp",
         1);
 
-    BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::Empty>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged",
         1);
 
@@ -26,12 +26,12 @@ BuildingControlDemo_i_Instance_tcp_tempSensor_base::BuildingControlDemo_i_Instan
 //  C o m m u n i c a t i o n
 //=================================================
 
-void BuildingControlDemo_i_Instance_tcp_tempSensor_base::put_currentTemp(example_interfaces::msg::Int32 msg)
+void BuildingControlDemo_i_Instance_tcp_tempSensor_base::put_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg)
 {
     BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_->publish(msg);
 }
 
-void BuildingControlDemo_i_Instance_tcp_tempSensor_base::put_tempChanged(example_interfaces::msg::Int32 msg)
+void BuildingControlDemo_i_Instance_tcp_tempSensor_base::put_tempChanged(building_control_cpp_pkg_interfaces::msg::Empty msg)
 {
     BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_->publish(msg);
 }

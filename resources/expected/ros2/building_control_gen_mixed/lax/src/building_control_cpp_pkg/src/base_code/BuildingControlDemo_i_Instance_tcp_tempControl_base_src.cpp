@@ -10,27 +10,27 @@ BuildingControlDemo_i_Instance_tcp_tempControl_base::BuildingControlDemo_i_Insta
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp",
         1,
         std::bind(&BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_currentTemp, this, std::placeholders::_1), subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanAck>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_fanAck",
         1,
         std::bind(&BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_fanAck, this, std::placeholders::_1), subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_setPoint",
         1,
         std::bind(&BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_setPoint, this, std::placeholders::_1), subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_ = this->create_subscription<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Empty>(
         "BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged",
         1,
         std::bind(&BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_tempChanged, this, std::placeholders::_1), subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_ = this->create_publisher<example_interfaces::msg::Int32>(
+    BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>(
         "BuildingControlDemo_i_Instance_tcp_fan_fanCmd",
         1);
 
@@ -40,16 +40,16 @@ BuildingControlDemo_i_Instance_tcp_tempControl_base::BuildingControlDemo_i_Insta
 //  C o m m u n i c a t i o n
 //=================================================
 
-void BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_currentTemp(const example_interfaces::msg::Int32::SharedPtr msg)
+void BuildingControlDemo_i_Instance_tcp_tempControl_base::handle_currentTemp(const building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr msg)
 {
     currentTemp_msg_holder = msg;
 }
 
-example_interfaces::msg::Int32::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_base::get_currentTemp() {
+building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_base::get_currentTemp() {
     return currentTemp_msg_holder;
 }
 
-void BuildingControlDemo_i_Instance_tcp_tempControl_base::put_fanCmd(example_interfaces::msg::Int32 msg)
+void BuildingControlDemo_i_Instance_tcp_tempControl_base::put_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg)
 {
     BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_->publish(msg);
 }

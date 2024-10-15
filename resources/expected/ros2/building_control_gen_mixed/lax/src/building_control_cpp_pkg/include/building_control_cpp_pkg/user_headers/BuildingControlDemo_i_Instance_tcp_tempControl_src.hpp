@@ -14,9 +14,9 @@ private:
     //=================================================
     //  C o m p u t e    E n t r y    P o i n t
     //=================================================
-    void handle_fanAck(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_setPoint(const example_interfaces::msg::Int32::SharedPtr msg);
-    void handle_tempChanged(const example_interfaces::msg::Int32::SharedPtr msg);
+    void handle_fanAck(const building_control_cpp_pkg_interfaces::msg::FanAck::SharedPtr msg);
+    void handle_setPoint(const building_control_cpp_pkg_interfaces::msg::SetPointimpl::SharedPtr msg);
+    void handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
 
     //=================================================
     //  Include any additional declarations here

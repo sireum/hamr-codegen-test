@@ -1,0 +1,2 @@
+Float64 field_float
+Character field_s_char

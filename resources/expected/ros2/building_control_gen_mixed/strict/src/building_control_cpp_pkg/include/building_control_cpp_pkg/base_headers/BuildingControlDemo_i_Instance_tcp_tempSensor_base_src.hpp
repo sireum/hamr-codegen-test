@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
-#include "example_interfaces/msg/int32.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/temperatureimpl.hpp"
+#include "building_control_cpp_pkg_interfaces/msg/empty.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -12,7 +13,7 @@
 class BuildingControlDemo_i_Instance_tcp_tempSensor_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<example_interfaces::msg::Int32>;
+    using MsgType = std::variant<building_control_cpp_pkg_interfaces::msg::Temperatureimpl, building_control_cpp_pkg_interfaces::msg::Empty>;
 
     BuildingControlDemo_i_Instance_tcp_tempSensor_base();
 
@@ -24,8 +25,8 @@ protected:
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
-    void put_currentTemp(example_interfaces::msg::Int32 msg);
-    void put_tempChanged(example_interfaces::msg::Int32 msg);
+    void put_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg);
+    void put_tempChanged(building_control_cpp_pkg_interfaces::msg::Empty msg);
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -51,8 +52,8 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_;
-    rclcpp::Publisher<example_interfaces::msg::Int32>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::Empty>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r
