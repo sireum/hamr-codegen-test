@@ -119,17 +119,9 @@ trait CodeGenTest extends CodegenTestSuite {
       testOps = testOps(verbose = T)
     }
 
-    if (TestUtil.isSlang(testOps.platform)) {
-      testOps = testOps(slangOutputDir = Some((resultsDir / "slang").canon.value))
-    }
-
-    if (TestUtil.isLinux(testOps.platform)) {
-      testOps = testOps(slangOutputCDir = Some((resultsDir / "c").canon.value))
-    }
-
-    if (TestUtil.isSeL4(testOps.platform)) {
-      testOps = testOps(camkesOutputDir = Some((resultsDir / "camkes").canon.value))
-    }
+    testOps = testOps(slangOutputDir = Some((resultsDir / "slang").canon.value))
+    testOps = testOps(slangOutputCDir = Some((resultsDir / "c").canon.value))
+    testOps = testOps(camkesOutputDir = Some((resultsDir / "camkes").canon.value))
 
     rootTestOutputDir.removeAll()
     rootTestOutputDir.mkdirAll()
