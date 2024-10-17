@@ -30,13 +30,15 @@ object Fan_s_tcproc_fan_EntryPoint_Companion {
     tc.runtimemonitor.RuntimeMonitor.observeInitialisePostState(Arch.TempControlSoftwareSystem_s_Instance_tcproc_fan.id, tc.runtimemonitor.ObservationKind.TempControlSoftwareSystem_s_Instance_tcproc_fan_postInit, postStateContainer_wL)
   }
 
-  def pre_compute(): Unit = {
+  def pre_compute(dispatchedEventPortId: Art.PortId): Unit = {
     // block the component while its pre-state values are retrieved
     preStateContainer_wL = Some(
       Fan_s_tcproc_fan_PreState_Container_PS(
         api_fanCmd = 
-          if (Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_fan.operational_api.fanCmd_Id).nonEmpty)
-            Some(Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_fan.operational_api.fanCmd_Id).get.asInstanceOf[CoolingFan.FanCmd_Payload].value)
+          if (dispatchedEventPortId == Arch.TempControlSoftwareSystem_s_Instance_tcproc_fan.operational_api.fanCmd_Id)
+            if (Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_fan.operational_api.fanCmd_Id).nonEmpty)
+              Some(Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_fan.operational_api.fanCmd_Id).get.asInstanceOf[CoolingFan.FanCmd_Payload].value)
+            else None()
           else None()))
 
     // the rest can now be performed via a different thread

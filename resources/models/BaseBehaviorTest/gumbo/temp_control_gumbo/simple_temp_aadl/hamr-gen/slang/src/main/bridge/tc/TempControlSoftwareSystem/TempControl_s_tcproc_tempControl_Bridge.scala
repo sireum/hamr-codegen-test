@@ -138,28 +138,36 @@ object TempControl_s_tcproc_tempControl_Bridge {
 
       Art.receiveInput(eventInPortIds, dataInPortIds)
 
-      TempControl_s_tcproc_tempControl_EntryPoint_Companion.pre_compute()
-
       for(portId <- dispatchableEventPorts) {
         if(portId == fanAck_Id){
           val Some(CoolingFan.FanAck_Payload(value)) = Art.getValue(fanAck_Id)
 
+          TempControl_s_tcproc_tempControl_EntryPoint_Companion.pre_compute(fanAck_Id)
+
           // implement the following in 'component':  def handle_fanAck(api: TempControl_s_Operational_Api, value: CoolingFan.FanAck.Type): Unit = {}
           component.handle_fanAck(operational_api, value)
+
+          TempControl_s_tcproc_tempControl_EntryPoint_Companion.post_compute()
         }
         else if(portId == setPoint_Id){
           val Some(TempControlSoftwareSystem.SetPoint_i_Payload(value)) = Art.getValue(setPoint_Id)
 
+          TempControl_s_tcproc_tempControl_EntryPoint_Companion.pre_compute(setPoint_Id)
+
           // implement the following in 'component':  def handle_setPoint(api: TempControl_s_Operational_Api, value: TempControlSoftwareSystem.SetPoint_i): Unit = {}
           component.handle_setPoint(operational_api, value)
+
+          TempControl_s_tcproc_tempControl_EntryPoint_Companion.post_compute()
         }
         else if(portId == tempChanged_Id) {
+          TempControl_s_tcproc_tempControl_EntryPoint_Companion.pre_compute(tempChanged_Id)
+
           // implement the following in 'component':  def handle_tempChanged(api: TempControl_s_Operational_Api): Unit = {}
           component.handle_tempChanged(operational_api)
+
+          TempControl_s_tcproc_tempControl_EntryPoint_Companion.post_compute()
         }
       }
-
-      TempControl_s_tcproc_tempControl_EntryPoint_Companion.post_compute()
 
       Art.sendOutput(eventOutPortIds, dataOutPortIds)
     }
