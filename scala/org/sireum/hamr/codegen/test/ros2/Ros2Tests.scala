@@ -210,6 +210,7 @@ object Ros2Tests {
     verbose = F,
     runtimeMonitoring = F,
     platform = CodegenHamrPlatform.Ros2,
+    outputDir = None(),
     parseableMessages = F,
     //
     slangOutputDir = None(),

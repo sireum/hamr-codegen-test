@@ -249,6 +249,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     verbose = F,
     runtimeMonitoring = F,
     platform = CodegenHamrPlatform.JVM,
+    outputDir = None(),
     parseableMessages = F,
     //
     slangOutputDir = None(),
@@ -358,6 +359,7 @@ object CodegenBehaviorTest {
           verbose = opts.verbose,
           runtimeMonitoring = opts.runtimeMonitoring,
           platform = CodegenHamrPlatform.byName(opts.platform.name).get,
+          outputDir = None(),
           parseableMessages = F,
 
           slangOutputDir = canon(opts.slangOutputDir),
