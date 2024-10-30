@@ -2,11 +2,11 @@ package org.sireum.hamr.codegen.test.normal
 
 import org.sireum._
 import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
-import org.sireum.hamr.codegen.test.CodeGenTest
-import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
+import org.sireum.hamr.codegen.test.CodegenTest
+import org.sireum.hamr.codegen.test.CodegenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.TestMode
 
-class CodeGenTest_Base extends CodeGenTest {
+class CodeGenTest_Base extends CodegenTest {
 
   override def generateExpected: B = super.generateExpected || F
 
@@ -16,7 +16,7 @@ class CodeGenTest_Base extends CodeGenTest {
   override def testModes: _root_.org.sireum.ISZ[TestMode.Type] =
     super.testModes // :+ TestMode.tipe :+ TestMode.compile
 
-  val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
+  val testResources: TestResources = CodegenTest.defaultTestLayout(getClass())
 
   val tests = Tests {
     val modelsDir = testResources.modelsDir

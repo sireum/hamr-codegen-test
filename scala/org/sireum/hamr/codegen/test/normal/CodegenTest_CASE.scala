@@ -2,8 +2,8 @@ package org.sireum.hamr.codegen.test.normal
 
 import org.sireum._
 import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
-import org.sireum.hamr.codegen.test.CodeGenTest
-import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
+import org.sireum.hamr.codegen.test.CodegenTest
+import org.sireum.hamr.codegen.test.CodegenTest.{TestResources, baseOptions}
 
 case class TestContainer(testName: String,
                          modelDir: Os.Path,
@@ -12,11 +12,11 @@ case class TestContainer(testName: String,
                          hasVM: B,
                          expectedErrorReasons: ISZ[String])
 
-class CodegenTest_CASE extends CodeGenTest {
+class CodegenTest_CASE extends CodegenTest {
 
   override def generateExpected: B = super.generateExpected || F
 
-  val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
+  val testResources: TestResources = CodegenTest.defaultTestLayout(getClass())
 
   val VM_PARTITION: Option[B] =
     if (Os.envs.contains("VM_PARTITION")) Some(java.lang.Boolean.parseBoolean(Os.env("VM_PARTITION").get.native))

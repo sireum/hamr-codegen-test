@@ -3,11 +3,11 @@ package org.sireum.hamr.codegen.test.expensive
 import org.scalatest.BeforeAndAfterAll
 import org.sireum._
 import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
-import org.sireum.hamr.codegen.test.CodeGenTest
-import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
+import org.sireum.hamr.codegen.test.CodegenTest
+import org.sireum.hamr.codegen.test.CodegenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 
-class HamrTranspileTests extends CodeGenTest with BeforeAndAfterAll {
+class HamrTranspileTests extends CodegenTest with BeforeAndAfterAll {
 
   override def generateExpected: B = super.generateExpected || F
 
@@ -34,7 +34,7 @@ class HamrTranspileTests extends CodeGenTest with BeforeAndAfterAll {
       else ISZ())
   }
 
-  val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
+  val testResources: TestResources = CodegenTest.defaultTestLayout(getClass())
 
   val (linux, sel4, sel4_tb, sel4_only) = (CodegenHamrPlatform.Linux, CodegenHamrPlatform.SeL4, CodegenHamrPlatform.SeL4_TB, CodegenHamrPlatform.SeL4_Only)
 

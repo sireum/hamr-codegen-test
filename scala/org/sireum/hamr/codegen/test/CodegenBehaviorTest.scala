@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test
 
 import org.sireum._
-import org.sireum.hamr.arsit.plugin.ArsitPlugin
+import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._

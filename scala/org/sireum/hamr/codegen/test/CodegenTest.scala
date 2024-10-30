@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test
 
 import org.sireum._
-import org.sireum.hamr.arsit.plugin.ArsitPlugin
+import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
@@ -15,9 +15,9 @@ import org.sireum.ops.ISZOps
 /** Can regenerate AIR JSON files via 
 * https://github.com/sireum/osate-plugin/blob/d0015531e9d2039f7f186c4fa7a124521ee664b6/org.sireum.aadl.osate.tests/src/org/sireum/aadl/osate/tests/extras/AirUpdater.java#L46-L54
 */
-trait CodeGenTest extends CodegenTestSuite {
+trait CodegenTest extends CodegenTestSuite {
 
-  import CodeGenTest._
+  import CodegenTest._
 
   def generateExpected: B = Os.env("HAMR_REGEN_EXPECTED").nonEmpty
 
@@ -282,7 +282,7 @@ trait CodeGenTest extends CodegenTestSuite {
   }
 }
 
-object CodeGenTest {
+object CodegenTest {
 
   case class TestResources(resultsDir: Os.Path,
                            expectedDir: Os.Path,
