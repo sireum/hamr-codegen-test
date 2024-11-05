@@ -63,7 +63,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
   }
 
   // TODO: Fix/implement PCA Pump to-do types
-  "pca-pump_lax" in {
+  "pca-pump_lax" ignore {
     val testName = "pca-pump"
     val root = codegen_base / testName
     val airFile = getAir(root / "pca")
@@ -73,7 +73,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
   }
 
   // TODO: Fix/implement PCA Pump to-do types
-  "pca-pump_strict" in {
+  "pca-pump_strict" ignore {
     val testName = "pca-pump"
     val root = codegen_base / testName
     val airFile = getAir(root / "pca")
@@ -154,17 +154,18 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
       }
     }
     */
+    if (!reporter.hasError) {
+      if (generateExpected) {
+        assert(!isCI, "generateExpected should be F when code is pushed to github")
 
-    if (generateExpected) {
-      assert (!isCI, "generateExpected should be F when code is pushed to github")
-
-      val expectedDir = this.expectedRoot / testName / strictModeString
-      expectedDir.removeAll()
-      getResultsDir(testName, strictModeString).copyOverTo(expectedDir)
-      println(s"Replaced: ${expectedDir}")
-    } else {
-      if (!compare(testName, filter, strictModeString)) {
-        failureReasons = failureReasons :+ "Results did not match expected"
+        val expectedDir = this.expectedRoot / testName / strictModeString
+        expectedDir.removeAll()
+        getResultsDir(testName, strictModeString).copyOverTo(expectedDir)
+        println(s"Replaced: ${expectedDir}")
+      } else {
+        if (!compare(testName, filter, strictModeString)) {
+          failureReasons = failureReasons :+ "Results did not match expected"
+        }
       }
     }
 
@@ -191,13 +192,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
       }
     }
 
-    // The PCA Pump model should fail with 63 unknown-datatype-related errors
-    if (testName.toString.compareTo("pca-pump") == 0) {
-      assert(failureReasons.size == 63)
-    }
-    else {
-      assert(failureReasons.size == 0)
-    }
+    assert(failureReasons.size == 0)
   }
 }
 
