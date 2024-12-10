@@ -2,14 +2,14 @@ package org.sireum.hamr.codegen.test.gumbo
 
 import org.scalatest.BeforeAndAfterAll
 import org.sireum.hamr.codegen.common.util.HamrCli.CodegenHamrPlatform
-import org.sireum.hamr.codegen.test.CodeGenTest
-import org.sireum.hamr.codegen.test.CodeGenTest.{TestResources, baseOptions}
+import org.sireum.hamr.codegen.test.CodegenTest
+import org.sireum.hamr.codegen.test.CodegenTest.{TestResources, baseOptions}
 import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.{B, F, ISZ, None, Os, Some, T, ops}
 
-class GumboTest extends CodeGenTest with BeforeAndAfterAll {
+class GumboTest extends CodegenTest with BeforeAndAfterAll {
 
-  val testResources: TestResources = CodeGenTest.defaultTestLayout(getClass())
+  val testResources: TestResources = CodegenTest.defaultTestLayout(getClass())
 
   override def generateExpected: B = super.generateExpected || F
 

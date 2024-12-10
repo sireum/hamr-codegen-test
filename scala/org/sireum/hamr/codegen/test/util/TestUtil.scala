@@ -2,11 +2,11 @@ package org.sireum.hamr.codegen.test.util
 
 import org.scalatest.BeforeAndAfterAll
 import org.sireum._
-import org.sireum.hamr.act.templates.SlangEmbeddedTemplate
-import org.sireum.hamr.act.util.CMakeOption
+import org.sireum.hamr.codegen.act.templates.SlangEmbeddedTemplate
+import org.sireum.hamr.codegen.act.util.CMakeOption
 import org.sireum.hamr.codegen.common.containers.{SireumProyekIveOption, SireumSlangTranspilersCOption, SireumToolsSergenOption, SireumToolsSlangcheckGeneratorOption}
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenOption}
-import org.sireum.hamr.codegen.test.CodeGenTest
+import org.sireum.hamr.codegen.test.CodegenTest
 import org.sireum.hamr.ir.{Aadl, JSON}
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
@@ -608,7 +608,7 @@ object TestUtil {
   }
 
   def camkesDir(): Option[Os.Path] = {
-    return Os.env(CodeGenTest.CAMKES_DIR) match {
+    return Os.env(CodegenTest.CAMKES_DIR) match {
       case Some(x) => Some(Os.path(x))
       case _ =>
         val candidate = Os.home / "CASE" / "camkes"
@@ -618,7 +618,7 @@ object TestUtil {
   }
 
   def camkesVmExamplesDir(): Option[Os.Path] = {
-    return Os.env(CodeGenTest.CAMKES_VM_EXAMPLES_DIR) match {
+    return Os.env(CodegenTest.CAMKES_VM_EXAMPLES_DIR) match {
       case Some(x) => Some(Os.path(x))
       case _ =>
         val candidate = Os.home / "CASE" / "camkes-vm-examples"

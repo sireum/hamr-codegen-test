@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test
 
 import org.sireum._
-import org.sireum.hamr.arsit.plugin.ArsitPlugin
+import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
@@ -249,6 +249,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     verbose = F,
     runtimeMonitoring = F,
     platform = CodegenHamrPlatform.JVM,
+    outputDir = None(),
     parseableMessages = F,
     //
     slangOutputDir = None(),
@@ -358,6 +359,7 @@ object CodegenBehaviorTest {
           verbose = opts.verbose,
           runtimeMonitoring = opts.runtimeMonitoring,
           platform = CodegenHamrPlatform.byName(opts.platform.name).get,
+          outputDir = None(),
           parseableMessages = F,
 
           slangOutputDir = canon(opts.slangOutputDir),

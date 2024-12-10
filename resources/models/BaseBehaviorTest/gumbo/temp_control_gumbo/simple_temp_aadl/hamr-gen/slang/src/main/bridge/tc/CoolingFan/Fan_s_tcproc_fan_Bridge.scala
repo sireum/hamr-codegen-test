@@ -119,18 +119,18 @@ object Fan_s_tcproc_fan_Bridge {
 
       Art.receiveInput(eventInPortIds, dataInPortIds)
 
-      Fan_s_tcproc_fan_EntryPoint_Companion.pre_compute()
-
       for(portId <- dispatchableEventPorts) {
         if(portId == fanCmd_Id){
           val Some(CoolingFan.FanCmd_Payload(value)) = Art.getValue(fanCmd_Id)
 
+          Fan_s_tcproc_fan_EntryPoint_Companion.pre_compute(fanCmd_Id)
+
           // implement the following in 'component':  def handle_fanCmd(api: Fan_s_Operational_Api, value: CoolingFan.FanCmd.Type): Unit = {}
           component.handle_fanCmd(operational_api, value)
+
+          Fan_s_tcproc_fan_EntryPoint_Companion.post_compute()
         }
       }
-
-      Fan_s_tcproc_fan_EntryPoint_Companion.post_compute()
 
       Art.sendOutput(eventOutPortIds, dataOutPortIds)
     }

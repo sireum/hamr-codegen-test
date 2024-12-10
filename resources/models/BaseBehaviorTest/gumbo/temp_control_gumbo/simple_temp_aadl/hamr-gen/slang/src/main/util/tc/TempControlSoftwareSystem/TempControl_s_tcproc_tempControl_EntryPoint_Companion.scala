@@ -33,21 +33,28 @@ object TempControl_s_tcproc_tempControl_EntryPoint_Companion {
     tc.runtimemonitor.RuntimeMonitor.observeInitialisePostState(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.id, tc.runtimemonitor.ObservationKind.TempControlSoftwareSystem_s_Instance_tcproc_tempControl_postInit, postStateContainer_wL)
   }
 
-  def pre_compute(): Unit = {
+  def pre_compute(dispatchedEventPortId: Art.PortId): Unit = {
     // block the component while its pre-state values are retrieved
     preStateContainer_wL = Some(
       TempControl_s_tcproc_tempControl_PreState_Container_PS(
         In_currentFanState = tc.TempControlSoftwareSystem.TempControl_s_tcproc_tempControl.currentFanState, 
         In_currentSetPoint = tc.TempControlSoftwareSystem.TempControl_s_tcproc_tempControl.currentSetPoint, 
         In_latestTemp = tc.TempControlSoftwareSystem.TempControl_s_tcproc_tempControl.latestTemp, 
-        api_tempChanged = Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.tempChanged_Id).asInstanceOf[Option[art.Empty]], 
+        api_tempChanged = 
+          if (dispatchedEventPortId == Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.tempChanged_Id)
+            Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.tempChanged_Id).asInstanceOf[Option[art.Empty]]
+          else None(), 
         api_fanAck = 
-          if (Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.fanAck_Id).nonEmpty)
-            Some(Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.fanAck_Id).get.asInstanceOf[CoolingFan.FanAck_Payload].value)
+          if (dispatchedEventPortId == Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.fanAck_Id)
+            if (Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.fanAck_Id).nonEmpty)
+              Some(Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.fanAck_Id).get.asInstanceOf[CoolingFan.FanAck_Payload].value)
+            else None()
           else None(), 
         api_setPoint = 
-          if (Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.setPoint_Id).nonEmpty)
-            Some(Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.setPoint_Id).get.asInstanceOf[TempControlSoftwareSystem.SetPoint_i_Payload].value)
+          if (dispatchedEventPortId == Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.setPoint_Id)
+            if (Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.setPoint_Id).nonEmpty)
+              Some(Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.setPoint_Id).get.asInstanceOf[TempControlSoftwareSystem.SetPoint_i_Payload].value)
+            else None()
           else None(), 
         api_currentTemp = Art.observeInPortVariable(Arch.TempControlSoftwareSystem_s_Instance_tcproc_tempControl.operational_api.currentTemp_Id).get.asInstanceOf[TempSensor.Temperature_i_Payload].value))
 
