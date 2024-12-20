@@ -11,15 +11,15 @@ find_package(datatypes_system_cpp_pkg_interfaces REQUIRED)
 
 include_directories(include)
 
-add_executable(Sys_i_Instance_producer_producer_exe src/base_code/Sys_i_Instance_producer_producer_runner.cpp src/user_code/Sys_i_Instance_producer_producer_src.cpp src/base_code/Sys_i_Instance_producer_producer_base_src.cpp)
-ament_target_dependencies(Sys_i_Instance_producer_producer_exe rclcpp datatypes_system_cpp_pkg_interfaces)
+add_executable(producer_producer_exe src/base_code/producer_producer_runner.cpp src/user_code/producer_producer_src.cpp src/base_code/producer_producer_base_src.cpp)
+ament_target_dependencies(producer_producer_exe rclcpp datatypes_system_cpp_pkg_interfaces)
 
-add_executable(Sys_i_Instance_consumer_consumer_exe src/base_code/Sys_i_Instance_consumer_consumer_runner.cpp src/user_code/Sys_i_Instance_consumer_consumer_src.cpp src/base_code/Sys_i_Instance_consumer_consumer_base_src.cpp)
-ament_target_dependencies(Sys_i_Instance_consumer_consumer_exe rclcpp datatypes_system_cpp_pkg_interfaces)
+add_executable(consumer_consumer_exe src/base_code/consumer_consumer_runner.cpp src/user_code/consumer_consumer_src.cpp src/base_code/consumer_consumer_base_src.cpp)
+ament_target_dependencies(consumer_consumer_exe rclcpp datatypes_system_cpp_pkg_interfaces)
 
 install(TARGETS
-    Sys_i_Instance_producer_producer_exe
-    Sys_i_Instance_consumer_consumer_exe
+    producer_producer_exe
+    consumer_consumer_exe
     DESTINATION lib/${PROJECT_NAME}
 )
 

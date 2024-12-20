@@ -1,10 +1,10 @@
 <launch>
 
-    <node pkg="datatypes_system_cpp_pkg" exec="Sys_i_Instance_producer_producer_exe">
+    <node pkg="datatypes_system_cpp_pkg" exec="producer_producer_exe">
     </node>
 
 
-    <node pkg="datatypes_system_cpp_pkg" exec="Sys_i_Instance_consumer_consumer_exe">
+    <node pkg="datatypes_system_cpp_pkg" exec="consumer_consumer_exe">
     </node>
 
 </launch>
