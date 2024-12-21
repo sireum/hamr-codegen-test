@@ -10,28 +10,28 @@ thermostat_monitor_temperature_manage_alarm_mat_base::thermostat_monitor_tempera
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus",
+    thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus",
         1,
         std::bind(&thermostat_monitor_temperature_manage_alarm_mat_base::handle_current_tempWstatus, this, std::placeholders::_1), subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp",
+    thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp",
         1,
         std::bind(&thermostat_monitor_temperature_manage_alarm_mat_base::handle_lower_alarm_temp, this, std::placeholders::_1), subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp",
+    thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp",
         1,
         std::bind(&thermostat_monitor_temperature_manage_alarm_mat_base::handle_upper_alarm_temp, this, std::placeholders::_1), subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_monitor_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::MonitorMode>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_monitor_mode",
+    thermostat_monitor_temperature_manage_alarm_mat_monitor_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::MonitorMode>(
+        "thermostat_monitor_temperature_manage_alarm_mat_monitor_mode",
         1,
         std::bind(&thermostat_monitor_temperature_manage_alarm_mat_base::handle_monitor_mode, this, std::placeholders::_1), subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::OnOff>(
-        "isolette_single_sensor_Instance_operator_interface_oip_oit_alarm_control",
+    thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::OnOff>(
+        "operator_interface_oip_oit_alarm_control",
         1);
 
     // timeTriggered callback timer
@@ -82,6 +82,6 @@ isolette_cpp_pkg_interfaces::msg::MonitorMode::SharedPtr thermostat_monitor_temp
 
 void thermostat_monitor_temperature_manage_alarm_mat_base::put_alarm_control(isolette_cpp_pkg_interfaces::msg::OnOff msg)
 {
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_->publish(msg);
+    thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_->publish(msg);
 }
 

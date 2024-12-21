@@ -10,8 +10,8 @@ tcp_fan_base::tcp_fan_base() : Node("tcp_fan")
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    BuildingControlDemo_i_Instance_tcp_fan_fanCmd_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanCmd>(
-        "BuildingControlDemo_i_Instance_tcp_fan_fanCmd",
+    tcp_fan_fanCmd_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanCmd>(
+        "tcp_fan_fanCmd",
         1,
         [this](building_control_cpp_pkg_interfaces::msg::FanCmd msg) {
             enqueue(infrastructureIn_fanCmd, msg);
@@ -26,8 +26,8 @@ tcp_fan_base::tcp_fan_base() : Node("tcp_fan")
         },
         subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_fan_fanAck_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanAck>(
-        "BuildingControlDemo_i_Instance_tcp_tempControl_fanAck",
+    tcp_fan_fanAck_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanAck>(
+        "tcp_tempControl_fanAck",
         1);
 
     // Used by receiveInputs
@@ -57,7 +57,7 @@ void tcp_fan_base::handle_fanCmd_base(MsgType msg)
 void tcp_fan_base::sendOut_fanAck(MsgType msg)
 {
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanAck>(&msg)) {
-        BuildingControlDemo_i_Instance_tcp_fan_fanAck_publisher_->publish(*typedMsg);
+        tcp_fan_fanAck_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }

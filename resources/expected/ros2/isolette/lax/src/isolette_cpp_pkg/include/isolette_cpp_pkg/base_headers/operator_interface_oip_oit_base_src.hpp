@@ -54,15 +54,15 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::Status>::SharedPtr isolette_single_sensor_Instance_operator_interface_oip_oit_regulator_status_subscription_;
-    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::Status>::SharedPtr isolette_single_sensor_Instance_operator_interface_oip_oit_monitor_status_subscription_;
-    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>::SharedPtr isolette_single_sensor_Instance_operator_interface_oip_oit_display_temperature_subscription_;
-    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::OnOff>::SharedPtr isolette_single_sensor_Instance_operator_interface_oip_oit_alarm_control_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::Status>::SharedPtr operator_interface_oip_oit_regulator_status_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::Status>::SharedPtr operator_interface_oip_oit_monitor_status_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>::SharedPtr operator_interface_oip_oit_display_temperature_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::OnOff>::SharedPtr operator_interface_oip_oit_alarm_control_subscription_;
 
-    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr isolette_single_sensor_Instance_operator_interface_oip_oit_lower_desired_tempWstatus_publisher_;
-    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr isolette_single_sensor_Instance_operator_interface_oip_oit_upper_desired_tempWstatus_publisher_;
-    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1;
-    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_lower_desired_tempWstatus_publisher_;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_upper_desired_tempWstatus_publisher_;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r

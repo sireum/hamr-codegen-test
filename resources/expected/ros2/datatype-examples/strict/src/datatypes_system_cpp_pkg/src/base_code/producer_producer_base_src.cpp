@@ -8,80 +8,80 @@ producer_producer_base::producer_producer_base() : Node("producer_producer")
 {
     cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::Reentrant);
     // Setting up connections
-    Sys_i_Instance_producer_producer_myBoolean_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Boolean>(
-        "Sys_i_Instance_consumer_consumer_myBoolean",
+    producer_producer_myBoolean_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Boolean>(
+        "consumer_consumer_myBoolean",
         1);
 
-    Sys_i_Instance_producer_producer_myInteger_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(
-        "Sys_i_Instance_consumer_consumer_myInteger",
+    producer_producer_myInteger_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(
+        "consumer_consumer_myInteger",
         1);
 
-    Sys_i_Instance_producer_producer_myFloat_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Float64>(
-        "Sys_i_Instance_consumer_consumer_myFloat",
+    producer_producer_myFloat_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Float64>(
+        "consumer_consumer_myFloat",
         1);
 
-    Sys_i_Instance_producer_producer_myCharacter_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Character>(
-        "Sys_i_Instance_consumer_consumer_myCharacter",
+    producer_producer_myCharacter_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Character>(
+        "consumer_consumer_myCharacter",
         1);
 
-    Sys_i_Instance_producer_producer_myString_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::String>(
-        "Sys_i_Instance_consumer_consumer_myString",
+    producer_producer_myString_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::String>(
+        "consumer_consumer_myString",
         1);
 
-    Sys_i_Instance_producer_producer_myInt8_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer8>(
-        "Sys_i_Instance_consumer_consumer_myInt8",
+    producer_producer_myInt8_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer8>(
+        "consumer_consumer_myInt8",
         1);
 
-    Sys_i_Instance_producer_producer_myInt16_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer16>(
-        "Sys_i_Instance_consumer_consumer_myInt16",
+    producer_producer_myInt16_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer16>(
+        "consumer_consumer_myInt16",
         1);
 
-    Sys_i_Instance_producer_producer_myInt32_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer32>(
-        "Sys_i_Instance_consumer_consumer_myInt32",
+    producer_producer_myInt32_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer32>(
+        "consumer_consumer_myInt32",
         1);
 
-    Sys_i_Instance_producer_producer_myInt64_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(
-        "Sys_i_Instance_consumer_consumer_myInt64",
+    producer_producer_myInt64_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(
+        "consumer_consumer_myInt64",
         1);
 
-    Sys_i_Instance_producer_producer_myUInt8_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>(
-        "Sys_i_Instance_consumer_consumer_myUInt8",
+    producer_producer_myUInt8_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>(
+        "consumer_consumer_myUInt8",
         1);
 
-    Sys_i_Instance_producer_producer_myUInt16_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>(
-        "Sys_i_Instance_consumer_consumer_myUInt16",
+    producer_producer_myUInt16_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>(
+        "consumer_consumer_myUInt16",
         1);
 
-    Sys_i_Instance_producer_producer_myUInt32_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>(
-        "Sys_i_Instance_consumer_consumer_myUInt32",
+    producer_producer_myUInt32_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>(
+        "consumer_consumer_myUInt32",
         1);
 
-    Sys_i_Instance_producer_producer_myUInt64_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>(
-        "Sys_i_Instance_consumer_consumer_myUInt64",
+    producer_producer_myUInt64_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>(
+        "consumer_consumer_myUInt64",
         1);
 
-    Sys_i_Instance_producer_producer_myFloat32_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Float32>(
-        "Sys_i_Instance_consumer_consumer_myFloat32",
+    producer_producer_myFloat32_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Float32>(
+        "consumer_consumer_myFloat32",
         1);
 
-    Sys_i_Instance_producer_producer_myFloat64_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Float64>(
-        "Sys_i_Instance_consumer_consumer_myFloat64",
+    producer_producer_myFloat64_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::Float64>(
+        "consumer_consumer_myFloat64",
         1);
 
-    Sys_i_Instance_producer_producer_myEnum_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>(
-        "Sys_i_Instance_consumer_consumer_myEnum",
+    producer_producer_myEnum_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>(
+        "consumer_consumer_myEnum",
         1);
 
-    Sys_i_Instance_producer_producer_myStruct_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>(
-        "Sys_i_Instance_consumer_consumer_myStruct",
+    producer_producer_myStruct_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>(
+        "consumer_consumer_myStruct",
         1);
 
-    Sys_i_Instance_producer_producer_myArray1_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>(
-        "Sys_i_Instance_consumer_consumer_myArray1",
+    producer_producer_myArray1_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>(
+        "consumer_consumer_myArray1",
         1);
 
-    Sys_i_Instance_producer_producer_myArray2_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>(
-        "Sys_i_Instance_consumer_consumer_myArray2",
+    producer_producer_myArray2_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>(
+        "consumer_consumer_myArray2",
         1);
 
     // timeTriggeredCaller callback timer
@@ -128,7 +128,7 @@ producer_producer_base::producer_producer_base() : Node("producer_producer")
 void producer_producer_base::sendOut_myBoolean(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Boolean>(&msg)) {
-        Sys_i_Instance_producer_producer_myBoolean_publisher_->publish(*typedMsg);
+        producer_producer_myBoolean_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -137,7 +137,7 @@ void producer_producer_base::sendOut_myBoolean(MsgType msg)
 void producer_producer_base::sendOut_myInteger(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
-        Sys_i_Instance_producer_producer_myInteger_publisher_->publish(*typedMsg);
+        producer_producer_myInteger_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -146,7 +146,7 @@ void producer_producer_base::sendOut_myInteger(MsgType msg)
 void producer_producer_base::sendOut_myFloat(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float64>(&msg)) {
-        Sys_i_Instance_producer_producer_myFloat_publisher_->publish(*typedMsg);
+        producer_producer_myFloat_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -155,7 +155,7 @@ void producer_producer_base::sendOut_myFloat(MsgType msg)
 void producer_producer_base::sendOut_myCharacter(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Character>(&msg)) {
-        Sys_i_Instance_producer_producer_myCharacter_publisher_->publish(*typedMsg);
+        producer_producer_myCharacter_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -164,7 +164,7 @@ void producer_producer_base::sendOut_myCharacter(MsgType msg)
 void producer_producer_base::sendOut_myString(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::String>(&msg)) {
-        Sys_i_Instance_producer_producer_myString_publisher_->publish(*typedMsg);
+        producer_producer_myString_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -173,7 +173,7 @@ void producer_producer_base::sendOut_myString(MsgType msg)
 void producer_producer_base::sendOut_myInt8(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer8>(&msg)) {
-        Sys_i_Instance_producer_producer_myInt8_publisher_->publish(*typedMsg);
+        producer_producer_myInt8_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -182,7 +182,7 @@ void producer_producer_base::sendOut_myInt8(MsgType msg)
 void producer_producer_base::sendOut_myInt16(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer16>(&msg)) {
-        Sys_i_Instance_producer_producer_myInt16_publisher_->publish(*typedMsg);
+        producer_producer_myInt16_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -191,7 +191,7 @@ void producer_producer_base::sendOut_myInt16(MsgType msg)
 void producer_producer_base::sendOut_myInt32(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer32>(&msg)) {
-        Sys_i_Instance_producer_producer_myInt32_publisher_->publish(*typedMsg);
+        producer_producer_myInt32_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -200,7 +200,7 @@ void producer_producer_base::sendOut_myInt32(MsgType msg)
 void producer_producer_base::sendOut_myInt64(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
-        Sys_i_Instance_producer_producer_myInt64_publisher_->publish(*typedMsg);
+        producer_producer_myInt64_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -209,7 +209,7 @@ void producer_producer_base::sendOut_myInt64(MsgType msg)
 void producer_producer_base::sendOut_myUInt8(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>(&msg)) {
-        Sys_i_Instance_producer_producer_myUInt8_publisher_->publish(*typedMsg);
+        producer_producer_myUInt8_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -218,7 +218,7 @@ void producer_producer_base::sendOut_myUInt8(MsgType msg)
 void producer_producer_base::sendOut_myUInt16(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>(&msg)) {
-        Sys_i_Instance_producer_producer_myUInt16_publisher_->publish(*typedMsg);
+        producer_producer_myUInt16_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -227,7 +227,7 @@ void producer_producer_base::sendOut_myUInt16(MsgType msg)
 void producer_producer_base::sendOut_myUInt32(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>(&msg)) {
-        Sys_i_Instance_producer_producer_myUInt32_publisher_->publish(*typedMsg);
+        producer_producer_myUInt32_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -236,7 +236,7 @@ void producer_producer_base::sendOut_myUInt32(MsgType msg)
 void producer_producer_base::sendOut_myUInt64(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>(&msg)) {
-        Sys_i_Instance_producer_producer_myUInt64_publisher_->publish(*typedMsg);
+        producer_producer_myUInt64_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -245,7 +245,7 @@ void producer_producer_base::sendOut_myUInt64(MsgType msg)
 void producer_producer_base::sendOut_myFloat32(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float32>(&msg)) {
-        Sys_i_Instance_producer_producer_myFloat32_publisher_->publish(*typedMsg);
+        producer_producer_myFloat32_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -254,7 +254,7 @@ void producer_producer_base::sendOut_myFloat32(MsgType msg)
 void producer_producer_base::sendOut_myFloat64(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float64>(&msg)) {
-        Sys_i_Instance_producer_producer_myFloat64_publisher_->publish(*typedMsg);
+        producer_producer_myFloat64_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -263,7 +263,7 @@ void producer_producer_base::sendOut_myFloat64(MsgType msg)
 void producer_producer_base::sendOut_myEnum(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>(&msg)) {
-        Sys_i_Instance_producer_producer_myEnum_publisher_->publish(*typedMsg);
+        producer_producer_myEnum_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -272,7 +272,7 @@ void producer_producer_base::sendOut_myEnum(MsgType msg)
 void producer_producer_base::sendOut_myStruct(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>(&msg)) {
-        Sys_i_Instance_producer_producer_myStruct_publisher_->publish(*typedMsg);
+        producer_producer_myStruct_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -281,7 +281,7 @@ void producer_producer_base::sendOut_myStruct(MsgType msg)
 void producer_producer_base::sendOut_myArray1(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>(&msg)) {
-        Sys_i_Instance_producer_producer_myArray1_publisher_->publish(*typedMsg);
+        producer_producer_myArray1_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -290,7 +290,7 @@ void producer_producer_base::sendOut_myArray1(MsgType msg)
 void producer_producer_base::sendOut_myArray2(MsgType msg)
 {
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>(&msg)) {
-        Sys_i_Instance_producer_producer_myArray2_publisher_->publish(*typedMsg);
+        producer_producer_myArray2_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }

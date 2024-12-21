@@ -32,8 +32,8 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_;
-    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::Empty>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>::SharedPtr tcp_tempSensor_currentTemp_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::Empty>::SharedPtr tcp_tempSensor_tempChanged_publisher_;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r
