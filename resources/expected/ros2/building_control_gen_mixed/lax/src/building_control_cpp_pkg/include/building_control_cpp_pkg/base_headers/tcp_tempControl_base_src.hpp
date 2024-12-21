@@ -47,11 +47,11 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_;
-    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::FanAck>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_;
-    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_;
-    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::Empty>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>::SharedPtr tcp_tempControl_currentTemp_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::FanAck>::SharedPtr tcp_tempControl_fanAck_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>::SharedPtr tcp_tempControl_setPoint_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::Empty>::SharedPtr tcp_tempControl_tempChanged_subscription_;
 
-    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>::SharedPtr BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>::SharedPtr tcp_tempControl_fanCmd_publisher_;
 
 };

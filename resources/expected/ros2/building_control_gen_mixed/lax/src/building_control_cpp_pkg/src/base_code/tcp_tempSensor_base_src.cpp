@@ -8,12 +8,12 @@ tcp_tempSensor_base::tcp_tempSensor_base() : Node("tcp_tempSensor")
 {
     cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::Reentrant);
     // Setting up connections
-    BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
-        "BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp",
+    tcp_tempSensor_currentTemp_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
+        "tcp_tempControl_currentTemp",
         1);
 
-    BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::Empty>(
-        "BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged",
+    tcp_tempSensor_tempChanged_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::Empty>(
+        "tcp_tempControl_tempChanged",
         1);
 
     // timeTriggered callback timer
@@ -28,13 +28,13 @@ tcp_tempSensor_base::tcp_tempSensor_base() : Node("tcp_tempSensor")
 
 void tcp_tempSensor_base::put_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg)
 {
-    BuildingControlDemo_i_Instance_tcp_tempSensor_currentTemp_publisher_->publish(msg);
+    tcp_tempSensor_currentTemp_publisher_->publish(msg);
 }
 
 void tcp_tempSensor_base::put_tempChanged()
 {
     building_control_cpp_pkg_interfaces::msg::Empty msg = building_control_cpp_pkg_interfaces::msg::Empty();
 
-    BuildingControlDemo_i_Instance_tcp_tempSensor_tempChanged_publisher_->publish(msg);
+    tcp_tempSensor_tempChanged_publisher_->publish(msg);
 }
 

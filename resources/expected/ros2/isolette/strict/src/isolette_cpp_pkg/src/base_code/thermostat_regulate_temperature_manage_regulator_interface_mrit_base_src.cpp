@@ -10,56 +10,56 @@ thermostat_regulate_temperature_manage_regulator_interface_mrit_base::thermostat
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_current_tempWstatus",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_regulate_temperature_manage_regulator_interface_mrit_current_tempWstatus",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_current_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_tempWstatus",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_tempWstatus",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_lower_desired_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_tempWstatus",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_tempWstatus",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_upper_desired_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_mode",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
+        "thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_mode",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::RegulatorMode msg) {
             enqueue(infrastructureIn_regulator_mode, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_upper_desired_temp",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "thermostat_regulate_temperature_manage_heat_source_mhst_upper_desired_temp",
         1);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_lower_desired_temp",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "thermostat_regulate_temperature_manage_heat_source_mhst_lower_desired_temp",
         1);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_displayed_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_operator_interface_oip_oit_display_temperature",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_displayed_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "operator_interface_oip_oit_display_temperature",
         1);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_status_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Status>(
-        "isolette_single_sensor_Instance_operator_interface_oip_oit_regulator_status",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_status_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Status>(
+        "operator_interface_oip_oit_regulator_status",
         1);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_interface_failure_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure",
+    thermostat_regulate_temperature_manage_regulator_interface_mrit_interface_failure_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
+        "thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure",
         1);
 
     // timeTriggeredCaller callback timer
@@ -120,7 +120,7 @@ isolette_cpp_pkg_interfaces::msg::RegulatorMode thermostat_regulate_temperature_
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendOut_upper_desired_temp(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Tempimpl>(&msg)) {
-        isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_temp_publisher_->publish(*typedMsg);
+        thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_temp_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port upper_desired_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -129,7 +129,7 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendOut_lower_desired_temp(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Tempimpl>(&msg)) {
-        isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_temp_publisher_->publish(*typedMsg);
+        thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_temp_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port lower_desired_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -138,7 +138,7 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendOut_displayed_temp(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Tempimpl>(&msg)) {
-        isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_displayed_temp_publisher_->publish(*typedMsg);
+        thermostat_regulate_temperature_manage_regulator_interface_mrit_displayed_temp_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port displayed_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -147,7 +147,7 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendOut_regulator_status(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Status>(&msg)) {
-        isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_status_publisher_->publish(*typedMsg);
+        thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_status_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port regulator_status.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
@@ -156,7 +156,7 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendOut_interface_failure(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(&msg)) {
-        isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_interface_failure_publisher_->publish(*typedMsg);
+        thermostat_regulate_temperature_manage_regulator_interface_mrit_interface_failure_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port interface_failure.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }

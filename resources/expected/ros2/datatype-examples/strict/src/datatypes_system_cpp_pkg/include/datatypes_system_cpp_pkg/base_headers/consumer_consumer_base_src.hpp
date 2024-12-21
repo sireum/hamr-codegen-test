@@ -143,25 +143,25 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Boolean>::SharedPtr Sys_i_Instance_consumer_consumer_myBoolean_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer64>::SharedPtr Sys_i_Instance_consumer_consumer_myInteger_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Float64>::SharedPtr Sys_i_Instance_consumer_consumer_myFloat_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Character>::SharedPtr Sys_i_Instance_consumer_consumer_myCharacter_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::String>::SharedPtr Sys_i_Instance_consumer_consumer_myString_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer8>::SharedPtr Sys_i_Instance_consumer_consumer_myInt8_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer16>::SharedPtr Sys_i_Instance_consumer_consumer_myInt16_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer32>::SharedPtr Sys_i_Instance_consumer_consumer_myInt32_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer64>::SharedPtr Sys_i_Instance_consumer_consumer_myInt64_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>::SharedPtr Sys_i_Instance_consumer_consumer_myUInt8_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>::SharedPtr Sys_i_Instance_consumer_consumer_myUInt16_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>::SharedPtr Sys_i_Instance_consumer_consumer_myUInt32_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>::SharedPtr Sys_i_Instance_consumer_consumer_myUInt64_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Float32>::SharedPtr Sys_i_Instance_consumer_consumer_myFloat32_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Float64>::SharedPtr Sys_i_Instance_consumer_consumer_myFloat64_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>::SharedPtr Sys_i_Instance_consumer_consumer_myEnum_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>::SharedPtr Sys_i_Instance_consumer_consumer_myStruct_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>::SharedPtr Sys_i_Instance_consumer_consumer_myArray1_subscription_;
-    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>::SharedPtr Sys_i_Instance_consumer_consumer_myArray2_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Boolean>::SharedPtr consumer_consumer_myBoolean_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer64>::SharedPtr consumer_consumer_myInteger_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Float64>::SharedPtr consumer_consumer_myFloat_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Character>::SharedPtr consumer_consumer_myCharacter_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::String>::SharedPtr consumer_consumer_myString_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer8>::SharedPtr consumer_consumer_myInt8_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer16>::SharedPtr consumer_consumer_myInt16_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer32>::SharedPtr consumer_consumer_myInt32_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer64>::SharedPtr consumer_consumer_myInt64_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>::SharedPtr consumer_consumer_myUInt8_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>::SharedPtr consumer_consumer_myUInt16_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>::SharedPtr consumer_consumer_myUInt32_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>::SharedPtr consumer_consumer_myUInt64_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Float32>::SharedPtr consumer_consumer_myFloat32_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::Float64>::SharedPtr consumer_consumer_myFloat64_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>::SharedPtr consumer_consumer_myEnum_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>::SharedPtr consumer_consumer_myStruct_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>::SharedPtr consumer_consumer_myArray1_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>::SharedPtr consumer_consumer_myArray2_subscription_;
 
 
     // Used for thread locking

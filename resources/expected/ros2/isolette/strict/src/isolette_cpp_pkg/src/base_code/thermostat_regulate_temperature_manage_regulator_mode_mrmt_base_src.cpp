@@ -10,36 +10,36 @@ thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::thermostat_regu
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus",
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_current_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure",
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
+        "thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg) {
             enqueue(infrastructureIn_interface_failure, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_internal_failure_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_internal_failure",
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt_internal_failure_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
+        "thermostat_regulate_temperature_manage_regulator_mode_mrmt_internal_failure",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg) {
             enqueue(infrastructureIn_internal_failure, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_mode",
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
+        "thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_mode",
         1);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_2 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_regulator_mode",
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_2 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
+        "thermostat_regulate_temperature_manage_heat_source_mhst_regulator_mode",
         1);
 
     // timeTriggeredCaller callback timer
@@ -89,8 +89,8 @@ isolette_cpp_pkg_interfaces::msg::FailureFlagimpl thermostat_regulate_temperatur
 void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::sendOut_regulator_mode(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(&msg)) {
-        isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_1->publish(*typedMsg);
-        isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_2->publish(*typedMsg);
+        thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_1->publish(*typedMsg);
+        thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_2->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port regulator_mode.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }

@@ -10,28 +10,28 @@ tcp_tempControl_base::tcp_tempControl_base() : Node("tcp_tempControl")
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
-        "BuildingControlDemo_i_Instance_tcp_tempControl_currentTemp",
+    tcp_tempControl_currentTemp_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
+        "tcp_tempControl_currentTemp",
         1,
         std::bind(&tcp_tempControl_base::handle_currentTemp, this, std::placeholders::_1), subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_fanAck_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanAck>(
-        "BuildingControlDemo_i_Instance_tcp_tempControl_fanAck",
+    tcp_tempControl_fanAck_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanAck>(
+        "tcp_tempControl_fanAck",
         1,
         std::bind(&tcp_tempControl_base::handle_fanAck, this, std::placeholders::_1), subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_setPoint_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>(
-        "BuildingControlDemo_i_Instance_tcp_tempControl_setPoint",
+    tcp_tempControl_setPoint_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>(
+        "tcp_tempControl_setPoint",
         1,
         std::bind(&tcp_tempControl_base::handle_setPoint, this, std::placeholders::_1), subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Empty>(
-        "BuildingControlDemo_i_Instance_tcp_tempControl_tempChanged",
+    tcp_tempControl_tempChanged_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Empty>(
+        "tcp_tempControl_tempChanged",
         1,
         std::bind(&tcp_tempControl_base::handle_tempChanged, this, std::placeholders::_1), subscription_options_);
 
-    BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>(
-        "BuildingControlDemo_i_Instance_tcp_fan_fanCmd",
+    tcp_tempControl_fanCmd_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>(
+        "tcp_fan_fanCmd",
         1);
 
 }
@@ -51,6 +51,6 @@ building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr tcp_tempCon
 
 void tcp_tempControl_base::put_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg)
 {
-    BuildingControlDemo_i_Instance_tcp_tempControl_fanCmd_publisher_->publish(msg);
+    tcp_tempControl_fanCmd_publisher_->publish(msg);
 }
 

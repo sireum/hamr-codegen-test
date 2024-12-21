@@ -10,40 +10,40 @@ operator_interface_oip_oit_base::operator_interface_oip_oit_base() : Node("opera
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_operator_interface_oip_oit_regulator_status_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Status>(
-        "isolette_single_sensor_Instance_operator_interface_oip_oit_regulator_status",
+    operator_interface_oip_oit_regulator_status_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Status>(
+        "operator_interface_oip_oit_regulator_status",
         1,
         std::bind(&operator_interface_oip_oit_base::handle_regulator_status, this, std::placeholders::_1), subscription_options_);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_monitor_status_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Status>(
-        "isolette_single_sensor_Instance_operator_interface_oip_oit_monitor_status",
+    operator_interface_oip_oit_monitor_status_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Status>(
+        "operator_interface_oip_oit_monitor_status",
         1,
         std::bind(&operator_interface_oip_oit_base::handle_monitor_status, this, std::placeholders::_1), subscription_options_);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_display_temperature_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_operator_interface_oip_oit_display_temperature",
+    operator_interface_oip_oit_display_temperature_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "operator_interface_oip_oit_display_temperature",
         1,
         std::bind(&operator_interface_oip_oit_base::handle_display_temperature, this, std::placeholders::_1), subscription_options_);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_alarm_control_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::OnOff>(
-        "isolette_single_sensor_Instance_operator_interface_oip_oit_alarm_control",
+    operator_interface_oip_oit_alarm_control_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::OnOff>(
+        "operator_interface_oip_oit_alarm_control",
         1,
         std::bind(&operator_interface_oip_oit_base::handle_alarm_control, this, std::placeholders::_1), subscription_options_);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_lower_desired_tempWstatus_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_tempWstatus",
+    operator_interface_oip_oit_lower_desired_tempWstatus_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_desired_tempWstatus_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_tempWstatus",
+    operator_interface_oip_oit_upper_desired_tempWstatus_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus",
+    operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus",
         1);
 
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus",
+    operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus",
         1);
 
     // timeTriggered callback timer
@@ -94,17 +94,17 @@ isolette_cpp_pkg_interfaces::msg::OnOff::SharedPtr operator_interface_oip_oit_ba
 
 void operator_interface_oip_oit_base::put_lower_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
-    isolette_single_sensor_Instance_operator_interface_oip_oit_lower_desired_tempWstatus_publisher_->publish(msg);
+    operator_interface_oip_oit_lower_desired_tempWstatus_publisher_->publish(msg);
 }
 
 void operator_interface_oip_oit_base::put_upper_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_desired_tempWstatus_publisher_->publish(msg);
+    operator_interface_oip_oit_upper_desired_tempWstatus_publisher_->publish(msg);
 }
 
 void operator_interface_oip_oit_base::put_upper_alarm_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1->publish(msg);
-    isolette_single_sensor_Instance_operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2->publish(msg);
+    operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1->publish(msg);
+    operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2->publish(msg);
 }
 

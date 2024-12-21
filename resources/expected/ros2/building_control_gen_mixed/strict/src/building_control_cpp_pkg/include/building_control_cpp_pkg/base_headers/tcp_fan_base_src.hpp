@@ -62,9 +62,9 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::FanCmd>::SharedPtr BuildingControlDemo_i_Instance_tcp_fan_fanCmd_subscription_;
+    rclcpp::Subscription<building_control_cpp_pkg_interfaces::msg::FanCmd>::SharedPtr tcp_fan_fanCmd_subscription_;
 
-    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::FanAck>::SharedPtr BuildingControlDemo_i_Instance_tcp_fan_fanAck_publisher_;
+    rclcpp::Publisher<building_control_cpp_pkg_interfaces::msg::FanAck>::SharedPtr tcp_fan_fanAck_publisher_;
 
     // Used for thread locking
     std::mutex mutex_;
