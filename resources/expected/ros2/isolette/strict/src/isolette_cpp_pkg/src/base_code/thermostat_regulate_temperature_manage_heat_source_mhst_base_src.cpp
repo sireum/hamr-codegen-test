@@ -10,40 +10,40 @@ thermostat_regulate_temperature_manage_heat_source_mhst_base::thermostat_regulat
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_current_tempWstatus",
+    thermostat_regulate_temperature_manage_heat_source_mhst_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_regulate_temperature_manage_heat_source_mhst_current_tempWstatus",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_current_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_lower_desired_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_lower_desired_temp",
+    thermostat_regulate_temperature_manage_heat_source_mhst_lower_desired_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "thermostat_regulate_temperature_manage_heat_source_mhst_lower_desired_temp",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::Tempimpl msg) {
             enqueue(infrastructureIn_lower_desired_temp, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_upper_desired_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_upper_desired_temp",
+    thermostat_regulate_temperature_manage_heat_source_mhst_upper_desired_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "thermostat_regulate_temperature_manage_heat_source_mhst_upper_desired_temp",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::Tempimpl msg) {
             enqueue(infrastructureIn_upper_desired_temp, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_regulator_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
-        "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_regulator_mode",
+    thermostat_regulate_temperature_manage_heat_source_mhst_regulator_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
+        "thermostat_regulate_temperature_manage_heat_source_mhst_regulator_mode",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::RegulatorMode msg) {
             enqueue(infrastructureIn_regulator_mode, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_heat_control_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::OnOff>(
-        "isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control",
+    thermostat_regulate_temperature_manage_heat_source_mhst_heat_control_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::OnOff>(
+        "heat_source_cpi_heat_controller_heat_control",
         1);
 
     // timeTriggeredCaller callback timer
@@ -100,7 +100,7 @@ isolette_cpp_pkg_interfaces::msg::RegulatorMode thermostat_regulate_temperature_
 void thermostat_regulate_temperature_manage_heat_source_mhst_base::sendOut_heat_control(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::OnOff>(&msg)) {
-        isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_mhst_heat_control_publisher_->publish(*typedMsg);
+        thermostat_regulate_temperature_manage_heat_source_mhst_heat_control_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port heat_control.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }

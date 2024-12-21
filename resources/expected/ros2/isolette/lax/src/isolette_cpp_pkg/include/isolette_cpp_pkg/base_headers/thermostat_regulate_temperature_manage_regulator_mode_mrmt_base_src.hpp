@@ -48,12 +48,12 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus_subscription_;
-    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure_subscription_;
-    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>::SharedPtr isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_internal_failure_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>::SharedPtr thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>::SharedPtr thermostat_regulate_temperature_manage_regulator_mode_mrmt_internal_failure_subscription_;
 
-    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>::SharedPtr isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_1;
-    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>::SharedPtr isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_2;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>::SharedPtr thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_1;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>::SharedPtr thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_2;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r

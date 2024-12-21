@@ -40,7 +40,7 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::OnOff>::SharedPtr isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control_subscription_;
+    rclcpp::Subscription<isolette_cpp_pkg_interfaces::msg::OnOff>::SharedPtr heat_source_cpi_heat_controller_heat_control_subscription_;
 
 
     //=================================================

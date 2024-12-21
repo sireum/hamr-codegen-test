@@ -135,25 +135,25 @@ private:
     //=================================================
     //  C o m m u n i c a t i o n
     //=================================================
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Boolean>::SharedPtr Sys_i_Instance_producer_producer_myBoolean_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer64>::SharedPtr Sys_i_Instance_producer_producer_myInteger_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Float64>::SharedPtr Sys_i_Instance_producer_producer_myFloat_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Character>::SharedPtr Sys_i_Instance_producer_producer_myCharacter_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::String>::SharedPtr Sys_i_Instance_producer_producer_myString_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer8>::SharedPtr Sys_i_Instance_producer_producer_myInt8_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer16>::SharedPtr Sys_i_Instance_producer_producer_myInt16_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer32>::SharedPtr Sys_i_Instance_producer_producer_myInt32_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer64>::SharedPtr Sys_i_Instance_producer_producer_myInt64_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>::SharedPtr Sys_i_Instance_producer_producer_myUInt8_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>::SharedPtr Sys_i_Instance_producer_producer_myUInt16_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>::SharedPtr Sys_i_Instance_producer_producer_myUInt32_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>::SharedPtr Sys_i_Instance_producer_producer_myUInt64_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Float32>::SharedPtr Sys_i_Instance_producer_producer_myFloat32_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Float64>::SharedPtr Sys_i_Instance_producer_producer_myFloat64_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>::SharedPtr Sys_i_Instance_producer_producer_myEnum_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>::SharedPtr Sys_i_Instance_producer_producer_myStruct_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>::SharedPtr Sys_i_Instance_producer_producer_myArray1_publisher_;
-    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>::SharedPtr Sys_i_Instance_producer_producer_myArray2_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Boolean>::SharedPtr producer_producer_myBoolean_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer64>::SharedPtr producer_producer_myInteger_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Float64>::SharedPtr producer_producer_myFloat_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Character>::SharedPtr producer_producer_myCharacter_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::String>::SharedPtr producer_producer_myString_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer8>::SharedPtr producer_producer_myInt8_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer16>::SharedPtr producer_producer_myInt16_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer32>::SharedPtr producer_producer_myInt32_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Integer64>::SharedPtr producer_producer_myInt64_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>::SharedPtr producer_producer_myUInt8_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>::SharedPtr producer_producer_myUInt16_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>::SharedPtr producer_producer_myUInt32_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>::SharedPtr producer_producer_myUInt64_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Float32>::SharedPtr producer_producer_myFloat32_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::Float64>::SharedPtr producer_producer_myFloat64_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>::SharedPtr producer_producer_myEnum_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>::SharedPtr producer_producer_myStruct_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>::SharedPtr producer_producer_myArray1_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>::SharedPtr producer_producer_myArray2_publisher_;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r

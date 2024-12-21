@@ -10,40 +10,40 @@ thermostat_monitor_temperature_manage_alarm_mat_base::thermostat_monitor_tempera
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus",
+    thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
             enqueue(infrastructureIn_current_tempWstatus, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp",
+    thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::Tempimpl msg) {
             enqueue(infrastructureIn_lower_alarm_temp, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp",
+    thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
+        "thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::Tempimpl msg) {
             enqueue(infrastructureIn_upper_alarm_temp, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_monitor_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::MonitorMode>(
-        "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_monitor_mode",
+    thermostat_monitor_temperature_manage_alarm_mat_monitor_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::MonitorMode>(
+        "thermostat_monitor_temperature_manage_alarm_mat_monitor_mode",
         1,
         [this](isolette_cpp_pkg_interfaces::msg::MonitorMode msg) {
             enqueue(infrastructureIn_monitor_mode, msg);
         },
         subscription_options_);
 
-    isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::OnOff>(
-        "isolette_single_sensor_Instance_operator_interface_oip_oit_alarm_control",
+    thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::OnOff>(
+        "operator_interface_oip_oit_alarm_control",
         1);
 
     // timeTriggeredCaller callback timer
@@ -100,7 +100,7 @@ isolette_cpp_pkg_interfaces::msg::MonitorMode thermostat_monitor_temperature_man
 void thermostat_monitor_temperature_manage_alarm_mat_base::sendOut_alarm_control(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::OnOff>(&msg)) {
-        isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_->publish(*typedMsg);
+        thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port alarm_control.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }

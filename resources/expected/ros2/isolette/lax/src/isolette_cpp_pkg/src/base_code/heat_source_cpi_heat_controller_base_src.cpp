@@ -10,8 +10,8 @@ heat_source_cpi_heat_controller_base::heat_source_cpi_heat_controller_base() : N
     subscription_options_.callback_group = cb_group_;
 
     // Setting up connections
-    isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::OnOff>(
-        "isolette_single_sensor_Instance_heat_source_cpi_heat_controller_heat_control",
+    heat_source_cpi_heat_controller_heat_control_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::OnOff>(
+        "heat_source_cpi_heat_controller_heat_control",
         1,
         std::bind(&heat_source_cpi_heat_controller_base::handle_heat_control, this, std::placeholders::_1), subscription_options_);
 
