@@ -28,7 +28,7 @@ tcp_tempControl_base::tcp_tempControl_base() : Node("tcp_tempControl")
     tcp_tempControl_tempChanged_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Empty>(
         "tcp_tempControl_tempChanged",
         1,
-        std::bind(&tcp_tempControl_base::handle_tempChanged, this, std::placeholders::_1), subscription_options_);
+        std::bind(&tcp_tempControl_base::event_handle_tempChanged, this, std::placeholders::_1), subscription_options_);
 
     tcp_tempControl_fanCmd_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>(
         "tcp_fan_fanCmd",
@@ -47,6 +47,12 @@ void tcp_tempControl_base::handle_currentTemp(const building_control_cpp_pkg_int
 
 building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr tcp_tempControl_base::get_currentTemp() {
     return currentTemp_msg_holder;
+}
+
+void tcp_tempControl_base::event_handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty::SharedPtr msg)
+{
+    (void)msg;
+    handle_tempChanged();
 }
 
 void tcp_tempControl_base::put_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg)

@@ -333,7 +333,7 @@ void consumer_consumer_base::handle_myBoolean_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Boolean>(&msg)) {
         handle_myBoolean(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -342,7 +342,7 @@ void consumer_consumer_base::handle_myInteger_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
         handle_myInteger(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -351,7 +351,7 @@ void consumer_consumer_base::handle_myFloat_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float64>(&msg)) {
         handle_myFloat(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -360,7 +360,7 @@ void consumer_consumer_base::handle_myCharacter_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Character>(&msg)) {
         handle_myCharacter(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -369,7 +369,7 @@ void consumer_consumer_base::handle_myString_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::String>(&msg)) {
         handle_myString(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -378,7 +378,7 @@ void consumer_consumer_base::handle_myInt8_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer8>(&msg)) {
         handle_myInt8(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -387,7 +387,7 @@ void consumer_consumer_base::handle_myInt16_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer16>(&msg)) {
         handle_myInt16(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -396,7 +396,7 @@ void consumer_consumer_base::handle_myInt32_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer32>(&msg)) {
         handle_myInt32(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -405,7 +405,7 @@ void consumer_consumer_base::handle_myInt64_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
         handle_myInt64(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -414,7 +414,7 @@ void consumer_consumer_base::handle_myUInt8_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>(&msg)) {
         handle_myUInt8(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -423,7 +423,7 @@ void consumer_consumer_base::handle_myUInt16_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>(&msg)) {
         handle_myUInt16(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -432,7 +432,7 @@ void consumer_consumer_base::handle_myUInt32_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>(&msg)) {
         handle_myUInt32(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -441,7 +441,7 @@ void consumer_consumer_base::handle_myUInt64_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>(&msg)) {
         handle_myUInt64(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -450,7 +450,7 @@ void consumer_consumer_base::handle_myFloat32_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float32>(&msg)) {
         handle_myFloat32(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -459,7 +459,7 @@ void consumer_consumer_base::handle_myFloat64_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float64>(&msg)) {
         handle_myFloat64(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -468,7 +468,7 @@ void consumer_consumer_base::handle_myEnum_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>(&msg)) {
         handle_myEnum(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -477,7 +477,7 @@ void consumer_consumer_base::handle_myStruct_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>(&msg)) {
         handle_myStruct(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -486,7 +486,7 @@ void consumer_consumer_base::handle_myArray1_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>(&msg)) {
         handle_myArray1(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -495,7 +495,7 @@ void consumer_consumer_base::handle_myArray2_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>(&msg)) {
         handle_myArray2(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 

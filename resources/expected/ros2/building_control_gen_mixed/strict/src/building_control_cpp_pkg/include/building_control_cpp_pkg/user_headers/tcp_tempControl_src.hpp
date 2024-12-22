@@ -16,7 +16,7 @@ private:
     //=================================================
     void handle_fanAck(const building_control_cpp_pkg_interfaces::msg::FanAck msg);
     void handle_setPoint(const building_control_cpp_pkg_interfaces::msg::SetPointimpl msg);
-    void handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty msg);
+    void handle_tempChanged();
 
     //=================================================
     //  Include any additional declarations here

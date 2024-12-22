@@ -50,7 +50,7 @@ void tcp_fan_base::handle_fanCmd_base(MsgType msg)
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanCmd>(&msg)) {
         handle_fanCmd(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
