@@ -96,7 +96,7 @@ void tcp_tempControl_base::handle_fanAck_base(MsgType msg)
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanAck>(&msg)) {
         handle_fanAck(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -105,17 +105,13 @@ void tcp_tempControl_base::handle_setPoint_base(MsgType msg)
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::SetPointimpl>(&msg)) {
         handle_setPoint(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port setPoint.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        PRINT_ERROR("Receiving wrong type of variable on port setPoint.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
 void tcp_tempControl_base::handle_tempChanged_base(MsgType msg)
 {
-    if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::Empty>(&msg)) {
-        handle_tempChanged(*typedMsg);
-    } else {
-        PRINT_ERROR("Sending out wrong type of variable on port tempChanged.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
-    }
+    handle_tempChanged();
 }
 
 void tcp_tempControl_base::sendOut_fanCmd(MsgType msg)

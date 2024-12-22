@@ -40,7 +40,8 @@ private:
     void handle_currentTemp(const building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr msg);
     virtual void handle_fanAck(const building_control_cpp_pkg_interfaces::msg::FanAck::SharedPtr msg) = 0;
     virtual void handle_setPoint(const building_control_cpp_pkg_interfaces::msg::SetPointimpl::SharedPtr msg) = 0;
-    virtual void handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty::SharedPtr msg) = 0;
+    void event_handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    virtual void handle_tempChanged() = 0;
 
     building_control_cpp_pkg_interfaces::msg::Temperatureimpl::SharedPtr currentTemp_msg_holder;
 

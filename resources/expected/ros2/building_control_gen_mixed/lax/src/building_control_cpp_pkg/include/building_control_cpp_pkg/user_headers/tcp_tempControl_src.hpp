@@ -16,7 +16,7 @@ private:
     //=================================================
     void handle_fanAck(const building_control_cpp_pkg_interfaces::msg::FanAck::SharedPtr msg);
     void handle_setPoint(const building_control_cpp_pkg_interfaces::msg::SetPointimpl::SharedPtr msg);
-    void handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty::SharedPtr msg);
+    void handle_tempChanged();
 
     //=================================================
     //  Include any additional declarations here
