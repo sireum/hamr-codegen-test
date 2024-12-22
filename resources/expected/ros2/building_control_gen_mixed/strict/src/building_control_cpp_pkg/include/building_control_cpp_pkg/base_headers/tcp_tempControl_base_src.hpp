@@ -57,7 +57,7 @@ private:
     void handle_fanAck_base(MsgType msg);
     virtual void handle_setPoint(const building_control_cpp_pkg_interfaces::msg::SetPointimpl msg) = 0;
     void handle_setPoint_base(MsgType msg);
-    virtual void handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty msg) = 0;
+    virtual void handle_tempChanged() = 0;
     void handle_tempChanged_base(MsgType msg);
 
     std::queue<MsgType> infrastructureIn_currentTemp;

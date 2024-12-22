@@ -23,8 +23,8 @@ void tcp_tempControl::handle_setPoint(const building_control_cpp_pkg_interfaces:
     // Handle setPoint msg
 }
 
-void tcp_tempControl::handle_tempChanged(const building_control_cpp_pkg_interfaces::msg::Empty::SharedPtr msg)
+void tcp_tempControl::handle_tempChanged()
 {
-    // Handle tempChanged msg
+    // Handle tempChanged event
 }
 
