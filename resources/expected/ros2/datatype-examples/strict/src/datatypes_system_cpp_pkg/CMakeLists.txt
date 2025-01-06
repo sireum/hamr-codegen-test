@@ -11,10 +11,10 @@ find_package(datatypes_system_cpp_pkg_interfaces REQUIRED)
 
 include_directories(include)
 
-add_executable(producer_producer_exe src/base_code/producer_producer_runner.cpp src/user_code/producer_producer_src.cpp src/base_code/producer_producer_base_src.cpp)
+add_executable(producer_producer_exe src/base_code/producer_producer_runner.cpp src/user_code/producer_producer_src.cpp src/base_code/producer_producer_base_src.cpp src/base_code/enum_converter.cpp)
 ament_target_dependencies(producer_producer_exe rclcpp datatypes_system_cpp_pkg_interfaces)
 
-add_executable(consumer_consumer_exe src/base_code/consumer_consumer_runner.cpp src/user_code/consumer_consumer_src.cpp src/base_code/consumer_consumer_base_src.cpp)
+add_executable(consumer_consumer_exe src/base_code/consumer_consumer_runner.cpp src/user_code/consumer_consumer_src.cpp src/base_code/consumer_consumer_base_src.cpp src/base_code/enum_converter.cpp)
 ament_target_dependencies(consumer_consumer_exe rclcpp datatypes_system_cpp_pkg_interfaces)
 
 install(TARGETS
