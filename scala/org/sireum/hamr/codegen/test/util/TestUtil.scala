@@ -218,7 +218,7 @@ object TestUtil {
     val (slangOutDir, cOutDir, camkesOutDir): ((Option[Os.Path], Option[Os.Path], Option[Os.Path])) = {
       if (!Os.isWin) {
         def c(t: Option[String]): Option[Os.Path] = if (t.isEmpty) None() else Some(Os.path(t.get))
-        ((c(testOps.slangOutputDir), c(testOps.slangOutputCDir), c(testOps.camkesOutputDir)))
+        ((c(testOps.slangOutputDir), c(testOps.slangOutputCDir), c(testOps.sel4OutputDir)))
       } else {
         def commonPath(paths: scala.List[String]): String = {
           def common(al: scala.List[String], bl: scala.List[String]): scala.List[String] = (al, bl) match {
@@ -229,7 +229,7 @@ object TestUtil {
           else paths.map(m => ops.StringOps(m).split(c => c == C('/')).elements.toList).reduceLeft(common).mkString("/")
         }
 
-        val l = scala.List(testOps.slangOutputDir, testOps.slangOutputCDir, testOps.camkesOutputDir).flatten(a => if (a.isEmpty) scala.List() else scala.List(Os.path(a.get).toUri))
+        val l = scala.List(testOps.slangOutputDir, testOps.slangOutputCDir, testOps.sel4OutputDir).flatten(a => if (a.isEmpty) scala.List() else scala.List(Os.path(a.get).toUri))
         val rootDir: Os.Path = Os.uriToPath(commonPath(l))
 
         // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
@@ -257,7 +257,7 @@ object TestUtil {
           case Some(path) => Some(optSubstDrive.get / rootDir.relativize(Os.path(path)).value)
           case _ => None()
         }
-        ((c(testOps.slangOutputDir), c(testOps.slangOutputCDir), c(testOps.camkesOutputDir)))
+        ((c(testOps.slangOutputDir), c(testOps.slangOutputCDir), c(testOps.sel4OutputDir)))
       }
     }
 

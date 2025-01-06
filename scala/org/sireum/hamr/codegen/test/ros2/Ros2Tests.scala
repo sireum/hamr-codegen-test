@@ -223,8 +223,8 @@ object Ros2Tests {
     maxArraySize = 1,
     runTranspiler = F,
     //
-    camkesOutputDir = None(),
-    camkesAuxCodeDirs = ISZ(),
+    sel4OutputDir = None(),
+    sel4AuxCodeDirs = ISZ(),
     workspaceRootDir = None(),
     // ros2 options
     strictAadlMode = F,

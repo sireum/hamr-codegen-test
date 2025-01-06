@@ -54,14 +54,14 @@ val codegenArgs = ISZ("hamr", "codegen",
   "--package-name", "RTS",
   "--slang-output-dir", (aadlDir.up / outDir / "slang").string,
   "--output-c-dir", (aadlDir.up / outDir / "c").string,
-  "--camkes-output-dir", (aadlDir.up / outDir / "camkes").string,  
+  "--sel4-output-dir", (aadlDir.up / outDir / "camkes").string,
   "--verbose",
   //"--no-proyek-ive",
   "--run-transpiler",
   "--bit-width", "32", 
   "--max-string-size", "256",
   "--max-array-size", "1",
-  "--aadl-root-dir", aadlDir.string,
+  "--workspace-root-dir", aadlDir.string,
   (aadlDir / ".system").string)
 
 val results = Os.proc(osireum ++ codegenArgs).console.run()
