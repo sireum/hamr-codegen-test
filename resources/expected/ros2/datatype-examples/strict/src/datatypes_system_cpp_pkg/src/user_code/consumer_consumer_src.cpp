@@ -1,4 +1,5 @@
 #include "datatypes_system_cpp_pkg/user_headers/consumer_consumer_src.hpp"
+#include "datatypes_system_cpp_pkg/base_headers/enum_converter.hpp"
 
 //=================================================
 //  I n i t i a l i z e    E n t r y    P o i n t

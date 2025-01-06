@@ -111,6 +111,7 @@ void tcp_tempControl_base::handle_setPoint_base(MsgType msg)
 
 void tcp_tempControl_base::handle_tempChanged_base(MsgType msg)
 {
+    (void)msg;
     handle_tempChanged();
 }
 
