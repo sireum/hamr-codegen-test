@@ -107,7 +107,7 @@ trait CodegenTest extends CodegenTestSuite {
 
     assert(config.slangOutputDir.isEmpty, s"hmm, why custom output dir ${config.slangOutputDir}")
     assert(config.slangOutputCDir.isEmpty, s"hmm, why custom c dir ${config.slangOutputCDir}")
-    assert(config.camkesOutputDir.isEmpty, s"hmm, why custom camkes dir ${config.camkesOutputDir}")
+    assert(config.sel4OutputDir.isEmpty, s"hmm, why custom camkes dir ${config.sel4OutputDir}")
 
     var testOps = config(
       workspaceRootDir = if (config.workspaceRootDir.nonEmpty) config.workspaceRootDir else Some(modelDir.canon.value),
@@ -121,7 +121,7 @@ trait CodegenTest extends CodegenTestSuite {
 
     testOps = testOps(slangOutputDir = Some((resultsDir / "slang").canon.value))
     testOps = testOps(slangOutputCDir = Some((resultsDir / "c").canon.value))
-    testOps = testOps(camkesOutputDir = Some((resultsDir / "camkes").canon.value))
+    testOps = testOps(sel4OutputDir = Some((resultsDir / "camkes").canon.value))
 
     rootTestOutputDir.removeAll()
     rootTestOutputDir.mkdirAll()
@@ -318,8 +318,8 @@ object CodegenTest {
     maxArraySize = 1,
     runTranspiler = F,
     //
-    camkesOutputDir = None(),
-    camkesAuxCodeDirs = ISZ(),
+    sel4OutputDir = None(),
+    sel4AuxCodeDirs = ISZ(),
     workspaceRootDir = None(),
     //
     strictAadlMode = F,

@@ -267,8 +267,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     maxArraySize = 1,
     runTranspiler = F,
     //
-    camkesOutputDir = None(),
-    camkesAuxCodeDirs = ISZ(),
+    sel4OutputDir = None(),
+    sel4AuxCodeDirs = ISZ(),
     workspaceRootDir = None(),
     //
     strictAadlMode = F,
@@ -377,8 +377,8 @@ object CodegenBehaviorTest {
           maxArraySize = opts.maxArraySize,
           runTranspiler = opts.runTranspiler,
           //
-          camkesOutputDir = canon(opts.camkesOutputDir),
-          camkesAuxCodeDirs = opts.camkesAuxCodeDirs.map(s => canon(Some(s)).get),
+          sel4OutputDir = canon(opts.sel4OutputDir),
+          sel4AuxCodeDirs = opts.sel4AuxCodeDirs.map(s => canon(Some(s)).get),
           workspaceRootDir = aadlRoot,
           //
           strictAadlMode = opts.strictAadlMode,
