@@ -45,13 +45,13 @@ trait SlangEmbeddedModule extends ScalaModule {
   val scalaTestVersion = "3.2.19"
 
   // versions.properties key: org.sireum%%scalac-plugin%
-  // https://github.com/sireum/scalac-plugin/tree/4.20241022.278d005
-  val sireumScalacVersion = "4.20241022.278d005"
+  // https://github.com/sireum/scalac-plugin/tree/4.20241212.72b1947
+  val sireumScalacVersion = "4.20241212.72b1947"
 
 
   // refer to https://github.com/sireum/kekinian/releases to get the latest
-  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/1c0dea6321
-  val kekinianVersion = "1c0dea6321"
+  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/d3c137b291
+  val kekinianVersion = "d3c137b291"
 
 
   val inspectorVersion = "0.6-SNAPSHOT"
