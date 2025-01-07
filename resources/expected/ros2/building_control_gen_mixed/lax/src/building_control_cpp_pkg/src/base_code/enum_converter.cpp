@@ -1,6 +1,6 @@
 #include "building_control_cpp_pkg/base_headers/enum_converter.hpp"
 
-std::string enumToString(building_control_cpp_pkg_interfaces::msg::TempUnit* value) {
+const char* enumToString(building_control_cpp_pkg_interfaces::msg::TempUnit* value) {
     switch (value->temp_unit) {
         case building_control_cpp_pkg_interfaces::msg::TempUnit::TEMP_UNIT_FAHRENHEIT:
             return "TempUnit Fahrenheit";
@@ -13,7 +13,7 @@ std::string enumToString(building_control_cpp_pkg_interfaces::msg::TempUnit* val
     }
 }
 
-std::string enumToString(building_control_cpp_pkg_interfaces::msg::FanAck* value) {
+const char* enumToString(building_control_cpp_pkg_interfaces::msg::FanAck* value) {
     switch (value->fan_ack) {
         case building_control_cpp_pkg_interfaces::msg::FanAck::FAN_ACK_OK:
             return "FanAck Ok";
@@ -24,7 +24,7 @@ std::string enumToString(building_control_cpp_pkg_interfaces::msg::FanAck* value
     }
 }
 
-std::string enumToString(building_control_cpp_pkg_interfaces::msg::FanCmd* value) {
+const char* enumToString(building_control_cpp_pkg_interfaces::msg::FanCmd* value) {
     switch (value->fan_cmd) {
         case building_control_cpp_pkg_interfaces::msg::FanCmd::FAN_CMD_ON:
             return "FanCmd On";
