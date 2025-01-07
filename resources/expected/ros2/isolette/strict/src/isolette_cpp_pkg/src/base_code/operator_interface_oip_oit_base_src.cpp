@@ -133,6 +133,7 @@ void operator_interface_oip_oit_base::sendOut_upper_desired_tempWstatus(MsgType 
 void operator_interface_oip_oit_base::sendOut_lower_alarm_tempWstatus(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
+        operator_interface_oip_oit_lower_alarm_tempWstatus_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port lower_alarm_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }

@@ -84,6 +84,10 @@ producer_producer_base::producer_producer_base() : Node("producer_producer")
         "consumer_consumer_myArray2",
         1);
 
+    producer_producer_myArray3_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(
+        "consumer_consumer_myArray3",
+        1);
+
     // timeTriggeredCaller callback timer
     periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
         std::bind(&producer_producer_base::timeTriggeredCaller, this), cb_group_);
@@ -116,7 +120,8 @@ producer_producer_base::producer_producer_base() : Node("producer_producer")
         {&applicationOut_myEnum, &infrastructureOut_myEnum, &producer_producer_base::sendOut_myEnum},
         {&applicationOut_myStruct, &infrastructureOut_myStruct, &producer_producer_base::sendOut_myStruct},
         {&applicationOut_myArray1, &infrastructureOut_myArray1, &producer_producer_base::sendOut_myArray1},
-        {&applicationOut_myArray2, &infrastructureOut_myArray2, &producer_producer_base::sendOut_myArray2}
+        {&applicationOut_myArray2, &infrastructureOut_myArray2, &producer_producer_base::sendOut_myArray2},
+        {&applicationOut_myArray3, &infrastructureOut_myArray3, &producer_producer_base::sendOut_myArray3}
     };
 
 }
@@ -296,6 +301,15 @@ void producer_producer_base::sendOut_myArray2(MsgType msg)
     }
 }
 
+void producer_producer_base::sendOut_myArray3(MsgType msg)
+{
+    if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(&msg)) {
+        producer_producer_myArray3_publisher_->publish(*typedMsg);
+    } else {
+        PRINT_ERROR("Sending out wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+    }
+}
+
 void producer_producer_base::put_myBoolean(datatypes_system_cpp_pkg_interfaces::msg::Boolean msg)
 {
     enqueue(applicationOut_myBoolean, msg);
@@ -389,6 +403,11 @@ void producer_producer_base::put_myArray1(datatypes_system_cpp_pkg_interfaces::m
 void producer_producer_base::put_myArray2(datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg)
 {
     enqueue(applicationOut_myArray2, msg);
+}
+
+void producer_producer_base::put_myArray3(datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg)
+{
+    enqueue(applicationOut_myArray3, msg);
 }
 
 void producer_producer_base::timeTriggeredCaller() {

@@ -6,8 +6,8 @@
 #include "building_control_cpp_pkg_interfaces/msg/fan_ack.hpp"
 #include "building_control_cpp_pkg_interfaces/msg/fan_cmd.hpp"
 
-std::string enumToString(building_control_cpp_pkg_interfaces::msg::TempUnit* value);
-std::string enumToString(building_control_cpp_pkg_interfaces::msg::FanAck* value);
-std::string enumToString(building_control_cpp_pkg_interfaces::msg::FanCmd* value);
+const char* enumToString(building_control_cpp_pkg_interfaces::msg::TempUnit* value);
+const char* enumToString(building_control_cpp_pkg_interfaces::msg::FanAck* value);
+const char* enumToString(building_control_cpp_pkg_interfaces::msg::FanCmd* value);
 
 #endif

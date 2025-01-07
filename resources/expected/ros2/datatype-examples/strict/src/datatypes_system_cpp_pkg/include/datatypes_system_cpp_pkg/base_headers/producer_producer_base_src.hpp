@@ -16,6 +16,7 @@
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_structi.hpp"
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_one_dim.hpp"
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_unbounded.hpp"
+#include "datatypes_system_cpp_pkg_interfaces/msg/my_array_two_dim.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -28,7 +29,7 @@
 class producer_producer_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<datatypes_system_cpp_pkg_interfaces::msg::Boolean, datatypes_system_cpp_pkg_interfaces::msg::Integer64, datatypes_system_cpp_pkg_interfaces::msg::Float64, datatypes_system_cpp_pkg_interfaces::msg::Character, datatypes_system_cpp_pkg_interfaces::msg::String, datatypes_system_cpp_pkg_interfaces::msg::Integer8, datatypes_system_cpp_pkg_interfaces::msg::Integer16, datatypes_system_cpp_pkg_interfaces::msg::Integer32, datatypes_system_cpp_pkg_interfaces::msg::Unsigned8, datatypes_system_cpp_pkg_interfaces::msg::Unsigned16, datatypes_system_cpp_pkg_interfaces::msg::Unsigned32, datatypes_system_cpp_pkg_interfaces::msg::Unsigned64, datatypes_system_cpp_pkg_interfaces::msg::Float32, datatypes_system_cpp_pkg_interfaces::msg::MyEnum, datatypes_system_cpp_pkg_interfaces::msg::MyStructi, datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim, datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>;
+    using MsgType = std::variant<datatypes_system_cpp_pkg_interfaces::msg::Boolean, datatypes_system_cpp_pkg_interfaces::msg::Integer64, datatypes_system_cpp_pkg_interfaces::msg::Float64, datatypes_system_cpp_pkg_interfaces::msg::Character, datatypes_system_cpp_pkg_interfaces::msg::String, datatypes_system_cpp_pkg_interfaces::msg::Integer8, datatypes_system_cpp_pkg_interfaces::msg::Integer16, datatypes_system_cpp_pkg_interfaces::msg::Integer32, datatypes_system_cpp_pkg_interfaces::msg::Unsigned8, datatypes_system_cpp_pkg_interfaces::msg::Unsigned16, datatypes_system_cpp_pkg_interfaces::msg::Unsigned32, datatypes_system_cpp_pkg_interfaces::msg::Unsigned64, datatypes_system_cpp_pkg_interfaces::msg::Float32, datatypes_system_cpp_pkg_interfaces::msg::MyEnum, datatypes_system_cpp_pkg_interfaces::msg::MyStructi, datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim, datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded, datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>;
 
     producer_producer_base();
 
@@ -59,6 +60,7 @@ protected:
     void put_myStruct(datatypes_system_cpp_pkg_interfaces::msg::MyStructi msg);
     void put_myArray1(datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim msg);
     void put_myArray2(datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg);
+    void put_myArray3(datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg);
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -111,6 +113,8 @@ private:
     std::queue<MsgType> applicationOut_myArray1;
     std::queue<MsgType> infrastructureOut_myArray2;
     std::queue<MsgType> applicationOut_myArray2;
+    std::queue<MsgType> infrastructureOut_myArray3;
+    std::queue<MsgType> applicationOut_myArray3;
 
     void sendOut_myBoolean(MsgType msg);
     void sendOut_myInteger(MsgType msg);
@@ -131,6 +135,7 @@ private:
     void sendOut_myStruct(MsgType msg);
     void sendOut_myArray1(MsgType msg);
     void sendOut_myArray2(MsgType msg);
+    void sendOut_myArray3(MsgType msg);
 
     //=================================================
     //  C o m m u n i c a t i o n
@@ -154,6 +159,7 @@ private:
     rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>::SharedPtr producer_producer_myStruct_publisher_;
     rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>::SharedPtr producer_producer_myArray1_publisher_;
     rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>::SharedPtr producer_producer_myArray2_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>::SharedPtr producer_producer_myArray3_publisher_;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r

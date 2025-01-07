@@ -84,6 +84,10 @@ producer_producer_base::producer_producer_base() : Node("producer_producer")
         "consumer_consumer_myArray2",
         1);
 
+    producer_producer_myArray3_publisher_ = this->create_publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(
+        "consumer_consumer_myArray3",
+        1);
+
     // timeTriggered callback timer
     periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
         std::bind(&producer_producer_base::timeTriggered, this), cb_group_);
@@ -187,5 +191,10 @@ void producer_producer_base::put_myArray1(datatypes_system_cpp_pkg_interfaces::m
 void producer_producer_base::put_myArray2(datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg)
 {
     producer_producer_myArray2_publisher_->publish(msg);
+}
+
+void producer_producer_base::put_myArray3(datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg)
+{
+    producer_producer_myArray3_publisher_->publish(msg);
 }
 

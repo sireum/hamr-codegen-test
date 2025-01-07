@@ -314,6 +314,22 @@ consumer_consumer_base::consumer_consumer_base() : Node("consumer_consumer")
         },
         subscription_options_);
 
+    consumer_consumer_myArray3_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(
+        "consumer_consumer_myArray3",
+        1,
+        [this](datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg) {
+            enqueue(infrastructureIn_myArray3, msg);
+            std::thread([this]() {
+                std::lock_guard<std::mutex> lock(mutex_);
+                receiveInputs(infrastructureIn_myArray3, applicationIn_myArray3);
+                if (applicationIn_myArray3.empty()) return;
+                handle_myArray3_base(applicationIn_myArray3.front());
+                applicationIn_myArray3.pop();
+                sendOutputs();
+            }).detach();
+        },
+        subscription_options_);
+
     // Used by receiveInputs
     inDataPortTupleVector = {
     };
@@ -496,6 +512,15 @@ void consumer_consumer_base::handle_myArray2_base(MsgType msg)
         handle_myArray2(*typedMsg);
     } else {
         PRINT_ERROR("Receiving wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+    }
+}
+
+void consumer_consumer_base::handle_myArray3_base(MsgType msg)
+{
+    if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(&msg)) {
+        handle_myArray3(*typedMsg);
+    } else {
+        PRINT_ERROR("Receiving wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 

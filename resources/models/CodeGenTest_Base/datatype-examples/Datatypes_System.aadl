@@ -78,6 +78,7 @@ public
 	    myStructConn: port producer.myStruct -> consumer.myStruct;
 	    myArray1Conn: port producer.myArray1 -> consumer.myArray1;
 	    myArray2Conn: port producer.myArray2 -> consumer.myArray2;
+	    myArray3Conn: port producer.myArray3 -> consumer.myArray3;
 	end Sys.i;
 
 	--===========================================================================================================
@@ -121,6 +122,7 @@ public
 	    myStruct: out event data port Datatypes::MyStruct.i;
 	    myArray1 : out event data port Datatypes::MyArrayOneDim;
 	    myArray2 : out event data port Datatypes::MyArrayUnbounded;
+	    myArray3 : out event data port Datatypes::MyArrayTwoDim;
 	  properties
 	  -- CASE_Scheduling::Domain => CM_Property_Set::RadioDriver_Attestation_Domain;
 	  -- HAMR::Component_Type => VIRTUAL_MACHINE;
@@ -166,6 +168,7 @@ public
 	    myStructConn: port producer.myStruct -> myStruct;
 	    myArray1Conn: port producer.myArray1 -> myArray1;
 	    myArray2Conn: port producer.myArray2 -> myArray2;
+	    myArray3Conn: port producer.myArray3 -> myArray3;
 	end ProducerProc.i;
 
 	process ConsumerProc
@@ -203,6 +206,7 @@ public
 	    myStruct: in event data port Datatypes::MyStruct.i;
 	    myArray1 : in event data port Datatypes::MyArrayOneDim;
 	    myArray2 : in event data port Datatypes::MyArrayUnbounded;
+	    myArray3 : in event data port Datatypes::MyArrayTwoDim;
 	  properties
 	  -- CASE_Scheduling::Domain => CM_Property_Set::RadioDriver_Attestation_Domain;
 	  -- HAMR::Component_Type => VIRTUAL_MACHINE;
@@ -248,6 +252,7 @@ public
 	    myStructConn: port myStruct -> consumer.myStruct;
 	    myArray1Conn: port myArray1 -> consumer.myArray1;
 	    myArray2Conn: port myArray2 -> consumer.myArray2;
+	    myArray3Conn: port myArray3 -> consumer.myArray3;
 	end ConsumerProc.i;
 
 	--===========================================================================================================
@@ -291,6 +296,7 @@ public
 	    myStruct: out event data port Datatypes::MyStruct.i;
 	    myArray1 : out event data port Datatypes::MyArrayOneDim;
 	    myArray2 : out event data port Datatypes::MyArrayUnbounded;
+	    myArray3 : out event data port Datatypes::MyArrayTwoDim;
 	  properties
 	    Dispatch_Protocol => Periodic;
 	    Period => 1000ms;
@@ -334,6 +340,7 @@ public
 	    myStruct: in event data port Datatypes::MyStruct.i;
 	    myArray1 : in event data port Datatypes::MyArrayOneDim;
 	    myArray2 : in event data port Datatypes::MyArrayUnbounded;
+	    myArray3 : in event data port Datatypes::MyArrayTwoDim;
 	  properties
 	   Dispatch_Protocol => Sporadic;
 	   Period => 1000ms;

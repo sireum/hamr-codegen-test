@@ -51,6 +51,7 @@ isolette_cpp_pkg_interfaces::msg::OnOff heat_source_cpi_heat_controller_base::ge
 void heat_source_cpi_heat_controller_base::sendOut_heat_out(MsgType msg)
 {
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Heat>(&msg)) {
+        heat_source_cpi_heat_controller_heat_out_publisher_->publish(*typedMsg);
     } else {
         PRINT_ERROR("Sending out wrong type of variable on port heat_out.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }

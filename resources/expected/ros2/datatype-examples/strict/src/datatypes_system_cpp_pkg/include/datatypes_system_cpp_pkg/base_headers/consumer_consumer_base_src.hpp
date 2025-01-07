@@ -16,6 +16,7 @@
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_structi.hpp"
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_one_dim.hpp"
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_unbounded.hpp"
+#include "datatypes_system_cpp_pkg_interfaces/msg/my_array_two_dim.hpp"
 #include <queue>
 #include <vector>
 #include <variant>
@@ -28,7 +29,7 @@
 class consumer_consumer_base : public rclcpp::Node
 {
 protected:
-    using MsgType = std::variant<datatypes_system_cpp_pkg_interfaces::msg::Boolean, datatypes_system_cpp_pkg_interfaces::msg::Integer64, datatypes_system_cpp_pkg_interfaces::msg::Float64, datatypes_system_cpp_pkg_interfaces::msg::Character, datatypes_system_cpp_pkg_interfaces::msg::String, datatypes_system_cpp_pkg_interfaces::msg::Integer8, datatypes_system_cpp_pkg_interfaces::msg::Integer16, datatypes_system_cpp_pkg_interfaces::msg::Integer32, datatypes_system_cpp_pkg_interfaces::msg::Unsigned8, datatypes_system_cpp_pkg_interfaces::msg::Unsigned16, datatypes_system_cpp_pkg_interfaces::msg::Unsigned32, datatypes_system_cpp_pkg_interfaces::msg::Unsigned64, datatypes_system_cpp_pkg_interfaces::msg::Float32, datatypes_system_cpp_pkg_interfaces::msg::MyEnum, datatypes_system_cpp_pkg_interfaces::msg::MyStructi, datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim, datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>;
+    using MsgType = std::variant<datatypes_system_cpp_pkg_interfaces::msg::Boolean, datatypes_system_cpp_pkg_interfaces::msg::Integer64, datatypes_system_cpp_pkg_interfaces::msg::Float64, datatypes_system_cpp_pkg_interfaces::msg::Character, datatypes_system_cpp_pkg_interfaces::msg::String, datatypes_system_cpp_pkg_interfaces::msg::Integer8, datatypes_system_cpp_pkg_interfaces::msg::Integer16, datatypes_system_cpp_pkg_interfaces::msg::Integer32, datatypes_system_cpp_pkg_interfaces::msg::Unsigned8, datatypes_system_cpp_pkg_interfaces::msg::Unsigned16, datatypes_system_cpp_pkg_interfaces::msg::Unsigned32, datatypes_system_cpp_pkg_interfaces::msg::Unsigned64, datatypes_system_cpp_pkg_interfaces::msg::Float32, datatypes_system_cpp_pkg_interfaces::msg::MyEnum, datatypes_system_cpp_pkg_interfaces::msg::MyStructi, datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim, datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded, datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>;
 
     consumer_consumer_base();
 
@@ -100,6 +101,8 @@ private:
     void handle_myArray1_base(MsgType msg);
     virtual void handle_myArray2(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg) = 0;
     void handle_myArray2_base(MsgType msg);
+    virtual void handle_myArray3(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg) = 0;
+    void handle_myArray3_base(MsgType msg);
 
     std::queue<MsgType> infrastructureIn_myBoolean;
     std::queue<MsgType> applicationIn_myBoolean;
@@ -139,6 +142,8 @@ private:
     std::queue<MsgType> applicationIn_myArray1;
     std::queue<MsgType> infrastructureIn_myArray2;
     std::queue<MsgType> applicationIn_myArray2;
+    std::queue<MsgType> infrastructureIn_myArray3;
+    std::queue<MsgType> applicationIn_myArray3;
 
     //=================================================
     //  C o m m u n i c a t i o n
@@ -162,6 +167,7 @@ private:
     rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>::SharedPtr consumer_consumer_myStruct_subscription_;
     rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>::SharedPtr consumer_consumer_myArray1_subscription_;
     rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>::SharedPtr consumer_consumer_myArray2_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>::SharedPtr consumer_consumer_myArray3_subscription_;
 
 
     // Used for thread locking

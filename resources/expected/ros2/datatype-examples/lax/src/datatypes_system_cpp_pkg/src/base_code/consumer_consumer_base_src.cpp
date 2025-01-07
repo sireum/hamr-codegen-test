@@ -105,4 +105,9 @@ consumer_consumer_base::consumer_consumer_base() : Node("consumer_consumer")
         1,
         std::bind(&consumer_consumer_base::handle_myArray2, this, std::placeholders::_1), subscription_options_);
 
+    consumer_consumer_myArray3_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(
+        "consumer_consumer_myArray3",
+        1,
+        std::bind(&consumer_consumer_base::handle_myArray3, this, std::placeholders::_1), subscription_options_);
+
 }

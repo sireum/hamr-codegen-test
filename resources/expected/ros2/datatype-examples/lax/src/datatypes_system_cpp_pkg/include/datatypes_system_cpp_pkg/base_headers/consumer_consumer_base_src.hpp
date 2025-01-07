@@ -16,6 +16,7 @@
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_structi.hpp"
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_one_dim.hpp"
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_unbounded.hpp"
+#include "datatypes_system_cpp_pkg_interfaces/msg/my_array_two_dim.hpp"
 #include <queue>
 
 //=================================================
@@ -65,6 +66,7 @@ private:
     virtual void handle_myStruct(const datatypes_system_cpp_pkg_interfaces::msg::MyStructi::SharedPtr msg) = 0;
     virtual void handle_myArray1(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim::SharedPtr msg) = 0;
     virtual void handle_myArray2(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded::SharedPtr msg) = 0;
+    virtual void handle_myArray3(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim::SharedPtr msg) = 0;
 
     //=================================================
     //  C o m m u n i c a t i o n
@@ -88,6 +90,7 @@ private:
     rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>::SharedPtr consumer_consumer_myStruct_subscription_;
     rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>::SharedPtr consumer_consumer_myArray1_subscription_;
     rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>::SharedPtr consumer_consumer_myArray2_subscription_;
+    rclcpp::Subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>::SharedPtr consumer_consumer_myArray3_subscription_;
 
 
 };
