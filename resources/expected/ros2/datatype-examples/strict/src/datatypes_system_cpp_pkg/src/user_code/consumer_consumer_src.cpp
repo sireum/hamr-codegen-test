@@ -109,3 +109,8 @@ void consumer_consumer::handle_myArray2(const datatypes_system_cpp_pkg_interface
     // Handle myArray2 msg
 }
 
+void consumer_consumer::handle_myArray3(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg)
+{
+    // Handle myArray3 msg
+}
+

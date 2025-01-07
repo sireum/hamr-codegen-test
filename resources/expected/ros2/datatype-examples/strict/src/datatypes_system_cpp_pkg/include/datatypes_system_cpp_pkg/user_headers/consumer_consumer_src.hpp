@@ -33,6 +33,7 @@ private:
     void handle_myStruct(const datatypes_system_cpp_pkg_interfaces::msg::MyStructi msg);
     void handle_myArray1(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim msg);
     void handle_myArray2(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg);
+    void handle_myArray3(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg);
 
     //=================================================
     //  Include any additional declarations here

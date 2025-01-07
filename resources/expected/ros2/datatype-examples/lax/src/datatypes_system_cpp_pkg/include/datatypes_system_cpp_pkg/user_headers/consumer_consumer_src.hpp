@@ -33,6 +33,7 @@ private:
     void handle_myStruct(const datatypes_system_cpp_pkg_interfaces::msg::MyStructi::SharedPtr msg);
     void handle_myArray1(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim::SharedPtr msg);
     void handle_myArray2(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded::SharedPtr msg);
+    void handle_myArray3(const datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim::SharedPtr msg);
 
     //=================================================
     //  Include any additional declarations here

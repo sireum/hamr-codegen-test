@@ -16,6 +16,7 @@
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_structi.hpp"
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_one_dim.hpp"
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_unbounded.hpp"
+#include "datatypes_system_cpp_pkg_interfaces/msg/my_array_two_dim.hpp"
 #include <queue>
 
 //=================================================
@@ -54,6 +55,7 @@ protected:
     void put_myStruct(datatypes_system_cpp_pkg_interfaces::msg::MyStructi msg);
     void put_myArray1(datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim msg);
     void put_myArray2(datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg);
+    void put_myArray3(datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg);
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
@@ -83,6 +85,7 @@ private:
     rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>::SharedPtr producer_producer_myStruct_publisher_;
     rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>::SharedPtr producer_producer_myArray1_publisher_;
     rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>::SharedPtr producer_producer_myArray2_publisher_;
+    rclcpp::Publisher<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>::SharedPtr producer_producer_myArray3_publisher_;
 
     //=================================================
     //  C a l l b a c k   a n d   T i m e r
