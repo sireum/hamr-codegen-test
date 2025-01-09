@@ -1,0 +1,14 @@
+<launch>
+
+    <node pkg="isolette_cpp_pkg" exec="thermostat_monitor_temperature_manage_alarm_mat_exe">
+    </node>
+
+
+    <node pkg="isolette_cpp_pkg" exec="thermostat_monitor_temperature_manage_monitor_interface_mmit_exe">
+    </node>
+
+
+    <node pkg="isolette_cpp_pkg" exec="thermostat_monitor_temperature_manage_monitor_mode_mmmt_exe">
+    </node>
+
+</launch>

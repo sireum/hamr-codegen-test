@@ -1,0 +1,14 @@
+<launch>
+
+    <node pkg="isolette_cpp_pkg" exec="thermostat_regulate_temperature_manage_regulator_interface_mrit_exe">
+    </node>
+
+
+    <node pkg="isolette_cpp_pkg" exec="thermostat_regulate_temperature_manage_heat_source_mhst_exe">
+    </node>
+
+
+    <node pkg="isolette_cpp_pkg" exec="thermostat_regulate_temperature_manage_regulator_mode_mrmt_exe">
+    </node>
+
+</launch>
