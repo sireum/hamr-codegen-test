@@ -50,6 +50,10 @@ operator_interface_oip_oit_base::operator_interface_oip_oit_base() : Node("opera
         "thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_tempWstatus",
         1);
 
+    operator_interface_oip_oit_lower_alarm_tempWstatus_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
+        "operator_interface_oip_oit_lower_alarm_tempWstatus",
+        1);
+
     operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus",
         1);

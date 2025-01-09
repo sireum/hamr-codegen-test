@@ -11,11 +11,11 @@
 #include "isolette_cpp_pkg_interfaces/msg/monitor_mode.hpp"
 
 const char* enumToString(isolette_cpp_pkg_interfaces::msg::Heat* value);
-const char* enumToString(isolette_cpp_pkg_interfaces::msg::Interface_Interaction* value);
+const char* enumToString(isolette_cpp_pkg_interfaces::msg::InterfaceInteraction* value);
 const char* enumToString(isolette_cpp_pkg_interfaces::msg::ValueStatus* value);
-const char* enumToString(isolette_cpp_pkg_interfaces::msg::On_Off* value);
+const char* enumToString(isolette_cpp_pkg_interfaces::msg::OnOff* value);
 const char* enumToString(isolette_cpp_pkg_interfaces::msg::Status* value);
-const char* enumToString(isolette_cpp_pkg_interfaces::msg::Regulator_Mode* value);
-const char* enumToString(isolette_cpp_pkg_interfaces::msg::Monitor_Mode* value);
+const char* enumToString(isolette_cpp_pkg_interfaces::msg::RegulatorMode* value);
+const char* enumToString(isolette_cpp_pkg_interfaces::msg::MonitorMode* value);
 
 #endif

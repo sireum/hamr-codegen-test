@@ -1,0 +1,6 @@
+<launch>
+
+    <node pkg="isolette_cpp_pkg" exec="heat_source_cpi_heat_controller_exe">
+    </node>
+
+</launch>

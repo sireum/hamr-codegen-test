@@ -83,6 +83,7 @@ private:
 
     rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_lower_desired_tempWstatus_publisher_;
     rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_upper_desired_tempWstatus_publisher_;
+    rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_lower_alarm_tempWstatus_publisher_;
     rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_1;
     rclcpp::Publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>::SharedPtr operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_2;
 
