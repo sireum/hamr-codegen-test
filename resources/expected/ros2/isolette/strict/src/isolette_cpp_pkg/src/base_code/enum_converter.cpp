@@ -9,12 +9,12 @@ const char* enumToString(isolette_cpp_pkg_interfaces::msg::Heat value) {
     }
 }
 
-const char* enumToString(isolette_cpp_pkg_interfaces::msg::Interface_Interaction value) {
+const char* enumToString(isolette_cpp_pkg_interfaces::msg::InterfaceInteraction value) {
     switch (value.interface_interaction) {
-        case isolette_cpp_pkg_interfaces::msg::Interface_Interaction::INTERFACE_INTERACTION_DUMMY_INTERFACE_INTERACTION_ENUM:
-            return "Interface_Interaction Dummy_Interface_Interaction_Enum";
+        case isolette_cpp_pkg_interfaces::msg::InterfaceInteraction::INTERFACE_INTERACTION_DUMMY_INTERFACE_INTERACTION_ENUM:
+            return "InterfaceInteraction Dummy_Interface_Interaction_Enum";
         default:
-            return "Unknown value for Interface_Interaction";
+            return "Unknown value for InterfaceInteraction";
     }
 }
 
@@ -29,14 +29,14 @@ const char* enumToString(isolette_cpp_pkg_interfaces::msg::ValueStatus value) {
     }
 }
 
-const char* enumToString(isolette_cpp_pkg_interfaces::msg::On_Off value) {
+const char* enumToString(isolette_cpp_pkg_interfaces::msg::OnOff value) {
     switch (value.on_off) {
-        case isolette_cpp_pkg_interfaces::msg::On_Off::ON_OFF_ONN:
-            return "On_Off Onn";
-        case isolette_cpp_pkg_interfaces::msg::On_Off::ON_OFF_OFF:
-            return "On_Off Off";
+        case isolette_cpp_pkg_interfaces::msg::OnOff::ON_OFF_ONN:
+            return "OnOff Onn";
+        case isolette_cpp_pkg_interfaces::msg::OnOff::ON_OFF_OFF:
+            return "OnOff Off";
         default:
-            return "Unknown value for On_Off";
+            return "Unknown value for OnOff";
     }
 }
 
@@ -53,29 +53,29 @@ const char* enumToString(isolette_cpp_pkg_interfaces::msg::Status value) {
     }
 }
 
-const char* enumToString(isolette_cpp_pkg_interfaces::msg::Regulator_Mode value) {
+const char* enumToString(isolette_cpp_pkg_interfaces::msg::RegulatorMode value) {
     switch (value.regulator_mode) {
-        case isolette_cpp_pkg_interfaces::msg::Regulator_Mode::REGULATOR_MODE_INIT_REGULATOR_MODE:
-            return "Regulator_Mode Init_Regulator_Mode";
-        case isolette_cpp_pkg_interfaces::msg::Regulator_Mode::REGULATOR_MODE_NORMAL_REGULATOR_MODE:
-            return "Regulator_Mode Normal_Regulator_Mode";
-        case isolette_cpp_pkg_interfaces::msg::Regulator_Mode::REGULATOR_MODE_FAILED_REGULATOR_MODE:
-            return "Regulator_Mode Failed_Regulator_Mode";
+        case isolette_cpp_pkg_interfaces::msg::RegulatorMode::REGULATOR_MODE_INIT_REGULATOR_MODE:
+            return "RegulatorMode Init_Regulator_Mode";
+        case isolette_cpp_pkg_interfaces::msg::RegulatorMode::REGULATOR_MODE_NORMAL_REGULATOR_MODE:
+            return "RegulatorMode Normal_Regulator_Mode";
+        case isolette_cpp_pkg_interfaces::msg::RegulatorMode::REGULATOR_MODE_FAILED_REGULATOR_MODE:
+            return "RegulatorMode Failed_Regulator_Mode";
         default:
-            return "Unknown value for Regulator_Mode";
+            return "Unknown value for RegulatorMode";
     }
 }
 
-const char* enumToString(isolette_cpp_pkg_interfaces::msg::Monitor_Mode value) {
+const char* enumToString(isolette_cpp_pkg_interfaces::msg::MonitorMode value) {
     switch (value.monitor_mode) {
-        case isolette_cpp_pkg_interfaces::msg::Monitor_Mode::MONITOR_MODE_INIT_MONITOR_MODE:
-            return "Monitor_Mode Init_Monitor_Mode";
-        case isolette_cpp_pkg_interfaces::msg::Monitor_Mode::MONITOR_MODE_NORMAL_MONITOR_MODE:
-            return "Monitor_Mode Normal_Monitor_Mode";
-        case isolette_cpp_pkg_interfaces::msg::Monitor_Mode::MONITOR_MODE_FAILED_MONITOR_MODE:
-            return "Monitor_Mode Failed_Monitor_Mode";
+        case isolette_cpp_pkg_interfaces::msg::MonitorMode::MONITOR_MODE_INIT_MONITOR_MODE:
+            return "MonitorMode Init_Monitor_Mode";
+        case isolette_cpp_pkg_interfaces::msg::MonitorMode::MONITOR_MODE_NORMAL_MONITOR_MODE:
+            return "MonitorMode Normal_Monitor_Mode";
+        case isolette_cpp_pkg_interfaces::msg::MonitorMode::MONITOR_MODE_FAILED_MONITOR_MODE:
+            return "MonitorMode Failed_Monitor_Mode";
         default:
-            return "Unknown value for Monitor_Mode";
+            return "Unknown value for MonitorMode";
     }
 }
 

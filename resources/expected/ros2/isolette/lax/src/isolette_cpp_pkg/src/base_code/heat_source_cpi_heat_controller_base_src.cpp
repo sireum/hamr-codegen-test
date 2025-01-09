@@ -15,6 +15,10 @@ heat_source_cpi_heat_controller_base::heat_source_cpi_heat_controller_base() : N
         1,
         std::bind(&heat_source_cpi_heat_controller_base::handle_heat_control, this, std::placeholders::_1), subscription_options_);
 
+    heat_source_cpi_heat_controller_heat_out_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Heat>(
+        "heat_source_cpi_heat_controller_heat_out",
+        1);
+
     // timeTriggered callback timer
     periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
         std::bind(&heat_source_cpi_heat_controller_base::timeTriggered, this), cb_group_);
@@ -33,3 +37,9 @@ void heat_source_cpi_heat_controller_base::handle_heat_control(const isolette_cp
 isolette_cpp_pkg_interfaces::msg::OnOff::SharedPtr heat_source_cpi_heat_controller_base::get_heat_control() {
     return heat_control_msg_holder;
 }
+
+void heat_source_cpi_heat_controller_base::put_heat_out(isolette_cpp_pkg_interfaces::msg::Heat msg)
+{
+    heat_source_cpi_heat_controller_heat_out_publisher_->publish(msg);
+}
+

@@ -1,0 +1,14 @@
+<launch>
+
+    <include file="$(find-pkg-share isolette_cpp_pkg_bringup)/launch/thermostat.launch.xml"/>
+
+
+    <include file="$(find-pkg-share isolette_cpp_pkg_bringup)/launch/operator_interface.launch.xml"/>
+
+
+    <include file="$(find-pkg-share isolette_cpp_pkg_bringup)/launch/temperature_sensor.launch.xml"/>
+
+
+    <include file="$(find-pkg-share isolette_cpp_pkg_bringup)/launch/heat_source.launch.xml"/>
+
+</launch>
