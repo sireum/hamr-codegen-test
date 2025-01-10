@@ -35,7 +35,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), T, verbose)
   }
 
   "building_control_gen_mixed_strict" in {
@@ -44,7 +44,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), T, verbose)
   }
 
   "isolette_lax" in {
@@ -53,7 +53,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), T, verbose)
   }
 
   "isolette_strict" in {
@@ -62,7 +62,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), T, verbose)
   }
 
   // TODO: Fix/implement PCA Pump to-do types
@@ -72,7 +72,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root / "pca")
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), T, verbose)
   }
 
   // TODO: Fix/implement PCA Pump to-do types
@@ -82,7 +82,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root / "pca")
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), T, verbose)
   }
 
   "datatype-examples_lax" in {
@@ -91,7 +91,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), T, verbose)
   }
 
   "datatype-examples_strict" in {
@@ -100,10 +100,30 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), T, verbose)
   }
 
-  def testRos(testName: String, airFile: Os.Path, modelDir: Os.Path, config: CodegenOption, verbose: B): Unit = {
+  "marker_test_building_control_lax" in {
+    val testName = "marker_test_building_control"
+    val rootName = "building_control_gen_mixed"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), F, verbose)
+  }
+
+  "marker_test_building_control_strict" in {
+    val testName = "marker_test_building_control"
+    val rootName = "building_control_gen_mixed"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), F, verbose)
+  }
+
+  def testRos(testName: String, airFile: Os.Path, modelDir: Os.Path, config: CodegenOption, clearDestDir: B, verbose: B): Unit = {
     val reporter = Reporter.create
 
     val strictMode = config.strictAadlMode
@@ -130,7 +150,10 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
       ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml
     )
 
-    destDir.removeAll()
+    if (clearDestDir) {
+      destDir.removeAll()
+    }
+
     println(s"Result Dir: ${destDir.up.toUri}")
 
     val results: CodeGenResults = CodeGen.codeGen(

@@ -1,8 +1,8 @@
 #include "isolette_cpp_pkg/base_headers/thermostat_regulate_temperature_manage_regulator_interface_mrit_base_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 thermostat_regulate_temperature_manage_regulator_interface_mrit_base::thermostat_regulate_temperature_manage_regulator_interface_mrit_base() : Node("thermostat_regulate_temperature_manage_regulator_interface_mrit")
 {

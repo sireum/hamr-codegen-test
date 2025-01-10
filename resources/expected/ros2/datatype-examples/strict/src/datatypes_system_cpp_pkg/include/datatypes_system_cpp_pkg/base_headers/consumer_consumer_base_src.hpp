@@ -22,9 +22,9 @@
 #include <variant>
 #include <mutex>
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 class consumer_consumer_base : public rclcpp::Node
 {

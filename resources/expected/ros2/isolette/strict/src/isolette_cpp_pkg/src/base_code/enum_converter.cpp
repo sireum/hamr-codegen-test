@@ -1,5 +1,9 @@
 #include "isolette_cpp_pkg/base_headers/enum_converter.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 const char* enumToString(isolette_cpp_pkg_interfaces::msg::Heat value) {
     switch (value.heat) {
         case isolette_cpp_pkg_interfaces::msg::Heat::HEAT_DUMMY_HEAD_ENUM:

@@ -1,8 +1,8 @@
 #include "datatypes_system_cpp_pkg/base_headers/producer_producer_base_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 producer_producer_base::producer_producer_base() : Node("producer_producer")
 {

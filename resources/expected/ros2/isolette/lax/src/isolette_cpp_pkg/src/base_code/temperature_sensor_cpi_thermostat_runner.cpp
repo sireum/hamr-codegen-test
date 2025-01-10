@@ -1,8 +1,8 @@
 #include "isolette_cpp_pkg/user_headers/temperature_sensor_cpi_thermostat_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 temperature_sensor_cpi_thermostat::temperature_sensor_cpi_thermostat() : temperature_sensor_cpi_thermostat_base()
 {

@@ -9,6 +9,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(datatypes_system_cpp_pkg_interfaces REQUIRED)
 
+# Additions within these tags will be preserved when re-running Codegen
+
+# Additions within these tags will be preserved when re-running Codegen
+
 include_directories(include)
 
 add_executable(producer_producer_exe src/base_code/producer_producer_runner.cpp src/user_code/producer_producer_src.cpp src/base_code/producer_producer_base_src.cpp src/base_code/enum_converter.cpp)

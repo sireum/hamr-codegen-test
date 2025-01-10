@@ -1,8 +1,8 @@
 #include "isolette_cpp_pkg/user_headers/thermostat_monitor_temperature_manage_monitor_interface_mmit_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 thermostat_monitor_temperature_manage_monitor_interface_mmit::thermostat_monitor_temperature_manage_monitor_interface_mmit() : thermostat_monitor_temperature_manage_monitor_interface_mmit_base()
 {

@@ -7,9 +7,9 @@
 #include <variant>
 #include <mutex>
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 class thermostat_regulate_temperature_manage_regulator_mode_mrmt_base : public rclcpp::Node
 {
