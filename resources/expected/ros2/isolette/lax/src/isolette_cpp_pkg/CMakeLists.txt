@@ -9,6 +9,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(isolette_cpp_pkg_interfaces REQUIRED)
 
+# Additions within these tags will be preserved when re-running Codegen
+
+# Additions within these tags will be preserved when re-running Codegen
+
 include_directories(include)
 
 add_executable(thermostat_regulate_temperature_manage_regulator_interface_mrit_exe src/base_code/thermostat_regulate_temperature_manage_regulator_interface_mrit_runner.cpp src/user_code/thermostat_regulate_temperature_manage_regulator_interface_mrit_src.cpp src/base_code/thermostat_regulate_temperature_manage_regulator_interface_mrit_base_src.cpp src/base_code/enum_converter.cpp)

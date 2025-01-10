@@ -1,8 +1,8 @@
 #include "isolette_cpp_pkg/base_headers/thermostat_monitor_temperature_manage_monitor_mode_mmmt_base_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 thermostat_monitor_temperature_manage_monitor_mode_mmmt_base::thermostat_monitor_temperature_manage_monitor_mode_mmmt_base() : Node("thermostat_monitor_temperature_manage_monitor_mode_mmmt")
 {

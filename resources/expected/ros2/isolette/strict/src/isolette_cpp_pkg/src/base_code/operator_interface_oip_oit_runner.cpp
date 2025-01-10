@@ -1,8 +1,8 @@
 #include "isolette_cpp_pkg/user_headers/operator_interface_oip_oit_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 operator_interface_oip_oit::operator_interface_oip_oit() : operator_interface_oip_oit_base()
 {

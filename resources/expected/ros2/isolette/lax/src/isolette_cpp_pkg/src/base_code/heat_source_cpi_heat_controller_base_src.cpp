@@ -1,8 +1,8 @@
 #include "isolette_cpp_pkg/base_headers/heat_source_cpi_heat_controller_base_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 heat_source_cpi_heat_controller_base::heat_source_cpi_heat_controller_base() : Node("heat_source_cpi_heat_controller")
 {

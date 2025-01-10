@@ -19,9 +19,9 @@
 #include "datatypes_system_cpp_pkg_interfaces/msg/my_array_two_dim.hpp"
 #include <queue>
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 class producer_producer_base : public rclcpp::Node
 {

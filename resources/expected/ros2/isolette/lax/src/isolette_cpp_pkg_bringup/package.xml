@@ -11,6 +11,10 @@
 
     <exec_depend>isolette_cpp_pkg</exec_depend>
 
+    <!-- Additions within these tags will be preserved when re-running Codegen -->
+
+    <!-- Additions within these tags will be preserved when re-running Codegen -->
+
     <test_depend>ament_lint_auto</test_depend>
     <test_depend>ament_lint_common</test_depend>
 
