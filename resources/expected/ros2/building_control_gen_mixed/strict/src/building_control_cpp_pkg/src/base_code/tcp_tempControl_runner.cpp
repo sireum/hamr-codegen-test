@@ -1,8 +1,8 @@
 #include "building_control_cpp_pkg/user_headers/tcp_tempControl_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 tcp_tempControl::tcp_tempControl() : tcp_tempControl_base()
 {

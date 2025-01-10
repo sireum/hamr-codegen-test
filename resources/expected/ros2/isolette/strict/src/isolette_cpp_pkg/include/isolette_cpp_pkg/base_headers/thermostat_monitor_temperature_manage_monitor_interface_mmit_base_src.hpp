@@ -9,9 +9,9 @@
 #include <variant>
 #include <mutex>
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 class thermostat_monitor_temperature_manage_monitor_interface_mmit_base : public rclcpp::Node
 {

@@ -3,9 +3,9 @@
 #include "isolette_cpp_pkg_interfaces/msg/temp_wstatusimpl.hpp"
 #include <queue>
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 class temperature_sensor_cpi_thermostat_base : public rclcpp::Node
 {

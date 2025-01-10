@@ -1,5 +1,9 @@
 #include "datatypes_system_cpp_pkg/base_headers/enum_converter.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 const char* enumToString(datatypes_system_cpp_pkg_interfaces::msg::MyEnum value) {
     switch (value.my_enum) {
         case datatypes_system_cpp_pkg_interfaces::msg::MyEnum::MY_ENUM_ON:

@@ -38,5 +38,7 @@ private:
     //=================================================
     //  Include any additional declarations here
     //=================================================
+    // Additions within these tags will be preserved when re-running Codegen
 
+    // Additions within these tags will be preserved when re-running Codegen
 };

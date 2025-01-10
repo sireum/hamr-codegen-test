@@ -1,8 +1,8 @@
 #include "isolette_cpp_pkg/user_headers/thermostat_regulate_temperature_manage_heat_source_mhst_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 thermostat_regulate_temperature_manage_heat_source_mhst::thermostat_regulate_temperature_manage_heat_source_mhst() : thermostat_regulate_temperature_manage_heat_source_mhst_base()
 {

@@ -9,6 +9,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(building_control_cpp_pkg_interfaces REQUIRED)
 
+# Additions within these tags will be preserved when re-running Codegen
+
+# Additions within these tags will be preserved when re-running Codegen
+
 include_directories(include)
 
 add_executable(tcp_tempSensor_exe src/base_code/tcp_tempSensor_runner.cpp src/user_code/tcp_tempSensor_src.cpp src/base_code/tcp_tempSensor_base_src.cpp src/base_code/enum_converter.cpp)

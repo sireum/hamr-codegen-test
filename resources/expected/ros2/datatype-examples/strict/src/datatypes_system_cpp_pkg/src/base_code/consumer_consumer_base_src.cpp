@@ -1,8 +1,8 @@
 #include "datatypes_system_cpp_pkg/base_headers/consumer_consumer_base_src.hpp"
 
-//=================================================
-//  D O   N O T   E D I T   T H I S   F I L E
-//=================================================
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
 
 consumer_consumer_base::consumer_consumer_base() : Node("consumer_consumer")
 {
