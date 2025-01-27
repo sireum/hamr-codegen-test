@@ -408,26 +408,24 @@ object TestUtil {
 
     if (shouldProve(testOps, testModes) && performAction("Refinement proof")) {
       val proof = camkesOutDir.get / "proof" / "smt2_case.smt2"
-      val cvc = sireumHome / "bin" / os / (if (Os.isWin) "cvc.exe" else "cvc")
-      val z3 = sireumHome / "bin" / os / "z3" / "bin" / (if (Os.isWin) "z3.exe" else "z3")
+      val cvc4 = sireumHome / "bin" / os / (if (Os.isWin) "cvc.exe" else "cvc")
 
       def err(out: String, exitCode: Z): Unit = {
         halt(
-          st"""Error encountered when running ${cvc.value} query:
+          st"""Error encountered when running ${cvc4.value} query:
               |${proof.read}
               |
-              |${cvc.value} output (exit code $exitCode):
+              |${cvc4.value} output (exit code $exitCode):
               |$out""".render)
       }
 
       assert(proof.exists, s"${proof} does not exist")
-      assert(cvc.exists, s"${cvc} doesn't exist")
-      assert(z3.exists, s"${z3} doesn't exist")
+      assert(cvc4.exists, s"${cvc4} doesn't exist")
 
       println("Checking refinement proof ...")
 
       val startTime = extension.Time.currentMillis
-      val pr = vproc(st"${cvc.value} -i --finite-model-find ${proof.value}".render, proof.up, ISZ(), None(), "refinement-proof")
+      val pr = vproc(st"${cvc4.value} -i --finite-model-find ${proof.value}".render, proof.up, ISZ(), None(), "refinement-proof")
       val pout: String = pr.out
       val isTimeout: B = pr.exitCode === 6 || pr.exitCode === -101 || pr.exitCode === -100
       if (pout.size == 0 && pr.exitCode != 0 && !isTimeout) {
