@@ -15,9 +15,12 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
   val verbose: B = F
 
-  // TODO: The ROS2 setup file is currently hardcoded!  Will need to change
-  val ros2SetupPath: String = "/opt/ros/humble/setup.bash"
-  val buildRosPkgs: B = F
+  val ros2SetupPath: Option[Os.Path] = Os.env("ROS2_HOME") match {
+    case Some(dist) =>
+      if ((Os.path(dist) / "setup.bash").exists) Some((Os.path(dist) / "setup.bash"))
+      else None()
+    case _ => None()
+  }
 
   val root = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
   val resourceDir: Os.Path = root / "resources"
@@ -173,18 +176,18 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     // For an unknown reason, the compare() method halts and does not complete when run after building.
     // Additionally, some details of the building process appear to be version dependent, so comparing before
     // building is probably preferable - Clint
-    if (buildRosPkgs) {
+    if (ros2SetupPath.nonEmpty) {
       val longResourcePath = ops.StringOps(results.resources.apply(0).dstPath)
       val resourcePath = longResourcePath.replaceAllLiterally((resultsRoot / testName / "results" / strictModeString / "src").value, "")
       val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/".toString).apply(0)
 
       // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
       // so I split it up - Clint
-      Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
-        .apply(wd = resultsRoot / testName / "results" / strictModeString).console.run()
+      Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
+        .at(resultsRoot / testName / "results" / strictModeString).console.run()
 
-      val buildResults = Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName} ${pkgName}_bringup"))
-        .apply(wd = resultsRoot / testName / "results" / strictModeString).console.run()
+      val buildResults = Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName} ${pkgName}_bringup"))
+        .at(resultsRoot / testName / "results" / strictModeString).console.run()
 
       // The last two packages will only finish if the first package finished
       if (!buildResults.out.toString.contains("Summary: 2 packages finished")) {
@@ -195,7 +198,6 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     assert(failureReasons.size == 0)
   }
 }
-
 
 object Ros2Tests {
   val baseOptions = CodegenOption(
