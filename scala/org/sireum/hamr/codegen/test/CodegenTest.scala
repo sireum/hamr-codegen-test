@@ -105,7 +105,8 @@ trait CodegenTest extends CodegenTestSuite {
     val expectedDir = rootTestOutputDir / "expected"
     val resultsDir = rootTestOutputDir / "results"
 
-    assert(config.slangOutputDir.isEmpty, s"hmm, why custom output dir ${config.slangOutputDir}")
+    assert(config.outputDir.isEmpty, s"hmm, why custom output dir ${config.outputDir}")
+    assert(config.slangOutputDir.isEmpty, s"hmm, why custom slang output dir ${config.slangOutputDir}")
     assert(config.slangOutputCDir.isEmpty, s"hmm, why custom c dir ${config.slangOutputCDir}")
     assert(config.sel4OutputDir.isEmpty, s"hmm, why custom camkes dir ${config.sel4OutputDir}")
 
@@ -119,9 +120,7 @@ trait CodegenTest extends CodegenTestSuite {
       testOps = testOps(verbose = T)
     }
 
-    testOps = testOps(slangOutputDir = Some((resultsDir / "slang").canon.value))
-    testOps = testOps(slangOutputCDir = Some((resultsDir / "c").canon.value))
-    testOps = testOps(sel4OutputDir = Some((resultsDir / "camkes").canon.value))
+    testOps = testOps(outputDir = Some((resultsDir).canon.value))
 
     rootTestOutputDir.removeAll()
     rootTestOutputDir.mkdirAll()

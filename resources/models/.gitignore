@@ -5,3 +5,4 @@
 **/*.aadlbin
 **/target/
 **/.bsp/
+INSPECTA-models/
