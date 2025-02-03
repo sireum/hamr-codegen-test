@@ -13,26 +13,17 @@ thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::thermostat_regu
     thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "thermostat_regulate_temperature_manage_regulator_mode_mrmt_current_tempWstatus",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
-            enqueue(infrastructureIn_current_tempWstatus, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::accept_current_tempWstatus, this, std::placeholders::_1), subscription_options_);
 
     thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
         "thermostat_regulate_temperature_manage_regulator_mode_mrmt_interface_failure",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg) {
-            enqueue(infrastructureIn_interface_failure, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::accept_interface_failure, this, std::placeholders::_1), subscription_options_);
 
     thermostat_regulate_temperature_manage_regulator_mode_mrmt_internal_failure_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(
         "thermostat_regulate_temperature_manage_regulator_mode_mrmt_internal_failure",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg) {
-            enqueue(infrastructureIn_internal_failure, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::accept_internal_failure, this, std::placeholders::_1), subscription_options_);
 
     thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(
         "thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_mode",
@@ -70,6 +61,21 @@ thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::thermostat_regu
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
+
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::accept_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
+{
+    enqueue(infrastructureIn_current_tempWstatus, msg);
+}
+
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::accept_interface_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg)
+{
+    enqueue(infrastructureIn_interface_failure, msg);
+}
+
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::accept_internal_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg)
+{
+    enqueue(infrastructureIn_internal_failure, msg);
+}
 
 isolette_cpp_pkg_interfaces::msg::TempWstatusimpl thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::get_current_tempWstatus() {
     MsgType msg = applicationIn_current_tempWstatus.front();

@@ -1,0 +1,26 @@
+<launch>
+
+    <node pkg="fan_in_fan_out_system_cpp_pkg" exec="fanIn_producer1_exe">
+    </node>
+
+
+    <node pkg="fan_in_fan_out_system_cpp_pkg" exec="fanIn_producer2_exe">
+    </node>
+
+
+    <node pkg="fan_in_fan_out_system_cpp_pkg" exec="fanIn_consumer_exe">
+    </node>
+
+
+    <node pkg="fan_in_fan_out_system_cpp_pkg" exec="fanOut_producer_exe">
+    </node>
+
+
+    <node pkg="fan_in_fan_out_system_cpp_pkg" exec="fanOut_consumer1_exe">
+    </node>
+
+
+    <node pkg="fan_in_fan_out_system_cpp_pkg" exec="fanOut_consumer2_exe">
+    </node>
+
+</launch>

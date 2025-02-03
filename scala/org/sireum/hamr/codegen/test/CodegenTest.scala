@@ -338,6 +338,7 @@ object CodegenTest {
     ros2Dir = None(),
     ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
     ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml,
+    invertTopicBinding = F,
     //
     experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
   )

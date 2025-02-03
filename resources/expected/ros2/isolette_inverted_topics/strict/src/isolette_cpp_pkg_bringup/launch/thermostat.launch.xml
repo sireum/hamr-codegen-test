@@ -1,0 +1,8 @@
+<launch>
+
+    <include file="$(find-pkg-share isolette_cpp_pkg_bringup)/launch/regulate_temperature.launch.xml"/>
+
+
+    <include file="$(find-pkg-share isolette_cpp_pkg_bringup)/launch/monitor_temperature.launch.xml"/>
+
+</launch>

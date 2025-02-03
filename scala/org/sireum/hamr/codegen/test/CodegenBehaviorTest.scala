@@ -280,6 +280,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     ros2Dir = None(),
     ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
     ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml,
+    invertTopicBinding = F,
     //
     experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
   )
@@ -390,6 +391,7 @@ object CodegenBehaviorTest {
           ros2Dir = opts.ros2Dir,
           ros2NodesLanguage = CodegenNodesCodeLanguage.byName(opts.ros2NodesLanguage.name).get,
           ros2LaunchLanguage = CodegenLaunchCodeLanguage.byName(opts.ros2LaunchLanguage.name).get,
+          invertTopicBinding = F,
           //
           experimentalOptions = opts.experimentalOptions
         ))

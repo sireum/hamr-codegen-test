@@ -40,6 +40,11 @@ protected:
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
 
+    void accept_regulator_status(isolette_cpp_pkg_interfaces::msg::Status msg);
+    void accept_monitor_status(isolette_cpp_pkg_interfaces::msg::Status msg);
+    void accept_display_temperature(isolette_cpp_pkg_interfaces::msg::Tempimpl msg);
+    void accept_alarm_control(isolette_cpp_pkg_interfaces::msg::OnOff msg);
+
     // Methods for working with port queues
     void receiveInputs();
 

@@ -13,322 +13,102 @@ consumer_consumer_base::consumer_consumer_base() : Node("consumer_consumer")
     consumer_consumer_myBoolean_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Boolean>(
         "consumer_consumer_myBoolean",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Boolean msg) {
-            enqueue(infrastructureIn_myBoolean, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myBoolean, applicationIn_myBoolean);
-                if (applicationIn_myBoolean.empty()) return;
-                handle_myBoolean_base(applicationIn_myBoolean.front());
-                applicationIn_myBoolean.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myBoolean, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myInteger_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(
         "consumer_consumer_myInteger",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg) {
-            enqueue(infrastructureIn_myInteger, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myInteger, applicationIn_myInteger);
-                if (applicationIn_myInteger.empty()) return;
-                handle_myInteger_base(applicationIn_myInteger.front());
-                applicationIn_myInteger.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myInteger, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myFloat_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Float64>(
         "consumer_consumer_myFloat",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Float64 msg) {
-            enqueue(infrastructureIn_myFloat, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myFloat, applicationIn_myFloat);
-                if (applicationIn_myFloat.empty()) return;
-                handle_myFloat_base(applicationIn_myFloat.front());
-                applicationIn_myFloat.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myFloat, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myCharacter_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Character>(
         "consumer_consumer_myCharacter",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Character msg) {
-            enqueue(infrastructureIn_myCharacter, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myCharacter, applicationIn_myCharacter);
-                if (applicationIn_myCharacter.empty()) return;
-                handle_myCharacter_base(applicationIn_myCharacter.front());
-                applicationIn_myCharacter.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myCharacter, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myString_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::String>(
         "consumer_consumer_myString",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::String msg) {
-            enqueue(infrastructureIn_myString, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myString, applicationIn_myString);
-                if (applicationIn_myString.empty()) return;
-                handle_myString_base(applicationIn_myString.front());
-                applicationIn_myString.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myString, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myInt8_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer8>(
         "consumer_consumer_myInt8",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Integer8 msg) {
-            enqueue(infrastructureIn_myInt8, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myInt8, applicationIn_myInt8);
-                if (applicationIn_myInt8.empty()) return;
-                handle_myInt8_base(applicationIn_myInt8.front());
-                applicationIn_myInt8.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myInt8, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myInt16_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer16>(
         "consumer_consumer_myInt16",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Integer16 msg) {
-            enqueue(infrastructureIn_myInt16, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myInt16, applicationIn_myInt16);
-                if (applicationIn_myInt16.empty()) return;
-                handle_myInt16_base(applicationIn_myInt16.front());
-                applicationIn_myInt16.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myInt16, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myInt32_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer32>(
         "consumer_consumer_myInt32",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Integer32 msg) {
-            enqueue(infrastructureIn_myInt32, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myInt32, applicationIn_myInt32);
-                if (applicationIn_myInt32.empty()) return;
-                handle_myInt32_base(applicationIn_myInt32.front());
-                applicationIn_myInt32.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myInt32, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myInt64_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(
         "consumer_consumer_myInt64",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg) {
-            enqueue(infrastructureIn_myInt64, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myInt64, applicationIn_myInt64);
-                if (applicationIn_myInt64.empty()) return;
-                handle_myInt64_base(applicationIn_myInt64.front());
-                applicationIn_myInt64.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myInt64, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myUInt8_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>(
         "consumer_consumer_myUInt8",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Unsigned8 msg) {
-            enqueue(infrastructureIn_myUInt8, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myUInt8, applicationIn_myUInt8);
-                if (applicationIn_myUInt8.empty()) return;
-                handle_myUInt8_base(applicationIn_myUInt8.front());
-                applicationIn_myUInt8.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myUInt8, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myUInt16_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>(
         "consumer_consumer_myUInt16",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Unsigned16 msg) {
-            enqueue(infrastructureIn_myUInt16, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myUInt16, applicationIn_myUInt16);
-                if (applicationIn_myUInt16.empty()) return;
-                handle_myUInt16_base(applicationIn_myUInt16.front());
-                applicationIn_myUInt16.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myUInt16, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myUInt32_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>(
         "consumer_consumer_myUInt32",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Unsigned32 msg) {
-            enqueue(infrastructureIn_myUInt32, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myUInt32, applicationIn_myUInt32);
-                if (applicationIn_myUInt32.empty()) return;
-                handle_myUInt32_base(applicationIn_myUInt32.front());
-                applicationIn_myUInt32.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myUInt32, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myUInt64_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>(
         "consumer_consumer_myUInt64",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Unsigned64 msg) {
-            enqueue(infrastructureIn_myUInt64, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myUInt64, applicationIn_myUInt64);
-                if (applicationIn_myUInt64.empty()) return;
-                handle_myUInt64_base(applicationIn_myUInt64.front());
-                applicationIn_myUInt64.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myUInt64, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myFloat32_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Float32>(
         "consumer_consumer_myFloat32",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Float32 msg) {
-            enqueue(infrastructureIn_myFloat32, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myFloat32, applicationIn_myFloat32);
-                if (applicationIn_myFloat32.empty()) return;
-                handle_myFloat32_base(applicationIn_myFloat32.front());
-                applicationIn_myFloat32.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myFloat32, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myFloat64_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::Float64>(
         "consumer_consumer_myFloat64",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::Float64 msg) {
-            enqueue(infrastructureIn_myFloat64, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myFloat64, applicationIn_myFloat64);
-                if (applicationIn_myFloat64.empty()) return;
-                handle_myFloat64_base(applicationIn_myFloat64.front());
-                applicationIn_myFloat64.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myFloat64, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myEnum_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>(
         "consumer_consumer_myEnum",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::MyEnum msg) {
-            enqueue(infrastructureIn_myEnum, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myEnum, applicationIn_myEnum);
-                if (applicationIn_myEnum.empty()) return;
-                handle_myEnum_base(applicationIn_myEnum.front());
-                applicationIn_myEnum.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myEnum, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myStruct_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>(
         "consumer_consumer_myStruct",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::MyStructi msg) {
-            enqueue(infrastructureIn_myStruct, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myStruct, applicationIn_myStruct);
-                if (applicationIn_myStruct.empty()) return;
-                handle_myStruct_base(applicationIn_myStruct.front());
-                applicationIn_myStruct.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myStruct, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myArray1_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>(
         "consumer_consumer_myArray1",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim msg) {
-            enqueue(infrastructureIn_myArray1, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myArray1, applicationIn_myArray1);
-                if (applicationIn_myArray1.empty()) return;
-                handle_myArray1_base(applicationIn_myArray1.front());
-                applicationIn_myArray1.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myArray1, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myArray2_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>(
         "consumer_consumer_myArray2",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg) {
-            enqueue(infrastructureIn_myArray2, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myArray2, applicationIn_myArray2);
-                if (applicationIn_myArray2.empty()) return;
-                handle_myArray2_base(applicationIn_myArray2.front());
-                applicationIn_myArray2.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myArray2, this, std::placeholders::_1), subscription_options_);
 
     consumer_consumer_myArray3_subscription_ = this->create_subscription<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(
         "consumer_consumer_myArray3",
         1,
-        [this](datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg) {
-            enqueue(infrastructureIn_myArray3, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_myArray3, applicationIn_myArray3);
-                if (applicationIn_myArray3.empty()) return;
-                handle_myArray3_base(applicationIn_myArray3.front());
-                applicationIn_myArray3.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&consumer_consumer_base::accept_myArray3, this, std::placeholders::_1), subscription_options_);
 
     // Used by receiveInputs
     inDataPortTupleVector = {
@@ -343,6 +123,266 @@ consumer_consumer_base::consumer_consumer_base() : Node("consumer_consumer")
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
+
+void consumer_consumer_base::accept_myBoolean(datatypes_system_cpp_pkg_interfaces::msg::Boolean msg)
+{
+    enqueue(infrastructureIn_myBoolean, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myBoolean, applicationIn_myBoolean);
+        if (applicationIn_myBoolean.empty()) return;
+        handle_myBoolean_base(applicationIn_myBoolean.front());
+        applicationIn_myBoolean.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myInteger(datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg)
+{
+    enqueue(infrastructureIn_myInteger, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myInteger, applicationIn_myInteger);
+        if (applicationIn_myInteger.empty()) return;
+        handle_myInteger_base(applicationIn_myInteger.front());
+        applicationIn_myInteger.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myFloat(datatypes_system_cpp_pkg_interfaces::msg::Float64 msg)
+{
+    enqueue(infrastructureIn_myFloat, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myFloat, applicationIn_myFloat);
+        if (applicationIn_myFloat.empty()) return;
+        handle_myFloat_base(applicationIn_myFloat.front());
+        applicationIn_myFloat.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myCharacter(datatypes_system_cpp_pkg_interfaces::msg::Character msg)
+{
+    enqueue(infrastructureIn_myCharacter, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myCharacter, applicationIn_myCharacter);
+        if (applicationIn_myCharacter.empty()) return;
+        handle_myCharacter_base(applicationIn_myCharacter.front());
+        applicationIn_myCharacter.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myString(datatypes_system_cpp_pkg_interfaces::msg::String msg)
+{
+    enqueue(infrastructureIn_myString, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myString, applicationIn_myString);
+        if (applicationIn_myString.empty()) return;
+        handle_myString_base(applicationIn_myString.front());
+        applicationIn_myString.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myInt8(datatypes_system_cpp_pkg_interfaces::msg::Integer8 msg)
+{
+    enqueue(infrastructureIn_myInt8, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myInt8, applicationIn_myInt8);
+        if (applicationIn_myInt8.empty()) return;
+        handle_myInt8_base(applicationIn_myInt8.front());
+        applicationIn_myInt8.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myInt16(datatypes_system_cpp_pkg_interfaces::msg::Integer16 msg)
+{
+    enqueue(infrastructureIn_myInt16, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myInt16, applicationIn_myInt16);
+        if (applicationIn_myInt16.empty()) return;
+        handle_myInt16_base(applicationIn_myInt16.front());
+        applicationIn_myInt16.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myInt32(datatypes_system_cpp_pkg_interfaces::msg::Integer32 msg)
+{
+    enqueue(infrastructureIn_myInt32, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myInt32, applicationIn_myInt32);
+        if (applicationIn_myInt32.empty()) return;
+        handle_myInt32_base(applicationIn_myInt32.front());
+        applicationIn_myInt32.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myInt64(datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg)
+{
+    enqueue(infrastructureIn_myInt64, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myInt64, applicationIn_myInt64);
+        if (applicationIn_myInt64.empty()) return;
+        handle_myInt64_base(applicationIn_myInt64.front());
+        applicationIn_myInt64.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myUInt8(datatypes_system_cpp_pkg_interfaces::msg::Unsigned8 msg)
+{
+    enqueue(infrastructureIn_myUInt8, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myUInt8, applicationIn_myUInt8);
+        if (applicationIn_myUInt8.empty()) return;
+        handle_myUInt8_base(applicationIn_myUInt8.front());
+        applicationIn_myUInt8.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myUInt16(datatypes_system_cpp_pkg_interfaces::msg::Unsigned16 msg)
+{
+    enqueue(infrastructureIn_myUInt16, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myUInt16, applicationIn_myUInt16);
+        if (applicationIn_myUInt16.empty()) return;
+        handle_myUInt16_base(applicationIn_myUInt16.front());
+        applicationIn_myUInt16.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myUInt32(datatypes_system_cpp_pkg_interfaces::msg::Unsigned32 msg)
+{
+    enqueue(infrastructureIn_myUInt32, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myUInt32, applicationIn_myUInt32);
+        if (applicationIn_myUInt32.empty()) return;
+        handle_myUInt32_base(applicationIn_myUInt32.front());
+        applicationIn_myUInt32.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myUInt64(datatypes_system_cpp_pkg_interfaces::msg::Unsigned64 msg)
+{
+    enqueue(infrastructureIn_myUInt64, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myUInt64, applicationIn_myUInt64);
+        if (applicationIn_myUInt64.empty()) return;
+        handle_myUInt64_base(applicationIn_myUInt64.front());
+        applicationIn_myUInt64.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myFloat32(datatypes_system_cpp_pkg_interfaces::msg::Float32 msg)
+{
+    enqueue(infrastructureIn_myFloat32, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myFloat32, applicationIn_myFloat32);
+        if (applicationIn_myFloat32.empty()) return;
+        handle_myFloat32_base(applicationIn_myFloat32.front());
+        applicationIn_myFloat32.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myFloat64(datatypes_system_cpp_pkg_interfaces::msg::Float64 msg)
+{
+    enqueue(infrastructureIn_myFloat64, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myFloat64, applicationIn_myFloat64);
+        if (applicationIn_myFloat64.empty()) return;
+        handle_myFloat64_base(applicationIn_myFloat64.front());
+        applicationIn_myFloat64.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myEnum(datatypes_system_cpp_pkg_interfaces::msg::MyEnum msg)
+{
+    enqueue(infrastructureIn_myEnum, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myEnum, applicationIn_myEnum);
+        if (applicationIn_myEnum.empty()) return;
+        handle_myEnum_base(applicationIn_myEnum.front());
+        applicationIn_myEnum.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myStruct(datatypes_system_cpp_pkg_interfaces::msg::MyStructi msg)
+{
+    enqueue(infrastructureIn_myStruct, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myStruct, applicationIn_myStruct);
+        if (applicationIn_myStruct.empty()) return;
+        handle_myStruct_base(applicationIn_myStruct.front());
+        applicationIn_myStruct.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myArray1(datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim msg)
+{
+    enqueue(infrastructureIn_myArray1, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myArray1, applicationIn_myArray1);
+        if (applicationIn_myArray1.empty()) return;
+        handle_myArray1_base(applicationIn_myArray1.front());
+        applicationIn_myArray1.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myArray2(datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg)
+{
+    enqueue(infrastructureIn_myArray2, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myArray2, applicationIn_myArray2);
+        if (applicationIn_myArray2.empty()) return;
+        handle_myArray2_base(applicationIn_myArray2.front());
+        applicationIn_myArray2.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void consumer_consumer_base::accept_myArray3(datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg)
+{
+    enqueue(infrastructureIn_myArray3, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_myArray3, applicationIn_myArray3);
+        if (applicationIn_myArray3.empty()) return;
+        handle_myArray3_base(applicationIn_myArray3.front());
+        applicationIn_myArray3.pop();
+        sendOutputs();
+    }).detach();
+}
 
 void consumer_consumer_base::handle_myBoolean_base(MsgType msg)
 {

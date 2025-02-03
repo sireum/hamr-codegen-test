@@ -13,58 +13,22 @@ tcp_tempControl_base::tcp_tempControl_base() : Node("tcp_tempControl")
     tcp_tempControl_currentTemp_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(
         "tcp_tempControl_currentTemp",
         1,
-        [this](building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg) {
-            enqueue(infrastructureIn_currentTemp, msg);
-        },
-        subscription_options_);
+        std::bind(&tcp_tempControl_base::accept_currentTemp, this, std::placeholders::_1), subscription_options_);
 
     tcp_tempControl_fanAck_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanAck>(
         "tcp_tempControl_fanAck",
         1,
-        [this](building_control_cpp_pkg_interfaces::msg::FanAck msg) {
-            enqueue(infrastructureIn_fanAck, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_fanAck, applicationIn_fanAck);
-                if (applicationIn_fanAck.empty()) return;
-                handle_fanAck_base(applicationIn_fanAck.front());
-                applicationIn_fanAck.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&tcp_tempControl_base::accept_fanAck, this, std::placeholders::_1), subscription_options_);
 
     tcp_tempControl_setPoint_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::SetPointimpl>(
         "tcp_tempControl_setPoint",
         1,
-        [this](building_control_cpp_pkg_interfaces::msg::SetPointimpl msg) {
-            enqueue(infrastructureIn_setPoint, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_setPoint, applicationIn_setPoint);
-                if (applicationIn_setPoint.empty()) return;
-                handle_setPoint_base(applicationIn_setPoint.front());
-                applicationIn_setPoint.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&tcp_tempControl_base::accept_setPoint, this, std::placeholders::_1), subscription_options_);
 
     tcp_tempControl_tempChanged_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::Empty>(
         "tcp_tempControl_tempChanged",
         1,
-        [this](building_control_cpp_pkg_interfaces::msg::Empty msg) {
-            enqueue(infrastructureIn_tempChanged, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_tempChanged, applicationIn_tempChanged);
-                if (applicationIn_tempChanged.empty()) return;
-                handle_tempChanged_base(applicationIn_tempChanged.front());
-                applicationIn_tempChanged.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&tcp_tempControl_base::accept_tempChanged, this, std::placeholders::_1), subscription_options_);
 
     tcp_tempControl_fanCmd_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanCmd>(
         "tcp_fan_fanCmd",
@@ -85,6 +49,50 @@ tcp_tempControl_base::tcp_tempControl_base() : Node("tcp_tempControl")
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
+
+void tcp_tempControl_base::accept_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg)
+{
+    enqueue(infrastructureIn_currentTemp, msg);
+}
+
+void tcp_tempControl_base::accept_fanAck(building_control_cpp_pkg_interfaces::msg::FanAck msg)
+{
+    enqueue(infrastructureIn_fanAck, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_fanAck, applicationIn_fanAck);
+        if (applicationIn_fanAck.empty()) return;
+        handle_fanAck_base(applicationIn_fanAck.front());
+        applicationIn_fanAck.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void tcp_tempControl_base::accept_setPoint(building_control_cpp_pkg_interfaces::msg::SetPointimpl msg)
+{
+    enqueue(infrastructureIn_setPoint, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_setPoint, applicationIn_setPoint);
+        if (applicationIn_setPoint.empty()) return;
+        handle_setPoint_base(applicationIn_setPoint.front());
+        applicationIn_setPoint.pop();
+        sendOutputs();
+    }).detach();
+}
+
+void tcp_tempControl_base::accept_tempChanged(building_control_cpp_pkg_interfaces::msg::Empty msg)
+{
+    enqueue(infrastructureIn_tempChanged, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_tempChanged, applicationIn_tempChanged);
+        if (applicationIn_tempChanged.empty()) return;
+        handle_tempChanged_base(applicationIn_tempChanged.front());
+        applicationIn_tempChanged.pop();
+        sendOutputs();
+    }).detach();
+}
 
 building_control_cpp_pkg_interfaces::msg::Temperatureimpl tcp_tempControl_base::get_currentTemp() {
     MsgType msg = applicationIn_currentTemp.front();

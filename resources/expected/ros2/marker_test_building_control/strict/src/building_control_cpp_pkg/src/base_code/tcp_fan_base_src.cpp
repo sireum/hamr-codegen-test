@@ -13,18 +13,7 @@ tcp_fan_base::tcp_fan_base() : Node("tcp_fan")
     tcp_fan_fanCmd_subscription_ = this->create_subscription<building_control_cpp_pkg_interfaces::msg::FanCmd>(
         "tcp_fan_fanCmd",
         1,
-        [this](building_control_cpp_pkg_interfaces::msg::FanCmd msg) {
-            enqueue(infrastructureIn_fanCmd, msg);
-            std::thread([this]() {
-                std::lock_guard<std::mutex> lock(mutex_);
-                receiveInputs(infrastructureIn_fanCmd, applicationIn_fanCmd);
-                if (applicationIn_fanCmd.empty()) return;
-                handle_fanCmd_base(applicationIn_fanCmd.front());
-                applicationIn_fanCmd.pop();
-                sendOutputs();
-            }).detach();
-        },
-        subscription_options_);
+        std::bind(&tcp_fan_base::accept_fanCmd, this, std::placeholders::_1), subscription_options_);
 
     tcp_fan_fanAck_publisher_ = this->create_publisher<building_control_cpp_pkg_interfaces::msg::FanAck>(
         "tcp_tempControl_fanAck",
@@ -44,6 +33,19 @@ tcp_fan_base::tcp_fan_base() : Node("tcp_fan")
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
+
+void tcp_fan_base::accept_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg)
+{
+    enqueue(infrastructureIn_fanCmd, msg);
+    std::thread([this]() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        receiveInputs(infrastructureIn_fanCmd, applicationIn_fanCmd);
+        if (applicationIn_fanCmd.empty()) return;
+        handle_fanCmd_base(applicationIn_fanCmd.front());
+        applicationIn_fanCmd.pop();
+        sendOutputs();
+    }).detach();
+}
 
 void tcp_fan_base::handle_fanCmd_base(MsgType msg)
 {

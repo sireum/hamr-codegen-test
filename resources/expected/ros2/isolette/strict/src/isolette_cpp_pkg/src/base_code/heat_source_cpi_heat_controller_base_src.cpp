@@ -13,10 +13,7 @@ heat_source_cpi_heat_controller_base::heat_source_cpi_heat_controller_base() : N
     heat_source_cpi_heat_controller_heat_control_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::OnOff>(
         "heat_source_cpi_heat_controller_heat_control",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::OnOff msg) {
-            enqueue(infrastructureIn_heat_control, msg);
-        },
-        subscription_options_);
+        std::bind(&heat_source_cpi_heat_controller_base::accept_heat_control, this, std::placeholders::_1), subscription_options_);
 
     heat_source_cpi_heat_controller_heat_out_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Heat>(
         "heat_source_cpi_heat_controller_heat_out",
@@ -46,6 +43,11 @@ heat_source_cpi_heat_controller_base::heat_source_cpi_heat_controller_base() : N
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
+
+void heat_source_cpi_heat_controller_base::accept_heat_control(isolette_cpp_pkg_interfaces::msg::OnOff msg)
+{
+    enqueue(infrastructureIn_heat_control, msg);
+}
 
 isolette_cpp_pkg_interfaces::msg::OnOff heat_source_cpi_heat_controller_base::get_heat_control() {
     MsgType msg = applicationIn_heat_control.front();

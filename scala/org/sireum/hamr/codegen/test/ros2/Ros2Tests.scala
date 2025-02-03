@@ -31,7 +31,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
   }
 
   "building_control_gen_mixed_strict" in {
@@ -40,7 +40,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
 
   "isolette_lax" in {
@@ -49,7 +49,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
   }
 
   "isolette_strict" in {
@@ -58,7 +58,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
 
   // TODO: Fix/implement PCA Pump to-do types
@@ -68,7 +68,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root / "pca")
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
   }
 
   // TODO: Fix/implement PCA Pump to-do types
@@ -78,7 +78,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root / "pca")
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true), T, verbose)
   }
 
   "datatype-examples_lax" in {
@@ -87,7 +87,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
   }
 
   "datatype-examples_strict" in {
@@ -96,8 +96,94 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
+
+  "fan_in_fan_out_lax" in {
+    val testName = "fan_in_fan_out"
+    val root = codegen_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
+  }
+
+  "fan_in_fan_out_strict" in {
+    val testName = "fan_in_fan_out"
+    val root = codegen_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
+  }
+
+  // ----------------------------------
+  // Inverted Port/Topic Binding Tests
+  // ----------------------------------
+
+  "building_control_gen_mixed_lax_inverted_topics" in {
+    val testName = "building_control_gen_mixed_inverted_topics"
+    val rootName = "building_control_gen_mixed"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = true), T, verbose)
+  }
+
+  "building_control_gen_mixed_strict_inverted_topics" in {
+    val testName = "building_control_gen_mixed_inverted_topics"
+    val rootName = "building_control_gen_mixed"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true), T, verbose)
+  }
+
+  "isolette_lax_inverted_topics" in {
+    val testName = "isolette_inverted_topics"
+    val rootName = "isolette"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = true), T, verbose)
+  }
+
+  "isolette_strict_inverted_topics" in {
+    val testName = "isolette_inverted_topics"
+    val rootName = "isolette"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true), T, verbose)
+  }
+
+  "fan_in_fan_out_lax_inverted_topics" in {
+    val testName = "fan_in_fan_out_inverted_topics"
+    val rootName = "fan_in_fan_out"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = true), T, verbose)
+  }
+
+  "fan_in_fan_out_strict_inverted_topics" in {
+    val testName = "fan_in_fan_out_inverted_topics"
+    val rootName = "fan_in_fan_out"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true), T, verbose)
+  }
+
+  // ----------------------------------
+  // File Change Persistence Tests
+  // ----------------------------------
 
   "marker_test_building_control_lax" in {
     val testName = "marker_test_building_control"
@@ -267,6 +353,7 @@ object Ros2Tests {
     ros2Dir = None(),
     ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
     ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml,
+    invertTopicBinding = F,
     //
     experimentalOptions = ISZ()
   )

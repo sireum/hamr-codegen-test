@@ -13,34 +13,22 @@ thermostat_monitor_temperature_manage_alarm_mat_base::thermostat_monitor_tempera
     thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "thermostat_monitor_temperature_manage_alarm_mat_current_tempWstatus",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
-            enqueue(infrastructureIn_current_tempWstatus, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_monitor_temperature_manage_alarm_mat_base::accept_current_tempWstatus, this, std::placeholders::_1), subscription_options_);
 
     thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
         "thermostat_monitor_temperature_manage_alarm_mat_lower_alarm_temp",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::Tempimpl msg) {
-            enqueue(infrastructureIn_lower_alarm_temp, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_monitor_temperature_manage_alarm_mat_base::accept_lower_alarm_temp, this, std::placeholders::_1), subscription_options_);
 
     thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
         "thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::Tempimpl msg) {
-            enqueue(infrastructureIn_upper_alarm_temp, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_monitor_temperature_manage_alarm_mat_base::accept_upper_alarm_temp, this, std::placeholders::_1), subscription_options_);
 
     thermostat_monitor_temperature_manage_alarm_mat_monitor_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::MonitorMode>(
         "thermostat_monitor_temperature_manage_alarm_mat_monitor_mode",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::MonitorMode msg) {
-            enqueue(infrastructureIn_monitor_mode, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_monitor_temperature_manage_alarm_mat_base::accept_monitor_mode, this, std::placeholders::_1), subscription_options_);
 
     thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::OnOff>(
         "operator_interface_oip_oit_alarm_control",
@@ -76,6 +64,26 @@ thermostat_monitor_temperature_manage_alarm_mat_base::thermostat_monitor_tempera
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::accept_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
+{
+    enqueue(infrastructureIn_current_tempWstatus, msg);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::accept_lower_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg)
+{
+    enqueue(infrastructureIn_lower_alarm_temp, msg);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::accept_upper_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg)
+{
+    enqueue(infrastructureIn_upper_alarm_temp, msg);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::accept_monitor_mode(isolette_cpp_pkg_interfaces::msg::MonitorMode msg)
+{
+    enqueue(infrastructureIn_monitor_mode, msg);
+}
 
 isolette_cpp_pkg_interfaces::msg::TempWstatusimpl thermostat_monitor_temperature_manage_alarm_mat_base::get_current_tempWstatus() {
     MsgType msg = applicationIn_current_tempWstatus.front();

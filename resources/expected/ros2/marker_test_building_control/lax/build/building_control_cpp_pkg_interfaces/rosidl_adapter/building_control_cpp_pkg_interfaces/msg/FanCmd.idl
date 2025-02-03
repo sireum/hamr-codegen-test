@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from building_control_cpp_pkg_interfaces/msg/FanCmd.msg
+// generated code does not contain a copyright notice
+
+
+module building_control_cpp_pkg_interfaces {
+  module msg {
+    module FanCmd_Constants {
+      const uint8 FAN_CMD_ON = 0;
+      const uint8 FAN_CMD_OFF = 1;
+    };
+    struct FanCmd {
+      uint8 fan_cmd;
+    };
+  };
+};
