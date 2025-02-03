@@ -35,6 +35,10 @@ protected:
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
 
+    void accept_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg);
+    void accept_interface_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg);
+    void accept_internal_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg);
+
     // Methods for working with port queues
     void receiveInputs();
 

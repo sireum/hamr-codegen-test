@@ -1,0 +1,29 @@
+{
+  "package_name": "building_control_cpp_pkg_interfaces",
+  "output_dir": "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_typesupport_c/building_control_cpp_pkg_interfaces",
+  "template_dir": "/opt/ros/humble/share/rosidl_typesupport_c/resource",
+  "idl_tuples": [
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces:msg/Float32.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces:msg/TempUnit.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces:msg/Temperatureimpl.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces:msg/SetPointimpl.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces:msg/FanAck.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces:msg/FanCmd.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces:msg/Empty.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_c/__init__.py",
+    "/opt/ros/humble/share/rosidl_typesupport_c/resource/action__type_support.c.em",
+    "/opt/ros/humble/share/rosidl_typesupport_c/resource/idl__type_support.cpp.em",
+    "/opt/ros/humble/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em",
+    "/opt/ros/humble/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces/msg/Float32.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces/msg/TempUnit.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces/msg/Temperatureimpl.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces/msg/SetPointimpl.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces/msg/FanAck.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces/msg/FanCmd.idl",
+    "/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_interfaces/rosidl_adapter/building_control_cpp_pkg_interfaces/msg/Empty.idl"
+  ]
+}

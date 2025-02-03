@@ -35,6 +35,11 @@ protected:
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
 
+    void accept_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg);
+    void accept_fanAck(building_control_cpp_pkg_interfaces::msg::FanAck msg);
+    void accept_setPoint(building_control_cpp_pkg_interfaces::msg::SetPointimpl msg);
+    void accept_tempChanged(building_control_cpp_pkg_interfaces::msg::Empty msg);
+
     // Methods for working with port queues
     void receiveInputs(std::queue<MsgType>& infrastructureQueue, std::queue<MsgType>& applicationQueue);
 

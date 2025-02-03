@@ -13,10 +13,7 @@ temperature_sensor_cpi_thermostat_base::temperature_sensor_cpi_thermostat_base()
     temperature_sensor_cpi_thermostat_air_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl>(
         "temperature_sensor_cpi_thermostat_air",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl msg) {
-            enqueue(infrastructureIn_air, msg);
-        },
-        subscription_options_);
+        std::bind(&temperature_sensor_cpi_thermostat_base::accept_air, this, std::placeholders::_1), subscription_options_);
 
     temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_1 = this->create_publisher<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus",
@@ -66,6 +63,11 @@ temperature_sensor_cpi_thermostat_base::temperature_sensor_cpi_thermostat_base()
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
+
+void temperature_sensor_cpi_thermostat_base::accept_air(isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl msg)
+{
+    enqueue(infrastructureIn_air, msg);
+}
 
 isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl temperature_sensor_cpi_thermostat_base::get_air() {
     MsgType msg = applicationIn_air.front();

@@ -30,6 +30,8 @@ protected:
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
 
+    void accept_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg);
+
     // Methods for working with port queues
     void receiveInputs(std::queue<MsgType>& infrastructureQueue, std::queue<MsgType>& applicationQueue);
 

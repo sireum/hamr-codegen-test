@@ -1,0 +1,12 @@
+// generated from rosidl_generator_c/resource/idl.h.em
+// with input from building_control_cpp_pkg_interfaces:msg/TempUnit.idl
+// generated code does not contain a copyright notice
+
+#ifndef BUILDING_CONTROL_CPP_PKG_INTERFACES__MSG__TEMP_UNIT_H_
+#define BUILDING_CONTROL_CPP_PKG_INTERFACES__MSG__TEMP_UNIT_H_
+
+#include "building_control_cpp_pkg_interfaces/msg/detail/temp_unit__struct.h"
+#include "building_control_cpp_pkg_interfaces/msg/detail/temp_unit__functions.h"
+#include "building_control_cpp_pkg_interfaces/msg/detail/temp_unit__type_support.h"
+
+#endif  // BUILDING_CONTROL_CPP_PKG_INTERFACES__MSG__TEMP_UNIT_H_

@@ -1,0 +1,2932 @@
+{
+  "type" : "Aadl",
+  "components" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["Sys_i_Instance"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+            },
+            "beginLine" : 15,
+            "beginColumn" : 2,
+            "endLine" : 19,
+            "endColumn" : 12,
+            "offset" : 358,
+            "length" : 124
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "System"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "FanInFanOutSystem::Sys.i"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["Sys_i_Instance", "fanIn"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                },
+                "beginLine" : 17,
+                "beginColumn" : 6,
+                "endLine" : 17,
+                "endColumn" : 33,
+                "offset" : 408,
+                "length" : 27
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "FanInFanOutSystem::FanInProc.i"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanIn", "producer1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 32,
+                    "beginColumn" : 6,
+                    "endLine" : 32,
+                    "endColumn" : 38,
+                    "offset" : 837,
+                    "length" : 32
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "FanInFanOutSystem::ProducerThr.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer1", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 6,
+                        "endLine" : 62,
+                        "endColumn" : 58,
+                        "offset" : 1789,
+                        "length" : 52
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Sys_i_Instance", "fanIn", "producer1", "myInteger", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer1", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer1", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanIn", "producer2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 33,
+                    "beginColumn" : 6,
+                    "endLine" : 33,
+                    "endColumn" : 38,
+                    "offset" : 875,
+                    "length" : 32
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "FanInFanOutSystem::ProducerThr.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer2", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 6,
+                        "endLine" : 62,
+                        "endColumn" : 58,
+                        "offset" : 1789,
+                        "length" : 52
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Sys_i_Instance", "fanIn", "producer2", "myInteger", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer2", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer2", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.1"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanIn", "consumer"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 34,
+                    "beginColumn" : 6,
+                    "endLine" : 34,
+                    "endColumn" : 37,
+                    "offset" : 913,
+                    "length" : 31
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "FanInFanOutSystem::ConsumerThr.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "consumer", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 74,
+                        "beginColumn" : 6,
+                        "endLine" : 74,
+                        "endColumn" : 57,
+                        "offset" : 2055,
+                        "length" : 51
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Sys_i_Instance", "fanIn", "consumer", "myInteger", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "consumer", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "consumer", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.2"
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanIn", "conn1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 36,
+                    "beginColumn" : 9,
+                    "endLine" : 36,
+                    "endColumn" : 63,
+                    "offset" : 968,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 32,
+                        "beginColumn" : 6,
+                        "endLine" : 32,
+                        "endColumn" : 38,
+                        "offset" : 837,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["Sys_i_Instance", "fanIn", "producer1", "myInteger"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                          },
+                          "beginLine" : 62,
+                          "beginColumn" : 6,
+                          "endLine" : 62,
+                          "endColumn" : 58,
+                          "offset" : 1789,
+                          "length" : 52
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "consumer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 34,
+                        "beginColumn" : 6,
+                        "endLine" : 34,
+                        "endColumn" : 37,
+                        "offset" : 913,
+                        "length" : 31
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["Sys_i_Instance", "fanIn", "consumer", "myInteger"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                          },
+                          "beginLine" : 74,
+                          "beginColumn" : 6,
+                          "endLine" : 74,
+                          "endColumn" : 57,
+                          "offset" : 2055,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanIn", "producer1", "myInteger -> consumer", "myInteger"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanIn", "conn2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 37,
+                    "beginColumn" : 9,
+                    "endLine" : 37,
+                    "endColumn" : 63,
+                    "offset" : 1031,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 33,
+                        "beginColumn" : 6,
+                        "endLine" : 33,
+                        "endColumn" : 38,
+                        "offset" : 875,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["Sys_i_Instance", "fanIn", "producer2", "myInteger"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                          },
+                          "beginLine" : 62,
+                          "beginColumn" : 6,
+                          "endLine" : 62,
+                          "endColumn" : 58,
+                          "offset" : 1789,
+                          "length" : 52
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "consumer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 34,
+                        "beginColumn" : 6,
+                        "endLine" : 34,
+                        "endColumn" : 37,
+                        "offset" : 913,
+                        "length" : 31
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["Sys_i_Instance", "fanIn", "consumer", "myInteger"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                          },
+                          "beginLine" : 74,
+                          "beginColumn" : 6,
+                          "endLine" : 74,
+                          "endColumn" : 57,
+                          "offset" : 2055,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanIn", "producer2", "myInteger -> consumer", "myInteger"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+            }
+          ],
+          "connectionInstances" : [
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanIn", "producer1.myInteger -> consumer.myInteger"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 36,
+                    "beginColumn" : 9,
+                    "endLine" : 36,
+                    "endColumn" : 63,
+                    "offset" : 968,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanIn", "producer1"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                      },
+                      "beginLine" : 32,
+                      "beginColumn" : 6,
+                      "endLine" : 32,
+                      "endColumn" : 38,
+                      "offset" : 837,
+                      "length" : 32
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer1", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 6,
+                        "endLine" : 62,
+                        "endColumn" : 58,
+                        "offset" : 1789,
+                        "length" : 52
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanIn", "consumer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                      },
+                      "beginLine" : 34,
+                      "beginColumn" : 6,
+                      "endLine" : 34,
+                      "endColumn" : 37,
+                      "offset" : 913,
+                      "length" : 31
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "consumer", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 74,
+                        "beginColumn" : 6,
+                        "endLine" : 74,
+                        "endColumn" : 57,
+                        "offset" : 2055,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "conn1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 36,
+                        "beginColumn" : 9,
+                        "endLine" : 36,
+                        "endColumn" : 63,
+                        "offset" : 968,
+                        "length" : 54
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 17,
+                        "beginColumn" : 6,
+                        "endLine" : 17,
+                        "endColumn" : 33,
+                        "offset" : 408,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanIn", "producer2.myInteger -> consumer.myInteger"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 37,
+                    "beginColumn" : 9,
+                    "endLine" : 37,
+                    "endColumn" : 63,
+                    "offset" : 1031,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanIn", "producer2"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                      },
+                      "beginLine" : 33,
+                      "beginColumn" : 6,
+                      "endLine" : 33,
+                      "endColumn" : 38,
+                      "offset" : 875,
+                      "length" : 32
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "producer2", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 6,
+                        "endLine" : 62,
+                        "endColumn" : 58,
+                        "offset" : 1789,
+                        "length" : 52
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanIn", "consumer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                      },
+                      "beginLine" : 34,
+                      "beginColumn" : 6,
+                      "endLine" : 34,
+                      "endColumn" : 37,
+                      "offset" : 913,
+                      "length" : 31
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "consumer", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 74,
+                        "beginColumn" : 6,
+                        "endLine" : 74,
+                        "endColumn" : 57,
+                        "offset" : 2055,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn", "conn2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 37,
+                        "beginColumn" : 9,
+                        "endLine" : 37,
+                        "endColumn" : 63,
+                        "offset" : 1031,
+                        "length" : 54
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanIn"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 17,
+                        "beginColumn" : 6,
+                        "endLine" : 17,
+                        "endColumn" : 33,
+                        "offset" : 408,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            }
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["Sys_i_Instance", "fanOut"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                },
+                "beginLine" : 18,
+                "beginColumn" : 6,
+                "endLine" : 18,
+                "endColumn" : 35,
+                "offset" : 441,
+                "length" : 29
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "FanInFanOutSystem::FanOutProc.i"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanOut", "producer"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 45,
+                    "beginColumn" : 6,
+                    "endLine" : 45,
+                    "endColumn" : 37,
+                    "offset" : 1205,
+                    "length" : 31
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "FanInFanOutSystem::ProducerThr.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "producer", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 6,
+                        "endLine" : 62,
+                        "endColumn" : 58,
+                        "offset" : 1789,
+                        "length" : 52
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Sys_i_Instance", "fanOut", "producer", "myInteger", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "producer", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "producer", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanOut", "consumer1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 46,
+                    "beginColumn" : 6,
+                    "endLine" : 46,
+                    "endColumn" : 38,
+                    "offset" : 1242,
+                    "length" : 32
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "FanInFanOutSystem::ConsumerThr.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer1", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 74,
+                        "beginColumn" : 6,
+                        "endLine" : 74,
+                        "endColumn" : 57,
+                        "offset" : 2055,
+                        "length" : 51
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Sys_i_Instance", "fanOut", "consumer1", "myInteger", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1\/@featureInstance.0"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer1", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer1", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.1"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanOut", "consumer2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 6,
+                    "endLine" : 47,
+                    "endColumn" : 38,
+                    "offset" : 1280,
+                    "length" : 32
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "FanInFanOutSystem::ConsumerThr.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer2", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 74,
+                        "beginColumn" : 6,
+                        "endLine" : 74,
+                        "endColumn" : 57,
+                        "offset" : 2055,
+                        "length" : 51
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Sys_i_Instance", "fanOut", "consumer2", "myInteger", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2\/@featureInstance.0"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer2", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 5,
+                        "endLine" : 11,
+                        "endColumn" : 100,
+                        "offset" : 547,
+                        "length" : 95
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer2", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 190,
+                        "beginColumn" : 5,
+                        "endLine" : 191,
+                        "endColumn" : 105,
+                        "offset" : 12144,
+                        "length" : 125
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.2"
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanOut", "conn1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 9,
+                    "endLine" : 49,
+                    "endColumn" : 63,
+                    "offset" : 1336,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "producer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 45,
+                        "beginColumn" : 6,
+                        "endLine" : 45,
+                        "endColumn" : 37,
+                        "offset" : 1205,
+                        "length" : 31
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["Sys_i_Instance", "fanOut", "producer", "myInteger"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                          },
+                          "beginLine" : 62,
+                          "beginColumn" : 6,
+                          "endLine" : 62,
+                          "endColumn" : 58,
+                          "offset" : 1789,
+                          "length" : 52
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 46,
+                        "beginColumn" : 6,
+                        "endLine" : 46,
+                        "endColumn" : 38,
+                        "offset" : 1242,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["Sys_i_Instance", "fanOut", "consumer1", "myInteger"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                          },
+                          "beginLine" : 74,
+                          "beginColumn" : 6,
+                          "endLine" : 74,
+                          "endColumn" : 57,
+                          "offset" : 2055,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanOut", "producer", "myInteger -> consumer1", "myInteger"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.0\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanOut", "conn2"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 50,
+                    "beginColumn" : 9,
+                    "endLine" : 50,
+                    "endColumn" : 63,
+                    "offset" : 1399,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "producer"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 45,
+                        "beginColumn" : 6,
+                        "endLine" : 45,
+                        "endColumn" : 37,
+                        "offset" : 1205,
+                        "length" : 31
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["Sys_i_Instance", "fanOut", "producer", "myInteger"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                          },
+                          "beginLine" : 62,
+                          "beginColumn" : 6,
+                          "endLine" : 62,
+                          "endColumn" : 58,
+                          "offset" : 1789,
+                          "length" : 52
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 6,
+                        "endLine" : 47,
+                        "endColumn" : 38,
+                        "offset" : 1280,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["Sys_i_Instance", "fanOut", "consumer2", "myInteger"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                          },
+                          "beginLine" : 74,
+                          "beginColumn" : 6,
+                          "endLine" : 74,
+                          "endColumn" : 57,
+                          "offset" : 2055,
+                          "length" : 51
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanOut", "producer", "myInteger -> consumer2", "myInteger"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@connectionInstance.1\/@connectionReference.0"
+            }
+          ],
+          "connectionInstances" : [
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanOut", "producer.myInteger -> consumer1.myInteger"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 49,
+                    "beginColumn" : 9,
+                    "endLine" : 49,
+                    "endColumn" : 63,
+                    "offset" : 1336,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanOut", "producer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                      },
+                      "beginLine" : 45,
+                      "beginColumn" : 6,
+                      "endLine" : 45,
+                      "endColumn" : 37,
+                      "offset" : 1205,
+                      "length" : 31
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "producer", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 6,
+                        "endLine" : 62,
+                        "endColumn" : 58,
+                        "offset" : 1789,
+                        "length" : 52
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanOut", "consumer1"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                      },
+                      "beginLine" : 46,
+                      "beginColumn" : 6,
+                      "endLine" : 46,
+                      "endColumn" : 38,
+                      "offset" : 1242,
+                      "length" : 32
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer1", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 74,
+                        "beginColumn" : 6,
+                        "endLine" : 74,
+                        "endColumn" : 57,
+                        "offset" : 2055,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "conn1"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 49,
+                        "beginColumn" : 9,
+                        "endLine" : 49,
+                        "endColumn" : 63,
+                        "offset" : 1336,
+                        "length" : 54
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 18,
+                        "beginColumn" : 6,
+                        "endLine" : 18,
+                        "endColumn" : 35,
+                        "offset" : 441,
+                        "length" : 29
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Sys_i_Instance", "fanOut", "producer.myInteger -> consumer2.myInteger"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                    },
+                    "beginLine" : 50,
+                    "beginColumn" : 9,
+                    "endLine" : 50,
+                    "endColumn" : 63,
+                    "offset" : 1399,
+                    "length" : 54
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanOut", "producer"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                      },
+                      "beginLine" : 45,
+                      "beginColumn" : 6,
+                      "endLine" : 45,
+                      "endColumn" : 37,
+                      "offset" : 1205,
+                      "length" : 31
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "producer", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 62,
+                        "beginColumn" : 6,
+                        "endLine" : 62,
+                        "endColumn" : 58,
+                        "offset" : 1789,
+                        "length" : 52
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["Sys_i_Instance", "fanOut", "consumer2"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                      },
+                      "beginLine" : 47,
+                      "beginColumn" : 6,
+                      "endLine" : 47,
+                      "endColumn" : 38,
+                      "offset" : 1280,
+                      "length" : 32
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "consumer2", "myInteger"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 74,
+                        "beginColumn" : 6,
+                        "endLine" : 74,
+                        "endColumn" : 57,
+                        "offset" : 2055,
+                        "length" : 51
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut", "conn2"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 50,
+                        "beginColumn" : 9,
+                        "endLine" : 50,
+                        "endColumn" : 63,
+                        "offset" : 1399,
+                        "length" : 54
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["Sys_i_Instance", "fanOut"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/fan_in_fan_out\/FanInFanOutSystem.aadl"
+                        },
+                        "beginLine" : 18,
+                        "beginColumn" : 6,
+                        "endLine" : 18,
+                        "endColumn" : 35,
+                        "offset" : 441,
+                        "length" : 29
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            }
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1"
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+        {
+          "type" : "Annex",
+          "name" : "Emv2",
+          "clause" : {
+            "type" : "Emv2Clause",
+            "libraries" : [
+            ],
+            "propagations" : [
+            ],
+            "flows" : [
+            ],
+            "componentBehavior" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Emv2BehaviorSection",
+                "events" : [
+                ],
+                "transitions" : [
+                ],
+                "propagations" : [
+                ]
+              }
+            },
+            "properties" : [
+            ]
+          }
+        }
+      ],
+      "uriFrag" : "platform:\/resource\/fan_in_fan_out\/instances\/FanInFanOutSystem_Sys_i_Instance.aaxl2#\/0"
+    }
+  ],
+  "annexLib" : [
+  ],
+  "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Integer"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
+  ]
+}

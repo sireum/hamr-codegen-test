@@ -13,34 +13,22 @@ thermostat_monitor_temperature_manage_monitor_interface_mmit_base::thermostat_mo
     thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_tempWstatus",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
-            enqueue(infrastructureIn_upper_alarm_tempWstatus, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_monitor_temperature_manage_monitor_interface_mmit_base::accept_upper_alarm_tempWstatus, this, std::placeholders::_1), subscription_options_);
 
     thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "thermostat_monitor_temperature_manage_monitor_interface_mmit_lower_alarm_tempWstatus",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
-            enqueue(infrastructureIn_lower_alarm_tempWstatus, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_monitor_temperature_manage_monitor_interface_mmit_base::accept_lower_alarm_tempWstatus, this, std::placeholders::_1), subscription_options_);
 
     thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(
         "thermostat_monitor_temperature_manage_monitor_interface_mmit_current_tempWstatus",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg) {
-            enqueue(infrastructureIn_current_tempWstatus, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_monitor_temperature_manage_monitor_interface_mmit_base::accept_current_tempWstatus, this, std::placeholders::_1), subscription_options_);
 
     thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_mode_subscription_ = this->create_subscription<isolette_cpp_pkg_interfaces::msg::MonitorMode>(
         "thermostat_monitor_temperature_manage_monitor_interface_mmit_monitor_mode",
         1,
-        [this](isolette_cpp_pkg_interfaces::msg::MonitorMode msg) {
-            enqueue(infrastructureIn_monitor_mode, msg);
-        },
-        subscription_options_);
+        std::bind(&thermostat_monitor_temperature_manage_monitor_interface_mmit_base::accept_monitor_mode, this, std::placeholders::_1), subscription_options_);
 
     thermostat_monitor_temperature_manage_monitor_interface_mmit_upper_alarm_temp_publisher_ = this->create_publisher<isolette_cpp_pkg_interfaces::msg::Tempimpl>(
         "thermostat_monitor_temperature_manage_alarm_mat_upper_alarm_temp",
@@ -91,6 +79,26 @@ thermostat_monitor_temperature_manage_monitor_interface_mmit_base::thermostat_mo
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
+
+void thermostat_monitor_temperature_manage_monitor_interface_mmit_base::accept_upper_alarm_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
+{
+    enqueue(infrastructureIn_upper_alarm_tempWstatus, msg);
+}
+
+void thermostat_monitor_temperature_manage_monitor_interface_mmit_base::accept_lower_alarm_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
+{
+    enqueue(infrastructureIn_lower_alarm_tempWstatus, msg);
+}
+
+void thermostat_monitor_temperature_manage_monitor_interface_mmit_base::accept_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
+{
+    enqueue(infrastructureIn_current_tempWstatus, msg);
+}
+
+void thermostat_monitor_temperature_manage_monitor_interface_mmit_base::accept_monitor_mode(isolette_cpp_pkg_interfaces::msg::MonitorMode msg)
+{
+    enqueue(infrastructureIn_monitor_mode, msg);
+}
 
 isolette_cpp_pkg_interfaces::msg::TempWstatusimpl thermostat_monitor_temperature_manage_monitor_interface_mmit_base::get_upper_alarm_tempWstatus() {
     MsgType msg = applicationIn_upper_alarm_tempWstatus.front();

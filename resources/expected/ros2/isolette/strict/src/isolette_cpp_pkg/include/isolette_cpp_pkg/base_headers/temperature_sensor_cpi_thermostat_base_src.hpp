@@ -32,6 +32,8 @@ protected:
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
 
+    void accept_air(isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl msg);
+
     // Methods for working with port queues
     void receiveInputs();
 

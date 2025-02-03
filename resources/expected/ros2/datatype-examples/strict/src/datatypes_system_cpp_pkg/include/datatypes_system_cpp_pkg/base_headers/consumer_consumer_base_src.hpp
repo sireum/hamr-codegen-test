@@ -45,6 +45,27 @@ protected:
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;
 
+    void accept_myBoolean(datatypes_system_cpp_pkg_interfaces::msg::Boolean msg);
+    void accept_myInteger(datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg);
+    void accept_myFloat(datatypes_system_cpp_pkg_interfaces::msg::Float64 msg);
+    void accept_myCharacter(datatypes_system_cpp_pkg_interfaces::msg::Character msg);
+    void accept_myString(datatypes_system_cpp_pkg_interfaces::msg::String msg);
+    void accept_myInt8(datatypes_system_cpp_pkg_interfaces::msg::Integer8 msg);
+    void accept_myInt16(datatypes_system_cpp_pkg_interfaces::msg::Integer16 msg);
+    void accept_myInt32(datatypes_system_cpp_pkg_interfaces::msg::Integer32 msg);
+    void accept_myInt64(datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg);
+    void accept_myUInt8(datatypes_system_cpp_pkg_interfaces::msg::Unsigned8 msg);
+    void accept_myUInt16(datatypes_system_cpp_pkg_interfaces::msg::Unsigned16 msg);
+    void accept_myUInt32(datatypes_system_cpp_pkg_interfaces::msg::Unsigned32 msg);
+    void accept_myUInt64(datatypes_system_cpp_pkg_interfaces::msg::Unsigned64 msg);
+    void accept_myFloat32(datatypes_system_cpp_pkg_interfaces::msg::Float32 msg);
+    void accept_myFloat64(datatypes_system_cpp_pkg_interfaces::msg::Float64 msg);
+    void accept_myEnum(datatypes_system_cpp_pkg_interfaces::msg::MyEnum msg);
+    void accept_myStruct(datatypes_system_cpp_pkg_interfaces::msg::MyStructi msg);
+    void accept_myArray1(datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim msg);
+    void accept_myArray2(datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg);
+    void accept_myArray3(datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg);
+
     // Methods for working with port queues
     void receiveInputs(std::queue<MsgType>& infrastructureQueue, std::queue<MsgType>& applicationQueue);
 
