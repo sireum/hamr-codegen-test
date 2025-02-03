@@ -42,19 +42,19 @@ lazy val BuildingControlDemo_i_Instance = slangEmbeddedProject("BuildingControlD
 // to get the most recent versions of the following dependencies
 
 // versions.properties key: org.scala-lang%scala-library%
-val scalaVer = "2.13.15"
+val scalaVer = "2.13.16"
 
 // versions.properties key: org.scalatest%%scalatest%%
 val scalaTestVersion = "3.2.19"
 
 // versions.properties key: org.sireum%%scalac-plugin%
-// https://github.com/sireum/scalac-plugin/tree/4.20241212.72b1947
-val sireumScalacVersion = "4.20241212.72b1947"
+// https://github.com/sireum/scalac-plugin/tree/4.20250123.d2a110e
+val sireumScalacVersion = "4.20250123.d2a110e"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/d3c137b291
-val kekinianVersion = "d3c137b291"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/0afce52bfa
+val kekinianVersion = "0afce52bfa"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"

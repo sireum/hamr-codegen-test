@@ -120,7 +120,12 @@ trait CodegenTest extends CodegenTestSuite {
       testOps = testOps(verbose = T)
     }
 
-    testOps = testOps(outputDir = Some((resultsDir).canon.value))
+    testOps = testOps(
+      outputDir = Some((resultsDir).canon.value),
+      slangOutputDir = Some((resultsDir/ "slang").value),
+      slangOutputCDir = Some((resultsDir/ "c").value),
+      sel4OutputDir = Some((resultsDir / "microkit").value)
+    )
 
     rootTestOutputDir.removeAll()
     rootTestOutputDir.mkdirAll()
