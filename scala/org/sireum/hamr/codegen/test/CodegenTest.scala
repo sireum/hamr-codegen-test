@@ -157,6 +157,9 @@ trait CodegenTest extends CodegenTestSuite {
     )
 
     if (expectedErrorReasons.isEmpty) {
+      val r  = Reporter.create
+      r.reports(reporter.errors)
+      r.printMessages()
       assert(!reporter.hasError, "Expecting no errors but codegen did not complete successfully")
     }
     else {

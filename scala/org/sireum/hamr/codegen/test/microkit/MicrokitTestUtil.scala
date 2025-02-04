@@ -12,8 +12,8 @@ object MicrokitTestUtil {
 
   val resourcesDir: Os.Path = {
     def r(p: Os.Path): Option[Os.Path] = {
-      if (ops.StringOps(p.value).contains("codegen/jvm/src/test/resources")) {
-        return Some(p)
+      if (ops.StringOps(p.value).contains("jvm/src/test/resources/expected/CodeGenTest_Base")) {
+        return Some(p.up.up)
       } else {
         for (pp <- p.list if pp.isDir) {
           r(pp) match {
