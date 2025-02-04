@@ -12,7 +12,7 @@ object MicrokitTestUtil {
 
   val resourcesDir: Os.Path = {
     def r(p: Os.Path): Option[Os.Path] = {
-      if (ops.StringOps(p.value).contains("hamr/codegen/jvm/src/test/resources")) {
+      if (ops.StringOps(p.value).contains("codegen/jvm/src/test/resources")) {
         return Some(p)
       } else {
         for (pp <- p.list if pp.isDir) {
@@ -34,7 +34,7 @@ object MicrokitTestUtil {
 
     val url = "https://github.com/loonwerks/INSPECTA-models.git"
     if (!modelsDir.exists) {
-      println(s"Fetching $url ...")
+      println(s"Cloning $url ...")
       proc"git clone $url".at(modelsDir.up).runCheck()
 
       for (f <- Os.Path.walk(modelsDir.up, T, T, p => p.name.native == "HAMR.aadl")) {
