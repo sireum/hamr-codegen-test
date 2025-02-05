@@ -12,7 +12,7 @@ object MicrokitTestUtil {
 
   val resourcesDir: Os.Path = {
     def r(p: Os.Path): Option[Os.Path] = {
-      if (ops.StringOps(p.value).contains("jvm/src/test/resources/expected/CodeGenTest_Base")) {
+      if (ops.StringOps(p.toUri).contains("jvm/src/test/resources/expected/CodeGenTest_Base")) {
         return Some(p.up.up)
       } else {
         for (pp <- p.list if pp.isDir) {
