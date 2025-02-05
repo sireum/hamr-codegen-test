@@ -1,8 +1,0 @@
-source;share/building_control_cpp_pkg/hook/cmake_prefix_path.ps1
-source;share/building_control_cpp_pkg/hook/cmake_prefix_path.dsv
-source;share/building_control_cpp_pkg/hook/cmake_prefix_path.sh
-source;share/building_control_cpp_pkg/local_setup.bash
-source;share/building_control_cpp_pkg/local_setup.dsv
-source;share/building_control_cpp_pkg/local_setup.ps1
-source;share/building_control_cpp_pkg/local_setup.sh
-source;share/building_control_cpp_pkg/local_setup.zsh

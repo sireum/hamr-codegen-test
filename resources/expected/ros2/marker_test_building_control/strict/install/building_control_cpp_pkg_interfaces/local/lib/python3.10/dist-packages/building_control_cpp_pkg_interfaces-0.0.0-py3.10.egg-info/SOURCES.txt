@@ -1,6 +1,0 @@
-setup.py
-building_control_cpp_pkg_interfaces/__init__.py
-building_control_cpp_pkg_interfaces.egg-info/PKG-INFO
-building_control_cpp_pkg_interfaces.egg-info/SOURCES.txt
-building_control_cpp_pkg_interfaces.egg-info/dependency_links.txt
-building_control_cpp_pkg_interfaces.egg-info/top_level.txt
