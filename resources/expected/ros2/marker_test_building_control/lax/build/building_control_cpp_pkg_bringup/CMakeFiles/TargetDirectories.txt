@@ -1,9 +1,0 @@
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/uninstall.dir
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/building_control_cpp_pkg_bringup_uninstall.dir
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/test.dir
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/edit_cache.dir
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/rebuild_cache.dir
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/list_install_components.dir
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/install.dir
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/install/local.dir
-/home/clint/Applications/Sireum/hamr/codegen/jvm/src/test/results/ros2/marker_test_building_control/results/lax/build/building_control_cpp_pkg_bringup/CMakeFiles/install/strip.dir

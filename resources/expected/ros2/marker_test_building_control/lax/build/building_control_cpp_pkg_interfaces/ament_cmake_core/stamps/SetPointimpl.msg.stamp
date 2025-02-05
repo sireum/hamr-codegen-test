@@ -1,2 +1,0 @@
-Temperatureimpl low
-Temperatureimpl high
