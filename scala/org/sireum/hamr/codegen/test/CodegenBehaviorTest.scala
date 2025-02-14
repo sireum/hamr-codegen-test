@@ -391,7 +391,7 @@ object CodegenBehaviorTest {
           ros2Dir = opts.ros2Dir,
           ros2NodesLanguage = CodegenNodesCodeLanguage.byName(opts.ros2NodesLanguage.name).get,
           ros2LaunchLanguage = CodegenLaunchCodeLanguage.byName(opts.ros2LaunchLanguage.name).get,
-          invertTopicBinding = F,
+          invertTopicBinding = opts.invertTopicBinding,
           //
           experimentalOptions = opts.experimentalOptions
         ))
