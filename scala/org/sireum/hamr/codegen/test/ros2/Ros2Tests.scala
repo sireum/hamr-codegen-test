@@ -1,7 +1,7 @@
 package org.sireum.hamr.codegen.test.ros2
 
 import org.sireum._
-import org.sireum.hamr.codegen.test.util.TestUtil
+import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 import Ros2Tests._
@@ -15,12 +15,8 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
   val verbose: B = F
 
-  val ros2SetupPath: Option[Os.Path] = Os.env("ROS2_HOME") match {
-    case Some(dist) =>
-      if ((Os.path(dist) / "setup.bash").exists) Some((Os.path(dist) / "setup.bash"))
-      else None()
-    case _ => None()
-  }
+  override def testModes: ISZ[TestMode.Type] =
+    super.testModes // :+ TestMode.compile
 
   val root = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
   val resourceDir: Os.Path = root / "resources"
@@ -172,29 +168,39 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
       }
     }
 
-    // Currently, the results directory is compared with the expected directory before running "colcon build".
-    // For an unknown reason, the compare() method halts and does not complete when run after building.
-    // Additionally, some details of the building process appear to be version dependent, so comparing before
-    // building is probably preferable - Clint
-    if (ros2SetupPath.nonEmpty) {
-      val longResourcePath = ops.StringOps(results.resources.apply(0).dstPath)
+    if (ops.ISZOps(testModes).contains(TestMode.compile)) {
+      // Currently, the results directory is compared with the expected directory before running "colcon build".
+      // For an unknown reason, the compare() method halts and does not complete when run after building.
+      // Additionally, some details of the building process appear to be version dependent, so comparing before
+      // building is probably preferable - Clint
+      val longResourcePath = ops.StringOps(results.resources(0).dstPath)
       val resourcePath = longResourcePath.replaceAllLiterally((resultsRoot / testName / "results" / strictModeString / "src").value, "")
       val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/".toString).apply(0)
+      if (ros2SetupPath.nonEmpty) {
+        // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
+        // so I split it up - Clint
+        Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
+          .at(resultsRoot / testName / "results" / strictModeString).console.run()
 
-      // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
-      // so I split it up - Clint
-      Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
-        .at(resultsRoot / testName / "results" / strictModeString).console.run()
+        val buildResults = Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName} ${pkgName}_bringup"))
+          .at(resultsRoot / testName / "results" / strictModeString).console.run()
 
-      val buildResults = Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName} ${pkgName}_bringup"))
-        .at(resultsRoot / testName / "results" / strictModeString).console.run()
-
-      // The last two packages will only finish if the first package finished
-      if (!buildResults.out.toString.contains("Summary: 2 packages finished")) {
-        failureReasons = failureReasons :+ "Colcon build failed"
+        // The last two packages will only finish if the first package finished
+        if (!buildResults.out.toString.contains("Summary: 2 packages finished")) {
+          failureReasons = failureReasons :+ "Colcon build failed"
+        }
+      } else if (dockerAvailable) {
+        val args = ISZ[String](
+          "docker", "run", "--rm", "-v", s"${resultsRoot / testName / "results" / strictModeString}:/root/results", "ros:jazzy", "bash", "-c",
+          s"cd /root/results && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w"
+          //s"cd /root/results && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w --packages-select ${pkgName}_interfaces && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w --packages-select ${pkgName} ${pkgName}_bringup"
+        )
+        val buildResults = Os.proc(args).console.run()
+        if (!buildResults.ok) {
+          failureReasons = failureReasons :+ "Colcon build failed"
+        }
       }
     }
-
     assert(failureReasons.size == 0)
   }
 }

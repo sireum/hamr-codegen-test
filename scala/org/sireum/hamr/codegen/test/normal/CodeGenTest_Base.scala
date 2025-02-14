@@ -13,7 +13,7 @@ class CodeGenTest_Base extends CodegenTest {
   override def filter: B = super.filter || F
   override def filters: ISZ[String] = ISZ("Do-not-embed")
 
-  override def testModes: _root_.org.sireum.ISZ[TestMode.Type] =
+  override def testModes: ISZ[TestMode.Type] =
     super.testModes // :+ TestMode.tipe :+ TestMode.compile
 
   val testResources: TestResources = CodegenTest.defaultTestLayout(getClass())

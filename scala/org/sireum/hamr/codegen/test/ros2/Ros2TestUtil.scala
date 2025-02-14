@@ -1,13 +1,31 @@
 package org.sireum.hamr.codegen.test.ros2
 
 import org.sireum._
+import org.sireum.hamr.codegen.test.util.TestMode
+import org.sireum.hamr.codegen.test.util.TestModeHelper
 
 trait  Ros2TestUtil {
+
+  def testModes: ISZ[TestMode.Type] = TestModeHelper.getEnvTestModes()
+
   val isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 
   def verbose: B
 
   assert (!isCI || !verbose, "verbose must be F when pushed to github")
+
+  val ros2SetupPath: Option[Os.Path] = Os.env("ROS2_HOME") match {
+    case Some(dist) =>
+      if ((Os.path(dist) / "setup.bash").exists) Some((Os.path(dist) / "setup.bash"))
+      else None()
+    case _ => None()
+  }
+
+  val dockerAvailable: B =
+    ros2SetupPath match {
+      case None() => proc"docker info".run().ok
+      case _ => F // use the native ros2 install
+    }
 
   def expectedRoot: Os.Path
   def resultsRoot: Os.Path
