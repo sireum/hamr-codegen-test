@@ -23,7 +23,7 @@ trait  Ros2TestUtil {
 
   val dockerAvailable: B =
     ros2SetupPath match {
-      case None() => proc"docker info".run().ok
+      case None() if !isCI => proc"docker info".run().ok
       case _ => F
     }
 
