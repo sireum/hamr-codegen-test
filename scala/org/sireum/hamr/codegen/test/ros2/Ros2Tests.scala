@@ -190,8 +190,12 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
           failureReasons = failureReasons :+ "Colcon build failed"
         }
       } else if (dockerAvailable) {
+        val platform: String =
+          if (Os.isMacArm || Os.isLinuxArm || Os.isWinArm) "linux/arm64/v8"
+          else "linux/amd64"
+
         val args = ISZ[String](
-          "docker", "run", "--rm", "-v", s"${resultsRoot / testName / "results" / strictModeString}:/root/results", "ros:jazzy", "bash", "-c",
+          "docker", "run", "--platform", platform, "--rm", "-v", s"${resultsRoot / testName / "results" / strictModeString}:/root/results", "ros:jazzy", "bash", "-c",
           s"cd /root/results && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w"
           //s"cd /root/results && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w --packages-select ${pkgName}_interfaces && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w --packages-select ${pkgName} ${pkgName}_bringup"
         )
