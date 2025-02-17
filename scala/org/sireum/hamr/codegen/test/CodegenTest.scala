@@ -96,6 +96,10 @@ trait CodegenTest extends CodegenTestSuite {
               expectedErrorReasons: ISZ[String] // empty if errors not expected
              ): Unit = {
 
+    if (TestUtil.isCI && Os.env("SEL4_CAMKES_ENV").nonEmpty && !TestUtil.isSeL4(config.platform)) {
+      cancel("Skipping non-seL4 test")
+    }
+
     val rootResultDir = testResources.resultsDir
     val rootExpectedDir = testResources.expectedDir
 

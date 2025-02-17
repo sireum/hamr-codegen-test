@@ -42,7 +42,7 @@ object MicrokitTestUtil {
         println(s"Deleted $f")
       }
     } else {
-      val results = proc"git fetch && git status -uno".at(modelsDir.up).run()
+      val results = Os.proc(ISZ("bash", "-c", "git fetch && git status -uno")).at(modelsDir).runCheck()
       if (ops.StringOps(results.out).contains("Your branch is behind")) {
         println(s"Updating $url")
         proc"git pull".at(modelsDir.up).runCheck()

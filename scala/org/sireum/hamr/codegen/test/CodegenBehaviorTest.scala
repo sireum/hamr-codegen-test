@@ -80,6 +80,10 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
               logikaOptions: Option[String],
               airFile: Option[Os.Path] = None()): Unit = {
 
+    if (TestUtil.isCI && Os.env("SEL4_CAMKES_ENV").nonEmpty && !TestUtil.isSeL4(testOptions.platform)) {
+      cancel("Skipping non-seL4 test")
+    }
+
     var _testModes = testModes
     if (justRegenerate) {
       _testModes = testModes.filter(f => f == TestMode.slangcheck || f == TestMode.sergen)
