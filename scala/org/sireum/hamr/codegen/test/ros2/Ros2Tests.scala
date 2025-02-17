@@ -185,7 +185,8 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
   // File Change Persistence Tests
   // ----------------------------------
 
-  "marker_test_building_control_lax" in {
+  // TODO: This test currently relies on modifying the 'results' directory, which is not included in the git repo.
+  "marker_test_building_control_lax" ignore {
     val testName = "marker_test_building_control"
     val rootName = "building_control_gen_mixed"
     val root = codegen_base / rootName
@@ -195,7 +196,8 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false), F, verbose)
   }
 
-  "marker_test_building_control_strict" in {
+  // TODO: This test currently relies on modifying the 'results' directory, which is not included in the git repo.
+  "marker_test_building_control_strict" ignore {
     val testName = "marker_test_building_control"
     val rootName = "building_control_gen_mixed"
     val root = codegen_base / rootName
