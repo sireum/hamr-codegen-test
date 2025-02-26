@@ -1618,7 +1618,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                      },
+                                      "beginLine" : 85,
+                                      "beginColumn" : 25,
+                                      "endLine" : 85,
+                                      "endColumn" : 27,
+                                      "offset" : 4219,
+                                      "length" : 2
+                                    }
                                   }
                                 }
                               ],
@@ -1830,7 +1843,20 @@
                                         }
                                       },
                                       "opPosOpt" : {
-                                        "type" : "None"
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                          },
+                                          "beginLine" : 87,
+                                          "beginColumn" : 28,
+                                          "endLine" : 87,
+                                          "endColumn" : 30,
+                                          "offset" : 4304,
+                                          "length" : 2
+                                        }
                                       }
                                     },
                                     "op" : "&&",
@@ -2116,7 +2142,20 @@
                                         }
                                       },
                                       "opPosOpt" : {
-                                        "type" : "None"
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                          },
+                                          "beginLine" : 88,
+                                          "beginColumn" : 28,
+                                          "endLine" : 88,
+                                          "endColumn" : 30,
+                                          "offset" : 4344,
+                                          "length" : 2
+                                        }
                                       }
                                     },
                                     "attr" : {
@@ -2145,7 +2184,20 @@
                                       }
                                     },
                                     "opPosOpt" : {
-                                      "type" : "None"
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                        },
+                                        "beginLine" : 87,
+                                        "beginColumn" : 31,
+                                        "endLine" : 88,
+                                        "endColumn" : 27,
+                                        "offset" : 4307,
+                                        "length" : 36
+                                      }
                                     }
                                   },
                                   "op" : "&&",
@@ -2563,7 +2615,20 @@
                                       }
                                     },
                                     "opPosOpt" : {
-                                      "type" : "None"
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                        },
+                                        "beginLine" : 89,
+                                        "beginColumn" : 23,
+                                        "endLine" : 89,
+                                        "endColumn" : 25,
+                                        "offset" : 4398,
+                                        "length" : 2
+                                      }
                                     }
                                   },
                                   "attr" : {
@@ -2592,7 +2657,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                      },
+                                      "beginLine" : 87,
+                                      "beginColumn" : 68,
+                                      "endLine" : 89,
+                                      "endColumn" : 22,
+                                      "offset" : 4344,
+                                      "length" : 53
+                                    }
                                   }
                                 }
                               ],
@@ -3499,7 +3577,20 @@
                                           }
                                         },
                                         "opPosOpt" : {
-                                          "type" : "None"
+                                          "type" : "Some",
+                                          "value" : {
+                                            "type" : "Position",
+                                            "uriOpt" : {
+                                              "type" : "Some",
+                                              "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                            },
+                                            "beginLine" : 101,
+                                            "beginColumn" : 32,
+                                            "endLine" : 101,
+                                            "endColumn" : 34,
+                                            "offset" : 4795,
+                                            "length" : 2
+                                          }
                                         }
                                       },
                                       "attr" : {
@@ -3528,7 +3619,20 @@
                                         }
                                       },
                                       "opPosOpt" : {
-                                        "type" : "None"
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                          },
+                                          "beginLine" : 99,
+                                          "beginColumn" : 57,
+                                          "endLine" : 101,
+                                          "endColumn" : 31,
+                                          "offset" : 4749,
+                                          "length" : 45
+                                        }
                                       }
                                     },
                                     "op" : "&&",
@@ -3754,7 +3858,20 @@
                                         }
                                       },
                                       "opPosOpt" : {
-                                        "type" : "None"
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                          },
+                                          "beginLine" : 103,
+                                          "beginColumn" : 32,
+                                          "endLine" : 103,
+                                          "endColumn" : 34,
+                                          "offset" : 4854,
+                                          "length" : 2
+                                        }
                                       }
                                     },
                                     "attr" : {
@@ -3783,7 +3900,20 @@
                                       }
                                     },
                                     "opPosOpt" : {
-                                      "type" : "None"
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                        },
+                                        "beginLine" : 99,
+                                        "beginColumn" : 103,
+                                        "endLine" : 103,
+                                        "endColumn" : 31,
+                                        "offset" : 4795,
+                                        "length" : 58
+                                      }
                                     }
                                   },
                                   "op" : "&&",
@@ -3976,7 +4106,20 @@
                                       }
                                     },
                                     "opPosOpt" : {
-                                      "type" : "None"
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                        },
+                                        "beginLine" : 106,
+                                        "beginColumn" : 24,
+                                        "endLine" : 106,
+                                        "endColumn" : 26,
+                                        "offset" : 4998,
+                                        "length" : 2
+                                      }
                                     }
                                   },
                                   "attr" : {
@@ -4005,7 +4148,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                      },
+                                      "beginLine" : 99,
+                                      "beginColumn" : 162,
+                                      "endLine" : 106,
+                                      "endColumn" : 23,
+                                      "offset" : 4854,
+                                      "length" : 143
+                                    }
                                   }
                                 },
                                 "op" : "&&",
@@ -4475,7 +4631,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                      },
+                                      "beginLine" : 109,
+                                      "beginColumn" : 24,
+                                      "endLine" : 109,
+                                      "endColumn" : 26,
+                                      "offset" : 5119,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -4504,7 +4673,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                    },
+                                    "beginLine" : 99,
+                                    "beginColumn" : 306,
+                                    "endLine" : 109,
+                                    "endColumn" : 23,
+                                    "offset" : 4998,
+                                    "length" : 120
+                                  }
                                 }
                               },
                               "op" : "&&",
@@ -4974,7 +5156,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                    },
+                                    "beginLine" : 112,
+                                    "beginColumn" : 24,
+                                    "endLine" : 112,
+                                    "endColumn" : 26,
+                                    "offset" : 5290,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -5003,7 +5198,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                  },
+                                  "beginLine" : 99,
+                                  "beginColumn" : 427,
+                                  "endLine" : 112,
+                                  "endColumn" : 23,
+                                  "offset" : 5119,
+                                  "length" : 170
+                                }
                               }
                             },
                             "attr" : {
@@ -7501,7 +7709,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 253,
+                                    "beginColumn" : 40,
+                                    "endLine" : 253,
+                                    "endColumn" : 42,
+                                    "offset" : 13587,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "op" : "&&",
@@ -7720,7 +7941,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 253,
+                                    "beginColumn" : 87,
+                                    "endLine" : 253,
+                                    "endColumn" : 89,
+                                    "offset" : 13634,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -7749,7 +7983,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 253,
+                                  "beginColumn" : 43,
+                                  "endLine" : 253,
+                                  "endColumn" : 86,
+                                  "offset" : 13590,
+                                  "length" : 43
+                                }
                               }
                             },
                             "attr" : {
@@ -8021,7 +8268,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 255,
+                                  "beginColumn" : 27,
+                                  "endLine" : 255,
+                                  "endColumn" : 29,
+                                  "offset" : 13711,
+                                  "length" : 2
+                                }
                               }
                             },
                             "attr" : {
@@ -8209,7 +8469,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 257,
+                                  "beginColumn" : 30,
+                                  "endLine" : 257,
+                                  "endColumn" : 32,
+                                  "offset" : 13804,
+                                  "length" : 2
+                                }
                               }
                             },
                             "attr" : {
@@ -8428,7 +8701,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 248,
+                                    "beginColumn" : 32,
+                                    "endLine" : 248,
+                                    "endColumn" : 34,
+                                    "offset" : 13369,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "op" : "&",
@@ -8591,7 +8877,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 248,
+                                    "beginColumn" : 70,
+                                    "endLine" : 248,
+                                    "endColumn" : 72,
+                                    "offset" : 13407,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -8620,7 +8919,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 248,
+                                  "beginColumn" : 35,
+                                  "endLine" : 248,
+                                  "endColumn" : 69,
+                                  "offset" : 13372,
+                                  "length" : 34
+                                }
                               }
                             },
                             "attr" : {
@@ -9133,7 +9445,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 265,
+                                    "beginColumn" : 33,
+                                    "endLine" : 265,
+                                    "endColumn" : 34,
+                                    "offset" : 14156,
+                                    "length" : 1
+                                  }
                                 }
                               },
                               "op" : "->:",
@@ -9380,7 +9705,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 265,
+                                    "beginColumn" : 85,
+                                    "endLine" : 265,
+                                    "endColumn" : 87,
+                                    "offset" : 14208,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -9409,7 +9747,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 265,
+                                  "beginColumn" : 35,
+                                  "endLine" : 265,
+                                  "endColumn" : 84,
+                                  "offset" : 14158,
+                                  "length" : 49
+                                }
                               }
                             },
                             "attr" : {
@@ -9740,7 +10091,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 270,
+                                    "beginColumn" : 36,
+                                    "endLine" : 270,
+                                    "endColumn" : 37,
+                                    "offset" : 14434,
+                                    "length" : 1
+                                  }
                                 }
                               },
                               "op" : "->:",
@@ -9987,7 +10351,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 270,
+                                    "beginColumn" : 89,
+                                    "endLine" : 270,
+                                    "endColumn" : 91,
+                                    "offset" : 14487,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -10016,7 +10393,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 270,
+                                  "beginColumn" : 38,
+                                  "endLine" : 270,
+                                  "endColumn" : 88,
+                                  "offset" : 14436,
+                                  "length" : 50
+                                }
                               }
                             },
                             "attr" : {
@@ -10123,7 +10513,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 273,
+                                    "beginColumn" : 14,
+                                    "endLine" : 273,
+                                    "endColumn" : 15,
+                                    "offset" : 14616,
+                                    "length" : 1
+                                  }
                                 }
                               },
                               "op" : "==",
@@ -10176,7 +10579,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 273,
+                                  "beginColumn" : 16,
+                                  "endLine" : 273,
+                                  "endColumn" : 21,
+                                  "offset" : 14618,
+                                  "length" : 5
+                                }
                               }
                             },
                             "attr" : {
@@ -10507,7 +10923,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 282,
+                                    "beginColumn" : 31,
+                                    "endLine" : 282,
+                                    "endColumn" : 32,
+                                    "offset" : 15219,
+                                    "length" : 1
+                                  }
                                 }
                               },
                               "op" : "->:",
@@ -10754,7 +11183,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 282,
+                                    "beginColumn" : 83,
+                                    "endLine" : 282,
+                                    "endColumn" : 85,
+                                    "offset" : 15271,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -10783,7 +11225,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 282,
+                                  "beginColumn" : 33,
+                                  "endLine" : 282,
+                                  "endColumn" : 82,
+                                  "offset" : 15221,
+                                  "length" : 49
+                                }
                               }
                             },
                             "attr" : {
@@ -11114,7 +11569,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 286,
+                                    "beginColumn" : 31,
+                                    "endLine" : 286,
+                                    "endColumn" : 32,
+                                    "offset" : 15488,
+                                    "length" : 1
+                                  }
                                 }
                               },
                               "op" : "->:",
@@ -11361,7 +11829,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 286,
+                                    "beginColumn" : 84,
+                                    "endLine" : 286,
+                                    "endColumn" : 86,
+                                    "offset" : 15541,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -11390,7 +11871,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 286,
+                                  "beginColumn" : 33,
+                                  "endLine" : 286,
+                                  "endColumn" : 83,
+                                  "offset" : 15490,
+                                  "length" : 50
+                                }
                               }
                             },
                             "attr" : {
@@ -11723,7 +12217,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 291,
+                                      "beginColumn" : 32,
+                                      "endLine" : 291,
+                                      "endColumn" : 34,
+                                      "offset" : 15874,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "op" : "&",
@@ -12026,7 +12533,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 292,
+                                      "beginColumn" : 33,
+                                      "endLine" : 292,
+                                      "endColumn" : 35,
+                                      "offset" : 15941,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -12055,7 +12575,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 291,
+                                    "beginColumn" : 35,
+                                    "endLine" : 292,
+                                    "endColumn" : 32,
+                                    "offset" : 15877,
+                                    "length" : 63
+                                  }
                                 }
                               },
                               "op" : "->:",
@@ -12212,7 +12745,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 294,
+                                    "beginColumn" : 34,
+                                    "endLine" : 294,
+                                    "endColumn" : 36,
+                                    "offset" : 16086,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -12241,7 +12787,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 291,
+                                  "beginColumn" : 99,
+                                  "endLine" : 294,
+                                  "endColumn" : 33,
+                                  "offset" : 15941,
+                                  "length" : 144
+                                }
                               }
                             },
                             "attr" : {
@@ -12430,7 +12989,20 @@
                                       }
                                     },
                                     "opPosOpt" : {
-                                      "type" : "None"
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 298,
+                                        "beginColumn" : 33,
+                                        "endLine" : 298,
+                                        "endColumn" : 35,
+                                        "offset" : 16328,
+                                        "length" : 2
+                                      }
                                     }
                                   },
                                   "op" : "->:",
@@ -12648,7 +13220,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 298,
+                                      "beginColumn" : 36,
+                                      "endLine" : 298,
+                                      "endColumn" : 56,
+                                      "offset" : 16331,
+                                      "length" : 20
+                                    }
                                   }
                                 },
                                 "op" : "&&",
@@ -12807,7 +13392,20 @@
                                       }
                                     },
                                     "opPosOpt" : {
-                                      "type" : "None"
+                                      "type" : "Some",
+                                      "value" : {
+                                        "type" : "Position",
+                                        "uriOpt" : {
+                                          "type" : "Some",
+                                          "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                        },
+                                        "beginLine" : 301,
+                                        "beginColumn" : 29,
+                                        "endLine" : 301,
+                                        "endColumn" : 31,
+                                        "offset" : 16508,
+                                        "length" : 2
+                                      }
                                     }
                                   },
                                   "op" : "->:",
@@ -12974,7 +13572,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 301,
+                                      "beginColumn" : 32,
+                                      "endLine" : 301,
+                                      "endColumn" : 56,
+                                      "offset" : 16511,
+                                      "length" : 24
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -13003,7 +13614,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 298,
+                                    "beginColumn" : 57,
+                                    "endLine" : 301,
+                                    "endColumn" : 31,
+                                    "offset" : 16352,
+                                    "length" : 158
+                                  }
                                 }
                               },
                               "op" : "&&",
@@ -13162,7 +13786,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 304,
+                                      "beginColumn" : 33,
+                                      "endLine" : 304,
+                                      "endColumn" : 35,
+                                      "offset" : 16696,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "op" : "->:",
@@ -13329,7 +13966,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                    },
+                                    "beginLine" : 304,
+                                    "beginColumn" : 36,
+                                    "endLine" : 304,
+                                    "endColumn" : 56,
+                                    "offset" : 16699,
+                                    "length" : 20
+                                  }
                                 }
                               },
                               "attr" : {
@@ -13358,7 +14008,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                  },
+                                  "beginLine" : 298,
+                                  "beginColumn" : 216,
+                                  "endLine" : 304,
+                                  "endColumn" : 35,
+                                  "offset" : 16511,
+                                  "length" : 187
+                                }
                               }
                             },
                             "attr" : {
@@ -13629,7 +14292,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 350,
+                                      "beginColumn" : 29,
+                                      "endLine" : 350,
+                                      "endColumn" : 31,
+                                      "offset" : 19389,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -13811,7 +14487,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 353,
+                                      "beginColumn" : 25,
+                                      "endLine" : 353,
+                                      "endColumn" : 27,
+                                      "offset" : 19482,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -14099,7 +14788,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 362,
+                                      "beginColumn" : 24,
+                                      "endLine" : 362,
+                                      "endColumn" : 26,
+                                      "offset" : 19799,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -14281,7 +14983,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 365,
+                                      "beginColumn" : 29,
+                                      "endLine" : 365,
+                                      "endColumn" : 31,
+                                      "offset" : 19897,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -14540,7 +15255,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 370,
+                                      "beginColumn" : 29,
+                                      "endLine" : 370,
+                                      "endColumn" : 31,
+                                      "offset" : 20035,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -14722,7 +15450,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 373,
+                                      "beginColumn" : 24,
+                                      "endLine" : 373,
+                                      "endColumn" : 26,
+                                      "offset" : 20132,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -14904,7 +15645,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                                      },
+                                      "beginLine" : 377,
+                                      "beginColumn" : 29,
+                                      "endLine" : 377,
+                                      "endColumn" : 31,
+                                      "offset" : 20326,
+                                      "length" : 2
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -19911,7 +20665,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                              },
+                              "beginLine" : 30,
+                              "beginColumn" : 17,
+                              "endLine" : 30,
+                              "endColumn" : 19,
+                              "offset" : 919,
+                              "length" : 2
+                            }
                           }
                         },
                         "thenExp" : {
@@ -20017,7 +20784,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                              },
+                              "beginLine" : 30,
+                              "beginColumn" : 51,
+                              "endLine" : 30,
+                              "endColumn" : 53,
+                              "offset" : 953,
+                              "length" : 2
+                            }
                           }
                         },
                         "elseExp" : {
@@ -20265,7 +21045,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                },
+                                "beginLine" : 31,
+                                "beginColumn" : 23,
+                                "endLine" : 31,
+                                "endColumn" : 25,
+                                "offset" : 986,
+                                "length" : 2
+                              }
                             }
                           },
                           "thenExp" : {
@@ -20371,7 +21164,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                },
+                                "beginLine" : 31,
+                                "beginColumn" : 58,
+                                "endLine" : 31,
+                                "endColumn" : 60,
+                                "offset" : 1021,
+                                "length" : 2
+                              }
                             }
                           },
                           "elseExp" : {
@@ -20477,7 +21283,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                },
+                                "beginLine" : 32,
+                                "beginColumn" : 20,
+                                "endLine" : 32,
+                                "endColumn" : 22,
+                                "offset" : 1056,
+                                "length" : 2
+                              }
                             }
                           },
                           "attr" : {
@@ -21351,7 +22170,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                    },
+                                    "beginLine" : 37,
+                                    "beginColumn" : 23,
+                                    "endLine" : 37,
+                                    "endColumn" : 25,
+                                    "offset" : 1219,
+                                    "length" : 2
+                                  }
                                 }
                               },
                               "attr" : {
@@ -21380,7 +22212,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                  },
+                                  "beginLine" : 35,
+                                  "beginColumn" : 28,
+                                  "endLine" : 37,
+                                  "endColumn" : 22,
+                                  "offset" : 1185,
+                                  "length" : 33
+                                }
                               }
                             },
                             "op" : "&&",
@@ -21543,7 +22388,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                  },
+                                  "beginLine" : 37,
+                                  "beginColumn" : 55,
+                                  "endLine" : 37,
+                                  "endColumn" : 57,
+                                  "offset" : 1251,
+                                  "length" : 2
+                                }
                               }
                             },
                             "attr" : {
@@ -21572,7 +22430,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                },
+                                "beginLine" : 35,
+                                "beginColumn" : 62,
+                                "endLine" : 37,
+                                "endColumn" : 54,
+                                "offset" : 1219,
+                                "length" : 31
+                              }
                             }
                           },
                           "op" : "&&",
@@ -21905,7 +22776,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                },
+                                "beginLine" : 40,
+                                "beginColumn" : 23,
+                                "endLine" : 40,
+                                "endColumn" : 25,
+                                "offset" : 1355,
+                                "length" : 2
+                              }
                             }
                           },
                           "attr" : {
@@ -21934,7 +22818,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                              },
+                              "beginLine" : 35,
+                              "beginColumn" : 94,
+                              "endLine" : 40,
+                              "endColumn" : 22,
+                              "offset" : 1251,
+                              "length" : 103
+                            }
                           }
                         },
                         "op" : "&&",
@@ -22267,7 +23164,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                              },
+                              "beginLine" : 42,
+                              "beginColumn" : 23,
+                              "endLine" : 42,
+                              "endColumn" : 25,
+                              "offset" : 1424,
+                              "length" : 2
+                            }
                           }
                         },
                         "attr" : {
@@ -22296,7 +23206,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                            },
+                            "beginLine" : 35,
+                            "beginColumn" : 198,
+                            "endLine" : 42,
+                            "endColumn" : 22,
+                            "offset" : 1355,
+                            "length" : 68
+                          }
                         }
                       }
                     },
@@ -23205,7 +24128,20 @@
                         }
                       },
                       "opPosOpt" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                          },
+                          "beginLine" : 53,
+                          "beginColumn" : 27,
+                          "endLine" : 53,
+                          "endColumn" : 29,
+                          "offset" : 2046,
+                          "length" : 2
+                        }
                       }
                     },
                     "thenExp" : {
@@ -23397,7 +24333,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                },
+                                "beginLine" : 54,
+                                "beginColumn" : 42,
+                                "endLine" : 54,
+                                "endColumn" : 42,
+                                "offset" : 2115,
+                                "length" : 0
+                              }
                             }
                           },
                           "attr" : {
@@ -23426,7 +24375,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                              },
+                              "beginLine" : 54,
+                              "beginColumn" : 26,
+                              "endLine" : 54,
+                              "endColumn" : 41,
+                              "offset" : 2099,
+                              "length" : 15
+                            }
                           }
                         },
                         "op" : "+",
@@ -23479,7 +24441,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                            },
+                            "beginLine" : 54,
+                            "beginColumn" : 42,
+                            "endLine" : 54,
+                            "endColumn" : 55,
+                            "offset" : 2115,
+                            "length" : 13
+                          }
                         }
                       },
                       "op" : "==",
@@ -23599,7 +24574,20 @@
                         }
                       },
                       "opPosOpt" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                          },
+                          "beginLine" : 54,
+                          "beginColumn" : 56,
+                          "endLine" : 54,
+                          "endColumn" : 67,
+                          "offset" : 2129,
+                          "length" : 11
+                        }
                       }
                     },
                     "elseExp" : {
@@ -23903,7 +24891,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                            },
+                            "beginLine" : 56,
+                            "beginColumn" : 29,
+                            "endLine" : 56,
+                            "endColumn" : 31,
+                            "offset" : 2199,
+                            "length" : 2
+                          }
                         }
                       },
                       "thenExp" : {
@@ -24069,7 +25070,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                },
+                                "beginLine" : 57,
+                                "beginColumn" : 32,
+                                "endLine" : 57,
+                                "endColumn" : 32,
+                                "offset" : 2260,
+                                "length" : 0
+                              }
                             }
                           },
                           "op" : "+",
@@ -24122,7 +25136,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                              },
+                              "beginLine" : 57,
+                              "beginColumn" : 33,
+                              "endLine" : 57,
+                              "endColumn" : 44,
+                              "offset" : 2261,
+                              "length" : 11
+                            }
                           }
                         },
                         "op" : "==",
@@ -24242,7 +25269,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                            },
+                            "beginLine" : 57,
+                            "beginColumn" : 45,
+                            "endLine" : 57,
+                            "endColumn" : 56,
+                            "offset" : 2273,
+                            "length" : 11
+                          }
                         }
                       },
                       "elseExp" : {
@@ -24471,7 +25511,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                            },
+                            "beginLine" : 58,
+                            "beginColumn" : 34,
+                            "endLine" : 58,
+                            "endColumn" : 36,
+                            "offset" : 2330,
+                            "length" : 2
+                          }
                         }
                       },
                       "attr" : {
@@ -24882,7 +25935,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                              },
+                              "beginLine" : 61,
+                              "beginColumn" : 23,
+                              "endLine" : 61,
+                              "endColumn" : 25,
+                              "offset" : 2381,
+                              "length" : 2
+                            }
                           }
                         },
                         "thenExp" : {
@@ -25182,7 +26248,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                      },
+                                      "beginLine" : 63,
+                                      "beginColumn" : 38,
+                                      "endLine" : 63,
+                                      "endColumn" : 39,
+                                      "offset" : 2485,
+                                      "length" : 1
+                                    }
                                   }
                                 },
                                 "attr" : {
@@ -25211,7 +26290,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                    },
+                                    "beginLine" : 63,
+                                    "beginColumn" : 22,
+                                    "endLine" : 63,
+                                    "endColumn" : 37,
+                                    "offset" : 2469,
+                                    "length" : 15
+                                  }
                                 }
                               },
                               "op" : "+",
@@ -25264,7 +26356,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                  },
+                                  "beginLine" : 63,
+                                  "beginColumn" : 38,
+                                  "endLine" : 63,
+                                  "endColumn" : 51,
+                                  "offset" : 2485,
+                                  "length" : 13
+                                }
                               }
                             },
                             {
@@ -25758,7 +26863,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                },
+                                "beginLine" : 66,
+                                "beginColumn" : 25,
+                                "endLine" : 66,
+                                "endColumn" : 27,
+                                "offset" : 2589,
+                                "length" : 2
+                              }
                             }
                           },
                           "thenExp" : {
@@ -26032,7 +27150,20 @@
                                     }
                                   },
                                   "opPosOpt" : {
-                                    "type" : "None"
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                      },
+                                      "beginLine" : 68,
+                                      "beginColumn" : 29,
+                                      "endLine" : 68,
+                                      "endColumn" : 30,
+                                      "offset" : 2686,
+                                      "length" : 1
+                                    }
                                   }
                                 },
                                 "op" : "+",
@@ -26085,7 +27216,20 @@
                                   }
                                 },
                                 "opPosOpt" : {
-                                  "type" : "None"
+                                  "type" : "Some",
+                                  "value" : {
+                                    "type" : "Position",
+                                    "uriOpt" : {
+                                      "type" : "Some",
+                                      "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                                    },
+                                    "beginLine" : 68,
+                                    "beginColumn" : 31,
+                                    "endLine" : 68,
+                                    "endColumn" : 42,
+                                    "offset" : 2688,
+                                    "length" : 11
+                                  }
                                 }
                               },
                               {
@@ -27087,7 +28231,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/temp-control-unit-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
+                            },
+                            "beginLine" : 74,
+                            "beginColumn" : 18,
+                            "endLine" : 74,
+                            "endColumn" : 20,
+                            "offset" : 2890,
+                            "length" : 2
+                          }
                         }
                       }
                     },
@@ -28787,7 +29944,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                  },
+                                  "beginLine" : 47,
+                                  "beginColumn" : 25,
+                                  "endLine" : 47,
+                                  "endColumn" : 27,
+                                  "offset" : 2004,
+                                  "length" : 2
+                                }
                               }
                             },
                             "op" : "&&",
@@ -29120,7 +30290,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                  },
+                                  "beginLine" : 47,
+                                  "beginColumn" : 65,
+                                  "endLine" : 47,
+                                  "endColumn" : 67,
+                                  "offset" : 2044,
+                                  "length" : 2
+                                }
                               }
                             },
                             "attr" : {
@@ -29149,7 +30332,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                },
+                                "beginLine" : 47,
+                                "beginColumn" : 28,
+                                "endLine" : 47,
+                                "endColumn" : 64,
+                                "offset" : 2007,
+                                "length" : 36
+                              }
                             }
                           },
                           "op" : "&&",
@@ -29482,7 +30678,20 @@
                               }
                             },
                             "opPosOpt" : {
-                              "type" : "None"
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                                },
+                                "beginLine" : 50,
+                                "beginColumn" : 25,
+                                "endLine" : 50,
+                                "endColumn" : 27,
+                                "offset" : 2172,
+                                "length" : 2
+                              }
                             }
                           },
                           "attr" : {
@@ -29511,7 +30720,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                              },
+                              "beginLine" : 47,
+                              "beginColumn" : 65,
+                              "endLine" : 50,
+                              "endColumn" : 24,
+                              "offset" : 2044,
+                              "length" : 127
+                            }
                           }
                         },
                         "op" : "&&",
@@ -29844,7 +31066,20 @@
                             }
                           },
                           "opPosOpt" : {
-                            "type" : "None"
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                              },
+                              "beginLine" : 50,
+                              "beginColumn" : 77,
+                              "endLine" : 50,
+                              "endColumn" : 79,
+                              "offset" : 2224,
+                              "length" : 2
+                            }
                           }
                         },
                         "attr" : {
@@ -29873,7 +31108,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempSensor.aadl"
+                            },
+                            "beginLine" : 47,
+                            "beginColumn" : 193,
+                            "endLine" : 50,
+                            "endColumn" : 76,
+                            "offset" : 2172,
+                            "length" : 51
+                          }
                         }
                       }
                     },
@@ -34343,7 +35591,20 @@
                         }
                       },
                       "opPosOpt" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                          },
+                          "beginLine" : 742,
+                          "beginColumn" : 24,
+                          "endLine" : 742,
+                          "endColumn" : 26,
+                          "offset" : 38664,
+                          "length" : 2
+                        }
                       }
                     },
                     "op" : "&",
@@ -34506,7 +35767,20 @@
                         }
                       },
                       "opPosOpt" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                          },
+                          "beginLine" : 743,
+                          "beginColumn" : 25,
+                          "endLine" : 743,
+                          "endColumn" : 27,
+                          "offset" : 38704,
+                          "length" : 2
+                        }
                       }
                     },
                     "attr" : {
@@ -34535,7 +35809,20 @@
                       }
                     },
                     "opPosOpt" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                        },
+                        "beginLine" : 742,
+                        "beginColumn" : 27,
+                        "endLine" : 743,
+                        "endColumn" : 24,
+                        "offset" : 38667,
+                        "length" : 36
+                      }
                     }
                   },
                   "op" : "&",
@@ -34782,7 +36069,20 @@
                       }
                     },
                     "opPosOpt" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                        },
+                        "beginLine" : 744,
+                        "beginColumn" : 24,
+                        "endLine" : 744,
+                        "endColumn" : 26,
+                        "offset" : 38744,
+                        "length" : 2
+                      }
                     }
                   },
                   "attr" : {
@@ -34811,7 +36111,20 @@
                     }
                   },
                   "opPosOpt" : {
-                    "type" : "None"
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control-unit-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
+                      },
+                      "beginLine" : 742,
+                      "beginColumn" : 64,
+                      "endLine" : 744,
+                      "endColumn" : 23,
+                      "offset" : 38704,
+                      "length" : 39
+                    }
                   }
                 },
                 "attr" : {
