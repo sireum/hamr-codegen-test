@@ -101,6 +101,26 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
 
+  "python-datatype-examples_lax" ignore {
+    val testName = "python-datatype-examples"
+    val rootName = "datatype-examples"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python), T, verbose)
+  }
+
+  "python-datatype-examples_strict" ignore {
+    val testName = "python-datatype-examples"
+    val rootName = "datatype-examples"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python), T, verbose)
+  }
+
   "fan_in_fan_out_lax" in {
     val testName = "fan_in_fan_out"
     val root = codegen_base / testName
@@ -232,7 +252,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     // TODO: Currently hardcoded, since I'm just working on cpp and xml
     testOps = testOps.apply(
       ros2OutputWorkspaceDir = Some(destDir.value),
-      ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
+      ros2NodesLanguage = config.ros2NodesLanguage,
       ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml
     )
 
