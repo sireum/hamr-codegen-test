@@ -1,0 +1,6 @@
+Integer64 field_int64
+String field_str
+MyEnum field_enum
+MyStruct2i field_rec
+MyArrayOneDim field_array
+MyArrayUnbounded field_array_unbounded
