@@ -12,7 +12,9 @@ trait  Ros2TestUtil {
 
   def verbose: B
 
-  assert (!isCI || !verbose, "verbose must be F when pushed to github")
+  def generateExpected: B
+
+  assert (!isCI || !generateExpected, "generate expected must be F when pushed to github")
 
   val ros2SetupPath: Option[Os.Path] = Os.env("ROS2_HOME") match {
     case Some(dist) =>
