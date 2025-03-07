@@ -58,8 +58,8 @@ annex EMV2 {**
 	    flakey: state;
 	    failed : state;
 	  transitions
-	    working -[hardfail]-> failed;
-	    working -[subtlefail]-> flakey;
+	    hard_failure: working -[hardfail]-> failed;
+	    subtle_failure: working -[subtlefail]-> flakey;
 	end behavior;
 	
 --error state machine for components that may be corrupted, or stop recording
