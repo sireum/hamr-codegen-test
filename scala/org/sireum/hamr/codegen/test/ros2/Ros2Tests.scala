@@ -241,7 +241,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     println(s"Result Dir: ${destDir.up.toUri}")
 
     val results: CodeGenResults = CodeGen.codeGen(
-      model = model, shouldWriteOutResources = T, options = testOps, plugins = MSZ(), reporter = reporter,
+      model = model, shouldWriteOutResources = T, options = testOps, plugins = ISZ(), reporter = reporter,
       transpilerCallback = (_, _) => 0,
       proyekIveCallback = _ => 0,
       sergenCallback = (_, _) => 0,
