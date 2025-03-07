@@ -101,24 +101,24 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
 
-  "python-datatype-examples_lax" ignore {
+  "python-datatype-examples_lax" in {
     val testName = "python-datatype-examples"
     val rootName = "datatype-examples"
     val root = codegen_base / rootName
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
   }
 
-  "python-datatype-examples_strict" ignore {
+  "python-datatype-examples_strict" in {
     val testName = "python-datatype-examples"
     val rootName = "datatype-examples"
     val root = codegen_base / rootName
     val airFile = getAir(root)
     assert (root.exists)
 
-    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python), T, verbose)
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
   }
 
   "fan_in_fan_out_lax" in {
@@ -249,11 +249,10 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
       workspaceRootDir = if (config.workspaceRootDir.nonEmpty) config.workspaceRootDir else Some(modelDir.canon.value)
     )
 
-    // TODO: Currently hardcoded, since I'm just working on cpp and xml
     testOps = testOps.apply(
       ros2OutputWorkspaceDir = Some(destDir.value),
       ros2NodesLanguage = config.ros2NodesLanguage,
-      ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml
+      ros2LaunchLanguage = config.ros2LaunchLanguage
     )
 
     if (clearDestDir) {
