@@ -3046,6 +3046,8 @@
                                   "type" : "org.sireum.lang.ast.Purity",
                                   "value" : "StrictPure"
                                 },
+                                "annotations" : [
+                                ],
                                 "id" : {
                                   "type" : "org.sireum.lang.ast.Id",
                                   "value" : "ROUND",
@@ -3761,7 +3763,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 178,
-                                      "beginColumn" : 55,
+                                      "beginColumn" : 71,
                                       "endLine" : 178,
                                       "endColumn" : 57,
                                       "offset" : 9737,
@@ -4080,7 +4082,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 183,
-                                      "beginColumn" : 76,
+                                      "beginColumn" : 107,
                                       "endLine" : 183,
                                       "endColumn" : 78,
                                       "offset" : 10013,
@@ -4368,7 +4370,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 191,
-                                      "beginColumn" : 29,
+                                      "beginColumn" : 43,
                                       "endLine" : 191,
                                       "endColumn" : 31,
                                       "offset" : 10367,
@@ -4627,7 +4629,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 192,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 50,
                                       "endLine" : 192,
                                       "endColumn" : 36,
                                       "offset" : 10460,
@@ -4913,7 +4915,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 197,
-                                      "beginColumn" : 29,
+                                      "beginColumn" : 43,
                                       "endLine" : 197,
                                       "endColumn" : 31,
                                       "offset" : 10764,
@@ -5172,7 +5174,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 198,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 50,
                                       "endLine" : 198,
                                       "endColumn" : 36,
                                       "offset" : 10859,
@@ -5458,7 +5460,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 203,
-                                      "beginColumn" : 29,
+                                      "beginColumn" : 43,
                                       "endLine" : 203,
                                       "endColumn" : 31,
                                       "offset" : 11166,
@@ -5717,7 +5719,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 204,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 50,
                                       "endLine" : 204,
                                       "endColumn" : 36,
                                       "offset" : 11261,
@@ -6003,7 +6005,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 212,
-                                      "beginColumn" : 29,
+                                      "beginColumn" : 43,
                                       "endLine" : 212,
                                       "endColumn" : 31,
                                       "offset" : 11690,
@@ -6348,7 +6350,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 213,
-                                      "beginColumn" : 38,
+                                      "beginColumn" : 58,
                                       "endLine" : 213,
                                       "endColumn" : 40,
                                       "offset" : 11789,
@@ -6765,7 +6767,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 227,
-                                        "beginColumn" : 49,
+                                        "beginColumn" : 81,
                                         "endLine" : 227,
                                         "endColumn" : 51,
                                         "offset" : 12533,
@@ -7081,7 +7083,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 227,
-                                        "beginColumn" : 128,
+                                        "beginColumn" : 160,
                                         "endLine" : 227,
                                         "endColumn" : 130,
                                         "offset" : 12612,
@@ -7123,9 +7125,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 227,
-                                      "beginColumn" : 52,
+                                      "beginColumn" : 54,
                                       "endLine" : 227,
-                                      "endColumn" : 127,
+                                      "endColumn" : 159,
                                       "offset" : 12536,
                                       "length" : 75
                                     }
@@ -7713,7 +7715,7 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                             },
                                             "beginLine" : 235,
-                                            "beginColumn" : 82,
+                                            "beginColumn" : 114,
                                             "endLine" : 235,
                                             "endColumn" : 84,
                                             "offset" : 13120,
@@ -8029,7 +8031,7 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                             },
                                             "beginLine" : 235,
-                                            "beginColumn" : 161,
+                                            "beginColumn" : 193,
                                             "endLine" : 235,
                                             "endColumn" : 163,
                                             "offset" : 13199,
@@ -8071,9 +8073,9 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 235,
-                                          "beginColumn" : 85,
+                                          "beginColumn" : 87,
                                           "endLine" : 235,
-                                          "endColumn" : 160,
+                                          "endColumn" : 192,
                                           "offset" : 13123,
                                           "length" : 75
                                         }
@@ -8598,7 +8600,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 244,
-                                          "beginColumn" : 36,
+                                          "beginColumn" : 60,
                                           "endLine" : 244,
                                           "endColumn" : 38,
                                           "offset" : 13587,
@@ -8858,7 +8860,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 244,
-                                          "beginColumn" : 100,
+                                          "beginColumn" : 124,
                                           "endLine" : 244,
                                           "endColumn" : 102,
                                           "offset" : 13651,
@@ -8900,9 +8902,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 244,
-                                        "beginColumn" : 39,
+                                        "beginColumn" : 41,
                                         "endLine" : 244,
-                                        "endColumn" : 99,
+                                        "endColumn" : 123,
                                         "offset" : 13590,
                                         "length" : 60
                                       }
@@ -8942,9 +8944,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 244,
-                                      "beginColumn" : 39,
+                                      "beginColumn" : 41,
                                       "endLine" : 244,
-                                      "endColumn" : 99,
+                                      "endColumn" : 123,
                                       "offset" : 13590,
                                       "length" : 60
                                     }
@@ -10205,7 +10207,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 434,
-                                      "beginColumn" : 27,
+                                      "beginColumn" : 34,
                                       "endLine" : 434,
                                       "endColumn" : 29,
                                       "offset" : 23492,
@@ -10491,7 +10493,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 438,
-                                      "beginColumn" : 19,
+                                      "beginColumn" : 31,
                                       "endLine" : 438,
                                       "endColumn" : 21,
                                       "offset" : 23773,
@@ -10810,7 +10812,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 443,
-                                      "beginColumn" : 58,
+                                      "beginColumn" : 82,
                                       "endLine" : 443,
                                       "endColumn" : 60,
                                       "offset" : 24041,
@@ -10984,7 +10986,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 447,
-                                      "beginColumn" : 14,
+                                      "beginColumn" : 21,
                                       "endLine" : 447,
                                       "endColumn" : 16,
                                       "offset" : 24247,
@@ -11272,7 +11274,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 454,
-                                      "beginColumn" : 29,
+                                      "beginColumn" : 43,
                                       "endLine" : 454,
                                       "endColumn" : 31,
                                       "offset" : 24535,
@@ -11531,7 +11533,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 455,
-                                      "beginColumn" : 30,
+                                      "beginColumn" : 42,
                                       "endLine" : 455,
                                       "endColumn" : 32,
                                       "offset" : 24624,
@@ -11819,7 +11821,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 460,
-                                        "beginColumn" : 30,
+                                        "beginColumn" : 44,
                                         "endLine" : 460,
                                         "endColumn" : 32,
                                         "offset" : 24989,
@@ -12079,7 +12081,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 461,
-                                        "beginColumn" : 37,
+                                        "beginColumn" : 62,
                                         "endLine" : 461,
                                         "endColumn" : 38,
                                         "offset" : 25087,
@@ -12121,9 +12123,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 460,
-                                      "beginColumn" : 33,
+                                      "beginColumn" : 35,
                                       "endLine" : 461,
-                                      "endColumn" : 36,
+                                      "endColumn" : 61,
                                       "offset" : 24992,
                                       "length" : 94
                                     }
@@ -12380,7 +12382,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 462,
-                                      "beginColumn" : 30,
+                                      "beginColumn" : 42,
                                       "endLine" : 462,
                                       "endColumn" : 32,
                                       "offset" : 25145,
@@ -12668,7 +12670,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 467,
-                                        "beginColumn" : 30,
+                                        "beginColumn" : 44,
                                         "endLine" : 467,
                                         "endColumn" : 32,
                                         "offset" : 25514,
@@ -12928,7 +12930,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 468,
-                                        "beginColumn" : 37,
+                                        "beginColumn" : 62,
                                         "endLine" : 468,
                                         "endColumn" : 38,
                                         "offset" : 25612,
@@ -12970,9 +12972,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 467,
-                                      "beginColumn" : 33,
+                                      "beginColumn" : 35,
                                       "endLine" : 468,
-                                      "endColumn" : 36,
+                                      "endColumn" : 61,
                                       "offset" : 25517,
                                       "length" : 94
                                     }
@@ -13229,7 +13231,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 469,
-                                      "beginColumn" : 30,
+                                      "beginColumn" : 42,
                                       "endLine" : 469,
                                       "endColumn" : 32,
                                       "offset" : 25670,
@@ -13517,7 +13519,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 476,
-                                        "beginColumn" : 30,
+                                        "beginColumn" : 44,
                                         "endLine" : 476,
                                         "endColumn" : 32,
                                         "offset" : 26137,
@@ -13779,7 +13781,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 477,
-                                          "beginColumn" : 37,
+                                          "beginColumn" : 62,
                                           "endLine" : 477,
                                           "endColumn" : 39,
                                           "offset" : 26235,
@@ -14039,7 +14041,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 478,
-                                          "beginColumn" : 36,
+                                          "beginColumn" : 61,
                                           "endLine" : 478,
                                           "endColumn" : 38,
                                           "offset" : 26298,
@@ -14081,9 +14083,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 477,
-                                        "beginColumn" : 40,
+                                        "beginColumn" : 42,
                                         "endLine" : 478,
-                                        "endColumn" : 35,
+                                        "endColumn" : 60,
                                         "offset" : 26238,
                                         "length" : 59
                                       }
@@ -14123,9 +14125,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 476,
-                                      "beginColumn" : 33,
-                                      "endLine" : 478,
-                                      "endColumn" : 39,
+                                      "beginColumn" : 35,
+                                      "endLine" : 477,
+                                      "endColumn" : 41,
                                       "offset" : 26140,
                                       "length" : 97
                                     }
@@ -14292,7 +14294,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 479,
-                                      "beginColumn" : 30,
+                                      "beginColumn" : 42,
                                       "endLine" : 479,
                                       "endColumn" : 32,
                                       "offset" : 26358,
@@ -14578,7 +14580,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 484,
-                                      "beginColumn" : 29,
+                                      "beginColumn" : 43,
                                       "endLine" : 484,
                                       "endColumn" : 31,
                                       "offset" : 26632,
@@ -14837,7 +14839,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 485,
-                                      "beginColumn" : 30,
+                                      "beginColumn" : 42,
                                       "endLine" : 485,
                                       "endColumn" : 32,
                                       "offset" : 26723,
@@ -15847,7 +15849,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 309,
-                                      "beginColumn" : 21,
+                                      "beginColumn" : 35,
                                       "endLine" : 309,
                                       "endColumn" : 23,
                                       "offset" : 16720,
@@ -16169,7 +16171,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 321,
-                                      "beginColumn" : 32,
+                                      "beginColumn" : 49,
                                       "endLine" : 321,
                                       "endColumn" : 34,
                                       "offset" : 17393,
@@ -16438,7 +16440,7 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                             },
                                             "beginLine" : 323,
-                                            "beginColumn" : 36,
+                                            "beginColumn" : 59,
                                             "endLine" : 323,
                                             "endColumn" : 38,
                                             "offset" : 17505,
@@ -16783,7 +16785,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 324,
-                                          "beginColumn" : 36,
+                                          "beginColumn" : 62,
                                           "endLine" : 324,
                                           "endColumn" : 38,
                                           "offset" : 17572,
@@ -16825,7 +16827,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 324,
-                                        "beginColumn" : 36,
+                                        "beginColumn" : 62,
                                         "endLine" : 324,
                                         "endColumn" : 38,
                                         "offset" : 17572,
@@ -17087,7 +17089,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 325,
-                                          "beginColumn" : 24,
+                                          "beginColumn" : 38,
                                           "endLine" : 325,
                                           "endColumn" : 26,
                                           "offset" : 17644,
@@ -17347,7 +17349,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 326,
-                                          "beginColumn" : 27,
+                                          "beginColumn" : 44,
                                           "endLine" : 326,
                                           "endColumn" : 29,
                                           "offset" : 17734,
@@ -17389,9 +17391,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 325,
-                                        "beginColumn" : 27,
+                                        "beginColumn" : 29,
                                         "endLine" : 326,
-                                        "endColumn" : 26,
+                                        "endColumn" : 43,
                                         "offset" : 17647,
                                         "length" : 86
                                       }
@@ -17431,9 +17433,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 324,
-                                      "beginColumn" : 39,
-                                      "endLine" : 326,
-                                      "endColumn" : 26,
+                                      "beginColumn" : 41,
+                                      "endLine" : 325,
+                                      "endColumn" : 28,
                                       "offset" : 17575,
                                       "length" : 71
                                     }
@@ -17717,7 +17719,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 337,
-                                      "beginColumn" : 32,
+                                      "beginColumn" : 49,
                                       "endLine" : 337,
                                       "endColumn" : 34,
                                       "offset" : 18397,
@@ -17986,7 +17988,7 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                             },
                                             "beginLine" : 339,
-                                            "beginColumn" : 36,
+                                            "beginColumn" : 59,
                                             "endLine" : 339,
                                             "endColumn" : 38,
                                             "offset" : 18511,
@@ -18331,7 +18333,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 340,
-                                          "beginColumn" : 36,
+                                          "beginColumn" : 62,
                                           "endLine" : 340,
                                           "endColumn" : 38,
                                           "offset" : 18578,
@@ -18373,7 +18375,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 340,
-                                        "beginColumn" : 36,
+                                        "beginColumn" : 62,
                                         "endLine" : 340,
                                         "endColumn" : 38,
                                         "offset" : 18578,
@@ -18635,7 +18637,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 341,
-                                          "beginColumn" : 24,
+                                          "beginColumn" : 38,
                                           "endLine" : 341,
                                           "endColumn" : 26,
                                           "offset" : 18649,
@@ -18895,7 +18897,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 342,
-                                          "beginColumn" : 27,
+                                          "beginColumn" : 44,
                                           "endLine" : 342,
                                           "endColumn" : 29,
                                           "offset" : 18739,
@@ -18937,9 +18939,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 341,
-                                        "beginColumn" : 27,
+                                        "beginColumn" : 29,
                                         "endLine" : 342,
-                                        "endColumn" : 26,
+                                        "endColumn" : 43,
                                         "offset" : 18652,
                                         "length" : 86
                                       }
@@ -18979,9 +18981,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 340,
-                                      "beginColumn" : 39,
-                                      "endLine" : 342,
-                                      "endColumn" : 26,
+                                      "beginColumn" : 41,
+                                      "endLine" : 341,
+                                      "endColumn" : 28,
                                       "offset" : 18581,
                                       "length" : 70
                                     }
@@ -19265,7 +19267,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 351,
-                                      "beginColumn" : 32,
+                                      "beginColumn" : 49,
                                       "endLine" : 351,
                                       "endColumn" : 34,
                                       "offset" : 19320,
@@ -19528,7 +19530,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 353,
-                                          "beginColumn" : 34,
+                                          "beginColumn" : 57,
                                           "endLine" : 353,
                                           "endColumn" : 36,
                                           "offset" : 19432,
@@ -19844,7 +19846,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 354,
-                                          "beginColumn" : 36,
+                                          "beginColumn" : 62,
                                           "endLine" : 354,
                                           "endColumn" : 38,
                                           "offset" : 19497,
@@ -19886,9 +19888,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 353,
-                                        "beginColumn" : 37,
+                                        "beginColumn" : 39,
                                         "endLine" : 354,
-                                        "endColumn" : 35,
+                                        "endColumn" : 61,
                                         "offset" : 19435,
                                         "length" : 61
                                       }
@@ -20148,7 +20150,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 355,
-                                          "beginColumn" : 24,
+                                          "beginColumn" : 38,
                                           "endLine" : 355,
                                           "endColumn" : 26,
                                           "offset" : 19568,
@@ -20408,7 +20410,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 356,
-                                          "beginColumn" : 27,
+                                          "beginColumn" : 44,
                                           "endLine" : 356,
                                           "endColumn" : 29,
                                           "offset" : 19658,
@@ -20450,9 +20452,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 355,
-                                        "beginColumn" : 27,
+                                        "beginColumn" : 29,
                                         "endLine" : 356,
-                                        "endColumn" : 26,
+                                        "endColumn" : 43,
                                         "offset" : 19571,
                                         "length" : 86
                                       }
@@ -20491,10 +20493,10 @@
                                         "type" : "Some",
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
-                                      "beginLine" : 353,
-                                      "beginColumn" : 99,
-                                      "endLine" : 356,
-                                      "endColumn" : 26,
+                                      "beginLine" : 354,
+                                      "beginColumn" : 123,
+                                      "endLine" : 355,
+                                      "endColumn" : 28,
                                       "offset" : 19497,
                                       "length" : 73
                                     }
@@ -20778,7 +20780,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 365,
-                                      "beginColumn" : 32,
+                                      "beginColumn" : 49,
                                       "endLine" : 365,
                                       "endColumn" : 34,
                                       "offset" : 20260,
@@ -21041,7 +21043,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 367,
-                                          "beginColumn" : 34,
+                                          "beginColumn" : 57,
                                           "endLine" : 367,
                                           "endColumn" : 36,
                                           "offset" : 20370,
@@ -21357,7 +21359,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 368,
-                                          "beginColumn" : 36,
+                                          "beginColumn" : 62,
                                           "endLine" : 368,
                                           "endColumn" : 38,
                                           "offset" : 20436,
@@ -21399,9 +21401,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 367,
-                                        "beginColumn" : 37,
+                                        "beginColumn" : 39,
                                         "endLine" : 368,
-                                        "endColumn" : 35,
+                                        "endColumn" : 61,
                                         "offset" : 20373,
                                         "length" : 62
                                       }
@@ -21661,7 +21663,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 369,
-                                          "beginColumn" : 24,
+                                          "beginColumn" : 38,
                                           "endLine" : 369,
                                           "endColumn" : 26,
                                           "offset" : 20508,
@@ -21921,7 +21923,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                           },
                                           "beginLine" : 370,
-                                          "beginColumn" : 27,
+                                          "beginColumn" : 44,
                                           "endLine" : 370,
                                           "endColumn" : 29,
                                           "offset" : 20598,
@@ -21963,9 +21965,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 369,
-                                        "beginColumn" : 27,
+                                        "beginColumn" : 29,
                                         "endLine" : 370,
-                                        "endColumn" : 26,
+                                        "endColumn" : 43,
                                         "offset" : 20511,
                                         "length" : 86
                                       }
@@ -22004,10 +22006,10 @@
                                         "type" : "Some",
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
-                                      "beginLine" : 367,
-                                      "beginColumn" : 100,
-                                      "endLine" : 370,
-                                      "endColumn" : 26,
+                                      "beginLine" : 368,
+                                      "beginColumn" : 124,
+                                      "endLine" : 369,
+                                      "endColumn" : 28,
                                       "offset" : 20436,
                                       "length" : 74
                                     }
@@ -22291,7 +22293,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 376,
-                                      "beginColumn" : 32,
+                                      "beginColumn" : 49,
                                       "endLine" : 376,
                                       "endColumn" : 34,
                                       "offset" : 21074,
@@ -22552,7 +22554,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 377,
-                                        "beginColumn" : 33,
+                                        "beginColumn" : 47,
                                         "endLine" : 377,
                                         "endColumn" : 35,
                                         "offset" : 21168,
@@ -22812,7 +22814,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                         },
                                         "beginLine" : 378,
-                                        "beginColumn" : 26,
+                                        "beginColumn" : 43,
                                         "endLine" : 378,
                                         "endColumn" : 28,
                                         "offset" : 21257,
@@ -22854,9 +22856,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Regulate.aadl"
                                       },
                                       "beginLine" : 377,
-                                      "beginColumn" : 36,
+                                      "beginColumn" : 38,
                                       "endLine" : 378,
-                                      "endColumn" : 25,
+                                      "endColumn" : 42,
                                       "offset" : 21171,
                                       "length" : 85
                                     }
@@ -27449,6 +27451,8 @@
                                   "type" : "org.sireum.lang.ast.Purity",
                                   "value" : "StrictPure"
                                 },
+                                "annotations" : [
+                                ],
                                 "id" : {
                                   "type" : "org.sireum.lang.ast.Id",
                                   "value" : "timeout_condition_satisfied",
@@ -28006,7 +28010,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 142,
-                                      "beginColumn" : 51,
+                                      "beginColumn" : 65,
                                       "endLine" : 142,
                                       "endColumn" : 53,
                                       "offset" : 7541,
@@ -28328,7 +28332,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 152,
-                                      "beginColumn" : 28,
+                                      "beginColumn" : 40,
                                       "endLine" : 152,
                                       "endColumn" : 30,
                                       "offset" : 7993,
@@ -28587,7 +28591,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 153,
-                                      "beginColumn" : 33,
+                                      "beginColumn" : 47,
                                       "endLine" : 153,
                                       "endColumn" : 35,
                                       "offset" : 8142,
@@ -28873,7 +28877,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 158,
-                                      "beginColumn" : 28,
+                                      "beginColumn" : 40,
                                       "endLine" : 158,
                                       "endColumn" : 30,
                                       "offset" : 8533,
@@ -29132,7 +29136,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 159,
-                                      "beginColumn" : 33,
+                                      "beginColumn" : 47,
                                       "endLine" : 159,
                                       "endColumn" : 35,
                                       "offset" : 8623,
@@ -29418,7 +29422,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 166,
-                                      "beginColumn" : 28,
+                                      "beginColumn" : 40,
                                       "endLine" : 166,
                                       "endColumn" : 30,
                                       "offset" : 9021,
@@ -29677,7 +29681,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 167,
-                                      "beginColumn" : 33,
+                                      "beginColumn" : 47,
                                       "endLine" : 167,
                                       "endColumn" : 35,
                                       "offset" : 9111,
@@ -30021,7 +30025,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 174,
-                                        "beginColumn" : 46,
+                                        "beginColumn" : 76,
                                         "endLine" : 174,
                                         "endColumn" : 48,
                                         "offset" : 9566,
@@ -30337,7 +30341,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 175,
-                                        "beginColumn" : 40,
+                                        "beginColumn" : 70,
                                         "endLine" : 175,
                                         "endColumn" : 42,
                                         "offset" : 9651,
@@ -30379,9 +30383,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 174,
-                                      "beginColumn" : 49,
+                                      "beginColumn" : 51,
                                       "endLine" : 175,
-                                      "endColumn" : 39,
+                                      "endColumn" : 69,
                                       "offset" : 9569,
                                       "length" : 81
                                     }
@@ -30830,7 +30834,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 182,
-                                        "beginColumn" : 46,
+                                        "beginColumn" : 76,
                                         "endLine" : 182,
                                         "endColumn" : 48,
                                         "offset" : 10109,
@@ -31146,7 +31150,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 184,
-                                        "beginColumn" : 40,
+                                        "beginColumn" : 70,
                                         "endLine" : 184,
                                         "endColumn" : 42,
                                         "offset" : 10200,
@@ -31188,9 +31192,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 182,
-                                      "beginColumn" : 49,
+                                      "beginColumn" : 51,
                                       "endLine" : 184,
-                                      "endColumn" : 39,
+                                      "endColumn" : 69,
                                       "offset" : 10112,
                                       "length" : 87
                                     }
@@ -31786,7 +31790,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 195,
-                                          "beginColumn" : 34,
+                                          "beginColumn" : 56,
                                           "endLine" : 195,
                                           "endColumn" : 36,
                                           "offset" : 10732,
@@ -32046,7 +32050,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 197,
-                                          "beginColumn" : 33,
+                                          "beginColumn" : 55,
                                           "endLine" : 197,
                                           "endColumn" : 35,
                                           "offset" : 10808,
@@ -32088,9 +32092,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 195,
-                                        "beginColumn" : 37,
+                                        "beginColumn" : 39,
                                         "endLine" : 197,
-                                        "endColumn" : 32,
+                                        "endColumn" : 54,
                                         "offset" : 10735,
                                         "length" : 72
                                       }
@@ -32130,9 +32134,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 195,
-                                      "beginColumn" : 37,
+                                      "beginColumn" : 39,
                                       "endLine" : 197,
-                                      "endColumn" : 32,
+                                      "endColumn" : 54,
                                       "offset" : 10735,
                                       "length" : 72
                                     }
@@ -32355,7 +32359,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 204,
-                                      "beginColumn" : 33,
+                                      "beginColumn" : 56,
                                       "endLine" : 204,
                                       "endColumn" : 37,
                                       "offset" : 11155,
@@ -32998,6 +33002,8 @@
                                   "type" : "org.sireum.lang.ast.Purity",
                                   "value" : "StrictPure"
                                 },
+                                "annotations" : [
+                                ],
                                 "id" : {
                                   "type" : "org.sireum.lang.ast.Id",
                                   "value" : "timeout_condition_satisfied",
@@ -33558,7 +33564,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 333,
-                                        "beginColumn" : 20,
+                                        "beginColumn" : 33,
                                         "endLine" : 333,
                                         "endColumn" : 22,
                                         "offset" : 17503,
@@ -33818,7 +33824,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 334,
-                                        "beginColumn" : 14,
+                                        "beginColumn" : 21,
                                         "endLine" : 334,
                                         "endColumn" : 16,
                                         "offset" : 17553,
@@ -33860,9 +33866,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 333,
-                                      "beginColumn" : 23,
+                                      "beginColumn" : 25,
                                       "endLine" : 334,
-                                      "endColumn" : 13,
+                                      "endColumn" : 20,
                                       "offset" : 17506,
                                       "length" : 46
                                     }
@@ -34182,7 +34188,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 343,
-                                        "beginColumn" : 29,
+                                        "beginColumn" : 51,
                                         "endLine" : 343,
                                         "endColumn" : 30,
                                         "offset" : 18055,
@@ -34248,7 +34254,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 343,
-                                      "beginColumn" : 31,
+                                      "beginColumn" : 32,
                                       "endLine" : 343,
                                       "endColumn" : 56,
                                       "offset" : 18057,
@@ -34452,7 +34458,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 347,
-                                        "beginColumn" : 12,
+                                        "beginColumn" : 17,
                                         "endLine" : 347,
                                         "endColumn" : 14,
                                         "offset" : 18289,
@@ -34628,7 +34634,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 347,
-                                        "beginColumn" : 64,
+                                        "beginColumn" : 86,
                                         "endLine" : 347,
                                         "endColumn" : 66,
                                         "offset" : 18341,
@@ -34670,9 +34676,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 347,
-                                      "beginColumn" : 15,
+                                      "beginColumn" : 17,
                                       "endLine" : 347,
-                                      "endColumn" : 63,
+                                      "endColumn" : 85,
                                       "offset" : 18292,
                                       "length" : 48
                                     }
@@ -34874,7 +34880,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 351,
-                                        "beginColumn" : 12,
+                                        "beginColumn" : 17,
                                         "endLine" : 351,
                                         "endColumn" : 14,
                                         "offset" : 18551,
@@ -35050,7 +35056,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 351,
-                                        "beginColumn" : 64,
+                                        "beginColumn" : 86,
                                         "endLine" : 351,
                                         "endColumn" : 66,
                                         "offset" : 18603,
@@ -35092,9 +35098,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 351,
-                                      "beginColumn" : 15,
+                                      "beginColumn" : 17,
                                       "endLine" : 351,
-                                      "endColumn" : 63,
+                                      "endColumn" : 85,
                                       "offset" : 18554,
                                       "length" : 48
                                     }
@@ -35380,7 +35386,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 358,
-                                      "beginColumn" : 27,
+                                      "beginColumn" : 39,
                                       "endLine" : 358,
                                       "endColumn" : 29,
                                       "offset" : 18883,
@@ -35641,7 +35647,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 359,
-                                        "beginColumn" : 31,
+                                        "beginColumn" : 44,
                                         "endLine" : 359,
                                         "endColumn" : 33,
                                         "offset" : 18969,
@@ -35901,7 +35907,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 361,
-                                        "beginColumn" : 16,
+                                        "beginColumn" : 23,
                                         "endLine" : 361,
                                         "endColumn" : 18,
                                         "offset" : 19028,
@@ -35943,9 +35949,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 359,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 36,
                                       "endLine" : 361,
-                                      "endColumn" : 15,
+                                      "endColumn" : 22,
                                       "offset" : 18972,
                                       "length" : 55
                                     }
@@ -36231,7 +36237,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 367,
-                                        "beginColumn" : 27,
+                                        "beginColumn" : 39,
                                         "endLine" : 367,
                                         "endColumn" : 29,
                                         "offset" : 19441,
@@ -36493,7 +36499,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 369,
-                                          "beginColumn" : 35,
+                                          "beginColumn" : 60,
                                           "endLine" : 369,
                                           "endColumn" : 36,
                                           "offset" : 19541,
@@ -36753,7 +36759,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 369,
-                                          "beginColumn" : 89,
+                                          "beginColumn" : 114,
                                           "endLine" : 369,
                                           "endColumn" : 90,
                                           "offset" : 19595,
@@ -36795,9 +36801,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 369,
-                                        "beginColumn" : 37,
+                                        "beginColumn" : 38,
                                         "endLine" : 369,
-                                        "endColumn" : 88,
+                                        "endColumn" : 113,
                                         "offset" : 19543,
                                         "length" : 51
                                       }
@@ -36837,9 +36843,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 367,
-                                      "beginColumn" : 30,
+                                      "beginColumn" : 32,
                                       "endLine" : 369,
-                                      "endColumn" : 36,
+                                      "endColumn" : 37,
                                       "offset" : 19444,
                                       "length" : 98
                                     }
@@ -37098,7 +37104,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 370,
-                                        "beginColumn" : 31,
+                                        "beginColumn" : 44,
                                         "endLine" : 370,
                                         "endColumn" : 33,
                                         "offset" : 19652,
@@ -37358,7 +37364,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 372,
-                                        "beginColumn" : 16,
+                                        "beginColumn" : 23,
                                         "endLine" : 372,
                                         "endColumn" : 18,
                                         "offset" : 19711,
@@ -37400,9 +37406,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 370,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 36,
                                       "endLine" : 372,
-                                      "endColumn" : 15,
+                                      "endColumn" : 22,
                                       "offset" : 19655,
                                       "length" : 55
                                     }
@@ -37688,7 +37694,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 381,
-                                        "beginColumn" : 27,
+                                        "beginColumn" : 39,
                                         "endLine" : 381,
                                         "endColumn" : 29,
                                         "offset" : 20338,
@@ -37952,7 +37958,7 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                             },
                                             "beginLine" : 383,
-                                            "beginColumn" : 36,
+                                            "beginColumn" : 61,
                                             "endLine" : 383,
                                             "endColumn" : 38,
                                             "offset" : 20440,
@@ -38238,7 +38244,7 @@
                                                 "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                               },
                                               "beginLine" : 384,
-                                              "beginColumn" : 60,
+                                              "beginColumn" : 82,
                                               "endLine" : 384,
                                               "endColumn" : 61,
                                               "offset" : 20528,
@@ -38280,9 +38286,9 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                             },
                                             "beginLine" : 384,
-                                            "beginColumn" : 35,
+                                            "beginColumn" : 60,
                                             "endLine" : 384,
-                                            "endColumn" : 59,
+                                            "endColumn" : 81,
                                             "offset" : 20503,
                                             "length" : 24
                                           }
@@ -38322,9 +38328,9 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 383,
-                                          "beginColumn" : 39,
+                                          "beginColumn" : 41,
                                           "endLine" : 384,
-                                          "endColumn" : 34,
+                                          "endColumn" : 59,
                                           "offset" : 20443,
                                           "length" : 59
                                         }
@@ -38610,7 +38616,7 @@
                                                 "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                               },
                                               "beginLine" : 385,
-                                              "beginColumn" : 61,
+                                              "beginColumn" : 83,
                                               "endLine" : 385,
                                               "endColumn" : 62,
                                               "offset" : 20603,
@@ -38652,9 +38658,9 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                             },
                                             "beginLine" : 385,
-                                            "beginColumn" : 36,
+                                            "beginColumn" : 61,
                                             "endLine" : 385,
-                                            "endColumn" : 60,
+                                            "endColumn" : 82,
                                             "offset" : 20578,
                                             "length" : 24
                                           }
@@ -38912,7 +38918,7 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                             },
                                             "beginLine" : 386,
-                                            "beginColumn" : 35,
+                                            "beginColumn" : 60,
                                             "endLine" : 386,
                                             "endColumn" : 37,
                                             "offset" : 20652,
@@ -38954,9 +38960,9 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 385,
-                                          "beginColumn" : 61,
+                                          "beginColumn" : 107,
                                           "endLine" : 386,
-                                          "endColumn" : 34,
+                                          "endColumn" : 59,
                                           "offset" : 20603,
                                           "length" : 48
                                         }
@@ -38995,10 +39001,10 @@
                                           "type" : "Some",
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
-                                        "beginLine" : 383,
-                                        "beginColumn" : 99,
-                                        "endLine" : 386,
-                                        "endColumn" : 60,
+                                        "beginLine" : 384,
+                                        "beginColumn" : 119,
+                                        "endLine" : 385,
+                                        "endColumn" : 106,
                                         "offset" : 20503,
                                         "length" : 99
                                       }
@@ -39038,9 +39044,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 381,
-                                      "beginColumn" : 30,
-                                      "endLine" : 386,
-                                      "endColumn" : 98,
+                                      "beginColumn" : 32,
+                                      "endLine" : 384,
+                                      "endColumn" : 118,
                                       "offset" : 20341,
                                       "length" : 161
                                     }
@@ -39209,7 +39215,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 387,
-                                        "beginColumn" : 31,
+                                        "beginColumn" : 44,
                                         "endLine" : 387,
                                         "endColumn" : 33,
                                         "offset" : 20711,
@@ -39379,7 +39385,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 389,
-                                        "beginColumn" : 16,
+                                        "beginColumn" : 23,
                                         "endLine" : 389,
                                         "endColumn" : 18,
                                         "offset" : 20750,
@@ -39421,9 +39427,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 387,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 36,
                                       "endLine" : 389,
-                                      "endColumn" : 15,
+                                      "endColumn" : 22,
                                       "offset" : 20714,
                                       "length" : 35
                                     }
@@ -39711,7 +39717,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 396,
-                                          "beginColumn" : 27,
+                                          "beginColumn" : 39,
                                           "endLine" : 396,
                                           "endColumn" : 29,
                                           "offset" : 21222,
@@ -39997,7 +40003,7 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                             },
                                             "beginLine" : 398,
-                                            "beginColumn" : 60,
+                                            "beginColumn" : 82,
                                             "endLine" : 398,
                                             "endColumn" : 61,
                                             "offset" : 21347,
@@ -40039,9 +40045,9 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 398,
-                                          "beginColumn" : 34,
+                                          "beginColumn" : 59,
                                           "endLine" : 398,
-                                          "endColumn" : 59,
+                                          "endColumn" : 81,
                                           "offset" : 21321,
                                           "length" : 25
                                         }
@@ -40081,9 +40087,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 396,
-                                        "beginColumn" : 30,
+                                        "beginColumn" : 32,
                                         "endLine" : 398,
-                                        "endColumn" : 33,
+                                        "endColumn" : 58,
                                         "offset" : 21225,
                                         "length" : 95
                                       }
@@ -40367,7 +40373,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 399,
-                                          "beginColumn" : 60,
+                                          "beginColumn" : 82,
                                           "endLine" : 399,
                                           "endColumn" : 61,
                                           "offset" : 21419,
@@ -40409,9 +40415,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 399,
-                                        "beginColumn" : 34,
+                                        "beginColumn" : 59,
                                         "endLine" : 399,
-                                        "endColumn" : 59,
+                                        "endColumn" : 81,
                                         "offset" : 21393,
                                         "length" : 25
                                       }
@@ -40450,10 +40456,10 @@
                                         "type" : "Some",
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
-                                      "beginLine" : 396,
-                                      "beginColumn" : 126,
+                                      "beginLine" : 398,
+                                      "beginColumn" : 154,
                                       "endLine" : 399,
-                                      "endColumn" : 33,
+                                      "endColumn" : 58,
                                       "offset" : 21321,
                                       "length" : 71
                                     }
@@ -40712,7 +40718,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 400,
-                                        "beginColumn" : 31,
+                                        "beginColumn" : 44,
                                         "endLine" : 400,
                                         "endColumn" : 33,
                                         "offset" : 21461,
@@ -40972,7 +40978,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 402,
-                                        "beginColumn" : 16,
+                                        "beginColumn" : 23,
                                         "endLine" : 402,
                                         "endColumn" : 18,
                                         "offset" : 21520,
@@ -41014,9 +41020,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 400,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 36,
                                       "endLine" : 402,
-                                      "endColumn" : 15,
+                                      "endColumn" : 22,
                                       "offset" : 21464,
                                       "length" : 55
                                     }
@@ -41300,7 +41306,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 407,
-                                      "beginColumn" : 27,
+                                      "beginColumn" : 39,
                                       "endLine" : 407,
                                       "endColumn" : 29,
                                       "offset" : 21814,
@@ -41561,7 +41567,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 408,
-                                        "beginColumn" : 31,
+                                        "beginColumn" : 44,
                                         "endLine" : 408,
                                         "endColumn" : 33,
                                         "offset" : 21902,
@@ -41821,7 +41827,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 410,
-                                        "beginColumn" : 16,
+                                        "beginColumn" : 23,
                                         "endLine" : 410,
                                         "endColumn" : 18,
                                         "offset" : 21961,
@@ -41863,9 +41869,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 408,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 36,
                                       "endLine" : 410,
-                                      "endColumn" : 15,
+                                      "endColumn" : 22,
                                       "offset" : 21905,
                                       "length" : 55
                                     }
@@ -42399,6 +42405,8 @@
                                   "type" : "org.sireum.lang.ast.Purity",
                                   "value" : "StrictPure"
                                 },
+                                "annotations" : [
+                                ],
                                 "id" : {
                                   "type" : "org.sireum.lang.ast.Id",
                                   "value" : "timeout_condition_satisfied",
@@ -42957,7 +42965,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 252,
-                                      "beginColumn" : 19,
+                                      "beginColumn" : 31,
                                       "endLine" : 252,
                                       "endColumn" : 21,
                                       "offset" : 13243,
@@ -43279,7 +43287,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 262,
-                                      "beginColumn" : 31,
+                                      "beginColumn" : 46,
                                       "endLine" : 262,
                                       "endColumn" : 33,
                                       "offset" : 13824,
@@ -43548,7 +43556,7 @@
                                               "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                             },
                                             "beginLine" : 264,
-                                            "beginColumn" : 37,
+                                            "beginColumn" : 60,
                                             "endLine" : 264,
                                             "endColumn" : 39,
                                             "offset" : 13934,
@@ -43893,7 +43901,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 264,
-                                          "beginColumn" : 95,
+                                          "beginColumn" : 121,
                                           "endLine" : 264,
                                           "endColumn" : 97,
                                           "offset" : 13992,
@@ -43935,7 +43943,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 264,
-                                        "beginColumn" : 95,
+                                        "beginColumn" : 121,
                                         "endLine" : 264,
                                         "endColumn" : 97,
                                         "offset" : 13992,
@@ -44195,7 +44203,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 265,
-                                        "beginColumn" : 24,
+                                        "beginColumn" : 36,
                                         "endLine" : 265,
                                         "endColumn" : 26,
                                         "offset" : 14064,
@@ -44237,9 +44245,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 264,
-                                      "beginColumn" : 98,
+                                      "beginColumn" : 100,
                                       "endLine" : 265,
-                                      "endColumn" : 23,
+                                      "endColumn" : 35,
                                       "offset" : 13995,
                                       "length" : 68
                                     }
@@ -44523,7 +44531,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 273,
-                                      "beginColumn" : 31,
+                                      "beginColumn" : 46,
                                       "endLine" : 273,
                                       "endColumn" : 33,
                                       "offset" : 14573,
@@ -44786,7 +44794,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 275,
-                                          "beginColumn" : 35,
+                                          "beginColumn" : 58,
                                           "endLine" : 275,
                                           "endColumn" : 37,
                                           "offset" : 14683,
@@ -45102,7 +45110,7 @@
                                             "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                           },
                                           "beginLine" : 275,
-                                          "beginColumn" : 92,
+                                          "beginColumn" : 118,
                                           "endLine" : 275,
                                           "endColumn" : 94,
                                           "offset" : 14740,
@@ -45144,9 +45152,9 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 275,
-                                        "beginColumn" : 38,
+                                        "beginColumn" : 40,
                                         "endLine" : 275,
-                                        "endColumn" : 91,
+                                        "endColumn" : 117,
                                         "offset" : 14686,
                                         "length" : 53
                                       }
@@ -45404,7 +45412,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 276,
-                                        "beginColumn" : 24,
+                                        "beginColumn" : 36,
                                         "endLine" : 276,
                                         "endColumn" : 26,
                                         "offset" : 14812,
@@ -45446,9 +45454,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 275,
-                                      "beginColumn" : 92,
+                                      "beginColumn" : 171,
                                       "endLine" : 276,
-                                      "endColumn" : 23,
+                                      "endColumn" : 35,
                                       "offset" : 14740,
                                       "length" : 71
                                     }
@@ -45732,7 +45740,7 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 283,
-                                      "beginColumn" : 31,
+                                      "beginColumn" : 46,
                                       "endLine" : 283,
                                       "endColumn" : 33,
                                       "offset" : 15252,
@@ -46080,7 +46088,7 @@
                                           "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                         },
                                         "beginLine" : 284,
-                                        "beginColumn" : 65,
+                                        "beginColumn" : 77,
                                         "endLine" : 284,
                                         "endColumn" : 67,
                                         "offset" : 15372,
@@ -46122,9 +46130,9 @@
                                         "value" : "\/isolette-841-f23\/aadl\/packages\/Monitor.aadl"
                                       },
                                       "beginLine" : 284,
-                                      "beginColumn" : 48,
+                                      "beginColumn" : 77,
                                       "endLine" : 284,
-                                      "endColumn" : 64,
+                                      "endColumn" : 76,
                                       "offset" : 15355,
                                       "length" : 16
                                     }

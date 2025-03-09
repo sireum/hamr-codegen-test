@@ -240,8 +240,9 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
     println(s"Result Dir: ${destDir.up.toUri}")
 
-    val results: CodeGenResults = CodeGen.codeGen(
-      model = model, shouldWriteOutResources = T, options = testOps, plugins = ISZ(), reporter = reporter,
+    val results = CodeGen.codeGen(
+      model = model, shouldWriteOutResources = T, options = testOps,
+      plugins = ISZ(), store = Map.empty, reporter = reporter,
       transpilerCallback = (_, _) => 0,
       proyekIveCallback = _ => 0,
       sergenCallback = (_, _) => 0,
@@ -284,7 +285,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
       // For an unknown reason, the compare() method halts and does not complete when run after building.
       // Additionally, some details of the building process appear to be version dependent, so comparing before
       // building is probably preferable - Clint
-      val longResourcePath = ops.StringOps(results.resources(0).dstPath)
+      val longResourcePath = ops.StringOps(results._1.resources(0).dstPath)
       val resourcePath = longResourcePath.replaceAllLiterally((resultsRoot / testName / "results" / strictModeString / "src").value, "")
       val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/".toString).apply(0)
       if (ros2SetupPath.nonEmpty) {
