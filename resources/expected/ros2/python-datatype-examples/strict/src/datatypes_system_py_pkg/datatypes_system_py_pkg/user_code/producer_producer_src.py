@@ -24,3 +24,10 @@ def initialize(n):
 def timeTriggered():
     pass # Handle communication
 
+
+#=================================================
+#  Include any additional declarations here
+#=================================================
+# Additions within these tags will be preserved when re-running Codegen
+
+# Additions within these tags will be preserved when re-running Codegen
