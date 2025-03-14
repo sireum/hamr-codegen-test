@@ -81,3 +81,10 @@ def handle_myArray2(msg):
 def handle_myArray3(msg):
     pass # Handle myArray3 msg
 
+
+#=================================================
+#  Include any additional declarations here
+#=================================================
+# Additions within these tags will be preserved when re-running Codegen
+
+# Additions within these tags will be preserved when re-running Codegen
