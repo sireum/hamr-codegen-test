@@ -6,7 +6,7 @@ import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 import Ros2Tests._
 import org.sireum.hamr.codegen.CodeGen
-import org.sireum.hamr.codegen.common.util.CodeGenResults
+import org.sireum.hamr.codegen.common.containers.FileResource
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 
 class Ros2Tests extends TestSuite with Ros2TestUtil {
@@ -16,7 +16,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
   val verbose: B = F
 
   override def testModes: ISZ[TestMode.Type] =
-    super.testModes // :+ TestMode.compile
+    super.testModes :+ TestMode.compile
 
   val root = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
   val resourceDir: Os.Path = root / "resources"
@@ -285,7 +285,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
       // For an unknown reason, the compare() method halts and does not complete when run after building.
       // Additionally, some details of the building process appear to be version dependent, so comparing before
       // building is probably preferable - Clint
-      val longResourcePath = ops.StringOps(results._1.resources(0).dstPath)
+      val longResourcePath = ops.StringOps(results._1.resources(0).asInstanceOf[FileResource].dstPath)
       val resourcePath = longResourcePath.replaceAllLiterally((resultsRoot / testName / "results" / strictModeString / "src").value, "")
       val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/".toString).apply(0)
       if (ros2SetupPath.nonEmpty) {
