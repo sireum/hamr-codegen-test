@@ -5,6 +5,7 @@ import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
+import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugin
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
 import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
 import org.sireum.message.Reporter
@@ -139,7 +140,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
     val reporter = Reporter.create
 
-    val results = CodeGen.codeGen(model, T, testOptions, ArsitPlugin.gumboEnhancedPlugins(),
+    val plugins = ArsitPlugin.gumboEnhancedPlugins() ++ MicrokitPlugin.defaultMicrokitPlugins
+    val results = CodeGen.codeGen(model, T, testOptions, plugins,
       Map.empty, reporter,
       (SireumSlangTranspilersCOption, Reporter) => {
         0

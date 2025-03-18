@@ -1,6 +1,7 @@
 package org.sireum.hamr.codegen.test.microkit
 
 import org.sireum._
+import org.sireum.hamr.codegen.common.types.TypeUtil
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util.ExperimentalOptions
 import org.sireum.hamr.codegen.test.CodegenTest
@@ -20,15 +21,25 @@ class MicrokitTests extends CodegenTest {
 
   override def filter: B = F
 
-  override def filters: ISZ[String] = ISZ("simple_temp_aadl-sporadic")
+  override def filters: ISZ[String] = ISZ("_types_event_data")
 
-  override def ignores: ISZ[String] = ISZ("case-transition-models")
+  override def ignores: ISZ[String] = ISZ(
+    "case-transition-models",
+
+    // TODO: adapt to crust/verus
+    "aadl_datatypes",
+    "micro-examples_microkit_aadl_port_types_event__FF6D",
+    "ethernet-simple"
+  )
 
   override val verbose: B = ops.ISZOps(testModes).contains(TestMode.verbose)
 
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
     val t = ops.StringOps(aadlDir.up.value)
-    val testName = ops.StringOps(t.substring(t.stringIndexOf("INSPECTA-models") + 16, t.s.size)).replaceAllLiterally(Os.fileSep, "_")
+    var testName = ops.StringOps(t.substring(t.stringIndexOf("INSPECTA-models") + 16, t.s.size)).replaceAllLiterally(Os.fileSep, "_")
+
+    // add a small sha to resolve common prefixes in test names
+    testName = s"${testName}__${TypeUtil.stableTypeSig(testName, 2)}"
 
     val testOptions = baseOptions
 
