@@ -22,8 +22,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "producer_producer_exe = datatypes_system_py_pkg.user_code.producer_producer_runner:main",
-            "consumer_consumer_exe = datatypes_system_py_pkg.user_code.consumer_consumer_runner:main"
+            "producer_producer_exe = datatypes_system_py_pkg.base_code.producer_producer_runner:main",
+            "consumer_consumer_exe = datatypes_system_py_pkg.base_code.consumer_consumer_runner:main"
         ],
     },
 )

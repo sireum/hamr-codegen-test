@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from datatypes_system_py_pkg.base_code.producer_producer_runner import producer_producer
 from datatypes_system_py_pkg.base_code.enum_converter import *
 
 #===========================================================
@@ -11,9 +10,7 @@ from datatypes_system_py_pkg.base_code.enum_converter import *
 #=================================================
 #  I n i t i a l i z e    E n t r y    P o i n t
 #=================================================
-def initialize(n):
-    node = producer_producer()
-    node.data = n
+def initialize(node):
     node.get_logger().info("Initialize Entry Point invoked")
 
     # Initialize the node
