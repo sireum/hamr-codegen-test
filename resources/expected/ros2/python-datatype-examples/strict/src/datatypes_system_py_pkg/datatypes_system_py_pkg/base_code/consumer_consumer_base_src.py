@@ -182,10 +182,6 @@ class consumer_consumer_base(Node):
         self.inDataPortTupleVector = [
          ]
 
-        # Used by sendOutputs
-        self.outPortTupleVector = [
-         ]
-
         self.infrastructureIn_myBoolean = Queue()
         self.applicationIn_myBoolean = Queue()
         self.infrastructureIn_myInteger = Queue()
@@ -226,6 +222,10 @@ class consumer_consumer_base(Node):
         self.applicationIn_myArray2 = Queue()
         self.infrastructureIn_myArray3 = Queue()
         self.applicationIn_myArray3 = Queue()
+
+        # Used by sendOutputs
+        self.outPortTupleVector = [
+         ]
 
 #=================================================
 #  C o m m u n i c a t i o n
