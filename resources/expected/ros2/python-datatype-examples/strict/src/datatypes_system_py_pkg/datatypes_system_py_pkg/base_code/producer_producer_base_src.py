@@ -139,7 +139,10 @@ class producer_producer_base(Node):
             1)
 
         # timeTriggeredCaller callback timer
-        self.periodTimer_ = self.create_wall_timer(1000, self.timeTriggeredCaller, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1000, self.timeTriggeredCaller, callback_group=self.cb_group_)
+
+    def timeTriggered(self):
+        pass
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -148,6 +151,47 @@ class producer_producer_base(Node):
         # Used by receiveInputs
         self.inEventPortTupleVector = [
           ]
+
+        self.infrastructureOut_myBoolean = Queue()
+        self.applicationOut_myBoolean = Queue()
+        self.infrastructureOut_myInteger = Queue()
+        self.applicationOut_myInteger = Queue()
+        self.infrastructureOut_myFloat = Queue()
+        self.applicationOut_myFloat = Queue()
+        self.infrastructureOut_myCharacter = Queue()
+        self.applicationOut_myCharacter = Queue()
+        self.infrastructureOut_myString = Queue()
+        self.applicationOut_myString = Queue()
+        self.infrastructureOut_myInt8 = Queue()
+        self.applicationOut_myInt8 = Queue()
+        self.infrastructureOut_myInt16 = Queue()
+        self.applicationOut_myInt16 = Queue()
+        self.infrastructureOut_myInt32 = Queue()
+        self.applicationOut_myInt32 = Queue()
+        self.infrastructureOut_myInt64 = Queue()
+        self.applicationOut_myInt64 = Queue()
+        self.infrastructureOut_myUInt8 = Queue()
+        self.applicationOut_myUInt8 = Queue()
+        self.infrastructureOut_myUInt16 = Queue()
+        self.applicationOut_myUInt16 = Queue()
+        self.infrastructureOut_myUInt32 = Queue()
+        self.applicationOut_myUInt32 = Queue()
+        self.infrastructureOut_myUInt64 = Queue()
+        self.applicationOut_myUInt64 = Queue()
+        self.infrastructureOut_myFloat32 = Queue()
+        self.applicationOut_myFloat32 = Queue()
+        self.infrastructureOut_myFloat64 = Queue()
+        self.applicationOut_myFloat64 = Queue()
+        self.infrastructureOut_myEnum = Queue()
+        self.applicationOut_myEnum = Queue()
+        self.infrastructureOut_myStruct = Queue()
+        self.applicationOut_myStruct = Queue()
+        self.infrastructureOut_myArray1 = Queue()
+        self.applicationOut_myArray1 = Queue()
+        self.infrastructureOut_myArray2 = Queue()
+        self.applicationOut_myArray2 = Queue()
+        self.infrastructureOut_myArray3 = Queue()
+        self.applicationOut_myArray3 = Queue()
 
         # Used by sendOutputs
         self.outPortTupleVector = [
