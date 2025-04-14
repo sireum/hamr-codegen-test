@@ -10,24 +10,18 @@ object MicrokitTestUtil {
     return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "aadl" && (p.up / ".ci").exists)
   }
 
-  val resourcesDir: Os.Path = {
-    def r(p: Os.Path): Option[Os.Path] = {
-      if (ops.StringOps(p.toUri).contains("jvm/src/test/resources/expected/CodeGenTest_Base")) {
-        return Some(p.up.up)
-      } else {
-        for (pp <- p.list if pp.isDir) {
-          r(pp) match {
-            case Some(ppp) => return Some(ppp)
-            case _ =>
-          }
-        }
-        return None()
-      }
+  lazy val resourcesDir: Os.Path = {
+    val base = Os.path(".")
+    if ((base / "hamr" / "codegen" / "jvm" / "src" / "test" / "resources" / "expected" / "CodeGenTest_Base").exists) {
+      base / "hamr" / "codegen" / "jvm" / "src" / "test" / "resources"
+    } else if ((base / "jvm" / "src" / "test" / "resources" / "expected" / "CodeGenTest_Base").exists) {
+      base / "jvm" / "src" / "test" / "resources"
+    } else {
+      halt(s"Couldn't locate resources directory from: ${base.canon}")
     }
-    r(Os.path(".")).get
   }
 
-  val testResources: TestResources = {
+  lazy val testResources: TestResources = {
     val modelsDir = resourcesDir / "models" / "INSPECTA-models"
     val expectedDir = resourcesDir / "expected"
     val resultsDir = resourcesDir.up / "results"

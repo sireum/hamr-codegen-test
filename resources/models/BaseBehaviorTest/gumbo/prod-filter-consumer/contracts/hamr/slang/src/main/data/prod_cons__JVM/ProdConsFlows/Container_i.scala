@@ -27,7 +27,7 @@ object Container_i {
   /** D-Inv-Guard Data Invariant for ProdConsFlows.Container_i
     */
   @strictpure def D_Inv_Guard_Container_i(value: Option[ProdConsFlows.Container_i]): B =
-    value.nonEmpty -->: D_Inv_Container_i(value.get)
+    value.nonEmpty ___>: D_Inv_Container_i(value.get)
 }
 
 @datatype class Container_i(

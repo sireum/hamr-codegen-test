@@ -8346,7 +8346,7 @@
                                       "type" : "None"
                                     }
                                   },
-                                  "op" : "->:",
+                                  "op" : "__>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Binary",
                                     "left" : {
@@ -16835,7 +16835,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "-->:",
+                                  "op" : "___>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Binary",
                                     "left" : {
@@ -18383,7 +18383,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "-->:",
+                                  "op" : "___>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Binary",
                                     "left" : {
@@ -19896,7 +19896,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "-->:",
+                                  "op" : "___>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Binary",
                                     "left" : {
@@ -21409,7 +21409,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "-->:",
+                                  "op" : "___>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Binary",
                                     "left" : {
@@ -31536,7 +31536,7 @@
                                       "type" : "None"
                                     }
                                   },
-                                  "op" : "-->:",
+                                  "op" : "___>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Binary",
                                     "left" : {
@@ -32301,7 +32301,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "-->:",
+                                  "op" : "___>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.LitB",
                                     "value" : true,
@@ -43981,7 +43981,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "-->:",
+                                  "op" : "___>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Binary",
                                     "left" : {
@@ -45190,7 +45190,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "-->:",
+                                  "op" : "___>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Binary",
                                     "left" : {

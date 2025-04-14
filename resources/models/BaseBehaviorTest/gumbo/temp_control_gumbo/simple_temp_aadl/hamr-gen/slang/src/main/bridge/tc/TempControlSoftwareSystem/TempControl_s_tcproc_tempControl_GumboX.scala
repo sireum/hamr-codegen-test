@@ -106,7 +106,8 @@ object TempControl_s_tcproc_tempControl_GumboX {
       In_currentFanState: CoolingFan.FanCmd.Type,
       In_currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       In_latestTemp: TempSensor.Temperature_i): B =
-    (In_latestTemp.degrees < In_currentSetPoint.low.degrees) ->: (In_currentFanState == CoolingFan.FanCmd.Off)
+    In_latestTemp.degrees < In_currentSetPoint.low.degrees __>:
+      In_currentFanState == CoolingFan.FanCmd.Off
 
   /** Compute Entrypoint Contract
     *
@@ -121,7 +122,8 @@ object TempControl_s_tcproc_tempControl_GumboX {
       In_currentFanState: CoolingFan.FanCmd.Type,
       In_currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       In_latestTemp: TempSensor.Temperature_i): B =
-    (In_latestTemp.degrees > In_currentSetPoint.high.degrees) ->: (In_currentFanState == CoolingFan.FanCmd.On)
+    In_latestTemp.degrees > In_currentSetPoint.high.degrees __>:
+      In_currentFanState == CoolingFan.FanCmd.On
 
   /** Compute Entrypoint Contract
     *
@@ -212,7 +214,8 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentFanState: CoolingFan.FanCmd.Type,
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i): B =
-    (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off)
+    latestTemp.degrees < currentSetPoint.low.degrees __>:
+      currentFanState == CoolingFan.FanCmd.Off
 
   /** Compute Entrypoint Contract
     *
@@ -227,7 +230,8 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentFanState: CoolingFan.FanCmd.Type,
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i): B =
-    (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On)
+    latestTemp.degrees > currentSetPoint.high.degrees __>:
+      currentFanState == CoolingFan.FanCmd.On
 
   /** Compute Entrypoint Contract
     *
@@ -245,8 +249,9 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentFanState: CoolingFan.FanCmd.Type,
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i): B =
-    (latestTemp.degrees >= currentSetPoint.low.degrees &
-       latestTemp.degrees <= currentSetPoint.high.degrees) ->: (currentFanState == In_currentFanState)
+    latestTemp.degrees >= currentSetPoint.low.degrees &
+      latestTemp.degrees <= currentSetPoint.high.degrees __>:
+      currentFanState == In_currentFanState
 
   /** Compute Entrypoint Contract
     *
@@ -261,10 +266,13 @@ object TempControl_s_tcproc_tempControl_GumboX {
       In_currentFanState: CoolingFan.FanCmd.Type,
       currentFanState: CoolingFan.FanCmd.Type,
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    (In_currentFanState != currentFanState) ->: (api_fanCmd.nonEmpty &&
-       api_fanCmd.get == currentFanState) &&
-      (currentFanState == In_currentFanState) ->: api_fanCmd.isEmpty &&
-      (In_currentFanState != currentFanState) ->: api_fanCmd.nonEmpty
+    (In_currentFanState != currentFanState __>:
+       api_fanCmd.nonEmpty &&
+         api_fanCmd.get == currentFanState) &&
+      (currentFanState == In_currentFanState __>:
+        api_fanCmd.isEmpty) &&
+      (In_currentFanState != currentFanState __>:
+        api_fanCmd.nonEmpty)
 
   /** CEP-T-Guar: Top-level guarantee contracts for tempControl's compute entrypoint
     *
@@ -319,7 +327,7 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i]): B =
-    api_setPoint.nonEmpty -->: (
+    api_setPoint.nonEmpty ___>: (
       compute_handle_setPoint_setPointChanged_guarantee(currentSetPoint, api_setPoint) &
       compute_handle_setPoint_latestTempNotModified_guarantee(In_latestTemp, latestTemp))
 
@@ -359,7 +367,7 @@ object TempControl_s_tcproc_tempControl_GumboX {
       latestTemp: TempSensor.Temperature_i,
       api_tempChanged: Option[art.Empty],
       api_currentTemp: TempSensor.Temperature_i): B =
-    api_tempChanged.nonEmpty -->: (
+    api_tempChanged.nonEmpty ___>: (
       compute_handle_tempChanged_tempChanged_guarantee(latestTemp, api_currentTemp) &
       compute_handle_tempChanged_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint))
 
@@ -425,7 +433,7 @@ object TempControl_s_tcproc_tempControl_GumboX {
       latestTemp: TempSensor.Temperature_i,
       api_fanAck: Option[CoolingFan.FanAck.Type],
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    api_fanAck.nonEmpty -->: (
+    api_fanAck.nonEmpty ___>: (
       compute_handle_fanAck_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint) &
       compute_handle_fanAck_lastTempNotModified_guarantee(In_latestTemp, latestTemp) &
       compute_handle_fanAck_currentFanState_guarantee(In_currentFanState, currentFanState) &

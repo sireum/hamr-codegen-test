@@ -101,11 +101,13 @@ object TempControl_i_tcproc_tempControl {
         // assume a1
         //   If the previously received currentTemp was less than the previously
         //   received setPoint then the last fan command must have been Off
-        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        (In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees __>:
+          In(currentFanState) == CoolingFan.FanCmd.Off,
         // assume a2
         //   If the previously received currentTemp was more than the previously
         //   received setPoint then the last fan command must have been On
-        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On)
+        (In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees __>:
+          In(currentFanState) == CoolingFan.FanCmd.On
         // END COMPUTE REQUIRES fanAck
       ),
       Modifies(
@@ -119,11 +121,13 @@ object TempControl_i_tcproc_tempControl {
         // BEGIN COMPUTE ENSURES fanAck
         // guarantee TC_Req_01
         //   If the current temperature is less than the set point, then the fan state shall be Off.
-        (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
+        latestTemp.degrees < currentSetPoint.low.degrees __>:
+          currentFanState == CoolingFan.FanCmd.Off,
         // guarantee TC_Req_02
         //   If the current temperature is greater than the set point,
         //   then the fan state shall be On.
-        (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On)
+        latestTemp.degrees > currentSetPoint.high.degrees __>:
+          currentFanState == CoolingFan.FanCmd.On
         // END COMPUTE ENSURES fanAck
       )
     )
@@ -161,11 +165,13 @@ object TempControl_i_tcproc_tempControl {
         // assume a1
         //   If the previously received currentTemp was less than the previously
         //   received setPoint then the last fan command must have been Off
-        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        (In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees __>:
+          In(currentFanState) == CoolingFan.FanCmd.Off,
         // assume a2
         //   If the previously received currentTemp was more than the previously
         //   received setPoint then the last fan command must have been On
-        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On)
+        (In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees __>:
+          In(currentFanState) == CoolingFan.FanCmd.On
         // END COMPUTE REQUIRES setPoint
       ),
       Modifies(
@@ -179,11 +185,13 @@ object TempControl_i_tcproc_tempControl {
         // BEGIN COMPUTE ENSURES setPoint
         // guarantee TC_Req_01
         //   If the current temperature is less than the set point, then the fan state shall be Off.
-        (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
+        latestTemp.degrees < currentSetPoint.low.degrees __>:
+          currentFanState == CoolingFan.FanCmd.Off,
         // guarantee TC_Req_02
         //   If the current temperature is greater than the set point,
         //   then the fan state shall be On.
-        (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On),
+        latestTemp.degrees > currentSetPoint.high.degrees __>:
+          currentFanState == CoolingFan.FanCmd.On,
         // guarantees setPointChanged
         currentSetPoint == api.setPoint.get
         // END COMPUTE ENSURES setPoint
@@ -220,11 +228,13 @@ object TempControl_i_tcproc_tempControl {
         // assume a1
         //   If the previously received currentTemp was less than the previously
         //   received setPoint then the last fan command must have been Off
-        ((In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.Off),
+        (In(latestTemp)).degrees < (In(currentSetPoint)).low.degrees __>:
+          In(currentFanState) == CoolingFan.FanCmd.Off,
         // assume a2
         //   If the previously received currentTemp was more than the previously
         //   received setPoint then the last fan command must have been On
-        ((In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees) ->: (In(currentFanState) == CoolingFan.FanCmd.On)
+        (In(latestTemp)).degrees > (In(currentSetPoint)).high.degrees __>:
+          In(currentFanState) == CoolingFan.FanCmd.On
         // END COMPUTE REQUIRES tempChanged
       ),
       Modifies(
@@ -238,11 +248,13 @@ object TempControl_i_tcproc_tempControl {
         // BEGIN COMPUTE ENSURES tempChanged
         // guarantee TC_Req_01
         //   If the current temperature is less than the set point, then the fan state shall be Off.
-        (latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan.FanCmd.Off),
+        latestTemp.degrees < currentSetPoint.low.degrees __>:
+          currentFanState == CoolingFan.FanCmd.Off,
         // guarantee TC_Req_02
         //   If the current temperature is greater than the set point,
         //   then the fan state shall be On.
-        (latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan.FanCmd.On),
+        latestTemp.degrees > currentSetPoint.high.degrees __>:
+          currentFanState == CoolingFan.FanCmd.On,
         // guarantees tempChanged
         latestTemp == api.currentTemp
         // END COMPUTE ENSURES tempChanged

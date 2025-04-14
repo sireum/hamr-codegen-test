@@ -29,7 +29,7 @@ object Filter_p_p_filterp_GumboX {
 
   // I_Guar-Guard: Integration constraint on filterp's outgoing data port e_data_out
   @strictpure def I_Guar_Guard_e_data_out(e_data_out: Option[ProdConsFlows.Container_i]): B =
-    e_data_out.nonEmpty -->: I_Guar_e_data_out(e_data_out.get)
+    e_data_out.nonEmpty ___>: I_Guar_e_data_out(e_data_out.get)
 
   /** I-Assm: Integration constraint on filterp's incoming event data port b_event_data_in
     *
@@ -41,7 +41,7 @@ object Filter_p_p_filterp_GumboX {
 
   // I-Assm-Guard: Integration constraint on filterp's incoming event data port b_event_data_in
   @strictpure def I_Assm_Guard_b_event_data_in(b_event_data_in: Option[ProdConsFlows.Container_i]): B =
-    b_event_data_in.nonEmpty -->: I_Assm_b_event_data_in(b_event_data_in.get)
+    b_event_data_in.nonEmpty ___>: I_Assm_b_event_data_in(b_event_data_in.get)
 
   /** I-Guar: Integration constraint on filterp's outgoing event data port f_event_data_out
     *
@@ -53,7 +53,7 @@ object Filter_p_p_filterp_GumboX {
 
   // I_Guar-Guard: Integration constraint on filterp's outgoing event data port f_event_data_out
   @strictpure def I_Guar_Guard_f_event_data_out(f_event_data_out: Option[ProdConsFlows.Container_i]): B =
-    f_event_data_out.nonEmpty -->: I_Guar_f_event_data_out(f_event_data_out.get)
+    f_event_data_out.nonEmpty ___>: I_Guar_f_event_data_out(f_event_data_out.get)
 
   /** Initialize Entrypoint Contract
     *
@@ -159,7 +159,7 @@ object Filter_p_p_filterp_GumboX {
   @strictpure def compute_case_data_in(
       api_a_data_in: ProdConsFlows.Container_i,
       api_e_data_out: ProdConsFlows.Container_i): B =
-    (T) -->:
+    (T) ___>:
       (api_a_data_in == api_e_data_out)
 
   /** guarantee b_event_data
@@ -171,7 +171,7 @@ object Filter_p_p_filterp_GumboX {
   @strictpure def compute_case_b_event_data(
       api_b_event_data_in: Option[ProdConsFlows.Container_i],
       api_f_event_data_out: Option[ProdConsFlows.Container_i]): B =
-    (api_b_event_data_in.nonEmpty) -->:
+    (api_b_event_data_in.nonEmpty) ___>:
       (api_f_event_data_out.nonEmpty &&
          api_f_event_data_out.get.value == api_b_event_data_in.get.value)
 

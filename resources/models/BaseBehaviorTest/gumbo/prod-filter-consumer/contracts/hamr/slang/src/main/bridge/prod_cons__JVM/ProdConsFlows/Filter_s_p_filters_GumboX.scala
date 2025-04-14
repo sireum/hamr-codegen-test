@@ -29,7 +29,7 @@ object Filter_s_p_filters_GumboX {
 
   // I_Guar-Guard: Integration constraint on filters's outgoing data port e_data_out
   @strictpure def I_Guar_Guard_e_data_out(e_data_out: Option[ProdConsFlows.Container_i]): B =
-    e_data_out.nonEmpty -->: I_Guar_e_data_out(e_data_out.get)
+    e_data_out.nonEmpty ___>: I_Guar_e_data_out(e_data_out.get)
 
   /** I-Assm: Integration constraint on filters's incoming event data port b_event_data_in
     *
@@ -41,7 +41,7 @@ object Filter_s_p_filters_GumboX {
 
   // I-Assm-Guard: Integration constraint on filters's incoming event data port b_event_data_in
   @strictpure def I_Assm_Guard_b_event_data_in(b_event_data_in: Option[ProdConsFlows.Container_i]): B =
-    b_event_data_in.nonEmpty -->: I_Assm_b_event_data_in(b_event_data_in.get)
+    b_event_data_in.nonEmpty ___>: I_Assm_b_event_data_in(b_event_data_in.get)
 
   /** I-Guar: Integration constraint on filters's outgoing event data port f_event_data_out
     *
@@ -53,7 +53,7 @@ object Filter_s_p_filters_GumboX {
 
   // I_Guar-Guard: Integration constraint on filters's outgoing event data port f_event_data_out
   @strictpure def I_Guar_Guard_f_event_data_out(f_event_data_out: Option[ProdConsFlows.Container_i]): B =
-    f_event_data_out.nonEmpty -->: I_Guar_f_event_data_out(f_event_data_out.get)
+    f_event_data_out.nonEmpty ___>: I_Guar_f_event_data_out(f_event_data_out.get)
 
   /** Initialize Entrypoint Contract
     *
@@ -169,7 +169,7 @@ object Filter_s_p_filters_GumboX {
   @strictpure def compute_CEP_Handler_b_event_data_in_Guar (
       api_b_event_data_in: Option[ProdConsFlows.Container_i],
       api_f_event_data_out: Option[ProdConsFlows.Container_i]): B =
-    api_b_event_data_in.nonEmpty -->: (
+    api_b_event_data_in.nonEmpty ___>: (
       compute_handle_b_event_data_in_propagate_b_guarantee(api_b_event_data_in, api_f_event_data_out))
 
   /** CEP-Post: Compute Entrypoint Post-Condition for filters

@@ -58,11 +58,11 @@ object Filter_p_p_filterp {
         // BEGIN COMPUTE ENSURES timeTriggered
         // case data_in
         //   a_data_in 'flows to' e_data_out
-        (T) -->: (api.a_data_in == api.e_data_out),
+        (T) ___>: (api.a_data_in == api.e_data_out),
         // case b_event_data
         //   If an event was received on b then its value
         //   is propagated to f
-        (api.b_event_data_in.nonEmpty) -->: (api.f_event_data_out.nonEmpty &&
+        (api.b_event_data_in.nonEmpty) ___>: (api.f_event_data_out.nonEmpty &&
           api.f_event_data_out.get.value == api.b_event_data_in.get.value)
         // END COMPUTE ENSURES timeTriggered
       )

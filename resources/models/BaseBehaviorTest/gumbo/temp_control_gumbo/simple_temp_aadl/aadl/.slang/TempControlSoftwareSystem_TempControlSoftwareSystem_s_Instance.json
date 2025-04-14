@@ -8108,7 +8108,7 @@
                                   }
                                 }
                               },
-                              "op" : "->:",
+                              "op" : "__>:",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.Binary",
                                 "left" : {
@@ -8754,7 +8754,7 @@
                                   }
                                 }
                               },
-                              "op" : "->:",
+                              "op" : "__>:",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.Binary",
                                 "left" : {
@@ -9983,7 +9983,7 @@
                                   }
                                 }
                               },
-                              "op" : "->:",
+                              "op" : "__>:",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.Binary",
                                 "left" : {
@@ -10629,7 +10629,7 @@
                                   }
                                 }
                               },
-                              "op" : "->:",
+                              "op" : "__>:",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.Binary",
                                 "left" : {
@@ -11635,7 +11635,7 @@
                                   }
                                 }
                               },
-                              "op" : "->:",
+                              "op" : "__>:",
                               "right" : {
                                 "type" : "org.sireum.lang.ast.Exp.Binary",
                                 "left" : {
@@ -12049,7 +12049,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "->:",
+                                  "op" : "__>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Invoke",
                                     "receiverOpt" : {
@@ -12452,7 +12452,7 @@
                                       }
                                     }
                                   },
-                                  "op" : "->:",
+                                  "op" : "__>:",
                                   "right" : {
                                     "type" : "org.sireum.lang.ast.Exp.Invoke",
                                     "receiverOpt" : {
@@ -12846,7 +12846,7 @@
                                     }
                                   }
                                 },
-                                "op" : "->:",
+                                "op" : "__>:",
                                 "right" : {
                                   "type" : "org.sireum.lang.ast.Exp.Invoke",
                                   "receiverOpt" : {
