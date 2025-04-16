@@ -63,6 +63,26 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
 
+  "python-isolette_lax" in {
+    val testName = "python-isolette"
+    val rootName = "isolette"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
+  "python-isolette_strict" in {
+    val testName = "python-isolette"
+    val rootName = "isolette"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
   // TODO: Fix/implement PCA Pump to-do types
   "pca-pump_lax" ignore {
     val testName = "pca-pump"
