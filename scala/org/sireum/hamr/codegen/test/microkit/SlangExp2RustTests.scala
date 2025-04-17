@@ -107,7 +107,11 @@ class SlangExp2RustTests extends TestSuite {
 
     if (!release.exists) {
       println("Building rust2Slang ...")
-      proc"cargo build --release".at(rust2Slang.canon).echo.console.runCheck()
+      val r = proc"cargo build --release".at(rust2Slang.canon).echo.console.run()
+      if (!r.ok) {
+        println(r.out)
+        println(r.err)
+      }
     }
 
     println("Running rust2slang ...")
