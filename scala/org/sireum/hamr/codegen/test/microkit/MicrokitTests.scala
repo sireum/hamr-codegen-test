@@ -27,7 +27,6 @@ class MicrokitTests extends CodegenTest {
     "case-transition-models",
 
     // TODO: adapt to crust/verus
-    "aadl_datatypes",
     "micro-examples_microkit_aadl_port_types_event__FF6D",
     "ethernet-simple"
   )

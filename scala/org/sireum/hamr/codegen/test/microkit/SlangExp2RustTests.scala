@@ -102,78 +102,83 @@ class SlangExp2RustTests extends TestSuite {
 
     //assert (rustExp.render.native == expected)
 
-    val rust2Slang = util.Util.testDir / "scala" / "org" / "sireum" / "hamr" / "codegen" / "test" / "microkit" / "util" / "rust2Slang"
-    val release = rust2Slang / "target" / "release" / "rust_parser"
+    if (!MicrokitTestUtil.isCI) {
+      println("!!!!!!!!!!!!!!  Need to get cargo/rust testing working on github !!!!!!!!!!!!!!!!!!!")
 
-    if (!release.exists) {
-      println("Building rust2Slang ...")
-      val r = proc"cargo build --release".at(rust2Slang.canon).echo.console.run()
-      if (!r.ok) {
-        println(r.out)
-        println(r.err)
-      }
-    }
+      val rust2Slang = util.Util.testDir / "scala" / "org" / "sireum" / "hamr" / "codegen" / "test" / "microkit" / "util" / "rust2Slang"
+      val release = rust2Slang / "target" / "release" / "rust_parser"
 
-    println("Running rust2slang ...")
-    val input = Os.temp()
-    input.writeOver(rustExp.render)
-    val output = Os.temp()
-    proc"${release.canon} $input $output".runCheck()
-
-    println(output.read)
-
-    import org.sireum.lang.ast.Exp
-
-    util.JSON.toExp(output.read) match {
-      case Either.Left(rustExp) =>
-        def walk(slangExp: Exp, rustExp: util.Exp): Unit = {
-          (slangExp, rustExp) match {
-            case (slangExp: Exp.Binary, rustExp: util.Binary) =>
-              val slangOp =
-                slangExp.op match {
-                  case Exp.BinaryOp.Or if inVerus => Exp.BinaryOp.CondOr
-                  case Exp.BinaryOp.And if inVerus => Exp.BinaryOp.CondAnd
-                  case op => op
-                }
-              val rustOp = rustExp.op
-              assert (slangOp == rustOp, s"$slangOp vs $rustOp")
-
-              walk(slangExp.left, rustExp.left)
-              walk(slangExp.right, rustExp.right)
-
-            case (slangExp: Exp.Binary, rustExp: util.Invoke) =>
-              val rustOp: org.sireum.String =
-                rustExp.name match {
-                  case string"implies" =>  Exp.BinaryOp.CondImply
-                  case string"impliesL" => Exp.BinaryOp.Imply
-                  case x => halt(x)
-                }
-              val slangOp =
-                slangExp.op match {
-                  case Exp.BinaryOp.CondImply => Exp.BinaryOp.CondImply
-                  case Exp.BinaryOp.Imply =>
-                    if (inVerus) Exp.BinaryOp.CondImply
-                    else Exp.BinaryOp.Imply
-                  case x => halt(x)
-                }
-              assert(slangOp == rustOp, s"$slangOp vs $rustOp")
-              assert (rustExp.args.size == 2)
-
-              walk(slangExp.left, rustExp.args(0))
-              walk(slangExp.right, rustExp.args(1))
-
-            case (slangExp: Exp.Ident, rustExp: util.LitB) =>
-              assert(slangExp.id.value == rustExp.value, s"${slangExp.id.value} vs ${rustExp.value}")
-
-            case _ => halt(
-              st"""Mismatch:
-                  |  $slangExp
-                  |vs
-                  |  $rustExp""".render)
-          }
+      if (!release.exists) {
+        println("Building rust2Slang ...")
+        val r = proc"cargo build --release".at(rust2Slang.canon).echo.console.run()
+        if (!r.ok) {
+          println(r.out)
+          println(r.err)
         }
-        walk(slangExp, rustExp)
-      case Either.Right(msg) => halt(msg)
+      }
+
+      println("Running rust2slang ...")
+      val input = Os.temp()
+      input.writeOver(rustExp.render)
+      val output = Os.temp()
+      proc"${release.canon} $input $output".runCheck()
+
+      println(output.read)
+
+      import org.sireum.lang.ast.Exp
+
+      util.JSON.toExp(output.read) match {
+        case Either.Left(rustExp) =>
+          def walk(slangExp: Exp, rustExp: util.Exp): Unit = {
+            (slangExp, rustExp) match {
+              case (slangExp: Exp.Binary, rustExp: util.Binary) =>
+                val slangOp =
+                  slangExp.op match {
+                    case Exp.BinaryOp.Or if inVerus => Exp.BinaryOp.CondOr
+                    case Exp.BinaryOp.And if inVerus => Exp.BinaryOp.CondAnd
+                    case op => op
+                  }
+                val rustOp = rustExp.op
+                assert(slangOp == rustOp, s"$slangOp vs $rustOp")
+
+                walk(slangExp.left, rustExp.left)
+                walk(slangExp.right, rustExp.right)
+
+              case (slangExp: Exp.Binary, rustExp: util.Invoke) =>
+                val rustOp: org.sireum.String =
+                  rustExp.name match {
+                    case string"implies" => Exp.BinaryOp.CondImply
+                    case string"impliesL" => Exp.BinaryOp.Imply
+                    case x => halt(x)
+                  }
+                val slangOp =
+                  slangExp.op match {
+                    case Exp.BinaryOp.CondImply => Exp.BinaryOp.CondImply
+                    case Exp.BinaryOp.Imply =>
+                      if (inVerus) Exp.BinaryOp.CondImply
+                      else Exp.BinaryOp.Imply
+                    case x => halt(x)
+                  }
+                assert(slangOp == rustOp, s"$slangOp vs $rustOp")
+                assert(rustExp.args.size == 2)
+
+                walk(slangExp.left, rustExp.args(0))
+                walk(slangExp.right, rustExp.args(1))
+
+              case (slangExp: Exp.Ident, rustExp: util.LitB) =>
+                assert(slangExp.id.value == rustExp.value, s"${slangExp.id.value} vs ${rustExp.value}")
+
+              case _ => halt(
+                st"""Mismatch:
+                    |  $slangExp
+                    |vs
+                    |  $rustExp""".render)
+            }
+          }
+
+          walk(slangExp, rustExp)
+        case Either.Right(msg) => halt(msg)
+      }
     }
   }
 
