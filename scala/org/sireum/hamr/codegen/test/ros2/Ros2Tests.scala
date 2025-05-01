@@ -11,7 +11,7 @@ import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, Codegen
 
 class Ros2Tests extends TestSuite with Ros2TestUtil {
 
-  val generateExpected: B = F
+  val generateExpected: B = T
 
   val verbose: B = F
 
@@ -43,6 +43,26 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     assert (root.exists)
 
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
+  }
+
+  "python-building_control_gen_mixed_lax" in {
+    val testName = "python-building_control_gen_mixed"
+    val rootName = "building_control_gen_mixed"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
+  "python-building_control_gen_mixed_strict" in {
+    val testName = "python-building_control_gen_mixed"
+    val rootName = "building_control_gen_mixed"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
   }
 
   "isolette_lax" in {
@@ -159,6 +179,26 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
 
+  "python-fan_in_fan_out_lax" in {
+    val testName = "python-fan_in_fan_out"
+    val rootName = "fan_in_fan_out"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
+  "python-fan_in_fan_out_strict" in {
+    val testName = "python-fan_in_fan_out"
+    val rootName = "fan_in_fan_out"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
   // ----------------------------------
   // Inverted Port/Topic Binding Tests
   // ----------------------------------
@@ -183,6 +223,26 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true), T, verbose)
   }
 
+  "python-building_control_gen_mixed_lax_inverted_topics" in {
+    val testName = "python-building_control_gen_mixed_inverted_topics"
+    val rootName = "building_control_gen_mixed"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = true, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
+  "python-building_control_gen_mixed_strict_inverted_topics" in {
+    val testName = "python-building_control_gen_mixed_inverted_topics"
+    val rootName = "building_control_gen_mixed"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
   "isolette_lax_inverted_topics" in {
     val testName = "isolette_inverted_topics"
     val rootName = "isolette"
@@ -203,6 +263,26 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true), T, verbose)
   }
 
+  "python-isolette_lax_inverted_topics" in {
+    val testName = "python-isolette_inverted_topics"
+    val rootName = "isolette"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = true, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
+  "python-isolette_strict_inverted_topics" in {
+    val testName = "python-isolette_inverted_topics"
+    val rootName = "isolette"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
   "fan_in_fan_out_lax_inverted_topics" in {
     val testName = "fan_in_fan_out_inverted_topics"
     val rootName = "fan_in_fan_out"
@@ -221,6 +301,26 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     assert (root.exists)
 
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true), T, verbose)
+  }
+
+  "python-fan_in_fan_out_lax_inverted_topics" in {
+    val testName = "python-fan_in_fan_out_inverted_topics"
+    val rootName = "fan_in_fan_out"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = true, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
+  }
+
+  "python-fan_in_fan_out_strict_inverted_topics" in {
+    val testName = "python-fan_in_fan_out_inverted_topics"
+    val rootName = "fan_in_fan_out"
+    val root = codegen_base / rootName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = true, ros2NodesLanguage = CodegenNodesCodeLanguage.Python, ros2LaunchLanguage = CodegenLaunchCodeLanguage.Python), T, verbose)
   }
 
   // ----------------------------------
