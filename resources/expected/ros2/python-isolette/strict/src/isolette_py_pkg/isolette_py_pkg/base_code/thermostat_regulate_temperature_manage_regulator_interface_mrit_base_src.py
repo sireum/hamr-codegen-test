@@ -129,9 +129,9 @@ class thermostat_regulate_temperature_manage_regulator_interface_mrit_base(Node)
             [self.applicationOut_interface_failure, self.infrastructureOut_interface_failure, self.sendOut_interface_failure]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_current_tempWstatus(self, msg):
         typedMsg = TempWstatusimpl()

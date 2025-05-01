@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-from datatypes_system_py_pkg_interfaces.msg import MyEnum
+from isolette_py_pkg_interfaces.msg import Heat
+from isolette_py_pkg_interfaces.msg import InterfaceInteraction
+from isolette_py_pkg_interfaces.msg import ValueStatus
+from isolette_py_pkg_interfaces.msg import OnOff
+from isolette_py_pkg_interfaces.msg import Status
+from isolette_py_pkg_interfaces.msg import RegulatorMode
+from isolette_py_pkg_interfaces.msg import MonitorMode
 
 #========================================================
 # Re-running Codegen will overwrite changes to this file

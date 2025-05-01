@@ -217,9 +217,9 @@ class producer_producer_base(Node):
             [self.applicationOut_myArray3, self.infrastructureOut_myArray3, self.sendOut_myArray3]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def sendOut_myBoolean(self, msg):
         if type(msg) is Boolean:

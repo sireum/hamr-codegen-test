@@ -139,9 +139,9 @@ class producer_producer_base(Node):
     def timeTriggered(self):
         pass
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def put_myBoolean(self, msg):
         typedMsg = Boolean()
