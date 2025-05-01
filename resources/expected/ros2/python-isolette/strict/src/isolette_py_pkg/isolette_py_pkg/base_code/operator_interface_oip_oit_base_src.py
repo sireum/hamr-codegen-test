@@ -125,9 +125,9 @@ class operator_interface_oip_oit_base(Node):
             [self.applicationOut_upper_alarm_tempWstatus, self.infrastructureOut_upper_alarm_tempWstatus, self.sendOut_upper_alarm_tempWstatus]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_regulator_status(self, msg):
         typedMsg = Status()

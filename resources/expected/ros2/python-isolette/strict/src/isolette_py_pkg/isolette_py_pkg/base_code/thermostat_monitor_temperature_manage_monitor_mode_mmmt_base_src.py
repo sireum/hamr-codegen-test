@@ -89,9 +89,9 @@ class thermostat_monitor_temperature_manage_monitor_mode_mmmt_base(Node):
             [self.applicationOut_monitor_mode, self.infrastructureOut_monitor_mode, self.sendOut_monitor_mode]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_current_tempWstatus(self, msg):
         typedMsg = TempWstatusimpl()

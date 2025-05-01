@@ -86,9 +86,9 @@ class temperature_sensor_cpi_thermostat_base(Node):
             [self.applicationOut_current_tempWstatus, self.infrastructureOut_current_tempWstatus, self.sendOut_current_tempWstatus]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_air(self, msg):
         typedMsg = PhysicalTempimpl()

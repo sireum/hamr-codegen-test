@@ -89,9 +89,9 @@ class thermostat_regulate_temperature_manage_regulator_mode_mrmt_base(Node):
             [self.applicationOut_regulator_mode, self.infrastructureOut_regulator_mode, self.sendOut_regulator_mode]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_current_tempWstatus(self, msg):
         typedMsg = TempWstatusimpl()

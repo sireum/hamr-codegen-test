@@ -14,6 +14,7 @@ def initialize(node):
     node.get_logger().info("Initialize Entry Point invoked")
 
     # Initialize the node
+    node.timeTriggered = timeTriggered
 
 #=================================================
 #  C o m p u t e    E n t r y    P o i n t

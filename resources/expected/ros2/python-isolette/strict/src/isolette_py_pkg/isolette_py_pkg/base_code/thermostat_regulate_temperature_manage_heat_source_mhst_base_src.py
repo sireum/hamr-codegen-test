@@ -96,9 +96,9 @@ class thermostat_regulate_temperature_manage_heat_source_mhst_base(Node):
             [self.applicationOut_heat_control, self.infrastructureOut_heat_control, self.sendOut_heat_control]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_current_tempWstatus(self, msg):
         typedMsg = TempWstatusimpl()

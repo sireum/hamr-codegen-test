@@ -121,9 +121,9 @@ class thermostat_monitor_temperature_manage_monitor_interface_mmit_base(Node):
             [self.applicationOut_interface_failure, self.infrastructureOut_interface_failure, self.sendOut_interface_failure]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_upper_alarm_tempWstatus(self, msg):
         typedMsg = TempWstatusimpl()

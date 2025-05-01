@@ -227,9 +227,9 @@ class consumer_consumer_base(Node):
         self.outPortTupleVector = [
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def myBoolean_thread(self):
         with self.lock_:
@@ -571,6 +571,12 @@ class consumer_consumer_base(Node):
         thread.start()
 
 
+    #=================================================
+    #  C o m p u t e    E n t r y    P o i n t
+    #=================================================
+    def handle_myBoolean(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myBoolean_base(self, msg):
         if type(msg) is Boolean:
             typedMsg = Boolean()
@@ -578,6 +584,9 @@ class consumer_consumer_base(Node):
             self.handle_myBoolean(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myInteger(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myInteger_base(self, msg):
         if type(msg) is Integer64:
@@ -587,6 +596,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myFloat(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myFloat_base(self, msg):
         if type(msg) is Float64:
             typedMsg = Float64()
@@ -594,6 +606,9 @@ class consumer_consumer_base(Node):
             self.handle_myFloat(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myCharacter(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myCharacter_base(self, msg):
         if type(msg) is Character:
@@ -603,6 +618,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myString(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myString_base(self, msg):
         if type(msg) is String:
             typedMsg = String()
@@ -610,6 +628,9 @@ class consumer_consumer_base(Node):
             self.handle_myString(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myInt8(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myInt8_base(self, msg):
         if type(msg) is Integer8:
@@ -619,6 +640,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myInt16(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myInt16_base(self, msg):
         if type(msg) is Integer16:
             typedMsg = Integer16()
@@ -626,6 +650,9 @@ class consumer_consumer_base(Node):
             self.handle_myInt16(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myInt32(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myInt32_base(self, msg):
         if type(msg) is Integer32:
@@ -635,6 +662,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myInt64(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myInt64_base(self, msg):
         if type(msg) is Integer64:
             typedMsg = Integer64()
@@ -642,6 +672,9 @@ class consumer_consumer_base(Node):
             self.handle_myInt64(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myUInt8(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myUInt8_base(self, msg):
         if type(msg) is Unsigned8:
@@ -651,6 +684,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myUInt16(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myUInt16_base(self, msg):
         if type(msg) is Unsigned16:
             typedMsg = Unsigned16()
@@ -658,6 +694,9 @@ class consumer_consumer_base(Node):
             self.handle_myUInt16(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myUInt32(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myUInt32_base(self, msg):
         if type(msg) is Unsigned32:
@@ -667,6 +706,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myUInt64(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myUInt64_base(self, msg):
         if type(msg) is Unsigned64:
             typedMsg = Unsigned64()
@@ -674,6 +716,9 @@ class consumer_consumer_base(Node):
             self.handle_myUInt64(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myFloat32(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myFloat32_base(self, msg):
         if type(msg) is Float32:
@@ -683,6 +728,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myFloat64(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myFloat64_base(self, msg):
         if type(msg) is Float64:
             typedMsg = Float64()
@@ -690,6 +738,9 @@ class consumer_consumer_base(Node):
             self.handle_myFloat64(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myEnum(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myEnum_base(self, msg):
         if type(msg) is MyEnum:
@@ -699,6 +750,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myStruct(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myStruct_base(self, msg):
         if type(msg) is MyStructi:
             typedMsg = MyStructi()
@@ -706,6 +760,9 @@ class consumer_consumer_base(Node):
             self.handle_myStruct(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
+    def handle_myArray1(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myArray1_base(self, msg):
         if type(msg) is MyArrayOneDim:
@@ -715,6 +772,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myArray2(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myArray2_base(self, msg):
         if type(msg) is MyArrayUnbounded:
             typedMsg = MyArrayUnbounded()
@@ -723,6 +783,9 @@ class consumer_consumer_base(Node):
         else:
             self.get_logger.error("Receiving wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
+    def handle_myArray3(self, msg):
+        raise NotImplementedError("Subclasses must implement this method")
+
     def handle_myArray3_base(self, msg):
         if type(msg) is MyArrayTwoDim:
             typedMsg = MyArrayTwoDim()
@@ -730,6 +793,7 @@ class consumer_consumer_base(Node):
             self.handle_myArray3(typedMsg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
+
 
     def receiveInputs(self, infrastructureQueue, applicationQueue):
         if not(infrastructureQueue.empty()):

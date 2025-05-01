@@ -2,7 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from queue import Queue
-from isolette_py_pkg.user_code.consumer_consumer_src import *
+from isolette_py_pkg.user_code.temperature_sensor_cpi_thermostat_src import *
 from rclpy.callback_groups import ReentrantCallbackGroup
 from isolette_py_pkg_interfaces.msg import PhysicalTempimpl
 from isolette_py_pkg_interfaces.msg import TempWstatusimpl
@@ -21,7 +21,7 @@ class temperature_sensor_cpi_thermostat_base(Node):
         self.temperature_sensor_cpi_thermostat_air_subscription_ = self.create_subscription(
             PhysicalTempimpl,
             "temperature_sensor_cpi_thermostat_air",
-            handle_air,
+            self.handle_air,
             1,
             callback_group=self.cb_group_)
 
@@ -61,9 +61,9 @@ class temperature_sensor_cpi_thermostat_base(Node):
     def timeTriggered(self):
         pass
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def handle_air(self, msg):
         typedMsg = PhysicalTempimpl()

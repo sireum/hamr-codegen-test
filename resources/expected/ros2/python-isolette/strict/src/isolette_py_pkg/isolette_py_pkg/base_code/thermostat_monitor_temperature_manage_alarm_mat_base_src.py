@@ -96,9 +96,9 @@ class thermostat_monitor_temperature_manage_alarm_mat_base(Node):
             [self.applicationOut_alarm_control, self.infrastructureOut_alarm_control, self.sendOut_alarm_control]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_current_tempWstatus(self, msg):
         typedMsg = TempWstatusimpl()
