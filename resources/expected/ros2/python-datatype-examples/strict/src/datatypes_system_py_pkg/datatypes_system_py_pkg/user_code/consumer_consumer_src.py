@@ -14,6 +14,26 @@ def initialize(node):
     node.get_logger().info("Initialize Entry Point invoked")
 
     # Initialize the node
+    node.handle_myBoolean = handle_myBoolean
+    node.handle_myInteger = handle_myInteger
+    node.handle_myFloat = handle_myFloat
+    node.handle_myCharacter = handle_myCharacter
+    node.handle_myString = handle_myString
+    node.handle_myInt8 = handle_myInt8
+    node.handle_myInt16 = handle_myInt16
+    node.handle_myInt32 = handle_myInt32
+    node.handle_myInt64 = handle_myInt64
+    node.handle_myUInt8 = handle_myUInt8
+    node.handle_myUInt16 = handle_myUInt16
+    node.handle_myUInt32 = handle_myUInt32
+    node.handle_myUInt64 = handle_myUInt64
+    node.handle_myFloat32 = handle_myFloat32
+    node.handle_myFloat64 = handle_myFloat64
+    node.handle_myEnum = handle_myEnum
+    node.handle_myStruct = handle_myStruct
+    node.handle_myArray1 = handle_myArray1
+    node.handle_myArray2 = handle_myArray2
+    node.handle_myArray3 = handle_myArray3
 
 #=================================================
 #  C o m p u t e    E n t r y    P o i n t

@@ -61,9 +61,9 @@ class heat_source_cpi_heat_controller_base(Node):
             [self.applicationOut_heat_out, self.infrastructureOut_heat_out, self.sendOut_heat_out]
          ]
 
-#=================================================
-#  C o m m u n i c a t i o n
-#=================================================
+    #=================================================
+    #  C o m m u n i c a t i o n
+    #=================================================
 
     def accept_heat_control(self, msg):
         typedMsg = OnOff()
