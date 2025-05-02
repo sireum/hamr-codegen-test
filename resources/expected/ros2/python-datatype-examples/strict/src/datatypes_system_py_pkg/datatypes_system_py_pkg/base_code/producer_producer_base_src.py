@@ -144,14 +144,6 @@ class producer_producer_base(Node):
     def timeTriggered(self):
         pass
 
-        # Used by receiveInputs
-        self.inDataPortTupleVector = [
-         ]
-
-        # Used by receiveInputs
-        self.inEventPortTupleVector = [
-          ]
-
         self.infrastructureOut_myBoolean = Queue()
         self.applicationOut_myBoolean = Queue()
         self.infrastructureOut_myInteger = Queue()
@@ -193,6 +185,14 @@ class producer_producer_base(Node):
         self.infrastructureOut_myArray3 = Queue()
         self.applicationOut_myArray3 = Queue()
 
+        # Used by receiveInputs
+        self.inDataPortTupleVector = [
+        ]
+
+        # Used by receiveInputs
+        self.inEventPortTupleVector = [
+        ]
+
         # Used by sendOutputs
         self.outPortTupleVector = [
             [self.applicationOut_myBoolean, self.infrastructureOut_myBoolean, self.sendOut_myBoolean],
@@ -215,7 +215,7 @@ class producer_producer_base(Node):
             [self.applicationOut_myArray1, self.infrastructureOut_myArray1, self.sendOut_myArray1],
             [self.applicationOut_myArray2, self.infrastructureOut_myArray2, self.sendOut_myArray2],
             [self.applicationOut_myArray3, self.infrastructureOut_myArray3, self.sendOut_myArray3]
-         ]
+        ]
 
     #=================================================
     #  C o m m u n i c a t i o n
