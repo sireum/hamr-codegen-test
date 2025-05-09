@@ -56,6 +56,23 @@ thermostat_regulate_temperature_manage_regulator_interface_mrit_base::thermostat
 
 }
 
+void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    current_tempWstatus_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(val);
+}
+
+void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_lower_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    lower_desired_tempWstatus_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(val);
+}
+
+void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_upper_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    upper_desired_tempWstatus_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(val);
+}
+
+void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_regulator_mode(isolette_cpp_pkg_interfaces::msg::RegulatorMode val) {
+    regulator_mode_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(val);
+}
+
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

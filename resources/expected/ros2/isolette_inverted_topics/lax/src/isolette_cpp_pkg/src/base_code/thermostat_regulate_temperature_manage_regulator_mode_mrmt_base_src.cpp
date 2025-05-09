@@ -35,6 +35,19 @@ thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::thermostat_regu
 
 }
 
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::init_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    current_tempWstatus_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(val);
+}
+
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::init_interface_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl val) {
+    interface_failure_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(val);
+}
+
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::init_internal_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl val) {
+    internal_failure_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(val);
+}
+
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

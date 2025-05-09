@@ -40,6 +40,23 @@ thermostat_monitor_temperature_manage_alarm_mat_base::thermostat_monitor_tempera
 
 }
 
+void thermostat_monitor_temperature_manage_alarm_mat_base::init_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    current_tempWstatus_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(val);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::init_lower_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    lower_alarm_temp_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::Tempimpl>(val);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::init_upper_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    upper_alarm_temp_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::Tempimpl>(val);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::init_monitor_mode(isolette_cpp_pkg_interfaces::msg::MonitorMode val) {
+    monitor_mode_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::MonitorMode>(val);
+}
+
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

@@ -1,5 +1,9 @@
 #include "datatypes_system_cpp_pkg/base_headers/producer_producer_base_src.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 class producer_producer : public producer_producer_base
 {
 public:

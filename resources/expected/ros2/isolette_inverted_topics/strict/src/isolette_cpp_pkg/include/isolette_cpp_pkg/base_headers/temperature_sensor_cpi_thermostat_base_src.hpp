@@ -21,6 +21,7 @@ protected:
     //  C o m m u n i c a t i o n
     //=================================================
 
+    #define MESSAGE_TO_STRING(message) isolette_cpp_pkg_interfaces::msg::to_yaml(message).c_str()
     #define PRINT_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
@@ -28,6 +29,9 @@ protected:
     void put_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg);
 
     isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl get_air();
+
+    // Methods to be used to set initial values for data ports
+    void init_air(isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl val);
 
 private:
     rclcpp::CallbackGroup::SharedPtr cb_group_;

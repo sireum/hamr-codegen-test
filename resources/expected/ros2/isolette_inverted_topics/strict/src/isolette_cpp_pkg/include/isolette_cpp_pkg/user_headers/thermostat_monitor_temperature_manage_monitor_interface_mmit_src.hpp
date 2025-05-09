@@ -1,5 +1,9 @@
 #include "isolette_cpp_pkg/base_headers/thermostat_monitor_temperature_manage_monitor_interface_mmit_base_src.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 class thermostat_monitor_temperature_manage_monitor_interface_mmit : public thermostat_monitor_temperature_manage_monitor_interface_mmit_base
 {
 public:

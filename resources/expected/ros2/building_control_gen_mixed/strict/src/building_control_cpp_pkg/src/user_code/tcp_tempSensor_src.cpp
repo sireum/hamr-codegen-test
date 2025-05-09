@@ -21,5 +21,12 @@ void tcp_tempSensor::initialize()
 void tcp_tempSensor::timeTriggered()
 {
     // Handle communication
+
+
+
+    // Example publishing messages
+    building_control_cpp_pkg_interfaces::msg::Temperatureimpl currentTemp = building_control_cpp_pkg_interfaces::msg::Temperatureimpl();
+    put_currentTemp(currentTemp);
+    put_tempChanged();
 }
 

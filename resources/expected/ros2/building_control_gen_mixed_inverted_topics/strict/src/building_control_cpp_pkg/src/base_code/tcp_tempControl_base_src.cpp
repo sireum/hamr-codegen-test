@@ -46,6 +46,11 @@ tcp_tempControl_base::tcp_tempControl_base() : Node("tcp_tempControl")
 
 }
 
+void tcp_tempControl_base::init_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl val) {
+    enqueue(infrastructureIn_currentTemp, val);
+}
+
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

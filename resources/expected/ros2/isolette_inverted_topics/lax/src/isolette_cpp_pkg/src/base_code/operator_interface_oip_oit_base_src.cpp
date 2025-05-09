@@ -52,6 +52,23 @@ operator_interface_oip_oit_base::operator_interface_oip_oit_base() : Node("opera
 
 }
 
+void operator_interface_oip_oit_base::init_regulator_status(isolette_cpp_pkg_interfaces::msg::Status val) {
+    regulator_status_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::Status>(val);
+}
+
+void operator_interface_oip_oit_base::init_monitor_status(isolette_cpp_pkg_interfaces::msg::Status val) {
+    monitor_status_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::Status>(val);
+}
+
+void operator_interface_oip_oit_base::init_display_temperature(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    display_temperature_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::Tempimpl>(val);
+}
+
+void operator_interface_oip_oit_base::init_alarm_control(isolette_cpp_pkg_interfaces::msg::OnOff val) {
+    alarm_control_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::OnOff>(val);
+}
+
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

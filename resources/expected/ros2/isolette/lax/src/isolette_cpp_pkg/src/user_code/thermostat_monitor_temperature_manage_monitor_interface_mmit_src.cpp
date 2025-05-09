@@ -13,6 +13,19 @@ void thermostat_monitor_temperature_manage_monitor_interface_mmit::initialize()
     PRINT_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
+    // Initialize the node's incoming data port values here
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_alarm_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    init_upper_alarm_tempWstatus(upper_alarm_tempWstatus);
+
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_alarm_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    init_lower_alarm_tempWstatus(lower_alarm_tempWstatus);
+
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    init_current_tempWstatus(current_tempWstatus);
+
+    isolette_cpp_pkg_interfaces::msg::MonitorMode monitor_mode = isolette_cpp_pkg_interfaces::msg::MonitorMode();
+    init_monitor_mode(monitor_mode);
+
 }
 
 //=================================================
@@ -21,5 +34,25 @@ void thermostat_monitor_temperature_manage_monitor_interface_mmit::initialize()
 void thermostat_monitor_temperature_manage_monitor_interface_mmit::timeTriggered()
 {
     // Handle communication
+
+    // example receiving messages on data ports
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl::SharedPtr upper_alarm_tempWstatus = get_upper_alarm_tempWstatus();
+    PRINT_INFO("Received upper_alarm_tempWstatus: %s", MESSAGE_TO_STRING(upper_alarm_tempWstatus));
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl::SharedPtr lower_alarm_tempWstatus = get_lower_alarm_tempWstatus();
+    PRINT_INFO("Received lower_alarm_tempWstatus: %s", MESSAGE_TO_STRING(lower_alarm_tempWstatus));
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl::SharedPtr current_tempWstatus = get_current_tempWstatus();
+    PRINT_INFO("Received current_tempWstatus: %s", MESSAGE_TO_STRING(current_tempWstatus));
+    isolette_cpp_pkg_interfaces::msg::MonitorMode::SharedPtr monitor_mode = get_monitor_mode();
+    PRINT_INFO("Received monitor_mode: %s", MESSAGE_TO_STRING(monitor_mode));
+
+    // Example publishing messages
+    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_alarm_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    put_upper_alarm_temp(upper_alarm_temp);
+    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_alarm_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    put_lower_alarm_temp(lower_alarm_temp);
+    isolette_cpp_pkg_interfaces::msg::Status monitor_status = isolette_cpp_pkg_interfaces::msg::Status();
+    put_monitor_status(monitor_status);
+    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl interface_failure = isolette_cpp_pkg_interfaces::msg::FailureFlagimpl();
+    put_interface_failure(interface_failure);
 }
 
