@@ -47,7 +47,6 @@ void thermostat_monitor_temperature_manage_monitor_mode_mmmt_base::init_internal
     internal_failure_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

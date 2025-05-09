@@ -22,7 +22,5 @@ void tcp_fan::handle_fanCmd(const building_control_cpp_pkg_interfaces::msg::FanC
 {
     // Handle fanCmd msg
     PRINT_INFO("Received fanCmd: %s", MESSAGE_TO_STRING(msg));
-
-
 }
 

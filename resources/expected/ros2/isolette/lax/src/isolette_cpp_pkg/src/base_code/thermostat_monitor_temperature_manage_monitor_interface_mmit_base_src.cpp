@@ -68,7 +68,6 @@ void thermostat_monitor_temperature_manage_monitor_interface_mmit_base::init_mon
     monitor_mode_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::MonitorMode>(val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

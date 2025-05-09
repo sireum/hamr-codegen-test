@@ -21,8 +21,6 @@ void fanIn_producer1::timeTriggered()
 {
     // Handle communication
 
-
-
     // Example publishing messages
     fan_in_fan_out_system_cpp_pkg_interfaces::msg::Integer64 myInteger = fan_in_fan_out_system_cpp_pkg_interfaces::msg::Integer64();
     put_myInteger(myInteger);

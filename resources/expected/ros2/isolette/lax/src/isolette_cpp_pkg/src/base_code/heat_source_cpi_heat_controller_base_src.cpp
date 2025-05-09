@@ -29,7 +29,6 @@ void heat_source_cpi_heat_controller_base::init_heat_control(isolette_cpp_pkg_in
     heat_control_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::OnOff>(val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

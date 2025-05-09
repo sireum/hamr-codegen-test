@@ -22,8 +22,6 @@ void producer_producer::timeTriggered()
 {
     // Handle communication
 
-
-
     // Example publishing messages
     datatypes_system_cpp_pkg_interfaces::msg::Boolean myBoolean = datatypes_system_cpp_pkg_interfaces::msg::Boolean();
     put_myBoolean(myBoolean);

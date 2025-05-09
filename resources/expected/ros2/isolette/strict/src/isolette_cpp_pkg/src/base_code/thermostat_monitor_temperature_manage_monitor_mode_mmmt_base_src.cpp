@@ -70,7 +70,6 @@ void thermostat_monitor_temperature_manage_monitor_mode_mmmt_base::init_internal
     enqueue(infrastructureIn_internal_failure, val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

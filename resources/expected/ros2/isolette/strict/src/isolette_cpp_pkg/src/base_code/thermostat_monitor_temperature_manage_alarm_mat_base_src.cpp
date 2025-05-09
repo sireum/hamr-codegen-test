@@ -77,7 +77,6 @@ void thermostat_monitor_temperature_manage_alarm_mat_base::init_monitor_mode(iso
     enqueue(infrastructureIn_monitor_mode, val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

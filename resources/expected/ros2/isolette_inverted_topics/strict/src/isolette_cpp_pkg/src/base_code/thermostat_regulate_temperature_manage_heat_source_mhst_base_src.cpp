@@ -77,7 +77,6 @@ void thermostat_regulate_temperature_manage_heat_source_mhst_base::init_regulato
     enqueue(infrastructureIn_regulator_mode, val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

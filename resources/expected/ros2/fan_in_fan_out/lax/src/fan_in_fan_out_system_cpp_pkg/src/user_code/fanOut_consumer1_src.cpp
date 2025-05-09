@@ -21,7 +21,5 @@ void fanOut_consumer1::handle_myInteger(const fan_in_fan_out_system_cpp_pkg_inte
 {
     // Handle myInteger msg
     PRINT_INFO("Received myInteger: %s", MESSAGE_TO_STRING(msg));
-
-
 }
 

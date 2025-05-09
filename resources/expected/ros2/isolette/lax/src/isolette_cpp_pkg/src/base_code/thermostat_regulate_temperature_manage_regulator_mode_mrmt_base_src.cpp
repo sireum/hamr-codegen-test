@@ -51,7 +51,6 @@ void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::init_inter
     internal_failure_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

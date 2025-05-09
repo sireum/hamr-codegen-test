@@ -44,7 +44,6 @@ void heat_source_cpi_heat_controller_base::init_heat_control(isolette_cpp_pkg_in
     enqueue(infrastructureIn_heat_control, val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

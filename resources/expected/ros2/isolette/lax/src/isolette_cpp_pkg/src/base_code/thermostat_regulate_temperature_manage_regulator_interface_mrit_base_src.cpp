@@ -72,7 +72,6 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_
     regulator_mode_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

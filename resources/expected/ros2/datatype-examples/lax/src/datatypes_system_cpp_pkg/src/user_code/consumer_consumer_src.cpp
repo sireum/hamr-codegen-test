@@ -22,8 +22,6 @@ void consumer_consumer::handle_myBoolean(const datatypes_system_cpp_pkg_interfac
 {
     // Handle myBoolean msg
     PRINT_INFO("Received myBoolean: %s", MESSAGE_TO_STRING(msg));
-
-
 }
 
 void consumer_consumer::handle_myInteger(const datatypes_system_cpp_pkg_interfaces::msg::Integer64::SharedPtr msg)

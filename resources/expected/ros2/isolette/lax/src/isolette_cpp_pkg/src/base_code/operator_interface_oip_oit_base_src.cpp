@@ -72,7 +72,6 @@ void operator_interface_oip_oit_base::init_alarm_control(isolette_cpp_pkg_interf
     alarm_control_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::OnOff>(val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

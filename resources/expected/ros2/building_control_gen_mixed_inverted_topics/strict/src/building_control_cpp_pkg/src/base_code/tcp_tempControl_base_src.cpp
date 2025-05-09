@@ -50,7 +50,6 @@ void tcp_tempControl_base::init_currentTemp(building_control_cpp_pkg_interfaces:
     enqueue(infrastructureIn_currentTemp, val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

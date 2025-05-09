@@ -97,7 +97,6 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_
     enqueue(infrastructureIn_regulator_mode, val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

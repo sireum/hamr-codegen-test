@@ -92,7 +92,6 @@ void thermostat_monitor_temperature_manage_monitor_interface_mmit_base::init_mon
     enqueue(infrastructureIn_monitor_mode, val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

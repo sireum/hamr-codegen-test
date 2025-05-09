@@ -70,7 +70,6 @@ void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::init_inter
     enqueue(infrastructureIn_internal_failure, val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

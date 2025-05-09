@@ -56,7 +56,6 @@ void thermostat_monitor_temperature_manage_alarm_mat_base::init_monitor_mode(iso
     monitor_mode_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::MonitorMode>(val);
 }
 
-
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================
