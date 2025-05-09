@@ -45,6 +45,10 @@ temperature_sensor_cpi_thermostat_base::temperature_sensor_cpi_thermostat_base()
 
 }
 
+void temperature_sensor_cpi_thermostat_base::init_air(isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl val) {
+    air_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl>(val);
+}
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

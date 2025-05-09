@@ -82,7 +82,7 @@ public
 				currentSetPoint: SetPoint.i;
   			integration
   				assume i1 "currentTemp Range":
-  					 currentTemp.degrees >= (-70.0)  &&  currentTemp.degrees <= 180.0 ;
+  					 currentTemp.degrees >= -70.0  &&  currentTemp.degrees <= 180.0 ;
   				assume a1 "setPoint Range":
   					 setPoint.low.degrees >= 40.0  &&  setPoint.high.degrees <= 110.0 ;
  			initialize

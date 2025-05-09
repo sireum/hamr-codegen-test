@@ -61,6 +61,22 @@ thermostat_monitor_temperature_manage_alarm_mat_base::thermostat_monitor_tempera
 
 }
 
+void thermostat_monitor_temperature_manage_alarm_mat_base::init_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    enqueue(infrastructureIn_current_tempWstatus, val);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::init_lower_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    enqueue(infrastructureIn_lower_alarm_temp, val);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::init_upper_alarm_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    enqueue(infrastructureIn_upper_alarm_temp, val);
+}
+
+void thermostat_monitor_temperature_manage_alarm_mat_base::init_monitor_mode(isolette_cpp_pkg_interfaces::msg::MonitorMode val) {
+    enqueue(infrastructureIn_monitor_mode, val);
+}
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

@@ -78,7 +78,7 @@ object TempControlPeriodic_p_tcproc_tempControl {
             api.fanCmd == latestFanCmd,
         // case Refer_to_state_var_in_periodic_case_assume
         (In(latestFanCmd) == CoolingFan.FanCmd.Off ||
-           In(latestFanCmd) == CoolingFan.FanCmd.On) ___>: (latestFanCmd == CoolingFan.FanCmd.Off ||
+          In(latestFanCmd) == CoolingFan.FanCmd.On) ___>: (latestFanCmd == CoolingFan.FanCmd.Off ||
           latestFanCmd == CoolingFan.FanCmd.On),
         // case currentTempLTSetPoint
         //   If current temperature is less than
@@ -95,7 +95,7 @@ object TempControlPeriodic_p_tcproc_tempControl {
         //   current low set point and less than or equal to the current high set point, 
         //   then the current fan state is maintained.
         (api.currentTemp.degrees >= api.setPoint.low.degrees &
-           api.currentTemp.degrees <= api.setPoint.high.degrees) ___>: (latestFanCmd == In(latestFanCmd) &
+          api.currentTemp.degrees <= api.setPoint.high.degrees) ___>: (latestFanCmd == In(latestFanCmd) &
           api.fanCmd == latestFanCmd)
         // END COMPUTE ENSURES timeTriggered
       )

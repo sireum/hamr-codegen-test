@@ -423,11 +423,11 @@
                                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                           },
                                           "beginLine" : 83,
-                                          "beginColumn" : 21,
+                                          "beginColumn" : 20,
                                           "endLine" : 83,
                                           "endColumn" : 28,
-                                          "offset" : 2339,
-                                          "length" : 7
+                                          "offset" : 2338,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -518,7 +518,7 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 83,
-                                    "beginColumn" : 48,
+                                    "beginColumn" : 29,
                                     "endLine" : 83,
                                     "endColumn" : 31,
                                     "offset" : 2347,
@@ -599,11 +599,11 @@
                                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                           },
                                           "beginLine" : 83,
-                                          "beginColumn" : 59,
+                                          "beginColumn" : 58,
                                           "endLine" : 83,
                                           "endColumn" : 66,
-                                          "offset" : 2377,
-                                          "length" : 7
+                                          "offset" : 2376,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -694,7 +694,7 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 83,
-                                    "beginColumn" : 86,
+                                    "beginColumn" : 67,
                                     "endLine" : 83,
                                     "endColumn" : 69,
                                     "offset" : 2385,
@@ -713,11 +713,11 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 83,
-                                    "beginColumn" : 9,
+                                    "beginColumn" : 29,
                                     "endLine" : 83,
-                                    "endColumn" : 80,
-                                    "offset" : 2327,
-                                    "length" : 71
+                                    "endColumn" : 69,
+                                    "offset" : 2347,
+                                    "length" : 40
                                   }
                                 },
                                 "resOpt" : {
@@ -736,11 +736,11 @@
                                     "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                   },
                                   "beginLine" : 83,
-                                  "beginColumn" : 34,
+                                  "beginColumn" : 43,
                                   "endLine" : 83,
-                                  "endColumn" : 85,
-                                  "offset" : 2350,
-                                  "length" : 34
+                                  "endColumn" : 45,
+                                  "offset" : 2361,
+                                  "length" : 2
                                 }
                               }
                             },
@@ -849,11 +849,11 @@
                                                 "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                               },
                                               "beginLine" : 85,
-                                              "beginColumn" : 18,
+                                              "beginColumn" : 17,
                                               "endLine" : 85,
-                                              "endColumn" : 29,
-                                              "offset" : 2452,
-                                              "length" : 11
+                                              "endColumn" : 21,
+                                              "offset" : 2451,
+                                              "length" : 4
                                             }
                                           }
                                         }
@@ -873,9 +873,9 @@
                                             "beginLine" : 85,
                                             "beginColumn" : 9,
                                             "endLine" : 85,
-                                            "endColumn" : 29,
+                                            "endColumn" : 21,
                                             "offset" : 2443,
-                                            "length" : 20
+                                            "length" : 12
                                           }
                                         },
                                         "resOpt" : {
@@ -901,11 +901,11 @@
                                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                           },
                                           "beginLine" : 85,
-                                          "beginColumn" : 22,
+                                          "beginColumn" : 21,
                                           "endLine" : 85,
                                           "endColumn" : 29,
-                                          "offset" : 2456,
-                                          "length" : 7
+                                          "offset" : 2455,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -996,7 +996,7 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 85,
-                                    "beginColumn" : 50,
+                                    "beginColumn" : 30,
                                     "endLine" : 85,
                                     "endColumn" : 32,
                                     "offset" : 2464,
@@ -1081,11 +1081,11 @@
                                                 "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                               },
                                               "beginLine" : 85,
-                                              "beginColumn" : 57,
+                                              "beginColumn" : 56,
                                               "endLine" : 85,
-                                              "endColumn" : 69,
-                                              "offset" : 2491,
-                                              "length" : 12
+                                              "endColumn" : 61,
+                                              "offset" : 2490,
+                                              "length" : 5
                                             }
                                           }
                                         }
@@ -1105,9 +1105,9 @@
                                             "beginLine" : 85,
                                             "beginColumn" : 48,
                                             "endLine" : 85,
-                                            "endColumn" : 69,
+                                            "endColumn" : 61,
                                             "offset" : 2482,
-                                            "length" : 21
+                                            "length" : 13
                                           }
                                         },
                                         "resOpt" : {
@@ -1133,11 +1133,11 @@
                                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                           },
                                           "beginLine" : 85,
-                                          "beginColumn" : 62,
+                                          "beginColumn" : 61,
                                           "endLine" : 85,
                                           "endColumn" : 69,
-                                          "offset" : 2496,
-                                          "length" : 7
+                                          "offset" : 2495,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -1228,7 +1228,7 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 85,
-                                    "beginColumn" : 91,
+                                    "beginColumn" : 70,
                                     "endLine" : 85,
                                     "endColumn" : 72,
                                     "offset" : 2504,
@@ -1247,11 +1247,11 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 85,
-                                    "beginColumn" : 9,
+                                    "beginColumn" : 30,
                                     "endLine" : 85,
-                                    "endColumn" : 83,
-                                    "offset" : 2443,
-                                    "length" : 74
+                                    "endColumn" : 72,
+                                    "offset" : 2464,
+                                    "length" : 42
                                   }
                                 },
                                 "resOpt" : {
@@ -1270,11 +1270,11 @@
                                     "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                   },
                                   "beginLine" : 85,
-                                  "beginColumn" : 35,
+                                  "beginColumn" : 44,
                                   "endLine" : 85,
-                                  "endColumn" : 90,
-                                  "offset" : 2467,
-                                  "length" : 36
+                                  "endColumn" : 46,
+                                  "offset" : 2478,
+                                  "length" : 2
                                 }
                               }
                             },
@@ -1660,11 +1660,11 @@
                                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                           },
                                           "beginLine" : 108,
-                                          "beginColumn" : 21,
+                                          "beginColumn" : 20,
                                           "endLine" : 108,
                                           "endColumn" : 28,
-                                          "offset" : 3155,
-                                          "length" : 7
+                                          "offset" : 3154,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -1755,7 +1755,7 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 108,
-                                    "beginColumn" : 48,
+                                    "beginColumn" : 29,
                                     "endLine" : 108,
                                     "endColumn" : 31,
                                     "offset" : 3163,
@@ -1836,11 +1836,11 @@
                                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                           },
                                           "beginLine" : 108,
-                                          "beginColumn" : 59,
+                                          "beginColumn" : 58,
                                           "endLine" : 108,
                                           "endColumn" : 66,
-                                          "offset" : 3193,
-                                          "length" : 7
+                                          "offset" : 3192,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -1931,7 +1931,7 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 108,
-                                    "beginColumn" : 86,
+                                    "beginColumn" : 67,
                                     "endLine" : 108,
                                     "endColumn" : 69,
                                     "offset" : 3201,
@@ -1950,11 +1950,11 @@
                                       "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                     },
                                     "beginLine" : 108,
-                                    "beginColumn" : 9,
+                                    "beginColumn" : 29,
                                     "endLine" : 108,
-                                    "endColumn" : 80,
-                                    "offset" : 3143,
-                                    "length" : 71
+                                    "endColumn" : 69,
+                                    "offset" : 3163,
+                                    "length" : 40
                                   }
                                 },
                                 "resOpt" : {
@@ -1973,11 +1973,11 @@
                                     "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                   },
                                   "beginLine" : 108,
-                                  "beginColumn" : 34,
+                                  "beginColumn" : 43,
                                   "endLine" : 108,
-                                  "endColumn" : 85,
-                                  "offset" : 3166,
-                                  "length" : 34
+                                  "endColumn" : 45,
+                                  "offset" : 3177,
+                                  "length" : 2
                                 }
                               }
                             },
@@ -4504,7 +4504,20 @@
                       }
                     },
                     "opPosOpt" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 23,
+                        "endLine" : 27,
+                        "endColumn" : 24,
+                        "offset" : 968,
+                        "length" : 1
+                      }
                     }
                   },
                   "attr" : {
@@ -4520,9 +4533,9 @@
                         "beginLine" : 27,
                         "beginColumn" : 11,
                         "endLine" : 27,
-                        "endColumn" : 35,
+                        "endColumn" : 24,
                         "offset" : 956,
-                        "length" : 24
+                        "length" : 13
                       }
                     },
                     "resOpt" : {
@@ -4541,11 +4554,11 @@
                         "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                       },
                       "beginLine" : 27,
-                      "beginColumn" : 11,
+                      "beginColumn" : 19,
                       "endLine" : 27,
-                      "endColumn" : 18,
-                      "offset" : 956,
-                      "length" : 7
+                      "endColumn" : 21,
+                      "offset" : 964,
+                      "length" : 2
                     }
                   }
                 },
@@ -4979,7 +4992,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 23,
+                            "endLine" : 27,
+                            "endColumn" : 24,
+                            "offset" : 968,
+                            "length" : 1
+                          }
                         }
                       },
                       "attr" : {
@@ -4995,9 +5021,9 @@
                             "beginLine" : 27,
                             "beginColumn" : 11,
                             "endLine" : 27,
-                            "endColumn" : 35,
+                            "endColumn" : 24,
                             "offset" : 956,
-                            "length" : 24
+                            "length" : 13
                           }
                         },
                         "resOpt" : {
@@ -5016,11 +5042,11 @@
                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                           },
                           "beginLine" : 27,
-                          "beginColumn" : 11,
+                          "beginColumn" : 19,
                           "endLine" : 27,
-                          "endColumn" : 18,
-                          "offset" : 956,
-                          "length" : 7
+                          "endColumn" : 21,
+                          "offset" : 964,
+                          "length" : 2
                         }
                       }
                     },
@@ -5431,7 +5457,20 @@
                           }
                         },
                         "opPosOpt" : {
-                          "type" : "None"
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/integration-contacts\/Integration_Contracts.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 23,
+                            "endLine" : 27,
+                            "endColumn" : 24,
+                            "offset" : 968,
+                            "length" : 1
+                          }
                         }
                       },
                       "attr" : {
@@ -5447,9 +5486,9 @@
                             "beginLine" : 27,
                             "beginColumn" : 11,
                             "endLine" : 27,
-                            "endColumn" : 35,
+                            "endColumn" : 24,
                             "offset" : 956,
-                            "length" : 24
+                            "length" : 13
                           }
                         },
                         "resOpt" : {
@@ -5468,11 +5507,11 @@
                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                           },
                           "beginLine" : 27,
-                          "beginColumn" : 11,
+                          "beginColumn" : 19,
                           "endLine" : 27,
-                          "endColumn" : 18,
-                          "offset" : 956,
-                          "length" : 7
+                          "endColumn" : 21,
+                          "offset" : 964,
+                          "length" : 2
                         }
                       }
                     },
@@ -5666,11 +5705,11 @@
                                   "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                 },
                                 "beginLine" : 47,
-                                "beginColumn" : 16,
+                                "beginColumn" : 15,
                                 "endLine" : 47,
                                 "endColumn" : 23,
-                                "offset" : 1565,
-                                "length" : 7
+                                "offset" : 1564,
+                                "length" : 8
                               }
                             }
                           }
@@ -5761,7 +5800,7 @@
                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                           },
                           "beginLine" : 47,
-                          "beginColumn" : 35,
+                          "beginColumn" : 24,
                           "endLine" : 47,
                           "endColumn" : 26,
                           "offset" : 1573,
@@ -5842,11 +5881,11 @@
                                   "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                                 },
                                 "beginLine" : 48,
-                                "beginColumn" : 17,
+                                "beginColumn" : 16,
                                 "endLine" : 48,
                                 "endColumn" : 24,
-                                "offset" : 1606,
-                                "length" : 7
+                                "offset" : 1605,
+                                "length" : 8
                               }
                             }
                           }
@@ -5937,7 +5976,7 @@
                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                           },
                           "beginLine" : 48,
-                          "beginColumn" : 37,
+                          "beginColumn" : 25,
                           "endLine" : 48,
                           "endColumn" : 27,
                           "offset" : 1614,
@@ -5956,11 +5995,11 @@
                             "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                           },
                           "beginLine" : 47,
-                          "beginColumn" : 12,
+                          "beginColumn" : 24,
                           "endLine" : 48,
-                          "endColumn" : 38,
-                          "offset" : 1561,
-                          "length" : 66
+                          "endColumn" : 27,
+                          "offset" : 1573,
+                          "length" : 43
                         }
                       },
                       "resOpt" : {
@@ -5979,11 +6018,11 @@
                           "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                         },
                         "beginLine" : 47,
-                        "beginColumn" : 29,
-                        "endLine" : 48,
-                        "endColumn" : 36,
-                        "offset" : 1576,
-                        "length" : 37
+                        "beginColumn" : 38,
+                        "endLine" : 47,
+                        "endColumn" : 40,
+                        "offset" : 1587,
+                        "length" : 2
                       }
                     }
                   },
@@ -6060,11 +6099,11 @@
                                 "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                               },
                               "beginLine" : 49,
-                              "beginColumn" : 16,
+                              "beginColumn" : 15,
                               "endLine" : 49,
                               "endColumn" : 23,
-                              "offset" : 1647,
-                              "length" : 7
+                              "offset" : 1646,
+                              "length" : 8
                             }
                           }
                         }
@@ -6168,11 +6207,11 @@
                                 "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                               },
                               "beginLine" : 49,
-                              "beginColumn" : 32,
+                              "beginColumn" : 31,
                               "endLine" : 49,
                               "endColumn" : 39,
-                              "offset" : 1663,
-                              "length" : 7
+                              "offset" : 1662,
+                              "length" : 8
                             }
                           }
                         }
@@ -6239,7 +6278,7 @@
                           "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                         },
                         "beginLine" : 49,
-                        "beginColumn" : 35,
+                        "beginColumn" : 24,
                         "endLine" : 49,
                         "endColumn" : 26,
                         "offset" : 1655,
@@ -6258,11 +6297,11 @@
                           "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                         },
                         "beginLine" : 47,
-                        "beginColumn" : 12,
+                        "beginColumn" : 38,
                         "endLine" : 49,
-                        "endColumn" : 39,
-                        "offset" : 1561,
-                        "length" : 109
+                        "endColumn" : 26,
+                        "offset" : 1587,
+                        "length" : 70
                       }
                     },
                     "resOpt" : {
@@ -6281,11 +6320,11 @@
                         "value" : "\/integration-contacts\/Integration_Contracts.aadl"
                       },
                       "beginLine" : 48,
-                      "beginColumn" : 74,
-                      "endLine" : 49,
-                      "endColumn" : 34,
-                      "offset" : 1614,
-                      "length" : 40
+                      "beginColumn" : 40,
+                      "endLine" : 48,
+                      "endColumn" : 42,
+                      "offset" : 1629,
+                      "length" : 2
                     }
                   }
                 },

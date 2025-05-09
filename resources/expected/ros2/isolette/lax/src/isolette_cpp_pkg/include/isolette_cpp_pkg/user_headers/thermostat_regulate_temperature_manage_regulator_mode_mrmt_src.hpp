@@ -1,5 +1,9 @@
 #include "isolette_cpp_pkg/base_headers/thermostat_regulate_temperature_manage_regulator_mode_mrmt_base_src.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 class thermostat_regulate_temperature_manage_regulator_mode_mrmt : public thermostat_regulate_temperature_manage_regulator_mode_mrmt_base
 {
 public:

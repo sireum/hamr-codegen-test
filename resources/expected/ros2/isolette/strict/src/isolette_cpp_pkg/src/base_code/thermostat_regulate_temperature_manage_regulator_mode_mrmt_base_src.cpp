@@ -58,6 +58,18 @@ thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::thermostat_regu
 
 }
 
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::init_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    enqueue(infrastructureIn_current_tempWstatus, val);
+}
+
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::init_interface_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl val) {
+    enqueue(infrastructureIn_interface_failure, val);
+}
+
+void thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::init_internal_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl val) {
+    enqueue(infrastructureIn_internal_failure, val);
+}
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

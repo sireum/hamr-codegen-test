@@ -1,5 +1,9 @@
 #include "isolette_cpp_pkg/base_headers/heat_source_cpi_heat_controller_base_src.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 class heat_source_cpi_heat_controller : public heat_source_cpi_heat_controller_base
 {
 public:

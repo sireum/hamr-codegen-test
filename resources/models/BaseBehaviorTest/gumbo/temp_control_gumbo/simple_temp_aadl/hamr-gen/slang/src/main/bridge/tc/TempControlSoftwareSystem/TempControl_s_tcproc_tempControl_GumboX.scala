@@ -95,7 +95,7 @@ object TempControl_s_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * assumes a1
+    * assume a1
     *   If the previously received currentTemp was less than the previously
     *   received setPoint then the last fan command must have been Off
     * @param In_currentFanState pre-state state variable
@@ -111,7 +111,7 @@ object TempControl_s_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * assumes a2
+    * assume a2
     *   If the previously received currentTemp was more than the previously
     *   received setPoint then the last fan command must have been On
     * @param In_currentFanState pre-state state variable
@@ -127,7 +127,7 @@ object TempControl_s_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * assumes Test
+    * assume Test
     *   Just testing assume+guarantee along with handlers
     */
   @strictpure def compute_spec_Test_assume(
@@ -136,7 +136,7 @@ object TempControl_s_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * assumes Refer_to_state_var_in_sporadic_general_assume
+    * assume Refer_to_state_var_in_sporadic_general_assume
     * @param In_currentSetPoint pre-state state variable
     */
   @strictpure def compute_spec_Refer_to_state_var_in_sporadic_general_assume_assume(

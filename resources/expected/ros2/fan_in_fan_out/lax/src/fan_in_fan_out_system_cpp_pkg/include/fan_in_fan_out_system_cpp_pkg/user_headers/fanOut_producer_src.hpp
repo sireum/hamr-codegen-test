@@ -1,5 +1,9 @@
 #include "fan_in_fan_out_system_cpp_pkg/base_headers/fanOut_producer_base_src.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 class fanOut_producer : public fanOut_producer_base
 {
 public:

@@ -20,6 +20,7 @@ protected:
     //  C o m m u n i c a t i o n
     //=================================================
 
+    #define MESSAGE_TO_STRING(message) fan_in_fan_out_system_cpp_pkg_interfaces::msg::to_yaml(message).c_str()
     #define PRINT_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
     #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
     #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)

@@ -1,5 +1,9 @@
 #include "fan_in_fan_out_system_cpp_pkg/base_headers/fanIn_consumer_base_src.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 class fanIn_consumer : public fanIn_consumer_base
 {
 public:

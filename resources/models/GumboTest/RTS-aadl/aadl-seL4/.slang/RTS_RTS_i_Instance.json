@@ -17734,7 +17734,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "coincidenceOutput",
@@ -17945,7 +17947,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 35,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 49,
                                                       "endColumn" : 28,
                                                       "offset" : 1964,
@@ -18093,7 +18095,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 50,
-                                                      "beginColumn" : 26,
+                                                      "beginColumn" : 18,
                                                       "endLine" : 50,
                                                       "endColumn" : 19,
                                                       "offset" : 1996,
@@ -18112,11 +18114,11 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 18,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 50,
-                                                      "endColumn" : 28,
-                                                      "offset" : 1955,
-                                                      "length" : 51
+                                                      "endColumn" : 19,
+                                                      "offset" : 1964,
+                                                      "length" : 33
                                                     }
                                                   },
                                                   "resOpt" : {
@@ -18135,11 +18137,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 30,
-                                                    "endLine" : 50,
-                                                    "endColumn" : 25,
-                                                    "offset" : 1966,
-                                                    "length" : 29
+                                                    "beginColumn" : 39,
+                                                    "endLine" : 49,
+                                                    "endColumn" : 40,
+                                                    "offset" : 1976,
+                                                    "length" : 1
                                                   }
                                                 }
                                               },
@@ -18283,7 +18285,7 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 51,
-                                                    "beginColumn" : 26,
+                                                    "beginColumn" : 18,
                                                     "endLine" : 51,
                                                     "endColumn" : 19,
                                                     "offset" : 2028,
@@ -18302,11 +18304,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 18,
+                                                    "beginColumn" : 39,
                                                     "endLine" : 51,
-                                                    "endColumn" : 28,
-                                                    "offset" : 1955,
-                                                    "length" : 83
+                                                    "endColumn" : 19,
+                                                    "offset" : 1976,
+                                                    "length" : 53
                                                   }
                                                 },
                                                 "resOpt" : {
@@ -18325,11 +18327,11 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 50,
-                                                  "beginColumn" : 55,
-                                                  "endLine" : 51,
-                                                  "endColumn" : 25,
-                                                  "offset" : 1996,
-                                                  "length" : 31
+                                                  "beginColumn" : 30,
+                                                  "endLine" : 50,
+                                                  "endColumn" : 31,
+                                                  "offset" : 2008,
+                                                  "length" : 1
                                                 }
                                               }
                                             },
@@ -18473,7 +18475,7 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 52,
-                                                  "beginColumn" : 26,
+                                                  "beginColumn" : 18,
                                                   "endLine" : 52,
                                                   "endColumn" : 19,
                                                   "offset" : 2060,
@@ -18491,12 +18493,12 @@
                                                     "type" : "Some",
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
-                                                  "beginLine" : 49,
-                                                  "beginColumn" : 18,
+                                                  "beginLine" : 50,
+                                                  "beginColumn" : 30,
                                                   "endLine" : 52,
-                                                  "endColumn" : 28,
-                                                  "offset" : 1955,
-                                                  "length" : 115
+                                                  "endColumn" : 19,
+                                                  "offset" : 2008,
+                                                  "length" : 53
                                                 }
                                               },
                                               "resOpt" : {
@@ -18515,11 +18517,11 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 51,
-                                                "beginColumn" : 57,
-                                                "endLine" : 52,
-                                                "endColumn" : 25,
-                                                "offset" : 2028,
-                                                "length" : 31
+                                                "beginColumn" : 30,
+                                                "endLine" : 51,
+                                                "endColumn" : 31,
+                                                "offset" : 2040,
+                                                "length" : 1
                                               }
                                             }
                                           },
@@ -18663,7 +18665,7 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 53,
-                                                "beginColumn" : 26,
+                                                "beginColumn" : 18,
                                                 "endLine" : 53,
                                                 "endColumn" : 19,
                                                 "offset" : 2092,
@@ -18681,12 +18683,12 @@
                                                   "type" : "Some",
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
-                                                "beginLine" : 49,
-                                                "beginColumn" : 18,
+                                                "beginLine" : 51,
+                                                "beginColumn" : 30,
                                                 "endLine" : 53,
-                                                "endColumn" : 28,
-                                                "offset" : 1955,
-                                                "length" : 147
+                                                "endColumn" : 19,
+                                                "offset" : 2040,
+                                                "length" : 53
                                               }
                                             },
                                             "resOpt" : {
@@ -18705,11 +18707,11 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 52,
-                                              "beginColumn" : 57,
-                                              "endLine" : 53,
-                                              "endColumn" : 25,
-                                              "offset" : 2060,
-                                              "length" : 31
+                                              "beginColumn" : 30,
+                                              "endLine" : 52,
+                                              "endColumn" : 31,
+                                              "offset" : 2072,
+                                              "length" : 1
                                             }
                                           }
                                         },
@@ -18853,7 +18855,7 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 54,
-                                              "beginColumn" : 26,
+                                              "beginColumn" : 18,
                                               "endLine" : 54,
                                               "endColumn" : 19,
                                               "offset" : 2124,
@@ -18871,12 +18873,12 @@
                                                 "type" : "Some",
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
-                                              "beginLine" : 49,
-                                              "beginColumn" : 18,
+                                              "beginLine" : 52,
+                                              "beginColumn" : 30,
                                               "endLine" : 54,
-                                              "endColumn" : 28,
-                                              "offset" : 1955,
-                                              "length" : 179
+                                              "endColumn" : 19,
+                                              "offset" : 2072,
+                                              "length" : 53
                                             }
                                           },
                                           "resOpt" : {
@@ -18895,11 +18897,11 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 53,
-                                            "beginColumn" : 57,
-                                            "endLine" : 54,
-                                            "endColumn" : 25,
-                                            "offset" : 2092,
-                                            "length" : 31
+                                            "beginColumn" : 30,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
+                                            "offset" : 2104,
+                                            "length" : 1
                                           }
                                         }
                                       },
@@ -18915,10 +18917,10 @@
                                             },
                                             "beginLine" : 49,
                                             "beginColumn" : 5,
-                                            "endLine" : 54,
-                                            "endColumn" : 28,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
                                             "offset" : 1942,
-                                            "length" : 192
+                                            "length" : 163
                                           }
                                         },
                                         "resOpt" : {
@@ -18937,11 +18939,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 49,
-                                          "beginColumn" : 20,
-                                          "endLine" : 53,
-                                          "endColumn" : 56,
+                                          "beginColumn" : 13,
+                                          "endLine" : 49,
+                                          "endColumn" : 15,
                                           "offset" : 1950,
-                                          "length" : 141
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -21441,7 +21443,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "coincidenceOutput",
@@ -21652,7 +21656,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 35,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 49,
                                                       "endColumn" : 28,
                                                       "offset" : 1964,
@@ -21800,7 +21804,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 50,
-                                                      "beginColumn" : 26,
+                                                      "beginColumn" : 18,
                                                       "endLine" : 50,
                                                       "endColumn" : 19,
                                                       "offset" : 1996,
@@ -21819,11 +21823,11 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 18,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 50,
-                                                      "endColumn" : 28,
-                                                      "offset" : 1955,
-                                                      "length" : 51
+                                                      "endColumn" : 19,
+                                                      "offset" : 1964,
+                                                      "length" : 33
                                                     }
                                                   },
                                                   "resOpt" : {
@@ -21842,11 +21846,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 30,
-                                                    "endLine" : 50,
-                                                    "endColumn" : 25,
-                                                    "offset" : 1966,
-                                                    "length" : 29
+                                                    "beginColumn" : 39,
+                                                    "endLine" : 49,
+                                                    "endColumn" : 40,
+                                                    "offset" : 1976,
+                                                    "length" : 1
                                                   }
                                                 }
                                               },
@@ -21990,7 +21994,7 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 51,
-                                                    "beginColumn" : 26,
+                                                    "beginColumn" : 18,
                                                     "endLine" : 51,
                                                     "endColumn" : 19,
                                                     "offset" : 2028,
@@ -22009,11 +22013,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 18,
+                                                    "beginColumn" : 39,
                                                     "endLine" : 51,
-                                                    "endColumn" : 28,
-                                                    "offset" : 1955,
-                                                    "length" : 83
+                                                    "endColumn" : 19,
+                                                    "offset" : 1976,
+                                                    "length" : 53
                                                   }
                                                 },
                                                 "resOpt" : {
@@ -22032,11 +22036,11 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 50,
-                                                  "beginColumn" : 55,
-                                                  "endLine" : 51,
-                                                  "endColumn" : 25,
-                                                  "offset" : 1996,
-                                                  "length" : 31
+                                                  "beginColumn" : 30,
+                                                  "endLine" : 50,
+                                                  "endColumn" : 31,
+                                                  "offset" : 2008,
+                                                  "length" : 1
                                                 }
                                               }
                                             },
@@ -22180,7 +22184,7 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 52,
-                                                  "beginColumn" : 26,
+                                                  "beginColumn" : 18,
                                                   "endLine" : 52,
                                                   "endColumn" : 19,
                                                   "offset" : 2060,
@@ -22198,12 +22202,12 @@
                                                     "type" : "Some",
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
-                                                  "beginLine" : 49,
-                                                  "beginColumn" : 18,
+                                                  "beginLine" : 50,
+                                                  "beginColumn" : 30,
                                                   "endLine" : 52,
-                                                  "endColumn" : 28,
-                                                  "offset" : 1955,
-                                                  "length" : 115
+                                                  "endColumn" : 19,
+                                                  "offset" : 2008,
+                                                  "length" : 53
                                                 }
                                               },
                                               "resOpt" : {
@@ -22222,11 +22226,11 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 51,
-                                                "beginColumn" : 57,
-                                                "endLine" : 52,
-                                                "endColumn" : 25,
-                                                "offset" : 2028,
-                                                "length" : 31
+                                                "beginColumn" : 30,
+                                                "endLine" : 51,
+                                                "endColumn" : 31,
+                                                "offset" : 2040,
+                                                "length" : 1
                                               }
                                             }
                                           },
@@ -22370,7 +22374,7 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 53,
-                                                "beginColumn" : 26,
+                                                "beginColumn" : 18,
                                                 "endLine" : 53,
                                                 "endColumn" : 19,
                                                 "offset" : 2092,
@@ -22388,12 +22392,12 @@
                                                   "type" : "Some",
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
-                                                "beginLine" : 49,
-                                                "beginColumn" : 18,
+                                                "beginLine" : 51,
+                                                "beginColumn" : 30,
                                                 "endLine" : 53,
-                                                "endColumn" : 28,
-                                                "offset" : 1955,
-                                                "length" : 147
+                                                "endColumn" : 19,
+                                                "offset" : 2040,
+                                                "length" : 53
                                               }
                                             },
                                             "resOpt" : {
@@ -22412,11 +22416,11 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 52,
-                                              "beginColumn" : 57,
-                                              "endLine" : 53,
-                                              "endColumn" : 25,
-                                              "offset" : 2060,
-                                              "length" : 31
+                                              "beginColumn" : 30,
+                                              "endLine" : 52,
+                                              "endColumn" : 31,
+                                              "offset" : 2072,
+                                              "length" : 1
                                             }
                                           }
                                         },
@@ -22560,7 +22564,7 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 54,
-                                              "beginColumn" : 26,
+                                              "beginColumn" : 18,
                                               "endLine" : 54,
                                               "endColumn" : 19,
                                               "offset" : 2124,
@@ -22578,12 +22582,12 @@
                                                 "type" : "Some",
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
-                                              "beginLine" : 49,
-                                              "beginColumn" : 18,
+                                              "beginLine" : 52,
+                                              "beginColumn" : 30,
                                               "endLine" : 54,
-                                              "endColumn" : 28,
-                                              "offset" : 1955,
-                                              "length" : 179
+                                              "endColumn" : 19,
+                                              "offset" : 2072,
+                                              "length" : 53
                                             }
                                           },
                                           "resOpt" : {
@@ -22602,11 +22606,11 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 53,
-                                            "beginColumn" : 57,
-                                            "endLine" : 54,
-                                            "endColumn" : 25,
-                                            "offset" : 2092,
-                                            "length" : 31
+                                            "beginColumn" : 30,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
+                                            "offset" : 2104,
+                                            "length" : 1
                                           }
                                         }
                                       },
@@ -22622,10 +22626,10 @@
                                             },
                                             "beginLine" : 49,
                                             "beginColumn" : 5,
-                                            "endLine" : 54,
-                                            "endColumn" : 28,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
                                             "offset" : 1942,
-                                            "length" : 192
+                                            "length" : 163
                                           }
                                         },
                                         "resOpt" : {
@@ -22644,11 +22648,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 49,
-                                          "beginColumn" : 20,
-                                          "endLine" : 53,
-                                          "endColumn" : 56,
+                                          "beginColumn" : 13,
+                                          "endLine" : 49,
+                                          "endColumn" : 15,
                                           "offset" : 1950,
-                                          "length" : 141
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -25148,7 +25152,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "coincidenceOutput",
@@ -25359,7 +25365,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 35,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 49,
                                                       "endColumn" : 28,
                                                       "offset" : 1964,
@@ -25507,7 +25513,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 50,
-                                                      "beginColumn" : 26,
+                                                      "beginColumn" : 18,
                                                       "endLine" : 50,
                                                       "endColumn" : 19,
                                                       "offset" : 1996,
@@ -25526,11 +25532,11 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 18,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 50,
-                                                      "endColumn" : 28,
-                                                      "offset" : 1955,
-                                                      "length" : 51
+                                                      "endColumn" : 19,
+                                                      "offset" : 1964,
+                                                      "length" : 33
                                                     }
                                                   },
                                                   "resOpt" : {
@@ -25549,11 +25555,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 30,
-                                                    "endLine" : 50,
-                                                    "endColumn" : 25,
-                                                    "offset" : 1966,
-                                                    "length" : 29
+                                                    "beginColumn" : 39,
+                                                    "endLine" : 49,
+                                                    "endColumn" : 40,
+                                                    "offset" : 1976,
+                                                    "length" : 1
                                                   }
                                                 }
                                               },
@@ -25697,7 +25703,7 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 51,
-                                                    "beginColumn" : 26,
+                                                    "beginColumn" : 18,
                                                     "endLine" : 51,
                                                     "endColumn" : 19,
                                                     "offset" : 2028,
@@ -25716,11 +25722,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 18,
+                                                    "beginColumn" : 39,
                                                     "endLine" : 51,
-                                                    "endColumn" : 28,
-                                                    "offset" : 1955,
-                                                    "length" : 83
+                                                    "endColumn" : 19,
+                                                    "offset" : 1976,
+                                                    "length" : 53
                                                   }
                                                 },
                                                 "resOpt" : {
@@ -25739,11 +25745,11 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 50,
-                                                  "beginColumn" : 55,
-                                                  "endLine" : 51,
-                                                  "endColumn" : 25,
-                                                  "offset" : 1996,
-                                                  "length" : 31
+                                                  "beginColumn" : 30,
+                                                  "endLine" : 50,
+                                                  "endColumn" : 31,
+                                                  "offset" : 2008,
+                                                  "length" : 1
                                                 }
                                               }
                                             },
@@ -25887,7 +25893,7 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 52,
-                                                  "beginColumn" : 26,
+                                                  "beginColumn" : 18,
                                                   "endLine" : 52,
                                                   "endColumn" : 19,
                                                   "offset" : 2060,
@@ -25905,12 +25911,12 @@
                                                     "type" : "Some",
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
-                                                  "beginLine" : 49,
-                                                  "beginColumn" : 18,
+                                                  "beginLine" : 50,
+                                                  "beginColumn" : 30,
                                                   "endLine" : 52,
-                                                  "endColumn" : 28,
-                                                  "offset" : 1955,
-                                                  "length" : 115
+                                                  "endColumn" : 19,
+                                                  "offset" : 2008,
+                                                  "length" : 53
                                                 }
                                               },
                                               "resOpt" : {
@@ -25929,11 +25935,11 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 51,
-                                                "beginColumn" : 57,
-                                                "endLine" : 52,
-                                                "endColumn" : 25,
-                                                "offset" : 2028,
-                                                "length" : 31
+                                                "beginColumn" : 30,
+                                                "endLine" : 51,
+                                                "endColumn" : 31,
+                                                "offset" : 2040,
+                                                "length" : 1
                                               }
                                             }
                                           },
@@ -26077,7 +26083,7 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 53,
-                                                "beginColumn" : 26,
+                                                "beginColumn" : 18,
                                                 "endLine" : 53,
                                                 "endColumn" : 19,
                                                 "offset" : 2092,
@@ -26095,12 +26101,12 @@
                                                   "type" : "Some",
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
-                                                "beginLine" : 49,
-                                                "beginColumn" : 18,
+                                                "beginLine" : 51,
+                                                "beginColumn" : 30,
                                                 "endLine" : 53,
-                                                "endColumn" : 28,
-                                                "offset" : 1955,
-                                                "length" : 147
+                                                "endColumn" : 19,
+                                                "offset" : 2040,
+                                                "length" : 53
                                               }
                                             },
                                             "resOpt" : {
@@ -26119,11 +26125,11 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 52,
-                                              "beginColumn" : 57,
-                                              "endLine" : 53,
-                                              "endColumn" : 25,
-                                              "offset" : 2060,
-                                              "length" : 31
+                                              "beginColumn" : 30,
+                                              "endLine" : 52,
+                                              "endColumn" : 31,
+                                              "offset" : 2072,
+                                              "length" : 1
                                             }
                                           }
                                         },
@@ -26267,7 +26273,7 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 54,
-                                              "beginColumn" : 26,
+                                              "beginColumn" : 18,
                                               "endLine" : 54,
                                               "endColumn" : 19,
                                               "offset" : 2124,
@@ -26285,12 +26291,12 @@
                                                 "type" : "Some",
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
-                                              "beginLine" : 49,
-                                              "beginColumn" : 18,
+                                              "beginLine" : 52,
+                                              "beginColumn" : 30,
                                               "endLine" : 54,
-                                              "endColumn" : 28,
-                                              "offset" : 1955,
-                                              "length" : 179
+                                              "endColumn" : 19,
+                                              "offset" : 2072,
+                                              "length" : 53
                                             }
                                           },
                                           "resOpt" : {
@@ -26309,11 +26315,11 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 53,
-                                            "beginColumn" : 57,
-                                            "endLine" : 54,
-                                            "endColumn" : 25,
-                                            "offset" : 2092,
-                                            "length" : 31
+                                            "beginColumn" : 30,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
+                                            "offset" : 2104,
+                                            "length" : 1
                                           }
                                         }
                                       },
@@ -26329,10 +26335,10 @@
                                             },
                                             "beginLine" : 49,
                                             "beginColumn" : 5,
-                                            "endLine" : 54,
-                                            "endColumn" : 28,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
                                             "offset" : 1942,
-                                            "length" : 192
+                                            "length" : 163
                                           }
                                         },
                                         "resOpt" : {
@@ -26351,11 +26357,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 49,
-                                          "beginColumn" : 20,
-                                          "endLine" : 53,
-                                          "endColumn" : 56,
+                                          "beginColumn" : 13,
+                                          "endLine" : 49,
+                                          "endColumn" : 15,
                                           "offset" : 1950,
-                                          "length" : 141
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -28605,7 +28611,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "orOutput",
@@ -28805,7 +28813,7 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 123,
-                                            "beginColumn" : 34,
+                                            "beginColumn" : 26,
                                             "endLine" : 123,
                                             "endColumn" : 27,
                                             "offset" : 4297,
@@ -28826,9 +28834,9 @@
                                             "beginLine" : 123,
                                             "beginColumn" : 5,
                                             "endLine" : 123,
-                                            "endColumn" : 36,
+                                            "endColumn" : 27,
                                             "offset" : 4276,
-                                            "length" : 31
+                                            "length" : 22
                                           }
                                         },
                                         "resOpt" : {
@@ -28847,11 +28855,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 123,
-                                          "beginColumn" : 20,
+                                          "beginColumn" : 13,
                                           "endLine" : 123,
-                                          "endColumn" : 33,
+                                          "endColumn" : 15,
                                           "offset" : 4284,
-                                          "length" : 12
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -35852,7 +35860,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "coincidenceOutput",
@@ -36063,7 +36073,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 35,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 49,
                                                       "endColumn" : 28,
                                                       "offset" : 1964,
@@ -36211,7 +36221,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 50,
-                                                      "beginColumn" : 26,
+                                                      "beginColumn" : 18,
                                                       "endLine" : 50,
                                                       "endColumn" : 19,
                                                       "offset" : 1996,
@@ -36230,11 +36240,11 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 18,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 50,
-                                                      "endColumn" : 28,
-                                                      "offset" : 1955,
-                                                      "length" : 51
+                                                      "endColumn" : 19,
+                                                      "offset" : 1964,
+                                                      "length" : 33
                                                     }
                                                   },
                                                   "resOpt" : {
@@ -36253,11 +36263,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 30,
-                                                    "endLine" : 50,
-                                                    "endColumn" : 25,
-                                                    "offset" : 1966,
-                                                    "length" : 29
+                                                    "beginColumn" : 39,
+                                                    "endLine" : 49,
+                                                    "endColumn" : 40,
+                                                    "offset" : 1976,
+                                                    "length" : 1
                                                   }
                                                 }
                                               },
@@ -36401,7 +36411,7 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 51,
-                                                    "beginColumn" : 26,
+                                                    "beginColumn" : 18,
                                                     "endLine" : 51,
                                                     "endColumn" : 19,
                                                     "offset" : 2028,
@@ -36420,11 +36430,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 18,
+                                                    "beginColumn" : 39,
                                                     "endLine" : 51,
-                                                    "endColumn" : 28,
-                                                    "offset" : 1955,
-                                                    "length" : 83
+                                                    "endColumn" : 19,
+                                                    "offset" : 1976,
+                                                    "length" : 53
                                                   }
                                                 },
                                                 "resOpt" : {
@@ -36443,11 +36453,11 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 50,
-                                                  "beginColumn" : 55,
-                                                  "endLine" : 51,
-                                                  "endColumn" : 25,
-                                                  "offset" : 1996,
-                                                  "length" : 31
+                                                  "beginColumn" : 30,
+                                                  "endLine" : 50,
+                                                  "endColumn" : 31,
+                                                  "offset" : 2008,
+                                                  "length" : 1
                                                 }
                                               }
                                             },
@@ -36591,7 +36601,7 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 52,
-                                                  "beginColumn" : 26,
+                                                  "beginColumn" : 18,
                                                   "endLine" : 52,
                                                   "endColumn" : 19,
                                                   "offset" : 2060,
@@ -36609,12 +36619,12 @@
                                                     "type" : "Some",
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
-                                                  "beginLine" : 49,
-                                                  "beginColumn" : 18,
+                                                  "beginLine" : 50,
+                                                  "beginColumn" : 30,
                                                   "endLine" : 52,
-                                                  "endColumn" : 28,
-                                                  "offset" : 1955,
-                                                  "length" : 115
+                                                  "endColumn" : 19,
+                                                  "offset" : 2008,
+                                                  "length" : 53
                                                 }
                                               },
                                               "resOpt" : {
@@ -36633,11 +36643,11 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 51,
-                                                "beginColumn" : 57,
-                                                "endLine" : 52,
-                                                "endColumn" : 25,
-                                                "offset" : 2028,
-                                                "length" : 31
+                                                "beginColumn" : 30,
+                                                "endLine" : 51,
+                                                "endColumn" : 31,
+                                                "offset" : 2040,
+                                                "length" : 1
                                               }
                                             }
                                           },
@@ -36781,7 +36791,7 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 53,
-                                                "beginColumn" : 26,
+                                                "beginColumn" : 18,
                                                 "endLine" : 53,
                                                 "endColumn" : 19,
                                                 "offset" : 2092,
@@ -36799,12 +36809,12 @@
                                                   "type" : "Some",
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
-                                                "beginLine" : 49,
-                                                "beginColumn" : 18,
+                                                "beginLine" : 51,
+                                                "beginColumn" : 30,
                                                 "endLine" : 53,
-                                                "endColumn" : 28,
-                                                "offset" : 1955,
-                                                "length" : 147
+                                                "endColumn" : 19,
+                                                "offset" : 2040,
+                                                "length" : 53
                                               }
                                             },
                                             "resOpt" : {
@@ -36823,11 +36833,11 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 52,
-                                              "beginColumn" : 57,
-                                              "endLine" : 53,
-                                              "endColumn" : 25,
-                                              "offset" : 2060,
-                                              "length" : 31
+                                              "beginColumn" : 30,
+                                              "endLine" : 52,
+                                              "endColumn" : 31,
+                                              "offset" : 2072,
+                                              "length" : 1
                                             }
                                           }
                                         },
@@ -36971,7 +36981,7 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 54,
-                                              "beginColumn" : 26,
+                                              "beginColumn" : 18,
                                               "endLine" : 54,
                                               "endColumn" : 19,
                                               "offset" : 2124,
@@ -36989,12 +36999,12 @@
                                                 "type" : "Some",
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
-                                              "beginLine" : 49,
-                                              "beginColumn" : 18,
+                                              "beginLine" : 52,
+                                              "beginColumn" : 30,
                                               "endLine" : 54,
-                                              "endColumn" : 28,
-                                              "offset" : 1955,
-                                              "length" : 179
+                                              "endColumn" : 19,
+                                              "offset" : 2072,
+                                              "length" : 53
                                             }
                                           },
                                           "resOpt" : {
@@ -37013,11 +37023,11 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 53,
-                                            "beginColumn" : 57,
-                                            "endLine" : 54,
-                                            "endColumn" : 25,
-                                            "offset" : 2092,
-                                            "length" : 31
+                                            "beginColumn" : 30,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
+                                            "offset" : 2104,
+                                            "length" : 1
                                           }
                                         }
                                       },
@@ -37033,10 +37043,10 @@
                                             },
                                             "beginLine" : 49,
                                             "beginColumn" : 5,
-                                            "endLine" : 54,
-                                            "endColumn" : 28,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
                                             "offset" : 1942,
-                                            "length" : 192
+                                            "length" : 163
                                           }
                                         },
                                         "resOpt" : {
@@ -37055,11 +37065,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 49,
-                                          "beginColumn" : 20,
-                                          "endLine" : 53,
-                                          "endColumn" : 56,
+                                          "beginColumn" : 13,
+                                          "endLine" : 49,
+                                          "endColumn" : 15,
                                           "offset" : 1950,
-                                          "length" : 141
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -39559,7 +39569,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "coincidenceOutput",
@@ -39770,7 +39782,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 35,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 49,
                                                       "endColumn" : 28,
                                                       "offset" : 1964,
@@ -39918,7 +39930,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 50,
-                                                      "beginColumn" : 26,
+                                                      "beginColumn" : 18,
                                                       "endLine" : 50,
                                                       "endColumn" : 19,
                                                       "offset" : 1996,
@@ -39937,11 +39949,11 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 18,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 50,
-                                                      "endColumn" : 28,
-                                                      "offset" : 1955,
-                                                      "length" : 51
+                                                      "endColumn" : 19,
+                                                      "offset" : 1964,
+                                                      "length" : 33
                                                     }
                                                   },
                                                   "resOpt" : {
@@ -39960,11 +39972,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 30,
-                                                    "endLine" : 50,
-                                                    "endColumn" : 25,
-                                                    "offset" : 1966,
-                                                    "length" : 29
+                                                    "beginColumn" : 39,
+                                                    "endLine" : 49,
+                                                    "endColumn" : 40,
+                                                    "offset" : 1976,
+                                                    "length" : 1
                                                   }
                                                 }
                                               },
@@ -40108,7 +40120,7 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 51,
-                                                    "beginColumn" : 26,
+                                                    "beginColumn" : 18,
                                                     "endLine" : 51,
                                                     "endColumn" : 19,
                                                     "offset" : 2028,
@@ -40127,11 +40139,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 18,
+                                                    "beginColumn" : 39,
                                                     "endLine" : 51,
-                                                    "endColumn" : 28,
-                                                    "offset" : 1955,
-                                                    "length" : 83
+                                                    "endColumn" : 19,
+                                                    "offset" : 1976,
+                                                    "length" : 53
                                                   }
                                                 },
                                                 "resOpt" : {
@@ -40150,11 +40162,11 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 50,
-                                                  "beginColumn" : 55,
-                                                  "endLine" : 51,
-                                                  "endColumn" : 25,
-                                                  "offset" : 1996,
-                                                  "length" : 31
+                                                  "beginColumn" : 30,
+                                                  "endLine" : 50,
+                                                  "endColumn" : 31,
+                                                  "offset" : 2008,
+                                                  "length" : 1
                                                 }
                                               }
                                             },
@@ -40298,7 +40310,7 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 52,
-                                                  "beginColumn" : 26,
+                                                  "beginColumn" : 18,
                                                   "endLine" : 52,
                                                   "endColumn" : 19,
                                                   "offset" : 2060,
@@ -40316,12 +40328,12 @@
                                                     "type" : "Some",
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
-                                                  "beginLine" : 49,
-                                                  "beginColumn" : 18,
+                                                  "beginLine" : 50,
+                                                  "beginColumn" : 30,
                                                   "endLine" : 52,
-                                                  "endColumn" : 28,
-                                                  "offset" : 1955,
-                                                  "length" : 115
+                                                  "endColumn" : 19,
+                                                  "offset" : 2008,
+                                                  "length" : 53
                                                 }
                                               },
                                               "resOpt" : {
@@ -40340,11 +40352,11 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 51,
-                                                "beginColumn" : 57,
-                                                "endLine" : 52,
-                                                "endColumn" : 25,
-                                                "offset" : 2028,
-                                                "length" : 31
+                                                "beginColumn" : 30,
+                                                "endLine" : 51,
+                                                "endColumn" : 31,
+                                                "offset" : 2040,
+                                                "length" : 1
                                               }
                                             }
                                           },
@@ -40488,7 +40500,7 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 53,
-                                                "beginColumn" : 26,
+                                                "beginColumn" : 18,
                                                 "endLine" : 53,
                                                 "endColumn" : 19,
                                                 "offset" : 2092,
@@ -40506,12 +40518,12 @@
                                                   "type" : "Some",
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
-                                                "beginLine" : 49,
-                                                "beginColumn" : 18,
+                                                "beginLine" : 51,
+                                                "beginColumn" : 30,
                                                 "endLine" : 53,
-                                                "endColumn" : 28,
-                                                "offset" : 1955,
-                                                "length" : 147
+                                                "endColumn" : 19,
+                                                "offset" : 2040,
+                                                "length" : 53
                                               }
                                             },
                                             "resOpt" : {
@@ -40530,11 +40542,11 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 52,
-                                              "beginColumn" : 57,
-                                              "endLine" : 53,
-                                              "endColumn" : 25,
-                                              "offset" : 2060,
-                                              "length" : 31
+                                              "beginColumn" : 30,
+                                              "endLine" : 52,
+                                              "endColumn" : 31,
+                                              "offset" : 2072,
+                                              "length" : 1
                                             }
                                           }
                                         },
@@ -40678,7 +40690,7 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 54,
-                                              "beginColumn" : 26,
+                                              "beginColumn" : 18,
                                               "endLine" : 54,
                                               "endColumn" : 19,
                                               "offset" : 2124,
@@ -40696,12 +40708,12 @@
                                                 "type" : "Some",
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
-                                              "beginLine" : 49,
-                                              "beginColumn" : 18,
+                                              "beginLine" : 52,
+                                              "beginColumn" : 30,
                                               "endLine" : 54,
-                                              "endColumn" : 28,
-                                              "offset" : 1955,
-                                              "length" : 179
+                                              "endColumn" : 19,
+                                              "offset" : 2072,
+                                              "length" : 53
                                             }
                                           },
                                           "resOpt" : {
@@ -40720,11 +40732,11 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 53,
-                                            "beginColumn" : 57,
-                                            "endLine" : 54,
-                                            "endColumn" : 25,
-                                            "offset" : 2092,
-                                            "length" : 31
+                                            "beginColumn" : 30,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
+                                            "offset" : 2104,
+                                            "length" : 1
                                           }
                                         }
                                       },
@@ -40740,10 +40752,10 @@
                                             },
                                             "beginLine" : 49,
                                             "beginColumn" : 5,
-                                            "endLine" : 54,
-                                            "endColumn" : 28,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
                                             "offset" : 1942,
-                                            "length" : 192
+                                            "length" : 163
                                           }
                                         },
                                         "resOpt" : {
@@ -40762,11 +40774,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 49,
-                                          "beginColumn" : 20,
-                                          "endLine" : 53,
-                                          "endColumn" : 56,
+                                          "beginColumn" : 13,
+                                          "endLine" : 49,
+                                          "endColumn" : 15,
                                           "offset" : 1950,
-                                          "length" : 141
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -43266,7 +43278,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "coincidenceOutput",
@@ -43477,7 +43491,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 35,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 49,
                                                       "endColumn" : 28,
                                                       "offset" : 1964,
@@ -43625,7 +43639,7 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 50,
-                                                      "beginColumn" : 26,
+                                                      "beginColumn" : 18,
                                                       "endLine" : 50,
                                                       "endColumn" : 19,
                                                       "offset" : 1996,
@@ -43644,11 +43658,11 @@
                                                         "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                       },
                                                       "beginLine" : 49,
-                                                      "beginColumn" : 18,
+                                                      "beginColumn" : 27,
                                                       "endLine" : 50,
-                                                      "endColumn" : 28,
-                                                      "offset" : 1955,
-                                                      "length" : 51
+                                                      "endColumn" : 19,
+                                                      "offset" : 1964,
+                                                      "length" : 33
                                                     }
                                                   },
                                                   "resOpt" : {
@@ -43667,11 +43681,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 30,
-                                                    "endLine" : 50,
-                                                    "endColumn" : 25,
-                                                    "offset" : 1966,
-                                                    "length" : 29
+                                                    "beginColumn" : 39,
+                                                    "endLine" : 49,
+                                                    "endColumn" : 40,
+                                                    "offset" : 1976,
+                                                    "length" : 1
                                                   }
                                                 }
                                               },
@@ -43815,7 +43829,7 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 51,
-                                                    "beginColumn" : 26,
+                                                    "beginColumn" : 18,
                                                     "endLine" : 51,
                                                     "endColumn" : 19,
                                                     "offset" : 2028,
@@ -43834,11 +43848,11 @@
                                                       "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                     },
                                                     "beginLine" : 49,
-                                                    "beginColumn" : 18,
+                                                    "beginColumn" : 39,
                                                     "endLine" : 51,
-                                                    "endColumn" : 28,
-                                                    "offset" : 1955,
-                                                    "length" : 83
+                                                    "endColumn" : 19,
+                                                    "offset" : 1976,
+                                                    "length" : 53
                                                   }
                                                 },
                                                 "resOpt" : {
@@ -43857,11 +43871,11 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 50,
-                                                  "beginColumn" : 55,
-                                                  "endLine" : 51,
-                                                  "endColumn" : 25,
-                                                  "offset" : 1996,
-                                                  "length" : 31
+                                                  "beginColumn" : 30,
+                                                  "endLine" : 50,
+                                                  "endColumn" : 31,
+                                                  "offset" : 2008,
+                                                  "length" : 1
                                                 }
                                               }
                                             },
@@ -44005,7 +44019,7 @@
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
                                                   "beginLine" : 52,
-                                                  "beginColumn" : 26,
+                                                  "beginColumn" : 18,
                                                   "endLine" : 52,
                                                   "endColumn" : 19,
                                                   "offset" : 2060,
@@ -44023,12 +44037,12 @@
                                                     "type" : "Some",
                                                     "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                   },
-                                                  "beginLine" : 49,
-                                                  "beginColumn" : 18,
+                                                  "beginLine" : 50,
+                                                  "beginColumn" : 30,
                                                   "endLine" : 52,
-                                                  "endColumn" : 28,
-                                                  "offset" : 1955,
-                                                  "length" : 115
+                                                  "endColumn" : 19,
+                                                  "offset" : 2008,
+                                                  "length" : 53
                                                 }
                                               },
                                               "resOpt" : {
@@ -44047,11 +44061,11 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 51,
-                                                "beginColumn" : 57,
-                                                "endLine" : 52,
-                                                "endColumn" : 25,
-                                                "offset" : 2028,
-                                                "length" : 31
+                                                "beginColumn" : 30,
+                                                "endLine" : 51,
+                                                "endColumn" : 31,
+                                                "offset" : 2040,
+                                                "length" : 1
                                               }
                                             }
                                           },
@@ -44195,7 +44209,7 @@
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
                                                 "beginLine" : 53,
-                                                "beginColumn" : 26,
+                                                "beginColumn" : 18,
                                                 "endLine" : 53,
                                                 "endColumn" : 19,
                                                 "offset" : 2092,
@@ -44213,12 +44227,12 @@
                                                   "type" : "Some",
                                                   "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                                 },
-                                                "beginLine" : 49,
-                                                "beginColumn" : 18,
+                                                "beginLine" : 51,
+                                                "beginColumn" : 30,
                                                 "endLine" : 53,
-                                                "endColumn" : 28,
-                                                "offset" : 1955,
-                                                "length" : 147
+                                                "endColumn" : 19,
+                                                "offset" : 2040,
+                                                "length" : 53
                                               }
                                             },
                                             "resOpt" : {
@@ -44237,11 +44251,11 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 52,
-                                              "beginColumn" : 57,
-                                              "endLine" : 53,
-                                              "endColumn" : 25,
-                                              "offset" : 2060,
-                                              "length" : 31
+                                              "beginColumn" : 30,
+                                              "endLine" : 52,
+                                              "endColumn" : 31,
+                                              "offset" : 2072,
+                                              "length" : 1
                                             }
                                           }
                                         },
@@ -44385,7 +44399,7 @@
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
                                               "beginLine" : 54,
-                                              "beginColumn" : 26,
+                                              "beginColumn" : 18,
                                               "endLine" : 54,
                                               "endColumn" : 19,
                                               "offset" : 2124,
@@ -44403,12 +44417,12 @@
                                                 "type" : "Some",
                                                 "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                               },
-                                              "beginLine" : 49,
-                                              "beginColumn" : 18,
+                                              "beginLine" : 52,
+                                              "beginColumn" : 30,
                                               "endLine" : 54,
-                                              "endColumn" : 28,
-                                              "offset" : 1955,
-                                              "length" : 179
+                                              "endColumn" : 19,
+                                              "offset" : 2072,
+                                              "length" : 53
                                             }
                                           },
                                           "resOpt" : {
@@ -44427,11 +44441,11 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 53,
-                                            "beginColumn" : 57,
-                                            "endLine" : 54,
-                                            "endColumn" : 25,
-                                            "offset" : 2092,
-                                            "length" : 31
+                                            "beginColumn" : 30,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
+                                            "offset" : 2104,
+                                            "length" : 1
                                           }
                                         }
                                       },
@@ -44447,10 +44461,10 @@
                                             },
                                             "beginLine" : 49,
                                             "beginColumn" : 5,
-                                            "endLine" : 54,
-                                            "endColumn" : 28,
+                                            "endLine" : 53,
+                                            "endColumn" : 31,
                                             "offset" : 1942,
-                                            "length" : 192
+                                            "length" : 163
                                           }
                                         },
                                         "resOpt" : {
@@ -44469,11 +44483,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 49,
-                                          "beginColumn" : 20,
-                                          "endLine" : 53,
-                                          "endColumn" : 56,
+                                          "beginColumn" : 13,
+                                          "endLine" : 49,
+                                          "endColumn" : 15,
                                           "offset" : 1950,
-                                          "length" : 141
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -46723,7 +46737,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "orOutput",
@@ -46923,7 +46939,7 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 123,
-                                            "beginColumn" : 34,
+                                            "beginColumn" : 26,
                                             "endLine" : 123,
                                             "endColumn" : 27,
                                             "offset" : 4297,
@@ -46944,9 +46960,9 @@
                                             "beginLine" : 123,
                                             "beginColumn" : 5,
                                             "endLine" : 123,
-                                            "endColumn" : 36,
+                                            "endColumn" : 27,
                                             "offset" : 4276,
-                                            "length" : 31
+                                            "length" : 22
                                           }
                                         },
                                         "resOpt" : {
@@ -46965,11 +46981,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 123,
-                                          "beginColumn" : 20,
+                                          "beginColumn" : 13,
                                           "endLine" : 123,
-                                          "endColumn" : 33,
+                                          "endColumn" : 15,
                                           "offset" : 4284,
-                                          "length" : 12
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -53000,7 +53016,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "orOutput",
@@ -53200,7 +53218,7 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 123,
-                                            "beginColumn" : 34,
+                                            "beginColumn" : 26,
                                             "endLine" : 123,
                                             "endColumn" : 27,
                                             "offset" : 4297,
@@ -53221,9 +53239,9 @@
                                             "beginLine" : 123,
                                             "beginColumn" : 5,
                                             "endLine" : 123,
-                                            "endColumn" : 36,
+                                            "endColumn" : 27,
                                             "offset" : 4276,
-                                            "length" : 31
+                                            "length" : 22
                                           }
                                         },
                                         "resOpt" : {
@@ -53242,11 +53260,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 123,
-                                          "beginColumn" : 20,
+                                          "beginColumn" : 13,
                                           "endLine" : 123,
-                                          "endColumn" : 33,
+                                          "endColumn" : 15,
                                           "offset" : 4284,
-                                          "length" : 12
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -54862,7 +54880,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "actuatorOutput",
@@ -55062,7 +55082,7 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 206,
-                                            "beginColumn" : 27,
+                                            "beginColumn" : 22,
                                             "endLine" : 206,
                                             "endColumn" : 23,
                                             "offset" : 7140,
@@ -55083,9 +55103,9 @@
                                             "beginLine" : 206,
                                             "beginColumn" : 5,
                                             "endLine" : 206,
-                                            "endColumn" : 43,
+                                            "endColumn" : 23,
                                             "offset" : 7123,
-                                            "length" : 38
+                                            "length" : 18
                                           }
                                         },
                                         "resOpt" : {
@@ -55104,11 +55124,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 206,
-                                          "beginColumn" : 18,
+                                          "beginColumn" : 12,
                                           "endLine" : 206,
-                                          "endColumn" : 26,
+                                          "endColumn" : 14,
                                           "offset" : 7130,
-                                          "length" : 9
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -58554,7 +58574,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "orOutput",
@@ -58754,7 +58776,7 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 123,
-                                            "beginColumn" : 34,
+                                            "beginColumn" : 26,
                                             "endLine" : 123,
                                             "endColumn" : 27,
                                             "offset" : 4297,
@@ -58775,9 +58797,9 @@
                                             "beginLine" : 123,
                                             "beginColumn" : 5,
                                             "endLine" : 123,
-                                            "endColumn" : 36,
+                                            "endColumn" : 27,
                                             "offset" : 4276,
-                                            "length" : 31
+                                            "length" : 22
                                           }
                                         },
                                         "resOpt" : {
@@ -58796,11 +58818,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 123,
-                                          "beginColumn" : 20,
+                                          "beginColumn" : 13,
                                           "endLine" : 123,
-                                          "endColumn" : 33,
+                                          "endColumn" : 15,
                                           "offset" : 4284,
-                                          "length" : 12
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -60416,7 +60438,9 @@
                                 "type" : "GclCompute",
                                 "modifies" : [
                                 ],
-                                "specs" : [
+                                "assumes" : [
+                                ],
+                                "guarantees" : [
                                   {
                                     "type" : "GclGuarantee",
                                     "id" : "actuatorOutput",
@@ -60616,7 +60640,7 @@
                                               "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                             },
                                             "beginLine" : 206,
-                                            "beginColumn" : 27,
+                                            "beginColumn" : 22,
                                             "endLine" : 206,
                                             "endColumn" : 23,
                                             "offset" : 7140,
@@ -60637,9 +60661,9 @@
                                             "beginLine" : 206,
                                             "beginColumn" : 5,
                                             "endLine" : 206,
-                                            "endColumn" : 43,
+                                            "endColumn" : 23,
                                             "offset" : 7123,
-                                            "length" : 38
+                                            "length" : 18
                                           }
                                         },
                                         "resOpt" : {
@@ -60658,11 +60682,11 @@
                                             "value" : "\/hardens-seL4-gumboTests\/packages\/Actuation.aadl"
                                           },
                                           "beginLine" : 206,
-                                          "beginColumn" : 18,
+                                          "beginColumn" : 12,
                                           "endLine" : 206,
-                                          "endColumn" : 26,
+                                          "endColumn" : 14,
                                           "offset" : 7130,
-                                          "length" : 9
+                                          "length" : 2
                                         }
                                       }
                                     },

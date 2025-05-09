@@ -20,5 +20,6 @@ void fanIn_consumer::initialize()
 void fanIn_consumer::handle_myInteger(const fan_in_fan_out_system_cpp_pkg_interfaces::msg::Integer64::SharedPtr msg)
 {
     // Handle myInteger msg
+    PRINT_INFO("Received myInteger: %s", MESSAGE_TO_STRING(msg));
 }
 

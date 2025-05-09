@@ -1,5 +1,9 @@
 #include "isolette_cpp_pkg/base_headers/temperature_sensor_cpi_thermostat_base_src.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 class temperature_sensor_cpi_thermostat : public temperature_sensor_cpi_thermostat_base
 {
 public:

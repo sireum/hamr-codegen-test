@@ -40,6 +40,22 @@ thermostat_regulate_temperature_manage_heat_source_mhst_base::thermostat_regulat
 
 }
 
+void thermostat_regulate_temperature_manage_heat_source_mhst_base::init_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    current_tempWstatus_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(val);
+}
+
+void thermostat_regulate_temperature_manage_heat_source_mhst_base::init_lower_desired_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    lower_desired_temp_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::Tempimpl>(val);
+}
+
+void thermostat_regulate_temperature_manage_heat_source_mhst_base::init_upper_desired_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    upper_desired_temp_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::Tempimpl>(val);
+}
+
+void thermostat_regulate_temperature_manage_heat_source_mhst_base::init_regulator_mode(isolette_cpp_pkg_interfaces::msg::RegulatorMode val) {
+    regulator_mode_msg_holder = std::make_shared<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(val);
+}
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

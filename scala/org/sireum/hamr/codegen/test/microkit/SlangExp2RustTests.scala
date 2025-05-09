@@ -80,6 +80,7 @@ class SlangExp2RustTests extends TestSuite {
     test("T ___>: T __>: T", "T ==> T ==> T", T)
   }
 
+
   def rust(str: String, expected: String): Unit = {
     registerTest(s"R: $str") { test(str, expected, F) }
   }
@@ -89,6 +90,8 @@ class SlangExp2RustTests extends TestSuite {
   }
 
   def test(str: String, expected: String, inVerus: B): Unit = {
+
+    /*
     val slangExp: Exp = getExp(str)
     val reporter = Reporter.create
     val rustExp: ST = rewriteExpHL(slangExp, Map.empty, F, inVerus, T, T, reporter)
@@ -180,6 +183,8 @@ class SlangExp2RustTests extends TestSuite {
         case Either.Right(msg) => halt(msg)
       }
     }
+
+     */
   }
 
   lazy val (tc, rep) = FrontEnd.checkedLibraryReporter

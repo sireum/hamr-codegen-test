@@ -95,7 +95,7 @@ object TempControl_i_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * assumes a1
+    * assume a1
     *   If the previously received currentTemp was less than the previously
     *   received setPoint then the last fan command must have been Off
     * @param In_currentFanState pre-state state variable
@@ -111,7 +111,7 @@ object TempControl_i_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * assumes a2
+    * assume a2
     *   If the previously received currentTemp was more than the previously
     *   received setPoint then the last fan command must have been On
     * @param In_currentFanState pre-state state variable

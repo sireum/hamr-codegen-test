@@ -705,7 +705,9 @@
                         "type" : "GclCompute",
                         "modifies" : [
                         ],
-                        "specs" : [
+                        "assumes" : [
+                        ],
+                        "guarantees" : [
                         ],
                         "cases" : [
                         ],
@@ -1878,7 +1880,9 @@
                         "type" : "GclCompute",
                         "modifies" : [
                         ],
-                        "specs" : [
+                        "assumes" : [
+                        ],
+                        "guarantees" : [
                         ],
                         "cases" : [
                         ],
@@ -3220,7 +3224,9 @@
                         "type" : "GclCompute",
                         "modifies" : [
                         ],
-                        "specs" : [
+                        "assumes" : [
+                        ],
+                        "guarantees" : [
                         ],
                         "cases" : [
                         ],
@@ -4039,7 +4045,9 @@
                         "type" : "GclCompute",
                         "modifies" : [
                         ],
-                        "specs" : [
+                        "assumes" : [
+                        ],
+                        "guarantees" : [
                         ],
                         "cases" : [
                         ],

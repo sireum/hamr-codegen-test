@@ -76,6 +76,22 @@ operator_interface_oip_oit_base::operator_interface_oip_oit_base() : Node("opera
 
 }
 
+void operator_interface_oip_oit_base::init_regulator_status(isolette_cpp_pkg_interfaces::msg::Status val) {
+    enqueue(infrastructureIn_regulator_status, val);
+}
+
+void operator_interface_oip_oit_base::init_monitor_status(isolette_cpp_pkg_interfaces::msg::Status val) {
+    enqueue(infrastructureIn_monitor_status, val);
+}
+
+void operator_interface_oip_oit_base::init_display_temperature(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    enqueue(infrastructureIn_display_temperature, val);
+}
+
+void operator_interface_oip_oit_base::init_alarm_control(isolette_cpp_pkg_interfaces::msg::OnOff val) {
+    enqueue(infrastructureIn_alarm_control, val);
+}
+
 //=================================================
 //  C o m m u n i c a t i o n
 //=================================================

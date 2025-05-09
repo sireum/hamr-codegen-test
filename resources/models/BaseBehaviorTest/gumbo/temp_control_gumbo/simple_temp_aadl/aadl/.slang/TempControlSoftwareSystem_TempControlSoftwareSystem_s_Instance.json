@@ -1149,11 +1149,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                               },
                                               "beginLine" : 108,
-                                              "beginColumn" : 24,
+                                              "beginColumn" : 23,
                                               "endLine" : 108,
                                               "endColumn" : 31,
-                                              "offset" : 5411,
-                                              "length" : 7
+                                              "offset" : 5410,
+                                              "length" : 8
                                             }
                                           }
                                         }
@@ -1244,7 +1244,7 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                         },
                                         "beginLine" : 108,
-                                        "beginColumn" : 51,
+                                        "beginColumn" : 32,
                                         "endLine" : 108,
                                         "endColumn" : 34,
                                         "offset" : 5419,
@@ -1325,11 +1325,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                               },
                                               "beginLine" : 110,
-                                              "beginColumn" : 24,
+                                              "beginColumn" : 23,
                                               "endLine" : 110,
                                               "endColumn" : 31,
-                                              "offset" : 5470,
-                                              "length" : 7
+                                              "offset" : 5469,
+                                              "length" : 8
                                             }
                                           }
                                         }
@@ -1483,7 +1483,7 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                         },
                                         "beginLine" : 110,
-                                        "beginColumn" : 51,
+                                        "beginColumn" : 32,
                                         "endLine" : 110,
                                         "endColumn" : 34,
                                         "offset" : 5478,
@@ -1502,11 +1502,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                         },
                                         "beginLine" : 108,
-                                        "beginColumn" : 12,
+                                        "beginColumn" : 32,
                                         "endLine" : 110,
-                                        "endColumn" : 55,
-                                        "offset" : 5399,
-                                        "length" : 102
+                                        "endColumn" : 34,
+                                        "offset" : 5419,
+                                        "length" : 61
                                       }
                                     },
                                     "resOpt" : {
@@ -1525,11 +1525,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                       },
                                       "beginLine" : 108,
-                                      "beginColumn" : 37,
-                                      "endLine" : 110,
-                                      "endColumn" : 50,
-                                      "offset" : 5422,
-                                      "length" : 55
+                                      "beginColumn" : 46,
+                                      "endLine" : 108,
+                                      "endColumn" : 48,
+                                      "offset" : 5433,
+                                      "length" : 2
                                     }
                                   }
                                 },
@@ -1845,7 +1845,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                       },
                                       "beginLine" : 116,
-                                      "beginColumn" : 35,
+                                      "beginColumn" : 24,
                                       "endLine" : 116,
                                       "endColumn" : 26,
                                       "offset" : 5729,
@@ -1864,11 +1864,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                       },
                                       "beginLine" : 108,
-                                      "beginColumn" : 12,
+                                      "beginColumn" : 46,
                                       "endLine" : 116,
-                                      "endColumn" : 62,
-                                      "offset" : 5399,
-                                      "length" : 368
+                                      "endColumn" : 26,
+                                      "offset" : 5433,
+                                      "length" : 298
                                     }
                                   },
                                   "resOpt" : {
@@ -1887,11 +1887,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                     },
                                     "beginLine" : 110,
-                                    "beginColumn" : 106,
-                                    "endLine" : 116,
-                                    "endColumn" : 34,
-                                    "offset" : 5478,
-                                    "length" : 250
+                                    "beginColumn" : 57,
+                                    "endLine" : 110,
+                                    "endColumn" : 59,
+                                    "offset" : 5503,
+                                    "length" : 2
                                   }
                                 }
                               },
@@ -2207,7 +2207,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                     },
                                     "beginLine" : 119,
-                                    "beginColumn" : 35,
+                                    "beginColumn" : 24,
                                     "endLine" : 119,
                                     "endColumn" : 26,
                                     "offset" : 5871,
@@ -2225,12 +2225,12 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                     },
-                                    "beginLine" : 108,
-                                    "beginColumn" : 12,
+                                    "beginLine" : 110,
+                                    "beginColumn" : 57,
                                     "endLine" : 119,
-                                    "endColumn" : 74,
-                                    "offset" : 5399,
-                                    "length" : 522
+                                    "endColumn" : 26,
+                                    "offset" : 5503,
+                                    "length" : 370
                                   }
                                 },
                                 "resOpt" : {
@@ -2249,11 +2249,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                   },
                                   "beginLine" : 116,
-                                  "beginColumn" : 285,
-                                  "endLine" : 119,
-                                  "endColumn" : 34,
-                                  "offset" : 5729,
-                                  "length" : 141
+                                  "beginColumn" : 64,
+                                  "endLine" : 116,
+                                  "endColumn" : 66,
+                                  "offset" : 5769,
+                                  "length" : 2
                                 }
                               }
                             },
@@ -2453,7 +2453,20 @@
                                 }
                               },
                               "opPosOpt" : {
-                                "type" : "None"
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
+                                  },
+                                  "beginLine" : 122,
+                                  "beginColumn" : 11,
+                                  "endLine" : 122,
+                                  "endColumn" : 12,
+                                  "offset" : 6038,
+                                  "length" : 1
+                                }
                               }
                             },
                             "attr" : {
@@ -2757,11 +2770,11 @@
                                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                                   },
                                                   "beginLine" : 91,
-                                                  "beginColumn" : 26,
+                                                  "beginColumn" : 25,
                                                   "endLine" : 91,
                                                   "endColumn" : 33,
-                                                  "offset" : 4541,
-                                                  "length" : 7
+                                                  "offset" : 4540,
+                                                  "length" : 8
                                                 }
                                               }
                                             }
@@ -2852,7 +2865,7 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                             },
                                             "beginLine" : 91,
-                                            "beginColumn" : 53,
+                                            "beginColumn" : 34,
                                             "endLine" : 91,
                                             "endColumn" : 36,
                                             "offset" : 4549,
@@ -2933,11 +2946,11 @@
                                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                                   },
                                                   "beginLine" : 91,
-                                                  "beginColumn" : 65,
+                                                  "beginColumn" : 64,
                                                   "endLine" : 91,
                                                   "endColumn" : 72,
-                                                  "offset" : 4580,
-                                                  "length" : 7
+                                                  "offset" : 4579,
+                                                  "length" : 8
                                                 }
                                               }
                                             }
@@ -3028,7 +3041,7 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                             },
                                             "beginLine" : 91,
-                                            "beginColumn" : 92,
+                                            "beginColumn" : 73,
                                             "endLine" : 91,
                                             "endColumn" : 75,
                                             "offset" : 4588,
@@ -3047,11 +3060,11 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                             },
                                             "beginLine" : 91,
-                                            "beginColumn" : 14,
+                                            "beginColumn" : 34,
                                             "endLine" : 91,
-                                            "endColumn" : 86,
-                                            "offset" : 4529,
-                                            "length" : 72
+                                            "endColumn" : 75,
+                                            "offset" : 4549,
+                                            "length" : 41
                                           }
                                         },
                                         "resOpt" : {
@@ -3070,11 +3083,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                           },
                                           "beginLine" : 91,
-                                          "beginColumn" : 39,
+                                          "beginColumn" : 49,
                                           "endLine" : 91,
-                                          "endColumn" : 91,
-                                          "offset" : 4552,
-                                          "length" : 35
+                                          "endColumn" : 51,
+                                          "offset" : 4564,
+                                          "length" : 2
                                         }
                                       }
                                     },
@@ -3151,11 +3164,11 @@
                                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                                 },
                                                 "beginLine" : 94,
-                                                "beginColumn" : 26,
+                                                "beginColumn" : 25,
                                                 "endLine" : 94,
                                                 "endColumn" : 33,
-                                                "offset" : 4725,
-                                                "length" : 7
+                                                "offset" : 4724,
+                                                "length" : 8
                                               }
                                             }
                                           }
@@ -3309,7 +3322,7 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                           },
                                           "beginLine" : 94,
-                                          "beginColumn" : 53,
+                                          "beginColumn" : 34,
                                           "endLine" : 94,
                                           "endColumn" : 36,
                                           "offset" : 4733,
@@ -3328,11 +3341,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                           },
                                           "beginLine" : 91,
-                                          "beginColumn" : 14,
+                                          "beginColumn" : 49,
                                           "endLine" : 94,
-                                          "endColumn" : 53,
-                                          "offset" : 4529,
-                                          "length" : 223
+                                          "endColumn" : 36,
+                                          "offset" : 4564,
+                                          "length" : 171
                                         }
                                       },
                                       "resOpt" : {
@@ -3351,11 +3364,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                         },
                                         "beginLine" : 91,
-                                        "beginColumn" : 127,
-                                        "endLine" : 94,
-                                        "endColumn" : 52,
-                                        "offset" : 4588,
-                                        "length" : 144
+                                        "beginColumn" : 88,
+                                        "endLine" : 91,
+                                        "endColumn" : 90,
+                                        "offset" : 4603,
+                                        "length" : 2
                                       }
                                     }
                                   },
@@ -3432,11 +3445,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                               },
                                               "beginLine" : 97,
-                                              "beginColumn" : 26,
+                                              "beginColumn" : 25,
                                               "endLine" : 97,
                                               "endColumn" : 33,
-                                              "offset" : 4891,
-                                              "length" : 7
+                                              "offset" : 4890,
+                                              "length" : 8
                                             }
                                           }
                                         }
@@ -3697,7 +3710,7 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                         },
                                         "beginLine" : 97,
-                                        "beginColumn" : 53,
+                                        "beginColumn" : 34,
                                         "endLine" : 97,
                                         "endColumn" : 36,
                                         "offset" : 4899,
@@ -3716,11 +3729,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                         },
                                         "beginLine" : 91,
-                                        "beginColumn" : 14,
+                                        "beginColumn" : 88,
                                         "endLine" : 97,
-                                        "endColumn" : 54,
-                                        "offset" : 4529,
-                                        "length" : 390
+                                        "endColumn" : 36,
+                                        "offset" : 4603,
+                                        "length" : 298
                                       }
                                     },
                                     "resOpt" : {
@@ -3739,11 +3752,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                       },
                                       "beginLine" : 94,
-                                      "beginColumn" : 197,
-                                      "endLine" : 97,
-                                      "endColumn" : 52,
-                                      "offset" : 4733,
-                                      "length" : 165
+                                      "beginColumn" : 55,
+                                      "endLine" : 94,
+                                      "endColumn" : 57,
+                                      "offset" : 4754,
+                                      "length" : 2
                                     }
                                   }
                                 },
@@ -3820,11 +3833,11 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                             },
                                             "beginLine" : 100,
-                                            "beginColumn" : 26,
+                                            "beginColumn" : 25,
                                             "endLine" : 100,
                                             "endColumn" : 33,
-                                            "offset" : 5018,
-                                            "length" : 7
+                                            "offset" : 5017,
+                                            "length" : 8
                                           }
                                         }
                                       }
@@ -4085,7 +4098,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                       },
                                       "beginLine" : 100,
-                                      "beginColumn" : 53,
+                                      "beginColumn" : 34,
                                       "endLine" : 100,
                                       "endColumn" : 36,
                                       "offset" : 5026,
@@ -4103,12 +4116,12 @@
                                         "type" : "Some",
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                       },
-                                      "beginLine" : 91,
-                                      "beginColumn" : 14,
+                                      "beginLine" : 94,
+                                      "beginColumn" : 55,
                                       "endLine" : 100,
-                                      "endColumn" : 66,
-                                      "offset" : 4529,
-                                      "length" : 529
+                                      "endColumn" : 36,
+                                      "offset" : 4754,
+                                      "length" : 274
                                     }
                                   },
                                   "resOpt" : {
@@ -4127,11 +4140,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                     },
                                     "beginLine" : 97,
-                                    "beginColumn" : 218,
-                                    "endLine" : 100,
-                                    "endColumn" : 52,
-                                    "offset" : 4899,
-                                    "length" : 126
+                                    "beginColumn" : 56,
+                                    "endLine" : 97,
+                                    "endColumn" : 58,
+                                    "offset" : 4921,
+                                    "length" : 2
                                   }
                                 }
                               },
@@ -4390,12 +4403,12 @@
                                       "type" : "Some",
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                     },
-                                    "beginLine" : 91,
-                                    "beginColumn" : 14,
+                                    "beginLine" : 97,
+                                    "beginColumn" : 56,
                                     "endLine" : 104,
                                     "endColumn" : 53,
-                                    "offset" : 4529,
-                                    "length" : 788
+                                    "offset" : 4921,
+                                    "length" : 396
                                   }
                                 },
                                 "resOpt" : {
@@ -4414,11 +4427,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                   },
                                   "beginLine" : 100,
-                                  "beginColumn" : 179,
-                                  "endLine" : 104,
-                                  "endColumn" : 13,
-                                  "offset" : 5026,
-                                  "length" : 251
+                                  "beginColumn" : 68,
+                                  "endLine" : 100,
+                                  "endColumn" : 70,
+                                  "offset" : 5060,
+                                  "length" : 2
                                 }
                               }
                             },
@@ -5025,7 +5038,9 @@
                         "type" : "GclCompute",
                         "modifies" : [
                         ],
-                        "specs" : [
+                        "assumes" : [
+                        ],
+                        "guarantees" : [
                         ],
                         "cases" : [
                         ],
@@ -6217,11 +6232,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                               },
                                               "beginLine" : 253,
-                                              "beginColumn" : 28,
+                                              "beginColumn" : 27,
                                               "endLine" : 253,
-                                              "endColumn" : 39,
-                                              "offset" : 13575,
-                                              "length" : 11
+                                              "endColumn" : 31,
+                                              "offset" : 13574,
+                                              "length" : 4
                                             }
                                           }
                                         }
@@ -6241,9 +6256,9 @@
                                             "beginLine" : 253,
                                             "beginColumn" : 12,
                                             "endLine" : 253,
-                                            "endColumn" : 39,
+                                            "endColumn" : 31,
                                             "offset" : 13559,
-                                            "length" : 27
+                                            "length" : 19
                                           }
                                         },
                                         "resOpt" : {
@@ -6269,11 +6284,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 253,
-                                          "beginColumn" : 32,
+                                          "beginColumn" : 31,
                                           "endLine" : 253,
                                           "endColumn" : 39,
-                                          "offset" : 13579,
-                                          "length" : 7
+                                          "offset" : 13578,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -6364,7 +6379,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 253,
-                                    "beginColumn" : 67,
+                                    "beginColumn" : 40,
                                     "endLine" : 253,
                                     "endColumn" : 42,
                                     "offset" : 13587,
@@ -6449,11 +6464,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                               },
                                               "beginLine" : 253,
-                                              "beginColumn" : 74,
+                                              "beginColumn" : 73,
                                               "endLine" : 253,
-                                              "endColumn" : 86,
-                                              "offset" : 13621,
-                                              "length" : 12
+                                              "endColumn" : 78,
+                                              "offset" : 13620,
+                                              "length" : 5
                                             }
                                           }
                                         }
@@ -6473,9 +6488,9 @@
                                             "beginLine" : 253,
                                             "beginColumn" : 58,
                                             "endLine" : 253,
-                                            "endColumn" : 86,
+                                            "endColumn" : 78,
                                             "offset" : 13605,
-                                            "length" : 28
+                                            "length" : 20
                                           }
                                         },
                                         "resOpt" : {
@@ -6501,11 +6516,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 253,
-                                          "beginColumn" : 79,
+                                          "beginColumn" : 78,
                                           "endLine" : 253,
                                           "endColumn" : 86,
-                                          "offset" : 13626,
-                                          "length" : 7
+                                          "offset" : 13625,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -6596,7 +6611,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 253,
-                                    "beginColumn" : 115,
+                                    "beginColumn" : 87,
                                     "endLine" : 253,
                                     "endColumn" : 89,
                                     "offset" : 13634,
@@ -6615,11 +6630,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 253,
-                                    "beginColumn" : 12,
+                                    "beginColumn" : 40,
                                     "endLine" : 253,
-                                    "endColumn" : 99,
-                                    "offset" : 13559,
-                                    "length" : 87
+                                    "endColumn" : 89,
+                                    "offset" : 13587,
+                                    "length" : 49
                                   }
                                 },
                                 "resOpt" : {
@@ -6638,11 +6653,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 253,
-                                  "beginColumn" : 45,
+                                  "beginColumn" : 54,
                                   "endLine" : 253,
-                                  "endColumn" : 114,
-                                  "offset" : 13590,
-                                  "length" : 43
+                                  "endColumn" : 56,
+                                  "offset" : 13601,
+                                  "length" : 2
                                 }
                               }
                             },
@@ -6923,7 +6938,7 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 255,
-                                  "beginColumn" : 42,
+                                  "beginColumn" : 27,
                                   "endLine" : 255,
                                   "endColumn" : 29,
                                   "offset" : 13711,
@@ -7029,11 +7044,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 257,
-                                        "beginColumn" : 22,
+                                        "beginColumn" : 21,
                                         "endLine" : 257,
                                         "endColumn" : 29,
-                                        "offset" : 13796,
-                                        "length" : 7
+                                        "offset" : 13795,
+                                        "length" : 8
                                       }
                                     }
                                   }
@@ -7124,7 +7139,7 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 257,
-                                  "beginColumn" : 48,
+                                  "beginColumn" : 30,
                                   "endLine" : 257,
                                   "endColumn" : 32,
                                   "offset" : 13804,
@@ -7261,11 +7276,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 248,
-                                          "beginColumn" : 24,
+                                          "beginColumn" : 23,
                                           "endLine" : 248,
                                           "endColumn" : 31,
-                                          "offset" : 13361,
-                                          "length" : 7
+                                          "offset" : 13360,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -7356,7 +7371,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 248,
-                                    "beginColumn" : 51,
+                                    "beginColumn" : 32,
                                     "endLine" : 248,
                                     "endColumn" : 34,
                                     "offset" : 13369,
@@ -7437,11 +7452,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 248,
-                                          "beginColumn" : 62,
+                                          "beginColumn" : 61,
                                           "endLine" : 248,
                                           "endColumn" : 69,
-                                          "offset" : 13399,
-                                          "length" : 7
+                                          "offset" : 13398,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -7532,7 +7547,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 248,
-                                    "beginColumn" : 89,
+                                    "beginColumn" : 70,
                                     "endLine" : 248,
                                     "endColumn" : 72,
                                     "offset" : 13407,
@@ -7551,11 +7566,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 248,
-                                    "beginColumn" : 12,
+                                    "beginColumn" : 32,
                                     "endLine" : 248,
-                                    "endColumn" : 83,
-                                    "offset" : 13349,
-                                    "length" : 71
+                                    "endColumn" : 72,
+                                    "offset" : 13369,
+                                    "length" : 40
                                   }
                                 },
                                 "resOpt" : {
@@ -7574,11 +7589,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 248,
-                                  "beginColumn" : 37,
+                                  "beginColumn" : 47,
                                   "endLine" : 248,
-                                  "endColumn" : 88,
-                                  "offset" : 13372,
-                                  "length" : 34
+                                  "endColumn" : 48,
+                                  "offset" : 13384,
+                                  "length" : 1
                                 }
                               }
                             },
@@ -7783,7 +7798,7 @@
                             }
                           }
                         ],
-                        "specs" : [
+                        "assumes" : [
                           {
                             "type" : "GclAssume",
                             "id" : "a1",
@@ -7865,11 +7880,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 265,
-                                          "beginColumn" : 25,
+                                          "beginColumn" : 24,
                                           "endLine" : 265,
                                           "endColumn" : 32,
-                                          "offset" : 14148,
-                                          "length" : 7
+                                          "offset" : 14147,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -7977,11 +7992,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                               },
                                               "beginLine" : 265,
-                                              "beginColumn" : 51,
+                                              "beginColumn" : 50,
                                               "endLine" : 265,
-                                              "endColumn" : 62,
-                                              "offset" : 14174,
-                                              "length" : 11
+                                              "endColumn" : 54,
+                                              "offset" : 14173,
+                                              "length" : 4
                                             }
                                           }
                                         }
@@ -8001,9 +8016,9 @@
                                             "beginLine" : 265,
                                             "beginColumn" : 35,
                                             "endLine" : 265,
-                                            "endColumn" : 62,
+                                            "endColumn" : 54,
                                             "offset" : 14158,
-                                            "length" : 27
+                                            "length" : 19
                                           }
                                         },
                                         "resOpt" : {
@@ -8029,11 +8044,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 265,
-                                          "beginColumn" : 55,
+                                          "beginColumn" : 54,
                                           "endLine" : 265,
                                           "endColumn" : 62,
-                                          "offset" : 14178,
-                                          "length" : 7
+                                          "offset" : 14177,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -8100,7 +8115,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 265,
-                                    "beginColumn" : 51,
+                                    "beginColumn" : 33,
                                     "endLine" : 265,
                                     "endColumn" : 34,
                                     "offset" : 14156,
@@ -8360,7 +8375,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 265,
-                                    "beginColumn" : 100,
+                                    "beginColumn" : 85,
                                     "endLine" : 265,
                                     "endColumn" : 87,
                                     "offset" : 14208,
@@ -8379,11 +8394,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 265,
-                                    "beginColumn" : 14,
+                                    "beginColumn" : 33,
                                     "endLine" : 265,
-                                    "endColumn" : 110,
-                                    "offset" : 14137,
-                                    "length" : 96
+                                    "endColumn" : 87,
+                                    "offset" : 14156,
+                                    "length" : 54
                                   }
                                 },
                                 "resOpt" : {
@@ -8402,11 +8417,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 265,
-                                  "beginColumn" : 36,
+                                  "beginColumn" : 64,
                                   "endLine" : 265,
-                                  "endColumn" : 99,
-                                  "offset" : 14158,
-                                  "length" : 49
+                                  "endColumn" : 67,
+                                  "offset" : 14187,
+                                  "length" : 3
                                 }
                               }
                             },
@@ -8511,11 +8526,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 270,
-                                          "beginColumn" : 28,
+                                          "beginColumn" : 27,
                                           "endLine" : 270,
                                           "endColumn" : 35,
-                                          "offset" : 14426,
-                                          "length" : 7
+                                          "offset" : 14425,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -8623,11 +8638,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                               },
                                               "beginLine" : 270,
-                                              "beginColumn" : 54,
+                                              "beginColumn" : 53,
                                               "endLine" : 270,
-                                              "endColumn" : 66,
-                                              "offset" : 14452,
-                                              "length" : 12
+                                              "endColumn" : 58,
+                                              "offset" : 14451,
+                                              "length" : 5
                                             }
                                           }
                                         }
@@ -8647,9 +8662,9 @@
                                             "beginLine" : 270,
                                             "beginColumn" : 38,
                                             "endLine" : 270,
-                                            "endColumn" : 66,
+                                            "endColumn" : 58,
                                             "offset" : 14436,
-                                            "length" : 28
+                                            "length" : 20
                                           }
                                         },
                                         "resOpt" : {
@@ -8675,11 +8690,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 270,
-                                          "beginColumn" : 59,
+                                          "beginColumn" : 58,
                                           "endLine" : 270,
                                           "endColumn" : 66,
-                                          "offset" : 14457,
-                                          "length" : 7
+                                          "offset" : 14456,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -8746,7 +8761,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 270,
-                                    "beginColumn" : 54,
+                                    "beginColumn" : 36,
                                     "endLine" : 270,
                                     "endColumn" : 37,
                                     "offset" : 14434,
@@ -9006,7 +9021,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 270,
-                                    "beginColumn" : 104,
+                                    "beginColumn" : 89,
                                     "endLine" : 270,
                                     "endColumn" : 91,
                                     "offset" : 14487,
@@ -9025,11 +9040,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 270,
-                                    "beginColumn" : 17,
+                                    "beginColumn" : 36,
                                     "endLine" : 270,
-                                    "endColumn" : 113,
-                                    "offset" : 14415,
-                                    "length" : 96
+                                    "endColumn" : 91,
+                                    "offset" : 14434,
+                                    "length" : 55
                                   }
                                 },
                                 "resOpt" : {
@@ -9048,11 +9063,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 270,
-                                  "beginColumn" : 39,
+                                  "beginColumn" : 68,
                                   "endLine" : 270,
-                                  "endColumn" : 103,
-                                  "offset" : 14436,
-                                  "length" : 50
+                                  "endColumn" : 71,
+                                  "offset" : 14466,
+                                  "length" : 3
                                 }
                               }
                             },
@@ -9168,7 +9183,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 273,
-                                    "beginColumn" : 15,
+                                    "beginColumn" : 14,
                                     "endLine" : 273,
                                     "endColumn" : 15,
                                     "offset" : 14624,
@@ -9211,11 +9226,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 273,
-                                    "beginColumn" : 12,
+                                    "beginColumn" : 14,
                                     "endLine" : 273,
                                     "endColumn" : 23,
-                                    "offset" : 14622,
-                                    "length" : 11
+                                    "offset" : 14624,
+                                    "length" : 9
                                   }
                                 },
                                 "resOpt" : {
@@ -9234,11 +9249,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 273,
-                                  "beginColumn" : 17,
+                                  "beginColumn" : 19,
                                   "endLine" : 273,
                                   "endColumn" : 21,
-                                  "offset" : 14626,
-                                  "length" : 5
+                                  "offset" : 14629,
+                                  "length" : 2
                                 }
                               }
                             },
@@ -9344,11 +9359,11 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                             },
                                             "beginLine" : 276,
-                                            "beginColumn" : 27,
+                                            "beginColumn" : 26,
                                             "endLine" : 276,
-                                            "endColumn" : 38,
-                                            "offset" : 14735,
-                                            "length" : 11
+                                            "endColumn" : 30,
+                                            "offset" : 14734,
+                                            "length" : 4
                                           }
                                         }
                                       }
@@ -9368,9 +9383,9 @@
                                           "beginLine" : 276,
                                           "beginColumn" : 11,
                                           "endLine" : 276,
-                                          "endColumn" : 38,
+                                          "endColumn" : 30,
                                           "offset" : 14719,
-                                          "length" : 27
+                                          "length" : 19
                                         }
                                       },
                                       "resOpt" : {
@@ -9396,11 +9411,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 276,
-                                        "beginColumn" : 31,
+                                        "beginColumn" : 30,
                                         "endLine" : 276,
                                         "endColumn" : 38,
-                                        "offset" : 14739,
-                                        "length" : 7
+                                        "offset" : 14738,
+                                        "length" : 8
                                       }
                                     }
                                   }
@@ -9508,11 +9523,11 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                             },
                                             "beginLine" : 276,
-                                            "beginColumn" : 58,
+                                            "beginColumn" : 57,
                                             "endLine" : 276,
-                                            "endColumn" : 70,
-                                            "offset" : 14766,
-                                            "length" : 12
+                                            "endColumn" : 62,
+                                            "offset" : 14765,
+                                            "length" : 5
                                           }
                                         }
                                       }
@@ -9532,9 +9547,9 @@
                                           "beginLine" : 276,
                                           "beginColumn" : 42,
                                           "endLine" : 276,
-                                          "endColumn" : 70,
+                                          "endColumn" : 62,
                                           "offset" : 14750,
-                                          "length" : 28
+                                          "length" : 20
                                         }
                                       },
                                       "resOpt" : {
@@ -9560,11 +9575,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 276,
-                                        "beginColumn" : 63,
+                                        "beginColumn" : 62,
                                         "endLine" : 276,
                                         "endColumn" : 70,
-                                        "offset" : 14771,
-                                        "length" : 7
+                                        "offset" : 14770,
+                                        "length" : 8
                                       }
                                     }
                                   }
@@ -9631,7 +9646,7 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 276,
-                                  "beginColumn" : 66,
+                                  "beginColumn" : 39,
                                   "endLine" : 276,
                                   "endColumn" : 41,
                                   "offset" : 14747,
@@ -9658,7 +9673,9 @@
                                 }
                               }
                             }
-                          },
+                          }
+                        ],
+                        "guarantees" : [
                           {
                             "type" : "GclGuarantee",
                             "id" : "TC_Req_01",
@@ -9740,11 +9757,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 285,
-                                          "beginColumn" : 23,
+                                          "beginColumn" : 22,
                                           "endLine" : 285,
                                           "endColumn" : 30,
-                                          "offset" : 15364,
-                                          "length" : 7
+                                          "offset" : 15363,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -9852,11 +9869,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                               },
                                               "beginLine" : 285,
-                                              "beginColumn" : 49,
+                                              "beginColumn" : 48,
                                               "endLine" : 285,
-                                              "endColumn" : 60,
-                                              "offset" : 15390,
-                                              "length" : 11
+                                              "endColumn" : 52,
+                                              "offset" : 15389,
+                                              "length" : 4
                                             }
                                           }
                                         }
@@ -9876,9 +9893,9 @@
                                             "beginLine" : 285,
                                             "beginColumn" : 33,
                                             "endLine" : 285,
-                                            "endColumn" : 60,
+                                            "endColumn" : 52,
                                             "offset" : 15374,
-                                            "length" : 27
+                                            "length" : 19
                                           }
                                         },
                                         "resOpt" : {
@@ -9904,11 +9921,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 285,
-                                          "beginColumn" : 53,
+                                          "beginColumn" : 52,
                                           "endLine" : 285,
                                           "endColumn" : 60,
-                                          "offset" : 15394,
-                                          "length" : 7
+                                          "offset" : 15393,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -9975,7 +9992,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 285,
-                                    "beginColumn" : 49,
+                                    "beginColumn" : 31,
                                     "endLine" : 285,
                                     "endColumn" : 32,
                                     "offset" : 15372,
@@ -10235,7 +10252,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 285,
-                                    "beginColumn" : 98,
+                                    "beginColumn" : 83,
                                     "endLine" : 285,
                                     "endColumn" : 85,
                                     "offset" : 15424,
@@ -10254,11 +10271,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 285,
-                                    "beginColumn" : 12,
+                                    "beginColumn" : 31,
                                     "endLine" : 285,
-                                    "endColumn" : 108,
-                                    "offset" : 15353,
-                                    "length" : 96
+                                    "endColumn" : 85,
+                                    "offset" : 15372,
+                                    "length" : 54
                                   }
                                 },
                                 "resOpt" : {
@@ -10277,11 +10294,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 285,
-                                  "beginColumn" : 34,
+                                  "beginColumn" : 62,
                                   "endLine" : 285,
-                                  "endColumn" : 97,
-                                  "offset" : 15374,
-                                  "length" : 49
+                                  "endColumn" : 65,
+                                  "offset" : 15403,
+                                  "length" : 3
                                 }
                               }
                             },
@@ -10386,11 +10403,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 289,
-                                          "beginColumn" : 23,
+                                          "beginColumn" : 22,
                                           "endLine" : 289,
                                           "endColumn" : 30,
-                                          "offset" : 15633,
-                                          "length" : 7
+                                          "offset" : 15632,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -10498,11 +10515,11 @@
                                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                               },
                                               "beginLine" : 289,
-                                              "beginColumn" : 49,
+                                              "beginColumn" : 48,
                                               "endLine" : 289,
-                                              "endColumn" : 61,
-                                              "offset" : 15659,
-                                              "length" : 12
+                                              "endColumn" : 53,
+                                              "offset" : 15658,
+                                              "length" : 5
                                             }
                                           }
                                         }
@@ -10522,9 +10539,9 @@
                                             "beginLine" : 289,
                                             "beginColumn" : 33,
                                             "endLine" : 289,
-                                            "endColumn" : 61,
+                                            "endColumn" : 53,
                                             "offset" : 15643,
-                                            "length" : 28
+                                            "length" : 20
                                           }
                                         },
                                         "resOpt" : {
@@ -10550,11 +10567,11 @@
                                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                           },
                                           "beginLine" : 289,
-                                          "beginColumn" : 54,
+                                          "beginColumn" : 53,
                                           "endLine" : 289,
                                           "endColumn" : 61,
-                                          "offset" : 15664,
-                                          "length" : 7
+                                          "offset" : 15663,
+                                          "length" : 8
                                         }
                                       }
                                     }
@@ -10621,7 +10638,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 289,
-                                    "beginColumn" : 49,
+                                    "beginColumn" : 31,
                                     "endLine" : 289,
                                     "endColumn" : 32,
                                     "offset" : 15641,
@@ -10881,7 +10898,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 289,
-                                    "beginColumn" : 99,
+                                    "beginColumn" : 84,
                                     "endLine" : 289,
                                     "endColumn" : 86,
                                     "offset" : 15694,
@@ -10900,11 +10917,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 289,
-                                    "beginColumn" : 12,
+                                    "beginColumn" : 31,
                                     "endLine" : 289,
-                                    "endColumn" : 108,
-                                    "offset" : 15622,
-                                    "length" : 96
+                                    "endColumn" : 86,
+                                    "offset" : 15641,
+                                    "length" : 55
                                   }
                                 },
                                 "resOpt" : {
@@ -10923,11 +10940,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 289,
-                                  "beginColumn" : 34,
+                                  "beginColumn" : 63,
                                   "endLine" : 289,
-                                  "endColumn" : 98,
-                                  "offset" : 15643,
-                                  "length" : 50
+                                  "endColumn" : 66,
+                                  "offset" : 15673,
+                                  "length" : 3
                                 }
                               }
                             },
@@ -11034,11 +11051,11 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                             },
                                             "beginLine" : 294,
-                                            "beginColumn" : 24,
+                                            "beginColumn" : 23,
                                             "endLine" : 294,
                                             "endColumn" : 31,
-                                            "offset" : 16019,
-                                            "length" : 7
+                                            "offset" : 16018,
+                                            "length" : 8
                                           }
                                         }
                                       }
@@ -11146,11 +11163,11 @@
                                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                                 },
                                                 "beginLine" : 294,
-                                                "beginColumn" : 51,
+                                                "beginColumn" : 50,
                                                 "endLine" : 294,
-                                                "endColumn" : 62,
-                                                "offset" : 16046,
-                                                "length" : 11
+                                                "endColumn" : 54,
+                                                "offset" : 16045,
+                                                "length" : 4
                                               }
                                             }
                                           }
@@ -11170,9 +11187,9 @@
                                               "beginLine" : 294,
                                               "beginColumn" : 35,
                                               "endLine" : 294,
-                                              "endColumn" : 62,
+                                              "endColumn" : 54,
                                               "offset" : 16030,
-                                              "length" : 27
+                                              "length" : 19
                                             }
                                           },
                                           "resOpt" : {
@@ -11198,11 +11215,11 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                             },
                                             "beginLine" : 294,
-                                            "beginColumn" : 55,
+                                            "beginColumn" : 54,
                                             "endLine" : 294,
                                             "endColumn" : 62,
-                                            "offset" : 16050,
-                                            "length" : 7
+                                            "offset" : 16049,
+                                            "length" : 8
                                           }
                                         }
                                       }
@@ -11269,7 +11286,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 294,
-                                      "beginColumn" : 50,
+                                      "beginColumn" : 32,
                                       "endLine" : 294,
                                       "endColumn" : 34,
                                       "offset" : 16027,
@@ -11350,11 +11367,11 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                             },
                                             "beginLine" : 295,
-                                            "beginColumn" : 25,
+                                            "beginColumn" : 24,
                                             "endLine" : 295,
                                             "endColumn" : 32,
-                                            "offset" : 16086,
-                                            "length" : 7
+                                            "offset" : 16085,
+                                            "length" : 8
                                           }
                                         }
                                       }
@@ -11462,11 +11479,11 @@
                                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                                 },
                                                 "beginLine" : 295,
-                                                "beginColumn" : 52,
+                                                "beginColumn" : 51,
                                                 "endLine" : 295,
-                                                "endColumn" : 64,
-                                                "offset" : 16113,
-                                                "length" : 12
+                                                "endColumn" : 56,
+                                                "offset" : 16112,
+                                                "length" : 5
                                               }
                                             }
                                           }
@@ -11486,9 +11503,9 @@
                                               "beginLine" : 295,
                                               "beginColumn" : 36,
                                               "endLine" : 295,
-                                              "endColumn" : 64,
+                                              "endColumn" : 56,
                                               "offset" : 16097,
-                                              "length" : 28
+                                              "length" : 20
                                             }
                                           },
                                           "resOpt" : {
@@ -11514,11 +11531,11 @@
                                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                             },
                                             "beginLine" : 295,
-                                            "beginColumn" : 57,
+                                            "beginColumn" : 56,
                                             "endLine" : 295,
                                             "endColumn" : 64,
-                                            "offset" : 16118,
-                                            "length" : 7
+                                            "offset" : 16117,
+                                            "length" : 8
                                           }
                                         }
                                       }
@@ -11585,7 +11602,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 295,
-                                      "beginColumn" : 51,
+                                      "beginColumn" : 33,
                                       "endLine" : 295,
                                       "endColumn" : 35,
                                       "offset" : 16094,
@@ -11604,11 +11621,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 294,
-                                      "beginColumn" : 13,
+                                      "beginColumn" : 32,
                                       "endLine" : 295,
-                                      "endColumn" : 64,
-                                      "offset" : 16008,
-                                      "length" : 117
+                                      "endColumn" : 35,
+                                      "offset" : 16027,
+                                      "length" : 69
                                     }
                                   },
                                   "resOpt" : {
@@ -11627,11 +11644,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 294,
-                                    "beginColumn" : 37,
-                                    "endLine" : 295,
-                                    "endColumn" : 50,
-                                    "offset" : 16030,
-                                    "length" : 63
+                                    "beginColumn" : 64,
+                                    "endLine" : 294,
+                                    "endColumn" : 65,
+                                    "offset" : 16059,
+                                    "length" : 1
                                   }
                                 }
                               },
@@ -11797,7 +11814,7 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 297,
-                                    "beginColumn" : 49,
+                                    "beginColumn" : 34,
                                     "endLine" : 297,
                                     "endColumn" : 36,
                                     "offset" : 16239,
@@ -11816,11 +11833,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 294,
-                                    "beginColumn" : 13,
+                                    "beginColumn" : 64,
                                     "endLine" : 297,
-                                    "endColumn" : 56,
-                                    "offset" : 16008,
-                                    "length" : 253
+                                    "endColumn" : 36,
+                                    "offset" : 16059,
+                                    "length" : 182
                                   }
                                 },
                                 "resOpt" : {
@@ -11838,12 +11855,12 @@
                                     "type" : "Some",
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
-                                  "beginLine" : 295,
-                                  "beginColumn" : 114,
+                                  "beginLine" : 297,
+                                  "beginColumn" : 13,
                                   "endLine" : 297,
-                                  "endColumn" : 48,
-                                  "offset" : 16094,
-                                  "length" : 144
+                                  "endColumn" : 16,
+                                  "offset" : 16218,
+                                  "length" : 3
                                 }
                               }
                             },
@@ -12041,7 +12058,7 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 301,
-                                        "beginColumn" : 52,
+                                        "beginColumn" : 33,
                                         "endLine" : 301,
                                         "endColumn" : 35,
                                         "offset" : 16481,
@@ -12249,11 +12266,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 301,
-                                        "beginColumn" : 13,
+                                        "beginColumn" : 33,
                                         "endLine" : 301,
                                         "endColumn" : 89,
-                                        "offset" : 16461,
-                                        "length" : 76
+                                        "offset" : 16481,
+                                        "length" : 56
                                       }
                                     },
                                     "resOpt" : {
@@ -12272,11 +12289,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 301,
-                                      "beginColumn" : 38,
+                                      "beginColumn" : 53,
                                       "endLine" : 301,
                                       "endColumn" : 56,
-                                      "offset" : 16484,
-                                      "length" : 20
+                                      "offset" : 16501,
+                                      "length" : 3
                                     }
                                   }
                                 },
@@ -12444,7 +12461,7 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 304,
-                                        "beginColumn" : 44,
+                                        "beginColumn" : 29,
                                         "endLine" : 304,
                                         "endColumn" : 31,
                                         "offset" : 16661,
@@ -12601,11 +12618,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                         },
                                         "beginLine" : 304,
-                                        "beginColumn" : 13,
+                                        "beginColumn" : 29,
                                         "endLine" : 304,
                                         "endColumn" : 71,
-                                        "offset" : 16645,
-                                        "length" : 58
+                                        "offset" : 16661,
+                                        "length" : 42
                                       }
                                     },
                                     "resOpt" : {
@@ -12624,11 +12641,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 304,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 53,
                                       "endLine" : 304,
                                       "endColumn" : 56,
-                                      "offset" : 16664,
-                                      "length" : 24
+                                      "offset" : 16685,
+                                      "length" : 3
                                     }
                                   }
                                 },
@@ -12643,11 +12660,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 301,
-                                      "beginColumn" : 13,
+                                      "beginColumn" : 53,
                                       "endLine" : 304,
-                                      "endColumn" : 71,
-                                      "offset" : 16461,
-                                      "length" : 242
+                                      "endColumn" : 56,
+                                      "offset" : 16501,
+                                      "length" : 187
                                     }
                                   },
                                   "resOpt" : {
@@ -12666,11 +12683,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 301,
-                                    "beginColumn" : 77,
-                                    "endLine" : 304,
-                                    "endColumn" : 33,
-                                    "offset" : 16505,
-                                    "length" : 158
+                                    "beginColumn" : 91,
+                                    "endLine" : 301,
+                                    "endColumn" : 93,
+                                    "offset" : 16539,
+                                    "length" : 2
                                   }
                                 }
                               },
@@ -12838,7 +12855,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 307,
-                                      "beginColumn" : 52,
+                                      "beginColumn" : 33,
                                       "endLine" : 307,
                                       "endColumn" : 35,
                                       "offset" : 16849,
@@ -12995,11 +13012,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 307,
-                                      "beginColumn" : 13,
+                                      "beginColumn" : 33,
                                       "endLine" : 307,
                                       "endColumn" : 73,
-                                      "offset" : 16829,
-                                      "length" : 60
+                                      "offset" : 16849,
+                                      "length" : 40
                                     }
                                   },
                                   "resOpt" : {
@@ -13018,11 +13035,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 307,
-                                    "beginColumn" : 38,
+                                    "beginColumn" : 53,
                                     "endLine" : 307,
                                     "endColumn" : 56,
-                                    "offset" : 16852,
-                                    "length" : 20
+                                    "offset" : 16869,
+                                    "length" : 3
                                   }
                                 }
                               },
@@ -13037,11 +13054,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                     },
                                     "beginLine" : 301,
-                                    "beginColumn" : 13,
+                                    "beginColumn" : 91,
                                     "endLine" : 307,
-                                    "endColumn" : 73,
-                                    "offset" : 16461,
-                                    "length" : 428
+                                    "endColumn" : 56,
+                                    "offset" : 16539,
+                                    "length" : 333
                                   }
                                 },
                                 "resOpt" : {
@@ -13060,11 +13077,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                   },
                                   "beginLine" : 304,
-                                  "beginColumn" : 192,
-                                  "endLine" : 307,
-                                  "endColumn" : 37,
-                                  "offset" : 16664,
-                                  "length" : 187
+                                  "beginColumn" : 73,
+                                  "endLine" : 304,
+                                  "endColumn" : 75,
+                                  "offset" : 16705,
+                                  "length" : 2
                                 }
                               }
                             },
@@ -13197,6 +13214,8 @@
                                   }
                                 }
                               }
+                            ],
+                            "assumes" : [
                             ],
                             "guarantees" : [
                               {
@@ -13344,7 +13363,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 353,
-                                      "beginColumn" : 44,
+                                      "beginColumn" : 29,
                                       "endLine" : 353,
                                       "endColumn" : 31,
                                       "offset" : 19542,
@@ -13539,7 +13558,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 356,
-                                      "beginColumn" : 35,
+                                      "beginColumn" : 25,
                                       "endLine" : 356,
                                       "endColumn" : 27,
                                       "offset" : 19635,
@@ -13567,6 +13586,8 @@
                                   }
                                 }
                               }
+                            ],
+                            "cases" : [
                             ],
                             "attr" : {
                               "type" : "Attr",
@@ -13693,6 +13714,8 @@
                                   }
                                 }
                               }
+                            ],
+                            "assumes" : [
                             ],
                             "guarantees" : [
                               {
@@ -13840,7 +13863,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 365,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 24,
                                       "endLine" : 365,
                                       "endColumn" : 26,
                                       "offset" : 19952,
@@ -14035,7 +14058,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 368,
-                                      "beginColumn" : 44,
+                                      "beginColumn" : 29,
                                       "endLine" : 368,
                                       "endColumn" : 31,
                                       "offset" : 20050,
@@ -14063,6 +14086,8 @@
                                   }
                                 }
                               }
+                            ],
+                            "cases" : [
                             ],
                             "attr" : {
                               "type" : "Attr",
@@ -14138,6 +14163,8 @@
                               }
                             },
                             "modifies" : [
+                            ],
+                            "assumes" : [
                             ],
                             "guarantees" : [
                               {
@@ -14307,7 +14334,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 373,
-                                      "beginColumn" : 44,
+                                      "beginColumn" : 29,
                                       "endLine" : 373,
                                       "endColumn" : 31,
                                       "offset" : 20188,
@@ -14502,7 +14529,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 376,
-                                      "beginColumn" : 34,
+                                      "beginColumn" : 24,
                                       "endLine" : 376,
                                       "endColumn" : 26,
                                       "offset" : 20285,
@@ -14697,7 +14724,7 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                       },
                                       "beginLine" : 380,
-                                      "beginColumn" : 44,
+                                      "beginColumn" : 29,
                                       "endLine" : 380,
                                       "endColumn" : 31,
                                       "offset" : 20479,
@@ -14888,6 +14915,8 @@
                                   }
                                 }
                               }
+                            ],
+                            "cases" : [
                             ],
                             "attr" : {
                               "type" : "Attr",
@@ -18288,11 +18317,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                         },
                                         "beginLine" : 25,
-                                        "beginColumn" : 14,
+                                        "beginColumn" : 13,
                                         "endLine" : 25,
                                         "endColumn" : 21,
-                                        "offset" : 652,
-                                        "length" : 7
+                                        "offset" : 651,
+                                        "length" : 8
                                       }
                                     }
                                   }
@@ -18383,7 +18412,7 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                   },
                                   "beginLine" : 25,
-                                  "beginColumn" : 34,
+                                  "beginColumn" : 22,
                                   "endLine" : 25,
                                   "endColumn" : 24,
                                   "offset" : 660,
@@ -18464,11 +18493,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                         },
                                         "beginLine" : 25,
-                                        "beginColumn" : 44,
+                                        "beginColumn" : 43,
                                         "endLine" : 25,
                                         "endColumn" : 51,
-                                        "offset" : 682,
-                                        "length" : 7
+                                        "offset" : 681,
+                                        "length" : 8
                                       }
                                     }
                                   }
@@ -18559,7 +18588,7 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                   },
                                   "beginLine" : 25,
-                                  "beginColumn" : 64,
+                                  "beginColumn" : 52,
                                   "endLine" : 25,
                                   "endColumn" : 54,
                                   "offset" : 690,
@@ -18578,11 +18607,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                   },
                                   "beginLine" : 25,
-                                  "beginColumn" : 9,
+                                  "beginColumn" : 22,
                                   "endLine" : 25,
-                                  "endColumn" : 65,
-                                  "offset" : 647,
-                                  "length" : 56
+                                  "endColumn" : 54,
+                                  "offset" : 660,
+                                  "length" : 32
                                 }
                               },
                               "resOpt" : {
@@ -18601,11 +18630,11 @@
                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                 },
                                 "beginLine" : 25,
-                                "beginColumn" : 27,
+                                "beginColumn" : 36,
                                 "endLine" : 25,
-                                "endColumn" : 63,
-                                "offset" : 663,
-                                "length" : 26
+                                "endColumn" : 38,
+                                "offset" : 674,
+                                "length" : 2
                               }
                             }
                           },
@@ -18682,11 +18711,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                       },
                                       "beginLine" : 28,
-                                      "beginColumn" : 14,
+                                      "beginColumn" : 13,
                                       "endLine" : 28,
                                       "endColumn" : 21,
-                                      "offset" : 784,
-                                      "length" : 7
+                                      "offset" : 783,
+                                      "length" : 8
                                     }
                                   }
                                 }
@@ -18947,7 +18976,7 @@
                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                 },
                                 "beginLine" : 28,
-                                "beginColumn" : 34,
+                                "beginColumn" : 22,
                                 "endLine" : 28,
                                 "endColumn" : 24,
                                 "offset" : 792,
@@ -18966,11 +18995,11 @@
                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                 },
                                 "beginLine" : 25,
-                                "beginColumn" : 9,
+                                "beginColumn" : 36,
                                 "endLine" : 28,
-                                "endColumn" : 54,
-                                "offset" : 647,
-                                "length" : 177
+                                "endColumn" : 24,
+                                "offset" : 674,
+                                "length" : 120
                               }
                             },
                             "resOpt" : {
@@ -18989,11 +19018,11 @@
                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                               },
                               "beginLine" : 25,
-                              "beginColumn" : 90,
-                              "endLine" : 28,
-                              "endColumn" : 33,
-                              "offset" : 690,
-                              "length" : 101
+                              "beginColumn" : 66,
+                              "endLine" : 25,
+                              "endColumn" : 68,
+                              "offset" : 704,
+                              "length" : 2
                             }
                           }
                         },
@@ -19070,11 +19099,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                     },
                                     "beginLine" : 28,
-                                    "beginColumn" : 63,
+                                    "beginColumn" : 62,
                                     "endLine" : 28,
                                     "endColumn" : 70,
-                                    "offset" : 833,
-                                    "length" : 7
+                                    "offset" : 832,
+                                    "length" : 8
                                   }
                                 }
                               }
@@ -19335,7 +19364,7 @@
                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                               },
                               "beginLine" : 28,
-                              "beginColumn" : 83,
+                              "beginColumn" : 71,
                               "endLine" : 28,
                               "endColumn" : 73,
                               "offset" : 841,
@@ -19354,11 +19383,11 @@
                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                               },
                               "beginLine" : 25,
-                              "beginColumn" : 9,
+                              "beginColumn" : 66,
                               "endLine" : 28,
-                              "endColumn" : 103,
-                              "offset" : 647,
-                              "length" : 226
+                              "endColumn" : 73,
+                              "offset" : 704,
+                              "length" : 139
                             }
                           },
                           "resOpt" : {
@@ -19377,11 +19406,11 @@
                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                             },
                             "beginLine" : 28,
-                            "beginColumn" : 135,
+                            "beginColumn" : 55,
                             "endLine" : 28,
-                            "endColumn" : 82,
-                            "offset" : 792,
-                            "length" : 48
+                            "endColumn" : 57,
+                            "offset" : 825,
+                            "length" : 2
                           }
                         }
                       }
@@ -19980,11 +20009,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/GUMBO_Definitions.aadl"
                                     },
                                     "beginLine" : 35,
-                                    "beginColumn" : 41,
+                                    "beginColumn" : 40,
                                     "endLine" : 35,
                                     "endColumn" : 48,
-                                    "offset" : 1322,
-                                    "length" : 7
+                                    "offset" : 1321,
+                                    "length" : 8
                                   }
                                 }
                               }
@@ -21492,11 +21521,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                         },
                                         "beginLine" : 48,
-                                        "beginColumn" : 17,
+                                        "beginColumn" : 16,
                                         "endLine" : 48,
                                         "endColumn" : 24,
-                                        "offset" : 2102,
-                                        "length" : 7
+                                        "offset" : 2101,
+                                        "length" : 8
                                       }
                                     }
                                   }
@@ -21757,7 +21786,7 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                   },
                                   "beginLine" : 48,
-                                  "beginColumn" : 38,
+                                  "beginColumn" : 25,
                                   "endLine" : 48,
                                   "endColumn" : 27,
                                   "offset" : 2110,
@@ -21838,11 +21867,11 @@
                                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                         },
                                         "beginLine" : 48,
-                                        "beginColumn" : 57,
+                                        "beginColumn" : 56,
                                         "endLine" : 48,
                                         "endColumn" : 64,
-                                        "offset" : 2142,
-                                        "length" : 7
+                                        "offset" : 2141,
+                                        "length" : 8
                                       }
                                     }
                                   }
@@ -22103,7 +22132,7 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                   },
                                   "beginLine" : 48,
-                                  "beginColumn" : 78,
+                                  "beginColumn" : 65,
                                   "endLine" : 48,
                                   "endColumn" : 67,
                                   "offset" : 2150,
@@ -22122,11 +22151,11 @@
                                     "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                   },
                                   "beginLine" : 48,
-                                  "beginColumn" : 11,
+                                  "beginColumn" : 25,
                                   "endLine" : 48,
-                                  "endColumn" : 85,
-                                  "offset" : 2096,
-                                  "length" : 74
+                                  "endColumn" : 67,
+                                  "offset" : 2110,
+                                  "length" : 42
                                 }
                               },
                               "resOpt" : {
@@ -22145,11 +22174,11 @@
                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                 },
                                 "beginLine" : 48,
-                                "beginColumn" : 30,
+                                "beginColumn" : 47,
                                 "endLine" : 48,
-                                "endColumn" : 77,
-                                "offset" : 2113,
-                                "length" : 36
+                                "endColumn" : 49,
+                                "offset" : 2132,
+                                "length" : 2
                               }
                             }
                           },
@@ -22226,11 +22255,11 @@
                                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                       },
                                       "beginLine" : 51,
-                                      "beginColumn" : 17,
+                                      "beginColumn" : 16,
                                       "endLine" : 51,
                                       "endColumn" : 24,
-                                      "offset" : 2270,
-                                      "length" : 7
+                                      "offset" : 2269,
+                                      "length" : 8
                                     }
                                   }
                                 }
@@ -22491,7 +22520,7 @@
                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                 },
                                 "beginLine" : 51,
-                                "beginColumn" : 38,
+                                "beginColumn" : 25,
                                 "endLine" : 51,
                                 "endColumn" : 27,
                                 "offset" : 2278,
@@ -22510,11 +22539,11 @@
                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                 },
                                 "beginLine" : 48,
-                                "beginColumn" : 11,
+                                "beginColumn" : 47,
                                 "endLine" : 51,
-                                "endColumn" : 57,
-                                "offset" : 2096,
-                                "length" : 214
+                                "endColumn" : 27,
+                                "offset" : 2132,
+                                "length" : 148
                               }
                             },
                             "resOpt" : {
@@ -22533,11 +22562,11 @@
                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                               },
                               "beginLine" : 48,
-                              "beginColumn" : 114,
-                              "endLine" : 51,
-                              "endColumn" : 37,
-                              "offset" : 2150,
-                              "length" : 127
+                              "beginColumn" : 87,
+                              "endLine" : 48,
+                              "endColumn" : 89,
+                              "offset" : 2172,
+                              "length" : 2
                             }
                           }
                         },
@@ -22614,11 +22643,11 @@
                                       "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                                     },
                                     "beginLine" : 51,
-                                    "beginColumn" : 69,
+                                    "beginColumn" : 68,
                                     "endLine" : 51,
                                     "endColumn" : 76,
-                                    "offset" : 2322,
-                                    "length" : 7
+                                    "offset" : 2321,
+                                    "length" : 8
                                   }
                                 }
                               }
@@ -22879,7 +22908,7 @@
                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                               },
                               "beginLine" : 51,
-                              "beginColumn" : 90,
+                              "beginColumn" : 77,
                               "endLine" : 51,
                               "endColumn" : 79,
                               "offset" : 2330,
@@ -22898,11 +22927,11 @@
                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                               },
                               "beginLine" : 48,
-                              "beginColumn" : 11,
+                              "beginColumn" : 87,
                               "endLine" : 51,
-                              "endColumn" : 109,
-                              "offset" : 2096,
-                              "length" : 266
+                              "endColumn" : 79,
+                              "offset" : 2172,
+                              "length" : 160
                             }
                           },
                           "resOpt" : {
@@ -22921,11 +22950,11 @@
                               "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                             },
                             "beginLine" : 51,
-                            "beginColumn" : 165,
+                            "beginColumn" : 59,
                             "endLine" : 51,
-                            "endColumn" : 89,
-                            "offset" : 2278,
-                            "length" : 51
+                            "endColumn" : 61,
+                            "offset" : 2312,
+                            "length" : 2
                           }
                         }
                       }
@@ -25050,7 +25079,7 @@
                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                       },
                       "beginLine" : 212,
-                      "beginColumn" : 26,
+                      "beginColumn" : 19,
                       "endLine" : 212,
                       "endColumn" : 21,
                       "offset" : 10227,
@@ -25697,7 +25726,7 @@
                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                           },
                           "beginLine" : 212,
-                          "beginColumn" : 26,
+                          "beginColumn" : 19,
                           "endLine" : 212,
                           "endColumn" : 21,
                           "offset" : 10227,
@@ -26113,7 +26142,7 @@
                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempSensor.aadl"
                           },
                           "beginLine" : 212,
-                          "beginColumn" : 26,
+                          "beginColumn" : 19,
                           "endLine" : 212,
                           "endColumn" : 21,
                           "offset" : 10227,
@@ -26310,11 +26339,11 @@
                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                 },
                                 "beginLine" : 752,
-                                "beginColumn" : 16,
+                                "beginColumn" : 15,
                                 "endLine" : 752,
                                 "endColumn" : 23,
-                                "offset" : 39250,
-                                "length" : 7
+                                "offset" : 39249,
+                                "length" : 8
                               }
                             }
                           }
@@ -26405,7 +26434,7 @@
                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                           },
                           "beginLine" : 752,
-                          "beginColumn" : 35,
+                          "beginColumn" : 24,
                           "endLine" : 752,
                           "endColumn" : 26,
                           "offset" : 39258,
@@ -26486,11 +26515,11 @@
                                   "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                                 },
                                 "beginLine" : 753,
-                                "beginColumn" : 17,
+                                "beginColumn" : 16,
                                 "endLine" : 753,
                                 "endColumn" : 24,
-                                "offset" : 39290,
-                                "length" : 7
+                                "offset" : 39289,
+                                "length" : 8
                               }
                             }
                           }
@@ -26581,7 +26610,7 @@
                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                           },
                           "beginLine" : 753,
-                          "beginColumn" : 37,
+                          "beginColumn" : 25,
                           "endLine" : 753,
                           "endColumn" : 27,
                           "offset" : 39298,
@@ -26600,11 +26629,11 @@
                             "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                           },
                           "beginLine" : 752,
-                          "beginColumn" : 12,
+                          "beginColumn" : 24,
                           "endLine" : 753,
-                          "endColumn" : 38,
-                          "offset" : 39246,
-                          "length" : 65
+                          "endColumn" : 27,
+                          "offset" : 39258,
+                          "length" : 42
                         }
                       },
                       "resOpt" : {
@@ -26623,11 +26652,11 @@
                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                         },
                         "beginLine" : 752,
-                        "beginColumn" : 29,
-                        "endLine" : 753,
-                        "endColumn" : 36,
-                        "offset" : 39261,
-                        "length" : 36
+                        "beginColumn" : 38,
+                        "endLine" : 752,
+                        "endColumn" : 39,
+                        "offset" : 39272,
+                        "length" : 1
                       }
                     }
                   },
@@ -26704,11 +26733,11 @@
                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                               },
                               "beginLine" : 754,
-                              "beginColumn" : 16,
+                              "beginColumn" : 15,
                               "endLine" : 754,
                               "endColumn" : 23,
-                              "offset" : 39330,
-                              "length" : 7
+                              "offset" : 39329,
+                              "length" : 8
                             }
                           }
                         }
@@ -26812,11 +26841,11 @@
                                 "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                               },
                               "beginLine" : 754,
-                              "beginColumn" : 32,
+                              "beginColumn" : 31,
                               "endLine" : 754,
                               "endColumn" : 39,
-                              "offset" : 39346,
-                              "length" : 7
+                              "offset" : 39345,
+                              "length" : 8
                             }
                           }
                         }
@@ -26883,7 +26912,7 @@
                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                         },
                         "beginLine" : 754,
-                        "beginColumn" : 35,
+                        "beginColumn" : 24,
                         "endLine" : 754,
                         "endColumn" : 26,
                         "offset" : 39338,
@@ -26902,11 +26931,11 @@
                           "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                         },
                         "beginLine" : 752,
-                        "beginColumn" : 12,
+                        "beginColumn" : 38,
                         "endLine" : 754,
-                        "endColumn" : 39,
-                        "offset" : 39246,
-                        "length" : 107
+                        "endColumn" : 26,
+                        "offset" : 39272,
+                        "length" : 68
                       }
                     },
                     "resOpt" : {
@@ -26925,11 +26954,11 @@
                         "value" : "\/temp-control-simple-temp-gumbo\/packages\/TempControlSoftwareSystem.aadl"
                       },
                       "beginLine" : 753,
-                      "beginColumn" : 73,
-                      "endLine" : 754,
-                      "endColumn" : 34,
-                      "offset" : 39298,
-                      "length" : 39
+                      "beginColumn" : 40,
+                      "endLine" : 753,
+                      "endColumn" : 41,
+                      "offset" : 39313,
+                      "length" : 1
                     }
                   }
                 },

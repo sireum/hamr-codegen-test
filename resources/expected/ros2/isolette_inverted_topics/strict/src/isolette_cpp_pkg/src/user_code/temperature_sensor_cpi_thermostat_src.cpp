@@ -13,6 +13,10 @@ void temperature_sensor_cpi_thermostat::initialize()
     PRINT_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
+    // Initialize the node's incoming data port values here
+    isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl air = isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl();
+    init_air(air);
+
 }
 
 //=================================================
@@ -21,5 +25,13 @@ void temperature_sensor_cpi_thermostat::initialize()
 void temperature_sensor_cpi_thermostat::timeTriggered()
 {
     // Handle communication
+
+    // example receiving messages on data ports
+    isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl air = get_air();
+    PRINT_INFO("Received air: %s", MESSAGE_TO_STRING(air));
+
+    // Example publishing messages
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    put_current_tempWstatus(current_tempWstatus);
 }
 

@@ -84,7 +84,7 @@ object TempControlPeriodic_p_tcproc_tempControl {
         //   current low set point and less than or equal to the current high set point, 
         //   then the current fan state is maintained.
         (api.currentTemp.degrees >= api.setPoint.low.degrees &
-           api.currentTemp.degrees <= api.setPoint.high.degrees) ___>: (latestFanCmd == In(latestFanCmd) &
+          api.currentTemp.degrees <= api.setPoint.high.degrees) ___>: (latestFanCmd == In(latestFanCmd) &
           api.fanCmd == latestFanCmd)
         // END COMPUTE ENSURES timeTriggered
       )

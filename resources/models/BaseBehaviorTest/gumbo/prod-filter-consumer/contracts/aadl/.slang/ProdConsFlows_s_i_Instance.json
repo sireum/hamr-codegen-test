@@ -935,11 +935,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 113,
-                                        "beginColumn" : 17,
+                                        "beginColumn" : 16,
                                         "endLine" : 113,
                                         "endColumn" : 22,
-                                        "offset" : 3305,
-                                        "length" : 5
+                                        "offset" : 3304,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -1030,7 +1030,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 113,
-                                  "beginColumn" : 39,
+                                  "beginColumn" : 23,
                                   "endLine" : 113,
                                   "endColumn" : 25,
                                   "offset" : 3311,
@@ -1166,11 +1166,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 95,
-                                        "beginColumn" : 16,
+                                        "beginColumn" : 15,
                                         "endLine" : 95,
                                         "endColumn" : 21,
-                                        "offset" : 2529,
-                                        "length" : 5
+                                        "offset" : 2528,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -1261,7 +1261,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 95,
-                                  "beginColumn" : 37,
+                                  "beginColumn" : 22,
                                   "endLine" : 95,
                                   "endColumn" : 23,
                                   "offset" : 2535,
@@ -1368,11 +1368,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 98,
-                                        "beginColumn" : 22,
+                                        "beginColumn" : 21,
                                         "endLine" : 98,
                                         "endColumn" : 27,
-                                        "offset" : 2639,
-                                        "length" : 5
+                                        "offset" : 2638,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -1463,7 +1463,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 98,
-                                  "beginColumn" : 49,
+                                  "beginColumn" : 28,
                                   "endLine" : 98,
                                   "endColumn" : 29,
                                   "offset" : 2645,
@@ -1570,11 +1570,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 101,
-                                        "beginColumn" : 17,
+                                        "beginColumn" : 16,
                                         "endLine" : 101,
                                         "endColumn" : 22,
-                                        "offset" : 2745,
-                                        "length" : 5
+                                        "offset" : 2744,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -1665,7 +1665,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 101,
-                                  "beginColumn" : 39,
+                                  "beginColumn" : 23,
                                   "endLine" : 101,
                                   "endColumn" : 24,
                                   "offset" : 2751,
@@ -1772,11 +1772,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 104,
-                                        "beginColumn" : 23,
+                                        "beginColumn" : 22,
                                         "endLine" : 104,
                                         "endColumn" : 28,
-                                        "offset" : 2857,
-                                        "length" : 5
+                                        "offset" : 2856,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -1867,7 +1867,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 104,
-                                  "beginColumn" : 51,
+                                  "beginColumn" : 29,
                                   "endLine" : 104,
                                   "endColumn" : 30,
                                   "offset" : 2863,
@@ -1923,7 +1923,9 @@
                         "type" : "GclCompute",
                         "modifies" : [
                         ],
-                        "specs" : [
+                        "assumes" : [
+                        ],
+                        "guarantees" : [
                         ],
                         "cases" : [
                           {
@@ -1934,24 +1936,27 @@
                               "value" : "a_data_in 'flows to' e_data_out"
                             },
                             "assumes" : {
-                              "type" : "org.sireum.lang.ast.Exp.LitB",
-                              "value" : true,
-                              "attr" : {
-                                "type" : "org.sireum.lang.ast.Attr",
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                    },
-                                    "beginLine" : 118,
-                                    "beginColumn" : 15,
-                                    "endLine" : 118,
-                                    "endColumn" : 16,
-                                    "offset" : 3411,
-                                    "length" : 1
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "org.sireum.lang.ast.Exp.LitB",
+                                "value" : true,
+                                "attr" : {
+                                  "type" : "org.sireum.lang.ast.Attr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                      },
+                                      "beginLine" : 118,
+                                      "beginColumn" : 15,
+                                      "endLine" : 118,
+                                      "endColumn" : 16,
+                                      "offset" : 3411,
+                                      "length" : 1
+                                    }
                                   }
                                 }
                               }
@@ -2095,7 +2100,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 119,
-                                  "beginColumn" : 36,
+                                  "beginColumn" : 27,
                                   "endLine" : 119,
                                   "endColumn" : 29,
                                   "offset" : 3492,
@@ -2131,69 +2136,17 @@
                               "value" : "If an event was received on b then its value\n\t\t\t\t\t\t\t\t\t\t|is propagated to f"
                             },
                             "assumes" : {
-                              "type" : "org.sireum.lang.ast.Exp.Invoke",
-                              "receiverOpt" : {
-                                "type" : "None"
-                              },
-                              "ident" : {
-                                "type" : "org.sireum.lang.ast.Exp.Ident",
-                                "id" : {
-                                  "type" : "org.sireum.lang.ast.Id",
-                                  "value" : "uif__HasEvent",
-                                  "attr" : {
-                                    "type" : "org.sireum.lang.ast.Attr",
-                                    "posOpt" : {
-                                      "type" : "Some",
-                                      "value" : {
-                                        "type" : "Position",
-                                        "uriOpt" : {
-                                          "type" : "Some",
-                                          "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                        },
-                                        "beginLine" : 126,
-                                        "beginColumn" : 14,
-                                        "endLine" : 126,
-                                        "endColumn" : 39,
-                                        "offset" : 3768,
-                                        "length" : 25
-                                      }
-                                    }
-                                  }
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "org.sireum.lang.ast.Exp.Invoke",
+                                "receiverOpt" : {
+                                  "type" : "None"
                                 },
-                                "attr" : {
-                                  "type" : "org.sireum.lang.ast.ResolvedAttr",
-                                  "posOpt" : {
-                                    "type" : "Some",
-                                    "value" : {
-                                      "type" : "Position",
-                                      "uriOpt" : {
-                                        "type" : "Some",
-                                        "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
-                                      },
-                                      "beginLine" : 126,
-                                      "beginColumn" : 14,
-                                      "endLine" : 126,
-                                      "endColumn" : 39,
-                                      "offset" : 3768,
-                                      "length" : 25
-                                    }
-                                  },
-                                  "resOpt" : {
-                                    "type" : "None"
-                                  },
-                                  "typedOpt" : {
-                                    "type" : "None"
-                                  }
-                                }
-                              },
-                              "targs" : [
-                              ],
-                              "args" : [
-                                {
+                                "ident" : {
                                   "type" : "org.sireum.lang.ast.Exp.Ident",
                                   "id" : {
                                     "type" : "org.sireum.lang.ast.Id",
-                                    "value" : "b_event_data_in",
+                                    "value" : "uif__HasEvent",
                                     "attr" : {
                                       "type" : "org.sireum.lang.ast.Attr",
                                       "posOpt" : {
@@ -2239,31 +2192,86 @@
                                       "type" : "None"
                                     }
                                   }
-                                }
-                              ],
-                              "attr" : {
-                                "type" : "org.sireum.lang.ast.ResolvedAttr",
-                                "posOpt" : {
-                                  "type" : "Some",
-                                  "value" : {
-                                    "type" : "Position",
-                                    "uriOpt" : {
-                                      "type" : "Some",
-                                      "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                },
+                                "targs" : [
+                                ],
+                                "args" : [
+                                  {
+                                    "type" : "org.sireum.lang.ast.Exp.Ident",
+                                    "id" : {
+                                      "type" : "org.sireum.lang.ast.Id",
+                                      "value" : "b_event_data_in",
+                                      "attr" : {
+                                        "type" : "org.sireum.lang.ast.Attr",
+                                        "posOpt" : {
+                                          "type" : "Some",
+                                          "value" : {
+                                            "type" : "Position",
+                                            "uriOpt" : {
+                                              "type" : "Some",
+                                              "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                            },
+                                            "beginLine" : 126,
+                                            "beginColumn" : 14,
+                                            "endLine" : 126,
+                                            "endColumn" : 39,
+                                            "offset" : 3768,
+                                            "length" : 25
+                                          }
+                                        }
+                                      }
                                     },
-                                    "beginLine" : 126,
-                                    "beginColumn" : 14,
-                                    "endLine" : 126,
-                                    "endColumn" : 39,
-                                    "offset" : 3768,
-                                    "length" : 25
+                                    "attr" : {
+                                      "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                      "posOpt" : {
+                                        "type" : "Some",
+                                        "value" : {
+                                          "type" : "Position",
+                                          "uriOpt" : {
+                                            "type" : "Some",
+                                            "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                          },
+                                          "beginLine" : 126,
+                                          "beginColumn" : 14,
+                                          "endLine" : 126,
+                                          "endColumn" : 39,
+                                          "offset" : 3768,
+                                          "length" : 25
+                                        }
+                                      },
+                                      "resOpt" : {
+                                        "type" : "None"
+                                      },
+                                      "typedOpt" : {
+                                        "type" : "None"
+                                      }
+                                    }
                                   }
-                                },
-                                "resOpt" : {
-                                  "type" : "None"
-                                },
-                                "typedOpt" : {
-                                  "type" : "None"
+                                ],
+                                "attr" : {
+                                  "type" : "org.sireum.lang.ast.ResolvedAttr",
+                                  "posOpt" : {
+                                    "type" : "Some",
+                                    "value" : {
+                                      "type" : "Position",
+                                      "uriOpt" : {
+                                        "type" : "Some",
+                                        "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
+                                      },
+                                      "beginLine" : 126,
+                                      "beginColumn" : 14,
+                                      "endLine" : 126,
+                                      "endColumn" : 39,
+                                      "offset" : 3768,
+                                      "length" : 25
+                                    }
+                                  },
+                                  "resOpt" : {
+                                    "type" : "None"
+                                  },
+                                  "typedOpt" : {
+                                    "type" : "None"
+                                  }
                                 }
                               }
                             },
@@ -2479,11 +2487,11 @@
                                             "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                           },
                                           "beginLine" : 144,
-                                          "beginColumn" : 64,
+                                          "beginColumn" : 63,
                                           "endLine" : 144,
                                           "endColumn" : 69,
-                                          "offset" : 4932,
-                                          "length" : 5
+                                          "offset" : 4931,
+                                          "length" : 6
                                         }
                                       }
                                     }
@@ -2587,11 +2595,11 @@
                                             "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                           },
                                           "beginLine" : 144,
-                                          "beginColumn" : 89,
+                                          "beginColumn" : 88,
                                           "endLine" : 144,
                                           "endColumn" : 94,
-                                          "offset" : 4957,
-                                          "length" : 5
+                                          "offset" : 4956,
+                                          "length" : 6
                                         }
                                       }
                                     }
@@ -2658,7 +2666,7 @@
                                       "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                     },
                                     "beginLine" : 144,
-                                    "beginColumn" : 92,
+                                    "beginColumn" : 70,
                                     "endLine" : 144,
                                     "endColumn" : 72,
                                     "offset" : 4938,
@@ -2679,9 +2687,9 @@
                                     "beginLine" : 144,
                                     "beginColumn" : 17,
                                     "endLine" : 144,
-                                    "endColumn" : 94,
+                                    "endColumn" : 72,
                                     "offset" : 4885,
-                                    "length" : 77
+                                    "length" : 55
                                   }
                                 },
                                 "resOpt" : {
@@ -2700,11 +2708,11 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 144,
-                                  "beginColumn" : 70,
+                                  "beginColumn" : 44,
                                   "endLine" : 144,
-                                  "endColumn" : 91,
+                                  "endColumn" : 46,
                                   "offset" : 4912,
-                                  "length" : 25
+                                  "length" : 2
                                 }
                               }
                             },
@@ -3301,11 +3309,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 173,
-                                        "beginColumn" : 17,
+                                        "beginColumn" : 16,
                                         "endLine" : 173,
                                         "endColumn" : 22,
-                                        "offset" : 5923,
-                                        "length" : 5
+                                        "offset" : 5922,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -3396,7 +3404,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 173,
-                                  "beginColumn" : 39,
+                                  "beginColumn" : 23,
                                   "endLine" : 173,
                                   "endColumn" : 25,
                                   "offset" : 5929,
@@ -3532,11 +3540,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 157,
-                                        "beginColumn" : 16,
+                                        "beginColumn" : 15,
                                         "endLine" : 157,
                                         "endColumn" : 21,
-                                        "offset" : 5206,
-                                        "length" : 5
+                                        "offset" : 5205,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -3627,7 +3635,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 157,
-                                  "beginColumn" : 37,
+                                  "beginColumn" : 22,
                                   "endLine" : 157,
                                   "endColumn" : 23,
                                   "offset" : 5212,
@@ -3734,11 +3742,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 160,
-                                        "beginColumn" : 22,
+                                        "beginColumn" : 21,
                                         "endLine" : 160,
                                         "endColumn" : 27,
-                                        "offset" : 5316,
-                                        "length" : 5
+                                        "offset" : 5315,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -3829,7 +3837,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 160,
-                                  "beginColumn" : 49,
+                                  "beginColumn" : 28,
                                   "endLine" : 160,
                                   "endColumn" : 29,
                                   "offset" : 5322,
@@ -3936,11 +3944,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 163,
-                                        "beginColumn" : 17,
+                                        "beginColumn" : 16,
                                         "endLine" : 163,
                                         "endColumn" : 22,
-                                        "offset" : 5422,
-                                        "length" : 5
+                                        "offset" : 5421,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -4031,7 +4039,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 163,
-                                  "beginColumn" : 39,
+                                  "beginColumn" : 23,
                                   "endLine" : 163,
                                   "endColumn" : 24,
                                   "offset" : 5428,
@@ -4138,11 +4146,11 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 166,
-                                        "beginColumn" : 23,
+                                        "beginColumn" : 22,
                                         "endLine" : 166,
                                         "endColumn" : 28,
-                                        "offset" : 5534,
-                                        "length" : 5
+                                        "offset" : 5533,
+                                        "length" : 6
                                       }
                                     }
                                   }
@@ -4233,7 +4241,7 @@
                                     "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                   },
                                   "beginLine" : 166,
-                                  "beginColumn" : 51,
+                                  "beginColumn" : 29,
                                   "endLine" : 166,
                                   "endColumn" : 30,
                                   "offset" : 5540,
@@ -4289,7 +4297,9 @@
                         "type" : "GclCompute",
                         "modifies" : [
                         ],
-                        "specs" : [
+                        "assumes" : [
+                        ],
+                        "guarantees" : [
                         ],
                         "cases" : [
                         ],
@@ -4348,6 +4358,8 @@
                               }
                             },
                             "modifies" : [
+                            ],
+                            "assumes" : [
                             ],
                             "guarantees" : [
                               {
@@ -4636,7 +4648,7 @@
                                           "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                         },
                                         "beginLine" : 180,
-                                        "beginColumn" : 70,
+                                        "beginColumn" : 54,
                                         "endLine" : 180,
                                         "endColumn" : 56,
                                         "offset" : 6215,
@@ -4657,9 +4669,9 @@
                                         "beginLine" : 180,
                                         "beginColumn" : 7,
                                         "endLine" : 180,
-                                        "endColumn" : 72,
+                                        "endColumn" : 56,
                                         "offset" : 6168,
-                                        "length" : 65
+                                        "length" : 49
                                       }
                                     },
                                     "resOpt" : {
@@ -4678,11 +4690,11 @@
                                         "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                                       },
                                       "beginLine" : 180,
-                                      "beginColumn" : 60,
+                                      "beginColumn" : 34,
                                       "endLine" : 180,
-                                      "endColumn" : 69,
+                                      "endColumn" : 36,
                                       "offset" : 6195,
-                                      "length" : 19
+                                      "length" : 2
                                     }
                                   }
                                 },
@@ -4706,6 +4718,8 @@
                                   }
                                 }
                               }
+                            ],
+                            "cases" : [
                             ],
                             "attr" : {
                               "type" : "Attr",
@@ -12337,7 +12351,7 @@
                         "value" : "\/prod-cons-flows_contracts\/ProdConsFlows.aadl"
                       },
                       "beginLine" : 203,
-                      "beginColumn" : 17,
+                      "beginColumn" : 12,
                       "endLine" : 203,
                       "endColumn" : 13,
                       "offset" : 6695,

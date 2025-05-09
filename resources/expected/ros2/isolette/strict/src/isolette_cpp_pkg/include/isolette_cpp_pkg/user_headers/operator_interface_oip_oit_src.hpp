@@ -1,5 +1,9 @@
 #include "isolette_cpp_pkg/base_headers/operator_interface_oip_oit_base_src.hpp"
 
+//========================================================
+// Re-running Codegen will overwrite changes to this file
+//========================================================
+
 class operator_interface_oip_oit : public operator_interface_oip_oit_base
 {
 public:

@@ -72,7 +72,7 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
 
   /** Compute Entrypoint Contract
     *
-    * assumes Refer_to_state_var_in_periodic_general_assume
+    * assume Refer_to_state_var_in_periodic_general_assume
     * @param In_latestFanCmd pre-state state variable
     */
   @strictpure def compute_spec_Refer_to_state_var_in_periodic_general_assume_assume(
@@ -208,7 +208,7 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
       In_latestFanCmd: CoolingFan.FanCmd.Type,
       latestFanCmd: CoolingFan.FanCmd.Type): B =
     (In_latestFanCmd == CoolingFan.FanCmd.Off ||
-       In_latestFanCmd == CoolingFan.FanCmd.On) ___>:
+      In_latestFanCmd == CoolingFan.FanCmd.On) ___>:
       (latestFanCmd == CoolingFan.FanCmd.Off ||
          latestFanCmd == CoolingFan.FanCmd.On)
 
@@ -263,7 +263,7 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
       api_setPoint: TempControlSoftwareSystem.SetPoint_i,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
     (api_currentTemp.degrees >= api_setPoint.low.degrees &
-       api_currentTemp.degrees <= api_setPoint.high.degrees) ___>:
+      api_currentTemp.degrees <= api_setPoint.high.degrees) ___>:
       (latestFanCmd == In_latestFanCmd &
          api_fanCmd == latestFanCmd)
 
