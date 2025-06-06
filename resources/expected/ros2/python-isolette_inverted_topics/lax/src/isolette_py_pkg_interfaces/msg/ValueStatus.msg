@@ -1,0 +1,3 @@
+uint8 value_status
+uint8 VALUE_STATUS_VALID=0
+uint8 VALUE_STATUS_INVALID=1
