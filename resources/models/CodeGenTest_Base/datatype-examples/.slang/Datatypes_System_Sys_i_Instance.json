@@ -19,7 +19,7 @@
             "endLine" : 82,
             "endColumn" : 12,
             "offset" : 1494,
-            "length" : 1888
+            "length" : 1890
           }
         }
       },
@@ -88,7 +88,7 @@
                     "beginColumn" : 9,
                     "endLine" : 93,
                     "endColumn" : 61,
-                    "offset" : 3704,
+                    "offset" : 3706,
                     "length" : 52
                   }
                 }
@@ -160,7 +160,7 @@
                     "beginColumn" : 6,
                     "endLine" : 94,
                     "endColumn" : 58,
-                    "offset" : 3762,
+                    "offset" : 3764,
                     "length" : 52
                   }
                 }
@@ -232,7 +232,7 @@
                     "beginColumn" : 3,
                     "endLine" : 96,
                     "endColumn" : 51,
-                    "offset" : 3900,
+                    "offset" : 3902,
                     "length" : 48
                   }
                 }
@@ -304,7 +304,7 @@
                     "beginColumn" : 3,
                     "endLine" : 97,
                     "endColumn" : 59,
-                    "offset" : 3951,
+                    "offset" : 3953,
                     "length" : 56
                   }
                 }
@@ -376,7 +376,7 @@
                     "beginColumn" : 3,
                     "endLine" : 98,
                     "endColumn" : 53,
-                    "offset" : 4010,
+                    "offset" : 4012,
                     "length" : 50
                   }
                 }
@@ -448,7 +448,7 @@
                     "beginColumn" : 9,
                     "endLine" : 102,
                     "endColumn" : 60,
-                    "offset" : 4134,
+                    "offset" : 4136,
                     "length" : 51
                   }
                 }
@@ -586,7 +586,7 @@
                     "beginColumn" : 9,
                     "endLine" : 103,
                     "endColumn" : 62,
-                    "offset" : 4194,
+                    "offset" : 4196,
                     "length" : 53
                   }
                 }
@@ -724,7 +724,7 @@
                     "beginColumn" : 9,
                     "endLine" : 104,
                     "endColumn" : 62,
-                    "offset" : 4256,
+                    "offset" : 4258,
                     "length" : 53
                   }
                 }
@@ -862,7 +862,7 @@
                     "beginColumn" : 9,
                     "endLine" : 105,
                     "endColumn" : 62,
-                    "offset" : 4318,
+                    "offset" : 4320,
                     "length" : 53
                   }
                 }
@@ -1000,7 +1000,7 @@
                     "beginColumn" : 9,
                     "endLine" : 109,
                     "endColumn" : 62,
-                    "offset" : 4447,
+                    "offset" : 4449,
                     "length" : 53
                   }
                 }
@@ -1138,7 +1138,7 @@
                     "beginColumn" : 9,
                     "endLine" : 110,
                     "endColumn" : 64,
-                    "offset" : 4509,
+                    "offset" : 4511,
                     "length" : 55
                   }
                 }
@@ -1276,7 +1276,7 @@
                     "beginColumn" : 9,
                     "endLine" : 111,
                     "endColumn" : 64,
-                    "offset" : 4573,
+                    "offset" : 4575,
                     "length" : 55
                   }
                 }
@@ -1414,7 +1414,7 @@
                     "beginColumn" : 9,
                     "endLine" : 112,
                     "endColumn" : 64,
-                    "offset" : 4637,
+                    "offset" : 4639,
                     "length" : 55
                   }
                 }
@@ -1552,7 +1552,7 @@
                     "beginColumn" : 9,
                     "endLine" : 116,
                     "endColumn" : 62,
-                    "offset" : 4749,
+                    "offset" : 4751,
                     "length" : 53
                   }
                 }
@@ -1690,7 +1690,7 @@
                     "beginColumn" : 9,
                     "endLine" : 117,
                     "endColumn" : 62,
-                    "offset" : 4811,
+                    "offset" : 4813,
                     "length" : 53
                   }
                 }
@@ -1828,7 +1828,7 @@
                     "beginColumn" : 6,
                     "endLine" : 121,
                     "endColumn" : 52,
-                    "offset" : 4905,
+                    "offset" : 4907,
                     "length" : 46
                   }
                 }
@@ -1935,7 +1935,7 @@
                     "beginColumn" : 6,
                     "endLine" : 122,
                     "endColumn" : 58,
-                    "offset" : 4957,
+                    "offset" : 4959,
                     "length" : 52
                   }
                 }
@@ -2007,7 +2007,7 @@
                     "beginColumn" : 6,
                     "endLine" : 123,
                     "endColumn" : 62,
-                    "offset" : 5015,
+                    "offset" : 5017,
                     "length" : 56
                   }
                 }
@@ -2144,7 +2144,7 @@
                     "beginColumn" : 6,
                     "endLine" : 124,
                     "endColumn" : 65,
-                    "offset" : 5077,
+                    "offset" : 5079,
                     "length" : 59
                   }
                 }
@@ -2229,150 +2229,6 @@
                 }
               ],
               "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.18"
-            },
-            {
-              "type" : "FeatureEnd",
-              "identifier" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "producer", "myArray3"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 125,
-                    "beginColumn" : 6,
-                    "endLine" : 125,
-                    "endColumn" : 62,
-                    "offset" : 5142,
-                    "length" : 56
-                  }
-                }
-              },
-              "direction" : {
-                "type" : "Direction",
-                "value" : "Out"
-              },
-              "category" : {
-                "type" : "FeatureCategory",
-                "value" : "EventDataPort"
-              },
-              "classifier" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Classifier",
-                  "name" : "Datatypes::MyArrayTwoDim"
-                }
-              },
-              "properties" : [
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "producer", "myArray3", "Data_Model::Data_Representation"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 27,
-                        "beginColumn" : 4,
-                        "endLine" : 30,
-                        "endColumn" : 36,
-                        "offset" : 1165,
-                        "length" : 162
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ValueProp",
-                      "value" : "Array"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "producer", "myArray3", "Data_Model::Base_Type"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 6,
-                        "beginColumn" : 4,
-                        "endLine" : 6,
-                        "endColumn" : 73,
-                        "offset" : 163,
-                        "length" : 69
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ClassifierProp",
-                      "name" : "Base_Types::Integer"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "producer", "myArray3", "Data_Model::Dimension"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 39,
-                        "beginColumn" : 4,
-                        "endLine" : 39,
-                        "endColumn" : 97,
-                        "offset" : 1668,
-                        "length" : 93
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "UnitProp",
-                      "value" : "5.0",
-                      "unit" : {
-                        "type" : "None"
-                      }
-                    },
-                    {
-                      "type" : "UnitProp",
-                      "value" : "12.0",
-                      "unit" : {
-                        "type" : "None"
-                      }
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                }
-              ],
-              "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.19"
             }
           ],
           "subComponents" : [
@@ -2393,7 +2249,7 @@
                     "beginColumn" : 6,
                     "endLine" : 134,
                     "endColumn" : 37,
-                    "offset" : 5433,
+                    "offset" : 5437,
                     "length" : 31
                   }
                 }
@@ -2427,7 +2283,7 @@
                         "beginColumn" : 6,
                         "endLine" : 267,
                         "endColumn" : 58,
-                        "offset" : 10616,
+                        "offset" : 10626,
                         "length" : 52
                       }
                     }
@@ -2499,7 +2355,7 @@
                         "beginColumn" : 6,
                         "endLine" : 268,
                         "endColumn" : 58,
-                        "offset" : 10674,
+                        "offset" : 10684,
                         "length" : 52
                       }
                     }
@@ -2571,7 +2427,7 @@
                         "beginColumn" : 3,
                         "endLine" : 270,
                         "endColumn" : 51,
-                        "offset" : 10804,
+                        "offset" : 10814,
                         "length" : 48
                       }
                     }
@@ -2643,7 +2499,7 @@
                         "beginColumn" : 3,
                         "endLine" : 271,
                         "endColumn" : 59,
-                        "offset" : 10855,
+                        "offset" : 10865,
                         "length" : 56
                       }
                     }
@@ -2715,7 +2571,7 @@
                         "beginColumn" : 3,
                         "endLine" : 272,
                         "endColumn" : 53,
-                        "offset" : 10914,
+                        "offset" : 10924,
                         "length" : 50
                       }
                     }
@@ -2787,7 +2643,7 @@
                         "beginColumn" : 9,
                         "endLine" : 276,
                         "endColumn" : 60,
-                        "offset" : 11038,
+                        "offset" : 11048,
                         "length" : 51
                       }
                     }
@@ -2925,7 +2781,7 @@
                         "beginColumn" : 9,
                         "endLine" : 277,
                         "endColumn" : 62,
-                        "offset" : 11098,
+                        "offset" : 11108,
                         "length" : 53
                       }
                     }
@@ -3063,7 +2919,7 @@
                         "beginColumn" : 9,
                         "endLine" : 278,
                         "endColumn" : 62,
-                        "offset" : 11160,
+                        "offset" : 11170,
                         "length" : 53
                       }
                     }
@@ -3201,7 +3057,7 @@
                         "beginColumn" : 9,
                         "endLine" : 279,
                         "endColumn" : 62,
-                        "offset" : 11222,
+                        "offset" : 11232,
                         "length" : 53
                       }
                     }
@@ -3339,7 +3195,7 @@
                         "beginColumn" : 9,
                         "endLine" : 283,
                         "endColumn" : 62,
-                        "offset" : 11351,
+                        "offset" : 11361,
                         "length" : 53
                       }
                     }
@@ -3477,7 +3333,7 @@
                         "beginColumn" : 9,
                         "endLine" : 284,
                         "endColumn" : 64,
-                        "offset" : 11413,
+                        "offset" : 11423,
                         "length" : 55
                       }
                     }
@@ -3615,7 +3471,7 @@
                         "beginColumn" : 9,
                         "endLine" : 285,
                         "endColumn" : 64,
-                        "offset" : 11477,
+                        "offset" : 11487,
                         "length" : 55
                       }
                     }
@@ -3753,7 +3609,7 @@
                         "beginColumn" : 9,
                         "endLine" : 286,
                         "endColumn" : 64,
-                        "offset" : 11541,
+                        "offset" : 11551,
                         "length" : 55
                       }
                     }
@@ -3891,7 +3747,7 @@
                         "beginColumn" : 9,
                         "endLine" : 290,
                         "endColumn" : 62,
-                        "offset" : 11653,
+                        "offset" : 11663,
                         "length" : 53
                       }
                     }
@@ -4029,7 +3885,7 @@
                         "beginColumn" : 9,
                         "endLine" : 291,
                         "endColumn" : 62,
-                        "offset" : 11715,
+                        "offset" : 11725,
                         "length" : 53
                       }
                     }
@@ -4167,7 +4023,7 @@
                         "beginColumn" : 6,
                         "endLine" : 295,
                         "endColumn" : 52,
-                        "offset" : 11809,
+                        "offset" : 11819,
                         "length" : 46
                       }
                     }
@@ -4274,7 +4130,7 @@
                         "beginColumn" : 6,
                         "endLine" : 296,
                         "endColumn" : 58,
-                        "offset" : 11861,
+                        "offset" : 11871,
                         "length" : 52
                       }
                     }
@@ -4346,7 +4202,7 @@
                         "beginColumn" : 6,
                         "endLine" : 297,
                         "endColumn" : 62,
-                        "offset" : 11919,
+                        "offset" : 11929,
                         "length" : 56
                       }
                     }
@@ -4483,7 +4339,7 @@
                         "beginColumn" : 6,
                         "endLine" : 298,
                         "endColumn" : 65,
-                        "offset" : 11981,
+                        "offset" : 11991,
                         "length" : 59
                       }
                     }
@@ -4568,150 +4424,6 @@
                     }
                   ],
                   "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.18"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "producer", "producer", "myArray3"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                        },
-                        "beginLine" : 299,
-                        "beginColumn" : 6,
-                        "endLine" : 299,
-                        "endColumn" : 62,
-                        "offset" : 12046,
-                        "length" : 56
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "EventDataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Datatypes::MyArrayTwoDim"
-                    }
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Sys_i_Instance", "producer", "producer", "myArray3", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Array"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Sys_i_Instance", "producer", "producer", "myArray3", "Data_Model::Base_Type"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 6,
-                            "beginColumn" : 4,
-                            "endLine" : 6,
-                            "endColumn" : 73,
-                            "offset" : 163,
-                            "length" : 69
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ClassifierProp",
-                          "name" : "Base_Types::Integer"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Sys_i_Instance", "producer", "producer", "myArray3", "Data_Model::Dimension"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 39,
-                            "beginColumn" : 4,
-                            "endLine" : 39,
-                            "endColumn" : 97,
-                            "offset" : 1668,
-                            "length" : 93
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "UnitProp",
-                          "value" : "5.0",
-                          "unit" : {
-                            "type" : "None"
-                          }
-                        },
-                        {
-                          "type" : "UnitProp",
-                          "value" : "12.0",
-                          "unit" : {
-                            "type" : "None"
-                          }
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.19"
                 }
               ],
               "subComponents" : [
@@ -4842,7 +4554,7 @@
                     "beginColumn" : 9,
                     "endLine" : 139,
                     "endColumn" : 61,
-                    "offset" : 5539,
+                    "offset" : 5543,
                     "length" : 52
                   }
                 }
@@ -4865,7 +4577,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -4887,7 +4599,7 @@
                           "beginColumn" : 6,
                           "endLine" : 267,
                           "endColumn" : 58,
-                          "offset" : 10616,
+                          "offset" : 10626,
                           "length" : 52
                         }
                       }
@@ -4942,7 +4654,7 @@
                           "beginColumn" : 9,
                           "endLine" : 93,
                           "endColumn" : 61,
-                          "offset" : 3704,
+                          "offset" : 3706,
                           "length" : 52
                         }
                       }
@@ -4992,7 +4704,7 @@
                     "beginColumn" : 9,
                     "endLine" : 140,
                     "endColumn" : 61,
-                    "offset" : 5600,
+                    "offset" : 5604,
                     "length" : 52
                   }
                 }
@@ -5015,7 +4727,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -5037,7 +4749,7 @@
                           "beginColumn" : 6,
                           "endLine" : 268,
                           "endColumn" : 58,
-                          "offset" : 10674,
+                          "offset" : 10684,
                           "length" : 52
                         }
                       }
@@ -5092,7 +4804,7 @@
                           "beginColumn" : 6,
                           "endLine" : 94,
                           "endColumn" : 58,
-                          "offset" : 3762,
+                          "offset" : 3764,
                           "length" : 52
                         }
                       }
@@ -5142,7 +4854,7 @@
                     "beginColumn" : 9,
                     "endLine" : 142,
                     "endColumn" : 55,
-                    "offset" : 5725,
+                    "offset" : 5729,
                     "length" : 46
                   }
                 }
@@ -5165,7 +4877,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -5187,7 +4899,7 @@
                           "beginColumn" : 3,
                           "endLine" : 270,
                           "endColumn" : 51,
-                          "offset" : 10804,
+                          "offset" : 10814,
                           "length" : 48
                         }
                       }
@@ -5242,7 +4954,7 @@
                           "beginColumn" : 3,
                           "endLine" : 96,
                           "endColumn" : 51,
-                          "offset" : 3900,
+                          "offset" : 3902,
                           "length" : 48
                         }
                       }
@@ -5292,7 +5004,7 @@
                     "beginColumn" : 9,
                     "endLine" : 143,
                     "endColumn" : 67,
-                    "offset" : 5780,
+                    "offset" : 5784,
                     "length" : 58
                   }
                 }
@@ -5315,7 +5027,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -5337,7 +5049,7 @@
                           "beginColumn" : 3,
                           "endLine" : 271,
                           "endColumn" : 59,
-                          "offset" : 10855,
+                          "offset" : 10865,
                           "length" : 56
                         }
                       }
@@ -5392,7 +5104,7 @@
                           "beginColumn" : 3,
                           "endLine" : 97,
                           "endColumn" : 59,
-                          "offset" : 3951,
+                          "offset" : 3953,
                           "length" : 56
                         }
                       }
@@ -5442,7 +5154,7 @@
                     "beginColumn" : 9,
                     "endLine" : 144,
                     "endColumn" : 58,
-                    "offset" : 5847,
+                    "offset" : 5851,
                     "length" : 49
                   }
                 }
@@ -5465,7 +5177,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -5487,7 +5199,7 @@
                           "beginColumn" : 3,
                           "endLine" : 272,
                           "endColumn" : 53,
-                          "offset" : 10914,
+                          "offset" : 10924,
                           "length" : 50
                         }
                       }
@@ -5542,7 +5254,7 @@
                           "beginColumn" : 3,
                           "endLine" : 98,
                           "endColumn" : 53,
-                          "offset" : 4010,
+                          "offset" : 4012,
                           "length" : 50
                         }
                       }
@@ -5592,7 +5304,7 @@
                     "beginColumn" : 9,
                     "endLine" : 148,
                     "endColumn" : 52,
-                    "offset" : 5970,
+                    "offset" : 5974,
                     "length" : 43
                   }
                 }
@@ -5615,7 +5327,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -5637,7 +5349,7 @@
                           "beginColumn" : 9,
                           "endLine" : 276,
                           "endColumn" : 60,
-                          "offset" : 11038,
+                          "offset" : 11048,
                           "length" : 51
                         }
                       }
@@ -5692,7 +5404,7 @@
                           "beginColumn" : 9,
                           "endLine" : 102,
                           "endColumn" : 60,
-                          "offset" : 4134,
+                          "offset" : 4136,
                           "length" : 51
                         }
                       }
@@ -5742,7 +5454,7 @@
                     "beginColumn" : 9,
                     "endLine" : 149,
                     "endColumn" : 55,
-                    "offset" : 6022,
+                    "offset" : 6026,
                     "length" : 46
                   }
                 }
@@ -5765,7 +5477,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -5787,7 +5499,7 @@
                           "beginColumn" : 9,
                           "endLine" : 277,
                           "endColumn" : 62,
-                          "offset" : 11098,
+                          "offset" : 11108,
                           "length" : 53
                         }
                       }
@@ -5842,7 +5554,7 @@
                           "beginColumn" : 9,
                           "endLine" : 103,
                           "endColumn" : 62,
-                          "offset" : 4194,
+                          "offset" : 4196,
                           "length" : 53
                         }
                       }
@@ -5892,7 +5604,7 @@
                     "beginColumn" : 9,
                     "endLine" : 150,
                     "endColumn" : 55,
-                    "offset" : 6077,
+                    "offset" : 6081,
                     "length" : 46
                   }
                 }
@@ -5915,7 +5627,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -5937,7 +5649,7 @@
                           "beginColumn" : 9,
                           "endLine" : 278,
                           "endColumn" : 62,
-                          "offset" : 11160,
+                          "offset" : 11170,
                           "length" : 53
                         }
                       }
@@ -5992,7 +5704,7 @@
                           "beginColumn" : 9,
                           "endLine" : 104,
                           "endColumn" : 62,
-                          "offset" : 4256,
+                          "offset" : 4258,
                           "length" : 53
                         }
                       }
@@ -6042,7 +5754,7 @@
                     "beginColumn" : 9,
                     "endLine" : 151,
                     "endColumn" : 55,
-                    "offset" : 6132,
+                    "offset" : 6136,
                     "length" : 46
                   }
                 }
@@ -6065,7 +5777,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -6087,7 +5799,7 @@
                           "beginColumn" : 9,
                           "endLine" : 279,
                           "endColumn" : 62,
-                          "offset" : 11222,
+                          "offset" : 11232,
                           "length" : 53
                         }
                       }
@@ -6142,7 +5854,7 @@
                           "beginColumn" : 9,
                           "endLine" : 105,
                           "endColumn" : 62,
-                          "offset" : 4318,
+                          "offset" : 4320,
                           "length" : 53
                         }
                       }
@@ -6192,7 +5904,7 @@
                     "beginColumn" : 9,
                     "endLine" : 155,
                     "endColumn" : 55,
-                    "offset" : 6254,
+                    "offset" : 6258,
                     "length" : 46
                   }
                 }
@@ -6215,7 +5927,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -6237,7 +5949,7 @@
                           "beginColumn" : 9,
                           "endLine" : 283,
                           "endColumn" : 62,
-                          "offset" : 11351,
+                          "offset" : 11361,
                           "length" : 53
                         }
                       }
@@ -6292,7 +6004,7 @@
                           "beginColumn" : 9,
                           "endLine" : 109,
                           "endColumn" : 62,
-                          "offset" : 4447,
+                          "offset" : 4449,
                           "length" : 53
                         }
                       }
@@ -6342,7 +6054,7 @@
                     "beginColumn" : 9,
                     "endLine" : 156,
                     "endColumn" : 58,
-                    "offset" : 6309,
+                    "offset" : 6313,
                     "length" : 49
                   }
                 }
@@ -6365,7 +6077,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -6387,7 +6099,7 @@
                           "beginColumn" : 9,
                           "endLine" : 284,
                           "endColumn" : 64,
-                          "offset" : 11413,
+                          "offset" : 11423,
                           "length" : 55
                         }
                       }
@@ -6442,7 +6154,7 @@
                           "beginColumn" : 9,
                           "endLine" : 110,
                           "endColumn" : 64,
-                          "offset" : 4509,
+                          "offset" : 4511,
                           "length" : 55
                         }
                       }
@@ -6492,7 +6204,7 @@
                     "beginColumn" : 9,
                     "endLine" : 157,
                     "endColumn" : 58,
-                    "offset" : 6367,
+                    "offset" : 6371,
                     "length" : 49
                   }
                 }
@@ -6515,7 +6227,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -6537,7 +6249,7 @@
                           "beginColumn" : 9,
                           "endLine" : 285,
                           "endColumn" : 64,
-                          "offset" : 11477,
+                          "offset" : 11487,
                           "length" : 55
                         }
                       }
@@ -6592,7 +6304,7 @@
                           "beginColumn" : 9,
                           "endLine" : 111,
                           "endColumn" : 64,
-                          "offset" : 4573,
+                          "offset" : 4575,
                           "length" : 55
                         }
                       }
@@ -6642,7 +6354,7 @@
                     "beginColumn" : 9,
                     "endLine" : 158,
                     "endColumn" : 58,
-                    "offset" : 6425,
+                    "offset" : 6429,
                     "length" : 49
                   }
                 }
@@ -6665,7 +6377,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -6687,7 +6399,7 @@
                           "beginColumn" : 9,
                           "endLine" : 286,
                           "endColumn" : 64,
-                          "offset" : 11541,
+                          "offset" : 11551,
                           "length" : 55
                         }
                       }
@@ -6742,7 +6454,7 @@
                           "beginColumn" : 9,
                           "endLine" : 112,
                           "endColumn" : 64,
-                          "offset" : 4637,
+                          "offset" : 4639,
                           "length" : 55
                         }
                       }
@@ -6792,7 +6504,7 @@
                     "beginColumn" : 9,
                     "endLine" : 162,
                     "endColumn" : 61,
-                    "offset" : 6531,
+                    "offset" : 6535,
                     "length" : 52
                   }
                 }
@@ -6815,7 +6527,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -6837,7 +6549,7 @@
                           "beginColumn" : 9,
                           "endLine" : 290,
                           "endColumn" : 62,
-                          "offset" : 11653,
+                          "offset" : 11663,
                           "length" : 53
                         }
                       }
@@ -6892,7 +6604,7 @@
                           "beginColumn" : 9,
                           "endLine" : 116,
                           "endColumn" : 62,
-                          "offset" : 4749,
+                          "offset" : 4751,
                           "length" : 53
                         }
                       }
@@ -6942,7 +6654,7 @@
                     "beginColumn" : 9,
                     "endLine" : 163,
                     "endColumn" : 61,
-                    "offset" : 6592,
+                    "offset" : 6596,
                     "length" : 52
                   }
                 }
@@ -6965,7 +6677,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -6987,7 +6699,7 @@
                           "beginColumn" : 9,
                           "endLine" : 291,
                           "endColumn" : 62,
-                          "offset" : 11715,
+                          "offset" : 11725,
                           "length" : 53
                         }
                       }
@@ -7042,7 +6754,7 @@
                           "beginColumn" : 9,
                           "endLine" : 117,
                           "endColumn" : 62,
-                          "offset" : 4811,
+                          "offset" : 4813,
                           "length" : 53
                         }
                       }
@@ -7092,7 +6804,7 @@
                     "beginColumn" : 6,
                     "endLine" : 167,
                     "endColumn" : 49,
-                    "offset" : 6691,
+                    "offset" : 6695,
                     "length" : 43
                   }
                 }
@@ -7115,7 +6827,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -7137,7 +6849,7 @@
                           "beginColumn" : 6,
                           "endLine" : 295,
                           "endColumn" : 52,
-                          "offset" : 11809,
+                          "offset" : 11819,
                           "length" : 46
                         }
                       }
@@ -7192,7 +6904,7 @@
                           "beginColumn" : 6,
                           "endLine" : 121,
                           "endColumn" : 52,
-                          "offset" : 4905,
+                          "offset" : 4907,
                           "length" : 46
                         }
                       }
@@ -7242,7 +6954,7 @@
                     "beginColumn" : 6,
                     "endLine" : 168,
                     "endColumn" : 55,
-                    "offset" : 6740,
+                    "offset" : 6744,
                     "length" : 49
                   }
                 }
@@ -7265,7 +6977,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -7287,7 +6999,7 @@
                           "beginColumn" : 6,
                           "endLine" : 296,
                           "endColumn" : 58,
-                          "offset" : 11861,
+                          "offset" : 11871,
                           "length" : 52
                         }
                       }
@@ -7342,7 +7054,7 @@
                           "beginColumn" : 6,
                           "endLine" : 122,
                           "endColumn" : 58,
-                          "offset" : 4957,
+                          "offset" : 4959,
                           "length" : 52
                         }
                       }
@@ -7392,7 +7104,7 @@
                     "beginColumn" : 6,
                     "endLine" : 169,
                     "endColumn" : 55,
-                    "offset" : 6795,
+                    "offset" : 6799,
                     "length" : 49
                   }
                 }
@@ -7415,7 +7127,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -7437,7 +7149,7 @@
                           "beginColumn" : 6,
                           "endLine" : 297,
                           "endColumn" : 62,
-                          "offset" : 11919,
+                          "offset" : 11929,
                           "length" : 56
                         }
                       }
@@ -7492,7 +7204,7 @@
                           "beginColumn" : 6,
                           "endLine" : 123,
                           "endColumn" : 62,
-                          "offset" : 5015,
+                          "offset" : 5017,
                           "length" : 56
                         }
                       }
@@ -7542,7 +7254,7 @@
                     "beginColumn" : 6,
                     "endLine" : 170,
                     "endColumn" : 55,
-                    "offset" : 6850,
+                    "offset" : 6854,
                     "length" : 49
                   }
                 }
@@ -7565,7 +7277,7 @@
                         "beginColumn" : 6,
                         "endLine" : 134,
                         "endColumn" : 37,
-                        "offset" : 5433,
+                        "offset" : 5437,
                         "length" : 31
                       }
                     }
@@ -7587,7 +7299,7 @@
                           "beginColumn" : 6,
                           "endLine" : 298,
                           "endColumn" : 65,
-                          "offset" : 11981,
+                          "offset" : 11991,
                           "length" : 59
                         }
                       }
@@ -7642,7 +7354,7 @@
                           "beginColumn" : 6,
                           "endLine" : 124,
                           "endColumn" : 65,
-                          "offset" : 5077,
+                          "offset" : 5079,
                           "length" : 59
                         }
                       }
@@ -7674,156 +7386,6 @@
               "properties" : [
               ],
               "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.0"
-            },
-            {
-              "type" : "Connection",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "producer", "myArray3Conn"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 171,
-                    "beginColumn" : 6,
-                    "endLine" : 171,
-                    "endColumn" : 55,
-                    "offset" : 6905,
-                    "length" : 49
-                  }
-                }
-              },
-              "src" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "producer", "producer"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                        },
-                        "beginLine" : 134,
-                        "beginColumn" : 6,
-                        "endLine" : 134,
-                        "endColumn" : 37,
-                        "offset" : 5433,
-                        "length" : 31
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Sys_i_Instance", "producer", "producer", "myArray3"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                          },
-                          "beginLine" : 299,
-                          "beginColumn" : 6,
-                          "endLine" : 299,
-                          "endColumn" : 62,
-                          "offset" : 12046,
-                          "length" : 56
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "Out"
-                    }
-                  }
-                }
-              ],
-              "dst" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "producer"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                        },
-                        "beginLine" : 43,
-                        "beginColumn" : 6,
-                        "endLine" : 43,
-                        "endColumn" : 39,
-                        "offset" : 1620,
-                        "length" : 33
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Sys_i_Instance", "producer", "myArray3"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                          },
-                          "beginLine" : 125,
-                          "beginColumn" : 6,
-                          "endLine" : 125,
-                          "endColumn" : 62,
-                          "offset" : 5142,
-                          "length" : 56
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "Out"
-                    }
-                  }
-                }
-              ],
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "isBiDirectional" : false,
-              "connectionInstances" : [
-                {
-                  "type" : "Name",
-                  "name" : ["Sys_i_Instance", "producer", "producer", "myArray3 -> consumer", "consumer", "myArray3"],
-                  "pos" : {
-                    "type" : "None"
-                  }
-                }
-              ],
-              "properties" : [
-              ],
-              "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.0"
             }
           ],
           "connectionInstances" : [
@@ -7916,7 +7478,7 @@
                     "beginColumn" : 9,
                     "endLine" : 177,
                     "endColumn" : 60,
-                    "offset" : 7042,
+                    "offset" : 7048,
                     "length" : 51
                   }
                 }
@@ -7988,7 +7550,7 @@
                     "beginColumn" : 6,
                     "endLine" : 178,
                     "endColumn" : 57,
-                    "offset" : 7099,
+                    "offset" : 7105,
                     "length" : 51
                   }
                 }
@@ -8060,7 +7622,7 @@
                     "beginColumn" : 3,
                     "endLine" : 180,
                     "endColumn" : 52,
-                    "offset" : 7227,
+                    "offset" : 7233,
                     "length" : 49
                   }
                 }
@@ -8132,7 +7694,7 @@
                     "beginColumn" : 3,
                     "endLine" : 181,
                     "endColumn" : 58,
-                    "offset" : 7279,
+                    "offset" : 7285,
                     "length" : 55
                   }
                 }
@@ -8204,7 +7766,7 @@
                     "beginColumn" : 3,
                     "endLine" : 182,
                     "endColumn" : 52,
-                    "offset" : 7337,
+                    "offset" : 7343,
                     "length" : 49
                   }
                 }
@@ -8276,7 +7838,7 @@
                     "beginColumn" : 9,
                     "endLine" : 186,
                     "endColumn" : 59,
-                    "offset" : 7460,
+                    "offset" : 7466,
                     "length" : 50
                   }
                 }
@@ -8414,7 +7976,7 @@
                     "beginColumn" : 9,
                     "endLine" : 187,
                     "endColumn" : 61,
-                    "offset" : 7519,
+                    "offset" : 7525,
                     "length" : 52
                   }
                 }
@@ -8552,7 +8114,7 @@
                     "beginColumn" : 9,
                     "endLine" : 188,
                     "endColumn" : 61,
-                    "offset" : 7580,
+                    "offset" : 7586,
                     "length" : 52
                   }
                 }
@@ -8690,7 +8252,7 @@
                     "beginColumn" : 9,
                     "endLine" : 189,
                     "endColumn" : 61,
-                    "offset" : 7641,
+                    "offset" : 7647,
                     "length" : 52
                   }
                 }
@@ -8828,7 +8390,7 @@
                     "beginColumn" : 9,
                     "endLine" : 193,
                     "endColumn" : 61,
-                    "offset" : 7769,
+                    "offset" : 7775,
                     "length" : 52
                   }
                 }
@@ -8966,7 +8528,7 @@
                     "beginColumn" : 9,
                     "endLine" : 194,
                     "endColumn" : 63,
-                    "offset" : 7830,
+                    "offset" : 7836,
                     "length" : 54
                   }
                 }
@@ -9104,7 +8666,7 @@
                     "beginColumn" : 9,
                     "endLine" : 195,
                     "endColumn" : 63,
-                    "offset" : 7893,
+                    "offset" : 7899,
                     "length" : 54
                   }
                 }
@@ -9242,7 +8804,7 @@
                     "beginColumn" : 9,
                     "endLine" : 196,
                     "endColumn" : 63,
-                    "offset" : 7956,
+                    "offset" : 7962,
                     "length" : 54
                   }
                 }
@@ -9380,7 +8942,7 @@
                     "beginColumn" : 9,
                     "endLine" : 200,
                     "endColumn" : 61,
-                    "offset" : 8067,
+                    "offset" : 8073,
                     "length" : 52
                   }
                 }
@@ -9518,7 +9080,7 @@
                     "beginColumn" : 9,
                     "endLine" : 201,
                     "endColumn" : 61,
-                    "offset" : 8128,
+                    "offset" : 8134,
                     "length" : 52
                   }
                 }
@@ -9656,7 +9218,7 @@
                     "beginColumn" : 6,
                     "endLine" : 205,
                     "endColumn" : 51,
-                    "offset" : 8221,
+                    "offset" : 8227,
                     "length" : 45
                   }
                 }
@@ -9763,7 +9325,7 @@
                     "beginColumn" : 6,
                     "endLine" : 206,
                     "endColumn" : 57,
-                    "offset" : 8272,
+                    "offset" : 8278,
                     "length" : 51
                   }
                 }
@@ -9835,7 +9397,7 @@
                     "beginColumn" : 6,
                     "endLine" : 207,
                     "endColumn" : 61,
-                    "offset" : 8329,
+                    "offset" : 8335,
                     "length" : 55
                   }
                 }
@@ -9972,7 +9534,7 @@
                     "beginColumn" : 6,
                     "endLine" : 208,
                     "endColumn" : 64,
-                    "offset" : 8390,
+                    "offset" : 8396,
                     "length" : 58
                   }
                 }
@@ -10057,150 +9619,6 @@
                 }
               ],
               "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.18"
-            },
-            {
-              "type" : "FeatureEnd",
-              "identifier" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "consumer", "myArray3"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 209,
-                    "beginColumn" : 6,
-                    "endLine" : 209,
-                    "endColumn" : 61,
-                    "offset" : 8454,
-                    "length" : 55
-                  }
-                }
-              },
-              "direction" : {
-                "type" : "Direction",
-                "value" : "In"
-              },
-              "category" : {
-                "type" : "FeatureCategory",
-                "value" : "EventDataPort"
-              },
-              "classifier" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Classifier",
-                  "name" : "Datatypes::MyArrayTwoDim"
-                }
-              },
-              "properties" : [
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "consumer", "myArray3", "Data_Model::Data_Representation"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 27,
-                        "beginColumn" : 4,
-                        "endLine" : 30,
-                        "endColumn" : 36,
-                        "offset" : 1165,
-                        "length" : 162
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ValueProp",
-                      "value" : "Array"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "consumer", "myArray3", "Data_Model::Base_Type"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 6,
-                        "beginColumn" : 4,
-                        "endLine" : 6,
-                        "endColumn" : 73,
-                        "offset" : 163,
-                        "length" : 69
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "ClassifierProp",
-                      "name" : "Base_Types::Integer"
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "consumer", "myArray3", "Data_Model::Dimension"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                        },
-                        "beginLine" : 39,
-                        "beginColumn" : 4,
-                        "endLine" : 39,
-                        "endColumn" : 97,
-                        "offset" : 1668,
-                        "length" : 93
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "UnitProp",
-                      "value" : "5.0",
-                      "unit" : {
-                        "type" : "None"
-                      }
-                    },
-                    {
-                      "type" : "UnitProp",
-                      "value" : "12.0",
-                      "unit" : {
-                        "type" : "None"
-                      }
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                }
-              ],
-              "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.19"
             }
           ],
           "subComponents" : [
@@ -10221,7 +9639,7 @@
                     "beginColumn" : 5,
                     "endLine" : 218,
                     "endColumn" : 36,
-                    "offset" : 8744,
+                    "offset" : 8752,
                     "length" : 31
                   }
                 }
@@ -10255,7 +9673,7 @@
                         "beginColumn" : 9,
                         "endLine" : 311,
                         "endColumn" : 60,
-                        "offset" : 12316,
+                        "offset" : 12328,
                         "length" : 51
                       }
                     }
@@ -10327,7 +9745,7 @@
                         "beginColumn" : 6,
                         "endLine" : 312,
                         "endColumn" : 57,
-                        "offset" : 12373,
+                        "offset" : 12385,
                         "length" : 51
                       }
                     }
@@ -10399,7 +9817,7 @@
                         "beginColumn" : 3,
                         "endLine" : 314,
                         "endColumn" : 52,
-                        "offset" : 12501,
+                        "offset" : 12513,
                         "length" : 49
                       }
                     }
@@ -10471,7 +9889,7 @@
                         "beginColumn" : 3,
                         "endLine" : 315,
                         "endColumn" : 58,
-                        "offset" : 12553,
+                        "offset" : 12565,
                         "length" : 55
                       }
                     }
@@ -10543,7 +9961,7 @@
                         "beginColumn" : 3,
                         "endLine" : 316,
                         "endColumn" : 52,
-                        "offset" : 12611,
+                        "offset" : 12623,
                         "length" : 49
                       }
                     }
@@ -10615,7 +10033,7 @@
                         "beginColumn" : 9,
                         "endLine" : 320,
                         "endColumn" : 59,
-                        "offset" : 12734,
+                        "offset" : 12746,
                         "length" : 50
                       }
                     }
@@ -10753,7 +10171,7 @@
                         "beginColumn" : 9,
                         "endLine" : 321,
                         "endColumn" : 61,
-                        "offset" : 12793,
+                        "offset" : 12805,
                         "length" : 52
                       }
                     }
@@ -10891,7 +10309,7 @@
                         "beginColumn" : 9,
                         "endLine" : 322,
                         "endColumn" : 61,
-                        "offset" : 12854,
+                        "offset" : 12866,
                         "length" : 52
                       }
                     }
@@ -11029,7 +10447,7 @@
                         "beginColumn" : 9,
                         "endLine" : 323,
                         "endColumn" : 61,
-                        "offset" : 12915,
+                        "offset" : 12927,
                         "length" : 52
                       }
                     }
@@ -11167,7 +10585,7 @@
                         "beginColumn" : 9,
                         "endLine" : 327,
                         "endColumn" : 61,
-                        "offset" : 13043,
+                        "offset" : 13055,
                         "length" : 52
                       }
                     }
@@ -11305,7 +10723,7 @@
                         "beginColumn" : 9,
                         "endLine" : 328,
                         "endColumn" : 63,
-                        "offset" : 13104,
+                        "offset" : 13116,
                         "length" : 54
                       }
                     }
@@ -11443,7 +10861,7 @@
                         "beginColumn" : 9,
                         "endLine" : 329,
                         "endColumn" : 63,
-                        "offset" : 13167,
+                        "offset" : 13179,
                         "length" : 54
                       }
                     }
@@ -11581,7 +10999,7 @@
                         "beginColumn" : 9,
                         "endLine" : 330,
                         "endColumn" : 63,
-                        "offset" : 13230,
+                        "offset" : 13242,
                         "length" : 54
                       }
                     }
@@ -11719,7 +11137,7 @@
                         "beginColumn" : 9,
                         "endLine" : 334,
                         "endColumn" : 61,
-                        "offset" : 13341,
+                        "offset" : 13353,
                         "length" : 52
                       }
                     }
@@ -11857,7 +11275,7 @@
                         "beginColumn" : 9,
                         "endLine" : 335,
                         "endColumn" : 61,
-                        "offset" : 13402,
+                        "offset" : 13414,
                         "length" : 52
                       }
                     }
@@ -11995,7 +11413,7 @@
                         "beginColumn" : 6,
                         "endLine" : 339,
                         "endColumn" : 51,
-                        "offset" : 13495,
+                        "offset" : 13507,
                         "length" : 45
                       }
                     }
@@ -12102,7 +11520,7 @@
                         "beginColumn" : 6,
                         "endLine" : 340,
                         "endColumn" : 57,
-                        "offset" : 13546,
+                        "offset" : 13558,
                         "length" : 51
                       }
                     }
@@ -12174,7 +11592,7 @@
                         "beginColumn" : 6,
                         "endLine" : 341,
                         "endColumn" : 61,
-                        "offset" : 13603,
+                        "offset" : 13615,
                         "length" : 55
                       }
                     }
@@ -12311,7 +11729,7 @@
                         "beginColumn" : 6,
                         "endLine" : 342,
                         "endColumn" : 64,
-                        "offset" : 13664,
+                        "offset" : 13676,
                         "length" : 58
                       }
                     }
@@ -12396,150 +11814,6 @@
                     }
                   ],
                   "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.18"
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "consumer", "consumer", "myArray3"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                        },
-                        "beginLine" : 343,
-                        "beginColumn" : 6,
-                        "endLine" : 343,
-                        "endColumn" : 61,
-                        "offset" : 13728,
-                        "length" : 55
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "EventDataPort"
-                  },
-                  "classifier" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Classifier",
-                      "name" : "Datatypes::MyArrayTwoDim"
-                    }
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Sys_i_Instance", "consumer", "consumer", "myArray3", "Data_Model::Data_Representation"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 27,
-                            "beginColumn" : 4,
-                            "endLine" : 30,
-                            "endColumn" : 36,
-                            "offset" : 1165,
-                            "length" : 162
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ValueProp",
-                          "value" : "Array"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Sys_i_Instance", "consumer", "consumer", "myArray3", "Data_Model::Base_Type"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 6,
-                            "beginColumn" : 4,
-                            "endLine" : 6,
-                            "endColumn" : 73,
-                            "offset" : 163,
-                            "length" : 69
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "ClassifierProp",
-                          "name" : "Base_Types::Integer"
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    },
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Sys_i_Instance", "consumer", "consumer", "myArray3", "Data_Model::Dimension"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                            },
-                            "beginLine" : 39,
-                            "beginColumn" : 4,
-                            "endLine" : 39,
-                            "endColumn" : 97,
-                            "offset" : 1668,
-                            "length" : 93
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "UnitProp",
-                          "value" : "5.0",
-                          "unit" : {
-                            "type" : "None"
-                          }
-                        },
-                        {
-                          "type" : "UnitProp",
-                          "value" : "12.0",
-                          "unit" : {
-                            "type" : "None"
-                          }
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.19"
                 }
               ],
               "subComponents" : [
@@ -12670,7 +11944,7 @@
                     "beginColumn" : 9,
                     "endLine" : 223,
                     "endColumn" : 61,
-                    "offset" : 8849,
+                    "offset" : 8857,
                     "length" : 52
                   }
                 }
@@ -12715,7 +11989,7 @@
                           "beginColumn" : 9,
                           "endLine" : 177,
                           "endColumn" : 60,
-                          "offset" : 7042,
+                          "offset" : 7048,
                           "length" : 51
                         }
                       }
@@ -12748,7 +12022,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -12770,7 +12044,7 @@
                           "beginColumn" : 9,
                           "endLine" : 311,
                           "endColumn" : 60,
-                          "offset" : 12316,
+                          "offset" : 12328,
                           "length" : 51
                         }
                       }
@@ -12820,7 +12094,7 @@
                     "beginColumn" : 9,
                     "endLine" : 224,
                     "endColumn" : 61,
-                    "offset" : 8910,
+                    "offset" : 8918,
                     "length" : 52
                   }
                 }
@@ -12865,7 +12139,7 @@
                           "beginColumn" : 6,
                           "endLine" : 178,
                           "endColumn" : 57,
-                          "offset" : 7099,
+                          "offset" : 7105,
                           "length" : 51
                         }
                       }
@@ -12898,7 +12172,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -12920,7 +12194,7 @@
                           "beginColumn" : 6,
                           "endLine" : 312,
                           "endColumn" : 57,
-                          "offset" : 12373,
+                          "offset" : 12385,
                           "length" : 51
                         }
                       }
@@ -12970,7 +12244,7 @@
                     "beginColumn" : 9,
                     "endLine" : 226,
                     "endColumn" : 55,
-                    "offset" : 9052,
+                    "offset" : 9060,
                     "length" : 46
                   }
                 }
@@ -13015,7 +12289,7 @@
                           "beginColumn" : 3,
                           "endLine" : 180,
                           "endColumn" : 52,
-                          "offset" : 7227,
+                          "offset" : 7233,
                           "length" : 49
                         }
                       }
@@ -13048,7 +12322,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -13070,7 +12344,7 @@
                           "beginColumn" : 3,
                           "endLine" : 314,
                           "endColumn" : 52,
-                          "offset" : 12501,
+                          "offset" : 12513,
                           "length" : 49
                         }
                       }
@@ -13120,7 +12394,7 @@
                     "beginColumn" : 9,
                     "endLine" : 227,
                     "endColumn" : 67,
-                    "offset" : 9107,
+                    "offset" : 9115,
                     "length" : 58
                   }
                 }
@@ -13165,7 +12439,7 @@
                           "beginColumn" : 3,
                           "endLine" : 181,
                           "endColumn" : 58,
-                          "offset" : 7279,
+                          "offset" : 7285,
                           "length" : 55
                         }
                       }
@@ -13198,7 +12472,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -13220,7 +12494,7 @@
                           "beginColumn" : 3,
                           "endLine" : 315,
                           "endColumn" : 58,
-                          "offset" : 12553,
+                          "offset" : 12565,
                           "length" : 55
                         }
                       }
@@ -13270,7 +12544,7 @@
                     "beginColumn" : 9,
                     "endLine" : 228,
                     "endColumn" : 58,
-                    "offset" : 9174,
+                    "offset" : 9182,
                     "length" : 49
                   }
                 }
@@ -13315,7 +12589,7 @@
                           "beginColumn" : 3,
                           "endLine" : 182,
                           "endColumn" : 52,
-                          "offset" : 7337,
+                          "offset" : 7343,
                           "length" : 49
                         }
                       }
@@ -13348,7 +12622,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -13370,7 +12644,7 @@
                           "beginColumn" : 3,
                           "endLine" : 316,
                           "endColumn" : 52,
-                          "offset" : 12611,
+                          "offset" : 12623,
                           "length" : 49
                         }
                       }
@@ -13420,7 +12694,7 @@
                     "beginColumn" : 9,
                     "endLine" : 232,
                     "endColumn" : 52,
-                    "offset" : 9297,
+                    "offset" : 9305,
                     "length" : 43
                   }
                 }
@@ -13465,7 +12739,7 @@
                           "beginColumn" : 9,
                           "endLine" : 186,
                           "endColumn" : 59,
-                          "offset" : 7460,
+                          "offset" : 7466,
                           "length" : 50
                         }
                       }
@@ -13498,7 +12772,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -13520,7 +12794,7 @@
                           "beginColumn" : 9,
                           "endLine" : 320,
                           "endColumn" : 59,
-                          "offset" : 12734,
+                          "offset" : 12746,
                           "length" : 50
                         }
                       }
@@ -13570,7 +12844,7 @@
                     "beginColumn" : 9,
                     "endLine" : 233,
                     "endColumn" : 55,
-                    "offset" : 9349,
+                    "offset" : 9357,
                     "length" : 46
                   }
                 }
@@ -13615,7 +12889,7 @@
                           "beginColumn" : 9,
                           "endLine" : 187,
                           "endColumn" : 61,
-                          "offset" : 7519,
+                          "offset" : 7525,
                           "length" : 52
                         }
                       }
@@ -13648,7 +12922,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -13670,7 +12944,7 @@
                           "beginColumn" : 9,
                           "endLine" : 321,
                           "endColumn" : 61,
-                          "offset" : 12793,
+                          "offset" : 12805,
                           "length" : 52
                         }
                       }
@@ -13720,7 +12994,7 @@
                     "beginColumn" : 9,
                     "endLine" : 234,
                     "endColumn" : 55,
-                    "offset" : 9404,
+                    "offset" : 9412,
                     "length" : 46
                   }
                 }
@@ -13765,7 +13039,7 @@
                           "beginColumn" : 9,
                           "endLine" : 188,
                           "endColumn" : 61,
-                          "offset" : 7580,
+                          "offset" : 7586,
                           "length" : 52
                         }
                       }
@@ -13798,7 +13072,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -13820,7 +13094,7 @@
                           "beginColumn" : 9,
                           "endLine" : 322,
                           "endColumn" : 61,
-                          "offset" : 12854,
+                          "offset" : 12866,
                           "length" : 52
                         }
                       }
@@ -13870,7 +13144,7 @@
                     "beginColumn" : 9,
                     "endLine" : 235,
                     "endColumn" : 55,
-                    "offset" : 9459,
+                    "offset" : 9467,
                     "length" : 46
                   }
                 }
@@ -13915,7 +13189,7 @@
                           "beginColumn" : 9,
                           "endLine" : 189,
                           "endColumn" : 61,
-                          "offset" : 7641,
+                          "offset" : 7647,
                           "length" : 52
                         }
                       }
@@ -13948,7 +13222,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -13970,7 +13244,7 @@
                           "beginColumn" : 9,
                           "endLine" : 323,
                           "endColumn" : 61,
-                          "offset" : 12915,
+                          "offset" : 12927,
                           "length" : 52
                         }
                       }
@@ -14020,7 +13294,7 @@
                     "beginColumn" : 9,
                     "endLine" : 239,
                     "endColumn" : 55,
-                    "offset" : 9581,
+                    "offset" : 9589,
                     "length" : 46
                   }
                 }
@@ -14065,7 +13339,7 @@
                           "beginColumn" : 9,
                           "endLine" : 193,
                           "endColumn" : 61,
-                          "offset" : 7769,
+                          "offset" : 7775,
                           "length" : 52
                         }
                       }
@@ -14098,7 +13372,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -14120,7 +13394,7 @@
                           "beginColumn" : 9,
                           "endLine" : 327,
                           "endColumn" : 61,
-                          "offset" : 13043,
+                          "offset" : 13055,
                           "length" : 52
                         }
                       }
@@ -14170,7 +13444,7 @@
                     "beginColumn" : 9,
                     "endLine" : 240,
                     "endColumn" : 58,
-                    "offset" : 9636,
+                    "offset" : 9644,
                     "length" : 49
                   }
                 }
@@ -14215,7 +13489,7 @@
                           "beginColumn" : 9,
                           "endLine" : 194,
                           "endColumn" : 63,
-                          "offset" : 7830,
+                          "offset" : 7836,
                           "length" : 54
                         }
                       }
@@ -14248,7 +13522,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -14270,7 +13544,7 @@
                           "beginColumn" : 9,
                           "endLine" : 328,
                           "endColumn" : 63,
-                          "offset" : 13104,
+                          "offset" : 13116,
                           "length" : 54
                         }
                       }
@@ -14320,7 +13594,7 @@
                     "beginColumn" : 9,
                     "endLine" : 241,
                     "endColumn" : 58,
-                    "offset" : 9694,
+                    "offset" : 9702,
                     "length" : 49
                   }
                 }
@@ -14365,7 +13639,7 @@
                           "beginColumn" : 9,
                           "endLine" : 195,
                           "endColumn" : 63,
-                          "offset" : 7893,
+                          "offset" : 7899,
                           "length" : 54
                         }
                       }
@@ -14398,7 +13672,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -14420,7 +13694,7 @@
                           "beginColumn" : 9,
                           "endLine" : 329,
                           "endColumn" : 63,
-                          "offset" : 13167,
+                          "offset" : 13179,
                           "length" : 54
                         }
                       }
@@ -14470,7 +13744,7 @@
                     "beginColumn" : 9,
                     "endLine" : 242,
                     "endColumn" : 58,
-                    "offset" : 9752,
+                    "offset" : 9760,
                     "length" : 49
                   }
                 }
@@ -14515,7 +13789,7 @@
                           "beginColumn" : 9,
                           "endLine" : 196,
                           "endColumn" : 63,
-                          "offset" : 7956,
+                          "offset" : 7962,
                           "length" : 54
                         }
                       }
@@ -14548,7 +13822,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -14570,7 +13844,7 @@
                           "beginColumn" : 9,
                           "endLine" : 330,
                           "endColumn" : 63,
-                          "offset" : 13230,
+                          "offset" : 13242,
                           "length" : 54
                         }
                       }
@@ -14620,7 +13894,7 @@
                     "beginColumn" : 9,
                     "endLine" : 246,
                     "endColumn" : 61,
-                    "offset" : 9858,
+                    "offset" : 9866,
                     "length" : 52
                   }
                 }
@@ -14665,7 +13939,7 @@
                           "beginColumn" : 9,
                           "endLine" : 200,
                           "endColumn" : 61,
-                          "offset" : 8067,
+                          "offset" : 8073,
                           "length" : 52
                         }
                       }
@@ -14698,7 +13972,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -14720,7 +13994,7 @@
                           "beginColumn" : 9,
                           "endLine" : 334,
                           "endColumn" : 61,
-                          "offset" : 13341,
+                          "offset" : 13353,
                           "length" : 52
                         }
                       }
@@ -14770,7 +14044,7 @@
                     "beginColumn" : 9,
                     "endLine" : 247,
                     "endColumn" : 61,
-                    "offset" : 9919,
+                    "offset" : 9927,
                     "length" : 52
                   }
                 }
@@ -14815,7 +14089,7 @@
                           "beginColumn" : 9,
                           "endLine" : 201,
                           "endColumn" : 61,
-                          "offset" : 8128,
+                          "offset" : 8134,
                           "length" : 52
                         }
                       }
@@ -14848,7 +14122,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -14870,7 +14144,7 @@
                           "beginColumn" : 9,
                           "endLine" : 335,
                           "endColumn" : 61,
-                          "offset" : 13402,
+                          "offset" : 13414,
                           "length" : 52
                         }
                       }
@@ -14920,7 +14194,7 @@
                     "beginColumn" : 6,
                     "endLine" : 251,
                     "endColumn" : 49,
-                    "offset" : 10018,
+                    "offset" : 10026,
                     "length" : 43
                   }
                 }
@@ -14965,7 +14239,7 @@
                           "beginColumn" : 6,
                           "endLine" : 205,
                           "endColumn" : 51,
-                          "offset" : 8221,
+                          "offset" : 8227,
                           "length" : 45
                         }
                       }
@@ -14998,7 +14272,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -15020,7 +14294,7 @@
                           "beginColumn" : 6,
                           "endLine" : 339,
                           "endColumn" : 51,
-                          "offset" : 13495,
+                          "offset" : 13507,
                           "length" : 45
                         }
                       }
@@ -15070,7 +14344,7 @@
                     "beginColumn" : 6,
                     "endLine" : 252,
                     "endColumn" : 55,
-                    "offset" : 10067,
+                    "offset" : 10075,
                     "length" : 49
                   }
                 }
@@ -15115,7 +14389,7 @@
                           "beginColumn" : 6,
                           "endLine" : 206,
                           "endColumn" : 57,
-                          "offset" : 8272,
+                          "offset" : 8278,
                           "length" : 51
                         }
                       }
@@ -15148,7 +14422,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -15170,7 +14444,7 @@
                           "beginColumn" : 6,
                           "endLine" : 340,
                           "endColumn" : 57,
-                          "offset" : 13546,
+                          "offset" : 13558,
                           "length" : 51
                         }
                       }
@@ -15220,7 +14494,7 @@
                     "beginColumn" : 6,
                     "endLine" : 253,
                     "endColumn" : 55,
-                    "offset" : 10122,
+                    "offset" : 10130,
                     "length" : 49
                   }
                 }
@@ -15265,7 +14539,7 @@
                           "beginColumn" : 6,
                           "endLine" : 207,
                           "endColumn" : 61,
-                          "offset" : 8329,
+                          "offset" : 8335,
                           "length" : 55
                         }
                       }
@@ -15298,7 +14572,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -15320,7 +14594,7 @@
                           "beginColumn" : 6,
                           "endLine" : 341,
                           "endColumn" : 61,
-                          "offset" : 13603,
+                          "offset" : 13615,
                           "length" : 55
                         }
                       }
@@ -15370,7 +14644,7 @@
                     "beginColumn" : 6,
                     "endLine" : 254,
                     "endColumn" : 55,
-                    "offset" : 10177,
+                    "offset" : 10185,
                     "length" : 49
                   }
                 }
@@ -15415,7 +14689,7 @@
                           "beginColumn" : 6,
                           "endLine" : 208,
                           "endColumn" : 64,
-                          "offset" : 8390,
+                          "offset" : 8396,
                           "length" : 58
                         }
                       }
@@ -15448,7 +14722,7 @@
                         "beginColumn" : 5,
                         "endLine" : 218,
                         "endColumn" : 36,
-                        "offset" : 8744,
+                        "offset" : 8752,
                         "length" : 31
                       }
                     }
@@ -15470,7 +14744,7 @@
                           "beginColumn" : 6,
                           "endLine" : 342,
                           "endColumn" : 64,
-                          "offset" : 13664,
+                          "offset" : 13676,
                           "length" : 58
                         }
                       }
@@ -15502,156 +14776,6 @@
               "properties" : [
               ],
               "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.2"
-            },
-            {
-              "type" : "Connection",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "consumer", "myArray3Conn"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 255,
-                    "beginColumn" : 6,
-                    "endLine" : 255,
-                    "endColumn" : 55,
-                    "offset" : 10232,
-                    "length" : 49
-                  }
-                }
-              },
-              "src" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "consumer"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                        },
-                        "beginLine" : 44,
-                        "beginColumn" : 6,
-                        "endLine" : 44,
-                        "endColumn" : 39,
-                        "offset" : 1659,
-                        "length" : 33
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Sys_i_Instance", "consumer", "myArray3"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                          },
-                          "beginLine" : 209,
-                          "beginColumn" : 6,
-                          "endLine" : 209,
-                          "endColumn" : 61,
-                          "offset" : 8454,
-                          "length" : 55
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "In"
-                    }
-                  }
-                }
-              ],
-              "dst" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["Sys_i_Instance", "consumer", "consumer"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                        },
-                        "beginLine" : 218,
-                        "beginColumn" : 5,
-                        "endLine" : 218,
-                        "endColumn" : 36,
-                        "offset" : 8744,
-                        "length" : 31
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["Sys_i_Instance", "consumer", "consumer", "myArray3"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                          },
-                          "beginLine" : 343,
-                          "beginColumn" : 6,
-                          "endLine" : 343,
-                          "endColumn" : 61,
-                          "offset" : 13728,
-                          "length" : 55
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "In"
-                    }
-                  }
-                }
-              ],
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "isBiDirectional" : false,
-              "connectionInstances" : [
-                {
-                  "type" : "Name",
-                  "name" : ["Sys_i_Instance", "producer", "producer", "myArray3 -> consumer", "consumer", "myArray3"],
-                  "pos" : {
-                    "type" : "None"
-                  }
-                }
-              ],
-              "properties" : [
-              ],
-              "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.2"
             }
           ],
           "connectionInstances" : [
@@ -15757,7 +14881,7 @@
                       "beginColumn" : 9,
                       "endLine" : 93,
                       "endColumn" : 61,
-                      "offset" : 3704,
+                      "offset" : 3706,
                       "length" : 52
                     }
                   }
@@ -15812,7 +14936,7 @@
                       "beginColumn" : 9,
                       "endLine" : 177,
                       "endColumn" : 60,
-                      "offset" : 7042,
+                      "offset" : 7048,
                       "length" : 51
                     }
                   }
@@ -15907,7 +15031,7 @@
                       "beginColumn" : 6,
                       "endLine" : 94,
                       "endColumn" : 58,
-                      "offset" : 3762,
+                      "offset" : 3764,
                       "length" : 52
                     }
                   }
@@ -15962,7 +15086,7 @@
                       "beginColumn" : 6,
                       "endLine" : 178,
                       "endColumn" : 57,
-                      "offset" : 7099,
+                      "offset" : 7105,
                       "length" : 51
                     }
                   }
@@ -16057,7 +15181,7 @@
                       "beginColumn" : 3,
                       "endLine" : 96,
                       "endColumn" : 51,
-                      "offset" : 3900,
+                      "offset" : 3902,
                       "length" : 48
                     }
                   }
@@ -16112,7 +15236,7 @@
                       "beginColumn" : 3,
                       "endLine" : 180,
                       "endColumn" : 52,
-                      "offset" : 7227,
+                      "offset" : 7233,
                       "length" : 49
                     }
                   }
@@ -16207,7 +15331,7 @@
                       "beginColumn" : 3,
                       "endLine" : 97,
                       "endColumn" : 59,
-                      "offset" : 3951,
+                      "offset" : 3953,
                       "length" : 56
                     }
                   }
@@ -16262,7 +15386,7 @@
                       "beginColumn" : 3,
                       "endLine" : 181,
                       "endColumn" : 58,
-                      "offset" : 7279,
+                      "offset" : 7285,
                       "length" : 55
                     }
                   }
@@ -16357,7 +15481,7 @@
                       "beginColumn" : 3,
                       "endLine" : 98,
                       "endColumn" : 53,
-                      "offset" : 4010,
+                      "offset" : 4012,
                       "length" : 50
                     }
                   }
@@ -16412,7 +15536,7 @@
                       "beginColumn" : 3,
                       "endLine" : 182,
                       "endColumn" : 52,
-                      "offset" : 7337,
+                      "offset" : 7343,
                       "length" : 49
                     }
                   }
@@ -16507,7 +15631,7 @@
                       "beginColumn" : 9,
                       "endLine" : 102,
                       "endColumn" : 60,
-                      "offset" : 4134,
+                      "offset" : 4136,
                       "length" : 51
                     }
                   }
@@ -16562,7 +15686,7 @@
                       "beginColumn" : 9,
                       "endLine" : 186,
                       "endColumn" : 59,
-                      "offset" : 7460,
+                      "offset" : 7466,
                       "length" : 50
                     }
                   }
@@ -16657,7 +15781,7 @@
                       "beginColumn" : 9,
                       "endLine" : 103,
                       "endColumn" : 62,
-                      "offset" : 4194,
+                      "offset" : 4196,
                       "length" : 53
                     }
                   }
@@ -16712,7 +15836,7 @@
                       "beginColumn" : 9,
                       "endLine" : 187,
                       "endColumn" : 61,
-                      "offset" : 7519,
+                      "offset" : 7525,
                       "length" : 52
                     }
                   }
@@ -16807,7 +15931,7 @@
                       "beginColumn" : 9,
                       "endLine" : 104,
                       "endColumn" : 62,
-                      "offset" : 4256,
+                      "offset" : 4258,
                       "length" : 53
                     }
                   }
@@ -16862,7 +15986,7 @@
                       "beginColumn" : 9,
                       "endLine" : 188,
                       "endColumn" : 61,
-                      "offset" : 7580,
+                      "offset" : 7586,
                       "length" : 52
                     }
                   }
@@ -16957,7 +16081,7 @@
                       "beginColumn" : 9,
                       "endLine" : 105,
                       "endColumn" : 62,
-                      "offset" : 4318,
+                      "offset" : 4320,
                       "length" : 53
                     }
                   }
@@ -17012,7 +16136,7 @@
                       "beginColumn" : 9,
                       "endLine" : 189,
                       "endColumn" : 61,
-                      "offset" : 7641,
+                      "offset" : 7647,
                       "length" : 52
                     }
                   }
@@ -17107,7 +16231,7 @@
                       "beginColumn" : 9,
                       "endLine" : 109,
                       "endColumn" : 62,
-                      "offset" : 4447,
+                      "offset" : 4449,
                       "length" : 53
                     }
                   }
@@ -17162,7 +16286,7 @@
                       "beginColumn" : 9,
                       "endLine" : 193,
                       "endColumn" : 61,
-                      "offset" : 7769,
+                      "offset" : 7775,
                       "length" : 52
                     }
                   }
@@ -17257,7 +16381,7 @@
                       "beginColumn" : 9,
                       "endLine" : 110,
                       "endColumn" : 64,
-                      "offset" : 4509,
+                      "offset" : 4511,
                       "length" : 55
                     }
                   }
@@ -17312,7 +16436,7 @@
                       "beginColumn" : 9,
                       "endLine" : 194,
                       "endColumn" : 63,
-                      "offset" : 7830,
+                      "offset" : 7836,
                       "length" : 54
                     }
                   }
@@ -17407,7 +16531,7 @@
                       "beginColumn" : 9,
                       "endLine" : 111,
                       "endColumn" : 64,
-                      "offset" : 4573,
+                      "offset" : 4575,
                       "length" : 55
                     }
                   }
@@ -17462,7 +16586,7 @@
                       "beginColumn" : 9,
                       "endLine" : 195,
                       "endColumn" : 63,
-                      "offset" : 7893,
+                      "offset" : 7899,
                       "length" : 54
                     }
                   }
@@ -17557,7 +16681,7 @@
                       "beginColumn" : 9,
                       "endLine" : 112,
                       "endColumn" : 64,
-                      "offset" : 4637,
+                      "offset" : 4639,
                       "length" : 55
                     }
                   }
@@ -17612,7 +16736,7 @@
                       "beginColumn" : 9,
                       "endLine" : 196,
                       "endColumn" : 63,
-                      "offset" : 7956,
+                      "offset" : 7962,
                       "length" : 54
                     }
                   }
@@ -17707,7 +16831,7 @@
                       "beginColumn" : 9,
                       "endLine" : 116,
                       "endColumn" : 62,
-                      "offset" : 4749,
+                      "offset" : 4751,
                       "length" : 53
                     }
                   }
@@ -17762,7 +16886,7 @@
                       "beginColumn" : 9,
                       "endLine" : 200,
                       "endColumn" : 61,
-                      "offset" : 8067,
+                      "offset" : 8073,
                       "length" : 52
                     }
                   }
@@ -17857,7 +16981,7 @@
                       "beginColumn" : 9,
                       "endLine" : 117,
                       "endColumn" : 62,
-                      "offset" : 4811,
+                      "offset" : 4813,
                       "length" : 53
                     }
                   }
@@ -17912,7 +17036,7 @@
                       "beginColumn" : 9,
                       "endLine" : 201,
                       "endColumn" : 61,
-                      "offset" : 8128,
+                      "offset" : 8134,
                       "length" : 52
                     }
                   }
@@ -18007,7 +17131,7 @@
                       "beginColumn" : 6,
                       "endLine" : 121,
                       "endColumn" : 52,
-                      "offset" : 4905,
+                      "offset" : 4907,
                       "length" : 46
                     }
                   }
@@ -18062,7 +17186,7 @@
                       "beginColumn" : 6,
                       "endLine" : 205,
                       "endColumn" : 51,
-                      "offset" : 8221,
+                      "offset" : 8227,
                       "length" : 45
                     }
                   }
@@ -18157,7 +17281,7 @@
                       "beginColumn" : 6,
                       "endLine" : 122,
                       "endColumn" : 58,
-                      "offset" : 4957,
+                      "offset" : 4959,
                       "length" : 52
                     }
                   }
@@ -18212,7 +17336,7 @@
                       "beginColumn" : 6,
                       "endLine" : 206,
                       "endColumn" : 57,
-                      "offset" : 8272,
+                      "offset" : 8278,
                       "length" : 51
                     }
                   }
@@ -18307,7 +17431,7 @@
                       "beginColumn" : 6,
                       "endLine" : 123,
                       "endColumn" : 62,
-                      "offset" : 5015,
+                      "offset" : 5017,
                       "length" : 56
                     }
                   }
@@ -18362,7 +17486,7 @@
                       "beginColumn" : 6,
                       "endLine" : 207,
                       "endColumn" : 61,
-                      "offset" : 8329,
+                      "offset" : 8335,
                       "length" : 55
                     }
                   }
@@ -18457,7 +17581,7 @@
                       "beginColumn" : 6,
                       "endLine" : 124,
                       "endColumn" : 65,
-                      "offset" : 5077,
+                      "offset" : 5079,
                       "length" : 59
                     }
                   }
@@ -18512,7 +17636,7 @@
                       "beginColumn" : 6,
                       "endLine" : 208,
                       "endColumn" : 64,
-                      "offset" : 8390,
+                      "offset" : 8396,
                       "length" : 58
                     }
                   }
@@ -18544,156 +17668,6 @@
           "properties" : [
           ],
           "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@connectionInstance.18\/@connectionReference.1"
-        },
-        {
-          "type" : "Connection",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Sys_i_Instance", "myArray3Conn"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                },
-                "beginLine" : 81,
-                "beginColumn" : 6,
-                "endLine" : 81,
-                "endColumn" : 64,
-                "offset" : 3312,
-                "length" : 58
-              }
-            }
-          },
-          "src" : [
-            {
-              "type" : "EndPoint",
-              "component" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "producer"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 43,
-                    "beginColumn" : 6,
-                    "endLine" : 43,
-                    "endColumn" : 39,
-                    "offset" : 1620,
-                    "length" : 33
-                  }
-                }
-              },
-              "feature" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Name",
-                  "name" : ["Sys_i_Instance", "producer", "myArray3"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                      },
-                      "beginLine" : 125,
-                      "beginColumn" : 6,
-                      "endLine" : 125,
-                      "endColumn" : 62,
-                      "offset" : 5142,
-                      "length" : 56
-                    }
-                  }
-                }
-              },
-              "direction" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Direction",
-                  "value" : "Out"
-                }
-              }
-            }
-          ],
-          "dst" : [
-            {
-              "type" : "EndPoint",
-              "component" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "consumer"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 44,
-                    "beginColumn" : 6,
-                    "endLine" : 44,
-                    "endColumn" : 39,
-                    "offset" : 1659,
-                    "length" : 33
-                  }
-                }
-              },
-              "feature" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Name",
-                  "name" : ["Sys_i_Instance", "consumer", "myArray3"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                      },
-                      "beginLine" : 209,
-                      "beginColumn" : 6,
-                      "endLine" : 209,
-                      "endColumn" : 61,
-                      "offset" : 8454,
-                      "length" : 55
-                    }
-                  }
-                }
-              },
-              "direction" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Direction",
-                  "value" : "In"
-                }
-              }
-            }
-          ],
-          "kind" : {
-            "type" : "ConnectionKind",
-            "value" : "Port"
-          },
-          "isBiDirectional" : false,
-          "connectionInstances" : [
-            {
-              "type" : "Name",
-              "name" : ["Sys_i_Instance", "producer", "producer", "myArray3 -> consumer", "consumer", "myArray3"],
-              "pos" : {
-                "type" : "None"
-              }
-            }
-          ],
-          "properties" : [
-          ],
-          "uriFrag" : "platform:\/resource\/datatype-examples\/instances\/Datatypes_System_Sys_i_Instance.aaxl2#\/0\/@connectionInstance.19\/@connectionReference.1"
         }
       ],
       "connectionInstances" : [
@@ -18714,7 +17688,7 @@
                 "beginColumn" : 9,
                 "endLine" : 139,
                 "endColumn" : 61,
-                "offset" : 5539,
+                "offset" : 5543,
                 "length" : 52
               }
             }
@@ -18736,7 +17710,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -18758,7 +17732,7 @@
                     "beginColumn" : 6,
                     "endLine" : 267,
                     "endColumn" : 58,
-                    "offset" : 10616,
+                    "offset" : 10626,
                     "length" : 52
                   }
                 }
@@ -18789,7 +17763,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -18811,7 +17785,7 @@
                     "beginColumn" : 9,
                     "endLine" : 311,
                     "endColumn" : 60,
-                    "offset" : 12316,
+                    "offset" : 12328,
                     "length" : 51
                   }
                 }
@@ -18847,7 +17821,7 @@
                     "beginColumn" : 9,
                     "endLine" : 139,
                     "endColumn" : 61,
-                    "offset" : 5539,
+                    "offset" : 5543,
                     "length" : 52
                   }
                 }
@@ -18912,7 +17886,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -18935,7 +17909,7 @@
                     "beginColumn" : 9,
                     "endLine" : 223,
                     "endColumn" : 61,
-                    "offset" : 8849,
+                    "offset" : 8857,
                     "length" : 52
                   }
                 }
@@ -18983,7 +17957,7 @@
                 "beginColumn" : 9,
                 "endLine" : 140,
                 "endColumn" : 61,
-                "offset" : 5600,
+                "offset" : 5604,
                 "length" : 52
               }
             }
@@ -19005,7 +17979,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -19027,7 +18001,7 @@
                     "beginColumn" : 6,
                     "endLine" : 268,
                     "endColumn" : 58,
-                    "offset" : 10674,
+                    "offset" : 10684,
                     "length" : 52
                   }
                 }
@@ -19058,7 +18032,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -19080,7 +18054,7 @@
                     "beginColumn" : 6,
                     "endLine" : 312,
                     "endColumn" : 57,
-                    "offset" : 12373,
+                    "offset" : 12385,
                     "length" : 51
                   }
                 }
@@ -19116,7 +18090,7 @@
                     "beginColumn" : 9,
                     "endLine" : 140,
                     "endColumn" : 61,
-                    "offset" : 5600,
+                    "offset" : 5604,
                     "length" : 52
                   }
                 }
@@ -19181,7 +18155,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -19204,7 +18178,7 @@
                     "beginColumn" : 9,
                     "endLine" : 224,
                     "endColumn" : 61,
-                    "offset" : 8910,
+                    "offset" : 8918,
                     "length" : 52
                   }
                 }
@@ -19252,7 +18226,7 @@
                 "beginColumn" : 9,
                 "endLine" : 142,
                 "endColumn" : 55,
-                "offset" : 5725,
+                "offset" : 5729,
                 "length" : 46
               }
             }
@@ -19274,7 +18248,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -19296,7 +18270,7 @@
                     "beginColumn" : 3,
                     "endLine" : 270,
                     "endColumn" : 51,
-                    "offset" : 10804,
+                    "offset" : 10814,
                     "length" : 48
                   }
                 }
@@ -19327,7 +18301,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -19349,7 +18323,7 @@
                     "beginColumn" : 3,
                     "endLine" : 314,
                     "endColumn" : 52,
-                    "offset" : 12501,
+                    "offset" : 12513,
                     "length" : 49
                   }
                 }
@@ -19385,7 +18359,7 @@
                     "beginColumn" : 9,
                     "endLine" : 142,
                     "endColumn" : 55,
-                    "offset" : 5725,
+                    "offset" : 5729,
                     "length" : 46
                   }
                 }
@@ -19450,7 +18424,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -19473,7 +18447,7 @@
                     "beginColumn" : 9,
                     "endLine" : 226,
                     "endColumn" : 55,
-                    "offset" : 9052,
+                    "offset" : 9060,
                     "length" : 46
                   }
                 }
@@ -19521,7 +18495,7 @@
                 "beginColumn" : 9,
                 "endLine" : 143,
                 "endColumn" : 67,
-                "offset" : 5780,
+                "offset" : 5784,
                 "length" : 58
               }
             }
@@ -19543,7 +18517,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -19565,7 +18539,7 @@
                     "beginColumn" : 3,
                     "endLine" : 271,
                     "endColumn" : 59,
-                    "offset" : 10855,
+                    "offset" : 10865,
                     "length" : 56
                   }
                 }
@@ -19596,7 +18570,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -19618,7 +18592,7 @@
                     "beginColumn" : 3,
                     "endLine" : 315,
                     "endColumn" : 58,
-                    "offset" : 12553,
+                    "offset" : 12565,
                     "length" : 55
                   }
                 }
@@ -19654,7 +18628,7 @@
                     "beginColumn" : 9,
                     "endLine" : 143,
                     "endColumn" : 67,
-                    "offset" : 5780,
+                    "offset" : 5784,
                     "length" : 58
                   }
                 }
@@ -19719,7 +18693,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -19742,7 +18716,7 @@
                     "beginColumn" : 9,
                     "endLine" : 227,
                     "endColumn" : 67,
-                    "offset" : 9107,
+                    "offset" : 9115,
                     "length" : 58
                   }
                 }
@@ -19790,7 +18764,7 @@
                 "beginColumn" : 9,
                 "endLine" : 144,
                 "endColumn" : 58,
-                "offset" : 5847,
+                "offset" : 5851,
                 "length" : 49
               }
             }
@@ -19812,7 +18786,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -19834,7 +18808,7 @@
                     "beginColumn" : 3,
                     "endLine" : 272,
                     "endColumn" : 53,
-                    "offset" : 10914,
+                    "offset" : 10924,
                     "length" : 50
                   }
                 }
@@ -19865,7 +18839,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -19887,7 +18861,7 @@
                     "beginColumn" : 3,
                     "endLine" : 316,
                     "endColumn" : 52,
-                    "offset" : 12611,
+                    "offset" : 12623,
                     "length" : 49
                   }
                 }
@@ -19923,7 +18897,7 @@
                     "beginColumn" : 9,
                     "endLine" : 144,
                     "endColumn" : 58,
-                    "offset" : 5847,
+                    "offset" : 5851,
                     "length" : 49
                   }
                 }
@@ -19988,7 +18962,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -20011,7 +18985,7 @@
                     "beginColumn" : 9,
                     "endLine" : 228,
                     "endColumn" : 58,
-                    "offset" : 9174,
+                    "offset" : 9182,
                     "length" : 49
                   }
                 }
@@ -20059,7 +19033,7 @@
                 "beginColumn" : 9,
                 "endLine" : 148,
                 "endColumn" : 52,
-                "offset" : 5970,
+                "offset" : 5974,
                 "length" : 43
               }
             }
@@ -20081,7 +19055,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -20103,7 +19077,7 @@
                     "beginColumn" : 9,
                     "endLine" : 276,
                     "endColumn" : 60,
-                    "offset" : 11038,
+                    "offset" : 11048,
                     "length" : 51
                   }
                 }
@@ -20134,7 +19108,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -20156,7 +19130,7 @@
                     "beginColumn" : 9,
                     "endLine" : 320,
                     "endColumn" : 59,
-                    "offset" : 12734,
+                    "offset" : 12746,
                     "length" : 50
                   }
                 }
@@ -20192,7 +19166,7 @@
                     "beginColumn" : 9,
                     "endLine" : 148,
                     "endColumn" : 52,
-                    "offset" : 5970,
+                    "offset" : 5974,
                     "length" : 43
                   }
                 }
@@ -20257,7 +19231,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -20280,7 +19254,7 @@
                     "beginColumn" : 9,
                     "endLine" : 232,
                     "endColumn" : 52,
-                    "offset" : 9297,
+                    "offset" : 9305,
                     "length" : 43
                   }
                 }
@@ -20328,7 +19302,7 @@
                 "beginColumn" : 9,
                 "endLine" : 149,
                 "endColumn" : 55,
-                "offset" : 6022,
+                "offset" : 6026,
                 "length" : 46
               }
             }
@@ -20350,7 +19324,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -20372,7 +19346,7 @@
                     "beginColumn" : 9,
                     "endLine" : 277,
                     "endColumn" : 62,
-                    "offset" : 11098,
+                    "offset" : 11108,
                     "length" : 53
                   }
                 }
@@ -20403,7 +19377,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -20425,7 +19399,7 @@
                     "beginColumn" : 9,
                     "endLine" : 321,
                     "endColumn" : 61,
-                    "offset" : 12793,
+                    "offset" : 12805,
                     "length" : 52
                   }
                 }
@@ -20461,7 +19435,7 @@
                     "beginColumn" : 9,
                     "endLine" : 149,
                     "endColumn" : 55,
-                    "offset" : 6022,
+                    "offset" : 6026,
                     "length" : 46
                   }
                 }
@@ -20526,7 +19500,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -20549,7 +19523,7 @@
                     "beginColumn" : 9,
                     "endLine" : 233,
                     "endColumn" : 55,
-                    "offset" : 9349,
+                    "offset" : 9357,
                     "length" : 46
                   }
                 }
@@ -20597,7 +19571,7 @@
                 "beginColumn" : 9,
                 "endLine" : 150,
                 "endColumn" : 55,
-                "offset" : 6077,
+                "offset" : 6081,
                 "length" : 46
               }
             }
@@ -20619,7 +19593,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -20641,7 +19615,7 @@
                     "beginColumn" : 9,
                     "endLine" : 278,
                     "endColumn" : 62,
-                    "offset" : 11160,
+                    "offset" : 11170,
                     "length" : 53
                   }
                 }
@@ -20672,7 +19646,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -20694,7 +19668,7 @@
                     "beginColumn" : 9,
                     "endLine" : 322,
                     "endColumn" : 61,
-                    "offset" : 12854,
+                    "offset" : 12866,
                     "length" : 52
                   }
                 }
@@ -20730,7 +19704,7 @@
                     "beginColumn" : 9,
                     "endLine" : 150,
                     "endColumn" : 55,
-                    "offset" : 6077,
+                    "offset" : 6081,
                     "length" : 46
                   }
                 }
@@ -20795,7 +19769,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -20818,7 +19792,7 @@
                     "beginColumn" : 9,
                     "endLine" : 234,
                     "endColumn" : 55,
-                    "offset" : 9404,
+                    "offset" : 9412,
                     "length" : 46
                   }
                 }
@@ -20866,7 +19840,7 @@
                 "beginColumn" : 9,
                 "endLine" : 151,
                 "endColumn" : 55,
-                "offset" : 6132,
+                "offset" : 6136,
                 "length" : 46
               }
             }
@@ -20888,7 +19862,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -20910,7 +19884,7 @@
                     "beginColumn" : 9,
                     "endLine" : 279,
                     "endColumn" : 62,
-                    "offset" : 11222,
+                    "offset" : 11232,
                     "length" : 53
                   }
                 }
@@ -20941,7 +19915,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -20963,7 +19937,7 @@
                     "beginColumn" : 9,
                     "endLine" : 323,
                     "endColumn" : 61,
-                    "offset" : 12915,
+                    "offset" : 12927,
                     "length" : 52
                   }
                 }
@@ -20999,7 +19973,7 @@
                     "beginColumn" : 9,
                     "endLine" : 151,
                     "endColumn" : 55,
-                    "offset" : 6132,
+                    "offset" : 6136,
                     "length" : 46
                   }
                 }
@@ -21064,7 +20038,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -21087,7 +20061,7 @@
                     "beginColumn" : 9,
                     "endLine" : 235,
                     "endColumn" : 55,
-                    "offset" : 9459,
+                    "offset" : 9467,
                     "length" : 46
                   }
                 }
@@ -21135,7 +20109,7 @@
                 "beginColumn" : 9,
                 "endLine" : 155,
                 "endColumn" : 55,
-                "offset" : 6254,
+                "offset" : 6258,
                 "length" : 46
               }
             }
@@ -21157,7 +20131,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -21179,7 +20153,7 @@
                     "beginColumn" : 9,
                     "endLine" : 283,
                     "endColumn" : 62,
-                    "offset" : 11351,
+                    "offset" : 11361,
                     "length" : 53
                   }
                 }
@@ -21210,7 +20184,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -21232,7 +20206,7 @@
                     "beginColumn" : 9,
                     "endLine" : 327,
                     "endColumn" : 61,
-                    "offset" : 13043,
+                    "offset" : 13055,
                     "length" : 52
                   }
                 }
@@ -21268,7 +20242,7 @@
                     "beginColumn" : 9,
                     "endLine" : 155,
                     "endColumn" : 55,
-                    "offset" : 6254,
+                    "offset" : 6258,
                     "length" : 46
                   }
                 }
@@ -21333,7 +20307,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -21356,7 +20330,7 @@
                     "beginColumn" : 9,
                     "endLine" : 239,
                     "endColumn" : 55,
-                    "offset" : 9581,
+                    "offset" : 9589,
                     "length" : 46
                   }
                 }
@@ -21404,7 +20378,7 @@
                 "beginColumn" : 9,
                 "endLine" : 156,
                 "endColumn" : 58,
-                "offset" : 6309,
+                "offset" : 6313,
                 "length" : 49
               }
             }
@@ -21426,7 +20400,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -21448,7 +20422,7 @@
                     "beginColumn" : 9,
                     "endLine" : 284,
                     "endColumn" : 64,
-                    "offset" : 11413,
+                    "offset" : 11423,
                     "length" : 55
                   }
                 }
@@ -21479,7 +20453,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -21501,7 +20475,7 @@
                     "beginColumn" : 9,
                     "endLine" : 328,
                     "endColumn" : 63,
-                    "offset" : 13104,
+                    "offset" : 13116,
                     "length" : 54
                   }
                 }
@@ -21537,7 +20511,7 @@
                     "beginColumn" : 9,
                     "endLine" : 156,
                     "endColumn" : 58,
-                    "offset" : 6309,
+                    "offset" : 6313,
                     "length" : 49
                   }
                 }
@@ -21602,7 +20576,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -21625,7 +20599,7 @@
                     "beginColumn" : 9,
                     "endLine" : 240,
                     "endColumn" : 58,
-                    "offset" : 9636,
+                    "offset" : 9644,
                     "length" : 49
                   }
                 }
@@ -21673,7 +20647,7 @@
                 "beginColumn" : 9,
                 "endLine" : 157,
                 "endColumn" : 58,
-                "offset" : 6367,
+                "offset" : 6371,
                 "length" : 49
               }
             }
@@ -21695,7 +20669,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -21717,7 +20691,7 @@
                     "beginColumn" : 9,
                     "endLine" : 285,
                     "endColumn" : 64,
-                    "offset" : 11477,
+                    "offset" : 11487,
                     "length" : 55
                   }
                 }
@@ -21748,7 +20722,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -21770,7 +20744,7 @@
                     "beginColumn" : 9,
                     "endLine" : 329,
                     "endColumn" : 63,
-                    "offset" : 13167,
+                    "offset" : 13179,
                     "length" : 54
                   }
                 }
@@ -21806,7 +20780,7 @@
                     "beginColumn" : 9,
                     "endLine" : 157,
                     "endColumn" : 58,
-                    "offset" : 6367,
+                    "offset" : 6371,
                     "length" : 49
                   }
                 }
@@ -21871,7 +20845,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -21894,7 +20868,7 @@
                     "beginColumn" : 9,
                     "endLine" : 241,
                     "endColumn" : 58,
-                    "offset" : 9694,
+                    "offset" : 9702,
                     "length" : 49
                   }
                 }
@@ -21942,7 +20916,7 @@
                 "beginColumn" : 9,
                 "endLine" : 158,
                 "endColumn" : 58,
-                "offset" : 6425,
+                "offset" : 6429,
                 "length" : 49
               }
             }
@@ -21964,7 +20938,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -21986,7 +20960,7 @@
                     "beginColumn" : 9,
                     "endLine" : 286,
                     "endColumn" : 64,
-                    "offset" : 11541,
+                    "offset" : 11551,
                     "length" : 55
                   }
                 }
@@ -22017,7 +20991,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -22039,7 +21013,7 @@
                     "beginColumn" : 9,
                     "endLine" : 330,
                     "endColumn" : 63,
-                    "offset" : 13230,
+                    "offset" : 13242,
                     "length" : 54
                   }
                 }
@@ -22075,7 +21049,7 @@
                     "beginColumn" : 9,
                     "endLine" : 158,
                     "endColumn" : 58,
-                    "offset" : 6425,
+                    "offset" : 6429,
                     "length" : 49
                   }
                 }
@@ -22140,7 +21114,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -22163,7 +21137,7 @@
                     "beginColumn" : 9,
                     "endLine" : 242,
                     "endColumn" : 58,
-                    "offset" : 9752,
+                    "offset" : 9760,
                     "length" : 49
                   }
                 }
@@ -22211,7 +21185,7 @@
                 "beginColumn" : 9,
                 "endLine" : 162,
                 "endColumn" : 61,
-                "offset" : 6531,
+                "offset" : 6535,
                 "length" : 52
               }
             }
@@ -22233,7 +21207,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -22255,7 +21229,7 @@
                     "beginColumn" : 9,
                     "endLine" : 290,
                     "endColumn" : 62,
-                    "offset" : 11653,
+                    "offset" : 11663,
                     "length" : 53
                   }
                 }
@@ -22286,7 +21260,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -22308,7 +21282,7 @@
                     "beginColumn" : 9,
                     "endLine" : 334,
                     "endColumn" : 61,
-                    "offset" : 13341,
+                    "offset" : 13353,
                     "length" : 52
                   }
                 }
@@ -22344,7 +21318,7 @@
                     "beginColumn" : 9,
                     "endLine" : 162,
                     "endColumn" : 61,
-                    "offset" : 6531,
+                    "offset" : 6535,
                     "length" : 52
                   }
                 }
@@ -22409,7 +21383,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -22432,7 +21406,7 @@
                     "beginColumn" : 9,
                     "endLine" : 246,
                     "endColumn" : 61,
-                    "offset" : 9858,
+                    "offset" : 9866,
                     "length" : 52
                   }
                 }
@@ -22480,7 +21454,7 @@
                 "beginColumn" : 9,
                 "endLine" : 163,
                 "endColumn" : 61,
-                "offset" : 6592,
+                "offset" : 6596,
                 "length" : 52
               }
             }
@@ -22502,7 +21476,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -22524,7 +21498,7 @@
                     "beginColumn" : 9,
                     "endLine" : 291,
                     "endColumn" : 62,
-                    "offset" : 11715,
+                    "offset" : 11725,
                     "length" : 53
                   }
                 }
@@ -22555,7 +21529,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -22577,7 +21551,7 @@
                     "beginColumn" : 9,
                     "endLine" : 335,
                     "endColumn" : 61,
-                    "offset" : 13402,
+                    "offset" : 13414,
                     "length" : 52
                   }
                 }
@@ -22613,7 +21587,7 @@
                     "beginColumn" : 9,
                     "endLine" : 163,
                     "endColumn" : 61,
-                    "offset" : 6592,
+                    "offset" : 6596,
                     "length" : 52
                   }
                 }
@@ -22678,7 +21652,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -22701,7 +21675,7 @@
                     "beginColumn" : 9,
                     "endLine" : 247,
                     "endColumn" : 61,
-                    "offset" : 9919,
+                    "offset" : 9927,
                     "length" : 52
                   }
                 }
@@ -22749,7 +21723,7 @@
                 "beginColumn" : 6,
                 "endLine" : 167,
                 "endColumn" : 49,
-                "offset" : 6691,
+                "offset" : 6695,
                 "length" : 43
               }
             }
@@ -22771,7 +21745,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -22793,7 +21767,7 @@
                     "beginColumn" : 6,
                     "endLine" : 295,
                     "endColumn" : 52,
-                    "offset" : 11809,
+                    "offset" : 11819,
                     "length" : 46
                   }
                 }
@@ -22824,7 +21798,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -22846,7 +21820,7 @@
                     "beginColumn" : 6,
                     "endLine" : 339,
                     "endColumn" : 51,
-                    "offset" : 13495,
+                    "offset" : 13507,
                     "length" : 45
                   }
                 }
@@ -22882,7 +21856,7 @@
                     "beginColumn" : 6,
                     "endLine" : 167,
                     "endColumn" : 49,
-                    "offset" : 6691,
+                    "offset" : 6695,
                     "length" : 43
                   }
                 }
@@ -22947,7 +21921,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -22970,7 +21944,7 @@
                     "beginColumn" : 6,
                     "endLine" : 251,
                     "endColumn" : 49,
-                    "offset" : 10018,
+                    "offset" : 10026,
                     "length" : 43
                   }
                 }
@@ -23018,7 +21992,7 @@
                 "beginColumn" : 6,
                 "endLine" : 168,
                 "endColumn" : 55,
-                "offset" : 6740,
+                "offset" : 6744,
                 "length" : 49
               }
             }
@@ -23040,7 +22014,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -23062,7 +22036,7 @@
                     "beginColumn" : 6,
                     "endLine" : 296,
                     "endColumn" : 58,
-                    "offset" : 11861,
+                    "offset" : 11871,
                     "length" : 52
                   }
                 }
@@ -23093,7 +22067,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -23115,7 +22089,7 @@
                     "beginColumn" : 6,
                     "endLine" : 340,
                     "endColumn" : 57,
-                    "offset" : 13546,
+                    "offset" : 13558,
                     "length" : 51
                   }
                 }
@@ -23151,7 +22125,7 @@
                     "beginColumn" : 6,
                     "endLine" : 168,
                     "endColumn" : 55,
-                    "offset" : 6740,
+                    "offset" : 6744,
                     "length" : 49
                   }
                 }
@@ -23216,7 +22190,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -23239,7 +22213,7 @@
                     "beginColumn" : 6,
                     "endLine" : 252,
                     "endColumn" : 55,
-                    "offset" : 10067,
+                    "offset" : 10075,
                     "length" : 49
                   }
                 }
@@ -23287,7 +22261,7 @@
                 "beginColumn" : 6,
                 "endLine" : 169,
                 "endColumn" : 55,
-                "offset" : 6795,
+                "offset" : 6799,
                 "length" : 49
               }
             }
@@ -23309,7 +22283,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -23331,7 +22305,7 @@
                     "beginColumn" : 6,
                     "endLine" : 297,
                     "endColumn" : 62,
-                    "offset" : 11919,
+                    "offset" : 11929,
                     "length" : 56
                   }
                 }
@@ -23362,7 +22336,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -23384,7 +22358,7 @@
                     "beginColumn" : 6,
                     "endLine" : 341,
                     "endColumn" : 61,
-                    "offset" : 13603,
+                    "offset" : 13615,
                     "length" : 55
                   }
                 }
@@ -23420,7 +22394,7 @@
                     "beginColumn" : 6,
                     "endLine" : 169,
                     "endColumn" : 55,
-                    "offset" : 6795,
+                    "offset" : 6799,
                     "length" : 49
                   }
                 }
@@ -23485,7 +22459,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -23508,7 +22482,7 @@
                     "beginColumn" : 6,
                     "endLine" : 253,
                     "endColumn" : 55,
-                    "offset" : 10122,
+                    "offset" : 10130,
                     "length" : 49
                   }
                 }
@@ -23556,7 +22530,7 @@
                 "beginColumn" : 6,
                 "endLine" : 170,
                 "endColumn" : 55,
-                "offset" : 6850,
+                "offset" : 6854,
                 "length" : 49
               }
             }
@@ -23578,7 +22552,7 @@
                   "beginColumn" : 6,
                   "endLine" : 134,
                   "endColumn" : 37,
-                  "offset" : 5433,
+                  "offset" : 5437,
                   "length" : 31
                 }
               }
@@ -23600,7 +22574,7 @@
                     "beginColumn" : 6,
                     "endLine" : 298,
                     "endColumn" : 65,
-                    "offset" : 11981,
+                    "offset" : 11991,
                     "length" : 59
                   }
                 }
@@ -23631,7 +22605,7 @@
                   "beginColumn" : 5,
                   "endLine" : 218,
                   "endColumn" : 36,
-                  "offset" : 8744,
+                  "offset" : 8752,
                   "length" : 31
                 }
               }
@@ -23653,7 +22627,7 @@
                     "beginColumn" : 6,
                     "endLine" : 342,
                     "endColumn" : 64,
-                    "offset" : 13664,
+                    "offset" : 13676,
                     "length" : 58
                   }
                 }
@@ -23689,7 +22663,7 @@
                     "beginColumn" : 6,
                     "endLine" : 170,
                     "endColumn" : 55,
-                    "offset" : 6850,
+                    "offset" : 6854,
                     "length" : 49
                   }
                 }
@@ -23754,7 +22728,7 @@
                     "endLine" : 82,
                     "endColumn" : 12,
                     "offset" : 1494,
-                    "length" : 1888
+                    "length" : 1890
                   }
                 }
               },
@@ -23777,276 +22751,7 @@
                     "beginColumn" : 6,
                     "endLine" : 254,
                     "endColumn" : 55,
-                    "offset" : 10177,
-                    "length" : 49
-                  }
-                }
-              },
-              "context" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "consumer"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 44,
-                    "beginColumn" : 6,
-                    "endLine" : 44,
-                    "endColumn" : 39,
-                    "offset" : 1659,
-                    "length" : 33
-                  }
-                }
-              },
-              "isParent" : false
-            }
-          ],
-          "properties" : [
-          ]
-        },
-        {
-          "type" : "ConnectionInstance",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Sys_i_Instance", "producer.producer.myArray3 -> consumer.consumer.myArray3"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                },
-                "beginLine" : 171,
-                "beginColumn" : 6,
-                "endLine" : 171,
-                "endColumn" : 55,
-                "offset" : 6905,
-                "length" : 49
-              }
-            }
-          },
-          "src" : {
-            "type" : "EndPoint",
-            "component" : {
-              "type" : "Name",
-              "name" : ["Sys_i_Instance", "producer", "producer"],
-              "pos" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Position",
-                  "uriOpt" : {
-                    "type" : "Some",
-                    "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                  },
-                  "beginLine" : 134,
-                  "beginColumn" : 6,
-                  "endLine" : 134,
-                  "endColumn" : 37,
-                  "offset" : 5433,
-                  "length" : 31
-                }
-              }
-            },
-            "feature" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "producer", "producer", "myArray3"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 299,
-                    "beginColumn" : 6,
-                    "endLine" : 299,
-                    "endColumn" : 62,
-                    "offset" : 12046,
-                    "length" : 56
-                  }
-                }
-              }
-            },
-            "direction" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Direction",
-                "value" : "Out"
-              }
-            }
-          },
-          "dst" : {
-            "type" : "EndPoint",
-            "component" : {
-              "type" : "Name",
-              "name" : ["Sys_i_Instance", "consumer", "consumer"],
-              "pos" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Position",
-                  "uriOpt" : {
-                    "type" : "Some",
-                    "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                  },
-                  "beginLine" : 218,
-                  "beginColumn" : 5,
-                  "endLine" : 218,
-                  "endColumn" : 36,
-                  "offset" : 8744,
-                  "length" : 31
-                }
-              }
-            },
-            "feature" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "consumer", "consumer", "myArray3"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 343,
-                    "beginColumn" : 6,
-                    "endLine" : 343,
-                    "endColumn" : 61,
-                    "offset" : 13728,
-                    "length" : 55
-                  }
-                }
-              }
-            },
-            "direction" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Direction",
-                "value" : "In"
-              }
-            }
-          },
-          "kind" : {
-            "type" : "ConnectionKind",
-            "value" : "Port"
-          },
-          "connectionRefs" : [
-            {
-              "type" : "ConnectionReference",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "producer", "myArray3Conn"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 171,
-                    "beginColumn" : 6,
-                    "endLine" : 171,
-                    "endColumn" : 55,
-                    "offset" : 6905,
-                    "length" : 49
-                  }
-                }
-              },
-              "context" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "producer"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 43,
-                    "beginColumn" : 6,
-                    "endLine" : 43,
-                    "endColumn" : 39,
-                    "offset" : 1620,
-                    "length" : 33
-                  }
-                }
-              },
-              "isParent" : false
-            },
-            {
-              "type" : "ConnectionReference",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "myArray3Conn"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 81,
-                    "beginColumn" : 6,
-                    "endLine" : 81,
-                    "endColumn" : 64,
-                    "offset" : 3312,
-                    "length" : 58
-                  }
-                }
-              },
-              "context" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 40,
-                    "beginColumn" : 2,
-                    "endLine" : 82,
-                    "endColumn" : 12,
-                    "offset" : 1494,
-                    "length" : 1888
-                  }
-                }
-              },
-              "isParent" : true
-            },
-            {
-              "type" : "ConnectionReference",
-              "name" : {
-                "type" : "Name",
-                "name" : ["Sys_i_Instance", "consumer", "myArray3Conn"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/datatype-examples\/Datatypes_System.aadl"
-                    },
-                    "beginLine" : 255,
-                    "beginColumn" : 6,
-                    "endLine" : 255,
-                    "endColumn" : 55,
-                    "offset" : 10232,
+                    "offset" : 10185,
                     "length" : 49
                   }
                 }
@@ -27293,147 +25998,6 @@
             {
               "type" : "ValueProp",
               "value" : "Struct"
-            }
-          ],
-          "appliesTo" : [
-          ]
-        }
-      ],
-      "flows" : [
-      ],
-      "modes" : [
-      ],
-      "annexes" : [
-      ],
-      "uriFrag" : ""
-    },
-    {
-      "type" : "Component",
-      "identifier" : {
-        "type" : "Name",
-        "name" : [],
-        "pos" : {
-          "type" : "None"
-        }
-      },
-      "category" : {
-        "type" : "ComponentCategory",
-        "value" : "Data"
-      },
-      "classifier" : {
-        "type" : "Some",
-        "value" : {
-          "type" : "Classifier",
-          "name" : "Datatypes::MyArrayTwoDim"
-        }
-      },
-      "features" : [
-      ],
-      "subComponents" : [
-      ],
-      "connections" : [
-      ],
-      "connectionInstances" : [
-      ],
-      "properties" : [
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Data_Model::Dimension"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                },
-                "beginLine" : 39,
-                "beginColumn" : 4,
-                "endLine" : 39,
-                "endColumn" : 97,
-                "offset" : 1668,
-                "length" : 93
-              }
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "UnitProp",
-              "value" : "5.0",
-              "unit" : {
-                "type" : "None"
-              }
-            },
-            {
-              "type" : "UnitProp",
-              "value" : "12.0",
-              "unit" : {
-                "type" : "None"
-              }
-            }
-          ],
-          "appliesTo" : [
-          ]
-        },
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Data_Model::Base_Type"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                },
-                "beginLine" : 6,
-                "beginColumn" : 4,
-                "endLine" : 6,
-                "endColumn" : 73,
-                "offset" : 163,
-                "length" : 69
-              }
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "ClassifierProp",
-              "name" : "Base_Types::Integer"
-            }
-          ],
-          "appliesTo" : [
-          ]
-        },
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Data_Model::Data_Representation"],
-            "pos" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "Position",
-                "uriOpt" : {
-                  "type" : "Some",
-                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
-                },
-                "beginLine" : 27,
-                "beginColumn" : 4,
-                "endLine" : 30,
-                "endColumn" : 36,
-                "offset" : 1165,
-                "length" : 162
-              }
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "ValueProp",
-              "value" : "Array"
             }
           ],
           "appliesTo" : [

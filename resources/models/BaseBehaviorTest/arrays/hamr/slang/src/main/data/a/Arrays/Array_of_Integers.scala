@@ -14,7 +14,8 @@ object Array_of_Integers {
   //     val value: Arrays.Array_of_Integers.I = i"0"
   //     ...
   //
-  // Rename I and use its fromZ method when using multiple <array-def>.I indexing types in the same context.  For e.g.
+  // Use the F2AD6F method when using multiple <array-def>.I indexing types in the same
+  // context.  Alternatively, rename I and use its fromZ method when using multiple
   //   import Arrays.Array_of_Integers.{I => I0}
   //   import <other-array-def>.{I => I1}
   //   object Example {
@@ -22,6 +23,14 @@ object Array_of_Integers {
   //     ...
 
   @range(min = 0, max = 0, index = T) class I
+
+  @pure def F2AD6F(z: Z): I = {
+    Contract(
+      Requires(I.Min.toZ <= z && z <= I.Max.toZ),
+      Ensures(Res[I].toZ == z)
+    )
+    return I.fromZ(z)
+  }
 
   def example(): Arrays.Array_of_Integers = {
     return Arrays.Array_of_Integers(

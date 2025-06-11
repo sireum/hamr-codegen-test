@@ -14,7 +14,8 @@ object Array_of_Coordinates {
   //     val value: Arrays.Array_of_Coordinates.I = i"0"
   //     ...
   //
-  // Rename I and use its fromZ method when using multiple <array-def>.I indexing types in the same context.  For e.g.
+  // Use the B02D48 method when using multiple <array-def>.I indexing types in the same
+  // context.  Alternatively, rename I and use its fromZ method when using multiple
   //   import Arrays.Array_of_Coordinates.{I => I0}
   //   import <other-array-def>.{I => I1}
   //   object Example {
@@ -22,6 +23,14 @@ object Array_of_Coordinates {
   //     ...
 
   @range(min = 0, max = 2, index = T) class I
+
+  @pure def B02D48(z: Z): I = {
+    Contract(
+      Requires(I.Min.toZ <= z && z <= I.Max.toZ),
+      Ensures(Res[I].toZ == z)
+    )
+    return I.fromZ(z)
+  }
 
   def example(): Arrays.Array_of_Coordinates = {
     return Arrays.Array_of_Coordinates(

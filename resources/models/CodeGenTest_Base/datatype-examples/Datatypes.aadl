@@ -134,12 +134,13 @@ public
       Data_Model::Dimension => (10);  -- one dimensional array with 10 cells.
     end MyArrayOneDim;
 
-    data MyArrayTwoDim -- two dimensional array
-    properties
-      Data_Model::Data_Representation => Array;
-      Data_Model::Base_Type => (classifier (Base_Types::Integer));
-      Data_Model::Dimension => (5, 12); -- two dimensional array with 5 cells in first dimension and 12 in second
-    end MyArrayTwoDim;
+    -- ISSUE: sergen does not support nested sequences like ISZ[ISZ[Z]] 
+    --data MyArrayTwoDim -- two dimensional array
+    --properties
+    --  Data_Model::Data_Representation => Array;
+    --  Data_Model::Base_Type => (classifier (Base_Types::Integer));
+    --  Data_Model::Dimension => (5, 12); -- two dimensional array with 5 cells in first dimension and 12 in second
+    --end MyArrayTwoDim;
 
 
     -------------------------------------------------------------------------------------------------------------
