@@ -25,6 +25,8 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
   val codegen_base = resourceDir / "models" / "CodeGenTest_Base"
 
+  val ros_base = resourceDir / "models" / "Ros2"
+
   "building_control_gen_mixed_lax" in {
     val testName = "building_control_gen_mixed"
     val root = codegen_base / testName
@@ -83,7 +85,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
   "datatype-examples_lax" in {
     val testName = "datatype-examples"
-    val root = codegen_base / testName
+    val root = ros_base / testName
     val airFile = getAir(root)
     assert (root.exists)
 
@@ -92,7 +94,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 
   "datatype-examples_strict" in {
     val testName = "datatype-examples"
-    val root = codegen_base / testName
+    val root = ros_base / testName
     val airFile = getAir(root)
     assert (root.exists)
 
