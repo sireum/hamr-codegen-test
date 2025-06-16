@@ -28,7 +28,6 @@ class MicrokitTests extends CodegenTest {
 
     // TODO: adapt to crust/verus
     "micro-examples_microkit_aadl_port_types_event__FF6D",
-    "ethernet-simple"
   )
 
   override val verbose: B = ops.ISZOps(testModes).contains(TestMode.verbose)
