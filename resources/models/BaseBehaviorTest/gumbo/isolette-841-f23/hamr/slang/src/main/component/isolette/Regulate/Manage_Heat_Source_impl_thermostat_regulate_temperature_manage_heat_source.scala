@@ -11,7 +11,7 @@ import isolette.Isolette_Data_Model._
 object Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source {
 
   // BEGIN STATE VARS
-  var lastCmd: Isolette_Data_Model.On_Off.Type = Isolette_Data_Model.On_Off.byOrdinal(0).get
+  var lastCmd: Isolette_Data_Model.On_Off.Type = Isolette_Data_Model.On_Off.Onn
   // END STATE VARS
 
   //======================================

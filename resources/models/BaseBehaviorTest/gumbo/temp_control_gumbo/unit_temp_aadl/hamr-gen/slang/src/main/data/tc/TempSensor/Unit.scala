@@ -15,7 +15,7 @@ import tc._
 
 object Unit_Payload {
   def example(): Unit_Payload = {
-    return Unit_Payload(TempSensor.Unit.byOrdinal(0).get)
+    return Unit_Payload(TempSensor.Unit.Kelvin)
   }
 }
 

@@ -11,11 +11,12 @@ object Array_of_Integers {
   // Import I's interpolator to create instances of I.  For e.g.,
   //   import Arrays.Array_of_Integers.I._
   //   object Example {
-  //     val value: Arrays.Array_of_Integers.I = i"0"
+  //     val array: Arrays.Array_of_Integers = Arrays.Array_of_Integers.example()
+  //     val elem: Base_Types.Integer = array(i"0")
   //     ...
   //
   // Use the F2AD6F method when using multiple <array-def>.I indexing types in the same
-  // context.  Alternatively, rename I and use its fromZ method when using multiple
+  // context.  Alternatively, rename the I's and use their fromZ methods.  For e.g.
   //   import Arrays.Array_of_Integers.{I => I0}
   //   import <other-array-def>.{I => I1}
   //   object Example {

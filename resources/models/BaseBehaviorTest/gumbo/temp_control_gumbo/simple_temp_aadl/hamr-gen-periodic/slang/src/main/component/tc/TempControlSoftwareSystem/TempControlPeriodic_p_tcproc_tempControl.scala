@@ -11,7 +11,7 @@ import tc.CoolingFan._
 object TempControlPeriodic_p_tcproc_tempControl {
 
   // BEGIN STATE VARS
-  var latestFanCmd: CoolingFan.FanCmd.Type = CoolingFan.FanCmd.byOrdinal(0).get
+  var latestFanCmd: CoolingFan.FanCmd.Type = CoolingFan.FanCmd.On
   // END STATE VARS
 
   def initialise(api: TempControlPeriodic_p_Initialization_Api): Unit = {

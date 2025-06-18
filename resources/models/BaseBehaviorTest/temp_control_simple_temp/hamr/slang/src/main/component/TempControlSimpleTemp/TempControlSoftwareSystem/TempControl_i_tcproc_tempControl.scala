@@ -15,7 +15,7 @@ object TempControl_i_tcproc_tempControl {
 
   var latestTemp: TempSensor.Temperature_i = TempSensor.Temperature_i.example()
 
-  var currentFanState: CoolingFan.FanCmd.Type = CoolingFan.FanCmd.byOrdinal(0).get
+  var currentFanState: CoolingFan.FanCmd.Type = CoolingFan.FanCmd.On
   // END STATE VARS
 
   // ToDo: currentTemp should not be included in the vars above (it should not be included in the

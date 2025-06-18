@@ -13,7 +13,7 @@ object TempControl_s_tcproc_tempControl {
   // BEGIN STATE VARS
   var currentSetPoint: TempControlSoftwareSystem.SetPoint_i = TempControlSoftwareSystem.SetPoint_i.example()
 
-  var currentFanState: CoolingFan.FanCmd.Type = CoolingFan.FanCmd.byOrdinal(0).get
+  var currentFanState: CoolingFan.FanCmd.Type = CoolingFan.FanCmd.On
 
   var latestTemp: TempSensor.Temperature_i = TempSensor.Temperature_i.example()
   // END STATE VARS

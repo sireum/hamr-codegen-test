@@ -11,11 +11,12 @@ object Array_of_Coordinates {
   // Import I's interpolator to create instances of I.  For e.g.,
   //   import Arrays.Array_of_Coordinates.I._
   //   object Example {
-  //     val value: Arrays.Array_of_Coordinates.I = i"0"
+  //     val array: Arrays.Array_of_Coordinates = Arrays.Array_of_Coordinates.example()
+  //     val elem: Arrays.Coordinate_Impl = array(i"0")
   //     ...
   //
   // Use the B02D48 method when using multiple <array-def>.I indexing types in the same
-  // context.  Alternatively, rename I and use its fromZ method when using multiple
+  // context.  Alternatively, rename the I's and use their fromZ methods.  For e.g.
   //   import Arrays.Array_of_Coordinates.{I => I0}
   //   import <other-array-def>.{I => I1}
   //   object Example {

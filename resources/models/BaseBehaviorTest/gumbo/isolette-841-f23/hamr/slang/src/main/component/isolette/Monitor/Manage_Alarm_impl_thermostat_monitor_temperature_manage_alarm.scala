@@ -13,7 +13,7 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm {
   @strictpure def timeout_condition_satisfied(): Base_Types.Boolean = T
   // END FUNCTIONS
   // BEGIN STATE VARS
-  var lastCmd: Isolette_Data_Model.On_Off.Type = Isolette_Data_Model.On_Off.byOrdinal(0).get
+  var lastCmd: Isolette_Data_Model.On_Off.Type = Isolette_Data_Model.On_Off.Onn
   // END STATE VARS
 
   def initialise(api: Manage_Alarm_impl_Initialization_Api): Unit = {

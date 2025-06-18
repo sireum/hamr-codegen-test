@@ -14,7 +14,7 @@ import bc._
 
 object FanAck_Payload {
   def example(): FanAck_Payload = {
-    return FanAck_Payload(BuildingControl.FanAck.byOrdinal(0).get)
+    return FanAck_Payload(BuildingControl.FanAck.Ok)
   }
 }
 

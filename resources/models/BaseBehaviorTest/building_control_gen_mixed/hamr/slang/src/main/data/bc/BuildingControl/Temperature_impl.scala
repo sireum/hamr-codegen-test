@@ -11,7 +11,7 @@ object Temperature_impl {
   def example(): BuildingControl.Temperature_impl = {
     return BuildingControl.Temperature_impl(
       degrees = Base_Types.Float_32_example(),
-      unit = BuildingControl.TempUnit.byOrdinal(0).get)
+      unit = BuildingControl.TempUnit.Fahrenheit)
   }
 }
 

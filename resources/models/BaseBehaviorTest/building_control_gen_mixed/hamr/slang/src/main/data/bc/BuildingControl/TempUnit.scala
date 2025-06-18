@@ -15,7 +15,7 @@ import bc._
 
 object TempUnit_Payload {
   def example(): TempUnit_Payload = {
-    return TempUnit_Payload(BuildingControl.TempUnit.byOrdinal(0).get)
+    return TempUnit_Payload(BuildingControl.TempUnit.Fahrenheit)
   }
 }
 

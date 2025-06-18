@@ -14,7 +14,7 @@ import bc._
 
 object FanCmd_Payload {
   def example(): FanCmd_Payload = {
-    return FanCmd_Payload(BuildingControl.FanCmd.byOrdinal(0).get)
+    return FanCmd_Payload(BuildingControl.FanCmd.On)
   }
 }
 
