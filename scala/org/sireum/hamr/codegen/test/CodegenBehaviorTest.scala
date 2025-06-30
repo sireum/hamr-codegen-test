@@ -60,16 +60,17 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
            testModes: ISZ[TestMode.Type],
            phantomOptions: Option[String],
            logikaOptions: Option[String],
+           clean: () => B,
            airFile: Option[Os.Path] = None())(implicit position: org.scalactic.source.Position): Unit = {
     val tags: ISZ[org.scalatest.Tag] = ISZ()
 
     if (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, airFile))
+        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, clean, airFile))
     }
     else if (!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, airFile))
+        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, clean, airFile))
     }
   }
 
@@ -79,6 +80,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
               testModes: ISZ[TestMode.Type],
               phantomOptions: Option[String],
               logikaOptions: Option[String],
+              clean: () => B,
               airFile: Option[Os.Path] = None()): Unit = {
 
     if (TestUtil.isCI && Os.env("SEL4_CAMKES_ENV").nonEmpty && !TestUtil.isSeL4(testOptions.platform)) {
@@ -96,22 +98,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
       println(s"  _testModes=${_testModes}")
     }
 
-    testOptions.workspaceRootDir match {
-      case Some(e) =>
-        val clean =
-          if ((Os.path(e) / "clean.cmd").exists) Os.path(e) / "clean.cmd"
-          else Os.path(e) / "bin" / "clean.cmd"
-        if (clean.exists) {
-          println(s"Cleaning $testName")
-          val p = proc"$clean $testName".at(clean.up)
-          if (verbose)
-            p.console.runCheck()
-          else p.runCheck()
-        } else {
-          eprintln(s"Didn't find a clean script for $testName: $clean")
-        }
-      case _ =>
-    }
+    println(s"Cleaning $testName")
+    assert(clean(), "Cleaning failed")
 
     // FIXME: Output from individual unit tests were not grouping correctly in intellij's Test Results view.
     //        Seems sleeping for a bit or doing something that takes awhile (e.g. loading AIR) resolves the issue.
@@ -129,10 +117,14 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     }
 
     assert(testOptions.workspaceRootDir.nonEmpty, "Currently requires workspaceRootDir to be populated")
-    assert(testOptions.slangOutputDir.nonEmpty, "Currently requires slangOutputDir to be populated")
 
-    val slangOutputDir = Os.path(testOptions.slangOutputDir.get)
-    cprintln(F, s"Slang Output Directory: ${slangOutputDir.canon.toUri}")
+    val slangOutputDir: Option[Os.Path] =
+      if (testOptions.slangOutputDir.nonEmpty) Some(Os.path(testOptions.slangOutputDir.get))
+      else None()
+
+    if (slangOutputDir.nonEmpty) {
+      cprintln(F, s"Slang Output Directory: ${slangOutputDir.get.canon.toUri}")
+    }
 
     if (verbose) {
       cprintln(F, s"Test Modes: ${_testModes}")
@@ -166,9 +158,9 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
       success = success && !reporter.hasError
     }
 
-    if (Os.env("GITHUB_ACTIONS").nonEmpty ) {
+    if (Os.env("GITHUB_ACTIONS").nonEmpty && slangOutputDir.nonEmpty) {
       // 2024.02.16 -- running out of space in camkes docker container on github
-      (slangOutputDir / "out").removeAll()
+      (slangOutputDir.get / "out").removeAll()
     }
 
     assert(success, s"Test failed: ${testName}")
@@ -211,6 +203,14 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
     val airFile = CodegenBehaviorTest.getAirFileEntry(props.get("airFile"), hamrTestFile.up.canon)
 
+    val cleanCmd =
+      if ((hamrTestFile.up / "bin" / "clean.cmd").exists) hamrTestFile.up / "bin" / "clean.cmd"
+      else if ((hamrTestFile.up / "aadl" / "clean.cmd").exists) hamrTestFile.up / "aadl" / "clean.cmd"
+      else hamrTestFile.up / "clean.cmd"
+
+    assert (cleanCmd.exists, s"${cleanCmd} does not exists")
+    val clean = () => proc"${cleanCmd}".at(cleanCmd.up).run().ok
+
     var overrideIgnore = F
     if (airFile.isEmpty && !ops.ISZOps(unitTestModes).contains(TestMode.phantom)) {
       ignoreReasons = ignoreReasons :+ s"Either provide 'airFile' entry or enable phantom test mode"
@@ -244,7 +244,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
             |  ${(ignoreReasons, "\n")}""".render
       ignoreTest(testName, testDescription)(position)
     } else {
-      test(testName, label, testOps, unitTestModes, phantomOptions, logikaOptions, airFile)(position)
+      test(testName, label, testOps, unitTestModes, phantomOptions, logikaOptions, clean, airFile)(position)
     }
   }
 

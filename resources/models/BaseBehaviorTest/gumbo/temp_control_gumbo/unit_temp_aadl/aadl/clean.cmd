@@ -19,7 +19,7 @@ exit /B %errorlevel%
 import org.sireum._
 
 val hamrDir: Os.Path =
-  if (Os.cliArgs(0) == "unit_temp_aadl-sporadic") Os.slashDir.up / "hamr-gen"
+  if (Os.cliArgs.nonEmpty && Os.cliArgs(0) == "unit_temp_aadl-sporadic") Os.slashDir.up / "hamr-gen"
   else Os.slashDir.up / "hamr-gen-periodic"
 
 val slangDir = hamrDir / "slang"

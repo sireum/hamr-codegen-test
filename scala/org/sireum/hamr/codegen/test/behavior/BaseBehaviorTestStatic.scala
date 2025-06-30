@@ -12,6 +12,15 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
 
   val testDir = modelsDirs / "BaseBehaviorTest"
 
+  @pure def clean (p: Os.Path): () => B = {
+    val cleanCmd =
+      if ((p / "bin" / "clean.cmd").exists) p / "bin" / "clean.cmd"
+      else if ((p / "aadl" / "clean.cmd").exists) p / "aadl" / "clean.cmd"
+      else p / "clean.cmd"
+    assert (cleanCmd.exists, s"${cleanCmd} doesn't exist")
+    return () => proc"$cleanCmd".at(cleanCmd.up).run().ok
+  }
+
   "temp_control_simple_temp" in {
     // directory of model to use in this test
     val modelDir = testDir / "temp_control_simple_temp"
@@ -39,7 +48,8 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       phantomOptions = Some(st"${(phantomOps, " ")}".render),
       logikaOptions = logikaOptions,
       // include test modes from super (e.g. maybe from env var)
-      testModes = testModes :+ TestMode.generated_unit_tests
+      testModes = testModes :+ TestMode.generated_unit_tests,
+      clean = clean(modelDir)
     )
   }
 
@@ -62,7 +72,8 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       ),
       phantomOptions = None(),
       logikaOptions = logikaOptions,
-      testModes = testModes :+ TestMode.compile
+      testModes = testModes :+ TestMode.compile,
+      clean = clean(modelDir)
     )
   }
 
@@ -84,7 +95,8 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       ),
       phantomOptions = None(),
       logikaOptions = logikaOptions,
-      testModes = testModes :+ TestMode.compile
+      testModes = testModes :+ TestMode.compile,
+      clean = clean(modelDir)
     )
   }
 
@@ -106,7 +118,8 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
         phantomOptions = None(),
         logikaOptions = logikaOptions,
         // include test modes from super (e.g. maybe from env var)
-        testModes = testModes :+ TestMode.generated_unit_tests
+        testModes = testModes :+ TestMode.generated_unit_tests,
+        clean = clean(modelDir)
       )
     }
   }

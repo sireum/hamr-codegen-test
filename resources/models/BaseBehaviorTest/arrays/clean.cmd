@@ -18,7 +18,7 @@ exit /B %errorlevel%
 
 import org.sireum._
 
-val excludesVersion = ops.StringOps(Os.cliArgs(0)).contains("excludes")
+val excludesVersion: B = Os.cliArgs.nonEmpty && ops.StringOps(Os.cliArgs(0)).contains("excludes")
 
 val hamrDir = Os.slashDir / (if(excludesVersion) "hamr-excludes" else "hamr")
 val slangDir = hamrDir / "slang"
