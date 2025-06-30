@@ -36,9 +36,9 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     var testOptions = MicrokitBehaviorTests.baseOptions
 
     val cands = Os.Path.walk(aadlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
-    assert (cands.size <= 1, s"Found ${cands.size} JSON files under $aadlDir")
+    assert (cands.size == 1, s"Found ${cands.size} JSON files under $aadlDir")
 
-    assert ((cands(0).up.up.up / "hamr").exists, cands(0).up.up.up / "hamr")
+    assert ((cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${cands(0).up.up.up / "hamr"}")
 
     testOptions = testOptions(
       outputDir = Some((cands(0).up.up.up / "hamr").value),
