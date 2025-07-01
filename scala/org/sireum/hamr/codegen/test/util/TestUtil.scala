@@ -230,34 +230,39 @@ object TestUtil {
         }
 
         val l = scala.List(testOps.slangOutputDir, testOps.slangOutputCDir, testOps.sel4OutputDir).flatten(a => if (a.isEmpty) scala.List() else scala.List(Os.path(a.get).toUri))
-        val rootDir: Os.Path = Os.uriToPath(commonPath(l))
+        if (l.isEmpty) {
+          (None(), None(), None())
+        } else {
+          val rootDir: Os.Path = Os.uriToPath(commonPath(l))
 
-        // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
-        // so create a virtual drive to shorten the path
-        val _optSubstDrive: String = {
-          var i = 90
-          var cand: String = ""
-          while (i > 65) {
-            val d = Os.path(s"${C(i)}:")
-            if (!d.exists) {
-              cand = d.string
-              i = 65
+          // scalac.bat fails for long paths even when enabled (e.g. on github action windows 2019 nodes)
+          // so create a virtual drive to shorten the path
+          val _optSubstDrive: String = {
+            var i = 90
+            var cand: String = ""
+            while (i > 65) {
+              val d = Os.path(s"${C(i)}:")
+              if (!d.exists) {
+                cand = d.string
+                i = 65
+              }
+              i = i - 1
             }
-            i = i - 1
+            cand
           }
-          cand
-        }
-        println(s"Attempting subst of ${_optSubstDrive} for '${rootDir.string}'")
-        proc"subst ${_optSubstDrive} ${rootDir.string}".console.runCheck()
+          println(s"Attempting subst of ${_optSubstDrive} for '${rootDir.string}'")
+          proc"subst ${_optSubstDrive} ${rootDir.string}".console.runCheck()
 
-        optSubstDrive = Some(Os.path(_optSubstDrive))
-        assert(optSubstDrive.get.exists, s"Virtual drive ${optSubstDrive.get.string} doesn't exist")
+          optSubstDrive = Some(Os.path(_optSubstDrive))
+          assert(optSubstDrive.get.exists, s"Virtual drive ${optSubstDrive.get.string} doesn't exist")
 
-        def c(t: Option[String]): Option[Os.Path] = t match {
-          case Some(path) => Some(optSubstDrive.get / rootDir.relativize(Os.path(path)).value)
-          case _ => None()
+          def c(t: Option[String]): Option[Os.Path] = t match {
+            case Some(path) => Some(optSubstDrive.get / rootDir.relativize(Os.path(path)).value)
+            case _ => None()
+          }
+
+          ((c(testOps.slangOutputDir), c(testOps.slangOutputCDir), c(testOps.sel4OutputDir)))
         }
-        ((c(testOps.slangOutputDir), c(testOps.slangOutputCDir), c(testOps.sel4OutputDir)))
       }
     }
 
