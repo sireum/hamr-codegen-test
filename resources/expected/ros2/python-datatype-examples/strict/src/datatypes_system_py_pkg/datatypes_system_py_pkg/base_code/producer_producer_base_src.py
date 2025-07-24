@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from typing import Union
 import threading
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -34,7 +34,6 @@ class producer_producer_base(Node):
 
         self.cb_group_ = ReentrantCallbackGroup()
 
-        MsgType = Union[Boolean, Integer64, Float64, Character, String, Integer8, Integer16, Integer32, Unsigned8, Unsigned16, Unsigned32, Unsigned64, Float32, MyEnum, MyStructi, MyArrayOneDim, MyArrayUnbounded, MyArrayTwoDim]
         self.lock_ = threading.Lock()
 
         # Setting up connections
@@ -139,51 +138,48 @@ class producer_producer_base(Node):
             1)
 
         # timeTriggeredCaller callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggeredCaller, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggeredCaller, callback_group=self.cb_group_)
 
-    def timeTriggered(self):
-        pass
-
-        self.infrastructureOut_myBoolean = Queue()
-        self.applicationOut_myBoolean = Queue()
-        self.infrastructureOut_myInteger = Queue()
-        self.applicationOut_myInteger = Queue()
-        self.infrastructureOut_myFloat = Queue()
-        self.applicationOut_myFloat = Queue()
-        self.infrastructureOut_myCharacter = Queue()
-        self.applicationOut_myCharacter = Queue()
-        self.infrastructureOut_myString = Queue()
-        self.applicationOut_myString = Queue()
-        self.infrastructureOut_myInt8 = Queue()
-        self.applicationOut_myInt8 = Queue()
-        self.infrastructureOut_myInt16 = Queue()
-        self.applicationOut_myInt16 = Queue()
-        self.infrastructureOut_myInt32 = Queue()
-        self.applicationOut_myInt32 = Queue()
-        self.infrastructureOut_myInt64 = Queue()
-        self.applicationOut_myInt64 = Queue()
-        self.infrastructureOut_myUInt8 = Queue()
-        self.applicationOut_myUInt8 = Queue()
-        self.infrastructureOut_myUInt16 = Queue()
-        self.applicationOut_myUInt16 = Queue()
-        self.infrastructureOut_myUInt32 = Queue()
-        self.applicationOut_myUInt32 = Queue()
-        self.infrastructureOut_myUInt64 = Queue()
-        self.applicationOut_myUInt64 = Queue()
-        self.infrastructureOut_myFloat32 = Queue()
-        self.applicationOut_myFloat32 = Queue()
-        self.infrastructureOut_myFloat64 = Queue()
-        self.applicationOut_myFloat64 = Queue()
-        self.infrastructureOut_myEnum = Queue()
-        self.applicationOut_myEnum = Queue()
-        self.infrastructureOut_myStruct = Queue()
-        self.applicationOut_myStruct = Queue()
-        self.infrastructureOut_myArray1 = Queue()
-        self.applicationOut_myArray1 = Queue()
-        self.infrastructureOut_myArray2 = Queue()
-        self.applicationOut_myArray2 = Queue()
-        self.infrastructureOut_myArray3 = Queue()
-        self.applicationOut_myArray3 = Queue()
+        self.infrastructureOut_myBoolean = deque()
+        self.applicationOut_myBoolean = deque()
+        self.infrastructureOut_myInteger = deque()
+        self.applicationOut_myInteger = deque()
+        self.infrastructureOut_myFloat = deque()
+        self.applicationOut_myFloat = deque()
+        self.infrastructureOut_myCharacter = deque()
+        self.applicationOut_myCharacter = deque()
+        self.infrastructureOut_myString = deque()
+        self.applicationOut_myString = deque()
+        self.infrastructureOut_myInt8 = deque()
+        self.applicationOut_myInt8 = deque()
+        self.infrastructureOut_myInt16 = deque()
+        self.applicationOut_myInt16 = deque()
+        self.infrastructureOut_myInt32 = deque()
+        self.applicationOut_myInt32 = deque()
+        self.infrastructureOut_myInt64 = deque()
+        self.applicationOut_myInt64 = deque()
+        self.infrastructureOut_myUInt8 = deque()
+        self.applicationOut_myUInt8 = deque()
+        self.infrastructureOut_myUInt16 = deque()
+        self.applicationOut_myUInt16 = deque()
+        self.infrastructureOut_myUInt32 = deque()
+        self.applicationOut_myUInt32 = deque()
+        self.infrastructureOut_myUInt64 = deque()
+        self.applicationOut_myUInt64 = deque()
+        self.infrastructureOut_myFloat32 = deque()
+        self.applicationOut_myFloat32 = deque()
+        self.infrastructureOut_myFloat64 = deque()
+        self.applicationOut_myFloat64 = deque()
+        self.infrastructureOut_myEnum = deque()
+        self.applicationOut_myEnum = deque()
+        self.infrastructureOut_myStruct = deque()
+        self.applicationOut_myStruct = deque()
+        self.infrastructureOut_myArray1 = deque()
+        self.applicationOut_myArray1 = deque()
+        self.infrastructureOut_myArray2 = deque()
+        self.applicationOut_myArray2 = deque()
+        self.infrastructureOut_myArray3 = deque()
+        self.applicationOut_myArray3 = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -217,269 +213,192 @@ class producer_producer_base(Node):
             [self.applicationOut_myArray3, self.infrastructureOut_myArray3, self.sendOut_myArray3]
         ]
 
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def sendOut_myBoolean(self, msg):
         if type(msg) is Boolean:
-            typedMsg = Boolean()
-            typedMsg.data = msg
-            self.producer_producer_myBoolean_publisher_.publish(typedMsg)
+            self.producer_producer_myBoolean_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myInteger(self, msg):
         if type(msg) is Integer64:
-            typedMsg = Integer64()
-            typedMsg.data = msg
-            self.producer_producer_myInteger_publisher_.publish(typedMsg)
+            self.producer_producer_myInteger_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myFloat(self, msg):
         if type(msg) is Float64:
-            typedMsg = Float64()
-            typedMsg.data = msg
-            self.producer_producer_myFloat_publisher_.publish(typedMsg)
+            self.producer_producer_myFloat_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myCharacter(self, msg):
         if type(msg) is Character:
-            typedMsg = Character()
-            typedMsg.data = msg
-            self.producer_producer_myCharacter_publisher_.publish(typedMsg)
+            self.producer_producer_myCharacter_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myString(self, msg):
         if type(msg) is String:
-            typedMsg = String()
-            typedMsg.data = msg
-            self.producer_producer_myString_publisher_.publish(typedMsg)
+            self.producer_producer_myString_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myInt8(self, msg):
         if type(msg) is Integer8:
-            typedMsg = Integer8()
-            typedMsg.data = msg
-            self.producer_producer_myInt8_publisher_.publish(typedMsg)
+            self.producer_producer_myInt8_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myInt16(self, msg):
         if type(msg) is Integer16:
-            typedMsg = Integer16()
-            typedMsg.data = msg
-            self.producer_producer_myInt16_publisher_.publish(typedMsg)
+            self.producer_producer_myInt16_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myInt32(self, msg):
         if type(msg) is Integer32:
-            typedMsg = Integer32()
-            typedMsg.data = msg
-            self.producer_producer_myInt32_publisher_.publish(typedMsg)
+            self.producer_producer_myInt32_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myInt64(self, msg):
         if type(msg) is Integer64:
-            typedMsg = Integer64()
-            typedMsg.data = msg
-            self.producer_producer_myInt64_publisher_.publish(typedMsg)
+            self.producer_producer_myInt64_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myUInt8(self, msg):
         if type(msg) is Unsigned8:
-            typedMsg = Unsigned8()
-            typedMsg.data = msg
-            self.producer_producer_myUInt8_publisher_.publish(typedMsg)
+            self.producer_producer_myUInt8_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myUInt16(self, msg):
         if type(msg) is Unsigned16:
-            typedMsg = Unsigned16()
-            typedMsg.data = msg
-            self.producer_producer_myUInt16_publisher_.publish(typedMsg)
+            self.producer_producer_myUInt16_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myUInt32(self, msg):
         if type(msg) is Unsigned32:
-            typedMsg = Unsigned32()
-            typedMsg.data = msg
-            self.producer_producer_myUInt32_publisher_.publish(typedMsg)
+            self.producer_producer_myUInt32_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myUInt64(self, msg):
         if type(msg) is Unsigned64:
-            typedMsg = Unsigned64()
-            typedMsg.data = msg
-            self.producer_producer_myUInt64_publisher_.publish(typedMsg)
+            self.producer_producer_myUInt64_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myFloat32(self, msg):
         if type(msg) is Float32:
-            typedMsg = Float32()
-            typedMsg.data = msg
-            self.producer_producer_myFloat32_publisher_.publish(typedMsg)
+            self.producer_producer_myFloat32_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myFloat64(self, msg):
         if type(msg) is Float64:
-            typedMsg = Float64()
-            typedMsg.data = msg
-            self.producer_producer_myFloat64_publisher_.publish(typedMsg)
+            self.producer_producer_myFloat64_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myEnum(self, msg):
         if type(msg) is MyEnum:
-            typedMsg = MyEnum()
-            typedMsg.data = msg
-            self.producer_producer_myEnum_publisher_.publish(typedMsg)
+            self.producer_producer_myEnum_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myStruct(self, msg):
         if type(msg) is MyStructi:
-            typedMsg = MyStructi()
-            typedMsg.data = msg
-            self.producer_producer_myStruct_publisher_.publish(typedMsg)
+            self.producer_producer_myStruct_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myArray1(self, msg):
         if type(msg) is MyArrayOneDim:
-            typedMsg = MyArrayOneDim()
-            typedMsg.data = msg
-            self.producer_producer_myArray1_publisher_.publish(typedMsg)
+            self.producer_producer_myArray1_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myArray2(self, msg):
         if type(msg) is MyArrayUnbounded:
-            typedMsg = MyArrayUnbounded()
-            typedMsg.data = msg
-            self.producer_producer_myArray2_publisher_.publish(typedMsg)
+            self.producer_producer_myArray2_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_myArray3(self, msg):
         if type(msg) is MyArrayTwoDim:
-            typedMsg = MyArrayTwoDim()
-            typedMsg.data = msg
-            self.producer_producer_myArray3_publisher_.publish(typedMsg)
+            self.producer_producer_myArray3_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def put_myBoolean(self, msg):
-        typedMsg = Boolean()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myBoolean, typedMsg)
+        self.enqueue(self.applicationOut_myBoolean, msg)
 
     def put_myInteger(self, msg):
-        typedMsg = Integer64()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myInteger, typedMsg)
+        self.enqueue(self.applicationOut_myInteger, msg)
 
     def put_myFloat(self, msg):
-        typedMsg = Float64()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myFloat, typedMsg)
+        self.enqueue(self.applicationOut_myFloat, msg)
 
     def put_myCharacter(self, msg):
-        typedMsg = Character()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myCharacter, typedMsg)
+        self.enqueue(self.applicationOut_myCharacter, msg)
 
     def put_myString(self, msg):
-        typedMsg = String()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myString, typedMsg)
+        self.enqueue(self.applicationOut_myString, msg)
 
     def put_myInt8(self, msg):
-        typedMsg = Integer8()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myInt8, typedMsg)
+        self.enqueue(self.applicationOut_myInt8, msg)
 
     def put_myInt16(self, msg):
-        typedMsg = Integer16()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myInt16, typedMsg)
+        self.enqueue(self.applicationOut_myInt16, msg)
 
     def put_myInt32(self, msg):
-        typedMsg = Integer32()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myInt32, typedMsg)
+        self.enqueue(self.applicationOut_myInt32, msg)
 
     def put_myInt64(self, msg):
-        typedMsg = Integer64()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myInt64, typedMsg)
+        self.enqueue(self.applicationOut_myInt64, msg)
 
     def put_myUInt8(self, msg):
-        typedMsg = Unsigned8()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myUInt8, typedMsg)
+        self.enqueue(self.applicationOut_myUInt8, msg)
 
     def put_myUInt16(self, msg):
-        typedMsg = Unsigned16()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myUInt16, typedMsg)
+        self.enqueue(self.applicationOut_myUInt16, msg)
 
     def put_myUInt32(self, msg):
-        typedMsg = Unsigned32()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myUInt32, typedMsg)
+        self.enqueue(self.applicationOut_myUInt32, msg)
 
     def put_myUInt64(self, msg):
-        typedMsg = Unsigned64()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myUInt64, typedMsg)
+        self.enqueue(self.applicationOut_myUInt64, msg)
 
     def put_myFloat32(self, msg):
-        typedMsg = Float32()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myFloat32, typedMsg)
+        self.enqueue(self.applicationOut_myFloat32, msg)
 
     def put_myFloat64(self, msg):
-        typedMsg = Float64()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myFloat64, typedMsg)
+        self.enqueue(self.applicationOut_myFloat64, msg)
 
     def put_myEnum(self, msg):
-        typedMsg = MyEnum()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myEnum, typedMsg)
+        self.enqueue(self.applicationOut_myEnum, msg)
 
     def put_myStruct(self, msg):
-        typedMsg = MyStructi()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myStruct, typedMsg)
+        self.enqueue(self.applicationOut_myStruct, msg)
 
     def put_myArray1(self, msg):
-        typedMsg = MyArrayOneDim()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myArray1, typedMsg)
+        self.enqueue(self.applicationOut_myArray1, msg)
 
     def put_myArray2(self, msg):
-        typedMsg = MyArrayUnbounded()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myArray2, typedMsg)
+        self.enqueue(self.applicationOut_myArray2, msg)
 
     def put_myArray3(self, msg):
-        typedMsg = MyArrayTwoDim()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_myArray3, typedMsg)
+        self.enqueue(self.applicationOut_myArray3, msg)
 
     def timeTriggeredCaller(self):
         self.receiveInputs()
@@ -489,33 +408,33 @@ class producer_producer_base(Node):
     def receiveInputs(self):
         for port in self.inDataPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
-                self.enqueue(*port[1], msg)
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
+                self.enqueue(port[1], msg)
 
         for port in self.inEventPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 self.enqueue(port[1], msg)
 
     def enqueue(self, queue, val):
-        if queue.size() >= 1:
+        if len(queue) >= 1:
             queue.pop()
-        queue.push(val)
+        queue.append(val)
 
     def sendOutputs(self):
         for port in self.outPortTupleVector:
             applicationQueue = port[0]
-            if applicationQueue.size() != 0:
-                msg = applicationQueue.front()
+            if len(applicationQueue) != 0:
+                msg = applicationQueue[0]
                 applicationQueue.pop()
                 self.enqueue(port[1], msg)
 
         for port in self.outPortTupleVector:
             infrastructureQueue = port[1]
-            if infrastructureQueue.size() != 0:
-                msg = infrastructureQueue.front()
+            if len(infrastructureQueue) != 0:
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 (port[2])(msg)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from rclpy.callback_groups import ReentrantCallbackGroup
 from building_control_py_pkg_interfaces.msg import Temperatureimpl
 from building_control_py_pkg_interfaces.msg import Empty
@@ -28,22 +28,19 @@ class tcp_tempSensor_base(Node):
             1)
 
         # timeTriggered callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggered, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggered, callback_group=self.cb_group_)
 
     def timeTriggered(self):
-        pass
+        raise NotImplementedError("Subclasses must implement this method")
 
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def put_currentTemp(self, msg):
-        typedMsg = Temperatureimpl()
-        typedMsg.data = msg
-        self.tcp_tempSensor_currentTemp_publisher_.publish(typedMsg)
+        self.tcp_tempSensor_currentTemp_publisher_.publish(msg)
 
     def put_tempChanged(self):
-        typedMsg = Empty()
-
-        self.tcp_tempSensor_tempChanged_publisher_.publish(typedMsg)
+        msg = self.Empty()
+        self.tcp_tempSensor_tempChanged_publisher_.publish(msg)
 

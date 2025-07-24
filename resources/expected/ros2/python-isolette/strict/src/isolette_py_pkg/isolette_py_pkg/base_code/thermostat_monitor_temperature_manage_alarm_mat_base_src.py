@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from typing import Union
 import threading
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -20,7 +20,6 @@ class thermostat_monitor_temperature_manage_alarm_mat_base(Node):
 
         self.cb_group_ = ReentrantCallbackGroup()
 
-        MsgType = Union[TempWstatusimpl, Tempimpl, MonitorMode, OnOff]
         self.lock_ = threading.Lock()
 
         # Setting up connections
@@ -58,10 +57,19 @@ class thermostat_monitor_temperature_manage_alarm_mat_base(Node):
             1)
 
         # timeTriggeredCaller callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggeredCaller, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggeredCaller, callback_group=self.cb_group_)
 
-    def timeTriggered(self):
-        pass
+        self.infrastructureIn_current_tempWstatus = deque()
+        self.applicationIn_current_tempWstatus = deque()
+        self.infrastructureIn_lower_alarm_temp = deque()
+        self.applicationIn_lower_alarm_temp = deque()
+        self.infrastructureIn_upper_alarm_temp = deque()
+        self.applicationIn_upper_alarm_temp = deque()
+        self.infrastructureIn_monitor_mode = deque()
+        self.applicationIn_monitor_mode = deque()
+
+        self.infrastructureOut_alarm_control = deque()
+        self.applicationOut_alarm_control = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -69,7 +77,7 @@ class thermostat_monitor_temperature_manage_alarm_mat_base(Node):
             [self.infrastructureIn_lower_alarm_temp, self.applicationIn_lower_alarm_temp],
             [self.infrastructureIn_upper_alarm_temp, self.applicationIn_upper_alarm_temp],
             [self.infrastructureIn_monitor_mode, self.applicationIn_monitor_mode]
-         ]
+        ]
 
         # Used by receiveInputs
         self.inEventPortTupleVector = [
@@ -77,77 +85,72 @@ class thermostat_monitor_temperature_manage_alarm_mat_base(Node):
             [self.infrastructureIn_lower_alarm_temp, self.applicationIn_lower_alarm_temp],
             [self.infrastructureIn_upper_alarm_temp, self.applicationIn_upper_alarm_temp],
             [self.infrastructureIn_monitor_mode, self.applicationIn_monitor_mode]
-          ]
-
-        self.infrastructureIn_current_tempWstatus = Queue()
-        self.applicationIn_current_tempWstatus = Queue()
-        self.infrastructureIn_lower_alarm_temp = Queue()
-        self.applicationIn_lower_alarm_temp = Queue()
-        self.infrastructureIn_upper_alarm_temp = Queue()
-        self.applicationIn_upper_alarm_temp = Queue()
-        self.infrastructureIn_monitor_mode = Queue()
-        self.applicationIn_monitor_mode = Queue()
-
-        self.infrastructureOut_alarm_control = Queue()
-        self.applicationOut_alarm_control = Queue()
+        ]
 
         # Used by sendOutputs
         self.outPortTupleVector = [
             [self.applicationOut_alarm_control, self.infrastructureOut_alarm_control, self.sendOut_alarm_control]
-         ]
+        ]
+
+    def init_current_tempWstatus(self, val):
+        self.enqueue(self.infrastructureIn_current_tempWstatus, val)
+
+
+    def init_lower_alarm_temp(self, val):
+        self.enqueue(self.infrastructureIn_lower_alarm_temp, val)
+
+
+    def init_upper_alarm_temp(self, val):
+        self.enqueue(self.infrastructureIn_upper_alarm_temp, val)
+
+
+    def init_monitor_mode(self, val):
+        self.enqueue(self.infrastructureIn_monitor_mode, val)
+
+
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
 
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def accept_current_tempWstatus(self, msg):
-        typedMsg = TempWstatusimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_current_tempWstatus, msg)
+        self.enqueue(self.infrastructureIn_current_tempWstatus, msg)
 
     def accept_lower_alarm_temp(self, msg):
-        typedMsg = Tempimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_lower_alarm_temp, msg)
+        self.enqueue(self.infrastructureIn_lower_alarm_temp, msg)
 
     def accept_upper_alarm_temp(self, msg):
-        typedMsg = Tempimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_upper_alarm_temp, msg)
+        self.enqueue(self.infrastructureIn_upper_alarm_temp, msg)
 
     def accept_monitor_mode(self, msg):
-        typedMsg = MonitorMode()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_monitor_mode, msg)
+        self.enqueue(self.infrastructureIn_monitor_mode, msg)
 
     def get_current_tempWstatus(self):
-        msg = applicationIn_current_tempWstatus.front()
-        return get(msg)
+        msg = self.applicationIn_current_tempWstatus[0]
+        return msg
 
     def get_lower_alarm_temp(self):
-        msg = applicationIn_lower_alarm_temp.front()
-        return get(msg)
+        msg = self.applicationIn_lower_alarm_temp[0]
+        return msg
 
     def get_upper_alarm_temp(self):
-        msg = applicationIn_upper_alarm_temp.front()
-        return get(msg)
+        msg = self.applicationIn_upper_alarm_temp[0]
+        return msg
 
     def get_monitor_mode(self):
-        msg = applicationIn_monitor_mode.front()
-        return get(msg)
+        msg = self.applicationIn_monitor_mode[0]
+        return msg
 
     def sendOut_alarm_control(self, msg):
         if type(msg) is OnOff:
-            typedMsg = OnOff()
-            typedMsg.data = msg
-            self.thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_.publish(typedMsg)
+            self.thermostat_monitor_temperature_manage_alarm_mat_alarm_control_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port alarm_control.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def put_alarm_control(self, msg):
-        typedMsg = OnOff()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_alarm_control, typedMsg)
+        self.enqueue(self.applicationOut_alarm_control, msg)
 
     def timeTriggeredCaller(self):
         self.receiveInputs()
@@ -157,33 +160,33 @@ class thermostat_monitor_temperature_manage_alarm_mat_base(Node):
     def receiveInputs(self):
         for port in self.inDataPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
-                self.enqueue(*port[1], msg)
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
+                self.enqueue(port[1], msg)
 
         for port in self.inEventPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 self.enqueue(port[1], msg)
 
     def enqueue(self, queue, val):
-        if queue.size() >= 1:
+        if len(queue) >= 1:
             queue.pop()
-        queue.push(val)
+        queue.append(val)
 
     def sendOutputs(self):
         for port in self.outPortTupleVector:
             applicationQueue = port[0]
-            if applicationQueue.size() != 0:
-                msg = applicationQueue.front()
+            if len(applicationQueue) != 0:
+                msg = applicationQueue[0]
                 applicationQueue.pop()
                 self.enqueue(port[1], msg)
 
         for port in self.outPortTupleVector:
             infrastructureQueue = port[1]
-            if infrastructureQueue.size() != 0:
-                msg = infrastructureQueue.front()
+            if len(infrastructureQueue) != 0:
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 (port[2])(msg)

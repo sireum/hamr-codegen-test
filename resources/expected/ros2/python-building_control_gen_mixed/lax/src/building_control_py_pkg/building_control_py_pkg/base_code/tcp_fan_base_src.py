@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from building_control_py_pkg.user_code.tcp_fan_src import *
 from rclpy.callback_groups import ReentrantCallbackGroup
 from building_control_py_pkg_interfaces.msg import FanCmd
@@ -30,15 +30,15 @@ class tcp_fan_base(Node):
             "tcp_tempControl_fanAck",
             1)
 
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def put_fanAck(self, msg):
-        typedMsg = FanAck()
-        typedMsg.data = msg
-        self.tcp_fan_fanAck_publisher_.publish(typedMsg)
-
+        self.tcp_fan_fanAck_publisher_.publish(msg)
 
     #=================================================
     #  C o m p u t e    E n t r y    P o i n t

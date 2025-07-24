@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from building_control_py_pkg.user_code.tcp_tempControl_src import *
 from rclpy.callback_groups import ReentrantCallbackGroup
 from building_control_py_pkg_interfaces.msg import Temperatureimpl
@@ -54,25 +54,29 @@ class tcp_tempControl_base(Node):
             "tcp_tempControl_fanCmd",
             1)
 
+        self.currentTemp_msg_holder = None
+
+    def init_currentTemp(self, val):
+        self.currentTemp_msg_holder = val
+
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def handle_currentTemp(self, msg):
-        typedMsg = Temperatureimpl()
-        typedMsg.data = msg
-        self.currentTemp_msg_holder = typedMsg
+        self.currentTemp_msg_holder = msg
 
     def get_currentTemp(self):
         return self.currentTemp_msg_holder
 
     def event_handle_tempChanged(self, msg):
-         handle_tempChanged()
+        self.handle_tempChanged()
 
     def put_fanCmd(self, msg):
-        typedMsg = FanCmd()
-        typedMsg.data = msg
-        self.tcp_tempControl_fanCmd_publisher_.publish(typedMsg)
+        self.tcp_tempControl_fanCmd_publisher_.publish(msg)
 
 
     #=================================================

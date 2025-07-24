@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from typing import Union
 import threading
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -21,7 +21,6 @@ class thermostat_regulate_temperature_manage_regulator_interface_mrit_base(Node)
 
         self.cb_group_ = ReentrantCallbackGroup()
 
-        MsgType = Union[TempWstatusimpl, RegulatorMode, Tempimpl, Status, FailureFlagimpl]
         self.lock_ = threading.Lock()
 
         # Setting up connections
@@ -79,10 +78,27 @@ class thermostat_regulate_temperature_manage_regulator_interface_mrit_base(Node)
             1)
 
         # timeTriggeredCaller callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggeredCaller, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggeredCaller, callback_group=self.cb_group_)
 
-    def timeTriggered(self):
-        pass
+        self.infrastructureIn_current_tempWstatus = deque()
+        self.applicationIn_current_tempWstatus = deque()
+        self.infrastructureIn_lower_desired_tempWstatus = deque()
+        self.applicationIn_lower_desired_tempWstatus = deque()
+        self.infrastructureIn_upper_desired_tempWstatus = deque()
+        self.applicationIn_upper_desired_tempWstatus = deque()
+        self.infrastructureIn_regulator_mode = deque()
+        self.applicationIn_regulator_mode = deque()
+
+        self.infrastructureOut_upper_desired_temp = deque()
+        self.applicationOut_upper_desired_temp = deque()
+        self.infrastructureOut_lower_desired_temp = deque()
+        self.applicationOut_lower_desired_temp = deque()
+        self.infrastructureOut_displayed_temp = deque()
+        self.applicationOut_displayed_temp = deque()
+        self.infrastructureOut_regulator_status = deque()
+        self.applicationOut_regulator_status = deque()
+        self.infrastructureOut_interface_failure = deque()
+        self.applicationOut_interface_failure = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -90,7 +106,7 @@ class thermostat_regulate_temperature_manage_regulator_interface_mrit_base(Node)
             [self.infrastructureIn_lower_desired_tempWstatus, self.applicationIn_lower_desired_tempWstatus],
             [self.infrastructureIn_upper_desired_tempWstatus, self.applicationIn_upper_desired_tempWstatus],
             [self.infrastructureIn_regulator_mode, self.applicationIn_regulator_mode]
-         ]
+        ]
 
         # Used by receiveInputs
         self.inEventPortTupleVector = [
@@ -98,27 +114,7 @@ class thermostat_regulate_temperature_manage_regulator_interface_mrit_base(Node)
             [self.infrastructureIn_lower_desired_tempWstatus, self.applicationIn_lower_desired_tempWstatus],
             [self.infrastructureIn_upper_desired_tempWstatus, self.applicationIn_upper_desired_tempWstatus],
             [self.infrastructureIn_regulator_mode, self.applicationIn_regulator_mode]
-          ]
-
-        self.infrastructureIn_current_tempWstatus = Queue()
-        self.applicationIn_current_tempWstatus = Queue()
-        self.infrastructureIn_lower_desired_tempWstatus = Queue()
-        self.applicationIn_lower_desired_tempWstatus = Queue()
-        self.infrastructureIn_upper_desired_tempWstatus = Queue()
-        self.applicationIn_upper_desired_tempWstatus = Queue()
-        self.infrastructureIn_regulator_mode = Queue()
-        self.applicationIn_regulator_mode = Queue()
-
-        self.infrastructureOut_upper_desired_temp = Queue()
-        self.applicationOut_upper_desired_temp = Queue()
-        self.infrastructureOut_lower_desired_temp = Queue()
-        self.applicationOut_lower_desired_temp = Queue()
-        self.infrastructureOut_displayed_temp = Queue()
-        self.applicationOut_displayed_temp = Queue()
-        self.infrastructureOut_regulator_status = Queue()
-        self.applicationOut_regulator_status = Queue()
-        self.infrastructureOut_interface_failure = Queue()
-        self.applicationOut_interface_failure = Queue()
+        ]
 
         # Used by sendOutputs
         self.outPortTupleVector = [
@@ -127,112 +123,103 @@ class thermostat_regulate_temperature_manage_regulator_interface_mrit_base(Node)
             [self.applicationOut_displayed_temp, self.infrastructureOut_displayed_temp, self.sendOut_displayed_temp],
             [self.applicationOut_regulator_status, self.infrastructureOut_regulator_status, self.sendOut_regulator_status],
             [self.applicationOut_interface_failure, self.infrastructureOut_interface_failure, self.sendOut_interface_failure]
-         ]
+        ]
+
+    def init_current_tempWstatus(self, val):
+        self.enqueue(self.infrastructureIn_current_tempWstatus, val)
+
+
+    def init_lower_desired_tempWstatus(self, val):
+        self.enqueue(self.infrastructureIn_lower_desired_tempWstatus, val)
+
+
+    def init_upper_desired_tempWstatus(self, val):
+        self.enqueue(self.infrastructureIn_upper_desired_tempWstatus, val)
+
+
+    def init_regulator_mode(self, val):
+        self.enqueue(self.infrastructureIn_regulator_mode, val)
+
+
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
 
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def accept_current_tempWstatus(self, msg):
-        typedMsg = TempWstatusimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_current_tempWstatus, msg)
+        self.enqueue(self.infrastructureIn_current_tempWstatus, msg)
 
     def accept_lower_desired_tempWstatus(self, msg):
-        typedMsg = TempWstatusimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_lower_desired_tempWstatus, msg)
+        self.enqueue(self.infrastructureIn_lower_desired_tempWstatus, msg)
 
     def accept_upper_desired_tempWstatus(self, msg):
-        typedMsg = TempWstatusimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_upper_desired_tempWstatus, msg)
+        self.enqueue(self.infrastructureIn_upper_desired_tempWstatus, msg)
 
     def accept_regulator_mode(self, msg):
-        typedMsg = RegulatorMode()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_regulator_mode, msg)
+        self.enqueue(self.infrastructureIn_regulator_mode, msg)
 
     def get_current_tempWstatus(self):
-        msg = applicationIn_current_tempWstatus.front()
-        return get(msg)
+        msg = self.applicationIn_current_tempWstatus[0]
+        return msg
 
     def get_lower_desired_tempWstatus(self):
-        msg = applicationIn_lower_desired_tempWstatus.front()
-        return get(msg)
+        msg = self.applicationIn_lower_desired_tempWstatus[0]
+        return msg
 
     def get_upper_desired_tempWstatus(self):
-        msg = applicationIn_upper_desired_tempWstatus.front()
-        return get(msg)
+        msg = self.applicationIn_upper_desired_tempWstatus[0]
+        return msg
 
     def get_regulator_mode(self):
-        msg = applicationIn_regulator_mode.front()
-        return get(msg)
+        msg = self.applicationIn_regulator_mode[0]
+        return msg
 
     def sendOut_upper_desired_temp(self, msg):
         if type(msg) is Tempimpl:
-            typedMsg = Tempimpl()
-            typedMsg.data = msg
-            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_temp_publisher_.publish(typedMsg)
+            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_temp_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port upper_desired_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_lower_desired_temp(self, msg):
         if type(msg) is Tempimpl:
-            typedMsg = Tempimpl()
-            typedMsg.data = msg
-            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_temp_publisher_.publish(typedMsg)
+            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_temp_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port lower_desired_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_displayed_temp(self, msg):
         if type(msg) is Tempimpl:
-            typedMsg = Tempimpl()
-            typedMsg.data = msg
-            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_displayed_temp_publisher_.publish(typedMsg)
+            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_displayed_temp_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port displayed_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_regulator_status(self, msg):
         if type(msg) is Status:
-            typedMsg = Status()
-            typedMsg.data = msg
-            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_status_publisher_.publish(typedMsg)
+            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_status_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port regulator_status.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_interface_failure(self, msg):
         if type(msg) is FailureFlagimpl:
-            typedMsg = FailureFlagimpl()
-            typedMsg.data = msg
-            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_interface_failure_publisher_.publish(typedMsg)
+            self.thermostat_regulate_temperature_manage_regulator_interface_mrit_interface_failure_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port interface_failure.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def put_upper_desired_temp(self, msg):
-        typedMsg = Tempimpl()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_upper_desired_temp, typedMsg)
+        self.enqueue(self.applicationOut_upper_desired_temp, msg)
 
     def put_lower_desired_temp(self, msg):
-        typedMsg = Tempimpl()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_lower_desired_temp, typedMsg)
+        self.enqueue(self.applicationOut_lower_desired_temp, msg)
 
     def put_displayed_temp(self, msg):
-        typedMsg = Tempimpl()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_displayed_temp, typedMsg)
+        self.enqueue(self.applicationOut_displayed_temp, msg)
 
     def put_regulator_status(self, msg):
-        typedMsg = Status()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_regulator_status, typedMsg)
+        self.enqueue(self.applicationOut_regulator_status, msg)
 
     def put_interface_failure(self, msg):
-        typedMsg = FailureFlagimpl()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_interface_failure, typedMsg)
+        self.enqueue(self.applicationOut_interface_failure, msg)
 
     def timeTriggeredCaller(self):
         self.receiveInputs()
@@ -242,33 +229,33 @@ class thermostat_regulate_temperature_manage_regulator_interface_mrit_base(Node)
     def receiveInputs(self):
         for port in self.inDataPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
-                self.enqueue(*port[1], msg)
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
+                self.enqueue(port[1], msg)
 
         for port in self.inEventPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 self.enqueue(port[1], msg)
 
     def enqueue(self, queue, val):
-        if queue.size() >= 1:
+        if len(queue) >= 1:
             queue.pop()
-        queue.push(val)
+        queue.append(val)
 
     def sendOutputs(self):
         for port in self.outPortTupleVector:
             applicationQueue = port[0]
-            if applicationQueue.size() != 0:
-                msg = applicationQueue.front()
+            if len(applicationQueue) != 0:
+                msg = applicationQueue[0]
                 applicationQueue.pop()
                 self.enqueue(port[1], msg)
 
         for port in self.outPortTupleVector:
             infrastructureQueue = port[1]
-            if infrastructureQueue.size() != 0:
-                msg = infrastructureQueue.front()
+            if len(infrastructureQueue) != 0:
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 (port[2])(msg)

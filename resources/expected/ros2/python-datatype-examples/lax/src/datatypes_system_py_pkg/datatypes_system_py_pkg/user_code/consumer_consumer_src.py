@@ -1,102 +1,136 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
+from rosidl_runtime_py.convert import message_to_yaml
+from datatypes_system_py_pkg.base_code.consumer_consumer_base_src import consumer_consumer_base
+from datatypes_system_py_pkg_interfaces.msg import Boolean
+from datatypes_system_py_pkg_interfaces.msg import Integer64
+from datatypes_system_py_pkg_interfaces.msg import Float64
+from datatypes_system_py_pkg_interfaces.msg import Character
+from datatypes_system_py_pkg_interfaces.msg import String
+from datatypes_system_py_pkg_interfaces.msg import Integer8
+from datatypes_system_py_pkg_interfaces.msg import Integer16
+from datatypes_system_py_pkg_interfaces.msg import Integer32
+from datatypes_system_py_pkg_interfaces.msg import Unsigned8
+from datatypes_system_py_pkg_interfaces.msg import Unsigned16
+from datatypes_system_py_pkg_interfaces.msg import Unsigned32
+from datatypes_system_py_pkg_interfaces.msg import Unsigned64
+from datatypes_system_py_pkg_interfaces.msg import Float32
+from datatypes_system_py_pkg_interfaces.msg import MyEnum
+from datatypes_system_py_pkg_interfaces.msg import MyStructi
+from datatypes_system_py_pkg_interfaces.msg import MyArrayOneDim
+from datatypes_system_py_pkg_interfaces.msg import MyArrayUnbounded
+from datatypes_system_py_pkg_interfaces.msg import MyArrayTwoDim
 from datatypes_system_py_pkg.base_code.enum_converter import *
 
 #===========================================================
 # This file will not be overwritten when re-running Codegen
 #===========================================================
+class consumer_consumer(consumer_consumer_base):
+    def __init__(self):
+        super().__init__()
+        # invoke initialize entry point
+        self.initialize()
+
+        self.get_logger().info("consumer_consumer infrastructure set up")
 
 #=================================================
 #  I n i t i a l i z e    E n t r y    P o i n t
 #=================================================
-def initialize(node):
-    node.get_logger().info("Initialize Entry Point invoked")
+    def initialize(self):
+        self.get_logger().info("Initialize Entry Point invoked")
 
-    # Initialize the node
-    node.handle_myBoolean = handle_myBoolean
-    node.handle_myInteger = handle_myInteger
-    node.handle_myFloat = handle_myFloat
-    node.handle_myCharacter = handle_myCharacter
-    node.handle_myString = handle_myString
-    node.handle_myInt8 = handle_myInt8
-    node.handle_myInt16 = handle_myInt16
-    node.handle_myInt32 = handle_myInt32
-    node.handle_myInt64 = handle_myInt64
-    node.handle_myUInt8 = handle_myUInt8
-    node.handle_myUInt16 = handle_myUInt16
-    node.handle_myUInt32 = handle_myUInt32
-    node.handle_myUInt64 = handle_myUInt64
-    node.handle_myFloat32 = handle_myFloat32
-    node.handle_myFloat64 = handle_myFloat64
-    node.handle_myEnum = handle_myEnum
-    node.handle_myStruct = handle_myStruct
-    node.handle_myArray1 = handle_myArray1
-    node.handle_myArray2 = handle_myArray2
-    node.handle_myArray3 = handle_myArray3
+        # Initialize the node
+
+        # Initialize the node's incoming data port values here
+
 
 #=================================================
 #  C o m p u t e    E n t r y    P o i n t
 #=================================================
-def handle_myBoolean(msg):
-    pass # Handle myBoolean msg
+    def message_to_string(self, msg):
+        yaml_str = message_to_yaml(msg)
+        return yaml_str
 
-def handle_myInteger(msg):
-    pass # Handle myInteger msg
+    def handle_myBoolean(self, msg):
+        # Handle myBoolean msg
+        self.get_logger().info(f"Received myBoolean: {self.message_to_string(msg)}")
 
-def handle_myFloat(msg):
-    pass # Handle myFloat msg
+    def handle_myInteger(self, msg):
+        # Handle myInteger msg
+        self.get_logger().info(f"Received myInteger: {self.message_to_string(msg)}")
 
-def handle_myCharacter(msg):
-    pass # Handle myCharacter msg
+    def handle_myFloat(self, msg):
+        # Handle myFloat msg
+        self.get_logger().info(f"Received myFloat: {self.message_to_string(msg)}")
 
-def handle_myString(msg):
-    pass # Handle myString msg
+    def handle_myCharacter(self, msg):
+        # Handle myCharacter msg
+        self.get_logger().info(f"Received myCharacter: {self.message_to_string(msg)}")
 
-def handle_myInt8(msg):
-    pass # Handle myInt8 msg
+    def handle_myString(self, msg):
+        # Handle myString msg
+        self.get_logger().info(f"Received myString: {self.message_to_string(msg)}")
 
-def handle_myInt16(msg):
-    pass # Handle myInt16 msg
+    def handle_myInt8(self, msg):
+        # Handle myInt8 msg
+        self.get_logger().info(f"Received myInt8: {self.message_to_string(msg)}")
 
-def handle_myInt32(msg):
-    pass # Handle myInt32 msg
+    def handle_myInt16(self, msg):
+        # Handle myInt16 msg
+        self.get_logger().info(f"Received myInt16: {self.message_to_string(msg)}")
 
-def handle_myInt64(msg):
-    pass # Handle myInt64 msg
+    def handle_myInt32(self, msg):
+        # Handle myInt32 msg
+        self.get_logger().info(f"Received myInt32: {self.message_to_string(msg)}")
 
-def handle_myUInt8(msg):
-    pass # Handle myUInt8 msg
+    def handle_myInt64(self, msg):
+        # Handle myInt64 msg
+        self.get_logger().info(f"Received myInt64: {self.message_to_string(msg)}")
 
-def handle_myUInt16(msg):
-    pass # Handle myUInt16 msg
+    def handle_myUInt8(self, msg):
+        # Handle myUInt8 msg
+        self.get_logger().info(f"Received myUInt8: {self.message_to_string(msg)}")
 
-def handle_myUInt32(msg):
-    pass # Handle myUInt32 msg
+    def handle_myUInt16(self, msg):
+        # Handle myUInt16 msg
+        self.get_logger().info(f"Received myUInt16: {self.message_to_string(msg)}")
 
-def handle_myUInt64(msg):
-    pass # Handle myUInt64 msg
+    def handle_myUInt32(self, msg):
+        # Handle myUInt32 msg
+        self.get_logger().info(f"Received myUInt32: {self.message_to_string(msg)}")
 
-def handle_myFloat32(msg):
-    pass # Handle myFloat32 msg
+    def handle_myUInt64(self, msg):
+        # Handle myUInt64 msg
+        self.get_logger().info(f"Received myUInt64: {self.message_to_string(msg)}")
 
-def handle_myFloat64(msg):
-    pass # Handle myFloat64 msg
+    def handle_myFloat32(self, msg):
+        # Handle myFloat32 msg
+        self.get_logger().info(f"Received myFloat32: {self.message_to_string(msg)}")
 
-def handle_myEnum(msg):
-    pass # Handle myEnum msg
+    def handle_myFloat64(self, msg):
+        # Handle myFloat64 msg
+        self.get_logger().info(f"Received myFloat64: {self.message_to_string(msg)}")
 
-def handle_myStruct(msg):
-    pass # Handle myStruct msg
+    def handle_myEnum(self, msg):
+        # Handle myEnum msg
+        self.get_logger().info(f"Received myEnum: {self.message_to_string(msg)}")
 
-def handle_myArray1(msg):
-    pass # Handle myArray1 msg
+    def handle_myStruct(self, msg):
+        # Handle myStruct msg
+        self.get_logger().info(f"Received myStruct: {self.message_to_string(msg)}")
 
-def handle_myArray2(msg):
-    pass # Handle myArray2 msg
+    def handle_myArray1(self, msg):
+        # Handle myArray1 msg
+        self.get_logger().info(f"Received myArray1: {self.message_to_string(msg)}")
 
-def handle_myArray3(msg):
-    pass # Handle myArray3 msg
+    def handle_myArray2(self, msg):
+        # Handle myArray2 msg
+        self.get_logger().info(f"Received myArray2: {self.message_to_string(msg)}")
+
+    def handle_myArray3(self, msg):
+        # Handle myArray3 msg
+        self.get_logger().info(f"Received myArray3: {self.message_to_string(msg)}")
 
 
 #=================================================

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from fan_in_fan_out_system_py_pkg.user_code.fanIn_consumer_src import *
 from rclpy.callback_groups import ReentrantCallbackGroup
 from fan_in_fan_out_system_py_pkg_interfaces.msg import Integer64
@@ -23,6 +23,9 @@ class fanIn_consumer_base(Node):
             self.handle_myInteger,
             1,
             callback_group=self.cb_group_)
+
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
 
     #=================================================
     #  C o m p u t e    E n t r y    P o i n t

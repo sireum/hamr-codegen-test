@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from isolette_py_pkg.user_code.thermostat_regulate_temperature_manage_regulator_mode_mrmt_src import *
 from rclpy.callback_groups import ReentrantCallbackGroup
 from isolette_py_pkg_interfaces.msg import TempWstatusimpl
@@ -46,29 +46,36 @@ class thermostat_regulate_temperature_manage_regulator_mode_mrmt_base(Node):
             1)
 
         # timeTriggered callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggered, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggered, callback_group=self.cb_group_)
+
+        self.current_tempWstatus_msg_holder = None
+        self.interface_failure_msg_holder = None
+        self.internal_failure_msg_holder = None
+
+    def init_current_tempWstatus(self, val):
+        self.current_tempWstatus_msg_holder = val
+
+    def init_interface_failure(self, val):
+        self.interface_failure_msg_holder = val
+
+    def init_internal_failure(self, val):
+        self.internal_failure_msg_holder = val
 
     def timeTriggered(self):
-        pass
+        raise NotImplementedError("Subclasses must implement this method")
 
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def handle_current_tempWstatus(self, msg):
-        typedMsg = TempWstatusimpl()
-        typedMsg.data = msg
-        self.current_tempWstatus_msg_holder = typedMsg
+        self.current_tempWstatus_msg_holder = msg
 
     def handle_interface_failure(self, msg):
-        typedMsg = FailureFlagimpl()
-        typedMsg.data = msg
-        self.interface_failure_msg_holder = typedMsg
+        self.interface_failure_msg_holder = msg
 
     def handle_internal_failure(self, msg):
-        typedMsg = FailureFlagimpl()
-        typedMsg.data = msg
-        self.internal_failure_msg_holder = typedMsg
+        self.internal_failure_msg_holder = msg
 
     def get_current_tempWstatus(self):
         return self.current_tempWstatus_msg_holder
@@ -80,7 +87,5 @@ class thermostat_regulate_temperature_manage_regulator_mode_mrmt_base(Node):
         return self.internal_failure_msg_holder
 
     def put_regulator_mode(self, msg):
-        typedMsg = RegulatorMode()
-        typedMsg.data = msg
-        self.thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_.publish(typedMsg)
+        self.thermostat_regulate_temperature_manage_regulator_mode_mrmt_regulator_mode_publisher_.publish(msg)
 

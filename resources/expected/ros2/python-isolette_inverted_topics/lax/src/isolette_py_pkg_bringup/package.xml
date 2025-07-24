@@ -10,7 +10,6 @@
     <buildtool_depend>ament_cmake</buildtool_depend>
 
     <exec_depend>isolette_py_pkg</exec_depend>
-    <exec_depend>isolette_py_pkg_interfaces</exec_depend>
 
     <!-- Additions within these tags will be preserved when re-running Codegen -->
 

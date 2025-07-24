@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from isolette_py_pkg.user_code.temperature_sensor_cpi_thermostat_src import *
 from rclpy.callback_groups import ReentrantCallbackGroup
 from isolette_py_pkg_interfaces.msg import PhysicalTempimpl
@@ -31,25 +31,26 @@ class temperature_sensor_cpi_thermostat_base(Node):
             1)
 
         # timeTriggered callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggered, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggered, callback_group=self.cb_group_)
+
+        self.air_msg_holder = None
+
+    def init_air(self, val):
+        self.air_msg_holder = val
 
     def timeTriggered(self):
-        pass
+        raise NotImplementedError("Subclasses must implement this method")
 
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def handle_air(self, msg):
-        typedMsg = PhysicalTempimpl()
-        typedMsg.data = msg
-        self.air_msg_holder = typedMsg
+        self.air_msg_holder = msg
 
     def get_air(self):
         return self.air_msg_holder
 
     def put_current_tempWstatus(self, msg):
-        typedMsg = TempWstatusimpl()
-        typedMsg.data = msg
-        self.temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_.publish(typedMsg)
+        self.temperature_sensor_cpi_thermostat_current_tempWstatus_publisher_.publish(msg)
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from typing import Union
 import threading
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -18,7 +18,6 @@ class tcp_fan_base(Node):
 
         self.cb_group_ = ReentrantCallbackGroup()
 
-        MsgType = Union[FanCmd, FanAck]
         self.lock_ = threading.Lock()
 
         # Setting up connections
@@ -34,11 +33,11 @@ class tcp_fan_base(Node):
             "tcp_tempControl_fanAck",
             1)
 
-        self.infrastructureIn_fanCmd = Queue()
-        self.applicationIn_fanCmd = Queue()
+        self.infrastructureIn_fanCmd = deque()
+        self.applicationIn_fanCmd = deque()
 
-        self.infrastructureOut_fanAck = Queue()
-        self.applicationOut_fanAck = Queue()
+        self.infrastructureOut_fanAck = deque()
+        self.applicationOut_fanAck = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -49,6 +48,9 @@ class tcp_fan_base(Node):
             [self.applicationOut_fanAck, self.infrastructureOut_fanAck, self.sendOut_fanAck]
         ]
 
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
@@ -56,32 +58,26 @@ class tcp_fan_base(Node):
     def fanCmd_thread(self):
         with self.lock_:
             self.receiveInputs(self.infrastructureIn_fanCmd, self.applicationIn_fanCmd)
-            if self.applicationIn_fanCmd.empty(): return
-            self.handle_fanCmd_base(self.applicationIn_fanCmd.front())
+            if len(self.applicationIn_fanCmd) == 0: return
+            self.handle_fanCmd_base(self.applicationIn_fanCmd[0])
             self.applicationIn_fanCmd.pop()
             self.sendOutputs()
 
     def accept_fanCmd(self, msg):
-        typedMsg = FanCmd()
-        typedMsg.data = msg
         self.enqueue(self.infrastructureIn_fanCmd, msg)
-        thread = threading.Thread(target=fanCmd_thread)
+        thread = threading.Thread(target=self.fanCmd_thread)
         thread.daemon = True
         thread.start()
 
 
     def sendOut_fanAck(self, msg):
         if type(msg) is FanAck:
-            typedMsg = FanAck()
-            typedMsg.data = msg
-            self.tcp_fan_fanAck_publisher_.publish(typedMsg)
+            self.tcp_fan_fanAck_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def put_fanAck(self, msg):
-        typedMsg = FanAck()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_fanAck, typedMsg)
+        self.enqueue(self.applicationOut_fanAck, msg)
 
     #=================================================
     #  C o m p u t e    E n t r y    P o i n t
@@ -91,41 +87,39 @@ class tcp_fan_base(Node):
 
     def handle_fanCmd_base(self, msg):
         if type(msg) is FanCmd:
-            typedMsg = FanCmd()
-            typedMsg.data = msg
-            self.handle_fanCmd(typedMsg)
+            self.handle_fanCmd(msg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
 
     def receiveInputs(self, infrastructureQueue, applicationQueue):
-        if not(infrastructureQueue.empty()):
-            eventMsg = infrastructureQueue.front()
+        if not(len(infrastructureQueue) == 0):
+            eventMsg = infrastructureQueue[0]
             infrastructureQueue.pop()
             self.enqueue(applicationQueue, eventMsg)
 
         for port in self.inDataPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
                 self.enqueue(port[1], msg)
 
     def enqueue(self, queue, val):
-        if queue.size() >= 1:
+        if len(queue) >= 1:
             queue.pop()
-        queue.push(val)
+        queue.append(val)
 
     def sendOutputs(self):
         for port in self.outPortTupleVector:
             applicationQueue = port[0]
-            if applicationQueue.size() != 0:
-                msg = applicationQueue.front()
+            if len(applicationQueue) != 0:
+                msg = applicationQueue[0]
                 applicationQueue.pop()
                 self.enqueue(port[1], msg)
 
         for port in self.outPortTupleVector:
             infrastructureQueue = port[1]
-            if infrastructureQueue.size() != 0:
-                msg = infrastructureQueue.front()
+            if len(infrastructureQueue) != 0:
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 (port[2])(msg)

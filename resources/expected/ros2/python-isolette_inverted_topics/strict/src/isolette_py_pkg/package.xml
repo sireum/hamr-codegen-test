@@ -8,6 +8,7 @@
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
+  <depend>rosidl_runtime_py</depend>
   <depend>isolette_py_pkg_interfaces</depend>
 
     <!-- Additions within these tags will be preserved when re-running Codegen -->

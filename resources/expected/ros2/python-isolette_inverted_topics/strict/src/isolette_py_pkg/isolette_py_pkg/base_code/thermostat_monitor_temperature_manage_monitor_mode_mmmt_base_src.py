@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from typing import Union
 import threading
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -19,7 +19,6 @@ class thermostat_monitor_temperature_manage_monitor_mode_mmmt_base(Node):
 
         self.cb_group_ = ReentrantCallbackGroup()
 
-        MsgType = Union[TempWstatusimpl, FailureFlagimpl, MonitorMode]
         self.lock_ = threading.Lock()
 
         # Setting up connections
@@ -50,20 +49,17 @@ class thermostat_monitor_temperature_manage_monitor_mode_mmmt_base(Node):
             1)
 
         # timeTriggeredCaller callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggeredCaller, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggeredCaller, callback_group=self.cb_group_)
 
-    def timeTriggered(self):
-        pass
+        self.infrastructureIn_current_tempWstatus = deque()
+        self.applicationIn_current_tempWstatus = deque()
+        self.infrastructureIn_interface_failure = deque()
+        self.applicationIn_interface_failure = deque()
+        self.infrastructureIn_internal_failure = deque()
+        self.applicationIn_internal_failure = deque()
 
-        self.infrastructureIn_current_tempWstatus = Queue()
-        self.applicationIn_current_tempWstatus = Queue()
-        self.infrastructureIn_interface_failure = Queue()
-        self.applicationIn_interface_failure = Queue()
-        self.infrastructureIn_internal_failure = Queue()
-        self.applicationIn_internal_failure = Queue()
-
-        self.infrastructureOut_monitor_mode = Queue()
-        self.applicationOut_monitor_mode = Queue()
+        self.infrastructureOut_monitor_mode = deque()
+        self.applicationOut_monitor_mode = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -84,49 +80,54 @@ class thermostat_monitor_temperature_manage_monitor_mode_mmmt_base(Node):
             [self.applicationOut_monitor_mode, self.infrastructureOut_monitor_mode, self.sendOut_monitor_mode]
         ]
 
+    def init_current_tempWstatus(self, val):
+        self.enqueue(self.infrastructureIn_current_tempWstatus, val)
+
+
+    def init_interface_failure(self, val):
+        self.enqueue(self.infrastructureIn_interface_failure, val)
+
+
+    def init_internal_failure(self, val):
+        self.enqueue(self.infrastructureIn_internal_failure, val)
+
+
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def accept_current_tempWstatus(self, msg):
-        typedMsg = TempWstatusimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_current_tempWstatus, msg)
+        self.enqueue(self.infrastructureIn_current_tempWstatus, msg)
 
     def accept_interface_failure(self, msg):
-        typedMsg = FailureFlagimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_interface_failure, msg)
+        self.enqueue(self.infrastructureIn_interface_failure, msg)
 
     def accept_internal_failure(self, msg):
-        typedMsg = FailureFlagimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_internal_failure, msg)
+        self.enqueue(self.infrastructureIn_internal_failure, msg)
 
     def get_current_tempWstatus(self):
-        msg = applicationIn_current_tempWstatus.front()
-        return get(msg)
+        msg = self.applicationIn_current_tempWstatus[0]
+        return msg
 
     def get_interface_failure(self):
-        msg = applicationIn_interface_failure.front()
-        return get(msg)
+        msg = self.applicationIn_interface_failure[0]
+        return msg
 
     def get_internal_failure(self):
-        msg = applicationIn_internal_failure.front()
-        return get(msg)
+        msg = self.applicationIn_internal_failure[0]
+        return msg
 
     def sendOut_monitor_mode(self, msg):
         if type(msg) is MonitorMode:
-            typedMsg = MonitorMode()
-            typedMsg.data = msg
-            self.thermostat_monitor_temperature_manage_monitor_mode_mmmt_monitor_mode_publisher_.publish(typedMsg)
+            self.thermostat_monitor_temperature_manage_monitor_mode_mmmt_monitor_mode_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port monitor_mode.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def put_monitor_mode(self, msg):
-        typedMsg = MonitorMode()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_monitor_mode, typedMsg)
+        self.enqueue(self.applicationOut_monitor_mode, msg)
 
     def timeTriggeredCaller(self):
         self.receiveInputs()
@@ -136,33 +137,33 @@ class thermostat_monitor_temperature_manage_monitor_mode_mmmt_base(Node):
     def receiveInputs(self):
         for port in self.inDataPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
-                self.enqueue(*port[1], msg)
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
+                self.enqueue(port[1], msg)
 
         for port in self.inEventPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 self.enqueue(port[1], msg)
 
     def enqueue(self, queue, val):
-        if queue.size() >= 1:
+        if len(queue) >= 1:
             queue.pop()
-        queue.push(val)
+        queue.append(val)
 
     def sendOutputs(self):
         for port in self.outPortTupleVector:
             applicationQueue = port[0]
-            if applicationQueue.size() != 0:
-                msg = applicationQueue.front()
+            if len(applicationQueue) != 0:
+                msg = applicationQueue[0]
                 applicationQueue.pop()
                 self.enqueue(port[1], msg)
 
         for port in self.outPortTupleVector:
             infrastructureQueue = port[1]
-            if infrastructureQueue.size() != 0:
-                msg = infrastructureQueue.front()
+            if len(infrastructureQueue) != 0:
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 (port[2])(msg)

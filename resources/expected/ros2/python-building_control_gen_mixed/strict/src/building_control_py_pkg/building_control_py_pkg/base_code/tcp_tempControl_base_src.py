@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from typing import Union
 import threading
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -21,7 +21,6 @@ class tcp_tempControl_base(Node):
 
         self.cb_group_ = ReentrantCallbackGroup()
 
-        MsgType = Union[Temperatureimpl, FanAck, SetPointimpl, FanCmd, Empty]
         self.lock_ = threading.Lock()
 
         # Setting up connections
@@ -58,17 +57,17 @@ class tcp_tempControl_base(Node):
             "tcp_fan_fanCmd",
             1)
 
-        self.infrastructureIn_currentTemp = Queue()
-        self.applicationIn_currentTemp = Queue()
-        self.infrastructureIn_fanAck = Queue()
-        self.applicationIn_fanAck = Queue()
-        self.infrastructureIn_setPoint = Queue()
-        self.applicationIn_setPoint = Queue()
-        self.infrastructureIn_tempChanged = Queue()
-        self.applicationIn_tempChanged = Queue()
+        self.infrastructureIn_currentTemp = deque()
+        self.applicationIn_currentTemp = deque()
+        self.infrastructureIn_fanAck = deque()
+        self.applicationIn_fanAck = deque()
+        self.infrastructureIn_setPoint = deque()
+        self.applicationIn_setPoint = deque()
+        self.infrastructureIn_tempChanged = deque()
+        self.applicationIn_tempChanged = deque()
 
-        self.infrastructureOut_fanCmd = Queue()
-        self.applicationOut_fanCmd = Queue()
+        self.infrastructureOut_fanCmd = deque()
+        self.applicationOut_fanCmd = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -80,28 +79,31 @@ class tcp_tempControl_base(Node):
             [self.applicationOut_fanCmd, self.infrastructureOut_fanCmd, self.sendOut_fanCmd]
         ]
 
+    def init_currentTemp(self, val):
+        self.enqueue(self.infrastructureIn_currentTemp, val)
+
+
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def accept_currentTemp(self, msg):
-        typedMsg = Temperatureimpl()
-        typedMsg.data = msg
-        self.enqueue(infrastructureIn_currentTemp, msg)
+        self.enqueue(self.infrastructureIn_currentTemp, msg)
 
     def fanAck_thread(self):
         with self.lock_:
             self.receiveInputs(self.infrastructureIn_fanAck, self.applicationIn_fanAck)
-            if self.applicationIn_fanAck.empty(): return
-            self.handle_fanAck_base(self.applicationIn_fanAck.front())
+            if len(self.applicationIn_fanAck) == 0: return
+            self.handle_fanAck_base(self.applicationIn_fanAck[0])
             self.applicationIn_fanAck.pop()
             self.sendOutputs()
 
     def accept_fanAck(self, msg):
-        typedMsg = FanAck()
-        typedMsg.data = msg
         self.enqueue(self.infrastructureIn_fanAck, msg)
-        thread = threading.Thread(target=fanAck_thread)
+        thread = threading.Thread(target=self.fanAck_thread)
         thread.daemon = True
         thread.start()
 
@@ -109,16 +111,14 @@ class tcp_tempControl_base(Node):
     def setPoint_thread(self):
         with self.lock_:
             self.receiveInputs(self.infrastructureIn_setPoint, self.applicationIn_setPoint)
-            if self.applicationIn_setPoint.empty(): return
-            self.handle_setPoint_base(self.applicationIn_setPoint.front())
+            if len(self.applicationIn_setPoint) == 0: return
+            self.handle_setPoint_base(self.applicationIn_setPoint[0])
             self.applicationIn_setPoint.pop()
             self.sendOutputs()
 
     def accept_setPoint(self, msg):
-        typedMsg = SetPointimpl()
-        typedMsg.data = msg
         self.enqueue(self.infrastructureIn_setPoint, msg)
-        thread = threading.Thread(target=setPoint_thread)
+        thread = threading.Thread(target=self.setPoint_thread)
         thread.daemon = True
         thread.start()
 
@@ -126,36 +126,30 @@ class tcp_tempControl_base(Node):
     def tempChanged_thread(self):
         with self.lock_:
             self.receiveInputs(self.infrastructureIn_tempChanged, self.applicationIn_tempChanged)
-            if self.applicationIn_tempChanged.empty(): return
-            self.handle_tempChanged_base(self.applicationIn_tempChanged.front())
+            if len(self.applicationIn_tempChanged) == 0: return
+            self.handle_tempChanged_base(self.applicationIn_tempChanged[0])
             self.applicationIn_tempChanged.pop()
             self.sendOutputs()
 
     def accept_tempChanged(self, msg):
-        typedMsg = Empty()
-        typedMsg.data = msg
         self.enqueue(self.infrastructureIn_tempChanged, msg)
-        thread = threading.Thread(target=tempChanged_thread)
+        thread = threading.Thread(target=self.tempChanged_thread)
         thread.daemon = True
         thread.start()
 
 
     def get_currentTemp(self):
-        msg = applicationIn_currentTemp.front()
+        msg = applicationIn_currentTemp[0]
         return get(msg)
 
     def sendOut_fanCmd(self, msg):
         if type(msg) is FanCmd:
-            typedMsg = FanCmd()
-            typedMsg.data = msg
-            self.tcp_tempControl_fanCmd_publisher_.publish(typedMsg)
+            self.tcp_tempControl_fanCmd_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def put_fanCmd(self, msg):
-        typedMsg = FanCmd()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_fanCmd, typedMsg)
+        self.enqueue(self.applicationOut_fanCmd, msg)
 
     #=================================================
     #  C o m p u t e    E n t r y    P o i n t
@@ -165,9 +159,7 @@ class tcp_tempControl_base(Node):
 
     def handle_fanAck_base(self, msg):
         if type(msg) is FanAck:
-            typedMsg = FanAck()
-            typedMsg.data = msg
-            self.handle_fanAck(typedMsg)
+            self.handle_fanAck(msg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
@@ -176,9 +168,7 @@ class tcp_tempControl_base(Node):
 
     def handle_setPoint_base(self, msg):
         if type(msg) is SetPointimpl:
-            typedMsg = SetPointimpl()
-            typedMsg.data = msg
-            self.handle_setPoint(typedMsg)
+            self.handle_setPoint(msg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port setPoint.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
@@ -190,33 +180,33 @@ class tcp_tempControl_base(Node):
 
 
     def receiveInputs(self, infrastructureQueue, applicationQueue):
-        if not(infrastructureQueue.empty()):
-            eventMsg = infrastructureQueue.front()
+        if not(len(infrastructureQueue) == 0):
+            eventMsg = infrastructureQueue[0]
             infrastructureQueue.pop()
             self.enqueue(applicationQueue, eventMsg)
 
         for port in self.inDataPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
                 self.enqueue(port[1], msg)
 
     def enqueue(self, queue, val):
-        if queue.size() >= 1:
+        if len(queue) >= 1:
             queue.pop()
-        queue.push(val)
+        queue.append(val)
 
     def sendOutputs(self):
         for port in self.outPortTupleVector:
             applicationQueue = port[0]
-            if applicationQueue.size() != 0:
-                msg = applicationQueue.front()
+            if len(applicationQueue) != 0:
+                msg = applicationQueue[0]
                 applicationQueue.pop()
                 self.enqueue(port[1], msg)
 
         for port in self.outPortTupleVector:
             infrastructureQueue = port[1]
-            if infrastructureQueue.size() != 0:
-                msg = infrastructureQueue.front()
+            if len(infrastructureQueue) != 0:
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 (port[2])(msg)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from typing import Union
 import threading
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -17,7 +17,6 @@ class fanIn_consumer_base(Node):
 
         self.cb_group_ = ReentrantCallbackGroup()
 
-        MsgType = Union[Integer64]
         self.lock_ = threading.Lock()
 
         # Setting up connections
@@ -35,8 +34,8 @@ class fanIn_consumer_base(Node):
             1,
             callback_group=self.cb_group_)
 
-        self.infrastructureIn_myInteger = Queue()
-        self.applicationIn_myInteger = Queue()
+        self.infrastructureIn_myInteger = deque()
+        self.applicationIn_myInteger = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -46,6 +45,9 @@ class fanIn_consumer_base(Node):
         self.outPortTupleVector = [
         ]
 
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
@@ -53,16 +55,14 @@ class fanIn_consumer_base(Node):
     def myInteger_thread(self):
         with self.lock_:
             self.receiveInputs(self.infrastructureIn_myInteger, self.applicationIn_myInteger)
-            if self.applicationIn_myInteger.empty(): return
-            self.handle_myInteger_base(self.applicationIn_myInteger.front())
+            if len(self.applicationIn_myInteger) == 0: return
+            self.handle_myInteger_base(self.applicationIn_myInteger[0])
             self.applicationIn_myInteger.pop()
             self.sendOutputs()
 
     def accept_myInteger(self, msg):
-        typedMsg = Integer64()
-        typedMsg.data = msg
         self.enqueue(self.infrastructureIn_myInteger, msg)
-        thread = threading.Thread(target=myInteger_thread)
+        thread = threading.Thread(target=self.myInteger_thread)
         thread.daemon = True
         thread.start()
 
@@ -75,41 +75,39 @@ class fanIn_consumer_base(Node):
 
     def handle_myInteger_base(self, msg):
         if type(msg) is Integer64:
-            typedMsg = Integer64()
-            typedMsg.data = msg
-            self.handle_myInteger(typedMsg)
+            self.handle_myInteger(msg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
 
     def receiveInputs(self, infrastructureQueue, applicationQueue):
-        if not(infrastructureQueue.empty()):
-            eventMsg = infrastructureQueue.front()
+        if not(len(infrastructureQueue) == 0):
+            eventMsg = infrastructureQueue[0]
             infrastructureQueue.pop()
             self.enqueue(applicationQueue, eventMsg)
 
         for port in self.inDataPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
                 self.enqueue(port[1], msg)
 
     def enqueue(self, queue, val):
-        if queue.size() >= 1:
+        if len(queue) >= 1:
             queue.pop()
-        queue.push(val)
+        queue.append(val)
 
     def sendOutputs(self):
         for port in self.outPortTupleVector:
             applicationQueue = port[0]
-            if applicationQueue.size() != 0:
-                msg = applicationQueue.front()
+            if len(applicationQueue) != 0:
+                msg = applicationQueue[0]
                 applicationQueue.pop()
                 self.enqueue(port[1], msg)
 
         for port in self.outPortTupleVector:
             infrastructureQueue = port[1]
-            if infrastructureQueue.size() != 0:
-                msg = infrastructureQueue.front()
+            if len(infrastructureQueue) != 0:
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 (port[2])(msg)

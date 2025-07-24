@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from typing import Union
 import threading
 from rclpy.callback_groups import ReentrantCallbackGroup
@@ -18,7 +18,6 @@ class tcp_tempSensor_base(Node):
 
         self.cb_group_ = ReentrantCallbackGroup()
 
-        MsgType = Union[Temperatureimpl, Empty]
         self.lock_ = threading.Lock()
 
         # Setting up connections
@@ -33,15 +32,12 @@ class tcp_tempSensor_base(Node):
             1)
 
         # timeTriggeredCaller callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggeredCaller, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggeredCaller, callback_group=self.cb_group_)
 
-    def timeTriggered(self):
-        pass
-
-        self.infrastructureOut_currentTemp = Queue()
-        self.applicationOut_currentTemp = Queue()
-        self.infrastructureOut_tempChanged = Queue()
-        self.applicationOut_tempChanged = Queue()
+        self.infrastructureOut_currentTemp = deque()
+        self.applicationOut_currentTemp = deque()
+        self.infrastructureOut_tempChanged = deque()
+        self.applicationOut_tempChanged = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -57,32 +53,29 @@ class tcp_tempSensor_base(Node):
             [self.applicationOut_tempChanged, self.infrastructureOut_tempChanged, self.sendOut_tempChanged]
         ]
 
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def sendOut_currentTemp(self, msg):
         if type(msg) is Temperatureimpl:
-            typedMsg = Temperatureimpl()
-            typedMsg.data = msg
-            self.tcp_tempSensor_currentTemp_publisher_.publish(typedMsg)
+            self.tcp_tempSensor_currentTemp_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port currentTemp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def sendOut_tempChanged(self, msg):
         if type(msg) is Empty:
-            typedMsg = Empty()
-            typedMsg.data = msg
-            self.tcp_tempSensor_tempChanged_publisher_.publish(typedMsg)
+            self.tcp_tempSensor_tempChanged_publisher_.publish(msg)
         else:
             self.get_logger().error("Sending out wrong type of variable on port tempChanged.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
     def put_currentTemp(self, msg):
-        typedMsg = Temperatureimpl()
-        typedMsg.data = msg
-        self.enqueue(self.applicationOut_currentTemp, typedMsg)
+        self.enqueue(self.applicationOut_currentTemp, msg)
 
-    def put_tempChanged(self, msg):
+    def put_tempChanged(self):
         self.enqueue(self.applicationOut_tempChanged, Empty())
 
     def timeTriggeredCaller(self):
@@ -93,33 +86,33 @@ class tcp_tempSensor_base(Node):
     def receiveInputs(self):
         for port in self.inDataPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
-                self.enqueue(*port[1], msg)
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
+                self.enqueue(port[1], msg)
 
         for port in self.inEventPortTupleVector:
             infrastructureQueue = port[0]
-            if not(infrastructureQueue.empty()):
-                msg = infrastructureQueue.front()
+            if not(len(infrastructureQueue) == 0):
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 self.enqueue(port[1], msg)
 
     def enqueue(self, queue, val):
-        if queue.size() >= 1:
+        if len(queue) >= 1:
             queue.pop()
-        queue.push(val)
+        queue.append(val)
 
     def sendOutputs(self):
         for port in self.outPortTupleVector:
             applicationQueue = port[0]
-            if applicationQueue.size() != 0:
-                msg = applicationQueue.front()
+            if len(applicationQueue) != 0:
+                msg = applicationQueue[0]
                 applicationQueue.pop()
                 self.enqueue(port[1], msg)
 
         for port in self.outPortTupleVector:
             infrastructureQueue = port[1]
-            if infrastructureQueue.size() != 0:
-                msg = infrastructureQueue.front()
+            if len(infrastructureQueue) != 0:
+                msg = infrastructureQueue[0]
                 infrastructureQueue.pop()
                 (port[2])(msg)

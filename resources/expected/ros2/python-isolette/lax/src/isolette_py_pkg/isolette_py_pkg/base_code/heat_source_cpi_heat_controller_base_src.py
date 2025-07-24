@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from isolette_py_pkg.user_code.heat_source_cpi_heat_controller_src import *
 from rclpy.callback_groups import ReentrantCallbackGroup
 from isolette_py_pkg_interfaces.msg import OnOff
@@ -31,25 +31,26 @@ class heat_source_cpi_heat_controller_base(Node):
             1)
 
         # timeTriggered callback timer
-        self.periodTimer_ = self.create_timer(1000, self.timeTriggered, callback_group=self.cb_group_)
+        self.periodTimer_ = self.create_timer(1, self.timeTriggered, callback_group=self.cb_group_)
+
+        self.heat_control_msg_holder = None
+
+    def init_heat_control(self, val):
+        self.heat_control_msg_holder = val
 
     def timeTriggered(self):
-        pass
+        raise NotImplementedError("Subclasses must implement this method")
 
     #=================================================
     #  C o m m u n i c a t i o n
     #=================================================
 
     def handle_heat_control(self, msg):
-        typedMsg = OnOff()
-        typedMsg.data = msg
-        self.heat_control_msg_holder = typedMsg
+        self.heat_control_msg_holder = msg
 
     def get_heat_control(self):
         return self.heat_control_msg_holder
 
     def put_heat_out(self, msg):
-        typedMsg = Heat()
-        typedMsg.data = msg
-        self.heat_source_cpi_heat_controller_heat_out_publisher_.publish(typedMsg)
+        self.heat_source_cpi_heat_controller_heat_out_publisher_.publish(msg)
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from queue import Queue
+from collections import deque
 from datatypes_system_py_pkg.user_code.consumer_consumer_src import *
 from rclpy.callback_groups import ReentrantCallbackGroup
 from datatypes_system_py_pkg_interfaces.msg import Boolean
@@ -173,6 +173,9 @@ class consumer_consumer_base(Node):
             self.handle_myArray3,
             1,
             callback_group=self.cb_group_)
+
+    def timeTriggered(self):
+        raise NotImplementedError("Subclasses must implement this method")
 
     #=================================================
     #  C o m p u t e    E n t r y    P o i n t
