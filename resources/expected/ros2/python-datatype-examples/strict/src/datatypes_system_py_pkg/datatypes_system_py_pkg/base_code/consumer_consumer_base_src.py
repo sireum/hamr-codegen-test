@@ -22,7 +22,6 @@ from datatypes_system_py_pkg_interfaces.msg import MyEnum
 from datatypes_system_py_pkg_interfaces.msg import MyStructi
 from datatypes_system_py_pkg_interfaces.msg import MyArrayOneDim
 from datatypes_system_py_pkg_interfaces.msg import MyArrayUnbounded
-from datatypes_system_py_pkg_interfaces.msg import MyArrayTwoDim
 
 #========================================================
 # Re-running Codegen will overwrite changes to this file
@@ -170,13 +169,6 @@ class consumer_consumer_base(Node):
             1,
             callback_group=self.cb_group_)
 
-        self.consumer_consumer_myArray3_subscription_ = self.create_subscription(
-            MyArrayTwoDim,
-            "consumer_consumer_myArray3",
-            self.accept_myArray3,
-            1,
-            callback_group=self.cb_group_)
-
         self.infrastructureIn_myBoolean = deque()
         self.applicationIn_myBoolean = deque()
         self.infrastructureIn_myInteger = deque()
@@ -215,8 +207,6 @@ class consumer_consumer_base(Node):
         self.applicationIn_myArray1 = deque()
         self.infrastructureIn_myArray2 = deque()
         self.applicationIn_myArray2 = deque()
-        self.infrastructureIn_myArray3 = deque()
-        self.applicationIn_myArray3 = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -518,21 +508,6 @@ class consumer_consumer_base(Node):
         thread.start()
 
 
-    def myArray3_thread(self):
-        with self.lock_:
-            self.receiveInputs(self.infrastructureIn_myArray3, self.applicationIn_myArray3)
-            if len(self.applicationIn_myArray3) == 0: return
-            self.handle_myArray3_base(self.applicationIn_myArray3[0])
-            self.applicationIn_myArray3.pop()
-            self.sendOutputs()
-
-    def accept_myArray3(self, msg):
-        self.enqueue(self.infrastructureIn_myArray3, msg)
-        thread = threading.Thread(target=self.myArray3_thread)
-        thread.daemon = True
-        thread.start()
-
-
     #=================================================
     #  C o m p u t e    E n t r y    P o i n t
     #=================================================
@@ -706,15 +681,6 @@ class consumer_consumer_base(Node):
             self.handle_myArray2(msg)
         else:
             self.get_logger.error("Receiving wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
-
-    def handle_myArray3(self, msg):
-        raise NotImplementedError("Subclasses must implement this method")
-
-    def handle_myArray3_base(self, msg):
-        if type(msg) is MyArrayTwoDim:
-            self.handle_myArray3(msg)
-        else:
-            self.get_logger.error("Receiving wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
 
     def receiveInputs(self, infrastructureQueue, applicationQueue):

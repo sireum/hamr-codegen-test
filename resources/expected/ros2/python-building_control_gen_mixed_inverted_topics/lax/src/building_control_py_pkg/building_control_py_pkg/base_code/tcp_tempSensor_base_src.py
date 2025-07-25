@@ -41,6 +41,6 @@ class tcp_tempSensor_base(Node):
         self.tcp_tempSensor_currentTemp_publisher_.publish(msg)
 
     def put_tempChanged(self):
-        msg = self.Empty()
+        msg = Empty()
         self.tcp_tempSensor_tempChanged_publisher_.publish(msg)
 

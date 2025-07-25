@@ -54,6 +54,8 @@ class tcp_tempControl_base(Node):
             "tcp_fan_fanCmd",
             1)
 
+        self.currentTemp_msg_holder = None
+
     def init_currentTemp(self, val):
         self.currentTemp_msg_holder = val
 
@@ -75,6 +77,7 @@ class tcp_tempControl_base(Node):
 
     def put_fanCmd(self, msg):
         self.tcp_tempControl_fanCmd_publisher_.publish(msg)
+
 
     #=================================================
     #  C o m p u t e    E n t r y    P o i n t

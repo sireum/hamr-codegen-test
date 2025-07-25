@@ -4,6 +4,7 @@ from rclpy.node import Node
 from rosidl_runtime_py.convert import message_to_yaml
 from building_control_py_pkg.base_code.tcp_tempSensor_base_src import tcp_tempSensor_base
 from building_control_py_pkg_interfaces.msg import Temperatureimpl
+from building_control_py_pkg_interfaces.msg import Empty
 from building_control_py_pkg.base_code.enum_converter import *
 
 #===========================================================
@@ -20,8 +21,8 @@ class tcp_tempSensor(tcp_tempSensor_base):
 #=================================================
 #  I n i t i a l i z e    E n t r y    P o i n t
 #=================================================
-    def initialize(node):
-        node.get_logger().info("Initialize Entry Point invoked")
+    def initialize(self):
+        self.get_logger().info("Initialize Entry Point invoked")
 
         # Initialize the node
 
@@ -31,7 +32,7 @@ class tcp_tempSensor(tcp_tempSensor_base):
 #=================================================
 #  C o m p u t e    E n t r y    P o i n t
 #=================================================
-    def message_to_string(msg):
+    def message_to_string(self, msg):
         yaml_str = message_to_yaml(msg)
         return yaml_str
 
@@ -41,6 +42,7 @@ class tcp_tempSensor(tcp_tempSensor_base):
         # Example publishing messages
         currentTemp = Temperatureimpl()
         self.put_currentTemp(currentTemp)
+
         self.put_tempChanged()
 
 #=================================================

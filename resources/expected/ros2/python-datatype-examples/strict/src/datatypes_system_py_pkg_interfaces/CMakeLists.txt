@@ -28,7 +28,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/MyArrayOneDim.msg
   msg/MyArrayUnbounded.msg
   msg/MyStructi.msg
-  msg/MyArrayTwoDim.msg
   msg/Empty.msg
 )
 

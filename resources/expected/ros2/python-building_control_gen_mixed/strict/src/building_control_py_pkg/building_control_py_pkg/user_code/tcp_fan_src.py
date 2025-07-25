@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from rosidl_runtime_py.convert import message_to_yaml
 from building_control_py_pkg.base_code.tcp_fan_base_src import tcp_fan_base
+from building_control_py_pkg_interfaces.msg import FanCmd
 from building_control_py_pkg_interfaces.msg import FanAck
 from building_control_py_pkg.base_code.enum_converter import *
 
@@ -20,8 +21,8 @@ class tcp_fan(tcp_fan_base):
 #=================================================
 #  I n i t i a l i z e    E n t r y    P o i n t
 #=================================================
-    def initialize(node):
-        node.get_logger().info("Initialize Entry Point invoked")
+    def initialize(self):
+        self.get_logger().info("Initialize Entry Point invoked")
 
         # Initialize the node
 
@@ -31,13 +32,14 @@ class tcp_fan(tcp_fan_base):
 #=================================================
 #  C o m p u t e    E n t r y    P o i n t
 #=================================================
-    def message_to_string(msg):
+    def message_to_string(self, msg):
         yaml_str = message_to_yaml(msg)
         return yaml_str
 
     def handle_fanCmd(self, msg):
         # Handle fanCmd msg
-        self.get_logger().info("Received fanCmd: %s", message_to_string(msg))
+        self.get_logger().info(f"Received fanCmd: {self.message_to_string(msg)}")
+
 
 #=================================================
 #  Include any additional declarations here

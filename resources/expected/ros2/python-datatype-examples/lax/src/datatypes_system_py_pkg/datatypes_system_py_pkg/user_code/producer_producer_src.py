@@ -20,7 +20,6 @@ from datatypes_system_py_pkg_interfaces.msg import MyEnum
 from datatypes_system_py_pkg_interfaces.msg import MyStructi
 from datatypes_system_py_pkg_interfaces.msg import MyArrayOneDim
 from datatypes_system_py_pkg_interfaces.msg import MyArrayUnbounded
-from datatypes_system_py_pkg_interfaces.msg import MyArrayTwoDim
 from datatypes_system_py_pkg.base_code.enum_converter import *
 
 #===========================================================
@@ -112,9 +111,6 @@ class producer_producer(producer_producer_base):
 
         myArray2 = MyArrayUnbounded()
         self.put_myArray2(myArray2)
-
-        myArray3 = MyArrayTwoDim()
-        self.put_myArray3(myArray3)
 
 
 #=================================================

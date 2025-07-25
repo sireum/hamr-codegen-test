@@ -22,7 +22,6 @@ from datatypes_system_py_pkg_interfaces.msg import MyEnum
 from datatypes_system_py_pkg_interfaces.msg import MyStructi
 from datatypes_system_py_pkg_interfaces.msg import MyArrayOneDim
 from datatypes_system_py_pkg_interfaces.msg import MyArrayUnbounded
-from datatypes_system_py_pkg_interfaces.msg import MyArrayTwoDim
 
 #========================================================
 # Re-running Codegen will overwrite changes to this file
@@ -132,11 +131,6 @@ class producer_producer_base(Node):
             "consumer_consumer_myArray2",
             1)
 
-        self.producer_producer_myArray3_publisher_ = self.create_publisher(
-            MyArrayTwoDim,
-            "consumer_consumer_myArray3",
-            1)
-
         # timeTriggeredCaller callback timer
         self.periodTimer_ = self.create_timer(1, self.timeTriggeredCaller, callback_group=self.cb_group_)
 
@@ -178,8 +172,6 @@ class producer_producer_base(Node):
         self.applicationOut_myArray1 = deque()
         self.infrastructureOut_myArray2 = deque()
         self.applicationOut_myArray2 = deque()
-        self.infrastructureOut_myArray3 = deque()
-        self.applicationOut_myArray3 = deque()
 
         # Used by receiveInputs
         self.inDataPortTupleVector = [
@@ -209,8 +201,7 @@ class producer_producer_base(Node):
             [self.applicationOut_myEnum, self.infrastructureOut_myEnum, self.sendOut_myEnum],
             [self.applicationOut_myStruct, self.infrastructureOut_myStruct, self.sendOut_myStruct],
             [self.applicationOut_myArray1, self.infrastructureOut_myArray1, self.sendOut_myArray1],
-            [self.applicationOut_myArray2, self.infrastructureOut_myArray2, self.sendOut_myArray2],
-            [self.applicationOut_myArray3, self.infrastructureOut_myArray3, self.sendOut_myArray3]
+            [self.applicationOut_myArray2, self.infrastructureOut_myArray2, self.sendOut_myArray2]
         ]
 
     def timeTriggered(self):
@@ -334,12 +325,6 @@ class producer_producer_base(Node):
         else:
             self.get_logger().error("Sending out wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
 
-    def sendOut_myArray3(self, msg):
-        if type(msg) is MyArrayTwoDim:
-            self.producer_producer_myArray3_publisher_.publish(msg)
-        else:
-            self.get_logger().error("Sending out wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.")
-
     def put_myBoolean(self, msg):
         self.enqueue(self.applicationOut_myBoolean, msg)
 
@@ -396,9 +381,6 @@ class producer_producer_base(Node):
 
     def put_myArray2(self, msg):
         self.enqueue(self.applicationOut_myArray2, msg)
-
-    def put_myArray3(self, msg):
-        self.enqueue(self.applicationOut_myArray3, msg)
 
     def timeTriggeredCaller(self):
         self.receiveInputs()

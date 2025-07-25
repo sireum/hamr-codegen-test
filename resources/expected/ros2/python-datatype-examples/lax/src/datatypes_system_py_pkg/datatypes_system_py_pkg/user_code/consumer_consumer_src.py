@@ -20,7 +20,6 @@ from datatypes_system_py_pkg_interfaces.msg import MyEnum
 from datatypes_system_py_pkg_interfaces.msg import MyStructi
 from datatypes_system_py_pkg_interfaces.msg import MyArrayOneDim
 from datatypes_system_py_pkg_interfaces.msg import MyArrayUnbounded
-from datatypes_system_py_pkg_interfaces.msg import MyArrayTwoDim
 from datatypes_system_py_pkg.base_code.enum_converter import *
 
 #===========================================================
@@ -127,10 +126,6 @@ class consumer_consumer(consumer_consumer_base):
     def handle_myArray2(self, msg):
         # Handle myArray2 msg
         self.get_logger().info(f"Received myArray2: {self.message_to_string(msg)}")
-
-    def handle_myArray3(self, msg):
-        # Handle myArray3 msg
-        self.get_logger().info(f"Received myArray3: {self.message_to_string(msg)}")
 
 
 #=================================================

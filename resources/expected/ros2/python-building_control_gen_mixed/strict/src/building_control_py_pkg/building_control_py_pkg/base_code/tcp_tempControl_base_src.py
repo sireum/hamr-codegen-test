@@ -139,8 +139,8 @@ class tcp_tempControl_base(Node):
 
 
     def get_currentTemp(self):
-        msg = applicationIn_currentTemp[0]
-        return get(msg)
+        msg = self.applicationIn_currentTemp[0]
+        return msg
 
     def sendOut_fanCmd(self, msg):
         if type(msg) is FanCmd:

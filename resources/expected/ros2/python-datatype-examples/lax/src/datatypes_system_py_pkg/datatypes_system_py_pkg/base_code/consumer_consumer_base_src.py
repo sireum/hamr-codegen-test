@@ -21,7 +21,6 @@ from datatypes_system_py_pkg_interfaces.msg import MyEnum
 from datatypes_system_py_pkg_interfaces.msg import MyStructi
 from datatypes_system_py_pkg_interfaces.msg import MyArrayOneDim
 from datatypes_system_py_pkg_interfaces.msg import MyArrayUnbounded
-from datatypes_system_py_pkg_interfaces.msg import MyArrayTwoDim
 
 #========================================================
 # Re-running Codegen will overwrite changes to this file
@@ -167,13 +166,6 @@ class consumer_consumer_base(Node):
             1,
             callback_group=self.cb_group_)
 
-        self.consumer_consumer_myArray3_subscription_ = self.create_subscription(
-            MyArrayTwoDim,
-            "consumer_consumer_myArray3",
-            self.handle_myArray3,
-            1,
-            callback_group=self.cb_group_)
-
     def timeTriggered(self):
         raise NotImplementedError("Subclasses must implement this method")
 
@@ -235,8 +227,5 @@ class consumer_consumer_base(Node):
         raise NotImplementedError("Subclasses must implement this method")
 
     def handle_myArray2(self, msg):
-        raise NotImplementedError("Subclasses must implement this method")
-
-    def handle_myArray3(self, msg):
         raise NotImplementedError("Subclasses must implement this method")
 

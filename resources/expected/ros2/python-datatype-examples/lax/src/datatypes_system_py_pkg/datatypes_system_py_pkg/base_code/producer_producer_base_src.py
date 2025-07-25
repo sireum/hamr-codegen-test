@@ -20,7 +20,6 @@ from datatypes_system_py_pkg_interfaces.msg import MyEnum
 from datatypes_system_py_pkg_interfaces.msg import MyStructi
 from datatypes_system_py_pkg_interfaces.msg import MyArrayOneDim
 from datatypes_system_py_pkg_interfaces.msg import MyArrayUnbounded
-from datatypes_system_py_pkg_interfaces.msg import MyArrayTwoDim
 
 #========================================================
 # Re-running Codegen will overwrite changes to this file
@@ -128,11 +127,6 @@ class producer_producer_base(Node):
             "consumer_consumer_myArray2",
             1)
 
-        self.producer_producer_myArray3_publisher_ = self.create_publisher(
-            MyArrayTwoDim,
-            "consumer_consumer_myArray3",
-            1)
-
         # timeTriggered callback timer
         self.periodTimer_ = self.create_timer(1, self.timeTriggered, callback_group=self.cb_group_)
 
@@ -199,7 +193,4 @@ class producer_producer_base(Node):
 
     def put_myArray2(self, msg):
         self.producer_producer_myArray2_publisher_.publish(msg)
-
-    def put_myArray3(self, msg):
-        self.producer_producer_myArray3_publisher_.publish(msg)
 
