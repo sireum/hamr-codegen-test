@@ -6,7 +6,7 @@ import org.sireum.hamr.codegen._
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil => CommonTestUtil}
-import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugin
+import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugins
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
 import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
 import org.sireum.hamr.ir._
@@ -141,7 +141,7 @@ trait CodegenTest extends CodegenTestSuite {
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
-    val plugins = ArsitPlugin.gumboEnhancedPlugins ++ MicrokitPlugin.defaultMicrokitPlugins
+    val plugins = ArsitPlugin.gumboEnhancedPlugins ++ MicrokitPlugins.defaultMicrokitPlugins
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
     val results = CodeGen.codeGen(model, T, testOps,
