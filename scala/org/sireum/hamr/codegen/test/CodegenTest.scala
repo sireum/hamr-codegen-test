@@ -3,6 +3,8 @@ package org.sireum.hamr.codegen.test
 import org.sireum._
 import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen._
+import org.sireum.hamr.codegen.common.CommonUtil.Store
+import org.sireum.hamr.codegen.common.reporting.CodegenReporting
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil => CommonTestUtil}
@@ -141,11 +143,14 @@ trait CodegenTest extends CodegenTestSuite {
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
+    val store: Store = CodegenReporting.addCodegenReport(CodegenReporting.KEY_TOOL_REPORT,
+      CodegenReporting.emptyToolReport, Map.empty)
+
     val plugins = ArsitPlugin.gumboEnhancedPlugins ++ MicrokitPlugins.defaultMicrokitPlugins
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
     val results = CodeGen.codeGen(model, T, testOps,
-      plugins, Map.empty, reporter,
+      plugins, store, reporter,
       if (TestUtil.shouldTranspile(testOps, testModes)) TestUtil.transpile(testOps) _ else (SireumSlangTranspilersCOption, Reporter) => {
         println("Dummy transpiler");
         0

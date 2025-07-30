@@ -3,6 +3,8 @@ package org.sireum.hamr.codegen.test
 import org.sireum._
 import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.CodeGen
+import org.sireum.hamr.codegen.common.CommonUtil.Store
+import org.sireum.hamr.codegen.common.reporting.CodegenReporting
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugins
@@ -134,8 +136,11 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
     val plugins = ArsitPlugin.gumboEnhancedPlugins() ++ MicrokitPlugins.defaultMicrokitPlugins
 
-    val results = CodeGen.codeGen(model, T, testOptions, plugins,
-      Map.empty, reporter,
+
+    val store: Store = CodegenReporting.addCodegenReport(CodegenReporting.KEY_TOOL_REPORT,
+      CodegenReporting.emptyToolReport, Map.empty)
+
+    val results = CodeGen.codeGen(model, T, testOptions, plugins, store, reporter,
       (SireumSlangTranspilersCOption, Reporter) => {
         0
       },
