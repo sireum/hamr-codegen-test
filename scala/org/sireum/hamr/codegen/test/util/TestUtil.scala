@@ -4,8 +4,9 @@ import org.scalatest.BeforeAndAfterAll
 import org.sireum._
 import org.sireum.hamr.codegen.act.templates.SlangEmbeddedTemplate
 import org.sireum.hamr.codegen.act.util.CMakeOption
-import org.sireum.hamr.codegen.common.containers.{SireumProyekIveOption, SireumSlangTranspilersCOption, SireumToolsSergenOption, SireumToolsSlangcheckGeneratorOption}
+import org.sireum.hamr.codegen.common.containers.{ExternalResource, FileResource, InternalResource, Marker, Resource, SireumProyekIveOption, SireumSlangTranspilersCOption, SireumToolsSergenOption, SireumToolsSlangcheckGeneratorOption}
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenOption}
+import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestJSON, TestMarker, TestResource, TestResult}
 import org.sireum.hamr.codegen.test.CodegenTest
 import org.sireum.hamr.ir.{Aadl, JSON}
 import org.sireum.message.Reporter
@@ -793,6 +794,63 @@ object TestUtil {
 
   def cygwinInstalled(): B = {
     return proc"reg query HKEY_LOCAL_MACHINE\\Software\\Cygwin\\setup /v rootdir".run().ok
+  }
+
+
+  def writeExpected(normalizedResultMap: TestResult, expected: Os.Path): Unit = {
+    expected.writeOver(TestJSON.fromTestResult(normalizedResultMap, F))
+  }
+
+  def readExpected(expected: Os.Path): TestResult = {
+    return TestJSON.toTestResult(expected.read).left
+  }
+
+  def convertToTestResult(resources: ISZ[Resource], resultsDir: Os.Path): TestResult = {
+    def normalize(t: TestResult): TestResult = {
+      val nmap: ISZ[(String, TestResource)] = t.map.entries.map(m => {
+
+        val dstPath: String =
+          if (Os.isWin) {
+            ops.StringOps(m._1).replaceAllChars('\\', '/')
+          }
+          else {
+            m._1
+          }
+
+        m._2 match {
+          case i: ITestResource =>
+            val content: String = {
+              val lineSep: String = if (Os.isWin) "\r\n" else "\n" // ST render uses System.lineSep
+              val replace: String = if (i.makeCRLF) "\r\n" else "\n"
+              ops.StringOps(i.content).replaceAllLiterally(lineSep, replace)
+            }
+            (dstPath, ITestResource(content = content, overwrite = i.overwrite, makeExecutable = i.makeExecutable, makeCRLF = i.makeCRLF, markers = i.markers, isDatatype = i.isDatatype))
+
+          case e: ETestResource =>
+            (dstPath, ETestResource(content = e.content, symlink = e.symlink))
+        }
+      })
+      return TestResult(Map(nmap))
+    }
+
+    var map = Map.empty[String, TestResource]
+    for (r <- resources) {
+      r match {
+        case r: FileResource =>
+          val key = resultsDir.relativize(Os.path(r.dstPath)).value
+          r match {
+            case i: InternalResource =>
+              val testMarkers = i.markers.map((m: Marker) => TestMarker(beginMarker = m.beginMarker, endMarker = m.endMarker))
+              map = map + (key, ITestResource(content = i.content.render, overwrite = i.overwrite, makeExecutable = i.makeExecutable, makeCRLF = i.makeCRLF, markers = testMarkers, isDatatype = i.isDatatype))
+            case e: ExternalResource =>
+              val src = resultsDir.relativize(Os.path(e.srcPath)).value
+              val dst = resultsDir.relativize(Os.path(e.dstPath)).value
+              map = map + (key, ETestResource(src, e.symLink))
+          }
+        case _ =>
+      }
+    }
+    return normalize(TestResult(map))
   }
 }
 

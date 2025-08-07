@@ -7,7 +7,7 @@ import org.sireum.hamr.codegen.common.CommonUtil.Store
 import org.sireum.hamr.codegen.common.reporting.CodegenReporting
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
 import org.sireum.hamr.codegen.common.util._
-import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult, TestUtil => CommonTestUtil}
+import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult}
 import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugins
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
 import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
@@ -190,15 +190,15 @@ trait CodegenTest extends CodegenTestSuite {
       testSuccess &= TestUtil.runAdditionalTasks(testName, testOps, testModes, logikaOptions, verbose, this, reporter)
     }
 
-    val resultMap = CommonTestUtil.convertToTestResult(results._1.resources, resultsDir)
+    val resultMap = TestUtil.convertToTestResult(results._1.resources, resultsDir)
 
     val expectedMap: TestResult = if (generateExpected) {
-      CommonTestUtil.writeExpected(resultMap, expectedJson)
+      TestUtil.writeExpected(resultMap, expectedJson)
       println(s"Wrote: ${expectedJson}")
       resultMap
     }
     else if (expectedJson.exists) {
-      CommonTestUtil.readExpected(expectedJson)
+      TestUtil.readExpected(expectedJson)
     }
     else {
       testSuccess = F
