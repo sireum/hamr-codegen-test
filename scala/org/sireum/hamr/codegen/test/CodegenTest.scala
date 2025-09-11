@@ -382,7 +382,7 @@ object CodegenTest {
             return Some((dir, pp))
           }
         }
-        if (pp.isDir) {
+        if (pp.isDir && pp.name.native != "bin") {
           search(pp) match {
             case Some((a, b)) => return Some((a, b))
             case _ =>
