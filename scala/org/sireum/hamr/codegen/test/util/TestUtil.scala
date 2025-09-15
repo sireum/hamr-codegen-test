@@ -822,9 +822,12 @@ object TestUtil {
             val content: String = {
               val lineSep: String = if (Os.isWin) "\r\n" else "\n" // ST render uses System.lineSep
               val replace: String = if (i.makeCRLF) "\r\n" else "\n"
-              ops.StringOps(i.content).replaceAllLiterally(lineSep, replace)
+              if (lineSep == replace)
+                i.content
+              else
+                ops.StringOps(i.content).replaceAllLiterally(lineSep, replace)
             }
-            (dstPath, ITestResource(content = content, overwrite = i.overwrite, makeExecutable = i.makeExecutable, makeCRLF = i.makeCRLF, markers = i.markers, isDatatype = i.isDatatype))
+            (dstPath, ITestResource(content = content, overwrite = i.overwrite, makeExecutable = i.makeExecutable, makeCRLF = i.makeCRLF, markers = i.markers, invertMarkers = i.invertMarkers, isDatatype = i.isDatatype))
 
           case e: ETestResource =>
             (dstPath, ETestResource(content = e.content, symlink = e.symlink))
@@ -841,7 +844,14 @@ object TestUtil {
           r match {
             case i: InternalResource =>
               val testMarkers = i.markers.map((m: Marker) => TestMarker(beginMarker = m.beginMarker, endMarker = m.endMarker))
-              map = map + (key, ITestResource(content = i.content.render, overwrite = i.overwrite, makeExecutable = i.makeExecutable, makeCRLF = i.makeCRLF, markers = testMarkers, isDatatype = i.isDatatype))
+              map = map + (key, ITestResource(
+                content = i.content.render,
+                overwrite = i.overwrite,
+                makeExecutable = i.makeExecutable,
+                makeCRLF = i.makeCRLF,
+                markers = testMarkers,
+                invertMarkers = i.invertMarkers,
+                isDatatype = i.isDatatype))
             case e: ExternalResource =>
               val src = resultsDir.relativize(Os.path(e.srcPath)).value
               val dst = resultsDir.relativize(Os.path(e.dstPath)).value
