@@ -361,6 +361,11 @@
               "type" : "TestMarker",
               "beginMarker" : "<!-- BEGIN CONTENT MARKER pacer -->",
               "endMarker" : "<!-- END CONTENT MARKER pacer -->"
+            },
+            {
+              "type" : "TestMarker",
+              "beginMarker" : "<!-- BEGIN MSD CONTENT MARKER -->",
+              "endMarker" : "<!-- END MSD CONTENT MARKER -->"
             }
           ],
           "invertMarkers" : true,
