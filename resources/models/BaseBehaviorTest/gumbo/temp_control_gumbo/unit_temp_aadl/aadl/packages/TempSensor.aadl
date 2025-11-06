@@ -86,8 +86,8 @@ public
          guarantee
               (res.degrees == degrees) 
               && (res.unit == TempSensor::Unit.Fahrenheit)
-              && (res == Temperature.i(degrees, TempSensor::Unit.Fahrenheit)); 
-          Temperature.i(degrees, TempSensor::Unit.Fahrenheit);
+              && (res == TempSensor::Temperature.i(degrees, TempSensor::Unit.Fahrenheit)); 
+          TempSensor::Temperature.i(degrees, TempSensor::Unit.Fahrenheit);
         
       integration
         guarantee Sensor_Temperature_Range:
@@ -106,7 +106,7 @@ public
           (currentTemp == createFahrenheit(f32"72.0")) &&
           
           -- or you can construct the type directly
-          (currentTemp == Temperature.i(defaultTempDegrees(), TempSensor::Unit.Fahrenheit)) &&
+          (currentTemp == TempSensor::Temperature.i(defaultTempDegrees(), TempSensor::Unit.Fahrenheit)) &&
           
           -- or you can use the fully qualified name of the type
           (currentTemp == TempSensor::Temperature.i(defaultTempDegrees(), TempSensor::Unit.Fahrenheit));

@@ -113,7 +113,7 @@ public
           --(currentTemp == createTemperature(f32"72.0"));
           
           -- but you can construct the type directly
-          (currentTemp == Temperature.i(defaultTempDegrees())) &&
+          (currentTemp == TempSensor::Temperature.i(defaultTempDegrees())) &&
           
           -- or you can use the fully qualified name of the type
           (currentTemp == TempSensor::Temperature.i(defaultTempDegrees()));
