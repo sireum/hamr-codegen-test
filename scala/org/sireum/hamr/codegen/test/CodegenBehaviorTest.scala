@@ -162,6 +162,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
         this,
         reporter)
       success = success && !reporter.hasError
+    } else {
+      reporter.printMessages()
     }
 
     if (Os.env("GITHUB_ACTIONS").nonEmpty && slangOutputDir.nonEmpty) {
