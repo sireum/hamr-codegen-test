@@ -850,14 +850,28 @@
           "content" : "\/\/ #Sireum\n\npackage pfc_project\n\nimport org.sireum._\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject Platform {\n\n  def setup(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM SETUP\n    \/\/ END MARKER PLATFORM SETUP\n  }\n\n  def tearDown(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM TEARDOWN\n    \/\/ END MARKER PLATFORM TEARDOWN\n  }\n}",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM SETUP",
-              "endMarker" : "\/\/ END MARKER PLATFORM SETUP"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM SETUP",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM TEARDOWN",
-              "endMarker" : "\/\/ END MARKER PLATFORM TEARDOWN"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM TEARDOWN",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,

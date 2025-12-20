@@ -192,19 +192,40 @@
           "content" : "\/\/ #Sireum\n\npackage initialize_entrypoint__JVM.Initialize_Entrypoint\n\nimport org.sireum._\nimport initialize_entrypoint__JVM._\nimport org.sireum.Z8._\nimport org.sireum.Z16._\nimport org.sireum.Z32._\nimport org.sireum.Z64._\nimport org.sireum.N._\nimport org.sireum.N8._\nimport org.sireum.N16._\nimport org.sireum.N32._\nimport org.sireum.N64._\nimport org.sireum.S8._\nimport org.sireum.S16._\nimport org.sireum.S32._\nimport org.sireum.S64._\nimport org.sireum.U1._\nimport org.sireum.U2._\nimport org.sireum.U3._\nimport org.sireum.U4._\nimport org.sireum.U5._\nimport org.sireum.U6._\nimport org.sireum.U7._\nimport org.sireum.U8._\nimport org.sireum.U9._\nimport org.sireum.U10._\nimport org.sireum.U11._\nimport org.sireum.U12._\nimport org.sireum.U13._\nimport org.sireum.U14._\nimport org.sireum.U15._\nimport org.sireum.U16._\nimport org.sireum.U17._\nimport org.sireum.U18._\nimport org.sireum.U19._\nimport org.sireum.U20._\nimport org.sireum.U21._\nimport org.sireum.U22._\nimport org.sireum.U23._\nimport org.sireum.U24._\nimport org.sireum.U25._\nimport org.sireum.U26._\nimport org.sireum.U27._\nimport org.sireum.U28._\nimport org.sireum.U29._\nimport org.sireum.U30._\nimport org.sireum.U31._\nimport org.sireum.U32._\nimport org.sireum.U33._\nimport org.sireum.U34._\nimport org.sireum.U35._\nimport org.sireum.U36._\nimport org.sireum.U37._\nimport org.sireum.U38._\nimport org.sireum.U39._\nimport org.sireum.U40._\nimport org.sireum.U41._\nimport org.sireum.U42._\nimport org.sireum.U43._\nimport org.sireum.U44._\nimport org.sireum.U45._\nimport org.sireum.U46._\nimport org.sireum.U47._\nimport org.sireum.U48._\nimport org.sireum.U49._\nimport org.sireum.U50._\nimport org.sireum.U51._\nimport org.sireum.U52._\nimport org.sireum.U53._\nimport org.sireum.U54._\nimport org.sireum.U55._\nimport org.sireum.U56._\nimport org.sireum.U57._\nimport org.sireum.U58._\nimport org.sireum.U59._\nimport org.sireum.U60._\nimport org.sireum.U61._\nimport org.sireum.U62._\nimport org.sireum.U63._\nimport org.sireum.U64._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject TempControl_p_tempControl {\n\n  \/\/ BEGIN STATE VARS\n  var currentSetPoint: Initialize_Entrypoint.SetPoint_i = Initialize_Entrypoint.SetPoint_i.example()\n  \/\/ END STATE VARS\n\n  def initialise(api: TempControl_Initialization_Api): Unit = {\n    Contract(\n      Modifies(\n        \/\/ BEGIN INITIALIZES MODIFIES\n        currentSetPoint\n        \/\/ END INITIALIZES MODIFIES\n      ),\n      Ensures(\n        \/\/ BEGIN INITIALIZES ENSURES\n        \/\/ guarantee g1\n        \/\/   defaultSetPoint\n        currentSetPoint.low.degrees == 70.0d &&\n          currentSetPoint.high.degrees == 80.0d,\n        \/\/ guarantee litInter\n        \/\/   Make sure all lit interpolations are supported (i.e. they are imported in the generated code)\n        1 > 0 &&\n          z8\"8\" > z8\"7\" &&\n          z16\"16\" > z16\"15\" &&\n          z32\"32\" > z32\"31\" &&\n          z64\"64\" > z64\"63\" &&\n          n\"1\" > n\"0\" &&\n          n8\"8\" > n8\"7\" &&\n          n16\"16\" > n16\"15\" &&\n          n32\"32\" > n32\"31\" &&\n          n64\"64\" > n64\"63\" &&\n          s8\"9\" > s8\"8\" &&\n          s16\"16\" > s16\"15\" &&\n          s32\"32\" > s32\"31\" &&\n          s64\"64\" > s64\"63\" &&\n          u1\"1\" > u1\"0\" &&\n          u2\"1\" > u2\"0\" &&\n          u3\"1\" > u3\"0\" &&\n          u4\"1\" > u4\"0\" &&\n          u5\"1\" > u5\"0\" &&\n          u6\"1\" > u6\"0\" &&\n          u7\"1\" > u7\"0\" &&\n          u8\"1\" > u8\"0\" &&\n          u9\"1\" > u9\"0\" &&\n          u10\"1\" > u10\"0\" &&\n          u11\"1\" > u11\"0\" &&\n          u12\"1\" > u12\"0\" &&\n          u13\"1\" > u13\"0\" &&\n          u14\"1\" > u14\"0\" &&\n          u15\"1\" > u15\"0\" &&\n          u16\"1\" > u16\"0\" &&\n          u17\"1\" > u17\"0\" &&\n          u18\"1\" > u18\"0\" &&\n          u19\"1\" > u19\"0\" &&\n          u20\"1\" > u20\"0\" &&\n          u21\"1\" > u21\"0\" &&\n          u22\"1\" > u22\"0\" &&\n          u23\"1\" > u23\"0\" &&\n          u24\"1\" > u24\"0\" &&\n          u25\"1\" > u25\"0\" &&\n          u26\"1\" > u26\"0\" &&\n          u27\"1\" > u27\"0\" &&\n          u28\"1\" > u28\"0\" &&\n          u29\"1\" > u29\"0\" &&\n          u30\"1\" > u30\"0\" &&\n          u31\"1\" > u31\"0\" &&\n          u32\"1\" > u32\"0\" &&\n          u33\"1\" > u33\"0\" &&\n          u34\"1\" > u34\"0\" &&\n          u35\"1\" > u35\"0\" &&\n          u36\"1\" > u36\"0\" &&\n          u37\"1\" > u37\"0\" &&\n          u38\"1\" > u38\"0\" &&\n          u39\"1\" > u39\"0\" &&\n          u40\"1\" > u40\"0\" &&\n          u41\"1\" > u41\"0\" &&\n          u42\"1\" > u42\"0\" &&\n          u43\"1\" > u43\"0\" &&\n          u44\"1\" > u44\"0\" &&\n          u45\"1\" > u45\"0\" &&\n          u46\"1\" > u46\"0\" &&\n          u47\"1\" > u47\"0\" &&\n          u48\"1\" > u48\"0\" &&\n          u49\"1\" > u49\"0\" &&\n          u50\"1\" > u50\"0\" &&\n          u51\"1\" > u51\"0\" &&\n          u52\"1\" > u52\"0\" &&\n          u53\"1\" > u53\"0\" &&\n          u54\"1\" > u54\"0\" &&\n          u55\"1\" > u55\"0\" &&\n          u56\"1\" > u56\"0\" &&\n          u57\"1\" > u57\"0\" &&\n          u58\"1\" > u58\"0\" &&\n          u59\"1\" > u59\"0\" &&\n          u60\"1\" > u60\"0\" &&\n          u61\"1\" > u61\"0\" &&\n          u62\"1\" > u62\"0\" &&\n          u63\"1\" > u63\"0\" &&\n          u64\"1\" > u64\"0\" &&\n          1.0f > 0.0f &&\n          1.0d > 0.0d &&\n          r\"1.0\" > r\"0.0\" &&\n          \"bbbbb\" != \"aaaaa\" &&\n          -1.0f == -1.0f\n        \/\/ END INITIALIZES ENSURES\n      )\n    )\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n  }\n\n  def handle_setPoint(api: TempControl_Operational_Api, value: Initialize_Entrypoint.SetPoint_i): Unit = {\n    api.logInfo(\"example handle_setPoint implementation\")\n    api.logInfo(s\"  received $value\")\n    \/\/ example api usage\n\n    val apiUsage_setPoint: Option[Initialize_Entrypoint.SetPoint_i] = api.get_setPoint()\n    api.logInfo(s\"Received on event data port setPoint: ${apiUsage_setPoint}\")\n    val apiUsage_currentTemp: Option[Initialize_Entrypoint.Temperature_i] = api.get_currentTemp()\n    api.logInfo(s\"Received on event data port currentTemp: ${apiUsage_currentTemp}\")\n  }\n\n  def handle_currentTemp(api: TempControl_Operational_Api, value: Initialize_Entrypoint.Temperature_i): Unit = {\n    api.logInfo(\"example handle_currentTemp implementation\")\n    api.logInfo(s\"  received $value\")\n  }\n\n  def finalise(api: TempControl_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN STATE VARS",
-              "endMarker" : "\/\/ END STATE VARS"
+              "type" : "TestBlockMarker",
+              "id" : "STATE VARS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES MODIFIES",
-              "endMarker" : "\/\/ END INITIALIZES MODIFIES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES MODIFIES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES ENSURES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -543,14 +564,28 @@
           "content" : "\/\/ #Sireum\n\npackage initialize_entrypoint__JVM\n\nimport org.sireum._\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject Platform {\n\n  def setup(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM SETUP\n    \/\/ END MARKER PLATFORM SETUP\n  }\n\n  def tearDown(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM TEARDOWN\n    \/\/ END MARKER PLATFORM TEARDOWN\n  }\n}",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM SETUP",
-              "endMarker" : "\/\/ END MARKER PLATFORM SETUP"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM SETUP",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM TEARDOWN",
-              "endMarker" : "\/\/ END MARKER PLATFORM TEARDOWN"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM TEARDOWN",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,

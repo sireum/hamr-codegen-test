@@ -416,9 +416,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject CoincidenceLogic_i_actuationSubsystem_actuationUnit1_temperatureLogic_coincidenceLogic {\n\n  def initialise(api: CoincidenceLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: CoincidenceLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee coincidenceOutput\n        \/\/   from actuationUnit.cry\n        \/\/   Coincidence_2_4 : [4]TripPort -> Bit\n        \/\/   Coincidence_2_4 x =\n        \/\/       (a&&b) || ((a||b) && (c||d)) || (c&&d)\n        \/\/   For specification redundancy, provide an alternate but equivalent specification\n        \/\/   of the concept 'at least two of the input channels are true.'\n        api.actuate == (api.channel1 & api.channel2 |\n           api.channel1 & api.channel3 |\n           api.channel1 & api.channel4 |\n           api.channel2 & api.channel3 |\n           api.channel2 & api.channel4 |\n           api.channel3 & api.channel4)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n    val apiUsage_channel3: Option[Base_Types.Boolean] = api.get_channel3()\n    api.logInfo(s\"Received on data port channel3: ${apiUsage_channel3}\")\n    val apiUsage_channel4: Option[Base_Types.Boolean] = api.get_channel4()\n    api.logInfo(s\"Received on data port channel4: ${apiUsage_channel4}\")\n  }\n\n  def finalise(api: CoincidenceLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -617,9 +624,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject CoincidenceLogic_i_actuationSubsystem_actuationUnit1_pressureLogic_coincidenceLogic {\n\n  def initialise(api: CoincidenceLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: CoincidenceLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee coincidenceOutput\n        \/\/   from actuationUnit.cry\n        \/\/   Coincidence_2_4 : [4]TripPort -> Bit\n        \/\/   Coincidence_2_4 x =\n        \/\/       (a&&b) || ((a||b) && (c||d)) || (c&&d)\n        \/\/   For specification redundancy, provide an alternate but equivalent specification\n        \/\/   of the concept 'at least two of the input channels are true.'\n        api.actuate == (api.channel1 & api.channel2 |\n           api.channel1 & api.channel3 |\n           api.channel1 & api.channel4 |\n           api.channel2 & api.channel3 |\n           api.channel2 & api.channel4 |\n           api.channel3 & api.channel4)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n    val apiUsage_channel3: Option[Base_Types.Boolean] = api.get_channel3()\n    api.logInfo(s\"Received on data port channel3: ${apiUsage_channel3}\")\n    val apiUsage_channel4: Option[Base_Types.Boolean] = api.get_channel4()\n    api.logInfo(s\"Received on data port channel4: ${apiUsage_channel4}\")\n  }\n\n  def finalise(api: CoincidenceLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -804,9 +818,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject CoincidenceLogic_i_actuationSubsystem_actuationUnit1_saturationLogic_coincidenceLogic {\n\n  def initialise(api: CoincidenceLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: CoincidenceLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee coincidenceOutput\n        \/\/   from actuationUnit.cry\n        \/\/   Coincidence_2_4 : [4]TripPort -> Bit\n        \/\/   Coincidence_2_4 x =\n        \/\/       (a&&b) || ((a||b) && (c||d)) || (c&&d)\n        \/\/   For specification redundancy, provide an alternate but equivalent specification\n        \/\/   of the concept 'at least two of the input channels are true.'\n        api.actuate == (api.channel1 & api.channel2 |\n           api.channel1 & api.channel3 |\n           api.channel1 & api.channel4 |\n           api.channel2 & api.channel3 |\n           api.channel2 & api.channel4 |\n           api.channel3 & api.channel4)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n    val apiUsage_channel3: Option[Base_Types.Boolean] = api.get_channel3()\n    api.logInfo(s\"Received on data port channel3: ${apiUsage_channel3}\")\n    val apiUsage_channel4: Option[Base_Types.Boolean] = api.get_channel4()\n    api.logInfo(s\"Received on data port channel4: ${apiUsage_channel4}\")\n  }\n\n  def finalise(api: CoincidenceLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1005,9 +1026,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee orOutput\n        api.actuate == (api.channel1 | api.channel2)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1192,9 +1220,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject CoincidenceLogic_i_actuationSubsystem_actuationUnit2_temperatureLogic_coincidenceLogic {\n\n  def initialise(api: CoincidenceLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: CoincidenceLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee coincidenceOutput\n        \/\/   from actuationUnit.cry\n        \/\/   Coincidence_2_4 : [4]TripPort -> Bit\n        \/\/   Coincidence_2_4 x =\n        \/\/       (a&&b) || ((a||b) && (c||d)) || (c&&d)\n        \/\/   For specification redundancy, provide an alternate but equivalent specification\n        \/\/   of the concept 'at least two of the input channels are true.'\n        api.actuate == (api.channel1 & api.channel2 |\n           api.channel1 & api.channel3 |\n           api.channel1 & api.channel4 |\n           api.channel2 & api.channel3 |\n           api.channel2 & api.channel4 |\n           api.channel3 & api.channel4)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n    val apiUsage_channel3: Option[Base_Types.Boolean] = api.get_channel3()\n    api.logInfo(s\"Received on data port channel3: ${apiUsage_channel3}\")\n    val apiUsage_channel4: Option[Base_Types.Boolean] = api.get_channel4()\n    api.logInfo(s\"Received on data port channel4: ${apiUsage_channel4}\")\n  }\n\n  def finalise(api: CoincidenceLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1379,9 +1414,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject CoincidenceLogic_i_actuationSubsystem_actuationUnit2_pressureLogic_coincidenceLogic {\n\n  def initialise(api: CoincidenceLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: CoincidenceLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee coincidenceOutput\n        \/\/   from actuationUnit.cry\n        \/\/   Coincidence_2_4 : [4]TripPort -> Bit\n        \/\/   Coincidence_2_4 x =\n        \/\/       (a&&b) || ((a||b) && (c||d)) || (c&&d)\n        \/\/   For specification redundancy, provide an alternate but equivalent specification\n        \/\/   of the concept 'at least two of the input channels are true.'\n        api.actuate == (api.channel1 & api.channel2 |\n           api.channel1 & api.channel3 |\n           api.channel1 & api.channel4 |\n           api.channel2 & api.channel3 |\n           api.channel2 & api.channel4 |\n           api.channel3 & api.channel4)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n    val apiUsage_channel3: Option[Base_Types.Boolean] = api.get_channel3()\n    api.logInfo(s\"Received on data port channel3: ${apiUsage_channel3}\")\n    val apiUsage_channel4: Option[Base_Types.Boolean] = api.get_channel4()\n    api.logInfo(s\"Received on data port channel4: ${apiUsage_channel4}\")\n  }\n\n  def finalise(api: CoincidenceLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1566,9 +1608,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject CoincidenceLogic_i_actuationSubsystem_actuationUnit2_saturationLogic_coincidenceLogic {\n\n  def initialise(api: CoincidenceLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: CoincidenceLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee coincidenceOutput\n        \/\/   from actuationUnit.cry\n        \/\/   Coincidence_2_4 : [4]TripPort -> Bit\n        \/\/   Coincidence_2_4 x =\n        \/\/       (a&&b) || ((a||b) && (c||d)) || (c&&d)\n        \/\/   For specification redundancy, provide an alternate but equivalent specification\n        \/\/   of the concept 'at least two of the input channels are true.'\n        api.actuate == (api.channel1 & api.channel2 |\n           api.channel1 & api.channel3 |\n           api.channel1 & api.channel4 |\n           api.channel2 & api.channel3 |\n           api.channel2 & api.channel4 |\n           api.channel3 & api.channel4)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n    val apiUsage_channel3: Option[Base_Types.Boolean] = api.get_channel3()\n    api.logInfo(s\"Received on data port channel3: ${apiUsage_channel3}\")\n    val apiUsage_channel4: Option[Base_Types.Boolean] = api.get_channel4()\n    api.logInfo(s\"Received on data port channel4: ${apiUsage_channel4}\")\n  }\n\n  def finalise(api: CoincidenceLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1753,9 +1802,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee orOutput\n        api.actuate == (api.channel1 | api.channel2)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1940,9 +1996,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee orOutput\n        api.actuate == (api.channel1 | api.channel2)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -2141,9 +2204,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Actuator_i_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator {\n\n  def initialise(api: Actuator_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_output(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: Actuator_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee actuatorOutput\n        api.output == (api.input | api.manualActuatorInput)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_input: Option[Base_Types.Boolean] = api.get_input()\n    api.logInfo(s\"Received on data port input: ${apiUsage_input}\")\n    val apiUsage_manualActuatorInput: Option[Base_Types.Boolean] = api.get_manualActuatorInput()\n    api.logInfo(s\"Received on data port manualActuatorInput: ${apiUsage_manualActuatorInput}\")\n  }\n\n  def finalise(api: Actuator_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -2328,9 +2398,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject OrLogic_i_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic {\n\n  def initialise(api: OrLogic_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_actuate(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: OrLogic_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee orOutput\n        api.actuate == (api.channel1 | api.channel2)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_channel1: Option[Base_Types.Boolean] = api.get_channel1()\n    api.logInfo(s\"Received on data port channel1: ${apiUsage_channel1}\")\n    val apiUsage_channel2: Option[Base_Types.Boolean] = api.get_channel2()\n    api.logInfo(s\"Received on data port channel2: ${apiUsage_channel2}\")\n  }\n\n  def finalise(api: OrLogic_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -2515,9 +2592,16 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM.Actuation\n\nimport org.sireum._\nimport RTS_aadl__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Actuator_i_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator {\n\n  def initialise(api: Actuator_i_Initialization_Api): Unit = {\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_output(Base_Types.Boolean_example())\n  }\n\n  def timeTriggered(api: Actuator_i_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee actuatorOutput\n        api.output == (api.input | api.manualActuatorInput)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_input: Option[Base_Types.Boolean] = api.get_input()\n    api.logInfo(s\"Received on data port input: ${apiUsage_input}\")\n    val apiUsage_manualActuatorInput: Option[Base_Types.Boolean] = api.get_manualActuatorInput()\n    api.logInfo(s\"Received on data port manualActuatorInput: ${apiUsage_manualActuatorInput}\")\n  }\n\n  def finalise(api: Actuator_i_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -2646,14 +2730,28 @@
           "content" : "\/\/ #Sireum\n\npackage RTS_aadl__JVM\n\nimport org.sireum._\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject Platform {\n\n  def setup(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM SETUP\n    \/\/ END MARKER PLATFORM SETUP\n  }\n\n  def tearDown(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM TEARDOWN\n    \/\/ END MARKER PLATFORM TEARDOWN\n  }\n}",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM SETUP",
-              "endMarker" : "\/\/ END MARKER PLATFORM SETUP"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM SETUP",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM TEARDOWN",
-              "endMarker" : "\/\/ END MARKER PLATFORM TEARDOWN"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM TEARDOWN",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,

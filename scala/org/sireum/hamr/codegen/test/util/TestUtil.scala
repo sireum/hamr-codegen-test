@@ -4,9 +4,9 @@ import org.scalatest.BeforeAndAfterAll
 import org.sireum._
 import org.sireum.hamr.codegen.act.templates.SlangEmbeddedTemplate
 import org.sireum.hamr.codegen.act.util.CMakeOption
-import org.sireum.hamr.codegen.common.containers.{ExternalResource, FileResource, InternalResource, Marker, Resource, SireumProyekIveOption, SireumSlangTranspilersCOption, SireumToolsSergenOption, SireumToolsSlangcheckGeneratorOption}
+import org.sireum.hamr.codegen.common.containers._
 import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenOption}
-import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestJSON, TestMarker, TestResource, TestResult}
+import org.sireum.hamr.codegen.common.util.test._
 import org.sireum.hamr.codegen.test.CodegenTest
 import org.sireum.hamr.ir.{Aadl, JSON}
 import org.sireum.message.Reporter
@@ -843,7 +843,20 @@ object TestUtil {
           val key = resultsDir.relativize(Os.path(r.dstPath)).value
           r match {
             case i: InternalResource =>
-              val testMarkers = i.markers.map((m: Marker) => TestMarker(beginMarker = m.beginMarker, endMarker = m.endMarker))
+              var testMarkers: ISZ[TestMarker] = ISZ()
+              for (m <- i.markers) {
+                m match {
+                  case p: PlaceholderMarker => TestPlaceholderMarker(id = p.id)
+                  case p: BlockMarker =>
+                    testMarkers = testMarkers :+ TestBlockMarker(
+                      id = p.id,
+                      beginPrefix = p.beginPrefix,
+                      optBeginSuffix = p.optBeginSuffix,
+                      endPrefix = p.endPrefix,
+                      optEndSuffix = p.optEndSuffix)
+                }
+              }
+
               map = map + (key, ITestResource(
                 content = i.content.render,
                 overwrite = i.overwrite,
@@ -852,6 +865,7 @@ object TestUtil {
                 markers = testMarkers,
                 invertMarkers = i.invertMarkers,
                 isDatatype = i.isDatatype))
+
             case e: ExternalResource =>
               val src = resultsDir.relativize(Os.path(e.srcPath)).value
               val dst = resultsDir.relativize(Os.path(e.dstPath)).value

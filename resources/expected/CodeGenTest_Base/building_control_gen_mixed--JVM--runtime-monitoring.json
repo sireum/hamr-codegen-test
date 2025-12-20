@@ -668,9 +668,16 @@
           "content" : "package building_control_gen_mixed__JVM__runtime_monitoring.runtimemonitor\n\nimport org.sireum._\nimport art.Art._\n\nimport java.awt.GraphicsEnvironment\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject RuntimeMonitor_Ext {\n\n  \/** you use the java.awt.headless system property to enable\/disable guis.\n    * e.g. in scala test context\n    *\n    *   override def beforeEach(): Unit = {\n    *     System.setProperty(\"java.awt.headless\", \"true\")\n    *     super.beforeEach()\n    *   }\n    *\n    *\/\n\n  val baseListeners: ISZ[RuntimeMonitorListener] =\n    if (GraphicsEnvironment.isHeadless) ISZ()\n    else {\n      ISZ(\n        \/\/ add\/remove listeners here\n\n\n        \/\/ BEGIN MARKER RUNTIME MONITORING\n\n        \/\/ if you don't want to use the following runtime monitors then surround this marker block\n        \/\/ with a block comment \/** .. **\/ to prevent codegen from emitting an error if it's rerun\n\n        \/\/ new GumboXRuntimeMonitor_Ext(),\n\n        new HamrVisionRuntimeMonitor(HamrVision.cp)\n\n        \/\/ END MARKER RUNTIME MONITORING\n      )\n    }\n\n  var externalListeners: ISZ[RuntimeMonitorListener] = ISZ()\n\n  def registerListener(listener: RuntimeMonitorListener): Unit = {\n    externalListeners = externalListeners :+ listener\n  }\n\n  def init(modelInfo: ModelInfo): Unit = {\n    for (l <- baseListeners) {\n      l.init(modelInfo)\n    }\n    for (l <- externalListeners) {\n      l.init(modelInfo)\n    }\n  }\n\n  def finalise(): Unit = {\n    for (l <- baseListeners) {\n      l.finalise()\n    }\n\n    for (l <- externalListeners) {\n      l.finalise()\n    }\n    \/\/ deregister external listeners\n    externalListeners = ISZ()\n  }\n\n  def observeInitialisePostState(bridgeId: BridgeId, observationKind: ObservationKind.Type, post: art.DataContent): Unit = {\n    for (l <- baseListeners) {\n      l.observeInitialisePostState(bridgeId, observationKind, post)\n    }\n\n    for (l <- externalListeners) {\n      l.observeInitialisePostState(bridgeId, observationKind, post)\n    }\n  }\n\n  def observeComputePreState(bridgeId: BridgeId, observationKind: ObservationKind.Type, pre: Option[art.DataContent]): Unit = {\n    for (l <- baseListeners) {\n      l.observeComputePreState(bridgeId, observationKind, pre)\n    }\n\n    for (l <- externalListeners) {\n      l.observeComputePreState(bridgeId, observationKind, pre)\n    }\n  }\n\n  def observeComputePrePostState(bridgeId: BridgeId, observationKind: ObservationKind.Type, pre: Option[art.DataContent], post: art.DataContent): Unit = {\n    for (l <- baseListeners) {\n      l.observeComputePrePostState(bridgeId, observationKind, pre, post)\n    }\n\n    for (l <- externalListeners) {\n      l.observeComputePrePostState(bridgeId, observationKind, pre, post)\n    }\n  }\n}",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER RUNTIME MONITORING",
-              "endMarker" : "\/\/ END MARKER RUNTIME MONITORING"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER RUNTIME MONITORING",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -743,14 +750,28 @@
           "content" : "\/\/ #Sireum\n\npackage building_control_gen_mixed__JVM__runtime_monitoring\n\nimport org.sireum._\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject Platform {\n\n  def setup(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM SETUP\n    {\n      \/\/ Contributions from GumboX Plugin\n      building_control_gen_mixed__JVM__runtime_monitoring.runtimemonitor.RuntimeMonitor.init(building_control_gen_mixed__JVM__runtime_monitoring.runtimemonitor.ModelInfo.modelInfo)\n    }\n    \/\/ END MARKER PLATFORM SETUP\n  }\n\n  def tearDown(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM TEARDOWN\n    {\n      \/\/ Contributions from GumboX Plugin\n      building_control_gen_mixed__JVM__runtime_monitoring.runtimemonitor.RuntimeMonitor.finalise()\n    }\n    \/\/ END MARKER PLATFORM TEARDOWN\n  }\n}",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM SETUP",
-              "endMarker" : "\/\/ END MARKER PLATFORM SETUP"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM SETUP",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM TEARDOWN",
-              "endMarker" : "\/\/ END MARKER PLATFORM TEARDOWN"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM TEARDOWN",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,

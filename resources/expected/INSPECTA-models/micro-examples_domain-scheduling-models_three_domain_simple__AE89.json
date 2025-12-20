@@ -262,44 +262,116 @@
           "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content in between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.schedule.xml\" \/>\n\n  <protection_domain name=\"p1_t1_MON\" domain=\"domain_2\">\n    <program_image path=\"p1_t1_MON.elf\" \/>\n    <protection_domain name=\"p1_t1\" domain=\"domain_2\" id=\"1\">\n      <program_image path=\"p1_t1.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p1_t1 -->\n      <!-- END CONTENT MARKER p1_t1 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p1_t1_MON -->\n    <!-- END CONTENT MARKER p1_t1_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p2_t2_MON\" domain=\"domain_3\">\n    <program_image path=\"p2_t2_MON.elf\" \/>\n    <protection_domain name=\"p2_t2\" domain=\"domain_3\" id=\"1\">\n      <program_image path=\"p2_t2.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p2_t2 -->\n      <!-- END CONTENT MARKER p2_t2 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p2_t2_MON -->\n    <!-- END CONTENT MARKER p2_t2_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p3_t3_MON\" domain=\"domain_4\">\n    <program_image path=\"p3_t3_MON.elf\" \/>\n    <protection_domain name=\"p3_t3\" domain=\"domain_4\" id=\"1\">\n      <program_image path=\"p3_t3.elf\" \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p3_t3 -->\n      <!-- END CONTENT MARKER p3_t3 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p3_t3_MON -->\n    <!-- END CONTENT MARKER p3_t3_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"p1_t1_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p1_t1_MON\" id=\"60\" \/>\n    <end pd=\"p1_t1\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"p2_t2_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p2_t2_MON\" id=\"58\" \/>\n    <end pd=\"p2_t2\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"p3_t3_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p3_t3_MON\" id=\"56\" \/>\n    <end pd=\"p3_t3\" id=\"56\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "<!-- BEGIN CONTENT MARKER p1_t1_MON -->",
-              "endMarker" : "<!-- END CONTENT MARKER p1_t1_MON -->"
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p1_t1_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "<!-- BEGIN CONTENT MARKER p1_t1 -->",
-              "endMarker" : "<!-- END CONTENT MARKER p1_t1 -->"
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p1_t1",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "<!-- BEGIN CONTENT MARKER p2_t2_MON -->",
-              "endMarker" : "<!-- END CONTENT MARKER p2_t2_MON -->"
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p2_t2_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "<!-- BEGIN CONTENT MARKER p2_t2 -->",
-              "endMarker" : "<!-- END CONTENT MARKER p2_t2 -->"
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p2_t2",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "<!-- BEGIN CONTENT MARKER p3_t3_MON -->",
-              "endMarker" : "<!-- END CONTENT MARKER p3_t3_MON -->"
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p3_t3_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "<!-- BEGIN CONTENT MARKER p3_t3 -->",
-              "endMarker" : "<!-- END CONTENT MARKER p3_t3 -->"
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p3_t3",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "<!-- BEGIN CONTENT MARKER pacer -->",
-              "endMarker" : "<!-- END CONTENT MARKER pacer -->"
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER pacer",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "<!-- BEGIN MSD CONTENT MARKER -->",
-              "endMarker" : "<!-- END MSD CONTENT MARKER -->"
+              "type" : "TestBlockMarker",
+              "id" : "MSD CONTENT MARKER",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
             }
           ],
           "invertMarkers" : true,

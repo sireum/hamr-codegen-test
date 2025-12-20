@@ -318,24 +318,52 @@
           "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Regulate\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface {\n\n  \/\/ BEGIN FUNCTIONS\n  @strictpure def ROUND(num: Base_Types.Float_32): Base_Types.Float_32 = num\n  \/\/ END FUNCTIONS\n\n  def initialise(api: Manage_Regulator_Interface_impl_Initialization_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN INITIALIZES ENSURES\n        \/\/ guarantee RegulatorStatusIsInitiallyInit\n        api.regulator_status == Isolette_Data_Model.Status.Init_Status\n        \/\/ END INITIALIZES ENSURES\n      )\n    )\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_upper_desired_temp(Isolette_Data_Model.Temp_impl.example())\n    api.put_lower_desired_temp(Isolette_Data_Model.Temp_impl.example())\n    api.put_displayed_temp(Isolette_Data_Model.Temp_impl.example())\n    api.put_regulator_status(Isolette_Data_Model.Status.Init_Status)\n    api.put_interface_failure(Isolette_Data_Model.Failure_Flag_impl.example())\n  }\n\n  def timeTriggered(api: Manage_Regulator_Interface_impl_Operational_Api): Unit = {\n    Contract(\n      Requires(\n        \/\/ BEGIN COMPUTE REQUIRES timeTriggered\n        \/\/ assume lower_is_not_higher_than_upper\n        api.lower_desired_tempWstatus.value <= api.upper_desired_tempWstatus.value\n        \/\/ END COMPUTE REQUIRES timeTriggered\n      ),\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ case REQ_MRI_1\n        \/\/   If the Regulator Mode is INIT,\n        \/\/   the Regulator Status shall be set to Init.\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Init_Regulator_Mode) ___>: (api.regulator_status == Isolette_Data_Model.Status.Init_Status),\n        \/\/ case REQ_MRI_2\n        \/\/   If the Regulator Mode is NORMAL,\n        \/\/   the Regulator Status shall be set to On\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode) ___>: (api.regulator_status == Isolette_Data_Model.Status.On_Status),\n        \/\/ case REQ_MRI_3\n        \/\/   If the Regulator Mode is FAILED,\n        \/\/   the Regulator Status shall be set to Failed.\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode) ___>: (api.regulator_status == Isolette_Data_Model.Status.Failed_Status),\n        \/\/ case REQ_MRI_4\n        \/\/   If the Regulator Mode is NORMAL, the\n        \/\/   Display Temperature shall be set to the value of the\n        \/\/   Current Temperature rounded to the nearest integer.\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode) ___>: (api.displayed_temp.value == Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface.ROUND(api.current_tempWstatus.value)),\n        \/\/ case REQ_MRI_5\n        \/\/   If the Regulator Mode is not NORMAL,\n        \/\/   the value of the Display Temperature is UNSPECIFIED.\n        (T) ___>: (T),\n        \/\/ case REQ_MRI_6\n        \/\/   If the Status attribute of the Lower Desired Temperature\n        \/\/   or the Upper Desired Temperature is Invalid,\n        \/\/   the Regulator Interface Failure shall be set to True.\n        (api.upper_desired_tempWstatus.status != Isolette_Data_Model.ValueStatus.Valid |\n          api.upper_desired_tempWstatus.status != Isolette_Data_Model.ValueStatus.Valid) ___>: (api.interface_failure.value),\n        \/\/ case REQ_MRI_7\n        \/\/   If the Status attribute of the Lower Desired Temperature\n        \/\/   and the Upper Desired Temperature is Valid,\n        \/\/   the Regulator Interface Failure shall be set to False.\n        (T) ___>: (api.interface_failure.value == !(api.upper_desired_tempWstatus.status == Isolette_Data_Model.ValueStatus.Valid &\n          api.lower_desired_tempWstatus.status == Isolette_Data_Model.ValueStatus.Valid)),\n        \/\/ case REQ_MRI_8\n        \/\/   If the Regulator Interface Failure is False\n        (T) ___>: (!(api.interface_failure.value) __>:\n          api.lower_desired_temp.value == api.lower_desired_tempWstatus.value &\n            api.upper_desired_temp.value == api.upper_desired_tempWstatus.value),\n        \/\/ case REQ_MRI_9\n        \/\/   If the Regulator Interface Failure is True,\n        \/\/   the Desired Range is UNSPECIFIED.\n        \/\/   the Desired Range shall be set to the Desired Temperature Range.\n        \/\/   (** currently omitted due to the 'UNSPECIFIED' **)\n        (T) ___>: (T)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_upper_desired_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_upper_desired_tempWstatus()\n    api.logInfo(s\"Received on data port upper_desired_tempWstatus: ${apiUsage_upper_desired_tempWstatus}\")\n    val apiUsage_lower_desired_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_lower_desired_tempWstatus()\n    api.logInfo(s\"Received on data port lower_desired_tempWstatus: ${apiUsage_lower_desired_tempWstatus}\")\n    val apiUsage_current_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_current_tempWstatus()\n    api.logInfo(s\"Received on data port current_tempWstatus: ${apiUsage_current_tempWstatus}\")\n    val apiUsage_regulator_mode: Option[Isolette_Data_Model.Regulator_Mode.Type] = api.get_regulator_mode()\n    api.logInfo(s\"Received on data port regulator_mode: ${apiUsage_regulator_mode}\")\n  }\n\n  def finalise(api: Manage_Regulator_Interface_impl_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN FUNCTIONS",
-              "endMarker" : "\/\/ END FUNCTIONS"
+              "type" : "TestBlockMarker",
+              "id" : "FUNCTIONS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES ENSURES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE REQUIRES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE REQUIRES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE REQUIRES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -548,24 +576,52 @@
           "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Regulate\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source {\n\n  \/\/ BEGIN STATE VARS\n  var lastCmd: Isolette_Data_Model.On_Off.Type = Isolette_Data_Model.On_Off.Onn\n  \/\/ END STATE VARS\n\n  def initialise(api: Manage_Heat_Source_impl_Initialization_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN INITIALIZES ENSURES\n        \/\/ guarantee initlastCmd\n        lastCmd == Isolette_Data_Model.On_Off.Off,\n        \/\/ guarantee REQ_MHS_1\n        \/\/   If the Regulator Mode is INIT, the Heat Control shall be\n        \/\/   set to Off\n        api.heat_control == Isolette_Data_Model.On_Off.Off\n        \/\/ END INITIALIZES ENSURES\n      )\n    )\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_heat_control(Isolette_Data_Model.On_Off.Onn)\n  }\n\n  def timeTriggered(api: Manage_Heat_Source_impl_Operational_Api): Unit = {\n    Contract(\n      Requires(\n        \/\/ BEGIN COMPUTE REQUIRES timeTriggered\n        \/\/ assume lower_is_lower_temp\n        api.lower_desired_temp.value <= api.upper_desired_temp.value\n        \/\/ END COMPUTE REQUIRES timeTriggered\n      ),\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ guarantee lastCmd\n        \/\/   Set lastCmd to value of output Cmd port\n        lastCmd == api.heat_control,\n        \/\/ case REQ_MHS_1\n        \/\/   If the Regulator Mode is INIT, the Heat Control shall be\n        \/\/   set to Off.\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Init_Regulator_Mode) ___>: (api.heat_control == Isolette_Data_Model.On_Off.Off),\n        \/\/ case REQ_MHS_2\n        \/\/   If the Regulator Mode is NORMAL and the Current Temperature is less than\n        \/\/   the Lower Desired Temperature, the Heat Control shall be set to On.\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode &\n          api.current_tempWstatus.value < api.lower_desired_temp.value) ___>: (api.heat_control == Isolette_Data_Model.On_Off.Onn),\n        \/\/ case REQ_MHS_3\n        \/\/   If the Regulator Mode is NORMAL and the Current Temperature is greater than\n        \/\/   the Upper Desired Temperature, the Heat Control shall be set to Off.\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode &\n          api.current_tempWstatus.value > api.upper_desired_temp.value) ___>: (api.heat_control == Isolette_Data_Model.On_Off.Off),\n        \/\/ case REQ_MHS_4\n        \/\/   If the Regulator Mode is NORMAL and the Current\n        \/\/   Temperature is greater than or equal to the Lower Desired Temperature\n        \/\/   and less than or equal to the Upper Desired Temperature, the value of\n        \/\/   the Heat Control shall not be changed.\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode &\n          (api.current_tempWstatus.value >= api.lower_desired_temp.value &\n            api.current_tempWstatus.value <= api.upper_desired_temp.value)) ___>: (api.heat_control == In(lastCmd)),\n        \/\/ case REQ_MHS_5\n        \/\/   If the Regulator Mode is FAILED, the Heat Control shall be\n        \/\/   set to Off.\n        (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode) ___>: (api.heat_control == Isolette_Data_Model.On_Off.Off)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_current_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_current_tempWstatus()\n    api.logInfo(s\"Received on data port current_tempWstatus: ${apiUsage_current_tempWstatus}\")\n    val apiUsage_lower_desired_temp: Option[Isolette_Data_Model.Temp_impl] = api.get_lower_desired_temp()\n    api.logInfo(s\"Received on data port lower_desired_temp: ${apiUsage_lower_desired_temp}\")\n    val apiUsage_upper_desired_temp: Option[Isolette_Data_Model.Temp_impl] = api.get_upper_desired_temp()\n    api.logInfo(s\"Received on data port upper_desired_temp: ${apiUsage_upper_desired_temp}\")\n    val apiUsage_regulator_mode: Option[Isolette_Data_Model.Regulator_Mode.Type] = api.get_regulator_mode()\n    api.logInfo(s\"Received on data port regulator_mode: ${apiUsage_regulator_mode}\")\n  }\n\n  def finalise(api: Manage_Heat_Source_impl_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN STATE VARS",
-              "endMarker" : "\/\/ END STATE VARS"
+              "type" : "TestBlockMarker",
+              "id" : "STATE VARS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES ENSURES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE REQUIRES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE REQUIRES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE REQUIRES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -764,19 +820,40 @@
           "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Regulate\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode {\n\n  \/\/ BEGIN STATE VARS\n  var lastRegulatorMode: Isolette_Data_Model.Regulator_Mode.Type = Isolette_Data_Model.Regulator_Mode.Init_Regulator_Mode\n  \/\/ END STATE VARS\n\n  def initialise(api: Manage_Regulator_Mode_impl_Initialization_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN INITIALIZES ENSURES\n        \/\/ guarantee REQ_MRM_1\n        \/\/   The initial mode of the regular is INIT\n        api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Init_Regulator_Mode\n        \/\/ END INITIALIZES ENSURES\n      )\n    )\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_regulator_mode(Isolette_Data_Model.Regulator_Mode.Init_Regulator_Mode)\n  }\n\n  def timeTriggered(api: Manage_Regulator_Mode_impl_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ case REQ_MRM_2\n        \/\/   'transition from Init to Normal'\n        \/\/   If the current regulator mode is Init, then\n        \/\/   the regulator mode is set to NORMAL iff the regulator status is valid (see Table A-10), i.e.,\n        \/\/     if NOT (Regulator Interface Failure OR Regulator Internal Failure)\n        \/\/        AND Current Temperature.Status = Valid\n        (In(lastRegulatorMode) == Isolette_Data_Model.Regulator_Mode.Init_Regulator_Mode) ___>: (!(api.interface_failure.value || api.internal_failure.value) &&\n          api.current_tempWstatus.status == Isolette_Data_Model.ValueStatus.Valid ___>:\n          api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode &&\n            lastRegulatorMode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode),\n        \/\/ case REQ_MRM_Maintain_Normal\n        \/\/   'maintaining NORMAL, NORMAL to NORMAL'\n        \/\/   If the current regulator mode is Normal, then\n        \/\/   the regulator mode is stays normal iff\n        \/\/   the regulaor status is not false i.e.,\n        \/\/          if NOT(\n        \/\/              (Regulator Interface Failure OR Regulator Internal Failure)\n        \/\/              OR NOT(Current Temperature.Status = Valid)\n        \/\/          )\n        (In(lastRegulatorMode) == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode) ___>: (!(api.interface_failure.value || api.internal_failure.value) &&\n          api.current_tempWstatus.status == Isolette_Data_Model.ValueStatus.Valid ___>:\n          api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode &&\n            lastRegulatorMode == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode),\n        \/\/ case REQ_MRM_3\n        \/\/   'transition for NORMAL to FAILED'\n        \/\/   If the current regulator mode is Normal, then\n        \/\/   the regulator mode is set to Failed iff\n        \/\/   the regulator status is false, i.e.,\n        \/\/      if  (Regulator Interface Failure OR Regulator Internal Failure)\n        \/\/          OR NOT(Current Temperature.Status = Valid)\n        (In(lastRegulatorMode) == Isolette_Data_Model.Regulator_Mode.Normal_Regulator_Mode) ___>: ((api.interface_failure.value || api.internal_failure.value) &&\n          api.current_tempWstatus.status != Isolette_Data_Model.ValueStatus.Valid ___>:\n          api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode &&\n            lastRegulatorMode == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode),\n        \/\/ case REQ_MRM_4\n        \/\/   'transition from INIT to FAILED' \n        \/\/   If the current regulator mode is Init, then\n        \/\/   the regulator mode and lastRegulatorMode state value is set to Failed iff\n        \/\/   the regulator status is false, i.e.,\n        \/\/          if  (Regulator Interface Failure OR Regulator Internal Failure)\n        \/\/          OR NOT(Current Temperature.Status = Valid)\n        (In(lastRegulatorMode) == Isolette_Data_Model.Regulator_Mode.Init_Regulator_Mode) ___>: ((api.interface_failure.value || api.internal_failure.value) &&\n          api.current_tempWstatus.status != Isolette_Data_Model.ValueStatus.Valid ___>:\n          api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode &&\n            lastRegulatorMode == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode),\n        \/\/ case REQ_MRM_MaintainFailed\n        \/\/   'maintaining FAIL, FAIL to FAIL'\n        \/\/   If the current regulator mode is Failed, then\n        \/\/   the regulator mode remains in the Failed state and the LastRegulator mode remains Failed.REQ-MRM-Maintain-Failed\n        (In(lastRegulatorMode) == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode) ___>: (api.regulator_mode == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode &&\n          lastRegulatorMode == Isolette_Data_Model.Regulator_Mode.Failed_Regulator_Mode)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_current_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_current_tempWstatus()\n    api.logInfo(s\"Received on data port current_tempWstatus: ${apiUsage_current_tempWstatus}\")\n    val apiUsage_interface_failure: Option[Isolette_Data_Model.Failure_Flag_impl] = api.get_interface_failure()\n    api.logInfo(s\"Received on data port interface_failure: ${apiUsage_interface_failure}\")\n    val apiUsage_internal_failure: Option[Isolette_Data_Model.Failure_Flag_impl] = api.get_internal_failure()\n    api.logInfo(s\"Received on data port internal_failure: ${apiUsage_internal_failure}\")\n  }\n\n  def finalise(api: Manage_Regulator_Mode_impl_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN STATE VARS",
-              "endMarker" : "\/\/ END STATE VARS"
+              "type" : "TestBlockMarker",
+              "id" : "STATE VARS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES ENSURES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1059,24 +1136,52 @@
           "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Monitor\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface {\n\n  \/\/ BEGIN STATE VARS\n  var lastCmd: Isolette_Data_Model.On_Off.Type = Isolette_Data_Model.On_Off.Onn\n  \/\/ END STATE VARS\n\n  \/\/ BEGIN FUNCTIONS\n  @strictpure def timeout_condition_satisfied(): Base_Types.Boolean = T\n  \/\/ END FUNCTIONS\n\n  def initialise(api: Manage_Monitor_Interface_impl_Initialization_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN INITIALIZES ENSURES\n        \/\/ guarantee monitorStatusInitiallyInit\n        api.monitor_status == Isolette_Data_Model.Status.Init_Status\n        \/\/ END INITIALIZES ENSURES\n      )\n    )\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_upper_alarm_temp(Isolette_Data_Model.Temp_impl.example())\n    api.put_lower_alarm_temp(Isolette_Data_Model.Temp_impl.example())\n    api.put_monitor_status(Isolette_Data_Model.Status.Init_Status)\n    api.put_interface_failure(Isolette_Data_Model.Failure_Flag_impl.example())\n  }\n\n  def timeTriggered(api: Manage_Monitor_Interface_impl_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ case REQ_MMI_1\n        \/\/   If the Manage Monitor Interface mode is INIT,\n        \/\/   the Monitor Status shall be set to Init.\n        (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Init_Monitor_Mode) ___>: (api.monitor_status == Isolette_Data_Model.Status.Init_Status),\n        \/\/ case REQ_MMI_2\n        \/\/   If the Manage Monitor Interface mode is NORMAL,\n        \/\/   the Monitor Status shall be set to On\n        (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Normal_Monitor_Mode) ___>: (api.monitor_status == Isolette_Data_Model.Status.On_Status),\n        \/\/ case REQ_MMI_3\n        \/\/   If the Manage Monitor Interface mode is FAILED,\n        \/\/   the Monitor Status shall be set to Failed.\n        \/\/   Latency: < Max Operator Response Time\n        \/\/   Tolerance: N\/A\n        (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Failed_Monitor_Mode) ___>: (api.monitor_status == Isolette_Data_Model.Status.Failed_Status),\n        \/\/ case REQ_MMI_4\n        \/\/   If the Status attribute of the Lower Alarm Temperature\n        \/\/   or the Upper Alarm Temperature is Invalid,\n        \/\/   the Monitor Interface Failure shall be set to True\n        (api.lower_alarm_tempWstatus.status == Isolette_Data_Model.ValueStatus.Invalid |\n          api.upper_alarm_tempWstatus.status == Isolette_Data_Model.ValueStatus.Invalid) ___>: (api.interface_failure.value),\n        \/\/ case REQ_MMI_5\n        \/\/   If the Status attribute of the Lower Alarm Temperature\n        \/\/   and the Upper Alarm Temperature is Valid,\n        \/\/   the Monitor Interface Failure shall be set to False\n        (api.lower_alarm_tempWstatus.status == Isolette_Data_Model.ValueStatus.Valid &\n          api.upper_alarm_tempWstatus.status == Isolette_Data_Model.ValueStatus.Valid) ___>: (!(api.interface_failure.value)),\n        \/\/ case REQ_MMI_6\n        \/\/   If the Monitor Interface Failure is False,\n        \/\/   the Alarm Range variable shall be set to the Desired Temperature Range\n        (T) ___>: (!(api.interface_failure.value) ___>:\n          api.lower_alarm_temp.value == api.lower_alarm_tempWstatus.value &\n            api.upper_alarm_temp.value == api.upper_alarm_tempWstatus.value),\n        \/\/ case REQ_MMI_7\n        \/\/   If the Monitor Interface Failure is True,\n        \/\/   the Alarm Range variable is UNSPECIFIED\n        (T) ___>: (api.interface_failure.value ___>: T)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_upper_alarm_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_upper_alarm_tempWstatus()\n    api.logInfo(s\"Received on data port upper_alarm_tempWstatus: ${apiUsage_upper_alarm_tempWstatus}\")\n    val apiUsage_lower_alarm_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_lower_alarm_tempWstatus()\n    api.logInfo(s\"Received on data port lower_alarm_tempWstatus: ${apiUsage_lower_alarm_tempWstatus}\")\n    val apiUsage_current_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_current_tempWstatus()\n    api.logInfo(s\"Received on data port current_tempWstatus: ${apiUsage_current_tempWstatus}\")\n    val apiUsage_monitor_mode: Option[Isolette_Data_Model.Monitor_Mode.Type] = api.get_monitor_mode()\n    api.logInfo(s\"Received on data port monitor_mode: ${apiUsage_monitor_mode}\")\n  }\n\n  def finalise(api: Manage_Monitor_Interface_impl_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN STATE VARS",
-              "endMarker" : "\/\/ END STATE VARS"
+              "type" : "TestBlockMarker",
+              "id" : "STATE VARS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN FUNCTIONS",
-              "endMarker" : "\/\/ END FUNCTIONS"
+              "type" : "TestBlockMarker",
+              "id" : "FUNCTIONS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES ENSURES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1275,29 +1380,64 @@
           "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Monitor\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm {\n\n  \/\/ BEGIN STATE VARS\n  var lastCmd: Isolette_Data_Model.On_Off.Type = Isolette_Data_Model.On_Off.Onn\n  \/\/ END STATE VARS\n\n  \/\/ BEGIN FUNCTIONS\n  @strictpure def timeout_condition_satisfied(): Base_Types.Boolean = T\n  \/\/ END FUNCTIONS\n\n  def initialise(api: Manage_Alarm_impl_Initialization_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN INITIALIZES ENSURES\n        \/\/ guarantee alarmcontrolIsInitiallyOff\n        api.alarm_control == Isolette_Data_Model.On_Off.Off,\n        \/\/ guarantee lastCmdInitiallySetToOff\n        lastCmd == Isolette_Data_Model.On_Off.Off\n        \/\/ END INITIALIZES ENSURES\n      )\n    )\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_alarm_control(Isolette_Data_Model.On_Off.Onn)\n  }\n\n  def timeTriggered(api: Manage_Alarm_impl_Operational_Api): Unit = {\n    Contract(\n      Requires(\n        \/\/ BEGIN COMPUTE REQUIRES timeTriggered\n        \/\/ assume NanAssumes\n        \/\/   Assume the port values are valid F32s\n        api.current_tempWstatus.value != F32.NaN &&\n          api.upper_alarm_temp.value != F32.NaN &&\n          api.lower_alarm_temp.value != F32.NaN,\n        \/\/ assume alarmRange\n        \/\/   Assume the lower alarm is at least 1.0f less than the upper alarm\n        \/\/   to account for the 0.5f tolerance\n        api.upper_alarm_temp.value - api.lower_alarm_temp.value > 1.0f\n        \/\/ END COMPUTE REQUIRES timeTriggered\n      ),\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ case REQ_MRM_1\n        \/\/   If the Monitor Mode is INIT, the Alarm Control shall be set\n        \/\/   to Off.\n        (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Init_Monitor_Mode) ___>: (api.alarm_control == Isolette_Data_Model.On_Off.Off &\n          lastCmd == Isolette_Data_Model.On_Off.Off),\n        \/\/ case REQ_MRM_2\n        \/\/   If the Monitor Mode is NORMAL and the Current Temperature is\n        \/\/   less than the Lower Alarm Temperature or greater than the Upper Alarm\n        \/\/   Temperature, the Alarm Control shall be set to On.\n        (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Normal_Monitor_Mode &\n          (api.current_tempWstatus.value < api.lower_alarm_temp.value ||\n            api.current_tempWstatus.value > api.upper_alarm_temp.value)) ___>: (api.alarm_control == Isolette_Data_Model.On_Off.Onn &\n          lastCmd == Isolette_Data_Model.On_Off.Onn),\n        \/\/ case REQ_MRM_3\n        \/\/   If the Monitor Mode is NORMAL and the Current Temperature\n        \/\/   is greater than or equal to the Lower Alarm Temperature and less than\n        \/\/   the Lower Alarm Temperature +0.5 degrees, or the Current Temperature is\n        \/\/   greater than the Upper Alarm Temperature -0.5 degrees and less than or equal\n        \/\/   to the Upper Alarm Temperature, the value of the Alarm Control shall\n        \/\/   not be changed.\n        (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Normal_Monitor_Mode &\n          (api.current_tempWstatus.value >= api.lower_alarm_temp.value &&\n            api.current_tempWstatus.value < api.lower_alarm_temp.value + 0.5f ||\n            api.current_tempWstatus.value > api.upper_alarm_temp.value - 0.5f &&\n              api.current_tempWstatus.value <= api.upper_alarm_temp.value)) ___>: (api.alarm_control == In(lastCmd) &\n          lastCmd == In(lastCmd)),\n        \/\/ case REQ_MRM_4\n        \/\/   If the Monitor Mode is NORMAL and the value of the Current\n        \/\/   Temperature is greater than or equal to the Lower Alarm Temperature\n        \/\/   +0.5 degrees and less than or equal to the Upper Alarm Temperature\n        \/\/   -0.5 degrees, the Alarm Control shall be set to Off.\n        (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Normal_Monitor_Mode &\n          api.current_tempWstatus.value >= api.lower_alarm_temp.value + 0.5f &\n          api.current_tempWstatus.value <= api.upper_alarm_temp.value - 0.5f) ___>: (api.alarm_control == Isolette_Data_Model.On_Off.Off &\n          lastCmd == Isolette_Data_Model.On_Off.Off),\n        \/\/ case REQ_MRM_5\n        \/\/   If the Monitor Mode is FAILED, the Alarm Control shall be\n        \/\/   set to On.\n        (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Failed_Monitor_Mode) ___>: (api.alarm_control == Isolette_Data_Model.On_Off.Onn &\n          lastCmd == Isolette_Data_Model.On_Off.Onn)\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_current_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_current_tempWstatus()\n    api.logInfo(s\"Received on data port current_tempWstatus: ${apiUsage_current_tempWstatus}\")\n    val apiUsage_lower_alarm_temp: Option[Isolette_Data_Model.Temp_impl] = api.get_lower_alarm_temp()\n    api.logInfo(s\"Received on data port lower_alarm_temp: ${apiUsage_lower_alarm_temp}\")\n    val apiUsage_upper_alarm_temp: Option[Isolette_Data_Model.Temp_impl] = api.get_upper_alarm_temp()\n    api.logInfo(s\"Received on data port upper_alarm_temp: ${apiUsage_upper_alarm_temp}\")\n    val apiUsage_monitor_mode: Option[Isolette_Data_Model.Monitor_Mode.Type] = api.get_monitor_mode()\n    api.logInfo(s\"Received on data port monitor_mode: ${apiUsage_monitor_mode}\")\n  }\n\n  def finalise(api: Manage_Alarm_impl_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN STATE VARS",
-              "endMarker" : "\/\/ END STATE VARS"
+              "type" : "TestBlockMarker",
+              "id" : "STATE VARS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN FUNCTIONS",
-              "endMarker" : "\/\/ END FUNCTIONS"
+              "type" : "TestBlockMarker",
+              "id" : "FUNCTIONS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES ENSURES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE REQUIRES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE REQUIRES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE REQUIRES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1496,24 +1636,52 @@
           "content" : "\/\/ #Sireum\n\npackage isolette__JVM.Monitor\n\nimport org.sireum._\nimport isolette__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode {\n\n  \/\/ BEGIN STATE VARS\n  var lastMonitorMode: Isolette_Data_Model.Monitor_Mode.Type = Isolette_Data_Model.Monitor_Mode.Init_Monitor_Mode\n  \/\/ END STATE VARS\n\n  \/\/ BEGIN FUNCTIONS\n  @strictpure def timeout_condition_satisfied(): Base_Types.Boolean = F\n  \/\/ END FUNCTIONS\n\n  def initialise(api: Manage_Monitor_Mode_impl_Initialization_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN INITIALIZES ENSURES\n        \/\/ guarantee REQ_MMM_1\n        \/\/   Upon the first dispatch of the thread, the monitor mode is Init.\n        api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Init_Monitor_Mode\n        \/\/ END INITIALIZES ENSURES\n      )\n    )\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n    api.put_monitor_mode(Isolette_Data_Model.Monitor_Mode.Init_Monitor_Mode)\n  }\n\n  def timeTriggered(api: Manage_Monitor_Mode_impl_Operational_Api): Unit = {\n    Contract(\n      Ensures(\n        \/\/ BEGIN COMPUTE ENSURES timeTriggered\n        \/\/ case REQ_MRM_2\n        \/\/   If the current mode is Init, then\n        \/\/   the mode is set to NORMAL iff the monitor status is true (valid) (see Table A-15), i.e.,\n        \/\/   if  NOT (Monitor Interface Failure OR Monitor Internal Failure)\n        \/\/   AND Current Temperature.Status = Valid\n        (In(lastMonitorMode) == Isolette_Data_Model.Monitor_Mode.Init_Monitor_Mode) ___>: (!(api.interface_failure.value || api.internal_failure.value) &&\n          api.current_tempWstatus.status == Isolette_Data_Model.ValueStatus.Valid ___>:\n          api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Normal_Monitor_Mode),\n        \/\/ case REQ_MRM_3\n        \/\/   If the current Monitor mode is Normal, then\n        \/\/   the Monitor mode is set to Failed iff\n        \/\/   the Monitor status is false, i.e.,\n        \/\/   if  (Monitor Interface Failure OR Monitor Internal Failure)\n        \/\/   OR NOT(Current Temperature.Status = Valid)\n        (In(lastMonitorMode) == Isolette_Data_Model.Monitor_Mode.Normal_Monitor_Mode) ___>: (api.interface_failure.value || api.internal_failure.value ||\n          api.current_tempWstatus.status != Isolette_Data_Model.ValueStatus.Valid ___>:\n          api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Failed_Monitor_Mode),\n        \/\/ case REQ_MRM_4\n        \/\/   If the current mode is Init, then\n        \/\/   the mode is set to Failed iff the time during\n        \/\/   which the thread has been in Init mode exceeds the\n        \/\/   Monitor Init Timeout value.\n        (In(lastMonitorMode) == Isolette_Data_Model.Monitor_Mode.Init_Monitor_Mode) ___>: (Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode.timeout_condition_satisfied() == (api.monitor_mode == Isolette_Data_Model.Monitor_Mode.Failed_Monitor_Mode))\n        \/\/ END COMPUTE ENSURES timeTriggered\n      )\n    )\n    \/\/ example api usage\n\n    val apiUsage_current_tempWstatus: Option[Isolette_Data_Model.TempWstatus_impl] = api.get_current_tempWstatus()\n    api.logInfo(s\"Received on data port current_tempWstatus: ${apiUsage_current_tempWstatus}\")\n    val apiUsage_interface_failure: Option[Isolette_Data_Model.Failure_Flag_impl] = api.get_interface_failure()\n    api.logInfo(s\"Received on data port interface_failure: ${apiUsage_interface_failure}\")\n    val apiUsage_internal_failure: Option[Isolette_Data_Model.Failure_Flag_impl] = api.get_internal_failure()\n    api.logInfo(s\"Received on data port internal_failure: ${apiUsage_internal_failure}\")\n  }\n\n  def finalise(api: Manage_Monitor_Mode_impl_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN STATE VARS",
-              "endMarker" : "\/\/ END STATE VARS"
+              "type" : "TestBlockMarker",
+              "id" : "STATE VARS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN FUNCTIONS",
-              "endMarker" : "\/\/ END FUNCTIONS"
+              "type" : "TestBlockMarker",
+              "id" : "FUNCTIONS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES ENSURES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN COMPUTE ENSURES timeTriggered",
-              "endMarker" : "\/\/ END COMPUTE ENSURES timeTriggered"
+              "type" : "TestBlockMarker",
+              "id" : "COMPUTE ENSURES timeTriggered",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -1978,14 +2146,28 @@
           "content" : "\/\/ #Sireum\n\npackage isolette__JVM\n\nimport org.sireum._\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject Platform {\n\n  def setup(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM SETUP\n    \/\/ END MARKER PLATFORM SETUP\n  }\n\n  def tearDown(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM TEARDOWN\n    \/\/ END MARKER PLATFORM TEARDOWN\n  }\n}",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM SETUP",
-              "endMarker" : "\/\/ END MARKER PLATFORM SETUP"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM SETUP",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM TEARDOWN",
-              "endMarker" : "\/\/ END MARKER PLATFORM TEARDOWN"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM TEARDOWN",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,

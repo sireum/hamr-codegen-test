@@ -206,19 +206,40 @@
           "content" : "\/\/ #Sireum\n\npackage enum_test__JVM.Enum_Test\n\nimport org.sireum._\nimport enum_test__JVM._\n\n\/\/ This file will not be overwritten so is safe to edit\nobject TempControl_p_tempControl {\n\n  \/\/ BEGIN STATE VARS\n  var currentSetPoint: Enum_Test.SetPoint_i = Enum_Test.SetPoint_i.example()\n  \/\/ END STATE VARS\n\n  def initialise(api: TempControl_Initialization_Api): Unit = {\n    Contract(\n      Modifies(\n        \/\/ BEGIN INITIALIZES MODIFIES\n        currentSetPoint\n        \/\/ END INITIALIZES MODIFIES\n      ),\n      Ensures(\n        \/\/ BEGIN INITIALIZES ENSURES\n        \/\/ guarantee g1\n        \/\/   defaultSetPoint\n        currentSetPoint.low.degrees == 70.0d &&\n          currentSetPoint.high.degrees == 80.0d\n        \/\/ END INITIALIZES ENSURES\n      )\n    )\n    \/\/ example api usage\n\n    api.logInfo(\"Example info logging\")\n    api.logDebug(\"Example debug logging\")\n    api.logError(\"Example error logging\")\n\n  }\n\n  def handle_setPoint(api: TempControl_Operational_Api, value: Enum_Test.SetPoint_i): Unit = {\n    api.logInfo(\"example handle_setPoint implementation\")\n    api.logInfo(s\"  received $value\")\n    \/\/ example api usage\n\n    val apiUsage_setPoint: Option[Enum_Test.SetPoint_i] = api.get_setPoint()\n    api.logInfo(s\"Received on event data port setPoint: ${apiUsage_setPoint}\")\n    val apiUsage_currentTemp: Option[Enum_Test.Temperature_i] = api.get_currentTemp()\n    api.logInfo(s\"Received on event data port currentTemp: ${apiUsage_currentTemp}\")\n  }\n\n  def handle_currentTemp(api: TempControl_Operational_Api, value: Enum_Test.Temperature_i): Unit = {\n    api.logInfo(\"example handle_currentTemp implementation\")\n    api.logInfo(s\"  received $value\")\n  }\n\n  def finalise(api: TempControl_Operational_Api): Unit = { }\n}\n",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN STATE VARS",
-              "endMarker" : "\/\/ END STATE VARS"
+              "type" : "TestBlockMarker",
+              "id" : "STATE VARS",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES MODIFIES",
-              "endMarker" : "\/\/ END INITIALIZES MODIFIES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES MODIFIES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN INITIALIZES ENSURES",
-              "endMarker" : "\/\/ END INITIALIZES ENSURES"
+              "type" : "TestBlockMarker",
+              "id" : "INITIALIZES ENSURES",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
@@ -557,14 +578,28 @@
           "content" : "\/\/ #Sireum\n\npackage enum_test__JVM\n\nimport org.sireum._\n\n\/\/ This file will not be overwritten so is safe to edit\n\nobject Platform {\n\n  def setup(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM SETUP\n    \/\/ END MARKER PLATFORM SETUP\n  }\n\n  def tearDown(): Unit = {\n    \/\/ BEGIN MARKER PLATFORM TEARDOWN\n    \/\/ END MARKER PLATFORM TEARDOWN\n  }\n}",
           "markers" : [
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM SETUP",
-              "endMarker" : "\/\/ END MARKER PLATFORM SETUP"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM SETUP",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             },
             {
-              "type" : "TestMarker",
-              "beginMarker" : "\/\/ BEGIN MARKER PLATFORM TEARDOWN",
-              "endMarker" : "\/\/ END MARKER PLATFORM TEARDOWN"
+              "type" : "TestBlockMarker",
+              "id" : "MARKER PLATFORM TEARDOWN",
+              "beginPrefix" : "\/\/ BEGIN",
+              "optBeginSuffix" : {
+                "type" : "None"
+              },
+              "endPrefix" : "\/\/ END",
+              "optEndSuffix" : {
+                "type" : "None"
+              }
             }
           ],
           "invertMarkers" : false,
