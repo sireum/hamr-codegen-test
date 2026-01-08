@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from TempUnit.scala, Temperature_impl.scala, SetPoint_impl.scala, FanAck.scala, FanCmd.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
+// This file is auto-generated from TempUnit.scala, Temperature_impl.scala, FanAck.scala, SetPoint_impl.scala, FanCmd.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
 
 package bc
 
@@ -46,21 +46,6 @@ object JSON {
       ))
     }
 
-    @pure def printBuildingControlSetPoint_impl(o: BuildingControl.SetPoint_impl): ST = {
-      return printObject(ISZ(
-        ("type", st""""BuildingControl.SetPoint_impl""""),
-        ("low", printBuildingControlTemperature_impl(o.low)),
-        ("high", printBuildingControlTemperature_impl(o.high))
-      ))
-    }
-
-    @pure def printBuildingControlSetPoint_impl_Payload(o: BuildingControl.SetPoint_impl_Payload): ST = {
-      return printObject(ISZ(
-        ("type", st""""BuildingControl.SetPoint_impl_Payload""""),
-        ("value", printBuildingControlSetPoint_impl(o.value))
-      ))
-    }
-
     @pure def printBuildingControlFanAckType(o: BuildingControl.FanAck.Type): ST = {
       val value: String = o match {
         case BuildingControl.FanAck.Ok => "Ok"
@@ -76,6 +61,21 @@ object JSON {
       return printObject(ISZ(
         ("type", st""""BuildingControl.FanAck_Payload""""),
         ("value", printBuildingControlFanAckType(o.value))
+      ))
+    }
+
+    @pure def printBuildingControlSetPoint_impl(o: BuildingControl.SetPoint_impl): ST = {
+      return printObject(ISZ(
+        ("type", st""""BuildingControl.SetPoint_impl""""),
+        ("low", printBuildingControlTemperature_impl(o.low)),
+        ("high", printBuildingControlTemperature_impl(o.high))
+      ))
+    }
+
+    @pure def printBuildingControlSetPoint_impl_Payload(o: BuildingControl.SetPoint_impl_Payload): ST = {
+      return printObject(ISZ(
+        ("type", st""""BuildingControl.SetPoint_impl_Payload""""),
+        ("value", printBuildingControlSetPoint_impl(o.value))
       ))
     }
 
@@ -320,39 +320,6 @@ object JSON {
       return BuildingControl.Temperature_impl_Payload(value)
     }
 
-    def parseBuildingControlSetPoint_impl(): BuildingControl.SetPoint_impl = {
-      val r = parseBuildingControlSetPoint_implT(F)
-      return r
-    }
-
-    def parseBuildingControlSetPoint_implT(typeParsed: B): BuildingControl.SetPoint_impl = {
-      if (!typeParsed) {
-        parser.parseObjectType("BuildingControl.SetPoint_impl")
-      }
-      parser.parseObjectKey("low")
-      val low = parseBuildingControlTemperature_impl()
-      parser.parseObjectNext()
-      parser.parseObjectKey("high")
-      val high = parseBuildingControlTemperature_impl()
-      parser.parseObjectNext()
-      return BuildingControl.SetPoint_impl(low, high)
-    }
-
-    def parseBuildingControlSetPoint_impl_Payload(): BuildingControl.SetPoint_impl_Payload = {
-      val r = parseBuildingControlSetPoint_impl_PayloadT(F)
-      return r
-    }
-
-    def parseBuildingControlSetPoint_impl_PayloadT(typeParsed: B): BuildingControl.SetPoint_impl_Payload = {
-      if (!typeParsed) {
-        parser.parseObjectType("BuildingControl.SetPoint_impl_Payload")
-      }
-      parser.parseObjectKey("value")
-      val value = parseBuildingControlSetPoint_impl()
-      parser.parseObjectNext()
-      return BuildingControl.SetPoint_impl_Payload(value)
-    }
-
     def parseBuildingControlFanAckType(): BuildingControl.FanAck.Type = {
       val r = parseBuildingControlFanAckT(F)
       return r
@@ -387,6 +354,39 @@ object JSON {
       val value = parseBuildingControlFanAckType()
       parser.parseObjectNext()
       return BuildingControl.FanAck_Payload(value)
+    }
+
+    def parseBuildingControlSetPoint_impl(): BuildingControl.SetPoint_impl = {
+      val r = parseBuildingControlSetPoint_implT(F)
+      return r
+    }
+
+    def parseBuildingControlSetPoint_implT(typeParsed: B): BuildingControl.SetPoint_impl = {
+      if (!typeParsed) {
+        parser.parseObjectType("BuildingControl.SetPoint_impl")
+      }
+      parser.parseObjectKey("low")
+      val low = parseBuildingControlTemperature_impl()
+      parser.parseObjectNext()
+      parser.parseObjectKey("high")
+      val high = parseBuildingControlTemperature_impl()
+      parser.parseObjectNext()
+      return BuildingControl.SetPoint_impl(low, high)
+    }
+
+    def parseBuildingControlSetPoint_impl_Payload(): BuildingControl.SetPoint_impl_Payload = {
+      val r = parseBuildingControlSetPoint_impl_PayloadT(F)
+      return r
+    }
+
+    def parseBuildingControlSetPoint_impl_PayloadT(typeParsed: B): BuildingControl.SetPoint_impl_Payload = {
+      if (!typeParsed) {
+        parser.parseObjectType("BuildingControl.SetPoint_impl_Payload")
+      }
+      parser.parseObjectKey("value")
+      val value = parseBuildingControlSetPoint_impl()
+      parser.parseObjectNext()
+      return BuildingControl.SetPoint_impl_Payload(value)
     }
 
     def parseBuildingControlFanCmdType(): BuildingControl.FanCmd.Type = {
@@ -777,6 +777,24 @@ object JSON {
     return r
   }
 
+  def fromBuildingControlFanAck_Payload(o: BuildingControl.FanAck_Payload, isCompact: B): String = {
+    val st = Printer.printBuildingControlFanAck_Payload(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toBuildingControlFanAck_Payload(s: String): Either[BuildingControl.FanAck_Payload, Json.ErrorMsg] = {
+    def fBuildingControlFanAck_Payload(parser: Parser): BuildingControl.FanAck_Payload = {
+      val r = parser.parseBuildingControlFanAck_Payload()
+      return r
+    }
+    val r = to(s, fBuildingControlFanAck_Payload _)
+    return r
+  }
+
   def fromBuildingControlSetPoint_impl(o: BuildingControl.SetPoint_impl, isCompact: B): String = {
     val st = Printer.printBuildingControlSetPoint_impl(o)
     if (isCompact) {
@@ -810,24 +828,6 @@ object JSON {
       return r
     }
     val r = to(s, fBuildingControlSetPoint_impl_Payload _)
-    return r
-  }
-
-  def fromBuildingControlFanAck_Payload(o: BuildingControl.FanAck_Payload, isCompact: B): String = {
-    val st = Printer.printBuildingControlFanAck_Payload(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toBuildingControlFanAck_Payload(s: String): Either[BuildingControl.FanAck_Payload, Json.ErrorMsg] = {
-    def fBuildingControlFanAck_Payload(parser: Parser): BuildingControl.FanAck_Payload = {
-      val r = parser.parseBuildingControlFanAck_Payload()
-      return r
-    }
-    val r = to(s, fBuildingControlFanAck_Payload _)
     return r
   }
 

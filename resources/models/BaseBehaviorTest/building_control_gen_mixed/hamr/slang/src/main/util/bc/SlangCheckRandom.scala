@@ -12,9 +12,9 @@ TempUnit.scala
 
 Temperature_impl.scala
 
-SetPoint_impl.scala
-
 FanAck.scala
+
+SetPoint_impl.scala
 
 FanCmd.scala
 

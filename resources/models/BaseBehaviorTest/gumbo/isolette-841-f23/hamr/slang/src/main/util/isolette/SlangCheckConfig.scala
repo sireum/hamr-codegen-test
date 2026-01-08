@@ -8,27 +8,25 @@ import org.sireum.Random.Gen64
 /*
 GENERATED FROM
 
-Heat.scala
-
-Interface_Interaction.scala
-
-PhysicalTemp_impl.scala
-
 ValueStatus.scala
 
 TempWstatus_impl.scala
 
-On_Off.scala
-
-Status.scala
+Regulator_Mode.scala
 
 Temp_impl.scala
 
-Regulator_Mode.scala
+Status.scala
 
 Failure_Flag_impl.scala
 
+On_Off.scala
+
 Monitor_Mode.scala
+
+PhysicalTemp_impl.scala
+
+Heat.scala
 
 Base_Types.scala
 
@@ -205,10 +203,6 @@ Aux_Types.scala
 @datatype class Config_Isolette_EnvironmentHeatType(attempts: Z, verbose: B, filter: Isolette_Environment.Heat.Type => B) {}
 
 @datatype class Config_Isolette_EnvironmentHeat_Payload(attempts: Z, verbose: B, filter: Isolette_Environment.Heat_Payload => B) {}
-
-@datatype class Config_Isolette_EnvironmentInterface_InteractionType(attempts: Z, verbose: B, filter: Isolette_Environment.Interface_Interaction.Type => B) {}
-
-@datatype class Config_Isolette_EnvironmentInterface_Interaction_Payload(attempts: Z, verbose: B, filter: Isolette_Environment.Interface_Interaction_Payload => B) {}
 
 @datatype class Config_MonitorDetect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_PreState_Container(attempts: Z, verbose: B, additiveTypeFiltering: B, typeFilter: ISZ[MonitorDetect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_PreState_Container_DataTypeId.Type], filter: Monitor.Detect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_PreState_Container => B) {}
 

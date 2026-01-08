@@ -24,18 +24,18 @@ val sireum = Os.path(Os.env("SIREUM_HOME").get) / "bin" / (if (Os.isWin) "sireum
 
 // create serializers/deserializers for the Slang types used in the project
 
-val files: ISZ[String] = ISZ("../src/main/data/TempControlSimpleTemp/TempSensor/Temperature_i.scala",
-                             "../src/main/data/TempControlSimpleTemp/CoolingFan/FanCmd.scala",
-                             "../src/main/data/TempControlSimpleTemp/CoolingFan/FanAck.scala",
-                             "../src/main/data/TempControlSimpleTemp/TempControlSoftwareSystem/SetPoint_i.scala",
+val files: ISZ[String] = ISZ("../src/main/art/art/DataContent.scala",
+                             "../src/main/data/TempControlSimpleTemp/Aux_Types.scala",
                              "../src/main/data/TempControlSimpleTemp/Base_Types.scala",
-                             "../src/main/data/TempControlSimpleTemp/TempSensor/TempSensor_i_tcproc_tempSensor_Containers.scala",
+                             "../src/main/data/TempControlSimpleTemp/CoolingFan/FanAck.scala",
+                             "../src/main/data/TempControlSimpleTemp/CoolingFan/FanCmd.scala",
                              "../src/main/data/TempControlSimpleTemp/CoolingFan/Fan_i_tcproc_fan_Containers.scala",
-                             "../src/main/data/TempControlSimpleTemp/TempControlSoftwareSystem/TempControl_i_tcproc_tempControl_Containers.scala",
                              "../src/main/data/TempControlSimpleTemp/TempControlSoftwareSystem/OperatorInterface_i_tcproc_operatorInterface_Containers.scala",
-                             "../src/main/data/TempControlSimpleTemp/util/Container.scala",
-                             "../src/main/art/art/DataContent.scala",
-                             "../src/main/data/TempControlSimpleTemp/Aux_Types.scala")
+                             "../src/main/data/TempControlSimpleTemp/TempControlSoftwareSystem/SetPoint_i.scala",
+                             "../src/main/data/TempControlSimpleTemp/TempControlSoftwareSystem/TempControl_i_tcproc_tempControl_Containers.scala",
+                             "../src/main/data/TempControlSimpleTemp/TempSensor/TempSensor_i_tcproc_tempSensor_Containers.scala",
+                             "../src/main/data/TempControlSimpleTemp/TempSensor/Temperature_i.scala",
+                             "../src/main/data/TempControlSimpleTemp/util/Container.scala")
 
 val toolargs: String = st"${(files, " ")}".render
 

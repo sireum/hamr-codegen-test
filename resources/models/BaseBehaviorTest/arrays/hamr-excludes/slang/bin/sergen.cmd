@@ -24,13 +24,13 @@ val sireum = Os.path(Os.env("SIREUM_HOME").get) / "bin" / (if (Os.isWin) "sireum
 
 // create serializers/deserializers for the Slang types used in the project
 
-val files: ISZ[String] = ISZ("../src/main/data/a/Arrays/Coordinate_Impl.scala",
+val files: ISZ[String] = ISZ("../src/main/art/art/DataContent.scala",
                              "../src/main/data/a/Arrays/Array_of_Coordinates.scala",
-                             "../src/main/data/a/Arrays/Vector_of_Coordinates.scala",
                              "../src/main/data/a/Arrays/Array_of_Integers.scala",
-                             "../src/main/data/a/Base_Types.scala",
-                             "../src/main/art/art/DataContent.scala",
-                             "../src/main/data/a/Aux_Types.scala")
+                             "../src/main/data/a/Arrays/Coordinate_Impl.scala",
+                             "../src/main/data/a/Arrays/Vector_of_Coordinates.scala",
+                             "../src/main/data/a/Aux_Types.scala",
+                             "../src/main/data/a/Base_Types.scala")
 
 val toolargs: String = st"${(files, " ")}".render
 

@@ -133,8 +133,8 @@ object TempControl_s_tcproc_tempControl {
         //   If the local record of the fan state was updated, 
         //   then send a fan command event with this updated value.
         (In(currentFanState) != currentFanState __>:
-           api.fanCmd.nonEmpty &&
-             api.fanCmd.get == currentFanState) &&
+          api.fanCmd.nonEmpty &&
+            api.fanCmd.get == currentFanState) &&
           (currentFanState == In(currentFanState) __>:
             api.fanCmd.isEmpty) &&
           (In(currentFanState) != currentFanState __>:
@@ -220,8 +220,8 @@ object TempControl_s_tcproc_tempControl {
         //   If the local record of the fan state was updated, 
         //   then send a fan command event with this updated value.
         (In(currentFanState) != currentFanState __>:
-           api.fanCmd.nonEmpty &&
-             api.fanCmd.get == currentFanState) &&
+          api.fanCmd.nonEmpty &&
+            api.fanCmd.get == currentFanState) &&
           (currentFanState == In(currentFanState) __>:
             api.fanCmd.isEmpty) &&
           (In(currentFanState) != currentFanState __>:
@@ -300,8 +300,8 @@ object TempControl_s_tcproc_tempControl {
         //   If the local record of the fan state was updated, 
         //   then send a fan command event with this updated value.
         (In(currentFanState) != currentFanState __>:
-           api.fanCmd.nonEmpty &&
-             api.fanCmd.get == currentFanState) &&
+          api.fanCmd.nonEmpty &&
+            api.fanCmd.get == currentFanState) &&
           (currentFanState == In(currentFanState) __>:
             api.fanCmd.isEmpty) &&
           (In(currentFanState) != currentFanState __>:

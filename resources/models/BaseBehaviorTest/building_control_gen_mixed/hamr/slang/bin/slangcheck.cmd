@@ -24,14 +24,14 @@ val sireum = Os.path(Os.env("SIREUM_HOME").get) / "bin" / (if (Os.isWin) "sireum
 
 // create SlangCheck artifacts for the Slang types used in the project
 
-val files: ISZ[String] = ISZ("../src/main/data/bc/BuildingControl/TempUnit.scala",
-                             "../src/main/data/bc/BuildingControl/Temperature_impl.scala",
-                             "../src/main/data/bc/BuildingControl/SetPoint_impl.scala",
+val files: ISZ[String] = ISZ("../src/main/art/art/DataContent.scala",
+                             "../src/main/data/bc/Aux_Types.scala",
+                             "../src/main/data/bc/Base_Types.scala",
                              "../src/main/data/bc/BuildingControl/FanAck.scala",
                              "../src/main/data/bc/BuildingControl/FanCmd.scala",
-                             "../src/main/data/bc/Base_Types.scala",
-                             "../src/main/art/art/DataContent.scala",
-                             "../src/main/data/bc/Aux_Types.scala")
+                             "../src/main/data/bc/BuildingControl/SetPoint_impl.scala",
+                             "../src/main/data/bc/BuildingControl/TempUnit.scala",
+                             "../src/main/data/bc/BuildingControl/Temperature_impl.scala")
 
 val toolargs: String = st"${(files, " ")}".render
 
