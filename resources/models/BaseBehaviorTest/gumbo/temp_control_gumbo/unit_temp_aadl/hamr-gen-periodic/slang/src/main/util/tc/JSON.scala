@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from Unit.scala, Temperature_i.scala, FanCmd.scala, FanAck.scala, SetPoint_i.scala, Base_Types.scala, GUMBO__Library.scala, GUMBO__Library.scala, TempSensorPeriodic_p_tcproc_tempSensor_Containers.scala, FanPeriodic_p_tcproc_fan_Containers.scala, TempControlPeriodic_p_tcproc_tempControl_Containers.scala, OperatorInterfacePeriodic_p_tcproc_operatorInterface_Containers.scala, Container.scala, DataContent.scala, Aux_Types.scala
+// This file is auto-generated from Unit.scala, FanCmd.scala, FanAck.scala, Temperature_i.scala, SetPoint_i.scala, Base_Types.scala, GUMBO__Library.scala, GUMBO__Library.scala, TempSensorPeriodic_p_tcproc_tempSensor_Containers.scala, FanPeriodic_p_tcproc_fan_Containers.scala, TempControlPeriodic_p_tcproc_tempControl_Containers.scala, OperatorInterfacePeriodic_p_tcproc_operatorInterface_Containers.scala, Container.scala, DataContent.scala, Aux_Types.scala
 
 package tc
 
@@ -28,21 +28,6 @@ object JSON {
       return printObject(ISZ(
         ("type", st""""TempSensor.Unit_Payload""""),
         ("value", printTempSensorUnitType(o.value))
-      ))
-    }
-
-    @pure def printTempSensorTemperature_i(o: TempSensor.Temperature_i): ST = {
-      return printObject(ISZ(
-        ("type", st""""TempSensor.Temperature_i""""),
-        ("degrees", printF32(o.degrees)),
-        ("unit", printTempSensorUnitType(o.unit))
-      ))
-    }
-
-    @pure def printTempSensorTemperature_i_Payload(o: TempSensor.Temperature_i_Payload): ST = {
-      return printObject(ISZ(
-        ("type", st""""TempSensor.Temperature_i_Payload""""),
-        ("value", printTempSensorTemperature_i(o.value))
       ))
     }
 
@@ -79,6 +64,21 @@ object JSON {
       return printObject(ISZ(
         ("type", st""""CoolingFan.FanAck_Payload""""),
         ("value", printCoolingFanFanAckType(o.value))
+      ))
+    }
+
+    @pure def printTempSensorTemperature_i(o: TempSensor.Temperature_i): ST = {
+      return printObject(ISZ(
+        ("type", st""""TempSensor.Temperature_i""""),
+        ("degrees", printF32(o.degrees)),
+        ("unit", printTempSensorUnitType(o.unit))
+      ))
+    }
+
+    @pure def printTempSensorTemperature_i_Payload(o: TempSensor.Temperature_i_Payload): ST = {
+      return printObject(ISZ(
+        ("type", st""""TempSensor.Temperature_i_Payload""""),
+        ("value", printTempSensorTemperature_i(o.value))
       ))
     }
 
@@ -504,39 +504,6 @@ object JSON {
       return TempSensor.Unit_Payload(value)
     }
 
-    def parseTempSensorTemperature_i(): TempSensor.Temperature_i = {
-      val r = parseTempSensorTemperature_iT(F)
-      return r
-    }
-
-    def parseTempSensorTemperature_iT(typeParsed: B): TempSensor.Temperature_i = {
-      if (!typeParsed) {
-        parser.parseObjectType("TempSensor.Temperature_i")
-      }
-      parser.parseObjectKey("degrees")
-      val degrees = parser.parseF32()
-      parser.parseObjectNext()
-      parser.parseObjectKey("unit")
-      val unit = parseTempSensorUnitType()
-      parser.parseObjectNext()
-      return TempSensor.Temperature_i(degrees, unit)
-    }
-
-    def parseTempSensorTemperature_i_Payload(): TempSensor.Temperature_i_Payload = {
-      val r = parseTempSensorTemperature_i_PayloadT(F)
-      return r
-    }
-
-    def parseTempSensorTemperature_i_PayloadT(typeParsed: B): TempSensor.Temperature_i_Payload = {
-      if (!typeParsed) {
-        parser.parseObjectType("TempSensor.Temperature_i_Payload")
-      }
-      parser.parseObjectKey("value")
-      val value = parseTempSensorTemperature_i()
-      parser.parseObjectNext()
-      return TempSensor.Temperature_i_Payload(value)
-    }
-
     def parseCoolingFanFanCmdType(): CoolingFan.FanCmd.Type = {
       val r = parseCoolingFanFanCmdT(F)
       return r
@@ -607,6 +574,39 @@ object JSON {
       val value = parseCoolingFanFanAckType()
       parser.parseObjectNext()
       return CoolingFan.FanAck_Payload(value)
+    }
+
+    def parseTempSensorTemperature_i(): TempSensor.Temperature_i = {
+      val r = parseTempSensorTemperature_iT(F)
+      return r
+    }
+
+    def parseTempSensorTemperature_iT(typeParsed: B): TempSensor.Temperature_i = {
+      if (!typeParsed) {
+        parser.parseObjectType("TempSensor.Temperature_i")
+      }
+      parser.parseObjectKey("degrees")
+      val degrees = parser.parseF32()
+      parser.parseObjectNext()
+      parser.parseObjectKey("unit")
+      val unit = parseTempSensorUnitType()
+      parser.parseObjectNext()
+      return TempSensor.Temperature_i(degrees, unit)
+    }
+
+    def parseTempSensorTemperature_i_Payload(): TempSensor.Temperature_i_Payload = {
+      val r = parseTempSensorTemperature_i_PayloadT(F)
+      return r
+    }
+
+    def parseTempSensorTemperature_i_PayloadT(typeParsed: B): TempSensor.Temperature_i_Payload = {
+      if (!typeParsed) {
+        parser.parseObjectType("TempSensor.Temperature_i_Payload")
+      }
+      parser.parseObjectKey("value")
+      val value = parseTempSensorTemperature_i()
+      parser.parseObjectNext()
+      return TempSensor.Temperature_i_Payload(value)
     }
 
     def parseTempControlSoftwareSystemSetPoint_i(): TempControlSoftwareSystem.SetPoint_i = {
@@ -1335,42 +1335,6 @@ object JSON {
     return r
   }
 
-  def fromTempSensorTemperature_i(o: TempSensor.Temperature_i, isCompact: B): String = {
-    val st = Printer.printTempSensorTemperature_i(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toTempSensorTemperature_i(s: String): Either[TempSensor.Temperature_i, Json.ErrorMsg] = {
-    def fTempSensorTemperature_i(parser: Parser): TempSensor.Temperature_i = {
-      val r = parser.parseTempSensorTemperature_i()
-      return r
-    }
-    val r = to(s, fTempSensorTemperature_i _)
-    return r
-  }
-
-  def fromTempSensorTemperature_i_Payload(o: TempSensor.Temperature_i_Payload, isCompact: B): String = {
-    val st = Printer.printTempSensorTemperature_i_Payload(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toTempSensorTemperature_i_Payload(s: String): Either[TempSensor.Temperature_i_Payload, Json.ErrorMsg] = {
-    def fTempSensorTemperature_i_Payload(parser: Parser): TempSensor.Temperature_i_Payload = {
-      val r = parser.parseTempSensorTemperature_i_Payload()
-      return r
-    }
-    val r = to(s, fTempSensorTemperature_i_Payload _)
-    return r
-  }
-
   def fromCoolingFanFanCmd_Payload(o: CoolingFan.FanCmd_Payload, isCompact: B): String = {
     val st = Printer.printCoolingFanFanCmd_Payload(o)
     if (isCompact) {
@@ -1404,6 +1368,42 @@ object JSON {
       return r
     }
     val r = to(s, fCoolingFanFanAck_Payload _)
+    return r
+  }
+
+  def fromTempSensorTemperature_i(o: TempSensor.Temperature_i, isCompact: B): String = {
+    val st = Printer.printTempSensorTemperature_i(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toTempSensorTemperature_i(s: String): Either[TempSensor.Temperature_i, Json.ErrorMsg] = {
+    def fTempSensorTemperature_i(parser: Parser): TempSensor.Temperature_i = {
+      val r = parser.parseTempSensorTemperature_i()
+      return r
+    }
+    val r = to(s, fTempSensorTemperature_i _)
+    return r
+  }
+
+  def fromTempSensorTemperature_i_Payload(o: TempSensor.Temperature_i_Payload, isCompact: B): String = {
+    val st = Printer.printTempSensorTemperature_i_Payload(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toTempSensorTemperature_i_Payload(s: String): Either[TempSensor.Temperature_i_Payload, Json.ErrorMsg] = {
+    def fTempSensorTemperature_i_Payload(parser: Parser): TempSensor.Temperature_i_Payload = {
+      val r = parser.parseTempSensorTemperature_i_Payload()
+      return r
+    }
+    val r = to(s, fTempSensorTemperature_i_Payload _)
     return r
   }
 

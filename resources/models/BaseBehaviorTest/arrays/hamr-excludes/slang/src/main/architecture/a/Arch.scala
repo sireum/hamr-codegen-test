@@ -75,11 +75,11 @@ object TranspilerUtil {
       def printDataContent(a: art.DataContent): Unit = { println(s"${a}") }
 
       printDataContent(Base_Types.Integer_32_Payload(Base_Types.Integer_32_example()))
-      printDataContent(Arrays.Coordinate_Impl_Payload(Arrays.Coordinate_Impl.example()))
-      printDataContent(Arrays.Array_of_Coordinates_Payload(Arrays.Array_of_Coordinates.example()))
       printDataContent(Base_Types.Integer_Payload(Base_Types.Integer_example()))
+      printDataContent(Arrays.Coordinate_Impl_Payload(Arrays.Coordinate_Impl.example()))
       printDataContent(Arrays.Vector_of_Coordinates_Payload(Arrays.Vector_of_Coordinates.example()))
       printDataContent(Arrays.Array_of_Integers_Payload(Arrays.Array_of_Integers.example()))
+      printDataContent(Arrays.Array_of_Coordinates_Payload(Arrays.Array_of_Coordinates.example()))
       printDataContent(art.Empty())
 
       {

@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from Coordinate_Impl.scala, Array_of_Coordinates.scala, Vector_of_Coordinates.scala, Array_of_Integers.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
+// This file is auto-generated from Coordinate_Impl.scala, Vector_of_Coordinates.scala, Array_of_Integers.scala, Array_of_Coordinates.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
 
 package a
 
@@ -15,17 +15,17 @@ object MsgPack {
 
     val ArraysCoordinate_Impl_Payload: Z = -31
 
-    val ArraysArray_of_Coordinates: Z = -30
+    val ArraysVector_of_Coordinates: Z = -30
 
-    val ArraysArray_of_Coordinates_Payload: Z = -29
+    val ArraysVector_of_Coordinates_Payload: Z = -29
 
-    val ArraysVector_of_Coordinates: Z = -28
+    val ArraysArray_of_Integers: Z = -28
 
-    val ArraysVector_of_Coordinates_Payload: Z = -27
+    val ArraysArray_of_Integers_Payload: Z = -27
 
-    val ArraysArray_of_Integers: Z = -26
+    val ArraysArray_of_Coordinates: Z = -26
 
-    val ArraysArray_of_Integers_Payload: Z = -25
+    val ArraysArray_of_Coordinates_Payload: Z = -25
 
     val Base_TypesBoolean_Payload: Z = -24
 
@@ -85,27 +85,6 @@ object MsgPack {
       writeArraysCoordinate_Impl(o.value)
     }
 
-    def writeArraysArray_of_CoordinatesI(o: Arrays.Array_of_Coordinates.I): Unit = {
-      writer.writeZ(o.toZ)
-    }
-
-    def writeISArraysArray_of_CoordinatesI[E](s: IS[Arrays.Array_of_Coordinates.I, E], f: E => Unit) : Unit = {
-      writer.writeArrayHeader(s.size)
-      for (e <- s) {
-        f(e)
-      }
-    }
-
-    def writeArraysArray_of_Coordinates(o: Arrays.Array_of_Coordinates): Unit = {
-      writer.writeZ(Constants.ArraysArray_of_Coordinates)
-      writeISArraysArray_of_CoordinatesI(o.value, writeArraysCoordinate_Impl _)
-    }
-
-    def writeArraysArray_of_Coordinates_Payload(o: Arrays.Array_of_Coordinates_Payload): Unit = {
-      writer.writeZ(Constants.ArraysArray_of_Coordinates_Payload)
-      writeArraysArray_of_Coordinates(o.value)
-    }
-
     def writeArraysVector_of_Coordinates(o: Arrays.Vector_of_Coordinates): Unit = {
       writer.writeZ(Constants.ArraysVector_of_Coordinates)
       writer.writeISZ(o.value, writer.writeZ _)
@@ -135,6 +114,27 @@ object MsgPack {
     def writeArraysArray_of_Integers_Payload(o: Arrays.Array_of_Integers_Payload): Unit = {
       writer.writeZ(Constants.ArraysArray_of_Integers_Payload)
       writeArraysArray_of_Integers(o.value)
+    }
+
+    def writeArraysArray_of_CoordinatesI(o: Arrays.Array_of_Coordinates.I): Unit = {
+      writer.writeZ(o.toZ)
+    }
+
+    def writeISArraysArray_of_CoordinatesI[E](s: IS[Arrays.Array_of_Coordinates.I, E], f: E => Unit) : Unit = {
+      writer.writeArrayHeader(s.size)
+      for (e <- s) {
+        f(e)
+      }
+    }
+
+    def writeArraysArray_of_Coordinates(o: Arrays.Array_of_Coordinates): Unit = {
+      writer.writeZ(Constants.ArraysArray_of_Coordinates)
+      writeISArraysArray_of_CoordinatesI(o.value, writeArraysCoordinate_Impl _)
+    }
+
+    def writeArraysArray_of_Coordinates_Payload(o: Arrays.Array_of_Coordinates_Payload): Unit = {
+      writer.writeZ(Constants.ArraysArray_of_Coordinates_Payload)
+      writeArraysArray_of_Coordinates(o.value)
     }
 
     def writeBase_TypesBoolean_Payload(o: Base_Types.Boolean_Payload): Unit = {
@@ -295,49 +295,6 @@ object MsgPack {
       return Arrays.Coordinate_Impl_Payload(value)
     }
 
-    def readArraysArray_of_CoordinatesI(): Arrays.Array_of_Coordinates.I = {
-      val n = reader.readZ()
-      return Arrays.Array_of_Coordinates.I.fromZ(n)
-    }
-
-    def readISArraysArray_of_CoordinatesI[E](f: () => E): IS[Arrays.Array_of_Coordinates.I, E] = {
-      val size = reader.readArrayHeader()
-      var r = IS[Arrays.Array_of_Coordinates.I, E]()
-      var i = 0
-      while (i < size) {
-        val o = f()
-        r = r :+ o
-        i = i + 1
-      }
-      return r
-    }
-
-    def readArraysArray_of_Coordinates(): Arrays.Array_of_Coordinates = {
-      val r = readArraysArray_of_CoordinatesT(F)
-      return r
-    }
-
-    def readArraysArray_of_CoordinatesT(typeParsed: B): Arrays.Array_of_Coordinates = {
-      if (!typeParsed) {
-        reader.expectZ(Constants.ArraysArray_of_Coordinates)
-      }
-      val value = readISArraysArray_of_CoordinatesI(readArraysCoordinate_Impl _)
-      return Arrays.Array_of_Coordinates(value)
-    }
-
-    def readArraysArray_of_Coordinates_Payload(): Arrays.Array_of_Coordinates_Payload = {
-      val r = readArraysArray_of_Coordinates_PayloadT(F)
-      return r
-    }
-
-    def readArraysArray_of_Coordinates_PayloadT(typeParsed: B): Arrays.Array_of_Coordinates_Payload = {
-      if (!typeParsed) {
-        reader.expectZ(Constants.ArraysArray_of_Coordinates_Payload)
-      }
-      val value = readArraysArray_of_Coordinates()
-      return Arrays.Array_of_Coordinates_Payload(value)
-    }
-
     def readArraysVector_of_Coordinates(): Arrays.Vector_of_Coordinates = {
       val r = readArraysVector_of_CoordinatesT(F)
       return r
@@ -405,6 +362,49 @@ object MsgPack {
       }
       val value = readArraysArray_of_Integers()
       return Arrays.Array_of_Integers_Payload(value)
+    }
+
+    def readArraysArray_of_CoordinatesI(): Arrays.Array_of_Coordinates.I = {
+      val n = reader.readZ()
+      return Arrays.Array_of_Coordinates.I.fromZ(n)
+    }
+
+    def readISArraysArray_of_CoordinatesI[E](f: () => E): IS[Arrays.Array_of_Coordinates.I, E] = {
+      val size = reader.readArrayHeader()
+      var r = IS[Arrays.Array_of_Coordinates.I, E]()
+      var i = 0
+      while (i < size) {
+        val o = f()
+        r = r :+ o
+        i = i + 1
+      }
+      return r
+    }
+
+    def readArraysArray_of_Coordinates(): Arrays.Array_of_Coordinates = {
+      val r = readArraysArray_of_CoordinatesT(F)
+      return r
+    }
+
+    def readArraysArray_of_CoordinatesT(typeParsed: B): Arrays.Array_of_Coordinates = {
+      if (!typeParsed) {
+        reader.expectZ(Constants.ArraysArray_of_Coordinates)
+      }
+      val value = readISArraysArray_of_CoordinatesI(readArraysCoordinate_Impl _)
+      return Arrays.Array_of_Coordinates(value)
+    }
+
+    def readArraysArray_of_Coordinates_Payload(): Arrays.Array_of_Coordinates_Payload = {
+      val r = readArraysArray_of_Coordinates_PayloadT(F)
+      return r
+    }
+
+    def readArraysArray_of_Coordinates_PayloadT(typeParsed: B): Arrays.Array_of_Coordinates_Payload = {
+      if (!typeParsed) {
+        reader.expectZ(Constants.ArraysArray_of_Coordinates_Payload)
+      }
+      val value = readArraysArray_of_Coordinates()
+      return Arrays.Array_of_Coordinates_Payload(value)
     }
 
     def readBase_TypesBoolean_Payload(): Base_Types.Boolean_Payload = {
@@ -701,36 +701,6 @@ object MsgPack {
     return r
   }
 
-  def fromArraysArray_of_Coordinates(o: Arrays.Array_of_Coordinates, pooling: B): ISZ[U8] = {
-    val w = Writer.Default(MessagePack.writer(pooling))
-    w.writeArraysArray_of_Coordinates(o)
-    return w.result
-  }
-
-  def toArraysArray_of_Coordinates(data: ISZ[U8]): Either[Arrays.Array_of_Coordinates, MessagePack.ErrorMsg] = {
-    def fArraysArray_of_Coordinates(reader: Reader): Arrays.Array_of_Coordinates = {
-      val r = reader.readArraysArray_of_Coordinates()
-      return r
-    }
-    val r = to(data, fArraysArray_of_Coordinates _)
-    return r
-  }
-
-  def fromArraysArray_of_Coordinates_Payload(o: Arrays.Array_of_Coordinates_Payload, pooling: B): ISZ[U8] = {
-    val w = Writer.Default(MessagePack.writer(pooling))
-    w.writeArraysArray_of_Coordinates_Payload(o)
-    return w.result
-  }
-
-  def toArraysArray_of_Coordinates_Payload(data: ISZ[U8]): Either[Arrays.Array_of_Coordinates_Payload, MessagePack.ErrorMsg] = {
-    def fArraysArray_of_Coordinates_Payload(reader: Reader): Arrays.Array_of_Coordinates_Payload = {
-      val r = reader.readArraysArray_of_Coordinates_Payload()
-      return r
-    }
-    val r = to(data, fArraysArray_of_Coordinates_Payload _)
-    return r
-  }
-
   def fromArraysVector_of_Coordinates(o: Arrays.Vector_of_Coordinates, pooling: B): ISZ[U8] = {
     val w = Writer.Default(MessagePack.writer(pooling))
     w.writeArraysVector_of_Coordinates(o)
@@ -788,6 +758,36 @@ object MsgPack {
       return r
     }
     val r = to(data, fArraysArray_of_Integers_Payload _)
+    return r
+  }
+
+  def fromArraysArray_of_Coordinates(o: Arrays.Array_of_Coordinates, pooling: B): ISZ[U8] = {
+    val w = Writer.Default(MessagePack.writer(pooling))
+    w.writeArraysArray_of_Coordinates(o)
+    return w.result
+  }
+
+  def toArraysArray_of_Coordinates(data: ISZ[U8]): Either[Arrays.Array_of_Coordinates, MessagePack.ErrorMsg] = {
+    def fArraysArray_of_Coordinates(reader: Reader): Arrays.Array_of_Coordinates = {
+      val r = reader.readArraysArray_of_Coordinates()
+      return r
+    }
+    val r = to(data, fArraysArray_of_Coordinates _)
+    return r
+  }
+
+  def fromArraysArray_of_Coordinates_Payload(o: Arrays.Array_of_Coordinates_Payload, pooling: B): ISZ[U8] = {
+    val w = Writer.Default(MessagePack.writer(pooling))
+    w.writeArraysArray_of_Coordinates_Payload(o)
+    return w.result
+  }
+
+  def toArraysArray_of_Coordinates_Payload(data: ISZ[U8]): Either[Arrays.Array_of_Coordinates_Payload, MessagePack.ErrorMsg] = {
+    def fArraysArray_of_Coordinates_Payload(reader: Reader): Arrays.Array_of_Coordinates_Payload = {
+      val r = reader.readArraysArray_of_Coordinates_Payload()
+      return r
+    }
+    val r = to(data, fArraysArray_of_Coordinates_Payload _)
     return r
   }
 

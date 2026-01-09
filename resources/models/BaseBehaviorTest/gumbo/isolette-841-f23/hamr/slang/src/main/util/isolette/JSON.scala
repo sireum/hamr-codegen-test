@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from ValueStatus.scala, TempWstatus_impl.scala, Regulator_Mode.scala, Temp_impl.scala, Status.scala, Failure_Flag_impl.scala, On_Off.scala, Monitor_Mode.scala, PhysicalTemp_impl.scala, Heat.scala, Base_Types.scala, Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Containers.scala, Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_Containers.scala, Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_Containers.scala, Detect_Regulator_Failure_impl_thermostat_regulate_temperature_detect_regulator_failure_Containers.scala, Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_Containers.scala, Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_Containers.scala, Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_Containers.scala, Detect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_Containers.scala, operator_interface_thread_impl_operator_interface_oip_oit_Containers.scala, Temperature_Sensor_impl_temperature_sensor_cpi_thermostat_Containers.scala, Heat_Source_impl_heat_source_cpi_heat_controller_Containers.scala, ObservationKind.scala, Container.scala, DataContent.scala, Aux_Types.scala
+// This file is auto-generated from ValueStatus.scala, Regulator_Mode.scala, Status.scala, On_Off.scala, Monitor_Mode.scala, Heat.scala, Temp_impl.scala, PhysicalTemp_impl.scala, TempWstatus_impl.scala, Failure_Flag_impl.scala, Base_Types.scala, Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Containers.scala, Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_Containers.scala, Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_Containers.scala, Detect_Regulator_Failure_impl_thermostat_regulate_temperature_detect_regulator_failure_Containers.scala, Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_Containers.scala, Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_Containers.scala, Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_Containers.scala, Detect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_Containers.scala, operator_interface_thread_impl_operator_interface_oip_oit_Containers.scala, Temperature_Sensor_impl_temperature_sensor_cpi_thermostat_Containers.scala, Heat_Source_impl_heat_source_cpi_heat_controller_Containers.scala, ObservationKind.scala, Container.scala, DataContent.scala, Aux_Types.scala
 
 package isolette
 
@@ -30,21 +30,6 @@ object JSON {
       ))
     }
 
-    @pure def printIsolette_Data_ModelTempWstatus_impl(o: Isolette_Data_Model.TempWstatus_impl): ST = {
-      return printObject(ISZ(
-        ("type", st""""Isolette_Data_Model.TempWstatus_impl""""),
-        ("value", printF32(o.value)),
-        ("status", printIsolette_Data_ModelValueStatusType(o.status))
-      ))
-    }
-
-    @pure def printIsolette_Data_ModelTempWstatus_impl_Payload(o: Isolette_Data_Model.TempWstatus_impl_Payload): ST = {
-      return printObject(ISZ(
-        ("type", st""""Isolette_Data_Model.TempWstatus_impl_Payload""""),
-        ("value", printIsolette_Data_ModelTempWstatus_impl(o.value))
-      ))
-    }
-
     @pure def printIsolette_Data_ModelRegulator_ModeType(o: Isolette_Data_Model.Regulator_Mode.Type): ST = {
       val value: String = o match {
         case Isolette_Data_Model.Regulator_Mode.Init_Regulator_Mode => "Init_Regulator_Mode"
@@ -64,20 +49,6 @@ object JSON {
       ))
     }
 
-    @pure def printIsolette_Data_ModelTemp_impl(o: Isolette_Data_Model.Temp_impl): ST = {
-      return printObject(ISZ(
-        ("type", st""""Isolette_Data_Model.Temp_impl""""),
-        ("value", printF32(o.value))
-      ))
-    }
-
-    @pure def printIsolette_Data_ModelTemp_impl_Payload(o: Isolette_Data_Model.Temp_impl_Payload): ST = {
-      return printObject(ISZ(
-        ("type", st""""Isolette_Data_Model.Temp_impl_Payload""""),
-        ("value", printIsolette_Data_ModelTemp_impl(o.value))
-      ))
-    }
-
     @pure def printIsolette_Data_ModelStatusType(o: Isolette_Data_Model.Status.Type): ST = {
       val value: String = o match {
         case Isolette_Data_Model.Status.Init_Status => "Init_Status"
@@ -94,20 +65,6 @@ object JSON {
       return printObject(ISZ(
         ("type", st""""Isolette_Data_Model.Status_Payload""""),
         ("value", printIsolette_Data_ModelStatusType(o.value))
-      ))
-    }
-
-    @pure def printIsolette_Data_ModelFailure_Flag_impl(o: Isolette_Data_Model.Failure_Flag_impl): ST = {
-      return printObject(ISZ(
-        ("type", st""""Isolette_Data_Model.Failure_Flag_impl""""),
-        ("value", printB(o.value))
-      ))
-    }
-
-    @pure def printIsolette_Data_ModelFailure_Flag_impl_Payload(o: Isolette_Data_Model.Failure_Flag_impl_Payload): ST = {
-      return printObject(ISZ(
-        ("type", st""""Isolette_Data_Model.Failure_Flag_impl_Payload""""),
-        ("value", printIsolette_Data_ModelFailure_Flag_impl(o.value))
       ))
     }
 
@@ -148,20 +105,6 @@ object JSON {
       ))
     }
 
-    @pure def printIsolette_Data_ModelPhysicalTemp_impl(o: Isolette_Data_Model.PhysicalTemp_impl): ST = {
-      return printObject(ISZ(
-        ("type", st""""Isolette_Data_Model.PhysicalTemp_impl""""),
-        ("value", printF32(o.value))
-      ))
-    }
-
-    @pure def printIsolette_Data_ModelPhysicalTemp_impl_Payload(o: Isolette_Data_Model.PhysicalTemp_impl_Payload): ST = {
-      return printObject(ISZ(
-        ("type", st""""Isolette_Data_Model.PhysicalTemp_impl_Payload""""),
-        ("value", printIsolette_Data_ModelPhysicalTemp_impl(o.value))
-      ))
-    }
-
     @pure def printIsolette_EnvironmentHeatType(o: Isolette_Environment.Heat.Type): ST = {
       val value: String = o match {
         case Isolette_Environment.Heat.Dummy_Head_Enum => "Dummy_Head_Enum"
@@ -176,6 +119,63 @@ object JSON {
       return printObject(ISZ(
         ("type", st""""Isolette_Environment.Heat_Payload""""),
         ("value", printIsolette_EnvironmentHeatType(o.value))
+      ))
+    }
+
+    @pure def printIsolette_Data_ModelTemp_impl(o: Isolette_Data_Model.Temp_impl): ST = {
+      return printObject(ISZ(
+        ("type", st""""Isolette_Data_Model.Temp_impl""""),
+        ("value", printF32(o.value))
+      ))
+    }
+
+    @pure def printIsolette_Data_ModelTemp_impl_Payload(o: Isolette_Data_Model.Temp_impl_Payload): ST = {
+      return printObject(ISZ(
+        ("type", st""""Isolette_Data_Model.Temp_impl_Payload""""),
+        ("value", printIsolette_Data_ModelTemp_impl(o.value))
+      ))
+    }
+
+    @pure def printIsolette_Data_ModelPhysicalTemp_impl(o: Isolette_Data_Model.PhysicalTemp_impl): ST = {
+      return printObject(ISZ(
+        ("type", st""""Isolette_Data_Model.PhysicalTemp_impl""""),
+        ("value", printF32(o.value))
+      ))
+    }
+
+    @pure def printIsolette_Data_ModelPhysicalTemp_impl_Payload(o: Isolette_Data_Model.PhysicalTemp_impl_Payload): ST = {
+      return printObject(ISZ(
+        ("type", st""""Isolette_Data_Model.PhysicalTemp_impl_Payload""""),
+        ("value", printIsolette_Data_ModelPhysicalTemp_impl(o.value))
+      ))
+    }
+
+    @pure def printIsolette_Data_ModelTempWstatus_impl(o: Isolette_Data_Model.TempWstatus_impl): ST = {
+      return printObject(ISZ(
+        ("type", st""""Isolette_Data_Model.TempWstatus_impl""""),
+        ("value", printF32(o.value)),
+        ("status", printIsolette_Data_ModelValueStatusType(o.status))
+      ))
+    }
+
+    @pure def printIsolette_Data_ModelTempWstatus_impl_Payload(o: Isolette_Data_Model.TempWstatus_impl_Payload): ST = {
+      return printObject(ISZ(
+        ("type", st""""Isolette_Data_Model.TempWstatus_impl_Payload""""),
+        ("value", printIsolette_Data_ModelTempWstatus_impl(o.value))
+      ))
+    }
+
+    @pure def printIsolette_Data_ModelFailure_Flag_impl(o: Isolette_Data_Model.Failure_Flag_impl): ST = {
+      return printObject(ISZ(
+        ("type", st""""Isolette_Data_Model.Failure_Flag_impl""""),
+        ("value", printB(o.value))
+      ))
+    }
+
+    @pure def printIsolette_Data_ModelFailure_Flag_impl_Payload(o: Isolette_Data_Model.Failure_Flag_impl_Payload): ST = {
+      return printObject(ISZ(
+        ("type", st""""Isolette_Data_Model.Failure_Flag_impl_Payload""""),
+        ("value", printIsolette_Data_ModelFailure_Flag_impl(o.value))
       ))
     }
 
@@ -1043,39 +1043,6 @@ object JSON {
       return Isolette_Data_Model.ValueStatus_Payload(value)
     }
 
-    def parseIsolette_Data_ModelTempWstatus_impl(): Isolette_Data_Model.TempWstatus_impl = {
-      val r = parseIsolette_Data_ModelTempWstatus_implT(F)
-      return r
-    }
-
-    def parseIsolette_Data_ModelTempWstatus_implT(typeParsed: B): Isolette_Data_Model.TempWstatus_impl = {
-      if (!typeParsed) {
-        parser.parseObjectType("Isolette_Data_Model.TempWstatus_impl")
-      }
-      parser.parseObjectKey("value")
-      val value = parser.parseF32()
-      parser.parseObjectNext()
-      parser.parseObjectKey("status")
-      val status = parseIsolette_Data_ModelValueStatusType()
-      parser.parseObjectNext()
-      return Isolette_Data_Model.TempWstatus_impl(value, status)
-    }
-
-    def parseIsolette_Data_ModelTempWstatus_impl_Payload(): Isolette_Data_Model.TempWstatus_impl_Payload = {
-      val r = parseIsolette_Data_ModelTempWstatus_impl_PayloadT(F)
-      return r
-    }
-
-    def parseIsolette_Data_ModelTempWstatus_impl_PayloadT(typeParsed: B): Isolette_Data_Model.TempWstatus_impl_Payload = {
-      if (!typeParsed) {
-        parser.parseObjectType("Isolette_Data_Model.TempWstatus_impl_Payload")
-      }
-      parser.parseObjectKey("value")
-      val value = parseIsolette_Data_ModelTempWstatus_impl()
-      parser.parseObjectNext()
-      return Isolette_Data_Model.TempWstatus_impl_Payload(value)
-    }
-
     def parseIsolette_Data_ModelRegulator_ModeType(): Isolette_Data_Model.Regulator_Mode.Type = {
       val r = parseIsolette_Data_ModelRegulator_ModeT(F)
       return r
@@ -1112,36 +1079,6 @@ object JSON {
       return Isolette_Data_Model.Regulator_Mode_Payload(value)
     }
 
-    def parseIsolette_Data_ModelTemp_impl(): Isolette_Data_Model.Temp_impl = {
-      val r = parseIsolette_Data_ModelTemp_implT(F)
-      return r
-    }
-
-    def parseIsolette_Data_ModelTemp_implT(typeParsed: B): Isolette_Data_Model.Temp_impl = {
-      if (!typeParsed) {
-        parser.parseObjectType("Isolette_Data_Model.Temp_impl")
-      }
-      parser.parseObjectKey("value")
-      val value = parser.parseF32()
-      parser.parseObjectNext()
-      return Isolette_Data_Model.Temp_impl(value)
-    }
-
-    def parseIsolette_Data_ModelTemp_impl_Payload(): Isolette_Data_Model.Temp_impl_Payload = {
-      val r = parseIsolette_Data_ModelTemp_impl_PayloadT(F)
-      return r
-    }
-
-    def parseIsolette_Data_ModelTemp_impl_PayloadT(typeParsed: B): Isolette_Data_Model.Temp_impl_Payload = {
-      if (!typeParsed) {
-        parser.parseObjectType("Isolette_Data_Model.Temp_impl_Payload")
-      }
-      parser.parseObjectKey("value")
-      val value = parseIsolette_Data_ModelTemp_impl()
-      parser.parseObjectNext()
-      return Isolette_Data_Model.Temp_impl_Payload(value)
-    }
-
     def parseIsolette_Data_ModelStatusType(): Isolette_Data_Model.Status.Type = {
       val r = parseIsolette_Data_ModelStatusT(F)
       return r
@@ -1176,36 +1113,6 @@ object JSON {
       val value = parseIsolette_Data_ModelStatusType()
       parser.parseObjectNext()
       return Isolette_Data_Model.Status_Payload(value)
-    }
-
-    def parseIsolette_Data_ModelFailure_Flag_impl(): Isolette_Data_Model.Failure_Flag_impl = {
-      val r = parseIsolette_Data_ModelFailure_Flag_implT(F)
-      return r
-    }
-
-    def parseIsolette_Data_ModelFailure_Flag_implT(typeParsed: B): Isolette_Data_Model.Failure_Flag_impl = {
-      if (!typeParsed) {
-        parser.parseObjectType("Isolette_Data_Model.Failure_Flag_impl")
-      }
-      parser.parseObjectKey("value")
-      val value = parser.parseB()
-      parser.parseObjectNext()
-      return Isolette_Data_Model.Failure_Flag_impl(value)
-    }
-
-    def parseIsolette_Data_ModelFailure_Flag_impl_Payload(): Isolette_Data_Model.Failure_Flag_impl_Payload = {
-      val r = parseIsolette_Data_ModelFailure_Flag_impl_PayloadT(F)
-      return r
-    }
-
-    def parseIsolette_Data_ModelFailure_Flag_impl_PayloadT(typeParsed: B): Isolette_Data_Model.Failure_Flag_impl_Payload = {
-      if (!typeParsed) {
-        parser.parseObjectType("Isolette_Data_Model.Failure_Flag_impl_Payload")
-      }
-      parser.parseObjectKey("value")
-      val value = parseIsolette_Data_ModelFailure_Flag_impl()
-      parser.parseObjectNext()
-      return Isolette_Data_Model.Failure_Flag_impl_Payload(value)
     }
 
     def parseIsolette_Data_ModelOn_OffType(): Isolette_Data_Model.On_Off.Type = {
@@ -1280,36 +1187,6 @@ object JSON {
       return Isolette_Data_Model.Monitor_Mode_Payload(value)
     }
 
-    def parseIsolette_Data_ModelPhysicalTemp_impl(): Isolette_Data_Model.PhysicalTemp_impl = {
-      val r = parseIsolette_Data_ModelPhysicalTemp_implT(F)
-      return r
-    }
-
-    def parseIsolette_Data_ModelPhysicalTemp_implT(typeParsed: B): Isolette_Data_Model.PhysicalTemp_impl = {
-      if (!typeParsed) {
-        parser.parseObjectType("Isolette_Data_Model.PhysicalTemp_impl")
-      }
-      parser.parseObjectKey("value")
-      val value = parser.parseF32()
-      parser.parseObjectNext()
-      return Isolette_Data_Model.PhysicalTemp_impl(value)
-    }
-
-    def parseIsolette_Data_ModelPhysicalTemp_impl_Payload(): Isolette_Data_Model.PhysicalTemp_impl_Payload = {
-      val r = parseIsolette_Data_ModelPhysicalTemp_impl_PayloadT(F)
-      return r
-    }
-
-    def parseIsolette_Data_ModelPhysicalTemp_impl_PayloadT(typeParsed: B): Isolette_Data_Model.PhysicalTemp_impl_Payload = {
-      if (!typeParsed) {
-        parser.parseObjectType("Isolette_Data_Model.PhysicalTemp_impl_Payload")
-      }
-      parser.parseObjectKey("value")
-      val value = parseIsolette_Data_ModelPhysicalTemp_impl()
-      parser.parseObjectNext()
-      return Isolette_Data_Model.PhysicalTemp_impl_Payload(value)
-    }
-
     def parseIsolette_EnvironmentHeatType(): Isolette_Environment.Heat.Type = {
       val r = parseIsolette_EnvironmentHeatT(F)
       return r
@@ -1344,6 +1221,129 @@ object JSON {
       val value = parseIsolette_EnvironmentHeatType()
       parser.parseObjectNext()
       return Isolette_Environment.Heat_Payload(value)
+    }
+
+    def parseIsolette_Data_ModelTemp_impl(): Isolette_Data_Model.Temp_impl = {
+      val r = parseIsolette_Data_ModelTemp_implT(F)
+      return r
+    }
+
+    def parseIsolette_Data_ModelTemp_implT(typeParsed: B): Isolette_Data_Model.Temp_impl = {
+      if (!typeParsed) {
+        parser.parseObjectType("Isolette_Data_Model.Temp_impl")
+      }
+      parser.parseObjectKey("value")
+      val value = parser.parseF32()
+      parser.parseObjectNext()
+      return Isolette_Data_Model.Temp_impl(value)
+    }
+
+    def parseIsolette_Data_ModelTemp_impl_Payload(): Isolette_Data_Model.Temp_impl_Payload = {
+      val r = parseIsolette_Data_ModelTemp_impl_PayloadT(F)
+      return r
+    }
+
+    def parseIsolette_Data_ModelTemp_impl_PayloadT(typeParsed: B): Isolette_Data_Model.Temp_impl_Payload = {
+      if (!typeParsed) {
+        parser.parseObjectType("Isolette_Data_Model.Temp_impl_Payload")
+      }
+      parser.parseObjectKey("value")
+      val value = parseIsolette_Data_ModelTemp_impl()
+      parser.parseObjectNext()
+      return Isolette_Data_Model.Temp_impl_Payload(value)
+    }
+
+    def parseIsolette_Data_ModelPhysicalTemp_impl(): Isolette_Data_Model.PhysicalTemp_impl = {
+      val r = parseIsolette_Data_ModelPhysicalTemp_implT(F)
+      return r
+    }
+
+    def parseIsolette_Data_ModelPhysicalTemp_implT(typeParsed: B): Isolette_Data_Model.PhysicalTemp_impl = {
+      if (!typeParsed) {
+        parser.parseObjectType("Isolette_Data_Model.PhysicalTemp_impl")
+      }
+      parser.parseObjectKey("value")
+      val value = parser.parseF32()
+      parser.parseObjectNext()
+      return Isolette_Data_Model.PhysicalTemp_impl(value)
+    }
+
+    def parseIsolette_Data_ModelPhysicalTemp_impl_Payload(): Isolette_Data_Model.PhysicalTemp_impl_Payload = {
+      val r = parseIsolette_Data_ModelPhysicalTemp_impl_PayloadT(F)
+      return r
+    }
+
+    def parseIsolette_Data_ModelPhysicalTemp_impl_PayloadT(typeParsed: B): Isolette_Data_Model.PhysicalTemp_impl_Payload = {
+      if (!typeParsed) {
+        parser.parseObjectType("Isolette_Data_Model.PhysicalTemp_impl_Payload")
+      }
+      parser.parseObjectKey("value")
+      val value = parseIsolette_Data_ModelPhysicalTemp_impl()
+      parser.parseObjectNext()
+      return Isolette_Data_Model.PhysicalTemp_impl_Payload(value)
+    }
+
+    def parseIsolette_Data_ModelTempWstatus_impl(): Isolette_Data_Model.TempWstatus_impl = {
+      val r = parseIsolette_Data_ModelTempWstatus_implT(F)
+      return r
+    }
+
+    def parseIsolette_Data_ModelTempWstatus_implT(typeParsed: B): Isolette_Data_Model.TempWstatus_impl = {
+      if (!typeParsed) {
+        parser.parseObjectType("Isolette_Data_Model.TempWstatus_impl")
+      }
+      parser.parseObjectKey("value")
+      val value = parser.parseF32()
+      parser.parseObjectNext()
+      parser.parseObjectKey("status")
+      val status = parseIsolette_Data_ModelValueStatusType()
+      parser.parseObjectNext()
+      return Isolette_Data_Model.TempWstatus_impl(value, status)
+    }
+
+    def parseIsolette_Data_ModelTempWstatus_impl_Payload(): Isolette_Data_Model.TempWstatus_impl_Payload = {
+      val r = parseIsolette_Data_ModelTempWstatus_impl_PayloadT(F)
+      return r
+    }
+
+    def parseIsolette_Data_ModelTempWstatus_impl_PayloadT(typeParsed: B): Isolette_Data_Model.TempWstatus_impl_Payload = {
+      if (!typeParsed) {
+        parser.parseObjectType("Isolette_Data_Model.TempWstatus_impl_Payload")
+      }
+      parser.parseObjectKey("value")
+      val value = parseIsolette_Data_ModelTempWstatus_impl()
+      parser.parseObjectNext()
+      return Isolette_Data_Model.TempWstatus_impl_Payload(value)
+    }
+
+    def parseIsolette_Data_ModelFailure_Flag_impl(): Isolette_Data_Model.Failure_Flag_impl = {
+      val r = parseIsolette_Data_ModelFailure_Flag_implT(F)
+      return r
+    }
+
+    def parseIsolette_Data_ModelFailure_Flag_implT(typeParsed: B): Isolette_Data_Model.Failure_Flag_impl = {
+      if (!typeParsed) {
+        parser.parseObjectType("Isolette_Data_Model.Failure_Flag_impl")
+      }
+      parser.parseObjectKey("value")
+      val value = parser.parseB()
+      parser.parseObjectNext()
+      return Isolette_Data_Model.Failure_Flag_impl(value)
+    }
+
+    def parseIsolette_Data_ModelFailure_Flag_impl_Payload(): Isolette_Data_Model.Failure_Flag_impl_Payload = {
+      val r = parseIsolette_Data_ModelFailure_Flag_impl_PayloadT(F)
+      return r
+    }
+
+    def parseIsolette_Data_ModelFailure_Flag_impl_PayloadT(typeParsed: B): Isolette_Data_Model.Failure_Flag_impl_Payload = {
+      if (!typeParsed) {
+        parser.parseObjectType("Isolette_Data_Model.Failure_Flag_impl_Payload")
+      }
+      parser.parseObjectKey("value")
+      val value = parseIsolette_Data_ModelFailure_Flag_impl()
+      parser.parseObjectNext()
+      return Isolette_Data_Model.Failure_Flag_impl_Payload(value)
     }
 
     def parseBase_TypesBoolean_Payload(): Base_Types.Boolean_Payload = {
@@ -2847,42 +2847,6 @@ object JSON {
     return r
   }
 
-  def fromIsolette_Data_ModelTempWstatus_impl(o: Isolette_Data_Model.TempWstatus_impl, isCompact: B): String = {
-    val st = Printer.printIsolette_Data_ModelTempWstatus_impl(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toIsolette_Data_ModelTempWstatus_impl(s: String): Either[Isolette_Data_Model.TempWstatus_impl, Json.ErrorMsg] = {
-    def fIsolette_Data_ModelTempWstatus_impl(parser: Parser): Isolette_Data_Model.TempWstatus_impl = {
-      val r = parser.parseIsolette_Data_ModelTempWstatus_impl()
-      return r
-    }
-    val r = to(s, fIsolette_Data_ModelTempWstatus_impl _)
-    return r
-  }
-
-  def fromIsolette_Data_ModelTempWstatus_impl_Payload(o: Isolette_Data_Model.TempWstatus_impl_Payload, isCompact: B): String = {
-    val st = Printer.printIsolette_Data_ModelTempWstatus_impl_Payload(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toIsolette_Data_ModelTempWstatus_impl_Payload(s: String): Either[Isolette_Data_Model.TempWstatus_impl_Payload, Json.ErrorMsg] = {
-    def fIsolette_Data_ModelTempWstatus_impl_Payload(parser: Parser): Isolette_Data_Model.TempWstatus_impl_Payload = {
-      val r = parser.parseIsolette_Data_ModelTempWstatus_impl_Payload()
-      return r
-    }
-    val r = to(s, fIsolette_Data_ModelTempWstatus_impl_Payload _)
-    return r
-  }
-
   def fromIsolette_Data_ModelRegulator_Mode_Payload(o: Isolette_Data_Model.Regulator_Mode_Payload, isCompact: B): String = {
     val st = Printer.printIsolette_Data_ModelRegulator_Mode_Payload(o)
     if (isCompact) {
@@ -2901,42 +2865,6 @@ object JSON {
     return r
   }
 
-  def fromIsolette_Data_ModelTemp_impl(o: Isolette_Data_Model.Temp_impl, isCompact: B): String = {
-    val st = Printer.printIsolette_Data_ModelTemp_impl(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toIsolette_Data_ModelTemp_impl(s: String): Either[Isolette_Data_Model.Temp_impl, Json.ErrorMsg] = {
-    def fIsolette_Data_ModelTemp_impl(parser: Parser): Isolette_Data_Model.Temp_impl = {
-      val r = parser.parseIsolette_Data_ModelTemp_impl()
-      return r
-    }
-    val r = to(s, fIsolette_Data_ModelTemp_impl _)
-    return r
-  }
-
-  def fromIsolette_Data_ModelTemp_impl_Payload(o: Isolette_Data_Model.Temp_impl_Payload, isCompact: B): String = {
-    val st = Printer.printIsolette_Data_ModelTemp_impl_Payload(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toIsolette_Data_ModelTemp_impl_Payload(s: String): Either[Isolette_Data_Model.Temp_impl_Payload, Json.ErrorMsg] = {
-    def fIsolette_Data_ModelTemp_impl_Payload(parser: Parser): Isolette_Data_Model.Temp_impl_Payload = {
-      val r = parser.parseIsolette_Data_ModelTemp_impl_Payload()
-      return r
-    }
-    val r = to(s, fIsolette_Data_ModelTemp_impl_Payload _)
-    return r
-  }
-
   def fromIsolette_Data_ModelStatus_Payload(o: Isolette_Data_Model.Status_Payload, isCompact: B): String = {
     val st = Printer.printIsolette_Data_ModelStatus_Payload(o)
     if (isCompact) {
@@ -2952,42 +2880,6 @@ object JSON {
       return r
     }
     val r = to(s, fIsolette_Data_ModelStatus_Payload _)
-    return r
-  }
-
-  def fromIsolette_Data_ModelFailure_Flag_impl(o: Isolette_Data_Model.Failure_Flag_impl, isCompact: B): String = {
-    val st = Printer.printIsolette_Data_ModelFailure_Flag_impl(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toIsolette_Data_ModelFailure_Flag_impl(s: String): Either[Isolette_Data_Model.Failure_Flag_impl, Json.ErrorMsg] = {
-    def fIsolette_Data_ModelFailure_Flag_impl(parser: Parser): Isolette_Data_Model.Failure_Flag_impl = {
-      val r = parser.parseIsolette_Data_ModelFailure_Flag_impl()
-      return r
-    }
-    val r = to(s, fIsolette_Data_ModelFailure_Flag_impl _)
-    return r
-  }
-
-  def fromIsolette_Data_ModelFailure_Flag_impl_Payload(o: Isolette_Data_Model.Failure_Flag_impl_Payload, isCompact: B): String = {
-    val st = Printer.printIsolette_Data_ModelFailure_Flag_impl_Payload(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toIsolette_Data_ModelFailure_Flag_impl_Payload(s: String): Either[Isolette_Data_Model.Failure_Flag_impl_Payload, Json.ErrorMsg] = {
-    def fIsolette_Data_ModelFailure_Flag_impl_Payload(parser: Parser): Isolette_Data_Model.Failure_Flag_impl_Payload = {
-      val r = parser.parseIsolette_Data_ModelFailure_Flag_impl_Payload()
-      return r
-    }
-    val r = to(s, fIsolette_Data_ModelFailure_Flag_impl_Payload _)
     return r
   }
 
@@ -3027,6 +2919,60 @@ object JSON {
     return r
   }
 
+  def fromIsolette_EnvironmentHeat_Payload(o: Isolette_Environment.Heat_Payload, isCompact: B): String = {
+    val st = Printer.printIsolette_EnvironmentHeat_Payload(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toIsolette_EnvironmentHeat_Payload(s: String): Either[Isolette_Environment.Heat_Payload, Json.ErrorMsg] = {
+    def fIsolette_EnvironmentHeat_Payload(parser: Parser): Isolette_Environment.Heat_Payload = {
+      val r = parser.parseIsolette_EnvironmentHeat_Payload()
+      return r
+    }
+    val r = to(s, fIsolette_EnvironmentHeat_Payload _)
+    return r
+  }
+
+  def fromIsolette_Data_ModelTemp_impl(o: Isolette_Data_Model.Temp_impl, isCompact: B): String = {
+    val st = Printer.printIsolette_Data_ModelTemp_impl(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toIsolette_Data_ModelTemp_impl(s: String): Either[Isolette_Data_Model.Temp_impl, Json.ErrorMsg] = {
+    def fIsolette_Data_ModelTemp_impl(parser: Parser): Isolette_Data_Model.Temp_impl = {
+      val r = parser.parseIsolette_Data_ModelTemp_impl()
+      return r
+    }
+    val r = to(s, fIsolette_Data_ModelTemp_impl _)
+    return r
+  }
+
+  def fromIsolette_Data_ModelTemp_impl_Payload(o: Isolette_Data_Model.Temp_impl_Payload, isCompact: B): String = {
+    val st = Printer.printIsolette_Data_ModelTemp_impl_Payload(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toIsolette_Data_ModelTemp_impl_Payload(s: String): Either[Isolette_Data_Model.Temp_impl_Payload, Json.ErrorMsg] = {
+    def fIsolette_Data_ModelTemp_impl_Payload(parser: Parser): Isolette_Data_Model.Temp_impl_Payload = {
+      val r = parser.parseIsolette_Data_ModelTemp_impl_Payload()
+      return r
+    }
+    val r = to(s, fIsolette_Data_ModelTemp_impl_Payload _)
+    return r
+  }
+
   def fromIsolette_Data_ModelPhysicalTemp_impl(o: Isolette_Data_Model.PhysicalTemp_impl, isCompact: B): String = {
     val st = Printer.printIsolette_Data_ModelPhysicalTemp_impl(o)
     if (isCompact) {
@@ -3063,8 +3009,8 @@ object JSON {
     return r
   }
 
-  def fromIsolette_EnvironmentHeat_Payload(o: Isolette_Environment.Heat_Payload, isCompact: B): String = {
-    val st = Printer.printIsolette_EnvironmentHeat_Payload(o)
+  def fromIsolette_Data_ModelTempWstatus_impl(o: Isolette_Data_Model.TempWstatus_impl, isCompact: B): String = {
+    val st = Printer.printIsolette_Data_ModelTempWstatus_impl(o)
     if (isCompact) {
       return st.renderCompact
     } else {
@@ -3072,12 +3018,66 @@ object JSON {
     }
   }
 
-  def toIsolette_EnvironmentHeat_Payload(s: String): Either[Isolette_Environment.Heat_Payload, Json.ErrorMsg] = {
-    def fIsolette_EnvironmentHeat_Payload(parser: Parser): Isolette_Environment.Heat_Payload = {
-      val r = parser.parseIsolette_EnvironmentHeat_Payload()
+  def toIsolette_Data_ModelTempWstatus_impl(s: String): Either[Isolette_Data_Model.TempWstatus_impl, Json.ErrorMsg] = {
+    def fIsolette_Data_ModelTempWstatus_impl(parser: Parser): Isolette_Data_Model.TempWstatus_impl = {
+      val r = parser.parseIsolette_Data_ModelTempWstatus_impl()
       return r
     }
-    val r = to(s, fIsolette_EnvironmentHeat_Payload _)
+    val r = to(s, fIsolette_Data_ModelTempWstatus_impl _)
+    return r
+  }
+
+  def fromIsolette_Data_ModelTempWstatus_impl_Payload(o: Isolette_Data_Model.TempWstatus_impl_Payload, isCompact: B): String = {
+    val st = Printer.printIsolette_Data_ModelTempWstatus_impl_Payload(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toIsolette_Data_ModelTempWstatus_impl_Payload(s: String): Either[Isolette_Data_Model.TempWstatus_impl_Payload, Json.ErrorMsg] = {
+    def fIsolette_Data_ModelTempWstatus_impl_Payload(parser: Parser): Isolette_Data_Model.TempWstatus_impl_Payload = {
+      val r = parser.parseIsolette_Data_ModelTempWstatus_impl_Payload()
+      return r
+    }
+    val r = to(s, fIsolette_Data_ModelTempWstatus_impl_Payload _)
+    return r
+  }
+
+  def fromIsolette_Data_ModelFailure_Flag_impl(o: Isolette_Data_Model.Failure_Flag_impl, isCompact: B): String = {
+    val st = Printer.printIsolette_Data_ModelFailure_Flag_impl(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toIsolette_Data_ModelFailure_Flag_impl(s: String): Either[Isolette_Data_Model.Failure_Flag_impl, Json.ErrorMsg] = {
+    def fIsolette_Data_ModelFailure_Flag_impl(parser: Parser): Isolette_Data_Model.Failure_Flag_impl = {
+      val r = parser.parseIsolette_Data_ModelFailure_Flag_impl()
+      return r
+    }
+    val r = to(s, fIsolette_Data_ModelFailure_Flag_impl _)
+    return r
+  }
+
+  def fromIsolette_Data_ModelFailure_Flag_impl_Payload(o: Isolette_Data_Model.Failure_Flag_impl_Payload, isCompact: B): String = {
+    val st = Printer.printIsolette_Data_ModelFailure_Flag_impl_Payload(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toIsolette_Data_ModelFailure_Flag_impl_Payload(s: String): Either[Isolette_Data_Model.Failure_Flag_impl_Payload, Json.ErrorMsg] = {
+    def fIsolette_Data_ModelFailure_Flag_impl_Payload(parser: Parser): Isolette_Data_Model.Failure_Flag_impl_Payload = {
+      val r = parser.parseIsolette_Data_ModelFailure_Flag_impl_Payload()
+      return r
+    }
+    val r = to(s, fIsolette_Data_ModelFailure_Flag_impl_Payload _)
     return r
   }
 

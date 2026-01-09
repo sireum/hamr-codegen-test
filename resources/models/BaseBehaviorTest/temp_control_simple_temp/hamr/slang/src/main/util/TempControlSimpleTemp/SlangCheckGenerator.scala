@@ -8,11 +8,11 @@ import org.sireum.Random.Gen64
 /*
 GENERATED FROM
 
-Temperature_i.scala
-
 FanCmd.scala
 
 FanAck.scala
+
+Temperature_i.scala
 
 SetPoint_i.scala
 

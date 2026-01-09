@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from TempUnit.scala, Temperature_impl.scala, FanAck.scala, SetPoint_impl.scala, FanCmd.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
+// This file is auto-generated from TempUnit.scala, FanAck.scala, FanCmd.scala, Temperature_impl.scala, SetPoint_impl.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
 
 package bc
 
@@ -13,17 +13,17 @@ object MsgPack {
 
     val BuildingControlTempUnit_Payload: Z = -32
 
-    val BuildingControlTemperature_impl: Z = -31
+    val BuildingControlFanAck_Payload: Z = -31
 
-    val BuildingControlTemperature_impl_Payload: Z = -30
+    val BuildingControlFanCmd_Payload: Z = -30
 
-    val BuildingControlFanAck_Payload: Z = -29
+    val BuildingControlTemperature_impl: Z = -29
 
-    val BuildingControlSetPoint_impl: Z = -28
+    val BuildingControlTemperature_impl_Payload: Z = -28
 
-    val BuildingControlSetPoint_impl_Payload: Z = -27
+    val BuildingControlSetPoint_impl: Z = -27
 
-    val BuildingControlFanCmd_Payload: Z = -26
+    val BuildingControlSetPoint_impl_Payload: Z = -26
 
     val Base_TypesBoolean_Payload: Z = -25
 
@@ -80,6 +80,24 @@ object MsgPack {
       writeBuildingControlTempUnitType(o.value)
     }
 
+    def writeBuildingControlFanAckType(o: BuildingControl.FanAck.Type): Unit = {
+      writer.writeZ(o.ordinal)
+    }
+
+    def writeBuildingControlFanAck_Payload(o: BuildingControl.FanAck_Payload): Unit = {
+      writer.writeZ(Constants.BuildingControlFanAck_Payload)
+      writeBuildingControlFanAckType(o.value)
+    }
+
+    def writeBuildingControlFanCmdType(o: BuildingControl.FanCmd.Type): Unit = {
+      writer.writeZ(o.ordinal)
+    }
+
+    def writeBuildingControlFanCmd_Payload(o: BuildingControl.FanCmd_Payload): Unit = {
+      writer.writeZ(Constants.BuildingControlFanCmd_Payload)
+      writeBuildingControlFanCmdType(o.value)
+    }
+
     def writeBuildingControlTemperature_impl(o: BuildingControl.Temperature_impl): Unit = {
       writer.writeZ(Constants.BuildingControlTemperature_impl)
       writer.writeF32(o.degrees)
@@ -91,15 +109,6 @@ object MsgPack {
       writeBuildingControlTemperature_impl(o.value)
     }
 
-    def writeBuildingControlFanAckType(o: BuildingControl.FanAck.Type): Unit = {
-      writer.writeZ(o.ordinal)
-    }
-
-    def writeBuildingControlFanAck_Payload(o: BuildingControl.FanAck_Payload): Unit = {
-      writer.writeZ(Constants.BuildingControlFanAck_Payload)
-      writeBuildingControlFanAckType(o.value)
-    }
-
     def writeBuildingControlSetPoint_impl(o: BuildingControl.SetPoint_impl): Unit = {
       writer.writeZ(Constants.BuildingControlSetPoint_impl)
       writeBuildingControlTemperature_impl(o.low)
@@ -109,15 +118,6 @@ object MsgPack {
     def writeBuildingControlSetPoint_impl_Payload(o: BuildingControl.SetPoint_impl_Payload): Unit = {
       writer.writeZ(Constants.BuildingControlSetPoint_impl_Payload)
       writeBuildingControlSetPoint_impl(o.value)
-    }
-
-    def writeBuildingControlFanCmdType(o: BuildingControl.FanCmd.Type): Unit = {
-      writer.writeZ(o.ordinal)
-    }
-
-    def writeBuildingControlFanCmd_Payload(o: BuildingControl.FanCmd_Payload): Unit = {
-      writer.writeZ(Constants.BuildingControlFanCmd_Payload)
-      writeBuildingControlFanCmdType(o.value)
     }
 
     def writeBase_TypesBoolean_Payload(o: Base_Types.Boolean_Payload): Unit = {
@@ -269,6 +269,42 @@ object MsgPack {
       return BuildingControl.TempUnit_Payload(value)
     }
 
+    def readBuildingControlFanAckType(): BuildingControl.FanAck.Type = {
+      val r = reader.readZ()
+      return BuildingControl.FanAck.byOrdinal(r).get
+    }
+
+    def readBuildingControlFanAck_Payload(): BuildingControl.FanAck_Payload = {
+      val r = readBuildingControlFanAck_PayloadT(F)
+      return r
+    }
+
+    def readBuildingControlFanAck_PayloadT(typeParsed: B): BuildingControl.FanAck_Payload = {
+      if (!typeParsed) {
+        reader.expectZ(Constants.BuildingControlFanAck_Payload)
+      }
+      val value = readBuildingControlFanAckType()
+      return BuildingControl.FanAck_Payload(value)
+    }
+
+    def readBuildingControlFanCmdType(): BuildingControl.FanCmd.Type = {
+      val r = reader.readZ()
+      return BuildingControl.FanCmd.byOrdinal(r).get
+    }
+
+    def readBuildingControlFanCmd_Payload(): BuildingControl.FanCmd_Payload = {
+      val r = readBuildingControlFanCmd_PayloadT(F)
+      return r
+    }
+
+    def readBuildingControlFanCmd_PayloadT(typeParsed: B): BuildingControl.FanCmd_Payload = {
+      if (!typeParsed) {
+        reader.expectZ(Constants.BuildingControlFanCmd_Payload)
+      }
+      val value = readBuildingControlFanCmdType()
+      return BuildingControl.FanCmd_Payload(value)
+    }
+
     def readBuildingControlTemperature_impl(): BuildingControl.Temperature_impl = {
       val r = readBuildingControlTemperature_implT(F)
       return r
@@ -296,24 +332,6 @@ object MsgPack {
       return BuildingControl.Temperature_impl_Payload(value)
     }
 
-    def readBuildingControlFanAckType(): BuildingControl.FanAck.Type = {
-      val r = reader.readZ()
-      return BuildingControl.FanAck.byOrdinal(r).get
-    }
-
-    def readBuildingControlFanAck_Payload(): BuildingControl.FanAck_Payload = {
-      val r = readBuildingControlFanAck_PayloadT(F)
-      return r
-    }
-
-    def readBuildingControlFanAck_PayloadT(typeParsed: B): BuildingControl.FanAck_Payload = {
-      if (!typeParsed) {
-        reader.expectZ(Constants.BuildingControlFanAck_Payload)
-      }
-      val value = readBuildingControlFanAckType()
-      return BuildingControl.FanAck_Payload(value)
-    }
-
     def readBuildingControlSetPoint_impl(): BuildingControl.SetPoint_impl = {
       val r = readBuildingControlSetPoint_implT(F)
       return r
@@ -339,24 +357,6 @@ object MsgPack {
       }
       val value = readBuildingControlSetPoint_impl()
       return BuildingControl.SetPoint_impl_Payload(value)
-    }
-
-    def readBuildingControlFanCmdType(): BuildingControl.FanCmd.Type = {
-      val r = reader.readZ()
-      return BuildingControl.FanCmd.byOrdinal(r).get
-    }
-
-    def readBuildingControlFanCmd_Payload(): BuildingControl.FanCmd_Payload = {
-      val r = readBuildingControlFanCmd_PayloadT(F)
-      return r
-    }
-
-    def readBuildingControlFanCmd_PayloadT(typeParsed: B): BuildingControl.FanCmd_Payload = {
-      if (!typeParsed) {
-        reader.expectZ(Constants.BuildingControlFanCmd_Payload)
-      }
-      val value = readBuildingControlFanCmdType()
-      return BuildingControl.FanCmd_Payload(value)
     }
 
     def readBase_TypesBoolean_Payload(): Base_Types.Boolean_Payload = {
@@ -639,6 +639,36 @@ object MsgPack {
     return r
   }
 
+  def fromBuildingControlFanAck_Payload(o: BuildingControl.FanAck_Payload, pooling: B): ISZ[U8] = {
+    val w = Writer.Default(MessagePack.writer(pooling))
+    w.writeBuildingControlFanAck_Payload(o)
+    return w.result
+  }
+
+  def toBuildingControlFanAck_Payload(data: ISZ[U8]): Either[BuildingControl.FanAck_Payload, MessagePack.ErrorMsg] = {
+    def fBuildingControlFanAck_Payload(reader: Reader): BuildingControl.FanAck_Payload = {
+      val r = reader.readBuildingControlFanAck_Payload()
+      return r
+    }
+    val r = to(data, fBuildingControlFanAck_Payload _)
+    return r
+  }
+
+  def fromBuildingControlFanCmd_Payload(o: BuildingControl.FanCmd_Payload, pooling: B): ISZ[U8] = {
+    val w = Writer.Default(MessagePack.writer(pooling))
+    w.writeBuildingControlFanCmd_Payload(o)
+    return w.result
+  }
+
+  def toBuildingControlFanCmd_Payload(data: ISZ[U8]): Either[BuildingControl.FanCmd_Payload, MessagePack.ErrorMsg] = {
+    def fBuildingControlFanCmd_Payload(reader: Reader): BuildingControl.FanCmd_Payload = {
+      val r = reader.readBuildingControlFanCmd_Payload()
+      return r
+    }
+    val r = to(data, fBuildingControlFanCmd_Payload _)
+    return r
+  }
+
   def fromBuildingControlTemperature_impl(o: BuildingControl.Temperature_impl, pooling: B): ISZ[U8] = {
     val w = Writer.Default(MessagePack.writer(pooling))
     w.writeBuildingControlTemperature_impl(o)
@@ -669,21 +699,6 @@ object MsgPack {
     return r
   }
 
-  def fromBuildingControlFanAck_Payload(o: BuildingControl.FanAck_Payload, pooling: B): ISZ[U8] = {
-    val w = Writer.Default(MessagePack.writer(pooling))
-    w.writeBuildingControlFanAck_Payload(o)
-    return w.result
-  }
-
-  def toBuildingControlFanAck_Payload(data: ISZ[U8]): Either[BuildingControl.FanAck_Payload, MessagePack.ErrorMsg] = {
-    def fBuildingControlFanAck_Payload(reader: Reader): BuildingControl.FanAck_Payload = {
-      val r = reader.readBuildingControlFanAck_Payload()
-      return r
-    }
-    val r = to(data, fBuildingControlFanAck_Payload _)
-    return r
-  }
-
   def fromBuildingControlSetPoint_impl(o: BuildingControl.SetPoint_impl, pooling: B): ISZ[U8] = {
     val w = Writer.Default(MessagePack.writer(pooling))
     w.writeBuildingControlSetPoint_impl(o)
@@ -711,21 +726,6 @@ object MsgPack {
       return r
     }
     val r = to(data, fBuildingControlSetPoint_impl_Payload _)
-    return r
-  }
-
-  def fromBuildingControlFanCmd_Payload(o: BuildingControl.FanCmd_Payload, pooling: B): ISZ[U8] = {
-    val w = Writer.Default(MessagePack.writer(pooling))
-    w.writeBuildingControlFanCmd_Payload(o)
-    return w.result
-  }
-
-  def toBuildingControlFanCmd_Payload(data: ISZ[U8]): Either[BuildingControl.FanCmd_Payload, MessagePack.ErrorMsg] = {
-    def fBuildingControlFanCmd_Payload(reader: Reader): BuildingControl.FanCmd_Payload = {
-      val r = reader.readBuildingControlFanCmd_Payload()
-      return r
-    }
-    val r = to(data, fBuildingControlFanCmd_Payload _)
     return r
   }
 

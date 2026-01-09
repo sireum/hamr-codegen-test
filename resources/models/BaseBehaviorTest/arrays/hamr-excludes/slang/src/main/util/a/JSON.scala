@@ -1,7 +1,7 @@
 // #Sireum
 // @formatter:off
 
-// This file is auto-generated from Coordinate_Impl.scala, Array_of_Coordinates.scala, Vector_of_Coordinates.scala, Array_of_Integers.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
+// This file is auto-generated from Coordinate_Impl.scala, Vector_of_Coordinates.scala, Array_of_Integers.scala, Array_of_Coordinates.scala, Base_Types.scala, DataContent.scala, Aux_Types.scala
 
 package a
 
@@ -25,24 +25,6 @@ object JSON {
       return printObject(ISZ(
         ("type", st""""Arrays.Coordinate_Impl_Payload""""),
         ("value", printArraysCoordinate_Impl(o.value))
-      ))
-    }
-
-    @pure def printArraysArray_of_CoordinatesI(o: Arrays.Array_of_Coordinates.I): ST = {
-      return printNumber(o.toZ.string)
-    }
-
-    @pure def printArraysArray_of_Coordinates(o: Arrays.Array_of_Coordinates): ST = {
-      return printObject(ISZ(
-        ("type", st""""Arrays.Array_of_Coordinates""""),
-        ("value", printIS(F, o.value.map(printArraysCoordinate_Impl _)))
-      ))
-    }
-
-    @pure def printArraysArray_of_Coordinates_Payload(o: Arrays.Array_of_Coordinates_Payload): ST = {
-      return printObject(ISZ(
-        ("type", st""""Arrays.Array_of_Coordinates_Payload""""),
-        ("value", printArraysArray_of_Coordinates(o.value))
       ))
     }
 
@@ -75,6 +57,24 @@ object JSON {
       return printObject(ISZ(
         ("type", st""""Arrays.Array_of_Integers_Payload""""),
         ("value", printArraysArray_of_Integers(o.value))
+      ))
+    }
+
+    @pure def printArraysArray_of_CoordinatesI(o: Arrays.Array_of_Coordinates.I): ST = {
+      return printNumber(o.toZ.string)
+    }
+
+    @pure def printArraysArray_of_Coordinates(o: Arrays.Array_of_Coordinates): ST = {
+      return printObject(ISZ(
+        ("type", st""""Arrays.Array_of_Coordinates""""),
+        ("value", printIS(F, o.value.map(printArraysCoordinate_Impl _)))
+      ))
+    }
+
+    @pure def printArraysArray_of_Coordinates_Payload(o: Arrays.Array_of_Coordinates_Payload): ST = {
+      return printObject(ISZ(
+        ("type", st""""Arrays.Array_of_Coordinates_Payload""""),
+        ("value", printArraysArray_of_Coordinates(o.value))
       ))
     }
 
@@ -267,62 +267,6 @@ object JSON {
       return Arrays.Coordinate_Impl_Payload(value)
     }
 
-    def parseArraysArray_of_CoordinatesI(): Arrays.Array_of_Coordinates.I = {
-      val i = parser.offset
-      val s = parser.parseNumber()
-      Arrays.Array_of_Coordinates.I(s) match {
-        case Some(n) => return n
-        case _ =>
-          parser.parseException(i, s"Expected a Arrays.Array_of_Coordinates.I, but '$s' found.")
-          return Arrays.Array_of_Coordinates.I.Min
-      }
-    }
-
-    def parseISArraysArray_of_CoordinatesI[T](f: () => T): IS[Arrays.Array_of_Coordinates.I, T] = {
-      if (!parser.parseArrayBegin()) {
-        return IS()
-      }
-      var e = f()
-      var r = IS[Arrays.Array_of_Coordinates.I, T](e)
-      var continue = parser.parseArrayNext()
-      while (continue) {
-        e = f()
-        r = r :+ e
-        continue = parser.parseArrayNext()
-      }
-      return r
-    }
-
-    def parseArraysArray_of_Coordinates(): Arrays.Array_of_Coordinates = {
-      val r = parseArraysArray_of_CoordinatesT(F)
-      return r
-    }
-
-    def parseArraysArray_of_CoordinatesT(typeParsed: B): Arrays.Array_of_Coordinates = {
-      if (!typeParsed) {
-        parser.parseObjectType("Arrays.Array_of_Coordinates")
-      }
-      parser.parseObjectKey("value")
-      val value = parseISArraysArray_of_CoordinatesI(parseArraysCoordinate_Impl _)
-      parser.parseObjectNext()
-      return Arrays.Array_of_Coordinates(value)
-    }
-
-    def parseArraysArray_of_Coordinates_Payload(): Arrays.Array_of_Coordinates_Payload = {
-      val r = parseArraysArray_of_Coordinates_PayloadT(F)
-      return r
-    }
-
-    def parseArraysArray_of_Coordinates_PayloadT(typeParsed: B): Arrays.Array_of_Coordinates_Payload = {
-      if (!typeParsed) {
-        parser.parseObjectType("Arrays.Array_of_Coordinates_Payload")
-      }
-      parser.parseObjectKey("value")
-      val value = parseArraysArray_of_Coordinates()
-      parser.parseObjectNext()
-      return Arrays.Array_of_Coordinates_Payload(value)
-    }
-
     def parseArraysVector_of_Coordinates(): Arrays.Vector_of_Coordinates = {
       val r = parseArraysVector_of_CoordinatesT(F)
       return r
@@ -407,6 +351,62 @@ object JSON {
       val value = parseArraysArray_of_Integers()
       parser.parseObjectNext()
       return Arrays.Array_of_Integers_Payload(value)
+    }
+
+    def parseArraysArray_of_CoordinatesI(): Arrays.Array_of_Coordinates.I = {
+      val i = parser.offset
+      val s = parser.parseNumber()
+      Arrays.Array_of_Coordinates.I(s) match {
+        case Some(n) => return n
+        case _ =>
+          parser.parseException(i, s"Expected a Arrays.Array_of_Coordinates.I, but '$s' found.")
+          return Arrays.Array_of_Coordinates.I.Min
+      }
+    }
+
+    def parseISArraysArray_of_CoordinatesI[T](f: () => T): IS[Arrays.Array_of_Coordinates.I, T] = {
+      if (!parser.parseArrayBegin()) {
+        return IS()
+      }
+      var e = f()
+      var r = IS[Arrays.Array_of_Coordinates.I, T](e)
+      var continue = parser.parseArrayNext()
+      while (continue) {
+        e = f()
+        r = r :+ e
+        continue = parser.parseArrayNext()
+      }
+      return r
+    }
+
+    def parseArraysArray_of_Coordinates(): Arrays.Array_of_Coordinates = {
+      val r = parseArraysArray_of_CoordinatesT(F)
+      return r
+    }
+
+    def parseArraysArray_of_CoordinatesT(typeParsed: B): Arrays.Array_of_Coordinates = {
+      if (!typeParsed) {
+        parser.parseObjectType("Arrays.Array_of_Coordinates")
+      }
+      parser.parseObjectKey("value")
+      val value = parseISArraysArray_of_CoordinatesI(parseArraysCoordinate_Impl _)
+      parser.parseObjectNext()
+      return Arrays.Array_of_Coordinates(value)
+    }
+
+    def parseArraysArray_of_Coordinates_Payload(): Arrays.Array_of_Coordinates_Payload = {
+      val r = parseArraysArray_of_Coordinates_PayloadT(F)
+      return r
+    }
+
+    def parseArraysArray_of_Coordinates_PayloadT(typeParsed: B): Arrays.Array_of_Coordinates_Payload = {
+      if (!typeParsed) {
+        parser.parseObjectType("Arrays.Array_of_Coordinates_Payload")
+      }
+      parser.parseObjectKey("value")
+      val value = parseArraysArray_of_Coordinates()
+      parser.parseObjectNext()
+      return Arrays.Array_of_Coordinates_Payload(value)
     }
 
     def parseBase_TypesBoolean_Payload(): Base_Types.Boolean_Payload = {
@@ -742,42 +742,6 @@ object JSON {
     return r
   }
 
-  def fromArraysArray_of_Coordinates(o: Arrays.Array_of_Coordinates, isCompact: B): String = {
-    val st = Printer.printArraysArray_of_Coordinates(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toArraysArray_of_Coordinates(s: String): Either[Arrays.Array_of_Coordinates, Json.ErrorMsg] = {
-    def fArraysArray_of_Coordinates(parser: Parser): Arrays.Array_of_Coordinates = {
-      val r = parser.parseArraysArray_of_Coordinates()
-      return r
-    }
-    val r = to(s, fArraysArray_of_Coordinates _)
-    return r
-  }
-
-  def fromArraysArray_of_Coordinates_Payload(o: Arrays.Array_of_Coordinates_Payload, isCompact: B): String = {
-    val st = Printer.printArraysArray_of_Coordinates_Payload(o)
-    if (isCompact) {
-      return st.renderCompact
-    } else {
-      return st.render
-    }
-  }
-
-  def toArraysArray_of_Coordinates_Payload(s: String): Either[Arrays.Array_of_Coordinates_Payload, Json.ErrorMsg] = {
-    def fArraysArray_of_Coordinates_Payload(parser: Parser): Arrays.Array_of_Coordinates_Payload = {
-      val r = parser.parseArraysArray_of_Coordinates_Payload()
-      return r
-    }
-    val r = to(s, fArraysArray_of_Coordinates_Payload _)
-    return r
-  }
-
   def fromArraysVector_of_Coordinates(o: Arrays.Vector_of_Coordinates, isCompact: B): String = {
     val st = Printer.printArraysVector_of_Coordinates(o)
     if (isCompact) {
@@ -847,6 +811,42 @@ object JSON {
       return r
     }
     val r = to(s, fArraysArray_of_Integers_Payload _)
+    return r
+  }
+
+  def fromArraysArray_of_Coordinates(o: Arrays.Array_of_Coordinates, isCompact: B): String = {
+    val st = Printer.printArraysArray_of_Coordinates(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toArraysArray_of_Coordinates(s: String): Either[Arrays.Array_of_Coordinates, Json.ErrorMsg] = {
+    def fArraysArray_of_Coordinates(parser: Parser): Arrays.Array_of_Coordinates = {
+      val r = parser.parseArraysArray_of_Coordinates()
+      return r
+    }
+    val r = to(s, fArraysArray_of_Coordinates _)
+    return r
+  }
+
+  def fromArraysArray_of_Coordinates_Payload(o: Arrays.Array_of_Coordinates_Payload, isCompact: B): String = {
+    val st = Printer.printArraysArray_of_Coordinates_Payload(o)
+    if (isCompact) {
+      return st.renderCompact
+    } else {
+      return st.render
+    }
+  }
+
+  def toArraysArray_of_Coordinates_Payload(s: String): Either[Arrays.Array_of_Coordinates_Payload, Json.ErrorMsg] = {
+    def fArraysArray_of_Coordinates_Payload(parser: Parser): Arrays.Array_of_Coordinates_Payload = {
+      val r = parser.parseArraysArray_of_Coordinates_Payload()
+      return r
+    }
+    val r = to(s, fArraysArray_of_Coordinates_Payload _)
     return r
   }
 

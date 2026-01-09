@@ -10,11 +10,11 @@ GENERATED FROM
 
 Coordinate_Impl.scala
 
-Array_of_Coordinates.scala
-
 Vector_of_Coordinates.scala
 
 Array_of_Integers.scala
+
+Array_of_Coordinates.scala
 
 Base_Types.scala
 
