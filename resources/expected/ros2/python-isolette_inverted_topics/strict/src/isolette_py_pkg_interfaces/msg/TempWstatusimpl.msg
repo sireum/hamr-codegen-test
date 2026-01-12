@@ -1,0 +1,2 @@
+Float32 value
+ValueStatus status
