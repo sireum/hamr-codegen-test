@@ -17,7 +17,7 @@ class MicrokitTests extends CodegenTest {
   override def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
     ISZ(TestMode.sergen, TestMode.slangcheck)
   
-  override def generateExpected: B = super.generateExpected || F
+  override def generateExpected: B = F || super.generateExpected
 
   override def filter: B = F
 
