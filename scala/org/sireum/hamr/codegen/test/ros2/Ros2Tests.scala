@@ -18,14 +18,14 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
   override def testModes: ISZ[TestMode.Type] =
     super.testModes // :+ TestMode.compile
 
-  val root = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
+  val root: Os.Path = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
   val resourceDir: Os.Path = root / "resources"
   val expectedRoot: Os.Path = resourceDir / "expected" / "ros2"
   val resultsRoot: Os.Path = root / "results" / "ros2"
 
-  val codegen_base = resourceDir / "models" / "CodeGenTest_Base"
+  val codegen_base: Os.Path = resourceDir / "models" / "CodeGenTest_Base"
 
-  val ros_base = resourceDir / "models" / "Ros2"
+  val ros_base: Os.Path = resourceDir / "models" / "Ros2"
 
   "building_control_gen_mixed_lax" in {
     val testName = "building_control_gen_mixed"
@@ -274,7 +274,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
         val expectedDir = this.expectedRoot / testName / strictModeString
         expectedDir.removeAll()
         getResultsDir(testName, strictModeString).copyOverTo(expectedDir)
-        println(s"Replaced: ${expectedDir}")
+        println(s"Replaced: $expectedDir")
       } else {
         if (!compare(testName, filter, strictModeString)) {
           failureReasons = failureReasons :+ "Results did not match expected"
@@ -289,19 +289,33 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
       // building is probably preferable - Clint
       val longResourcePath = ops.StringOps(results._1.resources(0).asInstanceOf[FileResource].dstPath)
       val resourcePath = longResourcePath.replaceAllLiterally((resultsRoot / testName / "results" / strictModeString / "src").value, "")
-      val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/".toString).apply(0)
+      val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/").apply(0)
       if (ros2SetupPath.nonEmpty) {
         // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
         // so I split it up - Clint
-        Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
-          .at(resultsRoot / testName / "results" / strictModeString).console.run()
+        val interfacesResults = Os.proc(ISZ("bash", "-c",
+            s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
+          .at(resultsRoot / testName / "results" / strictModeString).echo.run()
 
-        val buildResults = Os.proc(ISZ("bash", "-c", s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName} ${pkgName}_bringup"))
-          .at(resultsRoot / testName / "results" / strictModeString).console.run()
+        if (interfacesResults.ok) {
+          val bringUpResults = Os.proc(ISZ("bash", "-c",
+              s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select $pkgName ${pkgName}_bringup"))
+            .at(resultsRoot / testName / "results" / strictModeString).echo.run()
 
-        // The last two packages will only finish if the first package finished
-        if (!buildResults.out.toString.contains("Summary: 2 packages finished")) {
-          failureReasons = failureReasons :+ "Colcon build failed"
+          if (!bringUpResults.ok) {
+            println("--std out--")
+            cprintln(F, bringUpResults.out)
+            println("--std err--")
+            cprintln(T, bringUpResults.err)
+
+            failureReasons = failureReasons :+ "Bringup colcon build failed"
+          }
+        } else {
+          println("--std out--")
+          cprintln(F, interfacesResults.out)
+          println("--std err--")
+          cprintln(T, interfacesResults.err)
+          failureReasons = failureReasons :+ "Interfaces colcon build failed"
         }
       } else if (dockerAvailable) {
         val platform: String =
@@ -313,8 +327,12 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
           s"cd /root/results && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w"
           //s"cd /root/results && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w --packages-select ${pkgName}_interfaces && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w --packages-select ${pkgName} ${pkgName}_bringup"
         )
-        val buildResults = Os.proc(args).console.run()
+        val buildResults = Os.proc(args).echo.run()
         if (!buildResults.ok) {
+          println("--std out--")
+          cprintln(F, buildResults.out)
+          println("--std err--")
+          cprintln(T, buildResults.err)
           failureReasons = failureReasons :+ "Colcon build failed"
         }
       }
