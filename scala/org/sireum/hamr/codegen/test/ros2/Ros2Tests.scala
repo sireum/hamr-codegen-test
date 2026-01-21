@@ -298,7 +298,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
           .at(resultsRoot / testName / "results" / strictModeString).echo.run()
         if (interfacesResults.ok) {
           val bringUpResults = Os.proc(ISZ("bash", "-c",
-              s"source ${ros2SetupPath.get.value}; env; python3 --version && which python3; colcon version-check && which colcon; python3 -c \"import sys; print('\n'.join(sys.path))\"; python3 -c \"import ament_package; print(ament_package.__file__)\" || echo \"STILL NOT FOUND\"; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select $pkgName ${pkgName}_bringup"))
+              s"source ${ros2SetupPath.get.value}; env; python3 --version && which python3; colcon version-check && which colcon; python3 -c \"import sys; print(\'\n\'.join(sys.path))\"; python3 -c \"import ament_package; print(ament_package.__file__)\" || echo \"STILL NOT FOUND\"; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select $pkgName ${pkgName}_bringup"))
             .at(resultsRoot / testName / "results" / strictModeString).echo.run()
 
           if (!bringUpResults.ok) {
