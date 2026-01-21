@@ -16,7 +16,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
   val verbose: B = F
 
   override def testModes: ISZ[TestMode.Type] =
-    super.testModes // :+ TestMode.compile
+    super.testModes  :+ TestMode.compile
 
   val root: Os.Path = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
   val resourceDir: Os.Path = root / "resources"
@@ -294,11 +294,11 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
         // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
         // so I split it up - Clint
         val interfacesResults = Os.proc(ISZ("bash", "-c",
-            s"source ${ros2SetupPath.get.value}; env; python3 --version && which python3; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
+            s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
           .at(resultsRoot / testName / "results" / strictModeString).echo.run()
         if (interfacesResults.ok) {
           val bringUpResults = Os.proc(ISZ("bash", "-c",
-              s"source ${ros2SetupPath.get.value}; env; python3 --version && which python3; colcon version-check && which colcon; python3 -c \"import sys; print(\'\n\'.join(sys.path))\"; python3 -c \"import ament_package; print(ament_package.__file__)\" || echo \"STILL NOT FOUND\"; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select $pkgName ${pkgName}_bringup"))
+              s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select $pkgName ${pkgName}_bringup"))
             .at(resultsRoot / testName / "results" / strictModeString).echo.run()
 
           if (!bringUpResults.ok) {
