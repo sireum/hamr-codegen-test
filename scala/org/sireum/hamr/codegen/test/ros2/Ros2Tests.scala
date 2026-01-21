@@ -294,12 +294,12 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
         // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
         // so I split it up - Clint
         val interfacesResults = Os.proc(ISZ("bash", "-c",
-            s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
+            s"source ${ros2SetupPath.get.value}; env; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
           .at(resultsRoot / testName / "results" / strictModeString).echo.run()
 
         if (interfacesResults.ok) {
           val bringUpResults = Os.proc(ISZ("bash", "-c",
-              s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select $pkgName ${pkgName}_bringup"))
+              s"source ${ros2SetupPath.get.value}; env; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select $pkgName ${pkgName}_bringup"))
             .at(resultsRoot / testName / "results" / strictModeString).echo.run()
 
           if (!bringUpResults.ok) {
