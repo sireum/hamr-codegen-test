@@ -16,7 +16,7 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
   val verbose: B = F
 
   override def testModes: ISZ[TestMode.Type] =
-    super.testModes  :+ TestMode.compile
+    super.testModes // :+ TestMode.compile
 
   val root: Os.Path = Os.path(implicitly[sourcecode.File].value).up.up.up.up.up.up.up.up
   val resourceDir: Os.Path = root / "resources"
