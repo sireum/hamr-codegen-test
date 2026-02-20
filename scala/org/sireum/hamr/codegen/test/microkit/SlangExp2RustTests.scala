@@ -1,6 +1,5 @@
 package org.sireum.hamr.codegen.test.microkit
 
-import org.sireum.hamr.codegen.microkit.plugins.gumbo.SlangExpUtil.rewriteExpHL
 import org.sireum.lang.FrontEnd
 import org.sireum.lang.ast.Exp
 import org.sireum.lang.parser.Parser
