@@ -20,10 +20,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
   override def filters: ISZ[String] = ISZ("isolette")
 
   override def ignores: _root_.org.sireum.ISZ[String] = super.ignores ++ ISZ(
-    "case-transition-models",
-
-    // TODO: adapt to crust/verus
-    "micro-examples_microkit_aadl_port_types_event__FF6D",
+    "case-transition-models"
   )
 
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
