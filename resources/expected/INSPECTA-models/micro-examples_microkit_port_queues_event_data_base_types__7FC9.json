@@ -525,7 +525,7 @@
         "microkit\/microkit.schedule.xml",
         {
           "type" : "ITestResource",
-          "content" : "<!-- This file will not be overwritten if codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"10\" \/>\n  <domain name=\"domain_2\" length=\"100\" \/>\n  <domain name=\"domain_1\" length=\"10\" \/>\n  <domain name=\"domain_3\" length=\"100\" \/>\n  <domain name=\"domain_1\" length=\"10\" \/>\n  <domain name=\"domain_4\" length=\"100\" \/>\n  <domain name=\"domain_1\" length=\"10\" \/>\n  <domain name=\"domain_5\" length=\"100\" \/>\n  <domain name=\"domain_0\" length=\"560\" \/>\n<\/domain_schedule>",
+          "content" : "<!-- This file will not be overwritten if codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/>\n  <domain name=\"domain_2\" length=\"100\" \/>\n  <domain name=\"domain_1\" length=\"30\" \/>\n  <domain name=\"domain_3\" length=\"100\" \/>\n  <domain name=\"domain_1\" length=\"30\" \/>\n  <domain name=\"domain_4\" length=\"100\" \/>\n  <domain name=\"domain_1\" length=\"30\" \/>\n  <domain name=\"domain_5\" length=\"100\" \/>\n  <domain name=\"domain_0\" length=\"480\" \/>\n<\/domain_schedule>",
           "markers" : [
           ],
           "invertMarkers" : false,
