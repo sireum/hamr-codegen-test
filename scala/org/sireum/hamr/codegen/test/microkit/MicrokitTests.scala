@@ -24,10 +24,7 @@ class MicrokitTests extends CodegenTest {
   override def filters: ISZ[String] = ISZ("_types_event_data")
 
   override def ignores: ISZ[String] = ISZ(
-    "case-transition-models",
-
-    // TODO: adapt to crust/verus
-    "micro-examples_microkit_aadl_port_types_event__FF6D",
+    "case-transition-models"
   )
 
   override val verbose: B = ops.ISZOps(testModes).contains(TestMode.verbose)
