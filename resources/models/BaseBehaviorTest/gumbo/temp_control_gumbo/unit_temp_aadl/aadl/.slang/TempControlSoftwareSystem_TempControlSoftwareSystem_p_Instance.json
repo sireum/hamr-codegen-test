@@ -529,6 +529,8 @@
                                     }
                                   }
                                 },
+                                "rTypes" : [
+                                ],
                                 "targs" : [
                                 ],
                                 "args" : [
@@ -1050,6 +1052,8 @@
                                       }
                                     }
                                   },
+                                  "rTypes" : [
+                                  ],
                                   "targs" : [
                                   ],
                                   "args" : [
@@ -12110,7 +12114,7 @@
       },
       "methods" : [
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -12150,6 +12154,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : false,
@@ -12227,6 +12233,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -12252,6 +12261,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Float_32"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -12356,6 +12368,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -12379,6 +12393,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Float_32"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -12418,7 +12435,7 @@
           }
         },
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -12458,6 +12475,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : true,
@@ -12560,6 +12579,9 @@
                         }
                       }
                     },
+                    "rTypeOpt" : {
+                      "type" : "None"
+                    },
                     "typeArgs" : [
                     ],
                     "attr" : {
@@ -12585,6 +12607,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["TempSensor", "Temperature.i"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -12665,6 +12690,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -12690,6 +12718,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Boolean"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -12933,6 +12964,8 @@
                             }
                           }
                         },
+                        "rTypes" : [
+                        ],
                         "targs" : [
                         ],
                         "args" : [
@@ -13178,6 +13211,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -13201,6 +13236,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Boolean"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -13240,7 +13278,7 @@
           }
         },
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -13280,6 +13318,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : true,
@@ -13382,6 +13422,9 @@
                         }
                       }
                     },
+                    "rTypeOpt" : {
+                      "type" : "None"
+                    },
                     "typeArgs" : [
                     ],
                     "attr" : {
@@ -13407,6 +13450,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Float_32"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -13512,6 +13558,9 @@
                         }
                       }
                     },
+                    "rTypeOpt" : {
+                      "type" : "None"
+                    },
                     "typeArgs" : [
                     ],
                     "attr" : {
@@ -13537,6 +13586,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["TempSensor", "Unit"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -13617,6 +13669,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -13642,6 +13697,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Boolean"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -14648,6 +14706,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -14671,6 +14731,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Boolean"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -14710,7 +14773,7 @@
           }
         },
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -14750,6 +14813,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : true,
@@ -14852,6 +14917,9 @@
                         }
                       }
                     },
+                    "rTypeOpt" : {
+                      "type" : "None"
+                    },
                     "typeArgs" : [
                     ],
                     "attr" : {
@@ -14877,6 +14945,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["TempSensor", "Temperature.i"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -14957,6 +15028,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -14982,6 +15056,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Boolean"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -15233,6 +15310,8 @@
                                     }
                                   }
                                 },
+                                "rTypes" : [
+                                ],
                                 "targs" : [
                                 ],
                                 "args" : [
@@ -16024,6 +16103,8 @@
                                   }
                                 }
                               },
+                              "rTypes" : [
+                              ],
                               "targs" : [
                               ],
                               "args" : [
@@ -16412,6 +16493,8 @@
                                 }
                               }
                             },
+                            "rTypes" : [
+                            ],
                             "targs" : [
                             ],
                             "args" : [
@@ -16527,6 +16610,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -16550,6 +16635,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Boolean"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -16589,7 +16677,7 @@
           }
         },
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -16629,6 +16717,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : true,
@@ -16731,6 +16821,9 @@
                         }
                       }
                     },
+                    "rTypeOpt" : {
+                      "type" : "None"
+                    },
                     "typeArgs" : [
                     ],
                     "attr" : {
@@ -16756,6 +16849,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["TempSensor", "Temperature.i"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -16836,6 +16932,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -16861,6 +16960,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["TempSensor", "Temperature.i"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -17069,6 +17171,8 @@
                         }
                       }
                     },
+                    "rTypes" : [
+                    ],
                     "targs" : [
                     ],
                     "args" : [
@@ -17100,6 +17204,9 @@
                             "value" : {
                               "type" : "org.sireum.lang.ast.Typed.Name",
                               "ids" : ["TempSensor", "Temperature.i"],
+                              "rTypeOpt" : {
+                                "type" : "None"
+                              },
                               "args" : [
                               ]
                             }
@@ -17796,6 +17903,9 @@
                                 "value" : {
                                   "type" : "org.sireum.lang.ast.Typed.Name",
                                   "ids" : ["TempSensor", "Temperature.i"],
+                                  "rTypeOpt" : {
+                                    "type" : "None"
+                                  },
                                   "args" : [
                                   ]
                                 }
@@ -18491,6 +18601,9 @@
                                   "value" : {
                                     "type" : "org.sireum.lang.ast.Typed.Name",
                                     "ids" : ["TempSensor", "Temperature.i"],
+                                    "rTypeOpt" : {
+                                      "type" : "None"
+                                    },
                                     "args" : [
                                     ]
                                   }
@@ -18733,6 +18846,9 @@
                                   "value" : {
                                     "type" : "org.sireum.lang.ast.Typed.Name",
                                     "ids" : ["TempSensor", "Temperature.i"],
+                                    "rTypeOpt" : {
+                                      "type" : "None"
+                                    },
                                     "args" : [
                                     ]
                                   }
@@ -19364,6 +19480,8 @@
                               }
                             }
                           },
+                          "rTypes" : [
+                          ],
                           "targs" : [
                           ],
                           "args" : [
@@ -20292,6 +20410,8 @@
                                 }
                               }
                             },
+                            "rTypes" : [
+                            ],
                             "targs" : [
                             ],
                             "args" : [
@@ -20826,6 +20946,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -20849,6 +20971,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["TempSensor", "Temperature.i"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -20888,7 +21013,7 @@
           }
         },
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -20928,6 +21053,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : true,
@@ -21030,6 +21157,9 @@
                         }
                       }
                     },
+                    "rTypeOpt" : {
+                      "type" : "None"
+                    },
                     "typeArgs" : [
                     ],
                     "attr" : {
@@ -21055,6 +21185,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["TempSensor", "Temperature.i"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -21135,6 +21268,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -21160,6 +21296,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Boolean"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -21556,6 +21695,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -21579,6 +21720,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Boolean"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -21649,7 +21793,7 @@
       },
       "methods" : [
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -21689,6 +21833,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : false,
@@ -21766,6 +21912,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -21791,6 +21940,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Float_32"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -21895,6 +22047,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -21918,6 +22072,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Float_32"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -21957,7 +22114,7 @@
           }
         },
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -21997,6 +22154,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : false,
@@ -22074,6 +22233,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -22099,6 +22261,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Float_32"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -22203,6 +22368,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -22226,6 +22393,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Float_32"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -22265,7 +22435,7 @@
           }
         },
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -22305,6 +22475,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : false,
@@ -22382,6 +22554,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -22407,6 +22582,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Float_32"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -22511,6 +22689,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -22534,6 +22714,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Float_32"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -22573,7 +22756,7 @@
           }
         },
         {
-          "type" : "GclMethod",
+          "type" : "GclBodyMethod",
           "method" : {
             "type" : "org.sireum.lang.ast.Stmt.Method",
             "typeChecked" : false,
@@ -22613,6 +22796,8 @@
                   }
                 }
               },
+              "rTypeParams" : [
+              ],
               "typeParams" : [
               ],
               "hasParams" : true,
@@ -22715,6 +22900,9 @@
                         }
                       }
                     },
+                    "rTypeOpt" : {
+                      "type" : "None"
+                    },
                     "typeArgs" : [
                     ],
                     "attr" : {
@@ -22740,6 +22928,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["TempSensor", "Temperature.i"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -22820,6 +23011,9 @@
                     }
                   }
                 },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
                 "typeArgs" : [
                 ],
                 "attr" : {
@@ -22845,6 +23039,9 @@
                     "value" : {
                       "type" : "org.sireum.lang.ast.Typed.Name",
                       "ids" : ["Base_Types", "Boolean"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
                       "args" : [
                       ]
                     }
@@ -23204,6 +23401,8 @@
                                     }
                                   }
                                 },
+                                "rTypes" : [
+                                ],
                                 "targs" : [
                                 ],
                                 "args" : [
@@ -23550,6 +23749,8 @@
                                     }
                                   }
                                 },
+                                "rTypes" : [
+                                ],
                                 "targs" : [
                                 ],
                                 "args" : [
@@ -23938,6 +24139,8 @@
                                   }
                                 }
                               },
+                              "rTypes" : [
+                              ],
                               "targs" : [
                               ],
                               "args" : [
@@ -24326,6 +24529,8 @@
                                 }
                               }
                             },
+                            "rTypes" : [
+                            ],
                             "targs" : [
                             ],
                             "args" : [
@@ -24441,6 +24646,8 @@
                         }
                       }
                     },
+                    "annotations" : [
+                    ],
                     "attr" : {
                       "type" : "org.sireum.lang.ast.TypedAttr",
                       "posOpt" : {
@@ -24464,6 +24671,9 @@
                         "value" : {
                           "type" : "org.sireum.lang.ast.Typed.Name",
                           "ids" : ["Base_Types", "Boolean"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
                           "args" : [
                           ]
                         }
@@ -26842,6 +27052,8 @@
                       }
                     }
                   },
+                  "rTypes" : [
+                  ],
                   "targs" : [
                   ],
                   "args" : [
@@ -27786,6 +27998,8 @@
                           }
                         }
                       },
+                      "rTypes" : [
+                      ],
                       "targs" : [
                       ],
                       "args" : [
@@ -28499,6 +28713,8 @@
                           }
                         }
                       },
+                      "rTypes" : [
+                      ],
                       "targs" : [
                       ],
                       "args" : [
