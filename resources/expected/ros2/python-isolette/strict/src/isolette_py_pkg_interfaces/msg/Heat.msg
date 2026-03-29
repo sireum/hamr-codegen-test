@@ -1,0 +1,2 @@
+uint8 heat
+uint8 HEAT_DUMMY_HEAD_ENUM=0
