@@ -7,7 +7,7 @@ object MicrokitTestUtil {
   val isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 
   def getAadlModels(tr: TestResources): ISZ[Os.Path] = {
-    return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "aadl" && (p.up / ".ci").exists)
+    return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "aadl" && (p.up / ".ci").exists && !p.value.native.contains(".claude"))
   }
 
   lazy val resourcesDir: Os.Path = {
