@@ -1,7 +1,9 @@
 import mill._
 import scalalib._
 
-// Example mill build -- the contents of this file will not be overwritten.
+// This file will not be overwritten if HAMR codegen is rerun
+
+// Example mill build
 //
 // A custom mill build for Sireum can be obtained from https://github.com/sireum/rolling/releases/tag/mill
 // On Windows, rename 'mill' to 'mill.bat'

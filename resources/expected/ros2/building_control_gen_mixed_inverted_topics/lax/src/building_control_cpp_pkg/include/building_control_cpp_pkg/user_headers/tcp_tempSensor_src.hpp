@@ -1,8 +1,6 @@
 #include "building_control_cpp_pkg/base_headers/tcp_tempSensor_base_src.hpp"
 
-//========================================================
-// Re-running Codegen will overwrite changes to this file
-//========================================================
+// Content between markers will be preserved if codegen is rerun
 
 class tcp_tempSensor : public tcp_tempSensor_base
 {

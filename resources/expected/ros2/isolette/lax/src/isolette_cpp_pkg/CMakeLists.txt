@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
 project(isolette_cpp_pkg)
 
+# Content between markers will be preserved if codegen is rerun
+
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     add_compile_options(-Wall -Wextra -Wpedantic)
 endif()

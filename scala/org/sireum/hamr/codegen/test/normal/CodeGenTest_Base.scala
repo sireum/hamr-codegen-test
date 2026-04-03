@@ -8,7 +8,7 @@ import org.sireum.hamr.codegen.test.util.TestMode
 
 class CodeGenTest_Base extends CodegenTest {
 
-  override def generateExpected: B = super.generateExpected || F
+  override def generateExpected: B = F || super.generateExpected
 
   override def filter: B = super.filter || F
   override def filters: ISZ[String] = ISZ("Do-not-embed")

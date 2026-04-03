@@ -1,0 +1,16 @@
+System Root: TempControlSystem_Instance [[/TempControlMixed.sysml, 14, 2]]
+
+Connection Instance: TempControlSystem_Instance.tcp.tempSensor.currentTemp -> TempControlSystem_Instance.tcp.tempControl.currentTemp
+
+  Connection References: [TempControlSystem_Instance.tcp.ctTStoTC, [/TempControlMixed.sysml, 27, 4]]
+
+   TempControlMixed.GUMBO__Library.inRange(currentTemp) __>:
+     currentTemp.degrees >= -40.0f &
+       currentTemp.degrees <= 122.0f
+
+Connection Instance: TempControlSystem_Instance.tcp.tempSensor.currentTemp -> TempControlSystem_Instance.tcp.opInterface.currentTemp
+
+  Connection References: [TempControlSystem_Instance.tcp.ctTStoOI, [/TempControlMixed.sysml, 28, 4]]
+
+   TempControlMixed.GUMBO__Library.inRange(currentTemp) __>:
+     <nil>

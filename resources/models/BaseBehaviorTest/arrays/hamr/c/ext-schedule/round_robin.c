@@ -1,7 +1,7 @@
 #include <all.h>
 #include <signal.h>
 
-// This file will not be overwritten so is safe to edit
+// This file will not be overwritten if HAMR codegen is rerun
 
 // Transpiled signature of the Slang variable a.Schedulers.roundRobinSchedule
 // in architecture/a/Schedulers.scala.  This weak function declaration allows

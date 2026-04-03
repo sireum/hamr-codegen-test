@@ -1,8 +1,6 @@
 #include "fan_in_fan_out_system_cpp_pkg/user_headers/fanOut_consumer1_src.hpp"
 
-//===========================================================
-// This file will not be overwritten when re-running Codegen
-//===========================================================
+// This file will not be overwritten if HAMR codegen is rerun
 
 //=================================================
 //  I n i t i a l i z e    E n t r y    P o i n t

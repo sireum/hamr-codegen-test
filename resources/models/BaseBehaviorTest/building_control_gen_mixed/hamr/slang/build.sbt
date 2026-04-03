@@ -1,4 +1,6 @@
-// Example sbt build definitions -- the contents of this file will not be overwritten
+// This file will not be overwritten if HAMR codegen is rerun
+
+// Example sbt build definitions
 //
 // sbt can be obtained from https://www.scala-sbt.org/download.html
 //

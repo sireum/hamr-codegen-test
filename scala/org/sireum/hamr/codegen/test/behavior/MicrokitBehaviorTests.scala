@@ -15,7 +15,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
 
   override def justRegenerate: B = super.justRegenerate || F
 
-  override def filter: B = super.filter || F
+  override def filter: B = F || super.filter
 
   override def filters: ISZ[String] = ISZ("isolette")
 
@@ -38,6 +38,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     assert ((cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${cands(0).up.up.up / "hamr"}")
 
     testOptions = testOptions(
+      runtimeMonitoring = !ops.StringOps(testName).contains("vms"),
       outputDir = Some((cands(0).up.up.up / "hamr").value),
       workspaceRootDir = Some(cands(0).up.up.value))
 

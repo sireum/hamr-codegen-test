@@ -14,7 +14,7 @@ case class TestContainer(testName: String,
 
 class CodegenTest_CASE extends CodegenTest {
 
-  override def generateExpected: B = super.generateExpected || F
+  override def generateExpected: B = F || super.generateExpected
 
   val testResources: TestResources = CodegenTest.defaultTestLayout(getClass())
 

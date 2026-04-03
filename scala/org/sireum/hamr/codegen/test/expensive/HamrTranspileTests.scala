@@ -9,7 +9,7 @@ import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 
 class HamrTranspileTests extends CodegenTest with BeforeAndAfterAll {
 
-  override def generateExpected: B = super.generateExpected || F
+  override def generateExpected: B = F || super.generateExpected
 
   val isKekinianCi: B = {
     Os.env("GITHUB_REPOSITORY") match {

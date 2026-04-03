@@ -1,8 +1,6 @@
 #include "fan_in_fan_out_system_cpp_pkg/base_headers/fanIn_producer1_base_src.hpp"
 
-//========================================================
-// Re-running Codegen will overwrite changes to this file
-//========================================================
+// Content between markers will be preserved if codegen is rerun
 
 class fanIn_producer1 : public fanIn_producer1_base
 {

@@ -1,8 +1,6 @@
 #include "building_control_cpp_pkg/base_headers/tcp_fan_base_src.hpp"
 
-//========================================================
-// Re-running Codegen will overwrite changes to this file
-//========================================================
+// Content between markers will be preserved if codegen is rerun
 
 class tcp_fan : public tcp_fan_base
 {

@@ -1,8 +1,6 @@
 #include "datatypes_system_cpp_pkg/base_headers/consumer_consumer_base_src.hpp"
 
-//========================================================
-// Re-running Codegen will overwrite changes to this file
-//========================================================
+// Content between markers will be preserved if codegen is rerun
 
 class consumer_consumer : public consumer_consumer_base
 {

@@ -1,8 +1,6 @@
 #include "fan_in_fan_out_system_cpp_pkg/base_headers/fanOut_consumer2_base_src.hpp"
 
-//========================================================
-// Re-running Codegen will overwrite changes to this file
-//========================================================
+// Content between markers will be preserved if codegen is rerun
 
 class fanOut_consumer2 : public fanOut_consumer2_base
 {

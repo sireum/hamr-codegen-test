@@ -1,8 +1,6 @@
 #include "isolette_cpp_pkg/base_headers/thermostat_monitor_temperature_manage_monitor_mode_mmmt_base_src.hpp"
 
-//========================================================
-// Re-running Codegen will overwrite changes to this file
-//========================================================
+// Content between markers will be preserved if codegen is rerun
 
 class thermostat_monitor_temperature_manage_monitor_mode_mmmt : public thermostat_monitor_temperature_manage_monitor_mode_mmmt_base
 {

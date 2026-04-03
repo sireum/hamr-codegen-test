@@ -1,8 +1,6 @@
 #include "isolette_cpp_pkg/base_headers/thermostat_regulate_temperature_manage_regulator_interface_mrit_base_src.hpp"
 
-//========================================================
-// Re-running Codegen will overwrite changes to this file
-//========================================================
+// Content between markers will be preserved if codegen is rerun
 
 class thermostat_regulate_temperature_manage_regulator_interface_mrit : public thermostat_regulate_temperature_manage_regulator_interface_mrit_base
 {

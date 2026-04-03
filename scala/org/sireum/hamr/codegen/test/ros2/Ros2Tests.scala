@@ -45,6 +45,24 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
 
+  "sysml_temp_control_mixed_microros_lax" in {
+    val testName = "sysml-temp-control-mixed-microros"
+    val root = ros_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
+  }
+
+  "sysml_temp_control_mixed_microros_strict" in {
+    val testName = "sysml-temp-control-mixed-microros"
+    val root = ros_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
+  }
+
   "isolette_lax" in {
     val testName = "isolette"
     val root = codegen_base / testName

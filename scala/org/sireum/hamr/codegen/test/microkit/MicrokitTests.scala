@@ -11,13 +11,13 @@ import org.sireum.hamr.codegen.test.util.TestMode
 
 class MicrokitTests extends CodegenTest {
 
+  override def generateExpected: B = F || super.generateExpected
+
   override def testResources: CodegenTest.TestResources = MicrokitTestUtil.testResources
 
   // Initialize to use only test modes received from environment
   override def testModes: ISZ[TestMode.Type] = getEnvTestModes() ++
     ISZ(TestMode.sergen, TestMode.slangcheck)
-  
-  override def generateExpected: B = F || super.generateExpected
 
   override def filter: B = F
 
@@ -36,7 +36,7 @@ class MicrokitTests extends CodegenTest {
     // add a small sha to resolve common prefixes in test names
     testName = s"${testName}__${TypeUtil.stableTypeSig(testName, 2)}"
 
-    val testOptions = baseOptions
+    val testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms"))
 
     val cands = Os.Path.walk(aadlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
     assert (cands.size <= 1, s"Found ${cands.size} JSON files under $aadlDir")
