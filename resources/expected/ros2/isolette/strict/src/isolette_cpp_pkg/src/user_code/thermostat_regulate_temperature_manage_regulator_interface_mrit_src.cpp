@@ -12,13 +12,13 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit::initialize
 
     // Initialize the node
     // Initialize the node's incoming data port values here
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = example_TempWstatusimpl();
     init_current_tempWstatus(current_tempWstatus);
 
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_desired_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_desired_tempWstatus = example_TempWstatusimpl();
     init_lower_desired_tempWstatus(lower_desired_tempWstatus);
 
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_desired_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_desired_tempWstatus = example_TempWstatusimpl();
     init_upper_desired_tempWstatus(upper_desired_tempWstatus);
 
     isolette_cpp_pkg_interfaces::msg::RegulatorMode regulator_mode = isolette_cpp_pkg_interfaces::msg::RegulatorMode();
@@ -44,15 +44,15 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit::timeTrigge
     PRINT_INFO("Received regulator_mode: %s", MESSAGE_TO_STRING(regulator_mode));
 
     // Example publishing messages
-    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_desired_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_desired_temp = example_Tempimpl();
     put_upper_desired_temp(upper_desired_temp);
-    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_desired_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_desired_temp = example_Tempimpl();
     put_lower_desired_temp(lower_desired_temp);
-    isolette_cpp_pkg_interfaces::msg::Tempimpl displayed_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl displayed_temp = example_Tempimpl();
     put_displayed_temp(displayed_temp);
     isolette_cpp_pkg_interfaces::msg::Status regulator_status = isolette_cpp_pkg_interfaces::msg::Status();
     put_regulator_status(regulator_status);
-    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl interface_failure = isolette_cpp_pkg_interfaces::msg::FailureFlagimpl();
+    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl interface_failure = example_FailureFlagimpl();
     put_interface_failure(interface_failure);
 }
 

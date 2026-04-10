@@ -12,7 +12,7 @@ void temperature_sensor_cpi_thermostat::initialize()
 
     // Initialize the node
     // Initialize the node's incoming data port values here
-    isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl air = isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl();
+    isolette_cpp_pkg_interfaces::msg::PhysicalTempimpl air = example_PhysicalTempimpl();
     init_air(air);
 
 }
@@ -29,7 +29,7 @@ void temperature_sensor_cpi_thermostat::timeTriggered()
     PRINT_INFO("Received air: %s", MESSAGE_TO_STRING(air));
 
     // Example publishing messages
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = example_TempWstatusimpl();
     put_current_tempWstatus(current_tempWstatus);
 }
 

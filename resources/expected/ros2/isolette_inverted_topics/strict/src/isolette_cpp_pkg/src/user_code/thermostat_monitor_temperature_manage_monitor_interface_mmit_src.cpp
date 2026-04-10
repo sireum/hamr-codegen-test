@@ -12,13 +12,13 @@ void thermostat_monitor_temperature_manage_monitor_interface_mmit::initialize()
 
     // Initialize the node
     // Initialize the node's incoming data port values here
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_alarm_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_alarm_tempWstatus = example_TempWstatusimpl();
     init_upper_alarm_tempWstatus(upper_alarm_tempWstatus);
 
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_alarm_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_alarm_tempWstatus = example_TempWstatusimpl();
     init_lower_alarm_tempWstatus(lower_alarm_tempWstatus);
 
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = example_TempWstatusimpl();
     init_current_tempWstatus(current_tempWstatus);
 
     isolette_cpp_pkg_interfaces::msg::MonitorMode monitor_mode = isolette_cpp_pkg_interfaces::msg::MonitorMode();
@@ -44,13 +44,13 @@ void thermostat_monitor_temperature_manage_monitor_interface_mmit::timeTriggered
     PRINT_INFO("Received monitor_mode: %s", MESSAGE_TO_STRING(monitor_mode));
 
     // Example publishing messages
-    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_alarm_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_alarm_temp = example_Tempimpl();
     put_upper_alarm_temp(upper_alarm_temp);
-    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_alarm_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_alarm_temp = example_Tempimpl();
     put_lower_alarm_temp(lower_alarm_temp);
     isolette_cpp_pkg_interfaces::msg::Status monitor_status = isolette_cpp_pkg_interfaces::msg::Status();
     put_monitor_status(monitor_status);
-    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl interface_failure = isolette_cpp_pkg_interfaces::msg::FailureFlagimpl();
+    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl interface_failure = example_FailureFlagimpl();
     put_interface_failure(interface_failure);
 }
 

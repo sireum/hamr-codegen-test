@@ -1,4 +1,4 @@
-package GUMBO_Mixed_Definitions_uRos {
+package GUMBO_Mixed_Definitions {
   language "GUMBO" /*{
     library
       functions

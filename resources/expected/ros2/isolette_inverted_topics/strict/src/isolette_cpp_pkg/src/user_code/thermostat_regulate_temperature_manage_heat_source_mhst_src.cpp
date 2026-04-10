@@ -12,13 +12,13 @@ void thermostat_regulate_temperature_manage_heat_source_mhst::initialize()
 
     // Initialize the node
     // Initialize the node's incoming data port values here
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = example_TempWstatusimpl();
     init_current_tempWstatus(current_tempWstatus);
 
-    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_desired_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_desired_temp = example_Tempimpl();
     init_lower_desired_temp(lower_desired_temp);
 
-    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_desired_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_desired_temp = example_Tempimpl();
     init_upper_desired_temp(upper_desired_temp);
 
     isolette_cpp_pkg_interfaces::msg::RegulatorMode regulator_mode = isolette_cpp_pkg_interfaces::msg::RegulatorMode();

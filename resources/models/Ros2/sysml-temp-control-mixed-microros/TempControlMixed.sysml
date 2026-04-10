@@ -70,6 +70,8 @@ package TempControlMixed_uRos {
     attribute :>> Dispatch_Protocol = Supported_Dispatch_Protocols::Sporadic;
     attribute :>> Period = 1000 [ms];
 
+    attribute :>> RosNodeKind = microRos;
+
     language "GUMBO" /*{
       state
         currentSetPoint: SetPoint;

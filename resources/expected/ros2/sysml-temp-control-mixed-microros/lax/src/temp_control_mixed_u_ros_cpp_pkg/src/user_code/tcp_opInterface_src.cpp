@@ -12,7 +12,7 @@ void tcp_opInterface::initialize()
 
     // Initialize the node
     // Initialize the node's incoming data port values here
-    temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::Temperature currentTemp = temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::Temperature();
+    temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::Temperature currentTemp = example_Temperature();
     init_currentTemp(currentTemp);
 
 }
@@ -29,7 +29,7 @@ void tcp_opInterface::timeTriggered()
     PRINT_INFO("Received currentTemp: %s", MESSAGE_TO_STRING(currentTemp));
 
     // Example publishing messages
-    temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::SetPoint setPoint = temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::SetPoint();
+    temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::SetPoint setPoint = example_SetPoint();
     put_setPoint(setPoint);
 }
 

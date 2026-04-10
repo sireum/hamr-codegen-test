@@ -53,7 +53,7 @@ void producer_producer::timeTriggered()
     put_myFloat64(myFloat64);
     datatypes_system_cpp_pkg_interfaces::msg::MyEnum myEnum = datatypes_system_cpp_pkg_interfaces::msg::MyEnum();
     put_myEnum(myEnum);
-    datatypes_system_cpp_pkg_interfaces::msg::MyStructi myStruct = datatypes_system_cpp_pkg_interfaces::msg::MyStructi();
+    datatypes_system_cpp_pkg_interfaces::msg::MyStructi myStruct = example_MyStructi();
     put_myStruct(myStruct);
     datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim myArray1 = datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim();
     put_myArray1(myArray1);

@@ -12,13 +12,13 @@ void thermostat_regulate_temperature_manage_regulator_mode_mrmt::initialize()
 
     // Initialize the node
     // Initialize the node's incoming data port values here
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = example_TempWstatusimpl();
     init_current_tempWstatus(current_tempWstatus);
 
-    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl interface_failure = isolette_cpp_pkg_interfaces::msg::FailureFlagimpl();
+    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl interface_failure = example_FailureFlagimpl();
     init_interface_failure(interface_failure);
 
-    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl internal_failure = isolette_cpp_pkg_interfaces::msg::FailureFlagimpl();
+    isolette_cpp_pkg_interfaces::msg::FailureFlagimpl internal_failure = example_FailureFlagimpl();
     init_internal_failure(internal_failure);
 
 }

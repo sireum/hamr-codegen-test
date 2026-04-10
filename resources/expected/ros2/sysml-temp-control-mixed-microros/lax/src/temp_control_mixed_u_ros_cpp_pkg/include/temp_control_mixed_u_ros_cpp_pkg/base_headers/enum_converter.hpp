@@ -8,8 +8,8 @@
 #include "temp_control_mixed_u_ros_cpp_pkg_interfaces/msg/fan_ack.hpp"
 #include "temp_control_mixed_u_ros_cpp_pkg_interfaces/msg/fan_cmd.hpp"
 
-const char* enumToString(temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::TempUnit* value);
-const char* enumToString(temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::FanAck* value);
-const char* enumToString(temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::FanCmd* value);
+const char* enumToString(const temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::TempUnit& value);
+const char* enumToString(const temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::FanAck& value);
+const char* enumToString(const temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::FanCmd& value);
 
 #endif

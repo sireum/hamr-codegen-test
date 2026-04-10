@@ -18,7 +18,7 @@ void operator_interface_oip_oit::initialize()
     isolette_cpp_pkg_interfaces::msg::Status monitor_status = isolette_cpp_pkg_interfaces::msg::Status();
     init_monitor_status(monitor_status);
 
-    isolette_cpp_pkg_interfaces::msg::Tempimpl display_temperature = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl display_temperature = example_Tempimpl();
     init_display_temperature(display_temperature);
 
     isolette_cpp_pkg_interfaces::msg::OnOff alarm_control = isolette_cpp_pkg_interfaces::msg::OnOff();
@@ -44,13 +44,13 @@ void operator_interface_oip_oit::timeTriggered()
     PRINT_INFO("Received alarm_control: %s", MESSAGE_TO_STRING(alarm_control));
 
     // Example publishing messages
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_desired_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_desired_tempWstatus = example_TempWstatusimpl();
     put_lower_desired_tempWstatus(lower_desired_tempWstatus);
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_desired_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_desired_tempWstatus = example_TempWstatusimpl();
     put_upper_desired_tempWstatus(upper_desired_tempWstatus);
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_alarm_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_alarm_tempWstatus = example_TempWstatusimpl();
     put_lower_alarm_tempWstatus(lower_alarm_tempWstatus);
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_alarm_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl upper_alarm_tempWstatus = example_TempWstatusimpl();
     put_upper_alarm_tempWstatus(upper_alarm_tempWstatus);
 }
 

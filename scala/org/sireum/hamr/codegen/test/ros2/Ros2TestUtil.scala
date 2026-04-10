@@ -1,12 +1,17 @@
 package org.sireum.hamr.codegen.test.ros2
 
 import org.sireum._
-import org.sireum.hamr.codegen.test.util.TestMode
-import org.sireum.hamr.codegen.test.util.TestModeHelper
+import org.sireum.hamr.codegen.CodeGen
+import org.sireum.hamr.codegen.common.containers.FileResource
+import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
+import org.sireum.hamr.codegen.test.util.{TestMode, TestModeHelper, TestUtil}
+import org.sireum.message.Reporter
 
 trait  Ros2TestUtil {
 
   def testModes: ISZ[TestMode.Type] = TestModeHelper.getEnvTestModes()
+
+  def generateExpected: B
 
   val isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 
@@ -23,7 +28,10 @@ trait  Ros2TestUtil {
 
   val dockerAvailable: B =
     ros2SetupPath match {
-      case None() if !isCI => proc"docker info".run().ok
+      case None() if !isCI =>
+        val dockerOnPath = scala.Option(System.getenv("PATH")).getOrElse("").split(java.io.File.pathSeparator)
+          .exists(d => new java.io.File(d, "docker").canExecute)
+        dockerOnPath && proc"docker info".run().ok
       case _ => F
     }
 
@@ -90,5 +98,120 @@ trait  Ros2TestUtil {
       }
     }
     return sameContent
+  }
+
+  def testRos(testName: String, airFile: Os.Path, modelDir: Os.Path, config: CodegenOption, clearDestDir: B, verbose: B): Unit = {
+    val reporter = Reporter.create
+
+    val strictMode = config.strictAadlMode
+    val strictModeString = if (strictMode) "strict" else "lax"
+
+    val destDir = getResultsDir(testName, strictModeString)
+
+    val filter: Os.Path => B = _ => true
+
+    copy(testName, filter, strictModeString)
+
+    var failureReasons: ISZ[String] = ISZ()
+
+    val model = TestUtil.getModel(airFile = Some(airFile), phantomOptions = None(), rootAadlDir = modelDir, testModes = ISZ(), testName = testName, verbose = verbose)
+
+    var testOps = config(
+      workspaceRootDir = if (config.workspaceRootDir.nonEmpty) config.workspaceRootDir else Some(modelDir.canon.value)
+    )
+
+    // TODO: Currently hardcoded, since I'm just working on cpp and xml
+    testOps = testOps.apply(
+      ros2OutputWorkspaceDir = Some(destDir.value),
+      ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
+      ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml
+    )
+
+    if (clearDestDir) {
+      destDir.removeAll()
+    }
+
+    println(s"Result Dir: ${destDir.up.toUri}")
+
+    val results = CodeGen.codeGen(
+      model = model, shouldWriteOutResources = T, options = testOps,
+      plugins = ISZ(), store = Map.empty, reporter = reporter,
+      transpilerCallback = (_, _) => 0,
+      proyekIveCallback = _ => 0,
+      sergenCallback = (_, _) => 0,
+      slangCheckCallback = (_, _) => 0)
+
+    failureReasons = failureReasons ++ (for (e <- reporter.errors) yield e.text)
+
+    if (!reporter.hasError) {
+      if (generateExpected) {
+        assert(!isCI, "generateExpected should be F when code is pushed to github")
+
+        val expectedDir = this.expectedRoot / testName / strictModeString
+        expectedDir.removeAll()
+        getResultsDir(testName, strictModeString).copyOverTo(expectedDir)
+        println(s"Replaced: $expectedDir")
+      } else {
+        if (!compare(testName, filter, strictModeString)) {
+          failureReasons = failureReasons :+ "Results did not match expected"
+        }
+      }
+    }
+
+    if (ops.ISZOps(testModes).contains(TestMode.compile)) {
+      // Currently, the results directory is compared with the expected directory before running "colcon build".
+      // For an unknown reason, the compare() method halts and does not complete when run after building.
+      // Additionally, some details of the building process appear to be version dependent, so comparing before
+      // building is probably preferable - Clint
+      val longResourcePath = ops.StringOps(results._1.resources(0).asInstanceOf[FileResource].dstPath)
+      val resourcePath = longResourcePath.replaceAllLiterally((resultsRoot / testName / "results" / strictModeString / "src").value, "")
+      val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/").apply(0)
+      if (ros2SetupPath.nonEmpty) {
+        // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
+        // so I split it up - Clint
+        val interfacesResults = Os.proc(ISZ("bash", "-c",
+            s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select ${pkgName}_interfaces"))
+          .at(resultsRoot / testName / "results" / strictModeString).echo.run()
+        if (interfacesResults.ok) {
+          val bringUpResults = Os.proc(ISZ("bash", "-c",
+              s"source ${ros2SetupPath.get.value}; colcon build --cmake-args -DCMAKE_CXX_FLAGS=\"-w\" --packages-select $pkgName ${pkgName}_bringup"))
+            .at(resultsRoot / testName / "results" / strictModeString).echo.run()
+
+          if (!bringUpResults.ok) {
+            println("--std out--")
+            cprintln(F, bringUpResults.out)
+            println("--std err--")
+            cprintln(T, bringUpResults.err)
+
+            failureReasons = failureReasons :+ "Bringup colcon build failed"
+          }
+        } else {
+          println("--std out--")
+          cprintln(F, interfacesResults.out)
+          println("--std err--")
+          cprintln(T, interfacesResults.err)
+          failureReasons = failureReasons :+ "Interfaces colcon build failed"
+        }
+      } else if (dockerAvailable) {
+        val platform: String =
+          if (Os.isMacArm || Os.isLinuxArm || Os.isWinArm) "linux/arm64/v8"
+          else "linux/amd64"
+
+        val args = ISZ[String](
+          "docker", "run", "--platform", platform, "--rm", "-v", s"${resultsRoot / testName / "results" / strictModeString}:/root/results", "ros:jazzy", "bash", "-c",
+          s"cd /root/results && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w"
+          //s"cd /root/results && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w --packages-select ${pkgName}_interfaces && colcon build --cmake-args -DCMAKE_CXX_FLAGS=-w --packages-select ${pkgName} ${pkgName}_bringup"
+        )
+        val buildResults = Os.proc(args).echo.run()
+        if (!buildResults.ok) {
+          println("--std out--")
+          cprintln(F, buildResults.out)
+          println("--std err--")
+          cprintln(T, buildResults.err)
+          failureReasons = failureReasons :+ "Colcon build failed"
+        }
+      }
+    }
+    assert(failureReasons.size == 0)
   }
 }

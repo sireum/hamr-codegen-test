@@ -12,7 +12,7 @@ void tcp_tempControl::initialize()
 
     // Initialize the node
     // Initialize the node's incoming data port values here
-    building_control_cpp_pkg_interfaces::msg::Temperatureimpl currentTemp = building_control_cpp_pkg_interfaces::msg::Temperatureimpl();
+    building_control_cpp_pkg_interfaces::msg::Temperatureimpl currentTemp = example_Temperatureimpl();
     init_currentTemp(currentTemp);
 
 }

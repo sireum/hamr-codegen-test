@@ -12,13 +12,13 @@ void thermostat_monitor_temperature_manage_alarm_mat::initialize()
 
     // Initialize the node
     // Initialize the node's incoming data port values here
-    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = isolette_cpp_pkg_interfaces::msg::TempWstatusimpl();
+    isolette_cpp_pkg_interfaces::msg::TempWstatusimpl current_tempWstatus = example_TempWstatusimpl();
     init_current_tempWstatus(current_tempWstatus);
 
-    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_alarm_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl lower_alarm_temp = example_Tempimpl();
     init_lower_alarm_temp(lower_alarm_temp);
 
-    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_alarm_temp = isolette_cpp_pkg_interfaces::msg::Tempimpl();
+    isolette_cpp_pkg_interfaces::msg::Tempimpl upper_alarm_temp = example_Tempimpl();
     init_upper_alarm_temp(upper_alarm_temp);
 
     isolette_cpp_pkg_interfaces::msg::MonitorMode monitor_mode = isolette_cpp_pkg_interfaces::msg::MonitorMode();
