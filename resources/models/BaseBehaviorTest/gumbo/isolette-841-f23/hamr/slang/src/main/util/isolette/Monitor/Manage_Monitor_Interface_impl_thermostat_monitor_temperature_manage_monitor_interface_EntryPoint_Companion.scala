@@ -93,7 +93,6 @@ object Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monit
     // block the component while its post-state values are retrieved
     val postStateContainer_wL =
       Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(
-        lastCmd = isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface.lastCmd,
         api_interface_failure = get_api_interface_failure,
         api_lower_alarm_temp = get_api_lower_alarm_temp,
         api_monitor_status = get_api_monitor_status,
@@ -107,7 +106,6 @@ object Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monit
     // block the component while its pre-state values are retrieved
     preStateContainer_wL = Some(
       Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS(
-        In_lastCmd = isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface.lastCmd, 
         api_current_tempWstatus = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface.operational_api.current_tempWstatus_Id).get.asInstanceOf[Isolette_Data_Model.TempWstatus_impl_Payload].value, 
         api_lower_alarm_tempWstatus = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface.operational_api.lower_alarm_tempWstatus_Id).get.asInstanceOf[Isolette_Data_Model.TempWstatus_impl_Payload].value, 
         api_monitor_mode = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface.operational_api.monitor_mode_Id).get.asInstanceOf[Isolette_Data_Model.Monitor_Mode_Payload].value, 
@@ -121,7 +119,6 @@ object Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monit
     // block the component while its post-state values are retrieved
     val postStateContainer_wL =
       Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(
-        lastCmd = isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface.lastCmd,
         api_interface_failure = get_api_interface_failure,
         api_lower_alarm_temp = get_api_lower_alarm_temp,
         api_monitor_status = get_api_monitor_status,

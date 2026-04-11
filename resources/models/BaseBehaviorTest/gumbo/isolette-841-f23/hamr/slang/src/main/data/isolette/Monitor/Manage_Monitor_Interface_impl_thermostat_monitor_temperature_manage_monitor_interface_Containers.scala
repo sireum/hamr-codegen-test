@@ -26,7 +26,6 @@ import isolette.util.Container
 
 // container for incoming ports and state variables
 @datatype class Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS (
-  val In_lastCmd: Isolette_Data_Model.On_Off.Type,
   val api_current_tempWstatus: Isolette_Data_Model.TempWstatus_impl,
   val api_lower_alarm_tempWstatus: Isolette_Data_Model.TempWstatus_impl,
   val api_monitor_mode: Isolette_Data_Model.Monitor_Mode.Type,
@@ -48,7 +47,6 @@ import isolette.util.Container
 
 // container for outgoing ports and state variables
 @datatype class Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS (
-  val lastCmd: Isolette_Data_Model.On_Off.Type,
   val api_interface_failure: Isolette_Data_Model.Failure_Flag_impl,
   val api_lower_alarm_temp: Isolette_Data_Model.Temp_impl,
   val api_monitor_status: Isolette_Data_Model.Status.Type,

@@ -39,7 +39,6 @@ object Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mo
     // block the component while its post-state values are retrieved
     val postStateContainer_wL =
       Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(
-        lastMonitorMode = isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode.lastMonitorMode,
         api_monitor_mode = get_api_monitor_mode)
 
     // the rest can now be performed via a different thread
@@ -50,7 +49,6 @@ object Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mo
     // block the component while its pre-state values are retrieved
     preStateContainer_wL = Some(
       Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS(
-        In_lastMonitorMode = isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode.lastMonitorMode, 
         api_current_tempWstatus = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode.operational_api.current_tempWstatus_Id).get.asInstanceOf[Isolette_Data_Model.TempWstatus_impl_Payload].value, 
         api_interface_failure = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode.operational_api.interface_failure_Id).get.asInstanceOf[Isolette_Data_Model.Failure_Flag_impl_Payload].value, 
         api_internal_failure = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode.operational_api.internal_failure_Id).get.asInstanceOf[Isolette_Data_Model.Failure_Flag_impl_Payload].value))
@@ -63,7 +61,6 @@ object Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mo
     // block the component while its post-state values are retrieved
     val postStateContainer_wL =
       Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(
-        lastMonitorMode = isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode.lastMonitorMode,
         api_monitor_mode = get_api_monitor_mode)
 
     // the rest can now be performed via a different thread

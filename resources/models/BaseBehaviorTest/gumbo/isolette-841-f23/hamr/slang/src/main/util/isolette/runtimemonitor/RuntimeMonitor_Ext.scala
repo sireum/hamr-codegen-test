@@ -31,7 +31,7 @@ object RuntimeMonitor_Ext {
         // if you don't want to use the following runtime monitors then surround this marker block
         // with a block comment /** .. **/ to prevent codegen from emitting an error if it's rerun
 
-        new GumboXRuntimeMonitor_Ext(),
+        // new GumboXRuntimeMonitor_Ext(),
 
         new HamrVisionRuntimeMonitor(HamrVision.cp)
 

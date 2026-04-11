@@ -367,7 +367,6 @@ object JSON {
     @pure def printRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(o: Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS""""),
-        ("In_lastCmd", printIsolette_Data_ModelOn_OffType(o.In_lastCmd)),
         ("api_current_tempWstatus", printIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)),
         ("api_lower_desired_temp", printIsolette_Data_ModelTemp_impl(o.api_lower_desired_temp)),
         ("api_regulator_mode", printIsolette_Data_ModelRegulator_ModeType(o.api_regulator_mode)),
@@ -392,7 +391,6 @@ object JSON {
     @pure def printRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS(o: Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS""""),
-        ("lastCmd", printIsolette_Data_ModelOn_OffType(o.lastCmd)),
         ("api_heat_control", printIsolette_Data_ModelOn_OffType(o.api_heat_control))
       ))
     }
@@ -416,7 +414,6 @@ object JSON {
     @pure def printRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS(o: Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS""""),
-        ("In_lastRegulatorMode", printIsolette_Data_ModelRegulator_ModeType(o.In_lastRegulatorMode)),
         ("api_current_tempWstatus", printIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)),
         ("api_interface_failure", printIsolette_Data_ModelFailure_Flag_impl(o.api_interface_failure)),
         ("api_internal_failure", printIsolette_Data_ModelFailure_Flag_impl(o.api_internal_failure))
@@ -440,7 +437,6 @@ object JSON {
     @pure def printRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(o: Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS""""),
-        ("lastRegulatorMode", printIsolette_Data_ModelRegulator_ModeType(o.lastRegulatorMode)),
         ("api_regulator_mode", printIsolette_Data_ModelRegulator_ModeType(o.api_regulator_mode))
       ))
     }
@@ -505,7 +501,6 @@ object JSON {
     @pure def printMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS(o: Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS""""),
-        ("In_lastCmd", printIsolette_Data_ModelOn_OffType(o.In_lastCmd)),
         ("api_current_tempWstatus", printIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)),
         ("api_lower_alarm_tempWstatus", printIsolette_Data_ModelTempWstatus_impl(o.api_lower_alarm_tempWstatus)),
         ("api_monitor_mode", printIsolette_Data_ModelMonitor_ModeType(o.api_monitor_mode)),
@@ -533,7 +528,6 @@ object JSON {
     @pure def printMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(o: Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS""""),
-        ("lastCmd", printIsolette_Data_ModelOn_OffType(o.lastCmd)),
         ("api_interface_failure", printIsolette_Data_ModelFailure_Flag_impl(o.api_interface_failure)),
         ("api_lower_alarm_temp", printIsolette_Data_ModelTemp_impl(o.api_lower_alarm_temp)),
         ("api_monitor_status", printIsolette_Data_ModelStatusType(o.api_monitor_status)),
@@ -561,7 +555,6 @@ object JSON {
     @pure def printMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(o: Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS""""),
-        ("In_lastCmd", printIsolette_Data_ModelOn_OffType(o.In_lastCmd)),
         ("api_current_tempWstatus", printIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)),
         ("api_lower_alarm_temp", printIsolette_Data_ModelTemp_impl(o.api_lower_alarm_temp)),
         ("api_monitor_mode", printIsolette_Data_ModelMonitor_ModeType(o.api_monitor_mode)),
@@ -586,7 +579,6 @@ object JSON {
     @pure def printMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(o: Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS""""),
-        ("lastCmd", printIsolette_Data_ModelOn_OffType(o.lastCmd)),
         ("api_alarm_control", printIsolette_Data_ModelOn_OffType(o.api_alarm_control))
       ))
     }
@@ -610,7 +602,6 @@ object JSON {
     @pure def printMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS(o: Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS""""),
-        ("In_lastMonitorMode", printIsolette_Data_ModelMonitor_ModeType(o.In_lastMonitorMode)),
         ("api_current_tempWstatus", printIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)),
         ("api_interface_failure", printIsolette_Data_ModelFailure_Flag_impl(o.api_interface_failure)),
         ("api_internal_failure", printIsolette_Data_ModelFailure_Flag_impl(o.api_internal_failure))
@@ -634,7 +625,6 @@ object JSON {
     @pure def printMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(o: Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS): ST = {
       return printObject(ISZ(
         ("type", st""""Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS""""),
-        ("lastMonitorMode", printIsolette_Data_ModelMonitor_ModeType(o.lastMonitorMode)),
         ("api_monitor_mode", printIsolette_Data_ModelMonitor_ModeType(o.api_monitor_mode))
       ))
     }
@@ -1748,9 +1738,6 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS")
       }
-      parser.parseObjectKey("In_lastCmd")
-      val In_lastCmd = parseIsolette_Data_ModelOn_OffType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_current_tempWstatus")
       val api_current_tempWstatus = parseIsolette_Data_ModelTempWstatus_impl()
       parser.parseObjectNext()
@@ -1763,7 +1750,7 @@ object JSON {
       parser.parseObjectKey("api_upper_desired_temp")
       val api_upper_desired_temp = parseIsolette_Data_ModelTemp_impl()
       parser.parseObjectNext()
-      return Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(In_lastCmd, api_current_tempWstatus, api_lower_desired_temp, api_regulator_mode, api_upper_desired_temp)
+      return Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(api_current_tempWstatus, api_lower_desired_temp, api_regulator_mode, api_upper_desired_temp)
     }
 
     def parseRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container(): Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container = {
@@ -1799,13 +1786,10 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS")
       }
-      parser.parseObjectKey("lastCmd")
-      val lastCmd = parseIsolette_Data_ModelOn_OffType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_heat_control")
       val api_heat_control = parseIsolette_Data_ModelOn_OffType()
       parser.parseObjectNext()
-      return Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS(lastCmd, api_heat_control)
+      return Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS(api_heat_control)
     }
 
     def parseRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container(): Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container = {
@@ -1847,9 +1831,6 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS")
       }
-      parser.parseObjectKey("In_lastRegulatorMode")
-      val In_lastRegulatorMode = parseIsolette_Data_ModelRegulator_ModeType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_current_tempWstatus")
       val api_current_tempWstatus = parseIsolette_Data_ModelTempWstatus_impl()
       parser.parseObjectNext()
@@ -1859,7 +1840,7 @@ object JSON {
       parser.parseObjectKey("api_internal_failure")
       val api_internal_failure = parseIsolette_Data_ModelFailure_Flag_impl()
       parser.parseObjectNext()
-      return Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS(In_lastRegulatorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure)
+      return Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS(api_current_tempWstatus, api_interface_failure, api_internal_failure)
     }
 
     def parseRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container(): Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container = {
@@ -1895,13 +1876,10 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS")
       }
-      parser.parseObjectKey("lastRegulatorMode")
-      val lastRegulatorMode = parseIsolette_Data_ModelRegulator_ModeType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_regulator_mode")
       val api_regulator_mode = parseIsolette_Data_ModelRegulator_ModeType()
       parser.parseObjectNext()
-      return Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(lastRegulatorMode, api_regulator_mode)
+      return Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(api_regulator_mode)
     }
 
     def parseRegulateDetect_Regulator_Failure_impl_thermostat_regulate_temperature_detect_regulator_failure_PreState_Container(): Regulate.Detect_Regulator_Failure_impl_thermostat_regulate_temperature_detect_regulator_failure_PreState_Container = {
@@ -2018,9 +1996,6 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS")
       }
-      parser.parseObjectKey("In_lastCmd")
-      val In_lastCmd = parseIsolette_Data_ModelOn_OffType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_current_tempWstatus")
       val api_current_tempWstatus = parseIsolette_Data_ModelTempWstatus_impl()
       parser.parseObjectNext()
@@ -2033,7 +2008,7 @@ object JSON {
       parser.parseObjectKey("api_upper_alarm_tempWstatus")
       val api_upper_alarm_tempWstatus = parseIsolette_Data_ModelTempWstatus_impl()
       parser.parseObjectNext()
-      return Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS(In_lastCmd, api_current_tempWstatus, api_lower_alarm_tempWstatus, api_monitor_mode, api_upper_alarm_tempWstatus)
+      return Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS(api_current_tempWstatus, api_lower_alarm_tempWstatus, api_monitor_mode, api_upper_alarm_tempWstatus)
     }
 
     def parseMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container(): Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container = {
@@ -2078,9 +2053,6 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS")
       }
-      parser.parseObjectKey("lastCmd")
-      val lastCmd = parseIsolette_Data_ModelOn_OffType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_interface_failure")
       val api_interface_failure = parseIsolette_Data_ModelFailure_Flag_impl()
       parser.parseObjectNext()
@@ -2093,7 +2065,7 @@ object JSON {
       parser.parseObjectKey("api_upper_alarm_temp")
       val api_upper_alarm_temp = parseIsolette_Data_ModelTemp_impl()
       parser.parseObjectNext()
-      return Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(lastCmd, api_interface_failure, api_lower_alarm_temp, api_monitor_status, api_upper_alarm_temp)
+      return Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(api_interface_failure, api_lower_alarm_temp, api_monitor_status, api_upper_alarm_temp)
     }
 
     def parseMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container(): Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container = {
@@ -2138,9 +2110,6 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS")
       }
-      parser.parseObjectKey("In_lastCmd")
-      val In_lastCmd = parseIsolette_Data_ModelOn_OffType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_current_tempWstatus")
       val api_current_tempWstatus = parseIsolette_Data_ModelTempWstatus_impl()
       parser.parseObjectNext()
@@ -2153,7 +2122,7 @@ object JSON {
       parser.parseObjectKey("api_upper_alarm_temp")
       val api_upper_alarm_temp = parseIsolette_Data_ModelTemp_impl()
       parser.parseObjectNext()
-      return Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(In_lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp)
+      return Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp)
     }
 
     def parseMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container(): Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container = {
@@ -2189,13 +2158,10 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS")
       }
-      parser.parseObjectKey("lastCmd")
-      val lastCmd = parseIsolette_Data_ModelOn_OffType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_alarm_control")
       val api_alarm_control = parseIsolette_Data_ModelOn_OffType()
       parser.parseObjectNext()
-      return Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(lastCmd, api_alarm_control)
+      return Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(api_alarm_control)
     }
 
     def parseMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container(): Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container = {
@@ -2237,9 +2203,6 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS")
       }
-      parser.parseObjectKey("In_lastMonitorMode")
-      val In_lastMonitorMode = parseIsolette_Data_ModelMonitor_ModeType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_current_tempWstatus")
       val api_current_tempWstatus = parseIsolette_Data_ModelTempWstatus_impl()
       parser.parseObjectNext()
@@ -2249,7 +2212,7 @@ object JSON {
       parser.parseObjectKey("api_internal_failure")
       val api_internal_failure = parseIsolette_Data_ModelFailure_Flag_impl()
       parser.parseObjectNext()
-      return Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS(In_lastMonitorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure)
+      return Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS(api_current_tempWstatus, api_interface_failure, api_internal_failure)
     }
 
     def parseMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container(): Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container = {
@@ -2285,13 +2248,10 @@ object JSON {
       if (!typeParsed) {
         parser.parseObjectType("Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS")
       }
-      parser.parseObjectKey("lastMonitorMode")
-      val lastMonitorMode = parseIsolette_Data_ModelMonitor_ModeType()
-      parser.parseObjectNext()
       parser.parseObjectKey("api_monitor_mode")
       val api_monitor_mode = parseIsolette_Data_ModelMonitor_ModeType()
       parser.parseObjectNext()
-      return Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(lastMonitorMode, api_monitor_mode)
+      return Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(api_monitor_mode)
     }
 
     def parseMonitorDetect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_PreState_Container(): Monitor.Detect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_PreState_Container = {

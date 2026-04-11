@@ -12,28 +12,10 @@ object Temperature_i {
     return TempSensor.Temperature_i(
       degrees = Base_Types.Float_32_example())
   }
-
-  /** invariant AbsZero
-    */
-  @strictpure def AbsZero_Invariant(value: TempSensor.Temperature_i): B =
-    value.degrees >= -459.67f
-
-  /** D-Inv Data Invariant for TempSensor.Temperature_i
-    */
-  @strictpure def D_Inv_Temperature_i(value: TempSensor.Temperature_i): B =
-    (AbsZero_Invariant(value))
-
-  /** D-Inv-Guard Data Invariant for TempSensor.Temperature_i
-    */
-  @strictpure def D_Inv_Guard_Temperature_i(value: Option[TempSensor.Temperature_i]): B =
-    value.nonEmpty ___>: D_Inv_Temperature_i(value.get)
 }
 
 @datatype class Temperature_i(
   val degrees: F32) {
-  @spec def AbsZero = Invariant(
-    degrees >= -459.67f
-  )
 }
 
 object Temperature_i_Payload {
