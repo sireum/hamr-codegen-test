@@ -35,6 +35,14 @@ trait  Ros2TestUtil {
       case _ => F
     }
 
+  val microrosWsOpt: Option[Os.Path] = Os.env("MICROROS_WS") match {
+    case Some(ws) =>
+      val p = Os.path(ws)
+      if ((p / "install" / "setup.bash").exists) Some(p)
+      else None()
+    case _ => None()
+  }
+
   def expectedRoot: Os.Path
   def resultsRoot: Os.Path
 
@@ -166,6 +174,8 @@ trait  Ros2TestUtil {
       val longResourcePath = ops.StringOps(results._1.resources(0).asInstanceOf[FileResource].dstPath)
       val resourcePath = longResourcePath.replaceAllLiterally((resultsRoot / testName / "results" / strictModeString / "src").value, "")
       val pkgName = ops.StringOps(resourcePath).split(c => c.toString == "/").apply(0)
+      val microrosAppsDir = destDir / "microros_apps"
+      val hasMicroros = microrosAppsDir.exists && microrosAppsDir.isDir
       if (ros2SetupPath.nonEmpty) {
         // Building all three packages at the same time seems to be significantly more resource-intensive (my VM just stops halfway through),
         // so I split it up - Clint
@@ -184,6 +194,32 @@ trait  Ros2TestUtil {
             cprintln(T, bringUpResults.err)
 
             failureReasons = failureReasons :+ "Bringup colcon build failed"
+          }
+
+          if (hasMicroros) {
+            microrosWsOpt match {
+              case Some(microrosWs) =>
+                val interfacesPkg = s"${pkgName}_interfaces"
+                val microrosPkgs = microrosAppsDir.list.filter(p => p.isDir)
+                (destDir / "src" / interfacesPkg).copyOverTo(microrosWs / "src" / interfacesPkg)
+                for (pkg <- microrosPkgs) {
+                  pkg.copyOverTo(microrosWs / "src" / pkg.name)
+                }
+                val microrosPkgNames = microrosPkgs.map(_.name).elements.mkString(" ")
+                val microrosSetupPath = microrosWs / "install" / "setup.bash"
+                val microrosResults = Os.proc(ISZ[String]("bash", "-c",
+                    s"source ${ros2SetupPath.get.value} && source ${microrosSetupPath.value}; colcon build --packages-select $interfacesPkg $microrosPkgNames"))
+                  .at(microrosWs).echo.run()
+                if (!microrosResults.ok) {
+                  println("--std out--")
+                  cprintln(F, microrosResults.out)
+                  println("--std err--")
+                  cprintln(T, microrosResults.err)
+                  failureReasons = failureReasons :+ "microROS colcon build failed"
+                }
+              case _ =>
+                cprintln(T, "Warning: project has microROS nodes but MICROROS_WS is not set or initialized; skipping microROS build")
+            }
           }
         } else {
           println("--std out--")
@@ -209,6 +245,9 @@ trait  Ros2TestUtil {
           println("--std err--")
           cprintln(T, buildResults.err)
           failureReasons = failureReasons :+ "Colcon build failed"
+        }
+        if (hasMicroros && microrosWsOpt.isEmpty) {
+          cprintln(T, "Warning: project has microROS nodes but MICROROS_WS is not set or initialized; skipping microROS build")
         }
       }
     }
