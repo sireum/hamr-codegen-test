@@ -312,342 +312,6 @@
         }
       ],
       [
-        "microkit\/microkit.system",
-        {
-          "type" : "ITestResource",
-          "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.schedule.xml\" \/>\n\n  <protection_domain name=\"p1_t1_MON\" domain=\"domain_2\">\n    <program_image path=\"p1_t1_MON.elf\" \/>\n    <protection_domain name=\"p1_t1\" domain=\"domain_2\" id=\"1\">\n      <program_image path=\"p1_t1.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p1_t1 -->\n      <!-- END CONTENT MARKER p1_t1 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p1_t1_MON -->\n    <!-- END CONTENT MARKER p1_t1_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p2_t2_MON\" domain=\"domain_3\">\n    <program_image path=\"p2_t2_MON.elf\" \/>\n    <protection_domain name=\"p2_t2\" domain=\"domain_3\" id=\"1\">\n      <program_image path=\"p2_t2.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p2_t2 -->\n      <!-- END CONTENT MARKER p2_t2 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p2_t2_MON -->\n    <!-- END CONTENT MARKER p2_t2_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p3_t3_MON\" domain=\"domain_4\">\n    <program_image path=\"p3_t3_MON.elf\" \/>\n    <protection_domain name=\"p3_t3\" domain=\"domain_4\" id=\"1\">\n      <program_image path=\"p3_t3.elf\" \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p3_t3 -->\n      <!-- END CONTENT MARKER p3_t3 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p3_t3_MON -->\n    <!-- END CONTENT MARKER p3_t3_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"p1_t1_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p1_t1_MON\" id=\"60\" \/>\n    <end pd=\"p1_t1\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"p2_t2_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p2_t2_MON\" id=\"58\" \/>\n    <end pd=\"p2_t2\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"p3_t3_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p3_t3_MON\" id=\"56\" \/>\n    <end pd=\"p3_t3\" id=\"56\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
-          "markers" : [
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p1_t1_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p1_t1",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p2_t2_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p2_t2",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p3_t3_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p3_t3",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER pacer",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "MSD CONTENT MARKER",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            }
-          ],
-          "invertMarkers" : true,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.schedule.xml",
-        {
-          "type" : "ITestResource",
-          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"100\" \/> <!-- p1_t1_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"100\" \/> <!-- p2_t2_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"100\" \/> <!-- p3_t3_MON -->\n  <domain name=\"domain_0\" length=\"610\" \/> <!-- padding -->\n<\/domain_schedule>",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : false,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.dot",
-        {
-          "type" : "ITestResource",
-          "content" : "digraph microkit {\n  compound=true;\n\n  \/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\n  \/\/ protection domains\n  graph [style=rounded]\n  subgraph cluster_p1_t1_MON {\n    label = \"p1_t1_MON\";\n    p1_t1_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p1_t1 {\n      label = \"p1_t1\";\n      p1_t1_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p1_t1_write_port_queue_1 [label=write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_p2_t2_MON {\n    label = \"p2_t2_MON\";\n    p2_t2_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p2_t2 {\n      label = \"p2_t2\";\n      p2_t2_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p2_t2_read_port_queue_1 [label=read_port_queue_1];\n      pd_p2_t2_write_port_queue_1 [label=write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_p3_t3_MON {\n    label = \"p3_t3_MON\";\n    p3_t3_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p3_t3 {\n      label = \"p3_t3\";\n      p3_t3_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p3_t3_read_port_queue_1 [label=read_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_pacer {\n    label = \"pacer\";\n    pacer_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n  }\n\n  \/\/ memory regions\n  top_impl_Instance_p1_t1_write_port_1_Memory_Region;\n\n  top_impl_Instance_p2_t2_write_port_1_Memory_Region;\n\n  \/\/ channels\n  pacer_INVIS -> p1_t1_MON_INVIS [lhead=cluster_p1_t1_MON, minlen=2, dir=both];\n  p1_t1_MON_INVIS -> p1_t1_INVIS [lhead=cluster_p1_t1, minlen=2, dir=both];\n  pacer_INVIS -> p2_t2_MON_INVIS [lhead=cluster_p2_t2_MON, minlen=2, dir=both];\n  p2_t2_MON_INVIS -> p2_t2_INVIS [lhead=cluster_p2_t2, minlen=2, dir=both];\n  pacer_INVIS -> p3_t3_MON_INVIS [lhead=cluster_p3_t3_MON, minlen=2, dir=both];\n  p3_t3_MON_INVIS -> p3_t3_INVIS [lhead=cluster_p3_t3, minlen=2, dir=both];\n\n  \/\/ shared memory mappings\n  pd_p1_t1_write_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=both, style=dashed];\n  pd_p2_t2_read_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=back, style=dashed];\n  pd_p2_t2_write_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=both, style=dashed];\n  pd_p3_t3_read_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=back, style=dashed];\n}",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.monitor.system",
-        {
-          "type" : "ITestResource",
-          "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.monitor.schedule.xml\" \/>\n\n  <protection_domain name=\"p1_t1_MON\" domain=\"domain_2\">\n    <program_image path=\"p1_t1_MON.elf\" \/>\n    <protection_domain name=\"p1_t1\" domain=\"domain_2\" id=\"1\">\n      <program_image path=\"p1_t1.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p1_t1 -->\n      <!-- END CONTENT MARKER p1_t1 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p1_t1_MON -->\n    <!-- END CONTENT MARKER p1_t1_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p2_t2_MON\" domain=\"domain_3\">\n    <program_image path=\"p2_t2_MON.elf\" \/>\n    <protection_domain name=\"p2_t2\" domain=\"domain_3\" id=\"1\">\n      <program_image path=\"p2_t2.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p2_t2 -->\n      <!-- END CONTENT MARKER p2_t2 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p2_t2_MON -->\n    <!-- END CONTENT MARKER p2_t2_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p3_t3_MON\" domain=\"domain_4\">\n    <program_image path=\"p3_t3_MON.elf\" \/>\n    <protection_domain name=\"p3_t3\" domain=\"domain_4\" id=\"1\">\n      <program_image path=\"p3_t3.elf\" \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p3_t3 -->\n      <!-- END CONTENT MARKER p3_t3 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p3_t3_MON -->\n    <!-- END CONTENT MARKER p3_t3_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"monitor_process_monitor_thread_MON\" domain=\"domain_5\">\n    <program_image path=\"monitor_process_monitor_thread_MON.elf\" \/>\n    <protection_domain name=\"monitor_process_monitor_thread\" domain=\"domain_5\" id=\"1\">\n      <program_image path=\"monitor_process_monitor_thread.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"p1_t1_write_port_queue_1\"\n      \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"r\"\n           setvar_vaddr=\"p2_t2_write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER monitor_process_monitor_thread -->\n      <!-- END CONTENT MARKER monitor_process_monitor_thread -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER monitor_process_monitor_thread_MON -->\n    <!-- END CONTENT MARKER monitor_process_monitor_thread_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"p1_t1_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p1_t1_MON\" id=\"60\" \/>\n    <end pd=\"p1_t1\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"p2_t2_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p2_t2_MON\" id=\"58\" \/>\n    <end pd=\"p2_t2\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"p3_t3_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p3_t3_MON\" id=\"56\" \/>\n    <end pd=\"p3_t3\" id=\"56\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"55\" \/>\n    <end pd=\"monitor_process_monitor_thread_MON\" id=\"55\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"monitor_process_monitor_thread_MON\" id=\"54\" \/>\n    <end pd=\"monitor_process_monitor_thread\" id=\"54\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
-          "markers" : [
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p1_t1_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p1_t1",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p2_t2_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p2_t2",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p3_t3_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER p3_t3",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER monitor_process_monitor_thread_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER monitor_process_monitor_thread",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER pacer",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "MSD CONTENT MARKER",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            }
-          ],
-          "invertMarkers" : true,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.monitor.schedule.xml",
-        {
-          "type" : "ITestResource",
-          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"100\" \/> <!-- p1_t1_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"100\" \/> <!-- p2_t2_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"100\" \/> <!-- p3_t3_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_0\" length=\"370\" \/> <!-- padding -->\n<\/domain_schedule>",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : false,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.monitor.dot",
-        {
-          "type" : "ITestResource",
-          "content" : "digraph microkit {\n  compound=true;\n\n  \/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\n  \/\/ protection domains\n  graph [style=rounded]\n  subgraph cluster_p1_t1_MON {\n    label = \"p1_t1_MON\";\n    p1_t1_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p1_t1 {\n      label = \"p1_t1\";\n      p1_t1_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p1_t1_write_port_queue_1 [label=write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_p2_t2_MON {\n    label = \"p2_t2_MON\";\n    p2_t2_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p2_t2 {\n      label = \"p2_t2\";\n      p2_t2_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p2_t2_read_port_queue_1 [label=read_port_queue_1];\n      pd_p2_t2_write_port_queue_1 [label=write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_p3_t3_MON {\n    label = \"p3_t3_MON\";\n    p3_t3_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p3_t3 {\n      label = \"p3_t3\";\n      p3_t3_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p3_t3_read_port_queue_1 [label=read_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_monitor_process_monitor_thread_MON {\n    label = \"monitor_process_monitor_thread_MON\";\n    monitor_process_monitor_thread_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_monitor_process_monitor_thread {\n      label = \"monitor_process_monitor_thread\";\n      monitor_process_monitor_thread_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_monitor_process_monitor_thread_p1_t1_write_port_queue_1 [label=p1_t1_write_port_queue_1];\n      pd_monitor_process_monitor_thread_p2_t2_write_port_queue_1 [label=p2_t2_write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_pacer {\n    label = \"pacer\";\n    pacer_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n  }\n\n  \/\/ memory regions\n  top_impl_Instance_p1_t1_write_port_1_Memory_Region;\n\n  top_impl_Instance_p2_t2_write_port_1_Memory_Region;\n\n  \/\/ channels\n  pacer_INVIS -> p1_t1_MON_INVIS [lhead=cluster_p1_t1_MON, minlen=2, dir=both];\n  p1_t1_MON_INVIS -> p1_t1_INVIS [lhead=cluster_p1_t1, minlen=2, dir=both];\n  pacer_INVIS -> p2_t2_MON_INVIS [lhead=cluster_p2_t2_MON, minlen=2, dir=both];\n  p2_t2_MON_INVIS -> p2_t2_INVIS [lhead=cluster_p2_t2, minlen=2, dir=both];\n  pacer_INVIS -> p3_t3_MON_INVIS [lhead=cluster_p3_t3_MON, minlen=2, dir=both];\n  p3_t3_MON_INVIS -> p3_t3_INVIS [lhead=cluster_p3_t3, minlen=2, dir=both];\n  pacer_INVIS -> monitor_process_monitor_thread_MON_INVIS [lhead=cluster_monitor_process_monitor_thread_MON, minlen=2, dir=both];\n  monitor_process_monitor_thread_MON_INVIS -> monitor_process_monitor_thread_INVIS [lhead=cluster_monitor_process_monitor_thread, minlen=2, dir=both];\n\n  \/\/ shared memory mappings\n  pd_p1_t1_write_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=both, style=dashed];\n  pd_p2_t2_read_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=back, style=dashed];\n  pd_p2_t2_write_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=both, style=dashed];\n  pd_p3_t3_read_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_p1_t1_write_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_p2_t2_write_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=back, style=dashed];\n}",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
         "microkit\/Makefile",
         {
           "type" : "ITestResource",
@@ -1002,6 +666,342 @@
         {
           "type" : "ITestResource",
           "content" : "\/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\nuse crate::bridge::extern_c_api as extern_api;\nuse data::*;\n\nuse proptest::prelude::*;\n\n\/\/\/ container for component's incoming port values\npub struct PreStateContainer {\n  pub api_p1_t1_write_port: i32,\n  pub api_p2_t2_write_port: i32\n}\n\n\/\/\/ setter for component's incoming port values\npub fn put_concrete_inputs_container(container: PreStateContainer)\n{\n  put_p1_t1_write_port(container.api_p1_t1_write_port);\n  put_p2_t2_write_port(container.api_p2_t2_write_port);\n}\n\n\/\/\/ setter for component's incoming port values\npub fn put_concrete_inputs(\n  p1_t1_write_port: i32,\n  p2_t2_write_port: i32)\n{\n  put_p1_t1_write_port(p1_t1_write_port);\n  put_p2_t2_write_port(p2_t2_write_port);\n}\n\n\/\/\/ setter for IN DataPort\npub fn put_p1_t1_write_port(value: i32)\n{\n  *extern_api::IN_p1_t1_write_port.lock().unwrap_or_else(|e| e.into_inner()) = Some(value)\n}\n\n\/\/\/ setter for IN DataPort\npub fn put_p2_t2_write_port(value: i32)\n{\n  *extern_api::IN_p2_t2_write_port.lock().unwrap_or_else(|e| e.into_inner()) = Some(value)\n}\n",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.system",
+        {
+          "type" : "ITestResource",
+          "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.schedule.xml\" \/>\n\n  <protection_domain name=\"p1_t1_MON\" domain=\"domain_2\">\n    <program_image path=\"p1_t1_MON.elf\" \/>\n    <protection_domain name=\"p1_t1\" domain=\"domain_2\" id=\"1\">\n      <program_image path=\"p1_t1.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p1_t1 -->\n      <!-- END CONTENT MARKER p1_t1 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p1_t1_MON -->\n    <!-- END CONTENT MARKER p1_t1_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p2_t2_MON\" domain=\"domain_3\">\n    <program_image path=\"p2_t2_MON.elf\" \/>\n    <protection_domain name=\"p2_t2\" domain=\"domain_3\" id=\"1\">\n      <program_image path=\"p2_t2.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p2_t2 -->\n      <!-- END CONTENT MARKER p2_t2 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p2_t2_MON -->\n    <!-- END CONTENT MARKER p2_t2_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p3_t3_MON\" domain=\"domain_4\">\n    <program_image path=\"p3_t3_MON.elf\" \/>\n    <protection_domain name=\"p3_t3\" domain=\"domain_4\" id=\"1\">\n      <program_image path=\"p3_t3.elf\" \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p3_t3 -->\n      <!-- END CONTENT MARKER p3_t3 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p3_t3_MON -->\n    <!-- END CONTENT MARKER p3_t3_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"p1_t1_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p1_t1_MON\" id=\"60\" \/>\n    <end pd=\"p1_t1\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"p2_t2_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p2_t2_MON\" id=\"58\" \/>\n    <end pd=\"p2_t2\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"p3_t3_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p3_t3_MON\" id=\"56\" \/>\n    <end pd=\"p3_t3\" id=\"56\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
+          "markers" : [
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p1_t1_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p1_t1",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p2_t2_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p2_t2",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p3_t3_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p3_t3",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER pacer",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "MSD CONTENT MARKER",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            }
+          ],
+          "invertMarkers" : true,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.schedule.xml",
+        {
+          "type" : "ITestResource",
+          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"100\" \/> <!-- p1_t1_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"100\" \/> <!-- p2_t2_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"100\" \/> <!-- p3_t3_MON -->\n  <domain name=\"domain_0\" length=\"610\" \/> <!-- padding -->\n<\/domain_schedule>",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.dot",
+        {
+          "type" : "ITestResource",
+          "content" : "digraph microkit {\n  compound=true;\n\n  \/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\n  \/\/ protection domains\n  graph [style=rounded]\n  subgraph cluster_p1_t1_MON {\n    label = \"p1_t1_MON\";\n    p1_t1_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p1_t1 {\n      label = \"p1_t1\";\n      p1_t1_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p1_t1_write_port_queue_1 [label=write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_p2_t2_MON {\n    label = \"p2_t2_MON\";\n    p2_t2_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p2_t2 {\n      label = \"p2_t2\";\n      p2_t2_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p2_t2_read_port_queue_1 [label=read_port_queue_1];\n      pd_p2_t2_write_port_queue_1 [label=write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_p3_t3_MON {\n    label = \"p3_t3_MON\";\n    p3_t3_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p3_t3 {\n      label = \"p3_t3\";\n      p3_t3_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p3_t3_read_port_queue_1 [label=read_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_pacer {\n    label = \"pacer\";\n    pacer_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n  }\n\n  \/\/ memory regions\n  top_impl_Instance_p1_t1_write_port_1_Memory_Region;\n\n  top_impl_Instance_p2_t2_write_port_1_Memory_Region;\n\n  \/\/ channels\n  pacer_INVIS -> p1_t1_MON_INVIS [lhead=cluster_p1_t1_MON, minlen=2, dir=both];\n  p1_t1_MON_INVIS -> p1_t1_INVIS [lhead=cluster_p1_t1, minlen=2, dir=both];\n  pacer_INVIS -> p2_t2_MON_INVIS [lhead=cluster_p2_t2_MON, minlen=2, dir=both];\n  p2_t2_MON_INVIS -> p2_t2_INVIS [lhead=cluster_p2_t2, minlen=2, dir=both];\n  pacer_INVIS -> p3_t3_MON_INVIS [lhead=cluster_p3_t3_MON, minlen=2, dir=both];\n  p3_t3_MON_INVIS -> p3_t3_INVIS [lhead=cluster_p3_t3, minlen=2, dir=both];\n\n  \/\/ shared memory mappings\n  pd_p1_t1_write_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=both, style=dashed];\n  pd_p2_t2_read_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=back, style=dashed];\n  pd_p2_t2_write_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=both, style=dashed];\n  pd_p3_t3_read_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=back, style=dashed];\n}",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.monitor.system",
+        {
+          "type" : "ITestResource",
+          "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.monitor.schedule.xml\" \/>\n\n  <protection_domain name=\"p1_t1_MON\" domain=\"domain_2\">\n    <program_image path=\"p1_t1_MON.elf\" \/>\n    <protection_domain name=\"p1_t1\" domain=\"domain_2\" id=\"1\">\n      <program_image path=\"p1_t1.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p1_t1 -->\n      <!-- END CONTENT MARKER p1_t1 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p1_t1_MON -->\n    <!-- END CONTENT MARKER p1_t1_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p2_t2_MON\" domain=\"domain_3\">\n    <program_image path=\"p2_t2_MON.elf\" \/>\n    <protection_domain name=\"p2_t2\" domain=\"domain_3\" id=\"1\">\n      <program_image path=\"p2_t2.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p2_t2 -->\n      <!-- END CONTENT MARKER p2_t2 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p2_t2_MON -->\n    <!-- END CONTENT MARKER p2_t2_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"p3_t3_MON\" domain=\"domain_4\">\n    <program_image path=\"p3_t3_MON.elf\" \/>\n    <protection_domain name=\"p3_t3\" domain=\"domain_4\" id=\"1\">\n      <program_image path=\"p3_t3.elf\" \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"read_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER p3_t3 -->\n      <!-- END CONTENT MARKER p3_t3 -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER p3_t3_MON -->\n    <!-- END CONTENT MARKER p3_t3_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"monitor_process_monitor_thread_MON\" domain=\"domain_5\">\n    <program_image path=\"monitor_process_monitor_thread_MON.elf\" \/>\n    <protection_domain name=\"monitor_process_monitor_thread\" domain=\"domain_5\" id=\"1\">\n      <program_image path=\"monitor_process_monitor_thread.elf\" \/>\n      <map mr=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"p1_t1_write_port_queue_1\"\n      \/>\n      <map mr=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"r\"\n           setvar_vaddr=\"p2_t2_write_port_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER monitor_process_monitor_thread -->\n      <!-- END CONTENT MARKER monitor_process_monitor_thread -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER monitor_process_monitor_thread_MON -->\n    <!-- END CONTENT MARKER monitor_process_monitor_thread_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"top_impl_Instance_p1_t1_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"top_impl_Instance_p2_t2_write_port_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"p1_t1_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p1_t1_MON\" id=\"60\" \/>\n    <end pd=\"p1_t1\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"p2_t2_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p2_t2_MON\" id=\"58\" \/>\n    <end pd=\"p2_t2\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"p3_t3_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"p3_t3_MON\" id=\"56\" \/>\n    <end pd=\"p3_t3\" id=\"56\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"55\" \/>\n    <end pd=\"monitor_process_monitor_thread_MON\" id=\"55\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"monitor_process_monitor_thread_MON\" id=\"54\" \/>\n    <end pd=\"monitor_process_monitor_thread\" id=\"54\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
+          "markers" : [
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p1_t1_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p1_t1",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p2_t2_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p2_t2",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p3_t3_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER p3_t3",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER monitor_process_monitor_thread_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER monitor_process_monitor_thread",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER pacer",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "MSD CONTENT MARKER",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            }
+          ],
+          "invertMarkers" : true,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.monitor.schedule.xml",
+        {
+          "type" : "ITestResource",
+          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"100\" \/> <!-- p1_t1_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"100\" \/> <!-- p2_t2_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"100\" \/> <!-- p3_t3_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_0\" length=\"370\" \/> <!-- padding -->\n<\/domain_schedule>",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.monitor.dot",
+        {
+          "type" : "ITestResource",
+          "content" : "digraph microkit {\n  compound=true;\n\n  \/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\n  \/\/ protection domains\n  graph [style=rounded]\n  subgraph cluster_p1_t1_MON {\n    label = \"p1_t1_MON\";\n    p1_t1_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p1_t1 {\n      label = \"p1_t1\";\n      p1_t1_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p1_t1_write_port_queue_1 [label=write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_p2_t2_MON {\n    label = \"p2_t2_MON\";\n    p2_t2_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p2_t2 {\n      label = \"p2_t2\";\n      p2_t2_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p2_t2_read_port_queue_1 [label=read_port_queue_1];\n      pd_p2_t2_write_port_queue_1 [label=write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_p3_t3_MON {\n    label = \"p3_t3_MON\";\n    p3_t3_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_p3_t3 {\n      label = \"p3_t3\";\n      p3_t3_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_p3_t3_read_port_queue_1 [label=read_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_monitor_process_monitor_thread_MON {\n    label = \"monitor_process_monitor_thread_MON\";\n    monitor_process_monitor_thread_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_monitor_process_monitor_thread {\n      label = \"monitor_process_monitor_thread\";\n      monitor_process_monitor_thread_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_monitor_process_monitor_thread_p1_t1_write_port_queue_1 [label=p1_t1_write_port_queue_1];\n      pd_monitor_process_monitor_thread_p2_t2_write_port_queue_1 [label=p2_t2_write_port_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_pacer {\n    label = \"pacer\";\n    pacer_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n  }\n\n  \/\/ memory regions\n  top_impl_Instance_p1_t1_write_port_1_Memory_Region;\n\n  top_impl_Instance_p2_t2_write_port_1_Memory_Region;\n\n  \/\/ channels\n  pacer_INVIS -> p1_t1_MON_INVIS [lhead=cluster_p1_t1_MON, minlen=2, dir=both];\n  p1_t1_MON_INVIS -> p1_t1_INVIS [lhead=cluster_p1_t1, minlen=2, dir=both];\n  pacer_INVIS -> p2_t2_MON_INVIS [lhead=cluster_p2_t2_MON, minlen=2, dir=both];\n  p2_t2_MON_INVIS -> p2_t2_INVIS [lhead=cluster_p2_t2, minlen=2, dir=both];\n  pacer_INVIS -> p3_t3_MON_INVIS [lhead=cluster_p3_t3_MON, minlen=2, dir=both];\n  p3_t3_MON_INVIS -> p3_t3_INVIS [lhead=cluster_p3_t3, minlen=2, dir=both];\n  pacer_INVIS -> monitor_process_monitor_thread_MON_INVIS [lhead=cluster_monitor_process_monitor_thread_MON, minlen=2, dir=both];\n  monitor_process_monitor_thread_MON_INVIS -> monitor_process_monitor_thread_INVIS [lhead=cluster_monitor_process_monitor_thread, minlen=2, dir=both];\n\n  \/\/ shared memory mappings\n  pd_p1_t1_write_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=both, style=dashed];\n  pd_p2_t2_read_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=back, style=dashed];\n  pd_p2_t2_write_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=both, style=dashed];\n  pd_p3_t3_read_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_p1_t1_write_port_queue_1 -> top_impl_Instance_p1_t1_write_port_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_p2_t2_write_port_queue_1 -> top_impl_Instance_p2_t2_write_port_1_Memory_Region [dir=back, style=dashed];\n}",
           "markers" : [
           ],
           "invertMarkers" : false,

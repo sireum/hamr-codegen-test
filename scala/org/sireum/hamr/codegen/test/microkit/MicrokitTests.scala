@@ -50,6 +50,28 @@ class MicrokitTests extends CodegenTest {
       modelUri = None(),
       expectedErrorReasons = ISZ())
   }
+
+  for (sysmlDir <- MicrokitTestUtil.getSysmlModels(testResources.copy(modelsDir = testResources.modelsDir / "micro-examples" / "microkit"))) {
+    val t = ops.StringOps(sysmlDir.up.value)
+    var testName: String = s"sysml_${ops.StringOps(t.substring(t.stringIndexOf("INSPECTA-models") + 16, t.s.size)).replaceAllLiterally(Os.fileSep, "_")}"
+
+    // add a small sha to resolve common prefixes in test names
+    testName = s"${testName}__${TypeUtil.stableTypeSig(testName, 2)}"
+
+    val testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms"))
+
+    val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
+    assert (cands.size <= 1, s"Found ${cands.size} JSON files under $sysmlDir")
+
+    test(
+      testName = testName,
+      modelDir = sysmlDir,
+      airFile = if (cands.size == 1) Some(cands(0)) else None(),
+      ops = testOptions,
+      description = None(),
+      modelUri = None(),
+      expectedErrorReasons = ISZ())
+  }
 }
 
 object MicrokitTests {

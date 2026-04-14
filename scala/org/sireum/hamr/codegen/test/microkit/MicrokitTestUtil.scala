@@ -10,6 +10,10 @@ object MicrokitTestUtil {
     return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "aadl" && (p.up / ".ci").exists && !p.value.native.contains(".claude"))
   }
 
+  def getSysmlModels(tr: TestResources): ISZ[Os.Path] = {
+    return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "sysml" && (p.up / ".ci").exists && !p.value.native.contains(".claude"))
+  }
+
   lazy val resourcesDir: Os.Path = {
     val base = Os.path(".")
     if ((base / "hamr" / "codegen" / "jvm" / "src" / "test" / "resources" / "expected" / "CodeGenTest_Base").exists) {

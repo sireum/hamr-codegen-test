@@ -312,342 +312,6 @@
         }
       ],
       [
-        "microkit\/microkit.system",
-        {
-          "type" : "ITestResource",
-          "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.schedule.xml\" \/>\n\n  <protection_domain name=\"ArduPilot_ArduPilot_MON\" domain=\"domain_4\">\n    <program_image path=\"ArduPilot_ArduPilot_MON.elf\" \/>\n    <protection_domain name=\"ArduPilot_ArduPilot\" domain=\"domain_4\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"ArduPilot_ArduPilot.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER ArduPilot_ArduPilot -->\n      <!-- END CONTENT MARKER ArduPilot_ArduPilot -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER ArduPilot_ArduPilot_MON -->\n    <!-- END CONTENT MARKER ArduPilot_ArduPilot_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"Firewall_Firewall_MON\" domain=\"domain_3\">\n    <program_image path=\"Firewall_Firewall_MON.elf\" \/>\n    <protection_domain name=\"Firewall_Firewall\" domain=\"domain_3\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"Firewall_Firewall.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesTxIn_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesRxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_002_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesTxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_003_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesRxIn_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER Firewall_Firewall -->\n      <!-- END CONTENT MARKER Firewall_Firewall -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER Firewall_Firewall_MON -->\n    <!-- END CONTENT MARKER Firewall_Firewall_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" domain=\"domain_2\">\n    <program_image path=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON.elf\" \/>\n    <protection_domain name=\"LowLevelEthernetDriver_LowLevelEthernetDriver\" domain=\"domain_2\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"LowLevelEthernetDriver_LowLevelEthernetDriver.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver -->\n      <!-- END CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n    <!-- END CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"ArduPilot_ArduPilot_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"ArduPilot_ArduPilot_MON\" id=\"60\" \/>\n    <end pd=\"ArduPilot_ArduPilot\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"Firewall_Firewall_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"Firewall_Firewall_MON\" id=\"58\" \/>\n    <end pd=\"Firewall_Firewall\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" id=\"56\" \/>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver\" id=\"56\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
-          "markers" : [
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER ArduPilot_ArduPilot_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER ArduPilot_ArduPilot",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER Firewall_Firewall_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER Firewall_Firewall",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER pacer",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "MSD CONTENT MARKER",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            }
-          ],
-          "invertMarkers" : true,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.schedule.xml",
-        {
-          "type" : "ITestResource",
-          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"100\" \/> <!-- LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"100\" \/> <!-- Firewall_Firewall_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"100\" \/> <!-- ArduPilot_ArduPilot_MON -->\n  <domain name=\"domain_0\" length=\"610\" \/> <!-- padding -->\n<\/domain_schedule>",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : false,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.dot",
-        {
-          "type" : "ITestResource",
-          "content" : "digraph microkit {\n  compound=true;\n\n  \/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\n  \/\/ protection domains\n  graph [style=rounded]\n  subgraph cluster_ArduPilot_ArduPilot_MON {\n    label = \"ArduPilot_ArduPilot_MON\";\n    ArduPilot_ArduPilot_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_ArduPilot_ArduPilot {\n      label = \"ArduPilot_ArduPilot\";\n      ArduPilot_ArduPilot_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 [label=EthernetFramesTx_queue_1];\n      pd_ArduPilot_ArduPilot_EthernetFramesRx_queue_1 [label=EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_Firewall_Firewall_MON {\n    label = \"Firewall_Firewall_MON\";\n    Firewall_Firewall_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_Firewall_Firewall {\n      label = \"Firewall_Firewall\";\n      Firewall_Firewall_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_Firewall_Firewall_EthernetFramesTxIn_queue_1 [label=EthernetFramesTxIn_queue_1];\n      pd_Firewall_Firewall_EthernetFramesRxOut_queue_1 [label=EthernetFramesRxOut_queue_1];\n      pd_Firewall_Firewall_EthernetFramesTxOut_queue_1 [label=EthernetFramesTxOut_queue_1];\n      pd_Firewall_Firewall_EthernetFramesRxIn_queue_1 [label=EthernetFramesRxIn_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_LowLevelEthernetDriver_LowLevelEthernetDriver_MON {\n    label = \"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\";\n    LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_LowLevelEthernetDriver_LowLevelEthernetDriver {\n      label = \"LowLevelEthernetDriver_LowLevelEthernetDriver\";\n      LowLevelEthernetDriver_LowLevelEthernetDriver_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesTx_queue_1 [label=EthernetFramesTx_queue_1];\n      pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 [label=EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_pacer {\n    label = \"pacer\";\n    pacer_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n  }\n\n  \/\/ memory regions\n  seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region;\n\n  seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region;\n\n  seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region;\n\n  seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region;\n\n  \/\/ channels\n  pacer_INVIS -> ArduPilot_ArduPilot_MON_INVIS [lhead=cluster_ArduPilot_ArduPilot_MON, minlen=2, dir=both];\n  ArduPilot_ArduPilot_MON_INVIS -> ArduPilot_ArduPilot_INVIS [lhead=cluster_ArduPilot_ArduPilot, minlen=2, dir=both];\n  pacer_INVIS -> Firewall_Firewall_MON_INVIS [lhead=cluster_Firewall_Firewall_MON, minlen=2, dir=both];\n  Firewall_Firewall_MON_INVIS -> Firewall_Firewall_INVIS [lhead=cluster_Firewall_Firewall, minlen=2, dir=both];\n  pacer_INVIS -> LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS [lhead=cluster_LowLevelEthernetDriver_LowLevelEthernetDriver_MON, minlen=2, dir=both];\n  LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS -> LowLevelEthernetDriver_LowLevelEthernetDriver_INVIS [lhead=cluster_LowLevelEthernetDriver_LowLevelEthernetDriver, minlen=2, dir=both];\n\n  \/\/ shared memory mappings\n  pd_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=both, style=dashed];\n  pd_ArduPilot_ArduPilot_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesTxIn_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=back, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesRxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=both, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesTxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=both, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesRxIn_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=back, style=dashed];\n  pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=both, style=dashed];\n}",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.monitor.system",
-        {
-          "type" : "ITestResource",
-          "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.monitor.schedule.xml\" \/>\n\n  <protection_domain name=\"ArduPilot_ArduPilot_MON\" domain=\"domain_4\">\n    <program_image path=\"ArduPilot_ArduPilot_MON.elf\" \/>\n    <protection_domain name=\"ArduPilot_ArduPilot\" domain=\"domain_4\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"ArduPilot_ArduPilot.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER ArduPilot_ArduPilot -->\n      <!-- END CONTENT MARKER ArduPilot_ArduPilot -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER ArduPilot_ArduPilot_MON -->\n    <!-- END CONTENT MARKER ArduPilot_ArduPilot_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"Firewall_Firewall_MON\" domain=\"domain_3\">\n    <program_image path=\"Firewall_Firewall_MON.elf\" \/>\n    <protection_domain name=\"Firewall_Firewall\" domain=\"domain_3\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"Firewall_Firewall.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesTxIn_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesRxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_002_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesTxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_003_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesRxIn_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER Firewall_Firewall -->\n      <!-- END CONTENT MARKER Firewall_Firewall -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER Firewall_Firewall_MON -->\n    <!-- END CONTENT MARKER Firewall_Firewall_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" domain=\"domain_2\">\n    <program_image path=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON.elf\" \/>\n    <protection_domain name=\"LowLevelEthernetDriver_LowLevelEthernetDriver\" domain=\"domain_2\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"LowLevelEthernetDriver_LowLevelEthernetDriver.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver -->\n      <!-- END CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n    <!-- END CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"monitor_process_monitor_thread_MON\" domain=\"domain_5\">\n    <program_image path=\"monitor_process_monitor_thread_MON.elf\" \/>\n    <protection_domain name=\"monitor_process_monitor_thread\" domain=\"domain_5\" id=\"1\">\n      <program_image path=\"monitor_process_monitor_thread.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"ArduPilot_ArduPilot_EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"r\"\n           setvar_vaddr=\"Firewall_Firewall_EthernetFramesRxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_002_000\"\n           perms=\"r\"\n           setvar_vaddr=\"Firewall_Firewall_EthernetFramesTxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_003_000\"\n           perms=\"r\"\n           setvar_vaddr=\"LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER monitor_process_monitor_thread -->\n      <!-- END CONTENT MARKER monitor_process_monitor_thread -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER monitor_process_monitor_thread_MON -->\n    <!-- END CONTENT MARKER monitor_process_monitor_thread_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"ArduPilot_ArduPilot_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"ArduPilot_ArduPilot_MON\" id=\"60\" \/>\n    <end pd=\"ArduPilot_ArduPilot\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"Firewall_Firewall_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"Firewall_Firewall_MON\" id=\"58\" \/>\n    <end pd=\"Firewall_Firewall\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" id=\"56\" \/>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver\" id=\"56\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"55\" \/>\n    <end pd=\"monitor_process_monitor_thread_MON\" id=\"55\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"monitor_process_monitor_thread_MON\" id=\"54\" \/>\n    <end pd=\"monitor_process_monitor_thread\" id=\"54\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
-          "markers" : [
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER ArduPilot_ArduPilot_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER ArduPilot_ArduPilot",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER Firewall_Firewall_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER Firewall_Firewall",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER monitor_process_monitor_thread_MON",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER monitor_process_monitor_thread",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "CONTENT MARKER pacer",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            },
-            {
-              "type" : "TestBlockMarker",
-              "id" : "MSD CONTENT MARKER",
-              "beginPrefix" : "<!-- BEGIN",
-              "optBeginSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              },
-              "endPrefix" : "<!-- END",
-              "optEndSuffix" : {
-                "type" : "Some",
-                "value" : "-->"
-              }
-            }
-          ],
-          "invertMarkers" : true,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.monitor.schedule.xml",
-        {
-          "type" : "ITestResource",
-          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"100\" \/> <!-- LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"100\" \/> <!-- Firewall_Firewall_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"100\" \/> <!-- ArduPilot_ArduPilot_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_0\" length=\"370\" \/> <!-- padding -->\n<\/domain_schedule>",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : false,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/microkit.monitor.dot",
-        {
-          "type" : "ITestResource",
-          "content" : "digraph microkit {\n  compound=true;\n\n  \/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\n  \/\/ protection domains\n  graph [style=rounded]\n  subgraph cluster_ArduPilot_ArduPilot_MON {\n    label = \"ArduPilot_ArduPilot_MON\";\n    ArduPilot_ArduPilot_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_ArduPilot_ArduPilot {\n      label = \"ArduPilot_ArduPilot\";\n      ArduPilot_ArduPilot_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 [label=EthernetFramesTx_queue_1];\n      pd_ArduPilot_ArduPilot_EthernetFramesRx_queue_1 [label=EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_Firewall_Firewall_MON {\n    label = \"Firewall_Firewall_MON\";\n    Firewall_Firewall_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_Firewall_Firewall {\n      label = \"Firewall_Firewall\";\n      Firewall_Firewall_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_Firewall_Firewall_EthernetFramesTxIn_queue_1 [label=EthernetFramesTxIn_queue_1];\n      pd_Firewall_Firewall_EthernetFramesRxOut_queue_1 [label=EthernetFramesRxOut_queue_1];\n      pd_Firewall_Firewall_EthernetFramesTxOut_queue_1 [label=EthernetFramesTxOut_queue_1];\n      pd_Firewall_Firewall_EthernetFramesRxIn_queue_1 [label=EthernetFramesRxIn_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_LowLevelEthernetDriver_LowLevelEthernetDriver_MON {\n    label = \"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\";\n    LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_LowLevelEthernetDriver_LowLevelEthernetDriver {\n      label = \"LowLevelEthernetDriver_LowLevelEthernetDriver\";\n      LowLevelEthernetDriver_LowLevelEthernetDriver_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesTx_queue_1 [label=EthernetFramesTx_queue_1];\n      pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 [label=EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_monitor_process_monitor_thread_MON {\n    label = \"monitor_process_monitor_thread_MON\";\n    monitor_process_monitor_thread_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_monitor_process_monitor_thread {\n      label = \"monitor_process_monitor_thread\";\n      monitor_process_monitor_thread_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_monitor_process_monitor_thread_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 [label=ArduPilot_ArduPilot_EthernetFramesTx_queue_1];\n      pd_monitor_process_monitor_thread_Firewall_Firewall_EthernetFramesRxOut_queue_1 [label=Firewall_Firewall_EthernetFramesRxOut_queue_1];\n      pd_monitor_process_monitor_thread_Firewall_Firewall_EthernetFramesTxOut_queue_1 [label=Firewall_Firewall_EthernetFramesTxOut_queue_1];\n      pd_monitor_process_monitor_thread_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 [label=LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_pacer {\n    label = \"pacer\";\n    pacer_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n  }\n\n  \/\/ memory regions\n  seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region;\n\n  seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region;\n\n  seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region;\n\n  seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region;\n\n  \/\/ channels\n  pacer_INVIS -> ArduPilot_ArduPilot_MON_INVIS [lhead=cluster_ArduPilot_ArduPilot_MON, minlen=2, dir=both];\n  ArduPilot_ArduPilot_MON_INVIS -> ArduPilot_ArduPilot_INVIS [lhead=cluster_ArduPilot_ArduPilot, minlen=2, dir=both];\n  pacer_INVIS -> Firewall_Firewall_MON_INVIS [lhead=cluster_Firewall_Firewall_MON, minlen=2, dir=both];\n  Firewall_Firewall_MON_INVIS -> Firewall_Firewall_INVIS [lhead=cluster_Firewall_Firewall, minlen=2, dir=both];\n  pacer_INVIS -> LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS [lhead=cluster_LowLevelEthernetDriver_LowLevelEthernetDriver_MON, minlen=2, dir=both];\n  LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS -> LowLevelEthernetDriver_LowLevelEthernetDriver_INVIS [lhead=cluster_LowLevelEthernetDriver_LowLevelEthernetDriver, minlen=2, dir=both];\n  pacer_INVIS -> monitor_process_monitor_thread_MON_INVIS [lhead=cluster_monitor_process_monitor_thread_MON, minlen=2, dir=both];\n  monitor_process_monitor_thread_MON_INVIS -> monitor_process_monitor_thread_INVIS [lhead=cluster_monitor_process_monitor_thread, minlen=2, dir=both];\n\n  \/\/ shared memory mappings\n  pd_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=both, style=dashed];\n  pd_ArduPilot_ArduPilot_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesTxIn_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=back, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesRxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=both, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesTxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=both, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesRxIn_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=back, style=dashed];\n  pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=both, style=dashed];\n  pd_monitor_process_monitor_thread_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_Firewall_Firewall_EthernetFramesRxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_Firewall_Firewall_EthernetFramesTxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=back, style=dashed];\n}",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
         "microkit\/Makefile",
         {
           "type" : "ITestResource",
@@ -1710,6 +1374,342 @@
         {
           "type" : "ITestResource",
           "content" : "\/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\nuse crate::bridge::extern_c_api as extern_api;\nuse data::*;\n\nuse proptest::prelude::*;\n\n\/\/\/ container for component's incoming port values\npub struct PreStateContainer {\n  pub api_ArduPilot_ArduPilot_EthernetFramesTx: Option<SW::RawEthernetMessage>,\n  pub api_Firewall_Firewall_EthernetFramesRxOut: Option<SW::RawEthernetMessage>,\n  pub api_Firewall_Firewall_EthernetFramesTxOut: Option<SW::RawEthernetMessage>,\n  pub api_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx: Option<SW::RawEthernetMessage>\n}\n\n\/\/\/ setter for component's incoming port values\npub fn put_concrete_inputs_container(container: PreStateContainer)\n{\n  put_ArduPilot_ArduPilot_EthernetFramesTx(container.api_ArduPilot_ArduPilot_EthernetFramesTx);\n  put_Firewall_Firewall_EthernetFramesRxOut(container.api_Firewall_Firewall_EthernetFramesRxOut);\n  put_Firewall_Firewall_EthernetFramesTxOut(container.api_Firewall_Firewall_EthernetFramesTxOut);\n  put_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx(container.api_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx);\n}\n\n\/\/\/ setter for component's incoming port values\npub fn put_concrete_inputs(\n  ArduPilot_ArduPilot_EthernetFramesTx: Option<SW::RawEthernetMessage>,\n  Firewall_Firewall_EthernetFramesRxOut: Option<SW::RawEthernetMessage>,\n  Firewall_Firewall_EthernetFramesTxOut: Option<SW::RawEthernetMessage>,\n  LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx: Option<SW::RawEthernetMessage>)\n{\n  put_ArduPilot_ArduPilot_EthernetFramesTx(ArduPilot_ArduPilot_EthernetFramesTx);\n  put_Firewall_Firewall_EthernetFramesRxOut(Firewall_Firewall_EthernetFramesRxOut);\n  put_Firewall_Firewall_EthernetFramesTxOut(Firewall_Firewall_EthernetFramesTxOut);\n  put_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx(LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx);\n}\n\n\/\/\/ setter for IN EventDataPort\npub fn put_ArduPilot_ArduPilot_EthernetFramesTx(value: Option<SW::RawEthernetMessage>)\n{\n  *extern_api::IN_ArduPilot_ArduPilot_EthernetFramesTx.lock().unwrap_or_else(|e| e.into_inner()) = value\n}\n\n\/\/\/ setter for IN EventDataPort\npub fn put_Firewall_Firewall_EthernetFramesRxOut(value: Option<SW::RawEthernetMessage>)\n{\n  *extern_api::IN_Firewall_Firewall_EthernetFramesRxOut.lock().unwrap_or_else(|e| e.into_inner()) = value\n}\n\n\/\/\/ setter for IN EventDataPort\npub fn put_Firewall_Firewall_EthernetFramesTxOut(value: Option<SW::RawEthernetMessage>)\n{\n  *extern_api::IN_Firewall_Firewall_EthernetFramesTxOut.lock().unwrap_or_else(|e| e.into_inner()) = value\n}\n\n\/\/\/ setter for IN EventDataPort\npub fn put_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx(value: Option<SW::RawEthernetMessage>)\n{\n  *extern_api::IN_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx.lock().unwrap_or_else(|e| e.into_inner()) = value\n}\n",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.system",
+        {
+          "type" : "ITestResource",
+          "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.schedule.xml\" \/>\n\n  <protection_domain name=\"ArduPilot_ArduPilot_MON\" domain=\"domain_4\">\n    <program_image path=\"ArduPilot_ArduPilot_MON.elf\" \/>\n    <protection_domain name=\"ArduPilot_ArduPilot\" domain=\"domain_4\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"ArduPilot_ArduPilot.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER ArduPilot_ArduPilot -->\n      <!-- END CONTENT MARKER ArduPilot_ArduPilot -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER ArduPilot_ArduPilot_MON -->\n    <!-- END CONTENT MARKER ArduPilot_ArduPilot_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"Firewall_Firewall_MON\" domain=\"domain_3\">\n    <program_image path=\"Firewall_Firewall_MON.elf\" \/>\n    <protection_domain name=\"Firewall_Firewall\" domain=\"domain_3\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"Firewall_Firewall.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesTxIn_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesRxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_002_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesTxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_003_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesRxIn_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER Firewall_Firewall -->\n      <!-- END CONTENT MARKER Firewall_Firewall -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER Firewall_Firewall_MON -->\n    <!-- END CONTENT MARKER Firewall_Firewall_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" domain=\"domain_2\">\n    <program_image path=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON.elf\" \/>\n    <protection_domain name=\"LowLevelEthernetDriver_LowLevelEthernetDriver\" domain=\"domain_2\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"LowLevelEthernetDriver_LowLevelEthernetDriver.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver -->\n      <!-- END CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n    <!-- END CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"ArduPilot_ArduPilot_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"ArduPilot_ArduPilot_MON\" id=\"60\" \/>\n    <end pd=\"ArduPilot_ArduPilot\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"Firewall_Firewall_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"Firewall_Firewall_MON\" id=\"58\" \/>\n    <end pd=\"Firewall_Firewall\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" id=\"56\" \/>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver\" id=\"56\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
+          "markers" : [
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER ArduPilot_ArduPilot_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER ArduPilot_ArduPilot",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER Firewall_Firewall_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER Firewall_Firewall",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER pacer",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "MSD CONTENT MARKER",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            }
+          ],
+          "invertMarkers" : true,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.schedule.xml",
+        {
+          "type" : "ITestResource",
+          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"100\" \/> <!-- LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"100\" \/> <!-- Firewall_Firewall_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"100\" \/> <!-- ArduPilot_ArduPilot_MON -->\n  <domain name=\"domain_0\" length=\"610\" \/> <!-- padding -->\n<\/domain_schedule>",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.dot",
+        {
+          "type" : "ITestResource",
+          "content" : "digraph microkit {\n  compound=true;\n\n  \/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\n  \/\/ protection domains\n  graph [style=rounded]\n  subgraph cluster_ArduPilot_ArduPilot_MON {\n    label = \"ArduPilot_ArduPilot_MON\";\n    ArduPilot_ArduPilot_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_ArduPilot_ArduPilot {\n      label = \"ArduPilot_ArduPilot\";\n      ArduPilot_ArduPilot_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 [label=EthernetFramesTx_queue_1];\n      pd_ArduPilot_ArduPilot_EthernetFramesRx_queue_1 [label=EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_Firewall_Firewall_MON {\n    label = \"Firewall_Firewall_MON\";\n    Firewall_Firewall_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_Firewall_Firewall {\n      label = \"Firewall_Firewall\";\n      Firewall_Firewall_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_Firewall_Firewall_EthernetFramesTxIn_queue_1 [label=EthernetFramesTxIn_queue_1];\n      pd_Firewall_Firewall_EthernetFramesRxOut_queue_1 [label=EthernetFramesRxOut_queue_1];\n      pd_Firewall_Firewall_EthernetFramesTxOut_queue_1 [label=EthernetFramesTxOut_queue_1];\n      pd_Firewall_Firewall_EthernetFramesRxIn_queue_1 [label=EthernetFramesRxIn_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_LowLevelEthernetDriver_LowLevelEthernetDriver_MON {\n    label = \"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\";\n    LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_LowLevelEthernetDriver_LowLevelEthernetDriver {\n      label = \"LowLevelEthernetDriver_LowLevelEthernetDriver\";\n      LowLevelEthernetDriver_LowLevelEthernetDriver_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesTx_queue_1 [label=EthernetFramesTx_queue_1];\n      pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 [label=EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_pacer {\n    label = \"pacer\";\n    pacer_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n  }\n\n  \/\/ memory regions\n  seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region;\n\n  seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region;\n\n  seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region;\n\n  seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region;\n\n  \/\/ channels\n  pacer_INVIS -> ArduPilot_ArduPilot_MON_INVIS [lhead=cluster_ArduPilot_ArduPilot_MON, minlen=2, dir=both];\n  ArduPilot_ArduPilot_MON_INVIS -> ArduPilot_ArduPilot_INVIS [lhead=cluster_ArduPilot_ArduPilot, minlen=2, dir=both];\n  pacer_INVIS -> Firewall_Firewall_MON_INVIS [lhead=cluster_Firewall_Firewall_MON, minlen=2, dir=both];\n  Firewall_Firewall_MON_INVIS -> Firewall_Firewall_INVIS [lhead=cluster_Firewall_Firewall, minlen=2, dir=both];\n  pacer_INVIS -> LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS [lhead=cluster_LowLevelEthernetDriver_LowLevelEthernetDriver_MON, minlen=2, dir=both];\n  LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS -> LowLevelEthernetDriver_LowLevelEthernetDriver_INVIS [lhead=cluster_LowLevelEthernetDriver_LowLevelEthernetDriver, minlen=2, dir=both];\n\n  \/\/ shared memory mappings\n  pd_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=both, style=dashed];\n  pd_ArduPilot_ArduPilot_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesTxIn_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=back, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesRxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=both, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesTxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=both, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesRxIn_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=back, style=dashed];\n  pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=both, style=dashed];\n}",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.monitor.system",
+        {
+          "type" : "ITestResource",
+          "content" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<system xmlns:xi=\"http:\/\/www.w3.org\/2001\/XInclude\">\n  <!-- Content between markers will be preserved if codegen is rerun -->\n\n  <xi:include href=\"microkit.monitor.schedule.xml\" \/>\n\n  <protection_domain name=\"ArduPilot_ArduPilot_MON\" domain=\"domain_4\">\n    <program_image path=\"ArduPilot_ArduPilot_MON.elf\" \/>\n    <protection_domain name=\"ArduPilot_ArduPilot\" domain=\"domain_4\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"ArduPilot_ArduPilot.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER ArduPilot_ArduPilot -->\n      <!-- END CONTENT MARKER ArduPilot_ArduPilot -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER ArduPilot_ArduPilot_MON -->\n    <!-- END CONTENT MARKER ArduPilot_ArduPilot_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"Firewall_Firewall_MON\" domain=\"domain_3\">\n    <program_image path=\"Firewall_Firewall_MON.elf\" \/>\n    <protection_domain name=\"Firewall_Firewall\" domain=\"domain_3\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"Firewall_Firewall.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesTxIn_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesRxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_002_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesTxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_003_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesRxIn_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER Firewall_Firewall -->\n      <!-- END CONTENT MARKER Firewall_Firewall -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER Firewall_Firewall_MON -->\n    <!-- END CONTENT MARKER Firewall_Firewall_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" domain=\"domain_2\">\n    <program_image path=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON.elf\" \/>\n    <protection_domain name=\"LowLevelEthernetDriver_LowLevelEthernetDriver\" domain=\"domain_2\" id=\"1\" stack_size=\"0x100_000\">\n      <program_image path=\"LowLevelEthernetDriver_LowLevelEthernetDriver.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"rw\"\n           setvar_vaddr=\"EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver -->\n      <!-- END CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n    <!-- END CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"monitor_process_monitor_thread_MON\" domain=\"domain_5\">\n    <program_image path=\"monitor_process_monitor_thread_MON.elf\" \/>\n    <protection_domain name=\"monitor_process_monitor_thread\" domain=\"domain_5\" id=\"1\">\n      <program_image path=\"monitor_process_monitor_thread.elf\" \/>\n      <map mr=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n           vaddr=\"0x10_000_000\"\n           perms=\"r\"\n           setvar_vaddr=\"ArduPilot_ArduPilot_EthernetFramesTx_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n           vaddr=\"0x10_001_000\"\n           perms=\"r\"\n           setvar_vaddr=\"Firewall_Firewall_EthernetFramesRxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n           vaddr=\"0x10_002_000\"\n           perms=\"r\"\n           setvar_vaddr=\"Firewall_Firewall_EthernetFramesTxOut_queue_1\"\n      \/>\n      <map mr=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n           vaddr=\"0x10_003_000\"\n           perms=\"r\"\n           setvar_vaddr=\"LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1\"\n      \/>\n\n      <!-- BEGIN CONTENT MARKER monitor_process_monitor_thread -->\n      <!-- END CONTENT MARKER monitor_process_monitor_thread -->\n    <\/protection_domain>\n\n    <!-- BEGIN CONTENT MARKER monitor_process_monitor_thread_MON -->\n    <!-- END CONTENT MARKER monitor_process_monitor_thread_MON -->\n  <\/protection_domain>\n\n  <protection_domain name=\"pacer\" domain=\"domain_1\">\n    <program_image path=\"pacer.elf\" \/>\n\n    <!-- BEGIN CONTENT MARKER pacer -->\n    <!-- END CONTENT MARKER pacer -->\n  <\/protection_domain>\n\n  <memory_region name=\"seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <memory_region name=\"seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region\"\n                 size=\"0x1_000\" \/>\n\n  <channel>\n    <end pd=\"pacer\" id=\"61\" \/>\n    <end pd=\"ArduPilot_ArduPilot_MON\" id=\"61\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"ArduPilot_ArduPilot_MON\" id=\"60\" \/>\n    <end pd=\"ArduPilot_ArduPilot\" id=\"60\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"59\" \/>\n    <end pd=\"Firewall_Firewall_MON\" id=\"59\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"Firewall_Firewall_MON\" id=\"58\" \/>\n    <end pd=\"Firewall_Firewall\" id=\"58\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"57\" \/>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" id=\"57\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\" id=\"56\" \/>\n    <end pd=\"LowLevelEthernetDriver_LowLevelEthernetDriver\" id=\"56\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"pacer\" id=\"55\" \/>\n    <end pd=\"monitor_process_monitor_thread_MON\" id=\"55\" \/>\n  <\/channel>\n\n  <channel>\n    <end pd=\"monitor_process_monitor_thread_MON\" id=\"54\" \/>\n    <end pd=\"monitor_process_monitor_thread\" id=\"54\" \/>\n  <\/channel>\n\n  <!-- BEGIN MSD CONTENT MARKER -->\n  <!-- END MSD CONTENT MARKER -->\n<\/system>",
+          "markers" : [
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER ArduPilot_ArduPilot_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER ArduPilot_ArduPilot",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER Firewall_Firewall_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER Firewall_Firewall",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER LowLevelEthernetDriver_LowLevelEthernetDriver",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER monitor_process_monitor_thread_MON",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER monitor_process_monitor_thread",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "CONTENT MARKER pacer",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            },
+            {
+              "type" : "TestBlockMarker",
+              "id" : "MSD CONTENT MARKER",
+              "beginPrefix" : "<!-- BEGIN",
+              "optBeginSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              },
+              "endPrefix" : "<!-- END",
+              "optEndSuffix" : {
+                "type" : "Some",
+                "value" : "-->"
+              }
+            }
+          ],
+          "invertMarkers" : true,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.monitor.schedule.xml",
+        {
+          "type" : "ITestResource",
+          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"100\" \/> <!-- LowLevelEthernetDriver_LowLevelEthernetDriver_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"100\" \/> <!-- Firewall_Firewall_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"100\" \/> <!-- ArduPilot_ArduPilot_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_5\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_0\" length=\"370\" \/> <!-- padding -->\n<\/domain_schedule>",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : false,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/microkit.monitor.dot",
+        {
+          "type" : "ITestResource",
+          "content" : "digraph microkit {\n  compound=true;\n\n  \/\/ Do not edit this file as it will be overwritten if HAMR codegen is rerun\n\n  \/\/ protection domains\n  graph [style=rounded]\n  subgraph cluster_ArduPilot_ArduPilot_MON {\n    label = \"ArduPilot_ArduPilot_MON\";\n    ArduPilot_ArduPilot_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_ArduPilot_ArduPilot {\n      label = \"ArduPilot_ArduPilot\";\n      ArduPilot_ArduPilot_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 [label=EthernetFramesTx_queue_1];\n      pd_ArduPilot_ArduPilot_EthernetFramesRx_queue_1 [label=EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_Firewall_Firewall_MON {\n    label = \"Firewall_Firewall_MON\";\n    Firewall_Firewall_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_Firewall_Firewall {\n      label = \"Firewall_Firewall\";\n      Firewall_Firewall_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_Firewall_Firewall_EthernetFramesTxIn_queue_1 [label=EthernetFramesTxIn_queue_1];\n      pd_Firewall_Firewall_EthernetFramesRxOut_queue_1 [label=EthernetFramesRxOut_queue_1];\n      pd_Firewall_Firewall_EthernetFramesTxOut_queue_1 [label=EthernetFramesTxOut_queue_1];\n      pd_Firewall_Firewall_EthernetFramesRxIn_queue_1 [label=EthernetFramesRxIn_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_LowLevelEthernetDriver_LowLevelEthernetDriver_MON {\n    label = \"LowLevelEthernetDriver_LowLevelEthernetDriver_MON\";\n    LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_LowLevelEthernetDriver_LowLevelEthernetDriver {\n      label = \"LowLevelEthernetDriver_LowLevelEthernetDriver\";\n      LowLevelEthernetDriver_LowLevelEthernetDriver_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesTx_queue_1 [label=EthernetFramesTx_queue_1];\n      pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 [label=EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_monitor_process_monitor_thread_MON {\n    label = \"monitor_process_monitor_thread_MON\";\n    monitor_process_monitor_thread_MON_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n    graph [style=rounded]\n    subgraph cluster_monitor_process_monitor_thread {\n      label = \"monitor_process_monitor_thread\";\n      monitor_process_monitor_thread_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n      pd_monitor_process_monitor_thread_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 [label=ArduPilot_ArduPilot_EthernetFramesTx_queue_1];\n      pd_monitor_process_monitor_thread_Firewall_Firewall_EthernetFramesRxOut_queue_1 [label=Firewall_Firewall_EthernetFramesRxOut_queue_1];\n      pd_monitor_process_monitor_thread_Firewall_Firewall_EthernetFramesTxOut_queue_1 [label=Firewall_Firewall_EthernetFramesTxOut_queue_1];\n      pd_monitor_process_monitor_thread_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 [label=LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1];\n    }\n  }\n\n  graph [style=rounded]\n  subgraph cluster_pacer {\n    label = \"pacer\";\n    pacer_INVIS [label=\"\", style=invis, width=.5, height=.5, fixedsize=true]\n\n  }\n\n  \/\/ memory regions\n  seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region;\n\n  seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region;\n\n  seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region;\n\n  seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region;\n\n  \/\/ channels\n  pacer_INVIS -> ArduPilot_ArduPilot_MON_INVIS [lhead=cluster_ArduPilot_ArduPilot_MON, minlen=2, dir=both];\n  ArduPilot_ArduPilot_MON_INVIS -> ArduPilot_ArduPilot_INVIS [lhead=cluster_ArduPilot_ArduPilot, minlen=2, dir=both];\n  pacer_INVIS -> Firewall_Firewall_MON_INVIS [lhead=cluster_Firewall_Firewall_MON, minlen=2, dir=both];\n  Firewall_Firewall_MON_INVIS -> Firewall_Firewall_INVIS [lhead=cluster_Firewall_Firewall, minlen=2, dir=both];\n  pacer_INVIS -> LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS [lhead=cluster_LowLevelEthernetDriver_LowLevelEthernetDriver_MON, minlen=2, dir=both];\n  LowLevelEthernetDriver_LowLevelEthernetDriver_MON_INVIS -> LowLevelEthernetDriver_LowLevelEthernetDriver_INVIS [lhead=cluster_LowLevelEthernetDriver_LowLevelEthernetDriver, minlen=2, dir=both];\n  pacer_INVIS -> monitor_process_monitor_thread_MON_INVIS [lhead=cluster_monitor_process_monitor_thread_MON, minlen=2, dir=both];\n  monitor_process_monitor_thread_MON_INVIS -> monitor_process_monitor_thread_INVIS [lhead=cluster_monitor_process_monitor_thread, minlen=2, dir=both];\n\n  \/\/ shared memory mappings\n  pd_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=both, style=dashed];\n  pd_ArduPilot_ArduPilot_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesTxIn_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=back, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesRxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=both, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesTxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=both, style=dashed];\n  pd_Firewall_Firewall_EthernetFramesRxIn_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=back, style=dashed];\n  pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=both, style=dashed];\n  pd_monitor_process_monitor_thread_ArduPilot_ArduPilot_EthernetFramesTx_queue_1 -> seL4_Impl_Instance_ArduPilot_ArduPilot_EthernetFramesTx_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_Firewall_Firewall_EthernetFramesRxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesRxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_Firewall_Firewall_EthernetFramesTxOut_queue_1 -> seL4_Impl_Instance_Firewall_Firewall_EthernetFramesTxOut_1_Memory_Region [dir=back, style=dashed];\n  pd_monitor_process_monitor_thread_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_queue_1 -> seL4_Impl_Instance_LowLevelEthernetDriver_LowLevelEthernetDriver_EthernetFramesRx_1_Memory_Region [dir=back, style=dashed];\n}",
           "markers" : [
           ],
           "invertMarkers" : false,
