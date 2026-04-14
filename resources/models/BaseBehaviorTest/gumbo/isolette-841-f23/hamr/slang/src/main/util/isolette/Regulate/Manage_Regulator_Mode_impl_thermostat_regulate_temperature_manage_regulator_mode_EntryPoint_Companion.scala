@@ -39,6 +39,7 @@ object Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulat
     // block the component while its post-state values are retrieved
     val postStateContainer_wL =
       Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(
+        lastRegulatorMode = isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode.lastRegulatorMode,
         api_regulator_mode = get_api_regulator_mode)
 
     // the rest can now be performed via a different thread
@@ -49,6 +50,7 @@ object Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulat
     // block the component while its pre-state values are retrieved
     preStateContainer_wL = Some(
       Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS(
+        In_lastRegulatorMode = isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode.lastRegulatorMode, 
         api_current_tempWstatus = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode.operational_api.current_tempWstatus_Id).get.asInstanceOf[Isolette_Data_Model.TempWstatus_impl_Payload].value, 
         api_interface_failure = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode.operational_api.interface_failure_Id).get.asInstanceOf[Isolette_Data_Model.Failure_Flag_impl_Payload].value, 
         api_internal_failure = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode.operational_api.internal_failure_Id).get.asInstanceOf[Isolette_Data_Model.Failure_Flag_impl_Payload].value))
@@ -61,6 +63,7 @@ object Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulat
     // block the component while its post-state values are retrieved
     val postStateContainer_wL =
       Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(
+        lastRegulatorMode = isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode.lastRegulatorMode,
         api_regulator_mode = get_api_regulator_mode)
 
     // the rest can now be performed via a different thread

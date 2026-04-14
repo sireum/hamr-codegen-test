@@ -74,6 +74,16 @@ object ModelInfo {
       id = Arch.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source.id.toZ,
       dispatchProtocol = iDispatchProtocol.Periodic,
       state = ISZ(
+        StateVariable(
+          name = "In_lastCmd",
+          id = 0,
+          direction = StateDirection.In,
+          slangType = "Isolette_Data_Model.On_Off.Type"),
+        StateVariable(
+          name = "lastCmd",
+          id = 0,
+          direction = StateDirection.Out,
+          slangType = "Isolette_Data_Model.On_Off.Type"),
         Port(
           name = "current_tempWstatus",
           id = Arch.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source.current_tempWstatus.id.toZ,
@@ -111,6 +121,16 @@ object ModelInfo {
       id = Arch.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode.id.toZ,
       dispatchProtocol = iDispatchProtocol.Periodic,
       state = ISZ(
+        StateVariable(
+          name = "In_lastRegulatorMode",
+          id = 0,
+          direction = StateDirection.In,
+          slangType = "Isolette_Data_Model.Regulator_Mode.Type"),
+        StateVariable(
+          name = "lastRegulatorMode",
+          id = 0,
+          direction = StateDirection.Out,
+          slangType = "Isolette_Data_Model.Regulator_Mode.Type"),
         Port(
           name = "current_tempWstatus",
           id = Arch.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode.current_tempWstatus.id.toZ,
@@ -155,6 +175,16 @@ object ModelInfo {
       id = Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface.id.toZ,
       dispatchProtocol = iDispatchProtocol.Periodic,
       state = ISZ(
+        StateVariable(
+          name = "In_lastCmd",
+          id = 0,
+          direction = StateDirection.In,
+          slangType = "Isolette_Data_Model.On_Off.Type"),
+        StateVariable(
+          name = "lastCmd",
+          id = 0,
+          direction = StateDirection.Out,
+          slangType = "Isolette_Data_Model.On_Off.Type"),
         Port(
           name = "upper_alarm_tempWstatus",
           id = Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface.upper_alarm_tempWstatus.id.toZ,
@@ -210,6 +240,16 @@ object ModelInfo {
       id = Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm.id.toZ,
       dispatchProtocol = iDispatchProtocol.Periodic,
       state = ISZ(
+        StateVariable(
+          name = "In_lastCmd",
+          id = 0,
+          direction = StateDirection.In,
+          slangType = "Isolette_Data_Model.On_Off.Type"),
+        StateVariable(
+          name = "lastCmd",
+          id = 0,
+          direction = StateDirection.Out,
+          slangType = "Isolette_Data_Model.On_Off.Type"),
         Port(
           name = "current_tempWstatus",
           id = Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm.current_tempWstatus.id.toZ,
@@ -247,6 +287,16 @@ object ModelInfo {
       id = Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode.id.toZ,
       dispatchProtocol = iDispatchProtocol.Periodic,
       state = ISZ(
+        StateVariable(
+          name = "In_lastMonitorMode",
+          id = 0,
+          direction = StateDirection.In,
+          slangType = "Isolette_Data_Model.Monitor_Mode.Type"),
+        StateVariable(
+          name = "lastMonitorMode",
+          id = 0,
+          direction = StateDirection.Out,
+          slangType = "Isolette_Data_Model.Monitor_Mode.Type"),
         Port(
           name = "current_tempWstatus",
           id = Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode.current_tempWstatus.id.toZ,

@@ -415,6 +415,7 @@ object MsgPack {
 
     def writeRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(o: Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS): Unit = {
       writer.writeZ(Constants.RegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS)
+      writeIsolette_Data_ModelOn_OffType(o.In_lastCmd)
       writeIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)
       writeIsolette_Data_ModelTemp_impl(o.api_lower_desired_temp)
       writeIsolette_Data_ModelRegulator_ModeType(o.api_regulator_mode)
@@ -435,6 +436,7 @@ object MsgPack {
 
     def writeRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS(o: Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS): Unit = {
       writer.writeZ(Constants.RegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS)
+      writeIsolette_Data_ModelOn_OffType(o.lastCmd)
       writeIsolette_Data_ModelOn_OffType(o.api_heat_control)
     }
 
@@ -454,6 +456,7 @@ object MsgPack {
 
     def writeRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS(o: Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS): Unit = {
       writer.writeZ(Constants.RegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS)
+      writeIsolette_Data_ModelRegulator_ModeType(o.In_lastRegulatorMode)
       writeIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)
       writeIsolette_Data_ModelFailure_Flag_impl(o.api_interface_failure)
       writeIsolette_Data_ModelFailure_Flag_impl(o.api_internal_failure)
@@ -473,6 +476,7 @@ object MsgPack {
 
     def writeRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(o: Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS): Unit = {
       writer.writeZ(Constants.RegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS)
+      writeIsolette_Data_ModelRegulator_ModeType(o.lastRegulatorMode)
       writeIsolette_Data_ModelRegulator_ModeType(o.api_regulator_mode)
     }
 
@@ -525,6 +529,7 @@ object MsgPack {
 
     def writeMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS(o: Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS): Unit = {
       writer.writeZ(Constants.MonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS)
+      writeIsolette_Data_ModelOn_OffType(o.In_lastCmd)
       writeIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)
       writeIsolette_Data_ModelTempWstatus_impl(o.api_lower_alarm_tempWstatus)
       writeIsolette_Data_ModelMonitor_ModeType(o.api_monitor_mode)
@@ -548,6 +553,7 @@ object MsgPack {
 
     def writeMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(o: Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS): Unit = {
       writer.writeZ(Constants.MonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS)
+      writeIsolette_Data_ModelOn_OffType(o.lastCmd)
       writeIsolette_Data_ModelFailure_Flag_impl(o.api_interface_failure)
       writeIsolette_Data_ModelTemp_impl(o.api_lower_alarm_temp)
       writeIsolette_Data_ModelStatusType(o.api_monitor_status)
@@ -571,6 +577,7 @@ object MsgPack {
 
     def writeMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(o: Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS): Unit = {
       writer.writeZ(Constants.MonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS)
+      writeIsolette_Data_ModelOn_OffType(o.In_lastCmd)
       writeIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)
       writeIsolette_Data_ModelTemp_impl(o.api_lower_alarm_temp)
       writeIsolette_Data_ModelMonitor_ModeType(o.api_monitor_mode)
@@ -591,6 +598,7 @@ object MsgPack {
 
     def writeMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(o: Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS): Unit = {
       writer.writeZ(Constants.MonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS)
+      writeIsolette_Data_ModelOn_OffType(o.lastCmd)
       writeIsolette_Data_ModelOn_OffType(o.api_alarm_control)
     }
 
@@ -610,6 +618,7 @@ object MsgPack {
 
     def writeMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS(o: Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS): Unit = {
       writer.writeZ(Constants.MonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS)
+      writeIsolette_Data_ModelMonitor_ModeType(o.In_lastMonitorMode)
       writeIsolette_Data_ModelTempWstatus_impl(o.api_current_tempWstatus)
       writeIsolette_Data_ModelFailure_Flag_impl(o.api_interface_failure)
       writeIsolette_Data_ModelFailure_Flag_impl(o.api_internal_failure)
@@ -629,6 +638,7 @@ object MsgPack {
 
     def writeMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(o: Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS): Unit = {
       writer.writeZ(Constants.MonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS)
+      writeIsolette_Data_ModelMonitor_ModeType(o.lastMonitorMode)
       writeIsolette_Data_ModelMonitor_ModeType(o.api_monitor_mode)
     }
 
@@ -1488,11 +1498,12 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.RegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS)
       }
+      val In_lastCmd = readIsolette_Data_ModelOn_OffType()
       val api_current_tempWstatus = readIsolette_Data_ModelTempWstatus_impl()
       val api_lower_desired_temp = readIsolette_Data_ModelTemp_impl()
       val api_regulator_mode = readIsolette_Data_ModelRegulator_ModeType()
       val api_upper_desired_temp = readIsolette_Data_ModelTemp_impl()
-      return Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(api_current_tempWstatus, api_lower_desired_temp, api_regulator_mode, api_upper_desired_temp)
+      return Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(In_lastCmd, api_current_tempWstatus, api_lower_desired_temp, api_regulator_mode, api_upper_desired_temp)
     }
 
     def readRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container(): Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container = {
@@ -1530,8 +1541,9 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.RegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS)
       }
+      val lastCmd = readIsolette_Data_ModelOn_OffType()
       val api_heat_control = readIsolette_Data_ModelOn_OffType()
-      return Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS(api_heat_control)
+      return Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS(lastCmd, api_heat_control)
     }
 
     def readRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container(): Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container = {
@@ -1571,10 +1583,11 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.RegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS)
       }
+      val In_lastRegulatorMode = readIsolette_Data_ModelRegulator_ModeType()
       val api_current_tempWstatus = readIsolette_Data_ModelTempWstatus_impl()
       val api_interface_failure = readIsolette_Data_ModelFailure_Flag_impl()
       val api_internal_failure = readIsolette_Data_ModelFailure_Flag_impl()
-      return Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS(api_current_tempWstatus, api_interface_failure, api_internal_failure)
+      return Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS(In_lastRegulatorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure)
     }
 
     def readRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container(): Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container = {
@@ -1612,8 +1625,9 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.RegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS)
       }
+      val lastRegulatorMode = readIsolette_Data_ModelRegulator_ModeType()
       val api_regulator_mode = readIsolette_Data_ModelRegulator_ModeType()
-      return Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(api_regulator_mode)
+      return Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(lastRegulatorMode, api_regulator_mode)
     }
 
     def readRegulateDetect_Regulator_Failure_impl_thermostat_regulate_temperature_detect_regulator_failure_PreState_Container(): Regulate.Detect_Regulator_Failure_impl_thermostat_regulate_temperature_detect_regulator_failure_PreState_Container = {
@@ -1730,11 +1744,12 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.MonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS)
       }
+      val In_lastCmd = readIsolette_Data_ModelOn_OffType()
       val api_current_tempWstatus = readIsolette_Data_ModelTempWstatus_impl()
       val api_lower_alarm_tempWstatus = readIsolette_Data_ModelTempWstatus_impl()
       val api_monitor_mode = readIsolette_Data_ModelMonitor_ModeType()
       val api_upper_alarm_tempWstatus = readIsolette_Data_ModelTempWstatus_impl()
-      return Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS(api_current_tempWstatus, api_lower_alarm_tempWstatus, api_monitor_mode, api_upper_alarm_tempWstatus)
+      return Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS(In_lastCmd, api_current_tempWstatus, api_lower_alarm_tempWstatus, api_monitor_mode, api_upper_alarm_tempWstatus)
     }
 
     def readMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container(): Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container = {
@@ -1775,11 +1790,12 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.MonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS)
       }
+      val lastCmd = readIsolette_Data_ModelOn_OffType()
       val api_interface_failure = readIsolette_Data_ModelFailure_Flag_impl()
       val api_lower_alarm_temp = readIsolette_Data_ModelTemp_impl()
       val api_monitor_status = readIsolette_Data_ModelStatusType()
       val api_upper_alarm_temp = readIsolette_Data_ModelTemp_impl()
-      return Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(api_interface_failure, api_lower_alarm_temp, api_monitor_status, api_upper_alarm_temp)
+      return Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(lastCmd, api_interface_failure, api_lower_alarm_temp, api_monitor_status, api_upper_alarm_temp)
     }
 
     def readMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container(): Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container = {
@@ -1820,11 +1836,12 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.MonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS)
       }
+      val In_lastCmd = readIsolette_Data_ModelOn_OffType()
       val api_current_tempWstatus = readIsolette_Data_ModelTempWstatus_impl()
       val api_lower_alarm_temp = readIsolette_Data_ModelTemp_impl()
       val api_monitor_mode = readIsolette_Data_ModelMonitor_ModeType()
       val api_upper_alarm_temp = readIsolette_Data_ModelTemp_impl()
-      return Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp)
+      return Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(In_lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp)
     }
 
     def readMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container(): Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container = {
@@ -1862,8 +1879,9 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.MonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS)
       }
+      val lastCmd = readIsolette_Data_ModelOn_OffType()
       val api_alarm_control = readIsolette_Data_ModelOn_OffType()
-      return Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(api_alarm_control)
+      return Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(lastCmd, api_alarm_control)
     }
 
     def readMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container(): Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container = {
@@ -1903,10 +1921,11 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.MonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS)
       }
+      val In_lastMonitorMode = readIsolette_Data_ModelMonitor_ModeType()
       val api_current_tempWstatus = readIsolette_Data_ModelTempWstatus_impl()
       val api_interface_failure = readIsolette_Data_ModelFailure_Flag_impl()
       val api_internal_failure = readIsolette_Data_ModelFailure_Flag_impl()
-      return Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS(api_current_tempWstatus, api_interface_failure, api_internal_failure)
+      return Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS(In_lastMonitorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure)
     }
 
     def readMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container(): Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container = {
@@ -1944,8 +1963,9 @@ object MsgPack {
       if (!typeParsed) {
         reader.expectZ(Constants.MonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS)
       }
+      val lastMonitorMode = readIsolette_Data_ModelMonitor_ModeType()
       val api_monitor_mode = readIsolette_Data_ModelMonitor_ModeType()
-      return Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(api_monitor_mode)
+      return Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(lastMonitorMode, api_monitor_mode)
     }
 
     def readMonitorDetect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_PreState_Container(): Monitor.Detect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_PreState_Container = {

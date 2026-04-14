@@ -39,6 +39,7 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_EntryPoint_
     // block the component while its post-state values are retrieved
     val postStateContainer_wL =
       Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(
+        lastCmd = isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm.lastCmd,
         api_alarm_control = get_api_alarm_control)
 
     // the rest can now be performed via a different thread
@@ -49,6 +50,7 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_EntryPoint_
     // block the component while its pre-state values are retrieved
     preStateContainer_wL = Some(
       Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(
+        In_lastCmd = isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm.lastCmd, 
         api_current_tempWstatus = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm.operational_api.current_tempWstatus_Id).get.asInstanceOf[Isolette_Data_Model.TempWstatus_impl_Payload].value, 
         api_lower_alarm_temp = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm.operational_api.lower_alarm_temp_Id).get.asInstanceOf[Isolette_Data_Model.Temp_impl_Payload].value, 
         api_monitor_mode = Art.observeInPortVariable(Arch.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm.operational_api.monitor_mode_Id).get.asInstanceOf[Isolette_Data_Model.Monitor_Mode_Payload].value, 
@@ -62,6 +64,7 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_EntryPoint_
     // block the component while its post-state values are retrieved
     val postStateContainer_wL =
       Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(
+        lastCmd = isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm.lastCmd,
         api_alarm_control = get_api_alarm_control)
 
     // the rest can now be performed via a different thread

@@ -11,34 +11,42 @@ object GumboXDispatcher {
   def checkContract(observationKind: ObservationKind.Type, preContainer: Option[art.DataContent], postContainer: Option[art.DataContent]): B = {
     observationKind match {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postInit =>
-        // checking the post-state values of manage_regulator_interface's initialise entrypoint is not required
-        return T
+        val result: B = isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX.inititialize_IEP_Post_Container(postContainer.get.asInstanceOf[isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PostState_Container_PS])
+        //println(s"manage_regulator_interface.initialise: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_preCompute =>
-        // checking the pre-state values of manage_regulator_interface's compute entrypoint is not required
-        return T
+        val result: B = isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX.compute_CEP_Pre_Container(preContainer.get.asInstanceOf[isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PreState_Container_PS])
+        //println(s"manage_regulator_interface.timeTriggered: Pre-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postCompute =>
-        // checking the post-state values of manage_regulator_interface's compute entrypoint is not required
-        return T
+        val result: B = isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX.compute_CEP_Post_Container(preContainer.get.asInstanceOf[isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PreState_Container_PS], postContainer.get.asInstanceOf[isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PostState_Container_PS])
+        //println(s"manage_regulator_interface.timeTriggered: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
 
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postInit =>
-        // checking the post-state values of manage_heat_source's initialise entrypoint is not required
-        return T
+        val result: B = isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_GumboX.inititialize_IEP_Post_Container(postContainer.get.asInstanceOf[isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS])
+        //println(s"manage_heat_source.initialise: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_preCompute =>
-        // checking the pre-state values of manage_heat_source's compute entrypoint is not required
-        return T
+        val result: B = isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_GumboX.compute_CEP_Pre_Container(preContainer.get.asInstanceOf[isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS])
+        //println(s"manage_heat_source.timeTriggered: Pre-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postCompute =>
-        // checking the post-state values of manage_heat_source's compute entrypoint is not required
-        return T
+        val result: B = isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_GumboX.compute_CEP_Post_Container(preContainer.get.asInstanceOf[isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS], postContainer.get.asInstanceOf[isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS])
+        //println(s"manage_heat_source.timeTriggered: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
 
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postInit =>
-        // checking the post-state values of manage_regulator_mode's initialise entrypoint is not required
-        return T
+        val result: B = isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_GumboX.inititialize_IEP_Post_Container(postContainer.get.asInstanceOf[isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS])
+        //println(s"manage_regulator_mode.initialise: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_preCompute =>
         // checking the pre-state values of manage_regulator_mode's compute entrypoint is not required
         return T
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postCompute =>
-        // checking the post-state values of manage_regulator_mode's compute entrypoint is not required
-        return T
+        val result: B = isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_GumboX.compute_CEP_Post_Container(preContainer.get.asInstanceOf[isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS], postContainer.get.asInstanceOf[isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS])
+        //println(s"manage_regulator_mode.timeTriggered: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
 
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_detect_regulator_failure_postInit =>
         // checking the post-state values of detect_regulator_failure's initialise entrypoint is not required
@@ -51,34 +59,41 @@ object GumboXDispatcher {
         return T
 
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postInit =>
-        // checking the post-state values of manage_monitor_interface's initialise entrypoint is not required
-        return T
+        val result: B = isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_GumboX.inititialize_IEP_Post_Container(postContainer.get.asInstanceOf[isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS])
+        //println(s"manage_monitor_interface.initialise: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_preCompute =>
         // checking the pre-state values of manage_monitor_interface's compute entrypoint is not required
         return T
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postCompute =>
-        // checking the post-state values of manage_monitor_interface's compute entrypoint is not required
-        return T
+        val result: B = isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_GumboX.compute_CEP_Post_Container(preContainer.get.asInstanceOf[isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS], postContainer.get.asInstanceOf[isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS])
+        //println(s"manage_monitor_interface.timeTriggered: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
 
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postInit =>
-        // checking the post-state values of manage_alarm's initialise entrypoint is not required
-        return T
+        val result: B = isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX.inititialize_IEP_Post_Container(postContainer.get.asInstanceOf[isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS])
+        //println(s"manage_alarm.initialise: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_preCompute =>
-        // checking the pre-state values of manage_alarm's compute entrypoint is not required
-        return T
+        val result: B = isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX.compute_CEP_Pre_Container(preContainer.get.asInstanceOf[isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS])
+        //println(s"manage_alarm.timeTriggered: Pre-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postCompute =>
-        // checking the post-state values of manage_alarm's compute entrypoint is not required
-        return T
+        val result: B = isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX.compute_CEP_Post_Container(preContainer.get.asInstanceOf[isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS], postContainer.get.asInstanceOf[isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS])
+        //println(s"manage_alarm.timeTriggered: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
 
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postInit =>
-        // checking the post-state values of manage_monitor_mode's initialise entrypoint is not required
-        return T
+        val result: B = isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_GumboX.inititialize_IEP_Post_Container(postContainer.get.asInstanceOf[isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS])
+        //println(s"manage_monitor_mode.initialise: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_preCompute =>
         // checking the pre-state values of manage_monitor_mode's compute entrypoint is not required
         return T
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postCompute =>
-        // checking the post-state values of manage_monitor_mode's compute entrypoint is not required
-        return T
+        val result: B = isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_GumboX.compute_CEP_Post_Container(preContainer.get.asInstanceOf[isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS], postContainer.get.asInstanceOf[isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS])
+        //println(s"manage_monitor_mode.timeTriggered: Post-condition: ${if (result) "" else "un"}satisfied")
+        return result
 
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_detect_monitor_failure_postInit =>
         // checking the post-state values of detect_monitor_failure's initialise entrypoint is not required
@@ -376,13 +391,232 @@ object GumboXDispatcher {
       else ""
 
     observationKind match {
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postInit =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postInit
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postInit: Check Post-condition$suffix") {
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val postContainer = isolette.JSON.toRegulateManage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PostState_Container_PS(postJson).left
+                    |  assert(isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX.inititialize_IEP_Post_Container(postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postInit""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_preCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_preCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_preCompute: Check Pre-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toRegulateManage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PreState_Container_PS(preJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |  }
+                    |  assert(isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX.compute_CEP_Pre_Container(preContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_preCompute""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postCompute: Check Pre-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toRegulateManage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PreState_Container_PS(preJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |  }
+                    |  assert(isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX.compute_CEP_Pre_Container(preContainer))
+                    |}
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postCompute: Check Post-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toRegulateManage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PreState_Container_PS(preJson).left
+                    |  val postContainer = isolette.JSON.toRegulateManage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_PostState_Container_PS(postJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |    println("Post-State Values:")
+                    |    println(s"  $$postContainer");
+                    |  }
+                    |  assert(isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_GumboX.compute_CEP_Post_Container(preContainer, postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface_postCompute""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postInit =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postInit
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postInit: Check Post-condition$suffix") {
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val postContainer = isolette.JSON.toRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS(postJson).left
+                    |  assert(isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_GumboX.inititialize_IEP_Post_Container(postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postInit""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_preCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_preCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_preCompute: Check Pre-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(preJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |  }
+                    |  assert(isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_GumboX.compute_CEP_Pre_Container(preContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_preCompute""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postCompute: Check Pre-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(preJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |  }
+                    |  assert(isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_GumboX.compute_CEP_Pre_Container(preContainer))
+                    |}
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postCompute: Check Post-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS(preJson).left
+                    |  val postContainer = isolette.JSON.toRegulateManage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS(postJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |    println("Post-State Values:")
+                    |    println(s"  $$postContainer");
+                    |  }
+                    |  assert(isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_GumboX.compute_CEP_Post_Container(preContainer, postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postCompute""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postInit =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postInit
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postInit: Check Post-condition$suffix") {
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val postContainer = isolette.JSON.toRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(postJson).left
+                    |  assert(isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_GumboX.inititialize_IEP_Post_Container(postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postInit""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postCompute: Check Post-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS(preJson).left
+                    |  val postContainer = isolette.JSON.toRegulateManage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS(postJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |    println("Post-State Values:")
+                    |    println(s"  $$postContainer");
+                    |  }
+                    |  assert(isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_GumboX.compute_CEP_Post_Container(preContainer, postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postCompute""")
 
-
-
-
-
-
-
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postInit =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postInit
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postInit: Check Post-condition$suffix") {
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val postContainer = isolette.JSON.toMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(postJson).left
+                    |  assert(isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_GumboX.inititialize_IEP_Post_Container(postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postInit""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postCompute: Check Post-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS(preJson).left
+                    |  val postContainer = isolette.JSON.toMonitorManage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS(postJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |    println("Post-State Values:")
+                    |    println(s"  $$postContainer");
+                    |  }
+                    |  assert(isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_GumboX.compute_CEP_Post_Container(preContainer, postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postCompute""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postInit =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postInit
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postInit: Check Post-condition$suffix") {
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val postContainer = isolette.JSON.toMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(postJson).left
+                    |  assert(isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX.inititialize_IEP_Post_Container(postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postInit""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_preCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_preCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_preCompute: Check Pre-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(preJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |  }
+                    |  assert(isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX.compute_CEP_Pre_Container(preContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_preCompute""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postCompute: Check Pre-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(preJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |  }
+                    |  assert(isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX.compute_CEP_Pre_Container(preContainer))
+                    |}
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postCompute: Check Post-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS(preJson).left
+                    |  val postContainer = isolette.JSON.toMonitorManage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS(postJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |    println("Post-State Values:")
+                    |    println(s"  $$postContainer");
+                    |  }
+                    |  assert(isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX.compute_CEP_Post_Container(preContainer, postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postCompute""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postInit =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postInit
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postInit: Check Post-condition$suffix") {
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val postContainer = isolette.JSON.toMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(postJson).left
+                    |  assert(isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_GumboX.inititialize_IEP_Post_Container(postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postInit""")
+      case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postCompute =>
+        return (st"""// Begin test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postCompute
+                    |
+                    |test(s"isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postCompute: Check Post-condition$suffix") {
+                    |  val preJson: String = st${tq}${preContainer.get}${tq}.render
+                    |  val postJson: String = st${tq}${postContainer.get}${tq}.render
+                    |  val preContainer = isolette.JSON.toMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS(preJson).left
+                    |  val postContainer = isolette.JSON.toMonitorManage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS(postJson).left
+                    |  if (verbose) {
+                    |    println("Pre-State Values:")
+                    |    println(s"  $$preContainer")
+                    |    println("Post-State Values:")
+                    |    println(s"  $$postContainer");
+                    |  }
+                    |  assert(isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_GumboX.compute_CEP_Post_Container(preContainer, postContainer))
+                    |}
+                    |// End test cases for isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postCompute""")
 
 
 
@@ -405,11 +639,13 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postInit =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastCmd" ~> postContainer.lastCmd.string
         updates = updates + s"${bridge_id}_Out_heat_control" ~> postContainer.api_heat_control.string
         return updates
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postInit =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastRegulatorMode" ~> postContainer.lastRegulatorMode.string
         updates = updates + s"${bridge_id}_Out_regulator_mode" ~> postContainer.api_regulator_mode.string
         return updates
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_detect_regulator_failure_postInit =>
@@ -420,6 +656,7 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postInit =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastCmd" ~> postContainer.lastCmd.string
         updates = updates + s"${bridge_id}_Out_upper_alarm_temp" ~> postContainer.api_upper_alarm_temp.string
         updates = updates + s"${bridge_id}_Out_lower_alarm_temp" ~> postContainer.api_lower_alarm_temp.string
         updates = updates + s"${bridge_id}_Out_monitor_status" ~> postContainer.api_monitor_status.string
@@ -428,11 +665,13 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postInit =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastCmd" ~> postContainer.lastCmd.string
         updates = updates + s"${bridge_id}_Out_alarm_control" ~> postContainer.api_alarm_control.string
         return updates
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postInit =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastMonitorMode" ~> postContainer.lastMonitorMode.string
         updates = updates + s"${bridge_id}_Out_monitor_mode" ~> postContainer.api_monitor_mode.string
         return updates
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_detect_monitor_failure_postInit =>
@@ -469,6 +708,7 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_preCompute =>
         var updates: Map[String, String] = Map.empty
         val preContainer = container.asInstanceOf[isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PreState_Container_PS]
+        updates = updates + s"${bridge_id}_In_In_lastCmd" ~> preContainer.In_lastCmd.string
         updates = updates + s"${bridge_id}_In_current_tempWstatus" ~> preContainer.api_current_tempWstatus.string
         updates = updates + s"${bridge_id}_In_lower_desired_temp" ~> preContainer.api_lower_desired_temp.string
         updates = updates + s"${bridge_id}_In_upper_desired_temp" ~> preContainer.api_upper_desired_temp.string
@@ -477,6 +717,7 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_preCompute =>
         var updates: Map[String, String] = Map.empty
         val preContainer = container.asInstanceOf[isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PreState_Container_PS]
+        updates = updates + s"${bridge_id}_In_In_lastRegulatorMode" ~> preContainer.In_lastRegulatorMode.string
         updates = updates + s"${bridge_id}_In_current_tempWstatus" ~> preContainer.api_current_tempWstatus.string
         updates = updates + s"${bridge_id}_In_interface_failure" ~> preContainer.api_interface_failure.string
         updates = updates + s"${bridge_id}_In_internal_failure" ~> preContainer.api_internal_failure.string
@@ -488,6 +729,7 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_preCompute =>
         var updates: Map[String, String] = Map.empty
         val preContainer = container.asInstanceOf[isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PreState_Container_PS]
+        updates = updates + s"${bridge_id}_In_In_lastCmd" ~> preContainer.In_lastCmd.string
         updates = updates + s"${bridge_id}_In_upper_alarm_tempWstatus" ~> preContainer.api_upper_alarm_tempWstatus.string
         updates = updates + s"${bridge_id}_In_lower_alarm_tempWstatus" ~> preContainer.api_lower_alarm_tempWstatus.string
         updates = updates + s"${bridge_id}_In_current_tempWstatus" ~> preContainer.api_current_tempWstatus.string
@@ -496,6 +738,7 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_preCompute =>
         var updates: Map[String, String] = Map.empty
         val preContainer = container.asInstanceOf[isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PreState_Container_PS]
+        updates = updates + s"${bridge_id}_In_In_lastCmd" ~> preContainer.In_lastCmd.string
         updates = updates + s"${bridge_id}_In_current_tempWstatus" ~> preContainer.api_current_tempWstatus.string
         updates = updates + s"${bridge_id}_In_lower_alarm_temp" ~> preContainer.api_lower_alarm_temp.string
         updates = updates + s"${bridge_id}_In_upper_alarm_temp" ~> preContainer.api_upper_alarm_temp.string
@@ -504,6 +747,7 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_preCompute =>
         var updates: Map[String, String] = Map.empty
         val preContainer = container.asInstanceOf[isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PreState_Container_PS]
+        updates = updates + s"${bridge_id}_In_In_lastMonitorMode" ~> preContainer.In_lastMonitorMode.string
         updates = updates + s"${bridge_id}_In_current_tempWstatus" ~> preContainer.api_current_tempWstatus.string
         updates = updates + s"${bridge_id}_In_interface_failure" ~> preContainer.api_interface_failure.string
         updates = updates + s"${bridge_id}_In_internal_failure" ~> preContainer.api_internal_failure.string
@@ -542,11 +786,13 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source_postCompute =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastCmd" ~> postContainer.lastCmd.string
         updates = updates + s"${bridge_id}_Out_heat_control" ~> postContainer.api_heat_control.string
         return updates
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode_postCompute =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastRegulatorMode" ~> postContainer.lastRegulatorMode.string
         updates = updates + s"${bridge_id}_Out_regulator_mode" ~> postContainer.api_regulator_mode.string
         return updates
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_regulate_temperature_detect_regulator_failure_postCompute =>
@@ -557,6 +803,7 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface_postCompute =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastCmd" ~> postContainer.lastCmd.string
         updates = updates + s"${bridge_id}_Out_upper_alarm_temp" ~> postContainer.api_upper_alarm_temp.string
         updates = updates + s"${bridge_id}_Out_lower_alarm_temp" ~> postContainer.api_lower_alarm_temp.string
         updates = updates + s"${bridge_id}_Out_monitor_status" ~> postContainer.api_monitor_status.string
@@ -565,11 +812,13 @@ object GumboXDispatcher {
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm_postCompute =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastCmd" ~> postContainer.lastCmd.string
         updates = updates + s"${bridge_id}_Out_alarm_control" ~> postContainer.api_alarm_control.string
         return updates
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode_postCompute =>
         var updates: Map[String, String] = Map.empty
         val postContainer = container.asInstanceOf[isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_PostState_Container_PS]
+        updates = updates + s"${bridge_id}_Out_lastMonitorMode" ~> postContainer.lastMonitorMode.string
         updates = updates + s"${bridge_id}_Out_monitor_mode" ~> postContainer.api_monitor_mode.string
         return updates
       case isolette.runtimemonitor.ObservationKind.isolette_single_sensor_Instance_thermostat_monitor_temperature_detect_monitor_failure_postCompute =>
