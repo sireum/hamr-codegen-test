@@ -1471,7 +1471,7 @@
         "microkit\/microkit.monitor.schedule.xml",
         {
           "type" : "ITestResource",
-          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"50\" \/> <!-- producer_producer_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"50\" \/> <!-- consumer_consumer_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_0\" length=\"680\" \/> <!-- padding -->\n<\/domain_schedule>",
+          "content" : "<!-- This file will not be overwritten if HAMR codegen is rerun -->\n\n<domain_schedule>\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_2\" length=\"50\" \/> <!-- producer_producer_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_4\" length=\"50\" \/> <!-- monitor_process_monitor_thread_MON -->\n  <domain name=\"domain_1\" length=\"30\" \/> <!-- pacer -->\n  <domain name=\"domain_3\" length=\"50\" \/> <!-- consumer_consumer_MON -->\n  <domain name=\"domain_0\" length=\"680\" \/> <!-- padding -->\n<\/domain_schedule>",
           "markers" : [
           ],
           "invertMarkers" : false,

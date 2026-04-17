@@ -122,8 +122,20 @@ trait CodegenTest extends CodegenTestSuite {
       packageName = if (config.packageName.nonEmpty) config.packageName else Some(testName)
     )
 
+    val workspaceRoot = Os.path(testOps.workspaceRootDir.get)
+
+    var testingModes = testModes
+
+    if (workspaceRoot.list.filter(p => p.ext == string"sysml").nonEmpty) {
+      val o = ops.ISZOps(testingModes)
+      if (o.contains(TestMode.phantom)) {
+        testingModes = testingModes.filter(p => p != TestMode.phantom)
+        println("Model contains SysML files so removed phantom")
+      }
+    }
+
     if (verbose) {
-      println(s"Test Modes: ${testModes}")
+      println(s"Test Modes: ${testingModes}")
       testOps = testOps(verbose = T)
     }
 
@@ -139,7 +151,7 @@ trait CodegenTest extends CodegenTestSuite {
 
     val reporter = Reporter.create
 
-    val model: Aadl = TestUtil.getModel(airFile, phantomOptions, Os.path(testOps.workspaceRootDir.get), testModes, testName, verbose)
+    val model: Aadl = TestUtil.getModel(airFile, phantomOptions, workspaceRoot, testingModes, testName, verbose)
 
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
@@ -151,19 +163,19 @@ trait CodegenTest extends CodegenTestSuite {
     // proyek ive will only be run via callback
     val results = CodeGen.codeGen(model, T, testOps,
       plugins, store, reporter,
-      if (TestUtil.shouldTranspile(testOps, testModes)) TestUtil.transpile(testOps) _ else (SireumSlangTranspilersCOption, Reporter) => {
+      if (TestUtil.shouldTranspile(testOps, testingModes)) TestUtil.transpile(testOps) _ else (SireumSlangTranspilersCOption, Reporter) => {
         println("Dummy transpiler");
         0
       },
-      if (TestUtil.shouldProyekIve(testOps, testModes)) TestUtil.proyekive(testOps) _ else (SireumProyekIveOption) => {
+      if (TestUtil.shouldProyekIve(testOps, testingModes)) TestUtil.proyekive(testOps) _ else (SireumProyekIveOption) => {
         println("Dummy Proyek IVE");
         0
       },
-      if (TestUtil.shouldSergen(testOps, testModes)) TestUtil.sergen(testOps) _ else (SireumToolsSergenOption, Reporter) => {
+      if (TestUtil.shouldSergen(testOps, testingModes)) TestUtil.sergen(testOps) _ else (SireumToolsSergenOption, Reporter) => {
         0
       }
       ,
-      if (TestUtil.shouldSlangCheck(testOps, testModes)) TestUtil.slangcheck(testOps) _ else (SireumToolsSlangcheckGeneratorOption, Reporter) => {
+      if (TestUtil.shouldSlangCheck(testOps, testingModes)) TestUtil.slangcheck(testOps) _ else (SireumToolsSlangcheckGeneratorOption, Reporter) => {
         0
       }
     )
@@ -187,7 +199,7 @@ trait CodegenTest extends CodegenTestSuite {
 
     var testSuccess = T
     if (!reporter.hasError) {
-      testSuccess &= TestUtil.runAdditionalTasks(testName, testOps, testModes, logikaOptions, verbose, this, reporter)
+      testSuccess &= TestUtil.runAdditionalTasks(testName, testOps, testingModes, logikaOptions, verbose, this, reporter)
     }
 
     val resultMap = TestUtil.convertToTestResult(results._1.resources, resultsDir)
