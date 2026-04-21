@@ -9,14 +9,14 @@
   - [Build](#build)
   - [Run](#run)
 
-| Node | Package |
-|---|---|
-| `fanIn_producer1_exe` | `fan_in_fan_out_system_cpp_pkg` |
-| `fanIn_producer2_exe` | `fan_in_fan_out_system_cpp_pkg` |
-| `fanIn_consumer_exe` | `fan_in_fan_out_system_cpp_pkg` |
-| `fanOut_producer_exe` | `fan_in_fan_out_system_cpp_pkg` |
-| `fanOut_consumer1_exe` | `fan_in_fan_out_system_cpp_pkg` |
-| `fanOut_consumer2_exe` | `fan_in_fan_out_system_cpp_pkg` |
+| Node | Package | Dispatch |
+|---|---|---|
+| `fanIn_producer1_exe` | `fan_in_fan_out_system_cpp_pkg` | Periodic |
+| `fanIn_producer2_exe` | `fan_in_fan_out_system_cpp_pkg` | Periodic |
+| `fanIn_consumer_exe` | `fan_in_fan_out_system_cpp_pkg` | Sporadic |
+| `fanOut_producer_exe` | `fan_in_fan_out_system_cpp_pkg` | Periodic |
+| `fanOut_consumer1_exe` | `fan_in_fan_out_system_cpp_pkg` | Sporadic |
+| `fanOut_consumer2_exe` | `fan_in_fan_out_system_cpp_pkg` | Sporadic |
 
 ## Quick Start
 

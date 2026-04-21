@@ -8,7 +8,7 @@ import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, Codegen
 
 class Ros2Tests extends TestSuite with Ros2TestUtil {
 
-  val generateExpected: B = F
+  override val generateExpected: B = F || super.generateExpected
 
   val verbose: B = F
 

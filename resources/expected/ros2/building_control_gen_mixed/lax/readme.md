@@ -9,11 +9,11 @@
   - [Build](#build)
   - [Run](#run)
 
-| Node | Package |
-|---|---|
-| `tcp_tempSensor_exe` | `building_control_cpp_pkg` |
-| `tcp_tempControl_exe` | `building_control_cpp_pkg` |
-| `tcp_fan_exe` | `building_control_cpp_pkg` |
+| Node | Package | Dispatch |
+|---|---|---|
+| `tcp_tempSensor_exe` | `building_control_cpp_pkg` | Periodic |
+| `tcp_tempControl_exe` | `building_control_cpp_pkg` | Sporadic |
+| `tcp_fan_exe` | `building_control_cpp_pkg` | Sporadic |
 
 ## Quick Start
 

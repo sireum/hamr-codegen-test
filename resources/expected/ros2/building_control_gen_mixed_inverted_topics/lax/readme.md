@@ -1,6 +1,6 @@
 <!-- This file will not be overwritten if HAMR codegen is rerun -->
 
-# datatypes_system — ROS2 Workspace
+# building_control — ROS2 Workspace
 
 ## Table of Contents
 
@@ -9,10 +9,11 @@
   - [Build](#build)
   - [Run](#run)
 
-| Node | Package |
-|---|---|
-| `producer_producer_exe` | `datatypes_system_cpp_pkg` |
-| `consumer_consumer_exe` | `datatypes_system_cpp_pkg` |
+| Node | Package | Dispatch |
+|---|---|---|
+| `tcp_tempSensor_exe` | `building_control_cpp_pkg` | Periodic |
+| `tcp_tempControl_exe` | `building_control_cpp_pkg` | Sporadic |
+| `tcp_fan_exe` | `building_control_cpp_pkg` | Sporadic |
 
 ## Quick Start
 
@@ -44,9 +45,12 @@ source /opt/ros/$ROS_DISTRO/setup.bash && source install/setup.bash
 ```
 
 ```bash
-# producer_producer
-ros2 run datatypes_system_cpp_pkg producer_producer_exe
+# tcp_tempSensor
+ros2 run building_control_cpp_pkg tcp_tempSensor_exe
 
-# consumer_consumer
-ros2 run datatypes_system_cpp_pkg consumer_consumer_exe
+# tcp_tempControl
+ros2 run building_control_cpp_pkg tcp_tempControl_exe
+
+# tcp_fan
+ros2 run building_control_cpp_pkg tcp_fan_exe
 ```

@@ -7,7 +7,7 @@ import Ros2Tests._
 
 class MicroRosTests extends TestSuite with Ros2TestUtil {
 
-  val generateExpected: B = F
+  override val generateExpected: B = F || super.generateExpected
 
   val verbose: B = F
 

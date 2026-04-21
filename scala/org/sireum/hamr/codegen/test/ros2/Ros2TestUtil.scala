@@ -11,7 +11,7 @@ trait  Ros2TestUtil {
 
   def testModes: ISZ[TestMode.Type] = TestModeHelper.getEnvTestModes()
 
-  def generateExpected: B
+  def generateExpected: B = F
 
   val isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 

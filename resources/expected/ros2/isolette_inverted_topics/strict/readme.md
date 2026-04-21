@@ -9,17 +9,17 @@
   - [Build](#build)
   - [Run](#run)
 
-| Node | Package |
-|---|---|
-| `thermostat_regulate_temperature_manage_regulator_interface_mrit_exe` | `isolette_cpp_pkg` |
-| `thermostat_regulate_temperature_manage_heat_source_mhst_exe` | `isolette_cpp_pkg` |
-| `thermostat_regulate_temperature_manage_regulator_mode_mrmt_exe` | `isolette_cpp_pkg` |
-| `thermostat_monitor_temperature_manage_alarm_mat_exe` | `isolette_cpp_pkg` |
-| `thermostat_monitor_temperature_manage_monitor_interface_mmit_exe` | `isolette_cpp_pkg` |
-| `thermostat_monitor_temperature_manage_monitor_mode_mmmt_exe` | `isolette_cpp_pkg` |
-| `operator_interface_oip_oit_exe` | `isolette_cpp_pkg` |
-| `temperature_sensor_cpi_thermostat_exe` | `isolette_cpp_pkg` |
-| `heat_source_cpi_heat_controller_exe` | `isolette_cpp_pkg` |
+| Node | Package | Dispatch |
+|---|---|---|
+| `thermostat_regulate_temperature_manage_regulator_interface_mrit_exe` | `isolette_cpp_pkg` | Periodic |
+| `thermostat_regulate_temperature_manage_heat_source_mhst_exe` | `isolette_cpp_pkg` | Periodic |
+| `thermostat_regulate_temperature_manage_regulator_mode_mrmt_exe` | `isolette_cpp_pkg` | Periodic |
+| `thermostat_monitor_temperature_manage_alarm_mat_exe` | `isolette_cpp_pkg` | Periodic |
+| `thermostat_monitor_temperature_manage_monitor_interface_mmit_exe` | `isolette_cpp_pkg` | Periodic |
+| `thermostat_monitor_temperature_manage_monitor_mode_mmmt_exe` | `isolette_cpp_pkg` | Periodic |
+| `operator_interface_oip_oit_exe` | `isolette_cpp_pkg` | Periodic |
+| `temperature_sensor_cpi_thermostat_exe` | `isolette_cpp_pkg` | Periodic |
+| `heat_source_cpi_heat_controller_exe` | `isolette_cpp_pkg` | Periodic |
 
 ## Quick Start
 
