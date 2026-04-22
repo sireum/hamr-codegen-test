@@ -749,7 +749,7 @@
         "microkit\/crates\/data\/rust-toolchain.toml",
         {
           "type" : "ITestResource",
-          "content" : "# This file will not be overwritten if HAMR codegen is rerun\n\n[toolchain]\nchannel = \"nightly\"\ncomponents = [ \"rustfmt\", \"rust-src\", \"rustc-dev\", \"llvm-tools-preview\", \"rust-analyzer\" ]\n",
+          "content" : "# This file will not be overwritten if HAMR codegen is rerun\n\n# Verus hooks into rustc internals (rustc-dev, rustc_driver) which change\n# nightly-to-nightly with no stability guarantees. The nightly date is pinned\n# to match the Verus crate versions in Cargo.toml -- using a later nightly may\n# cause compilation failures. If you update the Verus dependencies, update the\n# nightly date to match.\n# The rustc-dev and rust-src components are required for Verus verification;\n# llvm-tools-preview is needed for microkit's no_std linking;\n# rust-analyzer provides IDE support (code completion, type hints, etc.).\n\n[toolchain]\nchannel = \"nightly-2026-01-25\"\ncomponents = [ \"rustfmt\", \"rust-src\", \"rustc-dev\", \"llvm-tools-preview\", \"rust-analyzer\" ]\n",
           "markers" : [
           ],
           "invertMarkers" : false,
@@ -889,7 +889,7 @@
         "microkit\/crates\/monitor_process_monitor_thread\/rust-toolchain.toml",
         {
           "type" : "ITestResource",
-          "content" : "# This file will not be overwritten if HAMR codegen is rerun\n\n[toolchain]\nchannel = \"nightly\"\ncomponents = [ \"rustfmt\", \"rust-src\", \"rustc-dev\", \"llvm-tools-preview\", \"rust-analyzer\" ]\n",
+          "content" : "# This file will not be overwritten if HAMR codegen is rerun\n\n# Verus hooks into rustc internals (rustc-dev, rustc_driver) which change\n# nightly-to-nightly with no stability guarantees. The nightly date is pinned\n# to match the Verus crate versions in Cargo.toml -- using a later nightly may\n# cause compilation failures. If you update the Verus dependencies, update the\n# nightly date to match.\n# The rustc-dev and rust-src components are required for Verus verification;\n# llvm-tools-preview is needed for microkit's no_std linking;\n# rust-analyzer provides IDE support (code completion, type hints, etc.).\n\n[toolchain]\nchannel = \"nightly-2026-01-25\"\ncomponents = [ \"rustfmt\", \"rust-src\", \"rustc-dev\", \"llvm-tools-preview\", \"rust-analyzer\" ]\n",
           "markers" : [
           ],
           "invertMarkers" : false,
