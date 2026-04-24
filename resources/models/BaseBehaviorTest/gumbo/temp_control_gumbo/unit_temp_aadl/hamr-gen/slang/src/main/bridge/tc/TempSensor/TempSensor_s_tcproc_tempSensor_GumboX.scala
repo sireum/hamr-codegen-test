@@ -60,9 +60,13 @@ object TempSensor_s_tcproc_tempSensor_GumboX {
   @strictpure def initialize_IEP_Guar (
       api_tempChanged: Option[art.Empty],
       api_currentTemp: TempSensor.Temperature_i): B =
-    initialize_initializes(api_currentTemp) &
-    initialize_g1(api_tempChanged) &
-    initialize_g2(api_tempChanged)
+    {
+      val r0 = initialize_initializes(api_currentTemp)
+      val r1 = initialize_g1(api_tempChanged)
+      val r2 = initialize_g2(api_tempChanged)
+
+      r0 & r1 & r2
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition
     *
@@ -72,14 +76,18 @@ object TempSensor_s_tcproc_tempSensor_GumboX {
   @strictpure def inititialize_IEP_Post (
       api_tempChanged: Option[art.Empty],
       api_currentTemp: TempSensor.Temperature_i): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with tempSensor's state variables and outgoing ports
-     TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with tempSensor's state variables and outgoing ports
+      val r0 = TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp)
 
-     // I-Guar-Guard: Integration constraints for tempSensor's outgoing ports"
-     I_Guar_currentTemp(api_currentTemp) & 
+      // I-Guar-Guard: Integration constraints for tempSensor's outgoing ports
+      val r1 = I_Guar_currentTemp(api_currentTemp)
 
-     // IEP-Guar: Initialize Entrypoint contract for tempSensor
-     initialize_IEP_Guar(api_tempChanged, api_currentTemp))
+      // IEP-Guar: Initialize Entrypoint contract for tempSensor
+      val r2 = initialize_IEP_Guar(api_tempChanged, api_currentTemp)
+
+      r0 & r1 & r2
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -98,11 +106,15 @@ object TempSensor_s_tcproc_tempSensor_GumboX {
   @strictpure def compute_CEP_Post (
       api_tempChanged: Option[art.Empty],
       api_currentTemp: TempSensor.Temperature_i): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with tempSensor's state variables and outgoing ports
-     TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with tempSensor's state variables and outgoing ports
+      val r0 = TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp)
 
-     // I-Guar-Guard: Integration constraints for tempSensor's outgoing ports
-     I_Guar_currentTemp(api_currentTemp))
+      // I-Guar-Guard: Integration constraints for tempSensor's outgoing ports
+      val r1 = I_Guar_currentTemp(api_currentTemp)
+
+      r0 & r1
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for tempSensor via containers
     *

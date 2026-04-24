@@ -13,8 +13,10 @@ object OperatorInterface_i_tcproc_operatorInterface_GumboX {
     */
   @strictpure def inititialize_IEP_Post (
       api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i]): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with operatorInterface's state variables and outgoing ports
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_Guard_SetPoint_i(api_setPoint))
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with operatorInterface's state variables and outgoing ports
+      TempControlSoftwareSystem.SetPoint_i.D_Inv_Guard_SetPoint_i(api_setPoint)
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -32,8 +34,10 @@ object OperatorInterface_i_tcproc_operatorInterface_GumboX {
   @strictpure def compute_CEP_Pre (
       api_tempChanged: Option[art.Empty],
       api_currentTemp: TempSensor.Temperature_i): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with operatorInterface's state variables and incoming ports
-     TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp))
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with operatorInterface's state variables and incoming ports
+      TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp)
+    }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for operatorInterface via container
     *
@@ -54,9 +58,13 @@ object OperatorInterface_i_tcproc_operatorInterface_GumboX {
       api_tempChanged: Option[art.Empty],
       api_currentTemp: TempSensor.Temperature_i,
       api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i]): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with operatorInterface's state variables and outgoing ports
-     TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp) & 
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_Guard_SetPoint_i(api_setPoint))
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with operatorInterface's state variables and outgoing ports
+      val r0 = TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp)
+      val r1 = TempControlSoftwareSystem.SetPoint_i.D_Inv_Guard_SetPoint_i(api_setPoint)
+
+      r0 & r1
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for operatorInterface via containers
     *

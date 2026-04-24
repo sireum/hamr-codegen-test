@@ -23,6 +23,7 @@ import prod_cons__JVM.RandomLib
 
 // Profile with generators for incoming ports
 @msig trait Producer_p_producer_Profile_P_Trait extends Profile {
+
 }
 
 @record class Producer_p_producer_Profile_P(
@@ -33,10 +34,12 @@ import prod_cons__JVM.RandomLib
     return (Producer_p_producer_PreState_Container_P (
       ))
   }
+
 }
 
 // Profile with generators for state variables and incoming ports
 @msig trait Producer_p_producer_Profile_PS_Trait extends Producer_p_producer_Profile_P_Trait {
+
 }
 
 @record class Producer_p_producer_Profile_PS(
@@ -47,4 +50,5 @@ import prod_cons__JVM.RandomLib
     return (Producer_p_producer_PreState_Container_PS (
       ))
   }
+
 }

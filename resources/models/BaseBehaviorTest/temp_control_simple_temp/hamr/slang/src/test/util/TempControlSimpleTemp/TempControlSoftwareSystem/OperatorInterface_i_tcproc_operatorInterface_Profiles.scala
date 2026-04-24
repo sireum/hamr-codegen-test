@@ -25,6 +25,9 @@ import TempControlSimpleTemp.RandomLib
 @msig trait OperatorInterface_i_tcproc_operatorInterface_Profile_P_Trait extends Profile {
   def api_tempChanged: RandomLib // random lib for generating art.Empty
   def api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
+
+  def update_api_tempChanged(v: RandomLib): OperatorInterface_i_tcproc_operatorInterface_Profile_P_Trait
+  def update_api_currentTemp(v: RandomLib): OperatorInterface_i_tcproc_operatorInterface_Profile_P_Trait
 }
 
 @record class OperatorInterface_i_tcproc_operatorInterface_Profile_P(
@@ -38,12 +41,23 @@ import TempControlSimpleTemp.RandomLib
       api_tempChanged = api_tempChanged.nextOption_artEmpty(),
       api_currentTemp = api_currentTemp.nextTempSensorTemperature_i()))
   }
+
+  override def update_api_tempChanged(v: RandomLib): OperatorInterface_i_tcproc_operatorInterface_Profile_P_Trait = {
+    return this(api_tempChanged = v)
+  }
+
+  override def update_api_currentTemp(v: RandomLib): OperatorInterface_i_tcproc_operatorInterface_Profile_P_Trait = {
+    return this(api_currentTemp = v)
+  }
 }
 
 // Profile with generators for state variables and incoming ports
 @msig trait OperatorInterface_i_tcproc_operatorInterface_Profile_PS_Trait extends OperatorInterface_i_tcproc_operatorInterface_Profile_P_Trait {
   def api_tempChanged: RandomLib // random lib for generating art.Empty
   def api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
+
+  def update_api_tempChanged(v: RandomLib): OperatorInterface_i_tcproc_operatorInterface_Profile_PS_Trait
+  def update_api_currentTemp(v: RandomLib): OperatorInterface_i_tcproc_operatorInterface_Profile_PS_Trait
 }
 
 @record class OperatorInterface_i_tcproc_operatorInterface_Profile_PS(
@@ -56,5 +70,13 @@ import TempControlSimpleTemp.RandomLib
     return (OperatorInterface_i_tcproc_operatorInterface_PreState_Container_PS (
       api_tempChanged = api_tempChanged.nextOption_artEmpty(),
       api_currentTemp = api_currentTemp.nextTempSensorTemperature_i()))
+  }
+
+  override def update_api_tempChanged(v: RandomLib): OperatorInterface_i_tcproc_operatorInterface_Profile_PS_Trait = {
+    return this(api_tempChanged = v)
+  }
+
+  override def update_api_currentTemp(v: RandomLib): OperatorInterface_i_tcproc_operatorInterface_Profile_PS_Trait = {
+    return this(api_currentTemp = v)
   }
 }

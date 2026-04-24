@@ -92,17 +92,21 @@ object Filter_s_p_filters_GumboX {
       api_f_event_data_out: Option[ProdConsFlows.Container_i],
       api_g_event_data_out: Option[ProdConsFlows.Container_i],
       api_e_data_out: ProdConsFlows.Container_i): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with filters's state variables and outgoing ports
-     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_out) &
-     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_out) &
-     ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_out) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with filters's state variables and outgoing ports
+      val r0 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_out)
+      val r1 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_out)
+      val r2 = ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_out)
 
-     // I-Guar-Guard: Integration constraints for filters's outgoing ports"
-     I_Guar_e_data_out(api_e_data_out) &
-     I_Guar_Guard_f_event_data_out(api_f_event_data_out) & 
+      // I-Guar-Guard: Integration constraints for filters's outgoing ports
+      val r3 = I_Guar_e_data_out(api_e_data_out)
+      val r4 = I_Guar_Guard_f_event_data_out(api_f_event_data_out)
 
-     // IEP-Guar: Initialize Entrypoint contract for filters
-     initialize_IEP_Guar(api_h_event_out, api_f_event_data_out, api_g_event_data_out, api_e_data_out))
+      // IEP-Guar: Initialize Entrypoint contract for filters
+      val r5 = initialize_IEP_Guar(api_h_event_out, api_f_event_data_out, api_g_event_data_out, api_e_data_out)
+
+      r0 & r1 & r2 & r3 & r4 & r5
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -127,14 +131,18 @@ object Filter_s_p_filters_GumboX {
       api_b_event_data_in: Option[ProdConsFlows.Container_i],
       api_c_event_data_in: Option[ProdConsFlows.Container_i],
       api_a_data_in: ProdConsFlows.Container_i): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with filters's state variables and incoming ports
-     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_b_event_data_in) & 
-     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_c_event_data_in) & 
-     ProdConsFlows.Container_i.D_Inv_Container_i(api_a_data_in) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with filters's state variables and incoming ports
+      val r0 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_b_event_data_in)
+      val r1 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_c_event_data_in)
+      val r2 = ProdConsFlows.Container_i.D_Inv_Container_i(api_a_data_in)
 
-     // I-Assm-Guard: Integration constraints for filters's incoming ports
-     I_Assm_Guard_a_data_in(api_a_data_in) & 
-     I_Assm_Guard_b_event_data_in(api_b_event_data_in))
+      // I-Assm-Guard: Integration constraints for filters's incoming ports
+      val r3 = I_Assm_Guard_a_data_in(api_a_data_in)
+      val r4 = I_Assm_Guard_b_event_data_in(api_b_event_data_in)
+
+      r0 & r1 & r2 & r3 & r4
+    }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for filters via container
     *
@@ -192,20 +200,24 @@ object Filter_s_p_filters_GumboX {
       api_f_event_data_out: Option[ProdConsFlows.Container_i],
       api_g_event_data_out: Option[ProdConsFlows.Container_i],
       api_e_data_out: ProdConsFlows.Container_i): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with filters's state variables and outgoing ports
-     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_b_event_data_in) & 
-     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_c_event_data_in) & 
-     ProdConsFlows.Container_i.D_Inv_Container_i(api_a_data_in) & 
-     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_out) & 
-     ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_out) & 
-     ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_out) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with filters's state variables and outgoing ports
+      val r0 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_b_event_data_in)
+      val r1 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_c_event_data_in)
+      val r2 = ProdConsFlows.Container_i.D_Inv_Container_i(api_a_data_in)
+      val r3 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_out)
+      val r4 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_out)
+      val r5 = ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_out)
 
-     // I-Guar-Guard: Integration constraints for filters's outgoing ports
-     I_Guar_e_data_out(api_e_data_out) & 
-     I_Guar_Guard_f_event_data_out(api_f_event_data_out) & 
+      // I-Guar-Guard: Integration constraints for filters's outgoing ports
+      val r6 = I_Guar_e_data_out(api_e_data_out)
+      val r7 = I_Guar_Guard_f_event_data_out(api_f_event_data_out)
 
-     // CEP-T-Handlers: handler clauses of filters's compute entrypoint
-     compute_CEP_Handler_b_event_data_in_Guar (api_b_event_data_in, api_f_event_data_out))
+      // CEP-T-Handlers: handler clauses of filters's compute entrypoint
+      val r8 = compute_CEP_Handler_b_event_data_in_Guar (api_b_event_data_in, api_f_event_data_out)
+
+      r0 & r1 & r2 & r3 & r4 & r5 & r6 & r7 & r8
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for filters via containers
     *

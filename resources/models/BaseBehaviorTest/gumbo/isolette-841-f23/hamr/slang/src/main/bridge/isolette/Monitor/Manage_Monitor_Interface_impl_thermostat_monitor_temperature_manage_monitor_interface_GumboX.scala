@@ -46,8 +46,10 @@ object Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monit
       api_lower_alarm_temp: Isolette_Data_Model.Temp_impl,
       api_monitor_status: Isolette_Data_Model.Status.Type,
       api_upper_alarm_temp: Isolette_Data_Model.Temp_impl): B =
-    (// IEP-Guar: Initialize Entrypoint contract for manage_monitor_interface
-     initialize_IEP_Guar(lastCmd, api_interface_failure, api_lower_alarm_temp, api_monitor_status, api_upper_alarm_temp))
+    {
+      // IEP-Guar: Initialize Entrypoint contract for manage_monitor_interface
+      initialize_IEP_Guar(lastCmd, api_interface_failure, api_lower_alarm_temp, api_monitor_status, api_upper_alarm_temp)
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -186,13 +188,17 @@ object Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monit
       api_lower_alarm_temp: Isolette_Data_Model.Temp_impl,
       api_monitor_status: Isolette_Data_Model.Status.Type,
       api_upper_alarm_temp: Isolette_Data_Model.Temp_impl): B =
-    compute_case_REQ_MMI_1(api_monitor_mode, api_monitor_status) &
-    compute_case_REQ_MMI_2(api_monitor_mode, api_monitor_status) &
-    compute_case_REQ_MMI_3(api_monitor_mode, api_monitor_status) &
-    compute_case_REQ_MMI_4(api_lower_alarm_tempWstatus, api_upper_alarm_tempWstatus, api_interface_failure) &
-    compute_case_REQ_MMI_5(api_lower_alarm_tempWstatus, api_upper_alarm_tempWstatus, api_interface_failure) &
-    compute_case_REQ_MMI_6(api_lower_alarm_tempWstatus, api_upper_alarm_tempWstatus, api_interface_failure, api_lower_alarm_temp, api_upper_alarm_temp) &
-    compute_case_REQ_MMI_7(api_interface_failure)
+    {
+      val r0 = compute_case_REQ_MMI_1(api_monitor_mode, api_monitor_status)
+      val r1 = compute_case_REQ_MMI_2(api_monitor_mode, api_monitor_status)
+      val r2 = compute_case_REQ_MMI_3(api_monitor_mode, api_monitor_status)
+      val r3 = compute_case_REQ_MMI_4(api_lower_alarm_tempWstatus, api_upper_alarm_tempWstatus, api_interface_failure)
+      val r4 = compute_case_REQ_MMI_5(api_lower_alarm_tempWstatus, api_upper_alarm_tempWstatus, api_interface_failure)
+      val r5 = compute_case_REQ_MMI_6(api_lower_alarm_tempWstatus, api_upper_alarm_tempWstatus, api_interface_failure, api_lower_alarm_temp, api_upper_alarm_temp)
+      val r6 = compute_case_REQ_MMI_7(api_interface_failure)
+
+      r0 & r1 & r2 & r3 & r4 & r5 & r6
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for manage_monitor_interface
     *
@@ -218,8 +224,10 @@ object Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monit
       api_lower_alarm_temp: Isolette_Data_Model.Temp_impl,
       api_monitor_status: Isolette_Data_Model.Status.Type,
       api_upper_alarm_temp: Isolette_Data_Model.Temp_impl): B =
-    (// CEP-T-Case: case clauses of manage_monitor_interface's compute entrypoint
-     compute_CEP_T_Case (api_lower_alarm_tempWstatus, api_monitor_mode, api_upper_alarm_tempWstatus, api_interface_failure, api_lower_alarm_temp, api_monitor_status, api_upper_alarm_temp))
+    {
+      // CEP-T-Case: case clauses of manage_monitor_interface's compute entrypoint
+      compute_CEP_T_Case (api_lower_alarm_tempWstatus, api_monitor_mode, api_upper_alarm_tempWstatus, api_interface_failure, api_lower_alarm_temp, api_monitor_status, api_upper_alarm_temp)
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for manage_monitor_interface via containers
     *

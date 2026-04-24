@@ -27,6 +27,11 @@ import prod_cons__JVM.RandomLib
   def api_f_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_g_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_e_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
+
+  def update_api_h_event_in(v: RandomLib): Consumer_p_consumer_Profile_P_Trait
+  def update_api_f_event_data_in(v: RandomLib): Consumer_p_consumer_Profile_P_Trait
+  def update_api_g_event_data_in(v: RandomLib): Consumer_p_consumer_Profile_P_Trait
+  def update_api_e_data_in(v: RandomLib): Consumer_p_consumer_Profile_P_Trait
 }
 
 @record class Consumer_p_consumer_Profile_P(
@@ -44,6 +49,22 @@ import prod_cons__JVM.RandomLib
       api_g_event_data_in = api_g_event_data_in.nextOptionProdConsFlowsContainer_i(),
       api_e_data_in = api_e_data_in.nextProdConsFlowsContainer_i()))
   }
+
+  override def update_api_h_event_in(v: RandomLib): Consumer_p_consumer_Profile_P_Trait = {
+    return this(api_h_event_in = v)
+  }
+
+  override def update_api_f_event_data_in(v: RandomLib): Consumer_p_consumer_Profile_P_Trait = {
+    return this(api_f_event_data_in = v)
+  }
+
+  override def update_api_g_event_data_in(v: RandomLib): Consumer_p_consumer_Profile_P_Trait = {
+    return this(api_g_event_data_in = v)
+  }
+
+  override def update_api_e_data_in(v: RandomLib): Consumer_p_consumer_Profile_P_Trait = {
+    return this(api_e_data_in = v)
+  }
 }
 
 // Profile with generators for state variables and incoming ports
@@ -52,6 +73,11 @@ import prod_cons__JVM.RandomLib
   def api_f_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_g_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_e_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
+
+  def update_api_h_event_in(v: RandomLib): Consumer_p_consumer_Profile_PS_Trait
+  def update_api_f_event_data_in(v: RandomLib): Consumer_p_consumer_Profile_PS_Trait
+  def update_api_g_event_data_in(v: RandomLib): Consumer_p_consumer_Profile_PS_Trait
+  def update_api_e_data_in(v: RandomLib): Consumer_p_consumer_Profile_PS_Trait
 }
 
 @record class Consumer_p_consumer_Profile_PS(
@@ -68,5 +94,21 @@ import prod_cons__JVM.RandomLib
       api_f_event_data_in = api_f_event_data_in.nextOptionProdConsFlowsContainer_i(),
       api_g_event_data_in = api_g_event_data_in.nextOptionProdConsFlowsContainer_i(),
       api_e_data_in = api_e_data_in.nextProdConsFlowsContainer_i()))
+  }
+
+  override def update_api_h_event_in(v: RandomLib): Consumer_p_consumer_Profile_PS_Trait = {
+    return this(api_h_event_in = v)
+  }
+
+  override def update_api_f_event_data_in(v: RandomLib): Consumer_p_consumer_Profile_PS_Trait = {
+    return this(api_f_event_data_in = v)
+  }
+
+  override def update_api_g_event_data_in(v: RandomLib): Consumer_p_consumer_Profile_PS_Trait = {
+    return this(api_g_event_data_in = v)
+  }
+
+  override def update_api_e_data_in(v: RandomLib): Consumer_p_consumer_Profile_PS_Trait = {
+    return this(api_e_data_in = v)
   }
 }

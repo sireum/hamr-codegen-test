@@ -36,8 +36,10 @@ object Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mo
   @strictpure def inititialize_IEP_Post (
       lastMonitorMode: Isolette_Data_Model.Monitor_Mode.Type,
       api_monitor_mode: Isolette_Data_Model.Monitor_Mode.Type): B =
-    (// IEP-Guar: Initialize Entrypoint contract for manage_monitor_mode
-     initialize_IEP_Guar(lastMonitorMode, api_monitor_mode))
+    {
+      // IEP-Guar: Initialize Entrypoint contract for manage_monitor_mode
+      initialize_IEP_Guar(lastMonitorMode, api_monitor_mode)
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -124,9 +126,13 @@ object Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mo
       api_interface_failure: Isolette_Data_Model.Failure_Flag_impl,
       api_internal_failure: Isolette_Data_Model.Failure_Flag_impl,
       api_monitor_mode: Isolette_Data_Model.Monitor_Mode.Type): B =
-    compute_case_REQ_MMM_2(In_lastMonitorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure, api_monitor_mode) &
-    compute_case_REQ_MMM_3(In_lastMonitorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure, api_monitor_mode) &
-    compute_case_REQ_MMM_4(In_lastMonitorMode, api_monitor_mode)
+    {
+      val r0 = compute_case_REQ_MMM_2(In_lastMonitorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure, api_monitor_mode)
+      val r1 = compute_case_REQ_MMM_3(In_lastMonitorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure, api_monitor_mode)
+      val r2 = compute_case_REQ_MMM_4(In_lastMonitorMode, api_monitor_mode)
+
+      r0 & r1 & r2
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for manage_monitor_mode
     *
@@ -144,8 +150,10 @@ object Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mo
       api_interface_failure: Isolette_Data_Model.Failure_Flag_impl,
       api_internal_failure: Isolette_Data_Model.Failure_Flag_impl,
       api_monitor_mode: Isolette_Data_Model.Monitor_Mode.Type): B =
-    (// CEP-T-Case: case clauses of manage_monitor_mode's compute entrypoint
-     compute_CEP_T_Case (In_lastMonitorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure, api_monitor_mode))
+    {
+      // CEP-T-Case: case clauses of manage_monitor_mode's compute entrypoint
+      compute_CEP_T_Case (In_lastMonitorMode, api_current_tempWstatus, api_interface_failure, api_internal_failure, api_monitor_mode)
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for manage_monitor_mode via containers
     *

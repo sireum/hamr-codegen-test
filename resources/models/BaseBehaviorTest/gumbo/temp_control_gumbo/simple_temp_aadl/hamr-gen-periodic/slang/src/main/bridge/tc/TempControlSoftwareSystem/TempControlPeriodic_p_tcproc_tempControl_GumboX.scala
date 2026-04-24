@@ -47,8 +47,12 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
   @strictpure def initialize_IEP_Guar (
       latestFanCmd: CoolingFan.FanCmd.Type,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
-    initialize_initLatestFanCmd(latestFanCmd) &
-    initialize_initFanCmd(api_fanCmd)
+    {
+      val r0 = initialize_initLatestFanCmd(latestFanCmd)
+      val r1 = initialize_initFanCmd(api_fanCmd)
+
+      r0 & r1
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition
     *
@@ -58,8 +62,10 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
   @strictpure def inititialize_IEP_Post (
       latestFanCmd: CoolingFan.FanCmd.Type,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
-    (// IEP-Guar: Initialize Entrypoint contract for tempControl
-     initialize_IEP_Guar(latestFanCmd, api_fanCmd))
+    {
+      // IEP-Guar: Initialize Entrypoint contract for tempControl
+      initialize_IEP_Guar(latestFanCmd, api_fanCmd)
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -100,15 +106,19 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
       api_currentTemp: TempSensor.Temperature_i,
       api_fanAck: CoolingFan.FanAck.Type,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and incoming ports
-     TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp) & 
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(api_setPoint) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and incoming ports
+      val r0 = TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp)
+      val r1 = TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(api_setPoint)
 
-     // I-Assm-Guard: Integration constraints for tempControl's incoming ports
-     I_Assm_Guard_currentTemp(api_currentTemp) & 
+      // I-Assm-Guard: Integration constraints for tempControl's incoming ports
+      val r2 = I_Assm_Guard_currentTemp(api_currentTemp)
 
-     // CEP-Assm: assume clauses of tempControl's compute entrypoint
-     compute_CEP_T_Assm (In_latestFanCmd))
+      // CEP-Assm: assume clauses of tempControl's compute entrypoint
+      val r3 = compute_CEP_T_Assm (In_latestFanCmd)
+
+      r0 & r1 & r2 & r3
+    }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for tempControl via container
     *
@@ -196,9 +206,13 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
       api_currentTemp: TempSensor.Temperature_i,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
-    compute_spec_altCurrentTempLTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd) &
-    compute_spec_altCurrentTempGTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd) &
-    compute_spec_altCurrentTempInRange_guarantee(In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+    {
+      val r0 = compute_spec_altCurrentTempLTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+      val r1 = compute_spec_altCurrentTempGTSetPoint_guarantee(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+      val r2 = compute_spec_altCurrentTempInRange_guarantee(In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+
+      r0 & r1 & r2
+    }
 
   /** guarantee Refer_to_state_var_in_periodic_case_assume
     * @param In_latestFanCmd pre-state state variable
@@ -281,10 +295,14 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
       api_currentTemp: TempSensor.Temperature_i,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
-    compute_case_Refer_to_state_var_in_periodic_case_assume(In_latestFanCmd, latestFanCmd) &
-    compute_case_currentTempLTSetPoint(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd) &
-    compute_case_currentTempGTSetPoint(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd) &
-    compute_case_currentTempInRange(In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+    {
+      val r0 = compute_case_Refer_to_state_var_in_periodic_case_assume(In_latestFanCmd, latestFanCmd)
+      val r1 = compute_case_currentTempLTSetPoint(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+      val r2 = compute_case_currentTempGTSetPoint(latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+      val r3 = compute_case_currentTempInRange(In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+
+      r0 & r1 & r2 & r3
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for tempControl
     *
@@ -302,15 +320,19 @@ object TempControlPeriodic_p_tcproc_tempControl_GumboX {
       api_fanAck: CoolingFan.FanAck.Type,
       api_setPoint: TempControlSoftwareSystem.SetPoint_i,
       api_fanCmd: CoolingFan.FanCmd.Type): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and outgoing ports
-     TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp) & 
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(api_setPoint) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and outgoing ports
+      val r0 = TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp)
+      val r1 = TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(api_setPoint)
 
-     // CEP-Guar: guarantee clauses of tempControl's compute entrypoint
-     compute_CEP_T_Guar (In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd) & 
+      // CEP-Guar: guarantee clauses of tempControl's compute entrypoint
+      val r2 = compute_CEP_T_Guar (In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
 
-     // CEP-T-Case: case clauses of tempControl's compute entrypoint
-     compute_CEP_T_Case (In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd))
+      // CEP-T-Case: case clauses of tempControl's compute entrypoint
+      val r3 = compute_CEP_T_Case (In_latestFanCmd, latestFanCmd, api_currentTemp, api_setPoint, api_fanCmd)
+
+      r0 & r1 & r2 & r3
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for tempControl via containers
     *

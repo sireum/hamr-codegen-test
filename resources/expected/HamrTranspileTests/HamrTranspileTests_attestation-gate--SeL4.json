@@ -1582,20 +1582,6 @@
         }
       ],
       [
-        "microkit\/kernel\/domain_schedule.c",
-        {
-          "type" : "ITestResource",
-          "content" : "#include <config.h>\n#include <object\/structures.h>\n#include <model\/statedata.h>\n\n\/\/ this file will not be overwritten and is safe to edit\n\n\/************************************************************\n\n   This is a kernel data structure containing an example schedule.\n   The length is in seL4 ticks (2 ms). \n   This schedule should be generated from the AADL model\n   using execution time and data flow latency specifications.\n\n   Pacer runs at highest rate and should always be in domain 1\n\n   Properties from AADL Model\n   --------------------------\n\n     Timing_Properties::Clock_Period : 2 ms \n     Timing_Properties::Frame_Period : 1000 ms\n\n     flightPlanner_thread\n     --------------------\n\n       CASE_Scheduling::Domain : 3\n       Timing_Properties::Compute_Execution_Time : 10 ms\n       Timing_Properties::Period : 1000 ms\n\n     flyZoneDatabase_thread\n     ----------------------\n\n       CASE_Scheduling::Domain : 4\n       Timing_Properties::Compute_Execution_Time : 10 ms\n       Timing_Properties::Period : 1000 ms\n\n     mockWaypointManager_thread\n     --------------------------\n\n       CASE_Scheduling::Domain : 5\n       Timing_Properties::Compute_Execution_Time : 10 ms\n       Timing_Properties::Period : 1000 ms\n\n     monitor_thread\n     --------------\n\n       CASE_Scheduling::Domain : 2\n       Timing_Properties::Compute_Execution_Time : 10 ms\n       Timing_Properties::Period : 1000 ms\n\n *********************************************************\/\n\nconst dschedule_t ksDomSchedule[] = {\n  { .domain = 0, .length = 10 },\n  { .domain = 0, .length = 10 },\n  { .domain = 2, .length = 10 },\n  { .domain = 0, .length = 10 },\n  { .domain = 5, .length = 10 },\n  { .domain = 0, .length = 10 },\n  { .domain = 9, .length = 10 },\n  { .domain = 0, .length = 500 } \/\/ slow things down a bit\n};\n\nconst word_t ksDomScheduleLength = sizeof(ksDomSchedule) \/ sizeof(dschedule_t);\n",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : false,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
         "microkit\/settings.cmake",
         {
           "type" : "ITestResource",
@@ -1632,6 +1618,20 @@
           ],
           "invertMarkers" : false,
           "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/kernel\/domain_schedule.c",
+        {
+          "type" : "ITestResource",
+          "content" : "#include <config.h>\n#include <object\/structures.h>\n#include <model\/statedata.h>\n\n\/\/ this file will not be overwritten and is safe to edit\n\n\/************************************************************\n\n   This is a kernel data structure containing an example schedule.\n   The length is in seL4 ticks (2 ms). \n   This schedule should be generated from the AADL model\n   using execution time and data flow latency specifications.\n\n   Pacer runs at highest rate and should always be in domain 1\n\n   Properties from AADL Model\n   --------------------------\n\n     Timing_Properties::Clock_Period : 2 ms \n     Timing_Properties::Frame_Period : 1000 ms\n\n     flightPlanner_thread\n     --------------------\n\n       CASE_Scheduling::Domain : 3\n       Timing_Properties::Compute_Execution_Time : 10 ms\n       Timing_Properties::Period : 1000 ms\n\n     flyZoneDatabase_thread\n     ----------------------\n\n       CASE_Scheduling::Domain : 4\n       Timing_Properties::Compute_Execution_Time : 10 ms\n       Timing_Properties::Period : 1000 ms\n\n     mockWaypointManager_thread\n     --------------------------\n\n       CASE_Scheduling::Domain : 5\n       Timing_Properties::Compute_Execution_Time : 10 ms\n       Timing_Properties::Period : 1000 ms\n\n     monitor_thread\n     --------------\n\n       CASE_Scheduling::Domain : 2\n       Timing_Properties::Compute_Execution_Time : 10 ms\n       Timing_Properties::Period : 1000 ms\n\n *********************************************************\/\n\nconst dschedule_t ksDomSchedule[] = {\n  { .domain = 0, .length = 10 },\n  { .domain = 0, .length = 10 },\n  { .domain = 2, .length = 10 },\n  { .domain = 0, .length = 10 },\n  { .domain = 5, .length = 10 },\n  { .domain = 0, .length = 10 },\n  { .domain = 9, .length = 10 },\n  { .domain = 0, .length = 500 } \/\/ slow things down a bit\n};\n\nconst word_t ksDomScheduleLength = sizeof(ksDomSchedule) \/ sizeof(dschedule_t);\n",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "isDatatype" : false

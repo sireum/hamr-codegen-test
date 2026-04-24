@@ -26,6 +26,10 @@ import tc.RandomLib
   def api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
   def api_fanAck: RandomLib // random lib for generating CoolingFan.FanAck
   def api_setPoint: RandomLib // random lib for generating TempControlSoftwareSystem.SetPoint_i
+
+  def update_api_currentTemp(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_P_Trait
+  def update_api_fanAck(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_P_Trait
+  def update_api_setPoint(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_P_Trait
 }
 
 @record class TempControlPeriodic_p_tcproc_tempControl_Profile_P(
@@ -41,6 +45,18 @@ import tc.RandomLib
       api_fanAck = api_fanAck.nextCoolingFanFanAckType(),
       api_setPoint = api_setPoint.nextTempControlSoftwareSystemSetPoint_i()))
   }
+
+  override def update_api_currentTemp(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_P_Trait = {
+    return this(api_currentTemp = v)
+  }
+
+  override def update_api_fanAck(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_P_Trait = {
+    return this(api_fanAck = v)
+  }
+
+  override def update_api_setPoint(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_P_Trait = {
+    return this(api_setPoint = v)
+  }
 }
 
 // Profile with generators for state variables and incoming ports
@@ -49,6 +65,11 @@ import tc.RandomLib
   def api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
   def api_fanAck: RandomLib // random lib for generating CoolingFan.FanAck
   def api_setPoint: RandomLib // random lib for generating TempControlSoftwareSystem.SetPoint_i
+
+  def update_In_latestFanCmd(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait
+  def update_api_currentTemp(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait
+  def update_api_fanAck(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait
+  def update_api_setPoint(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait
 }
 
 @record class TempControlPeriodic_p_tcproc_tempControl_Profile_PS(
@@ -65,5 +86,21 @@ import tc.RandomLib
       api_currentTemp = api_currentTemp.nextTempSensorTemperature_i(),
       api_fanAck = api_fanAck.nextCoolingFanFanAckType(),
       api_setPoint = api_setPoint.nextTempControlSoftwareSystemSetPoint_i()))
+  }
+
+  override def update_In_latestFanCmd(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait = {
+    return this(In_latestFanCmd = v)
+  }
+
+  override def update_api_currentTemp(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait = {
+    return this(api_currentTemp = v)
+  }
+
+  override def update_api_fanAck(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait = {
+    return this(api_fanAck = v)
+  }
+
+  override def update_api_setPoint(v: RandomLib): TempControlPeriodic_p_tcproc_tempControl_Profile_PS_Trait = {
+    return this(api_setPoint = v)
   }
 }

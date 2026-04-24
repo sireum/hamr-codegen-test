@@ -7,6 +7,10 @@ import org.sireum.hamr.codegen.test.util.{TestMode, TestUtil}
 
 class BaseBehaviorTestStatic extends CodegenBehaviorTest {
 
+  override def disablePhantom: B = F || super.disablePhantom // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
+
+  override def justRegenerate: B = F || super.justRegenerate
+
   // set base directory for AADL models to be used in behavior tests
   val modelsDirs = TestUtil.getRootDirectory(getClass) / "resources" / "models"
 

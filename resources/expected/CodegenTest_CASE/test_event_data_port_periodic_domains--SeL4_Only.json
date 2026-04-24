@@ -46,34 +46,6 @@
         }
       ],
       [
-        "microkit\/components\/emitter_t_impl_src_process_src_thread\/src\/emitter.c",
-        {
-          "type" : "ITestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_types.h>\n#include <sb_emitter_t_impl.h>\n\nstatic int8_t _value;\n\nvoid test_event_data_port_emitter_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_data_port_emitter_component_init called\\n\", get_instance_name());\n  _value = 0;\n}\n\nvoid test_event_data_port_emitter_time_triggered_handler(const int64_t *in_arg) {\n  printf(\"---------------------------------------\\n\");\n  if (sb_write_port_enqueue( &_value ) ) {\n    printf(\"[%s] Sent %d\\n\", get_instance_name(), _value);\n    _value = (_value + 1) % 500;\n  } else {\n    printf(\"[%s] Unable to send\\n\", get_instance_name());\n  }\n}\n",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
-        "microkit\/components\/consumer_t_impl_dst_process_dst_thread\/src\/consumer.c",
-        {
-          "type" : "ITestResource",
-          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_types.h>\n#include <sb_consumer_t_impl.h>\n\nvoid test_event_data_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_data_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_data_port_consumer_time_triggered_handler(const int64_t * in_arg) {\n  int8_t value;\n\n  \/\/ dequeue event data port\n  while(sb_read_port_dequeue(&value)) {\n    printf(\"[%s] value {%d}\\n\", get_instance_name(), value);\n  }\n}\n",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : true,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
         "microkit\/CMakeLists.txt",
         {
           "type" : "ITestResource",
@@ -214,20 +186,6 @@
         }
       ],
       [
-        "microkit\/kernel\/domain_schedule.c",
-        {
-          "type" : "ITestResource",
-          "content" : "\/\/ Copyright 2020 Adventium Labs\n\n\/\/ This is a kernel data structure.\n\n#include <config.h>\n#include <object\/structures.h>\n#include <model\/statedata.h>\n\n\/\/ An arbitrary hand generated schedule. The length is in seL4 ticks\n\/\/ (2 ms default). This schedule should be generated from the AADL model\n\/\/ using execution time and data flow latency specifications.\n\/\/\n\/\/ Pacer runs at highest rate\n\/\/\n\/\/ This schedule is single-rate, 1Hz, run each thread at 200ms ticks for simplicity.\n\/\/ Fill space in with domain 0.\n\/\/\n\/\/         +\n\/\/ 3 dest  |        -              -              -              -      \n\/\/ 2 src   |     -              -              -              -         \n\/\/ 1 pacer |  -              -              -              -            \n\/\/ 0 dom0  |-- -- -- -------- -- -- -------- -- -- -------- -- -- ------\n\/\/         |______________|______________________________________________\\time\n\/\/           seconds      1              2              3              4 \/\n\/\/\n\/\/ Major frame is 1 seconds, since destination has 1 second period\n\/\/\nconst dschedule_t ksDomSchedule[] = { \/\/ (1 tick == 2ms)\n    { .domain = 0, .length = 100 }, \/\/ all other seL4 threads, init, 200ms\n    { .domain = 1, .length =   5 }, \/\/ pacer        10ms\n    { .domain = 0, .length =  95 }, \/\/ domain0     190ms\n    { .domain = 2, .length =   5 }, \/\/ source       10ms\n    { .domain = 0, .length =  95 }, \/\/ domain0     190ms\n    { .domain = 3, .length =   5 }, \/\/ destination  10ms\n    { .domain = 0, .length = 195 }, \/\/ domain0     390ms\n};\n\nconst word_t ksDomScheduleLength = sizeof(ksDomSchedule) \/ sizeof(dschedule_t);\n",
-          "markers" : [
-          ],
-          "invertMarkers" : false,
-          "overwrite" : false,
-          "makeExecutable" : false,
-          "makeCRLF" : false,
-          "isDatatype" : false
-        }
-      ],
-      [
         "microkit\/settings.cmake",
         {
           "type" : "ITestResource",
@@ -264,6 +222,48 @@
           ],
           "invertMarkers" : false,
           "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/components\/emitter_t_impl_src_process_src_thread\/src\/emitter.c",
+        {
+          "type" : "ITestResource",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_types.h>\n#include <sb_emitter_t_impl.h>\n\nstatic int8_t _value;\n\nvoid test_event_data_port_emitter_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_data_port_emitter_component_init called\\n\", get_instance_name());\n  _value = 0;\n}\n\nvoid test_event_data_port_emitter_time_triggered_handler(const int64_t *in_arg) {\n  printf(\"---------------------------------------\\n\");\n  if (sb_write_port_enqueue( &_value ) ) {\n    printf(\"[%s] Sent %d\\n\", get_instance_name(), _value);\n    _value = (_value + 1) % 500;\n  } else {\n    printf(\"[%s] Unable to send\\n\", get_instance_name());\n  }\n}\n",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/components\/consumer_t_impl_dst_process_dst_thread\/src\/consumer.c",
+        {
+          "type" : "ITestResource",
+          "content" : "#include <camkes.h>\n#include <stdio.h>\n#include <sb_types.h>\n#include <sb_consumer_t_impl.h>\n\nvoid test_event_data_port_consumer_component_init(const int64_t *in_arg) {\n  printf(\"[%s] test_event_data_port_consumer_component_init called\\n\", get_instance_name());\n}\n\nvoid test_event_data_port_consumer_time_triggered_handler(const int64_t * in_arg) {\n  int8_t value;\n\n  \/\/ dequeue event data port\n  while(sb_read_port_dequeue(&value)) {\n    printf(\"[%s] value {%d}\\n\", get_instance_name(), value);\n  }\n}\n",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : true,
+          "makeExecutable" : false,
+          "makeCRLF" : false,
+          "isDatatype" : false
+        }
+      ],
+      [
+        "microkit\/kernel\/domain_schedule.c",
+        {
+          "type" : "ITestResource",
+          "content" : "\/\/ Copyright 2020 Adventium Labs\n\n\/\/ This is a kernel data structure.\n\n#include <config.h>\n#include <object\/structures.h>\n#include <model\/statedata.h>\n\n\/\/ An arbitrary hand generated schedule. The length is in seL4 ticks\n\/\/ (2 ms default). This schedule should be generated from the AADL model\n\/\/ using execution time and data flow latency specifications.\n\/\/\n\/\/ Pacer runs at highest rate\n\/\/\n\/\/ This schedule is single-rate, 1Hz, run each thread at 200ms ticks for simplicity.\n\/\/ Fill space in with domain 0.\n\/\/\n\/\/         +\n\/\/ 3 dest  |        -              -              -              -      \n\/\/ 2 src   |     -              -              -              -         \n\/\/ 1 pacer |  -              -              -              -            \n\/\/ 0 dom0  |-- -- -- -------- -- -- -------- -- -- -------- -- -- ------\n\/\/         |______________|______________________________________________\\time\n\/\/           seconds      1              2              3              4 \/\n\/\/\n\/\/ Major frame is 1 seconds, since destination has 1 second period\n\/\/\nconst dschedule_t ksDomSchedule[] = { \/\/ (1 tick == 2ms)\n    { .domain = 0, .length = 100 }, \/\/ all other seL4 threads, init, 200ms\n    { .domain = 1, .length =   5 }, \/\/ pacer        10ms\n    { .domain = 0, .length =  95 }, \/\/ domain0     190ms\n    { .domain = 2, .length =   5 }, \/\/ source       10ms\n    { .domain = 0, .length =  95 }, \/\/ domain0     190ms\n    { .domain = 3, .length =   5 }, \/\/ destination  10ms\n    { .domain = 0, .length = 195 }, \/\/ domain0     390ms\n};\n\nconst word_t ksDomScheduleLength = sizeof(ksDomSchedule) \/ sizeof(dschedule_t);\n",
+          "markers" : [
+          ],
+          "invertMarkers" : false,
+          "overwrite" : false,
           "makeExecutable" : false,
           "makeCRLF" : false,
           "isDatatype" : false

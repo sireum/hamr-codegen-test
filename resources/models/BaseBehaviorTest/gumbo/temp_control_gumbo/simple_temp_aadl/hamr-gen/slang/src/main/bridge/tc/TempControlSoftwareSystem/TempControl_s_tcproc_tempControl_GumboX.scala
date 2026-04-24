@@ -59,9 +59,13 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    initialize_defautSetPoint(currentSetPoint) &
-    initialize_defaultFanStates(currentFanState) &
-    initialize_defaultLatestTemp(latestTemp)
+    {
+      val r0 = initialize_defautSetPoint(currentSetPoint)
+      val r1 = initialize_defaultFanStates(currentFanState)
+      val r2 = initialize_defaultLatestTemp(latestTemp)
+
+      r0 & r1 & r2
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition
     *
@@ -75,12 +79,16 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and outgoing ports
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(currentSetPoint) &
-     TempSensor.Temperature_i.D_Inv_Temperature_i(latestTemp) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and outgoing ports
+      val r0 = TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(currentSetPoint)
+      val r1 = TempSensor.Temperature_i.D_Inv_Temperature_i(latestTemp)
 
-     // IEP-Guar: Initialize Entrypoint contract for tempControl
-     initialize_IEP_Guar(currentFanState, currentSetPoint, latestTemp, api_fanCmd))
+      // IEP-Guar: Initialize Entrypoint contract for tempControl
+      val r2 = initialize_IEP_Guar(currentFanState, currentSetPoint, latestTemp, api_fanCmd)
+
+      r0 & r1 & r2
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -153,10 +161,14 @@ object TempControl_s_tcproc_tempControl_GumboX {
       In_currentFanState: CoolingFan.FanCmd.Type,
       In_currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       In_latestTemp: TempSensor.Temperature_i): B =
-    compute_spec_a1_assume(In_currentFanState, In_currentSetPoint, In_latestTemp) &
-    compute_spec_a2_assume(In_currentFanState, In_currentSetPoint, In_latestTemp) &
-    compute_spec_Test_assume() &
-    compute_spec_Refer_to_state_var_in_sporadic_general_assume_assume(In_currentSetPoint)
+    {
+      val r0 = compute_spec_a1_assume(In_currentFanState, In_currentSetPoint, In_latestTemp)
+      val r1 = compute_spec_a2_assume(In_currentFanState, In_currentSetPoint, In_latestTemp)
+      val r2 = compute_spec_Test_assume()
+      val r3 = compute_spec_Refer_to_state_var_in_sporadic_general_assume_assume(In_currentSetPoint)
+
+      r0 & r1 & r2 & r3
+    }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for tempControl
     *
@@ -176,17 +188,21 @@ object TempControl_s_tcproc_tempControl_GumboX {
       api_fanAck: Option[CoolingFan.FanAck.Type],
       api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i],
       api_currentTemp: TempSensor.Temperature_i): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and incoming ports
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(In_currentSetPoint) & 
-     TempSensor.Temperature_i.D_Inv_Temperature_i(In_latestTemp) & 
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_Guard_SetPoint_i(api_setPoint) & 
-     TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and incoming ports
+      val r0 = TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(In_currentSetPoint)
+      val r1 = TempSensor.Temperature_i.D_Inv_Temperature_i(In_latestTemp)
+      val r2 = TempControlSoftwareSystem.SetPoint_i.D_Inv_Guard_SetPoint_i(api_setPoint)
+      val r3 = TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp)
 
-     // I-Assm-Guard: Integration constraints for tempControl's incoming ports
-     I_Assm_Guard_currentTemp(api_currentTemp) & 
+      // I-Assm-Guard: Integration constraints for tempControl's incoming ports
+      val r4 = I_Assm_Guard_currentTemp(api_currentTemp)
 
-     // CEP-Assm: assume clauses of tempControl's compute entrypoint
-     compute_CEP_T_Assm (In_currentFanState, In_currentSetPoint, In_latestTemp))
+      // CEP-Assm: assume clauses of tempControl's compute entrypoint
+      val r5 = compute_CEP_T_Assm (In_currentFanState, In_currentSetPoint, In_latestTemp)
+
+      r0 & r1 & r2 & r3 & r4 & r5
+    }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for tempControl via container
     *
@@ -288,10 +304,14 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    compute_spec_TC_Req_01_guarantee(currentFanState, currentSetPoint, latestTemp) &
-    compute_spec_TC_Req_02_guarantee(currentFanState, currentSetPoint, latestTemp) &
-    compute_spec_TC_Req_03_guarantee(In_currentFanState, currentFanState, currentSetPoint, latestTemp) &
-    compute_spec_mustSendFanCmd_guarantee(In_currentFanState, currentFanState, api_fanCmd)
+    {
+      val r0 = compute_spec_TC_Req_01_guarantee(currentFanState, currentSetPoint, latestTemp)
+      val r1 = compute_spec_TC_Req_02_guarantee(currentFanState, currentSetPoint, latestTemp)
+      val r2 = compute_spec_TC_Req_03_guarantee(In_currentFanState, currentFanState, currentSetPoint, latestTemp)
+      val r3 = compute_spec_mustSendFanCmd_guarantee(In_currentFanState, currentFanState, api_fanCmd)
+
+      r0 & r1 & r2 & r3
+    }
 
   /** Compute Entrypoint Contract for setPoint's setPointChanged guarantee clause
     *
@@ -328,8 +348,12 @@ object TempControl_s_tcproc_tempControl_GumboX {
       latestTemp: TempSensor.Temperature_i,
       api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i]): B =
     api_setPoint.nonEmpty ___>: (
-      compute_handle_setPoint_setPointChanged_guarantee(currentSetPoint, api_setPoint) &
-      compute_handle_setPoint_latestTempNotModified_guarantee(In_latestTemp, latestTemp))
+      {
+        val r0 = compute_handle_setPoint_setPointChanged_guarantee(currentSetPoint, api_setPoint)
+        val r1 = compute_handle_setPoint_latestTempNotModified_guarantee(In_latestTemp, latestTemp)
+
+        r0 & r1
+      })
 
   /** Compute Entrypoint Contract for tempChanged's tempChanged guarantee clause
     *
@@ -368,8 +392,12 @@ object TempControl_s_tcproc_tempControl_GumboX {
       api_tempChanged: Option[art.Empty],
       api_currentTemp: TempSensor.Temperature_i): B =
     api_tempChanged.nonEmpty ___>: (
-      compute_handle_tempChanged_tempChanged_guarantee(latestTemp, api_currentTemp) &
-      compute_handle_tempChanged_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint))
+      {
+        val r0 = compute_handle_tempChanged_tempChanged_guarantee(latestTemp, api_currentTemp)
+        val r1 = compute_handle_tempChanged_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint)
+
+        r0 & r1
+      })
 
   /** Compute Entrypoint Contract for fanAck's setPointNotModified guarantee clause
     *
@@ -434,10 +462,14 @@ object TempControl_s_tcproc_tempControl_GumboX {
       api_fanAck: Option[CoolingFan.FanAck.Type],
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
     api_fanAck.nonEmpty ___>: (
-      compute_handle_fanAck_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint) &
-      compute_handle_fanAck_lastTempNotModified_guarantee(In_latestTemp, latestTemp) &
-      compute_handle_fanAck_currentFanState_guarantee(In_currentFanState, currentFanState) &
-      compute_handle_fanAck_noEventsSent_guarantee(api_fanCmd))
+      {
+        val r0 = compute_handle_fanAck_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint)
+        val r1 = compute_handle_fanAck_lastTempNotModified_guarantee(In_latestTemp, latestTemp)
+        val r2 = compute_handle_fanAck_currentFanState_guarantee(In_currentFanState, currentFanState)
+        val r3 = compute_handle_fanAck_noEventsSent_guarantee(api_fanCmd)
+
+        r0 & r1 & r2 & r3
+      })
 
   /** CEP-Post: Compute Entrypoint Post-Condition for tempControl
     *
@@ -465,21 +497,25 @@ object TempControl_s_tcproc_tempControl_GumboX {
       api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i],
       api_currentTemp: TempSensor.Temperature_i,
       api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    (// D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and outgoing ports
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(In_currentSetPoint) & 
-     TempSensor.Temperature_i.D_Inv_Temperature_i(In_latestTemp) & 
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(currentSetPoint) & 
-     TempSensor.Temperature_i.D_Inv_Temperature_i(latestTemp) & 
-     TempControlSoftwareSystem.SetPoint_i.D_Inv_Guard_SetPoint_i(api_setPoint) & 
-     TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp) & 
+    {
+      // D-Inv-Guard: Datatype invariants for the types associated with tempControl's state variables and outgoing ports
+      val r0 = TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(In_currentSetPoint)
+      val r1 = TempSensor.Temperature_i.D_Inv_Temperature_i(In_latestTemp)
+      val r2 = TempControlSoftwareSystem.SetPoint_i.D_Inv_SetPoint_i(currentSetPoint)
+      val r3 = TempSensor.Temperature_i.D_Inv_Temperature_i(latestTemp)
+      val r4 = TempControlSoftwareSystem.SetPoint_i.D_Inv_Guard_SetPoint_i(api_setPoint)
+      val r5 = TempSensor.Temperature_i.D_Inv_Temperature_i(api_currentTemp)
 
-     // CEP-Guar: guarantee clauses of tempControl's compute entrypoint
-     compute_CEP_T_Guar (In_currentFanState, currentFanState, currentSetPoint, latestTemp, api_fanCmd) & 
+      // CEP-Guar: guarantee clauses of tempControl's compute entrypoint
+      val r6 = compute_CEP_T_Guar (In_currentFanState, currentFanState, currentSetPoint, latestTemp, api_fanCmd)
 
-     // CEP-T-Handlers: handler clauses of tempControl's compute entrypoint
-     compute_CEP_Handler_setPoint_Guar (In_latestTemp, currentSetPoint, latestTemp, api_setPoint) & 
-     compute_CEP_Handler_tempChanged_Guar (In_currentSetPoint, currentSetPoint, latestTemp, api_tempChanged, api_currentTemp) & 
-     compute_CEP_Handler_fanAck_Guar (In_currentFanState, In_currentSetPoint, In_latestTemp, currentFanState, currentSetPoint, latestTemp, api_fanAck, api_fanCmd))
+      // CEP-T-Handlers: handler clauses of tempControl's compute entrypoint
+      val r7 = compute_CEP_Handler_setPoint_Guar (In_latestTemp, currentSetPoint, latestTemp, api_setPoint)
+      val r8 = compute_CEP_Handler_tempChanged_Guar (In_currentSetPoint, currentSetPoint, latestTemp, api_tempChanged, api_currentTemp)
+      val r9 = compute_CEP_Handler_fanAck_Guar (In_currentFanState, In_currentSetPoint, In_latestTemp, currentFanState, currentSetPoint, latestTemp, api_fanAck, api_fanCmd)
+
+      r0 & r1 & r2 & r3 & r4 & r5 & r6 & r7 & r8 & r9
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for tempControl via containers
     *

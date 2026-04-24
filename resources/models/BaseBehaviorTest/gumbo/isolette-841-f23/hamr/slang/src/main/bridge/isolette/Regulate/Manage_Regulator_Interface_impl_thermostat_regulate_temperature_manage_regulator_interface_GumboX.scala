@@ -46,8 +46,10 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
       api_lower_desired_temp: Isolette_Data_Model.Temp_impl,
       api_regulator_status: Isolette_Data_Model.Status.Type,
       api_upper_desired_temp: Isolette_Data_Model.Temp_impl): B =
-    (// IEP-Guar: Initialize Entrypoint contract for manage_regulator_interface
-     initialize_IEP_Guar(api_displayed_temp, api_interface_failure, api_lower_desired_temp, api_regulator_status, api_upper_desired_temp))
+    {
+      // IEP-Guar: Initialize Entrypoint contract for manage_regulator_interface
+      initialize_IEP_Guar(api_displayed_temp, api_interface_failure, api_lower_desired_temp, api_regulator_status, api_upper_desired_temp)
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -94,8 +96,10 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
       api_lower_desired_tempWstatus: Isolette_Data_Model.TempWstatus_impl,
       api_regulator_mode: Isolette_Data_Model.Regulator_Mode.Type,
       api_upper_desired_tempWstatus: Isolette_Data_Model.TempWstatus_impl): B =
-    (// CEP-Assm: assume clauses of manage_regulator_interface's compute entrypoint
-     compute_CEP_T_Assm (api_lower_desired_tempWstatus, api_upper_desired_tempWstatus))
+    {
+      // CEP-Assm: assume clauses of manage_regulator_interface's compute entrypoint
+      compute_CEP_T_Assm (api_lower_desired_tempWstatus, api_upper_desired_tempWstatus)
+    }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for manage_regulator_interface via container
     *
@@ -258,15 +262,19 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
       api_lower_desired_temp: Isolette_Data_Model.Temp_impl,
       api_regulator_status: Isolette_Data_Model.Status.Type,
       api_upper_desired_temp: Isolette_Data_Model.Temp_impl): B =
-    compute_case_REQ_MRI_1(api_regulator_mode, api_regulator_status) &
-    compute_case_REQ_MRI_2(api_regulator_mode, api_regulator_status) &
-    compute_case_REQ_MRI_3(api_regulator_mode, api_regulator_status) &
-    compute_case_REQ_MRI_4(api_current_tempWstatus, api_regulator_mode, api_displayed_temp) &
-    compute_case_REQ_MRI_5() &
-    compute_case_REQ_MRI_6(api_upper_desired_tempWstatus, api_interface_failure) &
-    compute_case_REQ_MRI_7(api_lower_desired_tempWstatus, api_upper_desired_tempWstatus, api_interface_failure) &
-    compute_case_REQ_MRI_8(api_lower_desired_tempWstatus, api_upper_desired_tempWstatus, api_interface_failure, api_lower_desired_temp, api_upper_desired_temp) &
-    compute_case_REQ_MRI_9()
+    {
+      val r0 = compute_case_REQ_MRI_1(api_regulator_mode, api_regulator_status)
+      val r1 = compute_case_REQ_MRI_2(api_regulator_mode, api_regulator_status)
+      val r2 = compute_case_REQ_MRI_3(api_regulator_mode, api_regulator_status)
+      val r3 = compute_case_REQ_MRI_4(api_current_tempWstatus, api_regulator_mode, api_displayed_temp)
+      val r4 = compute_case_REQ_MRI_5()
+      val r5 = compute_case_REQ_MRI_6(api_upper_desired_tempWstatus, api_interface_failure)
+      val r6 = compute_case_REQ_MRI_7(api_lower_desired_tempWstatus, api_upper_desired_tempWstatus, api_interface_failure)
+      val r7 = compute_case_REQ_MRI_8(api_lower_desired_tempWstatus, api_upper_desired_tempWstatus, api_interface_failure, api_lower_desired_temp, api_upper_desired_temp)
+      val r8 = compute_case_REQ_MRI_9()
+
+      r0 & r1 & r2 & r3 & r4 & r5 & r6 & r7 & r8
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for manage_regulator_interface
     *
@@ -290,8 +298,10 @@ object Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_re
       api_lower_desired_temp: Isolette_Data_Model.Temp_impl,
       api_regulator_status: Isolette_Data_Model.Status.Type,
       api_upper_desired_temp: Isolette_Data_Model.Temp_impl): B =
-    (// CEP-T-Case: case clauses of manage_regulator_interface's compute entrypoint
-     compute_CEP_T_Case (api_current_tempWstatus, api_lower_desired_tempWstatus, api_regulator_mode, api_upper_desired_tempWstatus, api_displayed_temp, api_interface_failure, api_lower_desired_temp, api_regulator_status, api_upper_desired_temp))
+    {
+      // CEP-T-Case: case clauses of manage_regulator_interface's compute entrypoint
+      compute_CEP_T_Case (api_current_tempWstatus, api_lower_desired_tempWstatus, api_regulator_mode, api_upper_desired_tempWstatus, api_displayed_temp, api_interface_failure, api_lower_desired_temp, api_regulator_status, api_upper_desired_temp)
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for manage_regulator_interface via containers
     *

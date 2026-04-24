@@ -27,6 +27,11 @@ import prod_cons__JVM.RandomLib
   def api_b_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_c_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_a_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
+
+  def update_api_d_event_in(v: RandomLib): Filter_s_p_filters_Profile_P_Trait
+  def update_api_b_event_data_in(v: RandomLib): Filter_s_p_filters_Profile_P_Trait
+  def update_api_c_event_data_in(v: RandomLib): Filter_s_p_filters_Profile_P_Trait
+  def update_api_a_data_in(v: RandomLib): Filter_s_p_filters_Profile_P_Trait
 }
 
 @record class Filter_s_p_filters_Profile_P(
@@ -44,6 +49,22 @@ import prod_cons__JVM.RandomLib
       api_c_event_data_in = api_c_event_data_in.nextOptionProdConsFlowsContainer_i(),
       api_a_data_in = api_a_data_in.nextProdConsFlowsContainer_i()))
   }
+
+  override def update_api_d_event_in(v: RandomLib): Filter_s_p_filters_Profile_P_Trait = {
+    return this(api_d_event_in = v)
+  }
+
+  override def update_api_b_event_data_in(v: RandomLib): Filter_s_p_filters_Profile_P_Trait = {
+    return this(api_b_event_data_in = v)
+  }
+
+  override def update_api_c_event_data_in(v: RandomLib): Filter_s_p_filters_Profile_P_Trait = {
+    return this(api_c_event_data_in = v)
+  }
+
+  override def update_api_a_data_in(v: RandomLib): Filter_s_p_filters_Profile_P_Trait = {
+    return this(api_a_data_in = v)
+  }
 }
 
 // Profile with generators for state variables and incoming ports
@@ -52,6 +73,11 @@ import prod_cons__JVM.RandomLib
   def api_b_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_c_event_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
   def api_a_data_in: RandomLib // random lib for generating ProdConsFlows.Container_i
+
+  def update_api_d_event_in(v: RandomLib): Filter_s_p_filters_Profile_PS_Trait
+  def update_api_b_event_data_in(v: RandomLib): Filter_s_p_filters_Profile_PS_Trait
+  def update_api_c_event_data_in(v: RandomLib): Filter_s_p_filters_Profile_PS_Trait
+  def update_api_a_data_in(v: RandomLib): Filter_s_p_filters_Profile_PS_Trait
 }
 
 @record class Filter_s_p_filters_Profile_PS(
@@ -68,5 +94,21 @@ import prod_cons__JVM.RandomLib
       api_b_event_data_in = api_b_event_data_in.nextOptionProdConsFlowsContainer_i(),
       api_c_event_data_in = api_c_event_data_in.nextOptionProdConsFlowsContainer_i(),
       api_a_data_in = api_a_data_in.nextProdConsFlowsContainer_i()))
+  }
+
+  override def update_api_d_event_in(v: RandomLib): Filter_s_p_filters_Profile_PS_Trait = {
+    return this(api_d_event_in = v)
+  }
+
+  override def update_api_b_event_data_in(v: RandomLib): Filter_s_p_filters_Profile_PS_Trait = {
+    return this(api_b_event_data_in = v)
+  }
+
+  override def update_api_c_event_data_in(v: RandomLib): Filter_s_p_filters_Profile_PS_Trait = {
+    return this(api_c_event_data_in = v)
+  }
+
+  override def update_api_a_data_in(v: RandomLib): Filter_s_p_filters_Profile_PS_Trait = {
+    return this(api_a_data_in = v)
   }
 }

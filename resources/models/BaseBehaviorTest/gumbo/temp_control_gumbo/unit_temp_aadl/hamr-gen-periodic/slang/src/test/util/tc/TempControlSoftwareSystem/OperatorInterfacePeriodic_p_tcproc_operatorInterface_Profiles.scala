@@ -24,6 +24,8 @@ import tc.RandomLib
 // Profile with generators for incoming ports
 @msig trait OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P_Trait extends Profile {
   def api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
+
+  def update_api_currentTemp(v: RandomLib): OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P_Trait
 }
 
 @record class OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P(
@@ -35,11 +37,17 @@ import tc.RandomLib
     return (OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_P (
       api_currentTemp = api_currentTemp.nextTempSensorTemperature_i()))
   }
+
+  override def update_api_currentTemp(v: RandomLib): OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P_Trait = {
+    return this(api_currentTemp = v)
+  }
 }
 
 // Profile with generators for state variables and incoming ports
 @msig trait OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_PS_Trait extends OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_P_Trait {
   def api_currentTemp: RandomLib // random lib for generating TempSensor.Temperature_i
+
+  def update_api_currentTemp(v: RandomLib): OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_PS_Trait
 }
 
 @record class OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_PS(
@@ -50,5 +58,9 @@ import tc.RandomLib
   override def next: OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_PS = {
     return (OperatorInterfacePeriodic_p_tcproc_operatorInterface_PreState_Container_PS (
       api_currentTemp = api_currentTemp.nextTempSensorTemperature_i()))
+  }
+
+  override def update_api_currentTemp(v: RandomLib): OperatorInterfacePeriodic_p_tcproc_operatorInterface_Profile_PS_Trait = {
+    return this(api_currentTemp = v)
   }
 }

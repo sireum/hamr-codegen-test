@@ -40,8 +40,10 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX {
   @strictpure def inititialize_IEP_Post (
       lastCmd: Isolette_Data_Model.On_Off.Type,
       api_alarm_control: Isolette_Data_Model.On_Off.Type): B =
-    (// IEP-Guar: Initialize Entrypoint contract for manage_alarm
-     initialize_IEP_Guar(lastCmd, api_alarm_control))
+    {
+      // IEP-Guar: Initialize Entrypoint contract for manage_alarm
+      initialize_IEP_Guar(lastCmd, api_alarm_control)
+    }
 
   /** IEP-Post: Initialize Entrypoint Post-Condition via container
     *
@@ -99,9 +101,13 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX {
   @strictpure def compute_CEP_T_Assm (
       api_lower_alarm_temp: Isolette_Data_Model.Temp_impl,
       api_upper_alarm_temp: Isolette_Data_Model.Temp_impl): B =
-    compute_spec_Figure_A_7_assume(api_lower_alarm_temp, api_upper_alarm_temp) &
-    compute_spec_Table_A_12_LowerAlarmTemp_assume(api_lower_alarm_temp) &
-    compute_spec_Table_A_12_UpperAlarmTemp_assume(api_upper_alarm_temp)
+    {
+      val r0 = compute_spec_Figure_A_7_assume(api_lower_alarm_temp, api_upper_alarm_temp)
+      val r1 = compute_spec_Table_A_12_LowerAlarmTemp_assume(api_lower_alarm_temp)
+      val r2 = compute_spec_Table_A_12_UpperAlarmTemp_assume(api_upper_alarm_temp)
+
+      r0 & r1 & r2
+    }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for manage_alarm
     *
@@ -117,8 +123,10 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX {
       api_lower_alarm_temp: Isolette_Data_Model.Temp_impl,
       api_monitor_mode: Isolette_Data_Model.Monitor_Mode.Type,
       api_upper_alarm_temp: Isolette_Data_Model.Temp_impl): B =
-    (// CEP-Assm: assume clauses of manage_alarm's compute entrypoint
-     compute_CEP_T_Assm (api_lower_alarm_temp, api_upper_alarm_temp))
+    {
+      // CEP-Assm: assume clauses of manage_alarm's compute entrypoint
+      compute_CEP_T_Assm (api_lower_alarm_temp, api_upper_alarm_temp)
+    }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for manage_alarm via container
     *
@@ -265,11 +273,15 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX {
       api_monitor_mode: Isolette_Data_Model.Monitor_Mode.Type,
       api_upper_alarm_temp: Isolette_Data_Model.Temp_impl,
       api_alarm_control: Isolette_Data_Model.On_Off.Type): B =
-    compute_case_REQ_MA_1(lastCmd, api_monitor_mode, api_alarm_control) &
-    compute_case_REQ_MA_2(lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp, api_alarm_control) &
-    compute_case_REQ_MA_3(In_lastCmd, lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp, api_alarm_control) &
-    compute_case_REQ_MA_4(lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp, api_alarm_control) &
-    compute_case_REQ_MA_5(lastCmd, api_monitor_mode, api_alarm_control)
+    {
+      val r0 = compute_case_REQ_MA_1(lastCmd, api_monitor_mode, api_alarm_control)
+      val r1 = compute_case_REQ_MA_2(lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp, api_alarm_control)
+      val r2 = compute_case_REQ_MA_3(In_lastCmd, lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp, api_alarm_control)
+      val r3 = compute_case_REQ_MA_4(lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp, api_alarm_control)
+      val r4 = compute_case_REQ_MA_5(lastCmd, api_monitor_mode, api_alarm_control)
+
+      r0 & r1 & r2 & r3 & r4
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for manage_alarm
     *
@@ -289,8 +301,10 @@ object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_GumboX {
       api_monitor_mode: Isolette_Data_Model.Monitor_Mode.Type,
       api_upper_alarm_temp: Isolette_Data_Model.Temp_impl,
       api_alarm_control: Isolette_Data_Model.On_Off.Type): B =
-    (// CEP-T-Case: case clauses of manage_alarm's compute entrypoint
-     compute_CEP_T_Case (In_lastCmd, lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp, api_alarm_control))
+    {
+      // CEP-T-Case: case clauses of manage_alarm's compute entrypoint
+      compute_CEP_T_Case (In_lastCmd, lastCmd, api_current_tempWstatus, api_lower_alarm_temp, api_monitor_mode, api_upper_alarm_temp, api_alarm_control)
+    }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for manage_alarm via containers
     *

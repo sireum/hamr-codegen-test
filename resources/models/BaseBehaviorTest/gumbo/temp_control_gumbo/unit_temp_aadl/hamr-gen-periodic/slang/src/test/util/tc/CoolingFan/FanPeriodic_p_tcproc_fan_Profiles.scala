@@ -24,6 +24,8 @@ import tc.RandomLib
 // Profile with generators for incoming ports
 @msig trait FanPeriodic_p_tcproc_fan_Profile_P_Trait extends Profile {
   def api_fanCmd: RandomLib // random lib for generating CoolingFan.FanCmd
+
+  def update_api_fanCmd(v: RandomLib): FanPeriodic_p_tcproc_fan_Profile_P_Trait
 }
 
 @record class FanPeriodic_p_tcproc_fan_Profile_P(
@@ -35,11 +37,17 @@ import tc.RandomLib
     return (FanPeriodic_p_tcproc_fan_PreState_Container_P (
       api_fanCmd = api_fanCmd.nextCoolingFanFanCmdType()))
   }
+
+  override def update_api_fanCmd(v: RandomLib): FanPeriodic_p_tcproc_fan_Profile_P_Trait = {
+    return this(api_fanCmd = v)
+  }
 }
 
 // Profile with generators for state variables and incoming ports
 @msig trait FanPeriodic_p_tcproc_fan_Profile_PS_Trait extends FanPeriodic_p_tcproc_fan_Profile_P_Trait {
   def api_fanCmd: RandomLib // random lib for generating CoolingFan.FanCmd
+
+  def update_api_fanCmd(v: RandomLib): FanPeriodic_p_tcproc_fan_Profile_PS_Trait
 }
 
 @record class FanPeriodic_p_tcproc_fan_Profile_PS(
@@ -50,5 +58,9 @@ import tc.RandomLib
   override def next: FanPeriodic_p_tcproc_fan_PreState_Container_PS = {
     return (FanPeriodic_p_tcproc_fan_PreState_Container_PS (
       api_fanCmd = api_fanCmd.nextCoolingFanFanCmdType()))
+  }
+
+  override def update_api_fanCmd(v: RandomLib): FanPeriodic_p_tcproc_fan_Profile_PS_Trait = {
+    return this(api_fanCmd = v)
   }
 }

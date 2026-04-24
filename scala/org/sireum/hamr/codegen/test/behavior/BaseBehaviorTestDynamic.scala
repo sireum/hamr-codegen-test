@@ -6,9 +6,9 @@ import org.sireum.hamr.codegen.test.util.TestUtil
 
 class BaseBehaviorTestDynamic extends CodegenBehaviorTest {
 
-  override def disablePhantom: B = super.disablePhantom || F // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
+  override def disablePhantom: B = F || super.disablePhantom // useful when changes to OSATE/AIR have not yet been pushed as plugin releases
 
-  override def justRegenerate: B = super.justRegenerate || F
+  override def justRegenerate: B = F || super.justRegenerate
 
   override def filter: B = super.filter || F
 
