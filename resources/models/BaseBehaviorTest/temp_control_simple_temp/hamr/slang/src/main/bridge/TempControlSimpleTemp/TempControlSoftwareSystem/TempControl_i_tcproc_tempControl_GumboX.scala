@@ -264,9 +264,14 @@ object TempControl_i_tcproc_tempControl_GumboX {
     */
   @strictpure def compute_CEP_Handler_setPoint_Guar (
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
-      api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i]): B =
-    api_setPoint.nonEmpty ___>: (
-      compute_handle_setPoint_setPointChanged_guarantee(currentSetPoint, api_setPoint))
+      api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i]): B = {
+    if (api_setPoint.isEmpty) {
+      T
+    } else
+    {
+      compute_handle_setPoint_setPointChanged_guarantee(currentSetPoint, api_setPoint)
+    }
+  }
 
   /** Compute Entrypoint Contract for tempChanged's tempChanged guarantee clause
     *
@@ -288,9 +293,14 @@ object TempControl_i_tcproc_tempControl_GumboX {
   @strictpure def compute_CEP_Handler_tempChanged_Guar (
       latestTemp: TempSensor.Temperature_i,
       api_tempChanged: Option[art.Empty],
-      api_currentTemp: TempSensor.Temperature_i): B =
-    api_tempChanged.nonEmpty ___>: (
-      compute_handle_tempChanged_tempChanged_guarantee(latestTemp, api_currentTemp))
+      api_currentTemp: TempSensor.Temperature_i): B = {
+    if (api_tempChanged.isEmpty) {
+      T
+    } else
+    {
+      compute_handle_tempChanged_tempChanged_guarantee(latestTemp, api_currentTemp)
+    }
+  }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for tempControl
     *

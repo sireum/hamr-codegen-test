@@ -336,14 +336,17 @@ object TempControl_s_tcproc_tempControl_GumboX {
       In_latestTemp: TempSensor.Temperature_i,
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
-      api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i]): B =
-    api_setPoint.nonEmpty ___>: (
-      {
-        val r0 = compute_handle_setPoint_setPointChanged_guarantee(currentSetPoint, api_setPoint)
-        val r1 = compute_handle_setPoint_latestTempNotModified_guarantee(In_latestTemp, latestTemp)
+      api_setPoint: Option[TempControlSoftwareSystem.SetPoint_i]): B = {
+    if (api_setPoint.isEmpty) {
+      T
+    } else
+    {
+      val r0 = compute_handle_setPoint_setPointChanged_guarantee(currentSetPoint, api_setPoint)
+      val r1 = compute_handle_setPoint_latestTempNotModified_guarantee(In_latestTemp, latestTemp)
 
-        r0 & r1
-      })
+      r0 & r1
+    }
+  }
 
   /** Compute Entrypoint Contract for tempChanged's tempChanged guarantee clause
     *
@@ -380,14 +383,17 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_tempChanged: Option[art.Empty],
-      api_currentTemp: TempSensor.Temperature_i): B =
-    api_tempChanged.nonEmpty ___>: (
-      {
-        val r0 = compute_handle_tempChanged_tempChanged_guarantee(latestTemp, api_currentTemp)
-        val r1 = compute_handle_tempChanged_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint)
+      api_currentTemp: TempSensor.Temperature_i): B = {
+    if (api_tempChanged.isEmpty) {
+      T
+    } else
+    {
+      val r0 = compute_handle_tempChanged_tempChanged_guarantee(latestTemp, api_currentTemp)
+      val r1 = compute_handle_tempChanged_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint)
 
-        r0 & r1
-      })
+      r0 & r1
+    }
+  }
 
   /** Compute Entrypoint Contract for fanAck's setPointNotModified guarantee clause
     *
@@ -450,16 +456,19 @@ object TempControl_s_tcproc_tempControl_GumboX {
       currentSetPoint: TempControlSoftwareSystem.SetPoint_i,
       latestTemp: TempSensor.Temperature_i,
       api_fanAck: Option[CoolingFan.FanAck.Type],
-      api_fanCmd: Option[CoolingFan.FanCmd.Type]): B =
-    api_fanAck.nonEmpty ___>: (
-      {
-        val r0 = compute_handle_fanAck_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint)
-        val r1 = compute_handle_fanAck_lastTempNotModified_guarantee(In_latestTemp, latestTemp)
-        val r2 = compute_handle_fanAck_currentFanState_guarantee(In_currentFanState, currentFanState)
-        val r3 = compute_handle_fanAck_noEventsSent_guarantee(api_fanCmd)
+      api_fanCmd: Option[CoolingFan.FanCmd.Type]): B = {
+    if (api_fanAck.isEmpty) {
+      T
+    } else
+    {
+      val r0 = compute_handle_fanAck_setPointNotModified_guarantee(In_currentSetPoint, currentSetPoint)
+      val r1 = compute_handle_fanAck_lastTempNotModified_guarantee(In_latestTemp, latestTemp)
+      val r2 = compute_handle_fanAck_currentFanState_guarantee(In_currentFanState, currentFanState)
+      val r3 = compute_handle_fanAck_noEventsSent_guarantee(api_fanCmd)
 
-        r0 & r1 & r2 & r3
-      })
+      r0 & r1 & r2 & r3
+    }
+  }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for tempControl
     *

@@ -176,9 +176,14 @@ object Filter_s_p_filters_GumboX {
     */
   @strictpure def compute_CEP_Handler_b_event_data_in_Guar (
       api_b_event_data_in: Option[ProdConsFlows.Container_i],
-      api_f_event_data_out: Option[ProdConsFlows.Container_i]): B =
-    api_b_event_data_in.nonEmpty ___>: (
-      compute_handle_b_event_data_in_propagate_b_guarantee(api_b_event_data_in, api_f_event_data_out))
+      api_f_event_data_out: Option[ProdConsFlows.Container_i]): B = {
+    if (api_b_event_data_in.isEmpty) {
+      T
+    } else
+    {
+      compute_handle_b_event_data_in_propagate_b_guarantee(api_b_event_data_in, api_f_event_data_out)
+    }
+  }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for filters
     *
