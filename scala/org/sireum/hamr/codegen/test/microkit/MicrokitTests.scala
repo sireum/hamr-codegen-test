@@ -36,7 +36,9 @@ class MicrokitTests extends CodegenTest {
     // add a small sha to resolve common prefixes in test names
     testName = s"${testName}__${TypeUtil.stableTypeSig(testName, 2)}"
 
-    val testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms"))
+    // runtime monitoring is not currently supported for vms, also ensure at least one project
+    // can be built/simulated when runtime monitoring is not used
+    val testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms") && !testName.value.contains("aadl_datatypes"))
 
     val cands = Os.Path.walk(aadlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
     assert (cands.size <= 1, s"Found ${cands.size} JSON files under $aadlDir")
@@ -58,7 +60,9 @@ class MicrokitTests extends CodegenTest {
     // add a small sha to resolve common prefixes in test names
     testName = s"${testName}__${TypeUtil.stableTypeSig(testName, 2)}"
 
-    val testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms"))
+    // runtime monitoring is not currently supported for vms, also ensure at least one project
+    // can be built/simulated when runtime monitoring is not used
+    val testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms") && !testName.value.contains("aadl_datatypes"))
 
     val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
     assert (cands.size <= 1, s"Found ${cands.size} JSON files under $sysmlDir")
