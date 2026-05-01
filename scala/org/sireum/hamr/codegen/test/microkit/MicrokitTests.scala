@@ -29,6 +29,9 @@ class MicrokitTests extends CodegenTest {
 
   override val verbose: B = ops.ISZOps(testModes).contains(TestMode.verbose)
 
+  val sysmlModels = MicrokitTestUtil.getSysmlModels(testResources.copy(modelsDir = testResources.modelsDir / "micro-examples" / "microkit")) :+
+    testResources.modelsDir / "isolette" / "sysml_mcs"
+
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
     val t = ops.StringOps(aadlDir.up.value)
     var testName = ops.StringOps(t.substring(t.stringIndexOf("INSPECTA-models") + 16, t.s.size)).replaceAllLiterally(Os.fileSep, "_")
@@ -53,7 +56,7 @@ class MicrokitTests extends CodegenTest {
       expectedErrorReasons = ISZ())
   }
 
-  for (sysmlDir <- MicrokitTestUtil.getSysmlModels(testResources.copy(modelsDir = testResources.modelsDir / "micro-examples" / "microkit"))) {
+  for (sysmlDir <- sysmlModels) {
     val t = ops.StringOps(sysmlDir.up.value)
     var testName: String = s"sysml_${ops.StringOps(t.substring(t.stringIndexOf("INSPECTA-models") + 16, t.s.size)).replaceAllLiterally(Os.fileSep, "_")}"
 
