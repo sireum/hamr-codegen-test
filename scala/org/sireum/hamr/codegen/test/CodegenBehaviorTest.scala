@@ -282,6 +282,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     maxArraySize = 1,
     runTranspiler = F,
     //
+    verusAttributeSyntax = F,
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
     workspaceRootDir = None(),
@@ -393,6 +394,7 @@ object CodegenBehaviorTest {
           maxArraySize = opts.maxArraySize,
           runTranspiler = opts.runTranspiler,
           //
+          verusAttributeSyntax = F,
           sel4OutputDir = canon(opts.sel4OutputDir),
           sel4AuxCodeDirs = opts.sel4AuxCodeDirs.map(s => canon(Some(s)).get),
           workspaceRootDir = aadlRoot,

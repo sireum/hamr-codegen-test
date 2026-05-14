@@ -65,7 +65,11 @@ class MicrokitTests extends CodegenTest {
 
     // runtime monitoring is not currently supported for vms, also ensure at least one project
     // can be built/simulated when runtime monitoring is not used
-    val testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms") && !testName.value.contains("aadl_datatypes"))
+    var testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms") && !testName.value.contains("aadl_datatypes"))
+
+    testOptions =
+      if (testName.value.contains("sysml_iso")) testOptions(verusAttributeSyntax = T)
+      else testOptions
 
     val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
     assert (cands.size <= 1, s"Found ${cands.size} JSON files under $sysmlDir")
@@ -108,6 +112,7 @@ object MicrokitTests {
     maxArraySize = 1,
     runTranspiler = F,
     //
+    verusAttributeSyntax = F,
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
     workspaceRootDir = None(),
