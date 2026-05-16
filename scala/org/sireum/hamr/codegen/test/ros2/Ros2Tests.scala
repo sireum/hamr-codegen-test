@@ -4,7 +4,7 @@ import org.sireum._
 import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.test.TestSuite
 import Ros2Tests._
-import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
+import org.sireum.hamr.codegen.common.util.HamrCli
 
 class Ros2Tests extends TestSuite with Ros2TestUtil {
 
@@ -208,13 +208,13 @@ class Ros2Tests extends TestSuite with Ros2TestUtil {
 }
 
 object Ros2Tests {
-  val baseOptions = CodegenOption(
+  val baseOptions = HamrCli.CodegenOption(
     help = "",
     args = ISZ(),
     msgpack = F,
     verbose = F,
     runtimeMonitoring = F,
-    platform = CodegenHamrPlatform.Ros2,
+    platform = HamrCli.CodegenHamrPlatform.Ros2,
     outputDir = None(),
     parseableMessages = F,
     //
@@ -233,6 +233,7 @@ object Ros2Tests {
     maxArraySize = 1,
     runTranspiler = F,
     //
+    scheduling = HamrCli.CodegenScheduling.Domain,
     verusAttributeSyntax = F,
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
@@ -241,8 +242,8 @@ object Ros2Tests {
     strictAadlMode = F,
     ros2OutputWorkspaceDir = None(),
     ros2Dir = None(),
-    ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
-    ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml,
+    ros2NodesLanguage = HamrCli.CodegenNodesCodeLanguage.Cpp,
+    ros2LaunchLanguage = HamrCli.CodegenLaunchCodeLanguage.Xml,
     invertTopicBinding = F,
     //
     experimentalOptions = ISZ()

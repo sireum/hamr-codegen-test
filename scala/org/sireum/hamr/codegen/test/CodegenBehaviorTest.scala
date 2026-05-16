@@ -5,7 +5,7 @@ import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.common.CommonUtil.Store
 import org.sireum.hamr.codegen.common.reporting.CodegenReporting
-import org.sireum.hamr.codegen.common.util.HamrCli.{CodegenHamrPlatform, CodegenLaunchCodeLanguage, CodegenNodesCodeLanguage, CodegenOption}
+import org.sireum.hamr.codegen.common.util.HamrCli
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugins
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
@@ -58,7 +58,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
   def test(testName: String,
            testDescription: String,
-           testOptions: CodegenOption,
+           testOptions: HamrCli.CodegenOption,
            testModes: ISZ[TestMode.Type],
            phantomOptions: Option[String],
            logikaOptions: Option[String],
@@ -78,7 +78,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
   def testAir(testName: String,
               testDescription: String,
-              testOptions: CodegenOption,
+              testOptions: HamrCli.CodegenOption,
               testModes: ISZ[TestMode.Type],
               phantomOptions: Option[String],
               logikaOptions: Option[String],
@@ -257,13 +257,13 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
   }
 
 
-  val baseOptions = CodegenOption(
+  val baseOptions = HamrCli.CodegenOption(
     help = "",
     args = ISZ(),
     msgpack = F,
     verbose = F,
     runtimeMonitoring = F,
-    platform = CodegenHamrPlatform.JVM,
+    platform = HamrCli.CodegenHamrPlatform.JVM,
     outputDir = None(),
     parseableMessages = F,
     //
@@ -282,6 +282,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     maxArraySize = 1,
     runTranspiler = F,
     //
+    scheduling = HamrCli.CodegenScheduling.Domain,
     verusAttributeSyntax = F,
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
@@ -290,8 +291,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     strictAadlMode = F,
     ros2OutputWorkspaceDir = None(),
     ros2Dir = None(),
-    ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
-    ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml,
+    ros2NodesLanguage = HamrCli.CodegenNodesCodeLanguage.Cpp,
+    ros2LaunchLanguage = HamrCli.CodegenLaunchCodeLanguage.Xml,
     invertTopicBinding = F,
     //
     experimentalOptions = ISZ(ExperimentalOptions.GENERATE_REFINEMENT_PROOF)
@@ -347,13 +348,13 @@ object CodegenBehaviorTest {
     return ret
   }
 
-  def processHamrArgs(args: String, root: Os.Path): Option[CodegenOption] = {
+  def processHamrArgs(args: String, root: Os.Path): Option[HamrCli.CodegenOption] = {
     assert(root.isDir, root)
     val _args: ISZ[String] = ops.StringOps(args).split(c => c == C(' '))
     return processHamrArgsH(_args, root)
   }
 
-  def processHamrArgsH(args: ISZ[String], root: Os.Path): Option[CodegenOption] = {
+  def processHamrArgsH(args: ISZ[String], root: Os.Path): Option[HamrCli.CodegenOption] = {
     assert(root.isDir, root)
 
     def canon(opt: Option[String]): Option[String] = {
@@ -364,18 +365,18 @@ object CodegenBehaviorTest {
       return ret
     }
 
-    val ret: Option[CodegenOption] = HamrCli(Os.pathSepChar).parseCodegen(args, 0) match {
-      case Some(opts: CodegenOption) =>
+    val ret: Option[HamrCli.CodegenOption] = HamrCli(Os.pathSepChar).parseCodegen(args, 0) match {
+      case Some(opts: HamrCli.CodegenOption) =>
 
         val aadlRoot = if (opts.workspaceRootDir.isEmpty) canon(Some(".")) else canon(opts.workspaceRootDir)
 
-        Some(CodegenOption(
+        Some(HamrCli.CodegenOption(
           help = "",
           args = ISZ(),
           msgpack = F,
           verbose = opts.verbose,
           runtimeMonitoring = opts.runtimeMonitoring,
-          platform = CodegenHamrPlatform.byName(opts.platform.name).get,
+          platform = HamrCli.CodegenHamrPlatform.byName(opts.platform.name).get,
           outputDir = None(),
           parseableMessages = F,
 
@@ -394,6 +395,7 @@ object CodegenBehaviorTest {
           maxArraySize = opts.maxArraySize,
           runTranspiler = opts.runTranspiler,
           //
+          scheduling = HamrCli.CodegenScheduling.Domain,
           verusAttributeSyntax = F,
           sel4OutputDir = canon(opts.sel4OutputDir),
           sel4AuxCodeDirs = opts.sel4AuxCodeDirs.map(s => canon(Some(s)).get),
@@ -402,8 +404,8 @@ object CodegenBehaviorTest {
           strictAadlMode = opts.strictAadlMode,
           ros2OutputWorkspaceDir = opts.ros2OutputWorkspaceDir,
           ros2Dir = opts.ros2Dir,
-          ros2NodesLanguage = CodegenNodesCodeLanguage.byName(opts.ros2NodesLanguage.name).get,
-          ros2LaunchLanguage = CodegenLaunchCodeLanguage.byName(opts.ros2LaunchLanguage.name).get,
+          ros2NodesLanguage = HamrCli.CodegenNodesCodeLanguage.byName(opts.ros2NodesLanguage.name).get,
+          ros2LaunchLanguage = HamrCli.CodegenLaunchCodeLanguage.byName(opts.ros2LaunchLanguage.name).get,
           invertTopicBinding = opts.invertTopicBinding,
           //
           experimentalOptions = opts.experimentalOptions
