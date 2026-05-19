@@ -30,7 +30,7 @@ class MicrokitTests extends CodegenTest {
   override val verbose: B = ops.ISZOps(testModes).contains(TestMode.verbose)
 
   val sysmlModels = MicrokitTestUtil.getSysmlModels(testResources.copy(modelsDir = testResources.modelsDir / "micro-examples" / "microkit")) :+
-    testResources.modelsDir / "isolette" / "sysml_mcs"
+    testResources.modelsDir / "isolette" / "sysml"
 
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
     val t = ops.StringOps(aadlDir.up.value)
@@ -68,8 +68,12 @@ class MicrokitTests extends CodegenTest {
     var testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms") && !testName.value.contains("aadl_datatypes"))
 
     testOptions =
-      if (testName.value.contains("sysml_iso")) testOptions(verusAttributeSyntax = T)
+      if (testName.value.contains("sysml_iso"))
+        testOptions(
+          scheduling = HamrCli.CodegenScheduling.UserLand,
+          verusAttributeSyntax = T)
       else testOptions
+
 
     val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
     assert (cands.size <= 1, s"Found ${cands.size} JSON files under $sysmlDir")

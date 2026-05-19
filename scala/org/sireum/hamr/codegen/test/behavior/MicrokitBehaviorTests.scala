@@ -43,9 +43,10 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       workspaceRootDir = Some(cands(0).up.up.value))
 
     val clean = {
-      val t = cands(0).up.up / "bin" / "clean.cmd"
+      val aadlDir = cands(0).up.up
+      val t = aadlDir / "bin" / "clean.cmd"
       assert (t.exists, s"$t doesn't exist")
-      () => proc"$t ../../hamr/microkit".run().ok
+      () => proc"$t ${(aadlDir.up / "hamr" / "microkit").value}".console.run().ok
     }
 
     test(
