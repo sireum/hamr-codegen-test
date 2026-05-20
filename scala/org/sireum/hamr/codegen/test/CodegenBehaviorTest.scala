@@ -101,7 +101,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     }
 
     println(s"Cleaning $testName")
-    assert(clean(), "Cleaning failed")
+    val cleanResults = clean()
+    assert(cleanResults, "Cleaning failed")
 
     // FIXME: Output from individual unit tests were not grouping correctly in intellij's Test Results view.
     //        Seems sleeping for a bit or doing something that takes awhile (e.g. loading AIR) resolves the issue.

@@ -17,7 +17,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
 
   override def filter: B = F || super.filter
 
-  override def filters: ISZ[String] = ISZ("isolette")
+  override def filters: ISZ[String] = ISZ("sysml_isolette")
 
   override def ignores: _root_.org.sireum.ISZ[String] = super.ignores ++ ISZ(
     "case-transition-models"
@@ -46,7 +46,60 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       val aadlDir = cands(0).up.up
       val t = aadlDir / "bin" / "clean.cmd"
       assert (t.exists, s"$t doesn't exist")
-      () => proc"$t ${(aadlDir.up / "hamr" / "microkit").value}".console.run().ok
+      () => proc"$t ${(aadlDir.up / "hamr" / "microkit").value}".run().ok
+    }
+
+    test(
+      testName = testName,
+      testDescription = "",
+      testOptions = testOptions,
+      testModes = testModes,
+      phantomOptions = None(),
+      logikaOptions = None(),
+      clean,
+      airFile = Some(cands (0)))
+  }
+
+  val sysmlModels = ISZ() :+ testResources.modelsDir / "isolette" / "sysml"
+
+  for (sysmlDir <- sysmlModels) {
+    val t = ops.StringOps(sysmlDir.up.value)
+    var testName = s"sysml_${ops.StringOps(t.substring(t.stringIndexOf("INSPECTA-models") + 16, t.s.size)).replaceAllLiterally(Os.fileSep, "_")}"
+
+    // add a small sha to resolve common prefixes in test names
+    testName = s"${testName}__${TypeUtil.stableTypeSig(testName, 2)}"
+
+    var testOptions = MicrokitBehaviorTests.baseOptions
+
+    val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
+    assert (cands.size == 1, s"Found ${cands.size} JSON files under $sysmlDir")
+
+    assert ((cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${cands(0).up.up.up / "hamr"}")
+
+    if (testName._value.contains("sysml_iso")) {
+      testOptions = testOptions(
+        scheduling = HamrCli.CodegenScheduling.UserLand,
+        verusAttributeSyntax = T)
+    }
+
+    val mdir: Os.Path =
+      if (testOptions.scheduling == HamrCli.CodegenScheduling.UserLand)
+        cands(0).up.up.up / "hamr" / "microkit_mcs"
+      else cands(0).up.up.up / "hamr" / "microkit"
+
+    assert (mdir.exists, mdir.value)
+
+    testOptions = testOptions(
+      runtimeMonitoring = !ops.StringOps(testName).contains("vms"),
+      sel4OutputDir = Some(mdir.value),
+      workspaceRootDir = Some(cands(0).up.up.value))
+
+    val clean = {
+      val aadlDir = cands(0).up.up.up / "aadl"
+      val t = aadlDir / "bin" / "clean.cmd"
+      assert (t.exists, s"$t doesn't exist")
+
+      () => proc"$t $mdir".run().ok
     }
 
     test(
