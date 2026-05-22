@@ -5,6 +5,7 @@ import org.sireum.hamr.codegen.common.types.TypeUtil
 import org.sireum.hamr.codegen.common.util.ExperimentalOptions
 import org.sireum.hamr.codegen.common.util.HamrCli
 import org.sireum.hamr.codegen.test.microkit.MicrokitTestUtil
+import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.hamr.codegen.test.{CodegenBehaviorTest, CodegenTest}
 
 class MicrokitBehaviorTests extends CodegenBehaviorTest {
@@ -106,7 +107,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       testName = testName,
       testDescription = "",
       testOptions = testOptions,
-      testModes = testModes,
+      testModes = testModes - TestMode.phantom, // don't run phantom on sysml projects
       phantomOptions = None(),
       logikaOptions = None(),
       clean,
