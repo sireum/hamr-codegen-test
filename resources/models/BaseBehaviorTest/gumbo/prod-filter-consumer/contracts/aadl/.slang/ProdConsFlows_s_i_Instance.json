@@ -2766,6 +2766,9 @@
                         }
                       }
                     },
+                    "schedule" : {
+                      "type" : "None"
+                    },
                     "attr" : {
                       "type" : "Attr",
                       "posOpt" : {
@@ -4770,6 +4773,9 @@
                           }
                         }
                       }
+                    },
+                    "schedule" : {
+                      "type" : "None"
                     },
                     "attr" : {
                       "type" : "Attr",
@@ -12393,6 +12399,9 @@
               "type" : "None"
             },
             "compute" : {
+              "type" : "None"
+            },
+            "schedule" : {
               "type" : "None"
             },
             "attr" : {
