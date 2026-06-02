@@ -21,7 +21,7 @@ class MicrokitTests extends CodegenTest {
 
   override def filter: B = F
 
-  override def filters: ISZ[String] = ISZ("_types_event_data")
+  override def filters: ISZ[String] = ISZ("41A6")
 
   override def ignores: ISZ[String] = ISZ(
     "case-transition-models"
@@ -41,7 +41,7 @@ class MicrokitTests extends CodegenTest {
 
     // runtime monitoring is not currently supported for vms, also ensure at least one project
     // can be built/simulated when runtime monitoring is not used
-    val testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms") && !testName.value.contains("aadl_datatypes"))
+    var testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms") && !testName.value.contains("aadl_datatypes"))
 
     val cands = Os.Path.walk(aadlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
     assert (cands.size <= 1, s"Found ${cands.size} JSON files under $aadlDir")
@@ -54,6 +54,24 @@ class MicrokitTests extends CodegenTest {
       description = None(),
       modelUri = None(),
       expectedErrorReasons = ISZ())
+
+    if (testName.native.startsWith("isolette")) {
+      testName = s"sys_assert_$testName"
+
+      testOptions = testOptions(
+        scheduling = HamrCli.CodegenScheduling.UserLand,
+        verusAttributeSyntax = F,
+      )
+
+      test(
+        testName = testName,
+        modelDir = aadlDir,
+        airFile = if (cands.size == 1) Some(cands(0)) else None(),
+        ops = testOptions,
+        description = None(),
+        modelUri = None(),
+        expectedErrorReasons = ISZ())
+    }
   }
 
   for (sysmlDir <- sysmlModels) {
