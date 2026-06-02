@@ -104,6 +104,20 @@ class MicrokitTests extends CodegenTest {
       description = None(),
       modelUri = None(),
       expectedErrorReasons = ISZ())
+
+    if (testName.value.contains("vms")) {
+      testName = s"user_land_$testName"
+
+      test(
+        testName = testName,
+        modelDir = sysmlDir,
+        airFile = if (cands.size == 1) Some(cands(0)) else None(),
+        ops = testOptions(scheduling = HamrCli.CodegenScheduling.UserLand),
+        description = None(),
+        modelUri = None(),
+        expectedErrorReasons = ISZ())
+
+    }
   }
 }
 
