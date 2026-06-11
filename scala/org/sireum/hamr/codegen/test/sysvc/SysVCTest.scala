@@ -127,13 +127,83 @@ class SysVCTest extends TestSuite {
       val nonBlockingVCs = vcs.filter(v => v.kind == VCKind.NonBlocking)
       val preservationVCs = vcs.filter(v => v.kind == VCKind.Preservation)
 
-      val mhipPairs = MHIPComputer.compute(schedule)
-      assert(nonBlockingVCs.size == mhipPairs.size * 2, s"Expected ${mhipPairs.size * 2} Non-Blocking VCs (2 per MHIP pair), got ${nonBlockingVCs.size}")
-      assert(preservationVCs.size == mhipPairs.size * 2, s"Expected ${mhipPairs.size * 2} Preservation VCs (2 per MHIP pair), got ${preservationVCs.size}")
+      // Transition-level MHIP (includes component/control-point pairs). Classify pairs:
+      // cc = both component, ck = exactly one component (mixed), kk = both control-point.
+      val mhipPairs = MHIPComputer.computeMHIP(nextRel)
+      val comp = ScheduleNextRel.TransitionKind.Component
+      def isComp(idx: org.sireum.Z): Boolean = nextRel.transitions(idx).kind == comp
+      var ccPairs = 0
+      var ckPairs = 0
+      for (p <- mhipPairs) {
+        val a = isComp(p._1)
+        val b = isComp(p._2)
+        if (a && b) ccPairs += 1
+        else if (a || b) ckPairs += 1
+      }
+      // The Isolette has 17 component-component and 8 (component, control-point) MHIP pairs
+      // (the 1 control-point/control-point pair contributes no VCs).
+      assert(ccPairs == 17, s"Expected 17 component-component MHIP pairs, got $ccPairs")
+      assert(ckPairs == 8, s"Expected 8 mixed (component, control-point) MHIP pairs, got $ckPairs")
+
+      // NonBlocking / Preservation: 2 per component-component pair (bidirectional) + 1 per
+      // mixed pair (only the component-fires direction is non-trivial).
+      val expectedDirected = ccPairs * 2 + ckPairs
+      assert(nonBlockingVCs.size == expectedDirected, s"Expected $expectedDirected Non-Blocking VCs, got ${nonBlockingVCs.size}")
+      assert(preservationVCs.size == expectedDirected, s"Expected $expectedDirected Preservation VCs, got ${preservationVCs.size}")
+
+      val commutativityVCs = vcs.filter(v => v.kind == VCKind.Commutativity)
+      // Commutativity (execIndependent) is symmetric and only applies when both members are
+      // component transitions, so 1 VC per component-component pair.
+      assert(commutativityVCs.size == ccPairs, s"Expected $ccPairs Commutativity VCs, got ${commutativityVCs.size}")
 
       val taskVCsWithWriteSets = nextAssertTaskVCs.filter(v => v.writeSetOpt.nonEmpty)
       assert(taskVCsWithWriteSets.size == nextAssertTaskVCs.size,
         s"Expected all ${nextAssertTaskVCs.size} task VCs to have write sets, but only ${taskVCsWithWriteSets.size} do")
+
+      // Each compute case with an explicit assume must appear in its task VC's premises as
+      // the implication `assume ==> guarantee` (the component's verified contract), not as
+      // the bare guarantee.
+      var implicationCases = 0
+      for (vc <- nextAssertTaskVCs) {
+        val compName = vc.source.componentOpt.get
+        val alias = compName.name(compName.name.lastIndex)
+        val compPath: CommonUtil.IdPath = resolvedComponentAliasMap.get(alias) match {
+          case Some(p) => p
+          case _ => compName.name
+        }
+        VCGenerator.getGclInfoOpt(compPath, symbolTable) match {
+          case Some(info) =>
+            info.annex.compute match {
+              case Some(compute) =>
+                for (c <- compute.cases) {
+                  c.assumes match {
+                    case Some(a) =>
+                      var found = false
+                      for (p <- vc.premises) {
+                        p match {
+                          case b: org.sireum.lang.ast.Exp.Binary =>
+                            if (b.op == org.sireum.lang.ast.Exp.BinaryOp.CondImply && b.left == a && b.right == c.guarantees) {
+                              found = true
+                            }
+                          case _ =>
+                        }
+                      }
+                      assert(found, s"Case ${c.id} of $alias should appear as an `assume ==> guarantee` premise")
+                      implicationCases += 1
+                    case _ =>
+                  }
+                }
+              case _ =>
+            }
+          case _ =>
+        }
+      }
+      assert(implicationCases > 0, "Expected at least one compute case with an assume in the Isolette")
+
+      // 31 sequential VCs (1 Init + 11 Pre + 11 NextTask + 7 NextSkip + 1 PostPre)
+      // + 5 per cc pair (2 NB + 2 Pres + 1 Comm) + 2 per ck pair (1 NB + 1 Pres).
+      val expectedTotal = 1 + 11 + 11 + 7 + 1 + ccPairs * 5 + ckPairs * 2
+      assert(vcs.size == expectedTotal, s"Expected $expectedTotal total VCs, got ${vcs.size}")
 
       println(s"\nMHIP pairs: ${mhipPairs.size}")
       println(s"Total VCs: ${vcs.size}")
