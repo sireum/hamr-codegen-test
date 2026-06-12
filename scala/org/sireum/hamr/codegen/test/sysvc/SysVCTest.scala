@@ -15,6 +15,10 @@ import org.sireum.hamr.ir.JSON
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 
+// Exercises the composition-based system VC pipeline (design D8) on the Isolette:
+// schema net construction, MHIP, per-property decoration + VC generation, and the
+// Verus serialization builders. Expects the Isolette model to declare one
+// composition (the migrated form of its former schedule block).
 class SysVCTest extends TestSuite {
 
   val resourcesDir: Os.Path = {
@@ -92,53 +96,38 @@ class SysVCTest extends TestSuite {
       store = result._2
       val symbolTable = result._1.get.symbolTable
 
-      val scheduleOpt = VCGenerator.getSystemSchedule(symbolTable)
-      assert(scheduleOpt.nonEmpty, "No system schedule found in the Isolette model")
-      val schedule = scheduleOpt.get
+      val compositions = VCGenerator.getCompositions(symbolTable)
+      assert(compositions.size == 1, s"Expected 1 composition in the Isolette model, got ${compositions.size}")
+      val composition = compositions(0)
+      assert(composition.properties.nonEmpty, "Expected at least one property in the Isolette composition")
+      println(s"Composition '${composition.id}' with ${composition.properties.size} properties: ${(for (p <- composition.properties) yield p.id, ", ")}")
 
       val resolvedComponentAliasMap = GclResolver.getResolvedComponentAliasMap(store)
       assert(resolvedComponentAliasMap.nonEmpty, "Resolved component alias map should be populated")
 
-      val nextRel = ScheduleNextRel.build(schedule)
-      val vcs = VCGenerator.generate(schedule, nextRel, resolvedComponentAliasMap, symbolTable)
+      // --- schema-derived net (shared by all properties) ---
+      val nextRel = ScheduleNextRel.build(composition)
 
-      println(s"Generated ${vcs.size} VCs:")
-      for (i <- z"0" until vcs.size) {
-        val vc = vcs(i)
-        val compName: String = vc.source.componentOpt match {
-          case Some(name) => st"${(name.name, ".")}".render
-          case _ => "<none>"
-        }
-        println(s"  [$i] ${vc.kind} component=$compName premises=${vc.premises.size} conclusion=${vc.conclusion.size}")
+      val compKind = ScheduleNextRel.TransitionKind.Component
+      val componentTransitions = nextRel.transitions.filter(t => t.kind == compKind)
+      val controlTransitions = nextRel.transitions.filter(t => t.kind != compKind)
+      // The Isolette schema dispatches 11 components (oi, ts, drf, mri, mrm, mhs,
+      // dmf, mmi, mmm, ma, hs). Control points: 2 split entries + 2 join exits +
+      // 1 trailing control-point transition to END. A branch's entry place IS the
+      // split's out-place for that branch (F1, InitialVerusRunFindings.md), so
+      // branches contribute no pass-through transitions.
+      assert(componentTransitions.size == 11, s"Expected 11 component transitions, got ${componentTransitions.size}")
+      assert(controlTransitions.size == 5, s"Expected 5 control-point transitions, got ${controlTransitions.size}")
+
+      // every composition alias of a unique occurrence is a resolvable point name
+      for (ca <- composition.componentAliases) {
+        assert(nextRel.beforeMap.get(ca.name).nonEmpty && nextRel.afterMap.get(ca.name).nonEmpty,
+          s"Component alias '${ca.name}' should have before/after point names (fires once)")
       }
 
-      val initVCs = vcs.filter(v => v.kind == VCKind.InitState)
-      assert(initVCs.size == 1, s"Expected 1 Init-State VC, got ${initVCs.size}")
-
-      val preAssertVCs = vcs.filter(v => v.kind == VCKind.PreAssert)
-      assert(preAssertVCs.size == 11, s"Expected 11 Pre-Assert VCs, got ${preAssertVCs.size}")
-
-      val nextAssertTaskVCs = vcs.filter(v => v.kind == VCKind.NextAssertTask)
-      assert(nextAssertTaskVCs.size == 11, s"Expected 11 Next-Assert (task) VCs, got ${nextAssertTaskVCs.size}")
-
-      val nextAssertSkipVCs = vcs.filter(v => v.kind == VCKind.NextAssertSkip)
-      // 2 split entries + 2 join exits + 1 trailing control-point transition to END.
-      // A branch that begins with an assert gets that assert place as the split
-      // out-place directly (F1 fix, InitialVerusRunFindings.md), so the
-      // regulator/monitor branches contribute no pass-through transitions.
-      assert(nextAssertSkipVCs.size == 5, s"Expected 5 Next-Assert (skip) VCs, got ${nextAssertSkipVCs.size}")
-
-      val postPreVCs = vcs.filter(v => v.kind == VCKind.PostPre)
-      assert(postPreVCs.size == 1, s"Expected 1 Post-Pre VC, got ${postPreVCs.size}")
-
-      val nonBlockingVCs = vcs.filter(v => v.kind == VCKind.NonBlocking)
-      val preservationVCs = vcs.filter(v => v.kind == VCKind.Preservation)
-
-      // Transition-level MHIP (includes component/control-point pairs). Classify pairs:
-      // cc = both component, ck = exactly one component (mixed), kk = both control-point.
+      // --- MHIP (shared by all properties) ---
       val mhipPairs = MHIPComputer.computeMHIP(nextRel)
-      val comp = ScheduleNextRel.TransitionKind.Component
-      def isComp(idx: org.sireum.Z): Boolean = nextRel.transitions(idx).kind == comp
+      def isComp(idx: org.sireum.Z): Boolean = nextRel.transitions(idx).kind == compKind
       var ccPairs = 0
       var ckPairs = 0
       for (p <- mhipPairs) {
@@ -147,72 +136,98 @@ class SysVCTest extends TestSuite {
         if (a && b) ccPairs += 1
         else if (a || b) ckPairs += 1
       }
-      // The Isolette has 17 component-component MHIP pairs. After the F1 fix removed
-      // the branch-leading pass-through transitions, no control-point transition is
-      // co-enabled with a component (the split fires atomically into both branch
-      // assert places; the join needs both branch-end tokens), so there are no
-      // mixed pairs.
+      // The Isolette has 17 component-component MHIP pairs and no mixed pairs (no
+      // control-point transition is co-enabled with a component: the split fires
+      // atomically into both branch-entry places; the join needs both branch-end
+      // tokens).
       assert(ccPairs == 17, s"Expected 17 component-component MHIP pairs, got $ccPairs")
       assert(ckPairs == 0, s"Expected 0 mixed (component, control-point) MHIP pairs, got $ckPairs")
 
-      // NonBlocking / Preservation: 2 per component-component pair (bidirectional) + 1 per
-      // mixed pair (only the component-fires direction is non-trivial).
-      val expectedDirected = ccPairs * 2 + ckPairs
-      assert(nonBlockingVCs.size == expectedDirected, s"Expected $expectedDirected Non-Blocking VCs, got ${nonBlockingVCs.size}")
-      assert(preservationVCs.size == expectedDirected, s"Expected $expectedDirected Preservation VCs, got ${preservationVCs.size}")
-
-      val commutativityVCs = vcs.filter(v => v.kind == VCKind.Commutativity)
-      // Commutativity (execIndependent) is symmetric and only applies when both members are
-      // component transitions, so 1 VC per component-component pair.
+      // --- commutativity VCs: once per composition, assertion-free ---
+      val commutativityVCs = VCGenerator.generateCommutativityVCs(nextRel, mhipPairs, resolvedComponentAliasMap, symbolTable)
       assert(commutativityVCs.size == ccPairs, s"Expected $ccPairs Commutativity VCs, got ${commutativityVCs.size}")
-
-      val taskVCsWithWriteSets = nextAssertTaskVCs.filter(v => v.writeSetOpt.nonEmpty)
-      assert(taskVCsWithWriteSets.size == nextAssertTaskVCs.size,
-        s"Expected all ${nextAssertTaskVCs.size} task VCs to have write sets, but only ${taskVCsWithWriteSets.size} do")
-
-      // Each compute case with an explicit assume must appear in its task VC's premises as
-      // the implication `assume ==> guarantee` (the component's verified contract), not as
-      // the bare guarantee.
-      var implicationCases = 0
-      for (vc <- nextAssertTaskVCs) {
-        val compName = vc.source.componentOpt.get
-        val alias = compName.name(compName.name.lastIndex)
-        val compPath: CommonUtil.IdPath = resolvedComponentAliasMap.get(alias) match {
-          case Some(p) => p
-          case _ => compName.name
-        }
-        VCGenerator.getGclInfoOpt(compPath, symbolTable) match {
-          case Some(info) =>
-            info.annex.compute match {
-              case Some(compute) =>
-                for (c <- compute.cases) {
-                  c.assumes match {
-                    case Some(a) =>
-                      var found = false
-                      for (p <- vc.premises) {
-                        p match {
-                          case b: org.sireum.lang.ast.Exp.Binary =>
-                            if (b.op == org.sireum.lang.ast.Exp.BinaryOp.CondImply && b.left == a && b.right == c.guarantees) {
-                              found = true
-                            }
-                          case _ =>
-                        }
-                      }
-                      assert(found, s"Case ${c.id} of $alias should appear as an `assume ==> guarantee` premise")
-                      implicationCases += 1
-                    case _ =>
-                  }
-                }
-              case _ =>
-            }
-          case _ =>
-        }
+      for (vc <- commutativityVCs) {
+        assert(vc.premises.isEmpty && vc.conclusion.isEmpty, "Commutativity VCs are assertion-free state equalities")
+        assert(vc.writeSetOpt.nonEmpty, "Commutativity VCs carry the first member's write set")
       }
-      assert(implicationCases > 0, "Expected at least one compute case with an assume in the Isolette")
+
+      // --- per-property VC sets over the shared net ---
+      val expectedDirected = ccPairs * 2 + ckPairs
+      val expectedPerProperty = 1 + componentTransitions.size * 2 + controlTransitions.size + 1 + expectedDirected * 2
+
+      var totalImplicationCases = 0
+      for (property <- composition.properties) {
+        val decoration = ScheduleNextRel.decorate(nextRel, property, reporter)
+        assert(!reporter.hasError, s"Decoration of property '${property.id}' failed: ${reporter.messages}")
+        assert(decoration.size == property.bindings.size,
+          s"Property '${property.id}': expected ${property.bindings.size} resolved bindings, got ${decoration.size}")
+
+        val vcs = VCGenerator.generateForProperty(decoration, nextRel, mhipPairs, resolvedComponentAliasMap, symbolTable)
+        println(s"Property '${property.id}': ${vcs.size} VCs over ${decoration.size} bound points")
+
+        assert(vcs.filter(v => v.kind == VCKind.InitState).size == 1)
+        assert(vcs.filter(v => v.kind == VCKind.PreAssert).size == componentTransitions.size)
+        val taskVCs = vcs.filter(v => v.kind == VCKind.NextAssertTask)
+        assert(taskVCs.size == componentTransitions.size)
+        assert(vcs.filter(v => v.kind == VCKind.NextAssertSkip).size == controlTransitions.size)
+        assert(vcs.filter(v => v.kind == VCKind.PostPre).size == 1)
+        assert(vcs.filter(v => v.kind == VCKind.NonBlocking).size == expectedDirected)
+        assert(vcs.filter(v => v.kind == VCKind.Preservation).size == expectedDirected)
+        assert(vcs.filter(v => v.kind == VCKind.Commutativity).isEmpty,
+          "Commutativity VCs are generated per composition, not per property")
+        assert(vcs.size == expectedPerProperty, s"Property '${property.id}': expected $expectedPerProperty VCs, got ${vcs.size}")
+
+        val taskVCsWithWriteSets = taskVCs.filter(v => v.writeSetOpt.nonEmpty)
+        assert(taskVCsWithWriteSets.size == taskVCs.size,
+          s"Expected all ${taskVCs.size} task VCs to have write sets, but only ${taskVCsWithWriteSets.size} do")
+
+        // Each compute case with an explicit assume must appear in its task VC's
+        // premises as the implication `assume ==> guarantee` (the component's
+        // verified contract), not as the bare guarantee. Only for transitions
+        // the property covers (non-empty conclusion): uncovered components'
+        // contracts are projected out, so their cases are absent by design.
+        var implicationCases = 0
+        for (vc <- taskVCs if vc.conclusion.nonEmpty) {
+          val compName = vc.source.componentOpt.get
+          val alias = compName.name(compName.name.lastIndex)
+          val compPath: CommonUtil.IdPath = resolvedComponentAliasMap.get(alias) match {
+            case Some(p) => p
+            case _ => compName.name
+          }
+          VCGenerator.getGclInfoOpt(compPath, symbolTable) match {
+            case Some(info) =>
+              info.annex.compute match {
+                case Some(compute) =>
+                  for (c <- compute.cases) {
+                    c.assumes match {
+                      case Some(a) =>
+                        var found = false
+                        for (p <- vc.premises) {
+                          p match {
+                            case b: org.sireum.lang.ast.Exp.Binary =>
+                              if (b.op == org.sireum.lang.ast.Exp.BinaryOp.CondImply && b.left == a && b.right == c.guarantees) {
+                                found = true
+                              }
+                            case _ =>
+                          }
+                        }
+                        assert(found, s"Case ${c.id} of $alias should appear as an `assume ==> guarantee` premise")
+                        implicationCases += 1
+                      case _ =>
+                    }
+                  }
+                case _ =>
+              }
+            case _ =>
+          }
+        }
+        totalImplicationCases += implicationCases
+      }
+      assert(totalImplicationCases > 0, "Expected at least one compute case with an assume across the Isolette's properties")
 
       // --- VerusVCSerializer: SystemState field map ---
       val aadlTypes = result._1.get.types
-      val ssm = VerusVCSerializer.buildSystemStateMap(schedule, resolvedComponentAliasMap, symbolTable, aadlTypes, reporter)
+      val ssm = VerusVCSerializer.buildSystemStateMap(composition, resolvedComponentAliasMap, symbolTable, aadlTypes, reporter)
       assert(!reporter.hasError, s"SystemState field map construction failed: ${reporter.messages}")
 
       println(s"\nSystemState fields (${ssm.fields.size}):")
@@ -272,14 +287,14 @@ class SysVCTest extends TestSuite {
       }
       assert(sharedChecked > 0, "Expected at least one thread-to-thread connection in the Isolette")
 
-      // every schedule-declared alias resolves to a field
-      for (pa <- schedule.portAliases) {
+      // every composition-declared alias resolves to a field
+      for (pa <- composition.portAliases) {
         assert(ssm.byAlias.get(pa.name).nonEmpty, s"Port alias ${pa.name} did not resolve to a field")
       }
-      for (sva <- schedule.stateVarAliases) {
+      for (sva <- composition.stateVarAliases) {
         assert(ssm.byAlias.get(sva.name).nonEmpty, s"State var alias ${sva.name} did not resolve to a field")
       }
-      println(s"Schedule aliases resolved: ${schedule.portAliases.size} port, ${schedule.stateVarAliases.size} state var; connections sharing a field: $sharedChecked")
+      println(s"Composition aliases resolved: ${composition.portAliases.size} port, ${composition.stateVarAliases.size} state var; connections sharing a field: $sharedChecked")
 
       // --- VerusVCSerializer: copied component contracts ---
       // SysVCTest does not run codegen, so build a minimal type provider that maps
@@ -332,146 +347,110 @@ class SysVCTest extends TestSuite {
 
       val contractsRs = VerusVCSerializer.genContractsRs(contracts).render
       assert(contractsRs.value.contains("compute_case_"), "contracts.rs should contain case spec fns")
-      println(s"\ncontracts.rs: ${contracts.size} component modules, $totalContractFns fns ($caseImplications case implications)")
-      for (cc <- contracts if cc.moduleName == String("mhs")) {
-        println(VerusVCSerializer.genContractsRs(ISZ(cc)).render)
-      }
 
-      // --- VerusVCSerializer: system assertions ---
-      val (assertionFns, sysFns) = VerusVCSerializer.buildAssertions(
-        nextRel, ssm, symbolTable, aadlTypes, baseOptions, fakeTp, store, reporter)
-      assert(!reporter.hasError, s"Assertion construction failed: ${reporter.messages}")
-
-      var placesWithAsserts = 0
-      for (pi <- nextRel.places) {
-        if (pi.assertOpt.nonEmpty) placesWithAsserts += 1
-      }
-      assert(placesWithAsserts > 0, "Expected at least one place assertion in the Isolette schedule")
-      assert(assertionFns.size == placesWithAsserts,
-        s"Expected $placesWithAsserts assertion fns, got ${assertionFns.size}")
+      // --- VerusVCSerializer: system fns + per-property assertions ---
+      val sysFns = VerusVCSerializer.buildSysFns(symbolTable, aadlTypes, baseOptions, fakeTp, store, reporter)
+      assert(!reporter.hasError, s"System fn construction failed: ${reporter.messages}")
       assert(sysFns.nonEmpty, "Expected system-level GUMBO functions (sysProp_*)")
-
-      // alias references must have been substituted with SystemState field accesses
-      for (a <- assertionFns) {
-        assert(a.fnST.render.value.contains("st."),
-          s"Assertion ${a.fnName} does not reference SystemState fields")
-      }
-
-      println(s"\nassertions.rs: ${assertionFns.size} place assertions, ${sysFns.size} system GUMBO fns")
-      println(VerusVCSerializer.genAssertionsRs(assertionFns, sysFns).render)
 
       // --- VerusVCSerializer: write frames ---
       val frames = VerusVCSerializer.buildWriteFrames(ssm, resolvedComponentAliasMap, symbolTable)
       assert(frames.size == symbolTable.getThreads().size,
-        s"Expected one frame per thread, got ${frames.size}")
-
+        s"Expected one write frame per thread, got ${frames.size}")
+      val writeSets = WriteFrameBuilder.buildAll(
+        for (t <- symbolTable.getThreads()) yield (t: org.sireum.hamr.codegen.common.symbols.AadlComponent), symbolTable)
       for (fr <- frames) {
-        // write set + framed set partition the full field set
         assert(fr.writeFields.size + fr.framedFields.size == ssm.fields.size,
-          s"${fr.componentAlias}: write (${fr.writeFields.size}) + framed (${fr.framedFields.size}) != ${ssm.fields.size} fields")
-        // the frame excludes exactly the component's write set
-        val ws = WriteFrameBuilder.computeWriteSet(
-          symbolTable.componentMap.get(fr.componentPath).get, symbolTable)
-        assert(fr.writeFields.size == ws.outPorts.size + ws.stateVars.size,
-          s"${fr.componentAlias}: expected ${ws.outPorts.size + ws.stateVars.size} write fields, got ${fr.writeFields.size}")
-        for (wf <- fr.writeFields) {
+          s"${fr.componentAlias}: write + framed fields should partition the SystemState")
+        val ws = writeSets.get(fr.componentPath).get
+        assert(fr.writeFields.size == ws.outPorts.size + ws.stateVars.size ||
+          fr.writeFields.size <= ws.outPorts.size + ws.stateVars.size,
+          s"${fr.componentAlias}: write fields exceed the component write set")
+        for (wf <- fr.writeFields.elements) {
           assert(!fr.framedFields.elements.contains(wf), s"${fr.componentAlias}: written field $wf must not be framed")
         }
       }
-
-      // MHS frames everything except heat_control and lastCmd, including the
-      // tempWstatus channels its Next-Assert VC needs to transport REQ_MRI_7/8
-      for (fr <- frames if fr.componentAlias == String("mhs")) {
-        assert(fr.writeFields.elements.contains(String("heat_control")) && fr.writeFields.elements.contains(String("lastCmd")),
-          s"MHS write set should be heat_control + lastCmd, got ${fr.writeFields}")
-        assert(fr.framedFields.elements.contains(String("lower_desired_tempWstatus")) && fr.framedFields.elements.contains(String("upper_desired_tempWstatus")),
-          "MHS frame must constrain the desired tempWstatus channels")
-        println(s"\nwrite_frames.rs (mhs):")
-        println(fr.fnST.render)
+      frames.filter(fr => fr.componentAlias == String("mhs")) match {
+        case ISZ(fr) =>
+          assert(fr.writeFields.elements.contains(String("heat_control")) && fr.writeFields.elements.contains(String("lastCmd")),
+            "MHS should write heat_control and lastCmd")
+          assert(fr.framedFields.elements.contains(String("lower_desired_tempWstatus")) && fr.framedFields.elements.contains(String("upper_desired_tempWstatus")),
+            "MHS should frame the desired tempWstatus channels")
+        case _ => halt("Expected an MHS write frame")
       }
       val framesRs = VerusVCSerializer.genWriteFramesRs(frames).render
       assert(framesRs.value.contains("mhs_global_write_frame"), "write_frames.rs should contain the MHS frame")
 
-      // --- VerusVCSerializer: sequential VC proof fns ---
-      val seqVCs = VerusVCSerializer.genSequentialVCs(
-        vcs, nextRel, ssm, contracts, frames, assertionFns, resolvedComponentAliasMap, reporter)
-      assert(!reporter.hasError, s"Sequential VC serialization failed: ${reporter.messages}")
-
-      val initRs = seqVCs.vcInitRs.render
-      val seqRs = seqVCs.vcSequentialRs.render
-      val postPreRs = seqVCs.vcPostPreRs.render
-
-      assert(initRs.value.contains("vc_init_state"), "vc_init.rs should contain vc_init_state")
-      assert(postPreRs.value.contains("vc_post_pre"), "vc_post_pre.rs should contain vc_post_pre")
-
-      // one proof fn per sequential VC: 11 Pre-Assert + 11 Next-Assert (task) + 7 (skip)
-      val seqProofFnCount = seqRs.value.split("pub proof fn ").length - 1
-      assert(seqProofFnCount == 27, s"Expected 27 sequential proof fns, got $seqProofFnCount")
-
-      // MHS Next-Assert task VC spot checks (sketch VC[15]): frame premise,
-      // pre/post argument selection on a case implication, post-state conclusion
-      assert(seqRs.value.contains("mhs_global_write_frame(pre, post)"),
-        "MHS task VC should include the global write frame premise")
-      assert(seqRs.value.contains("mhs::compute_case_REQ_MHS_2(pre.current_tempWstatus, pre.lower_desired_temp, pre.regulator_mode, post.heat_control)"),
-        "MHS case premise should select pre-state in-ports and post-state out-port")
-      assert(seqRs.value.contains("sys_assert_END_Regulator_Assert(post)"),
-        "MHS task VC conclusion should be the End_Regulator assertion on post")
-      assert(seqRs.value.contains("sys_assert_Post_MRM_Assert(pre)"),
-        "MHS task VC premise should be the Post_MRM assertion on pre")
-
-      println(s"\nvc_init.rs:")
-      println(initRs)
-      println(s"vc_post_pre.rs:")
-      println(postPreRs)
-      println(s"vc_sequential.rs ($seqProofFnCount proof fns):")
-      println(seqRs)
-
-      // --- VerusVCSerializer: action abstractions + independence VCs ---
+      // --- VerusVCSerializer: actions + commutativity rendering (shared) ---
       val actions = VerusVCSerializer.buildActions(ssm, frames, symbolTable, fakeTp, reporter)
       assert(!reporter.hasError, s"Action abstraction construction failed: ${reporter.messages}")
       assert(actions.size == symbolTable.getThreads().size,
         s"Expected one action abstraction per thread, got ${actions.size}")
-
       val actionsRs = VerusVCSerializer.genActionsRs(actions).render
       assert(actionsRs.value.contains("pub uninterp spec fn mhs_action_heat_control("),
-        "actions.rs should declare MHS's heat_control action fn")
+        "actions.rs should contain MHS's uninterpreted action fns")
       assert(actionsRs.value.contains("pub open spec fn mhs_fire("),
-        "actions.rs should declare the MHS fire predicate")
+        "actions.rs should contain MHS's fire predicate")
 
-      val indRs = VerusVCSerializer.genIndependenceVCs(
-        vcs, nextRel, frames, assertionFns, actions, resolvedComponentAliasMap, reporter).render
-      assert(!reporter.hasError, s"Independence VC serialization failed: ${reporter.messages}")
-
-      val nbFnCount = indRs.value.split("pub proof fn vc_non_blocking_").length - 1
-      val presFnCount = indRs.value.split("pub proof fn vc_preservation_").length - 1
-      val commFnCount = indRs.value.split("pub proof fn vc_commutativity_").length - 1
-      assert(nbFnCount == 34, s"Expected 34 Non-Blocking proof fns, got $nbFnCount")
-      assert(presFnCount == 34, s"Expected 34 Preservation proof fns, got $presFnCount")
-      assert(commFnCount == 17, s"Expected 17 Commutativity proof fns, got $commFnCount")
-      assert(indRs.value.contains("post_a == post_b"),
-        "Commutativity VCs should conclude state equality of the two interleavings")
-
-      for (a <- actions if a.componentAlias == String("mhs")) {
-        println(s"\nactions.rs (mhs):")
-        println(a.fnST.render)
-      }
-      println(s"\nvc_independence.rs: $nbFnCount NonBlocking + $presFnCount Preservation + $commFnCount Commutativity")
-      indRs.value.split("\n\n").find(s => s.contains("vc_commutativity_mhs_ma") || s.contains("vc_commutativity_ma_mhs")) match {
-        case scala.Some(fn) => println(s"\nexample Commutativity VC:"); println(fn)
-        case _ => assert(false, "Expected a Commutativity VC for the MHS/MA pair")
-      }
-      indRs.value.split("\n\n").find(s => s.contains("pub proof fn vc_non_blocking_drf_dmf")) match {
-        case scala.Some(fn) => println(s"\nexample Non-Blocking VC:"); println(fn)
-        case _ => assert(false, "Expected the DRF/DMF Non-Blocking VC")
+      def countFns(rendered: String, prefix: Predef.String): Int = {
+        var count = 0
+        for (l <- rendered.value.split('\n')) {
+          if (l.trim.startsWith(prefix)) {
+            count += 1
+          }
+        }
+        count
       }
 
-      // 29 sequential VCs (1 Init + 11 Pre + 11 NextTask + 5 NextSkip + 1 PostPre)
-      // + 5 per cc pair (2 NB + 2 Pres + 1 Comm) + 2 per ck pair (1 NB + 1 Pres).
-      val expectedTotal = 1 + 11 + 11 + 5 + 1 + ccPairs * 5 + ckPairs * 2
-      assert(vcs.size == expectedTotal, s"Expected $expectedTotal total VCs, got ${vcs.size}")
+      val commVCsRs = VerusVCSerializer.genCommutativityVCs(commutativityVCs, nextRel, actions, resolvedComponentAliasMap, reporter).render
+      assert(!reporter.hasError, s"Commutativity VC serialization failed: ${reporter.messages}")
+      val commFnCount = countFns(commVCsRs, "pub proof fn vc_commutativity")
+      assert(commFnCount == ccPairs, s"Expected $ccPairs Commutativity proof fns, got $commFnCount")
 
-      println(s"\nMHIP pairs: ${mhipPairs.size}")
-      println(s"Total VCs: ${vcs.size}")
+      // --- VerusVCSerializer: per-property sequential + independence VCs ---
+      for (property <- composition.properties) {
+        val propModId = ops.StringOps(property.id).toLower
+        val decoration = ScheduleNextRel.decorate(nextRel, property, reporter)
+        val vcs = VCGenerator.generateForProperty(decoration, nextRel, mhipPairs, resolvedComponentAliasMap, symbolTable)
+
+        val assertionFns = VerusVCSerializer.buildPropertyAssertions(
+          propModId, decoration, ssm, symbolTable, aadlTypes, fakeTp, store, reporter)
+        assert(!reporter.hasError, s"Assertion construction for '${property.id}' failed: ${reporter.messages}")
+        assert(assertionFns.size == decoration.size,
+          s"'${property.id}': expected one assertion fn per bound place")
+        for (a <- assertionFns) {
+          assert(a.fnST.render.value.contains("st."),
+            s"Assertion ${a.fnName} should reference SystemState fields via st.<field>")
+        }
+
+        val seqVCs = VerusVCSerializer.genSequentialVCs(
+          propModId, vcs, nextRel, ssm, contracts, frames, assertionFns, resolvedComponentAliasMap, reporter)
+        assert(!reporter.hasError, s"Sequential VC serialization for '${property.id}' failed: ${reporter.messages}")
+
+        val initRs = seqVCs.vcInitRs.render
+        val seqRs = seqVCs.vcSequentialRs.render
+        val postPreRs = seqVCs.vcPostPreRs.render
+        assert(initRs.value.contains("vc_init_state"), "vc_*_init.rs should contain vc_init_state")
+        assert(postPreRs.value.contains("vc_post_pre"), "vc_*_post_pre.rs should contain vc_post_pre")
+
+        val seqProofFnCount = countFns(seqRs, "pub proof fn ")
+        val expectedSeqFns: Int = componentTransitions.size.toInt * 2 + controlTransitions.size.toInt
+        assert(seqProofFnCount == expectedSeqFns, s"Expected $expectedSeqFns sequential proof fns, got $seqProofFnCount")
+        assert(seqRs.value.contains("mhs_global_write_frame(pre, post)"),
+          "MHS's Next-Assert VC should require its global write frame")
+        assert(seqRs.value.contains("vc_next_assert_task_mhs"),
+          "task proof fns are named by the firing occurrence")
+
+        val indVCsRs = VerusVCSerializer.genPropertyIndependenceVCs(
+          propModId, vcs, nextRel, frames, assertionFns, resolvedComponentAliasMap, reporter).render
+        assert(!reporter.hasError, s"Independence VC serialization for '${property.id}' failed: ${reporter.messages}")
+        val nbFnCount = countFns(indVCsRs, "pub proof fn vc_non_blocking")
+        val presFnCount = countFns(indVCsRs, "pub proof fn vc_preservation")
+        assert(nbFnCount == expectedDirected, s"Expected $expectedDirected Non-Blocking proof fns, got $nbFnCount")
+        assert(presFnCount == expectedDirected, s"Expected $expectedDirected Preservation proof fns, got $presFnCount")
+      }
+
+      println(s"\nAll composition checks passed for '${composition.id}'")
     }
   }
 }

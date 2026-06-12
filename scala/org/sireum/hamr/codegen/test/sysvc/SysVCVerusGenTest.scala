@@ -81,17 +81,28 @@ class SysVCVerusGenTest extends TestSuite {
       reporter.printMessages()
       assert(!reporter.hasError, "Expecting no errors but codegen did not complete successfully")
 
-      val sysProofDir = outDir / "microkit" / "crates" / "sys_proof"
-      val expectedFiles = ISZ[String](
-        "Cargo.toml", "rust-toolchain.toml",
-        "src/lib.rs", "src/system_state.rs", "src/contracts.rs", "src/assertions.rs",
-        "src/write_frames.rs", "src/actions.rs",
-        "src/vc_init.rs", "src/vc_sequential.rs", "src/vc_post_pre.rs", "src/vc_independence.rs")
-      for (f <- expectedFiles) {
-        assert(Os.path(s"${sysProofDir.value}/$f").exists, s"Missing generated file: $f")
-      }
+      // one proof crate per composition: crates/sys_proof_<composition id>
+      val cratesDir = outDir / "microkit" / "crates"
+      val sysProofDirs = cratesDir.list.filter(p => p.isDir && ops.StringOps(p.name).startsWith("sys_proof_"))
+      assert(sysProofDirs.nonEmpty, s"Expected at least one sys_proof_<id> crate under ${cratesDir.toUri}")
 
-      println(s"SYS_PROOF_DIR: ${sysProofDir.canon.value}")
+      for (sysProofDir <- sysProofDirs) {
+        val sharedFiles = ISZ[String](
+          "Cargo.toml", "rust-toolchain.toml",
+          "src/lib.rs", "src/system_state.rs", "src/contracts.rs", "src/assertions.rs",
+          "src/write_frames.rs", "src/actions.rs", "src/vc_commutativity.rs")
+        for (f <- sharedFiles) {
+          assert(Os.path(s"${sysProofDir.value}/$f").exists, s"Missing generated file: ${sysProofDir.name}/$f")
+        }
+        // per-property module groups
+        val srcFiles = (sysProofDir / "src").list.map((p: Os.Path) => p.name)
+        assert(srcFiles.filter(f => ops.StringOps(f).startsWith("assertions_")).nonEmpty,
+          s"${sysProofDir.name}: expected at least one per-property assertions_<p>.rs")
+        assert(srcFiles.filter(f => ops.StringOps(f).startsWith("vc_") && ops.StringOps(f).endsWith("_sequential.rs")).nonEmpty,
+          s"${sysProofDir.name}: expected at least one per-property vc_<p>_sequential.rs")
+
+        println(s"SYS_PROOF_DIR: ${sysProofDir.canon.value}")
+      }
     }
   }
 }
