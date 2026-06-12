@@ -4528,9 +4528,8 @@
                     "compute" : {
                       "type" : "None"
                     },
-                    "schedule" : {
-                      "type" : "None"
-                    },
+                    "compositions" : [
+                    ],
                     "attr" : {
                       "type" : "Attr",
                       "posOpt" : {
@@ -5120,9 +5119,8 @@
                         }
                       }
                     },
-                    "schedule" : {
-                      "type" : "None"
-                    },
+                    "compositions" : [
+                    ],
                     "attr" : {
                       "type" : "Attr",
                       "posOpt" : {
@@ -15024,9 +15022,8 @@
                         }
                       }
                     },
-                    "schedule" : {
-                      "type" : "None"
-                    },
+                    "compositions" : [
+                    ],
                     "attr" : {
                       "type" : "Attr",
                       "posOpt" : {
@@ -25292,9 +25289,8 @@
             "compute" : {
               "type" : "None"
             },
-            "schedule" : {
-              "type" : "None"
-            },
+            "compositions" : [
+            ],
             "attr" : {
               "type" : "Attr",
               "posOpt" : {
@@ -25942,9 +25938,8 @@
                 "compute" : {
                   "type" : "None"
                 },
-                "schedule" : {
-                  "type" : "None"
-                },
+                "compositions" : [
+                ],
                 "attr" : {
                   "type" : "Attr",
                   "posOpt" : {
@@ -26361,9 +26356,8 @@
                 "compute" : {
                   "type" : "None"
                 },
-                "schedule" : {
-                  "type" : "None"
-                },
+                "compositions" : [
+                ],
                 "attr" : {
                   "type" : "Attr",
                   "posOpt" : {
@@ -27176,9 +27170,8 @@
             "compute" : {
               "type" : "None"
             },
-            "schedule" : {
-              "type" : "None"
-            },
+            "compositions" : [
+            ],
             "attr" : {
               "type" : "Attr",
               "posOpt" : {
