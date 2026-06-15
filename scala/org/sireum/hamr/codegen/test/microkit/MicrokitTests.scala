@@ -55,7 +55,10 @@ class MicrokitTests extends CodegenTest {
       modelUri = None(),
       expectedErrorReasons = ISZ())
 
-    if (testName.native.startsWith("isolette")) {
+    // The isolette and the multi-composition micro-example carry system-level
+    // GUMBO compositions; build a UserLand (MCS) variant so the sys-assert
+    // monitor activates (it requires MCS scheduling).
+    if (testName.native.startsWith("isolette") || testName.native.contains("sys_assert_compositions")) {
       testName = s"sys_assert_$testName"
 
       testOptions = testOptions(

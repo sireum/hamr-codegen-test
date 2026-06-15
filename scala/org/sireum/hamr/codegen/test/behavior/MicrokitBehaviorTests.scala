@@ -20,8 +20,9 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
 
   override def filters: ISZ[String] = ISZ("sysml_isolette")
 
-  override def ignores: _root_.org.sireum.ISZ[String] = super.ignores ++ ISZ(
-    "case-transition-models"
+  override def ignores: ISZ[String] = super.ignores ++ ISZ(
+    "case-transition-models",
+    "sys_assert_compositions"
   )
 
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
@@ -36,7 +37,8 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     val cands = Os.Path.walk(aadlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
     assert (cands.size == 1, s"Found ${cands.size} JSON files under $aadlDir")
 
-    assert ((cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${cands(0).up.up.up / "hamr"}")
+    assert (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem)) ||
+      (cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${cands(0).up.up.up / "hamr"}  $testName")
 
     testOptions = testOptions(
       runtimeMonitoring = !ops.StringOps(testName).contains("vms"),
@@ -46,7 +48,8 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     val clean = {
       val aadlDir = cands(0).up.up
       val t = aadlDir / "bin" / "clean.cmd"
-      assert (t.exists, s"$t doesn't exist")
+      assert (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem)) ||
+        t.exists, s"$t doesn't exist")
       () => proc"$t ${(aadlDir.up / "hamr" / "microkit").value}".run().ok
     }
 
