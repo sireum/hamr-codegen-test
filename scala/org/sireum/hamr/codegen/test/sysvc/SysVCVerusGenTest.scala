@@ -94,12 +94,20 @@ class SysVCVerusGenTest extends TestSuite {
         for (f <- sharedFiles) {
           assert(Os.path(s"${sysProofDir.value}/$f").exists, s"Missing generated file: ${sysProofDir.name}/$f")
         }
-        // per-property module groups
-        val srcFiles = (sysProofDir / "src").list.map((p: Os.Path) => p.name)
-        assert(srcFiles.filter(f => ops.StringOps(f).startsWith("assertions_")).nonEmpty,
-          s"${sysProofDir.name}: expected at least one per-property assertions_<p>.rs")
-        assert(srcFiles.filter(f => ops.StringOps(f).startsWith("vc_") && ops.StringOps(f).endsWith("_sequential.rs")).nonEmpty,
-          s"${sysProofDir.name}: expected at least one per-property vc_<p>_sequential.rs")
+        // per-property module groups: one folder per property under src/, each
+        // containing mod.rs + assertions.rs + the four vc_*.rs modules (shared
+        // modules are files, so property groups are exactly the subdirectories)
+        val propDirs = (sysProofDir / "src").list.filter((p: Os.Path) => p.isDir)
+        assert(propDirs.nonEmpty,
+          s"${sysProofDir.name}: expected at least one per-property folder src/<p>")
+        for (propDir <- propDirs) {
+          val propFiles = ISZ[String](
+            "mod.rs", "assertions.rs",
+            "vc_init.rs", "vc_sequential.rs", "vc_post_pre.rs", "vc_independence.rs")
+          for (f <- propFiles) {
+            assert((propDir / f).exists, s"Missing generated file: src/${propDir.name}/$f")
+          }
+        }
 
         println(s"SYS_PROOF_DIR: ${sysProofDir.canon.value}")
       }
