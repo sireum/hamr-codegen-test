@@ -156,7 +156,10 @@ class SysVCTest extends TestSuite {
       val expectedPerProperty = 1 + componentTransitions.size * 2 + controlTransitions.size + 1 + expectedDirected * 2
 
       var totalImplicationCases = 0
-      for (property <- composition.properties) {
+      // D9: abstract bases are not instantiated -- the plugin generates no VC set
+      // for them (their bindings are folded into the concrete properties), so the
+      // test mirrors that and only checks the instantiated (concrete) properties.
+      for (property <- composition.properties if !property.isAbstract) {
         val decoration = ScheduleNextRel.decorate(nextRel, property, reporter)
         assert(!reporter.hasError, s"Decoration of property '${property.id}' failed: ${reporter.messages}")
         assert(decoration.size == property.bindings.size,
