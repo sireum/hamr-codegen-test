@@ -97,7 +97,7 @@ class MicrokitTests extends CodegenTest {
 
 
     val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
-    assert (cands.size <= 1, s"Found ${cands.size} JSON files under $sysmlDir")
+    assert (cands.size <= 1, s"Found ${cands.size} JSON files under ${sysmlDir.toUri}")
 
     test(
       testName = testName,
