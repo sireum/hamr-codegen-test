@@ -90,7 +90,7 @@ class SysVCVerusGenTest extends TestSuite {
         val sharedFiles = ISZ[String](
           "Cargo.toml", "rust-toolchain.toml",
           "src/lib.rs", "src/system_state.rs", "src/contracts.rs", "src/assertions.rs",
-          "src/write_frames.rs", "src/actions.rs", "src/vc_commutativity.rs")
+          "src/write_frames.rs", "src/actions.rs", "src/vc_commutativity.rs", "src/vc_integration.rs")
         for (f <- sharedFiles) {
           assert(Os.path(s"${sysProofDir.value}/$f").exists, s"Missing generated file: ${sysProofDir.name}/$f")
         }
