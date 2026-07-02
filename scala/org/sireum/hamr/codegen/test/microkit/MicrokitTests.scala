@@ -21,7 +21,7 @@ class MicrokitTests extends CodegenTest {
 
   override def filter: B = F
 
-  override def filters: ISZ[String] = ISZ("41A6")
+  override def filters: ISZ[String] = ISZ("9F67")
 
   override def ignores: ISZ[String] = ISZ(
     "case-transition-models"
@@ -29,8 +29,12 @@ class MicrokitTests extends CodegenTest {
 
   override val verbose: B = ops.ISZOps(testModes).contains(TestMode.verbose)
 
+  val sysVerifModels = testResources.modelsDir / "micro-examples" / "microkit" / "system-verification"
+
   val sysmlModels = MicrokitTestUtil.getSysmlModels(testResources.copy(modelsDir = testResources.modelsDir / "micro-examples" / "microkit")) :+
-    testResources.modelsDir / "isolette" / "sysml"
+    testResources.modelsDir / "isolette" / "sysml" :+
+    //sysVerifModels / "fan-in" / "even_odd" / "sysml" :+
+    sysVerifModels / "temp-control" / "sysml"
 
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
     val t = ops.StringOps(aadlDir.up.value)

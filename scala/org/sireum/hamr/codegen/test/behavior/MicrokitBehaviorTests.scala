@@ -64,7 +64,9 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       airFile = Some(cands (0)))
   }
 
-  val sysmlModels = ISZ() :+ testResources.modelsDir / "isolette" / "sysml"
+  val sysmlModels = ISZ() :+
+    testResources.modelsDir / "isolette" / "sysml" :+
+    testResources.modelsDir / "micro-examples" / "microkit" / "system-verification"/ "temp-control" / "sysml"
 
   for (sysmlDir <- sysmlModels) {
     val t = ops.StringOps(sysmlDir.up.value)
@@ -78,7 +80,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
     assert (cands.size == 1, s"Found ${cands.size} JSON files under $sysmlDir")
 
-    assert ((cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${cands(0).up.up.up / "hamr"}")
+    assert ((cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${(cands(0).up.up.up / "hamr").canon}")
 
     if (testName._value.contains("sysml_iso")) {
       testOptions = testOptions(
@@ -100,7 +102,12 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
 
     val clean = {
       val aadlDir = cands(0).up.up.up / "aadl"
-      val t = aadlDir / "bin" / "clean.cmd"
+      var t = aadlDir / "bin" / "clean.cmd"
+      if (!t.exists) {
+        val sysmlDir = cands(0).up.up.up / "sysml"
+        t = sysmlDir / "bin" / "clean.cmd"
+      }
+
       assert (t.exists, s"$t doesn't exist")
 
       () => proc"$t $mdir".run().ok
