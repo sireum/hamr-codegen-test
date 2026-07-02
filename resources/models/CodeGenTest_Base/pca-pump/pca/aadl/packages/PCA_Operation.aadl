@@ -117,9 +117,7 @@ system implementation operation.imp
     fp:port Finger_Press -> control_panel.Finger_Press;
     lte: port control_panel.LightToEye -> LightToEye;
     snd: port control_panel.Sound -> Sound;
-  --names
-    pn: port security_subsystem.Patient_Name -> control_panel.Patient_Name;
-    cn: port security_subsystem.Clinician_Name -> control_panel.Clinician_Name;
+  --names: connected in the security section below (scn/spn)
   --ICE interface to network adaptor
     cmd: feature group command <-> operation_process.command;
     par: feature group parameters <-> operation_process.parameters;

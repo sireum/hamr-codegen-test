@@ -81,10 +81,11 @@ class SysVCVerusGenTest extends TestSuite {
       reporter.printMessages()
       assert(!reporter.hasError, "Expecting no errors but codegen did not complete successfully")
 
-      // one proof crate per composition: crates/sys_proof_<composition id>
+      // one proof crate per composition: crates/sys_<composition id>_proof
       val cratesDir = outDir / "microkit" / "crates"
-      val sysProofDirs = cratesDir.list.filter(p => p.isDir && ops.StringOps(p.name).startsWith("sys_proof_"))
-      assert(sysProofDirs.nonEmpty, s"Expected at least one sys_proof_<id> crate under ${cratesDir.toUri}")
+      val sysProofDirs = cratesDir.list.filter(p => p.isDir &&
+        ops.StringOps(p.name).startsWith("sys_") && ops.StringOps(p.name).endsWith("_proof"))
+      assert(sysProofDirs.nonEmpty, s"Expected at least one sys_<id>_proof crate under ${cratesDir.toUri}")
 
       for (sysProofDir <- sysProofDirs) {
         val sharedFiles = ISZ[String](
@@ -103,7 +104,7 @@ class SysVCVerusGenTest extends TestSuite {
         for (propDir <- propDirs) {
           val propFiles = ISZ[String](
             "mod.rs", "assertions.rs",
-            "vc_init.rs", "vc_sequential.rs", "vc_post_pre.rs", "vc_independence.rs")
+            "vc_init.rs", "vc_sequential.rs", "vc_post_pre.rs", "vc_non_disabling.rs")
           for (f <- propFiles) {
             assert((propDir / f).exists, s"Missing generated file: src/${propDir.name}/$f")
           }

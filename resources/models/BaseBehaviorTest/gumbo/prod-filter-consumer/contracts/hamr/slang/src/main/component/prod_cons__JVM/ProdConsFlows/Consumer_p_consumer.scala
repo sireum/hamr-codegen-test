@@ -22,8 +22,10 @@ object Consumer_p_consumer {
     api.logInfo(s"  received $value")
     // example api usage
 
-    val apiUsage_e_data_in: Option[ProdConsFlows.Container_i] = api.get_e_data_in()
-    api.logInfo(s"Received on data port e_data_in: ${apiUsage_e_data_in}")
+    val apiUsage_ep_data_in: Option[ProdConsFlows.Container_i] = api.get_ep_data_in()
+    api.logInfo(s"Received on data port ep_data_in: ${apiUsage_ep_data_in}")
+    val apiUsage_es_data_in: Option[ProdConsFlows.Container_i] = api.get_es_data_in()
+    api.logInfo(s"Received on data port es_data_in: ${apiUsage_es_data_in}")
     val apiUsage_f_event_data_in: Option[ProdConsFlows.Container_i] = api.get_f_event_data_in()
     api.logInfo(s"Received on event data port f_event_data_in: ${apiUsage_f_event_data_in}")
     val apiUsage_g_event_data_in: Option[ProdConsFlows.Container_i] = api.get_g_event_data_in()

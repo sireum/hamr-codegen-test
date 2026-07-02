@@ -33,7 +33,8 @@ object Consumer_p_consumer_UnitTestConfiguration_Util {
         api_h_event_in = freshRandomLib,
         api_f_event_data_in = freshRandomLib,
         api_g_event_data_in = freshRandomLib,
-        api_e_data_in = freshRandomLib
+        api_ep_data_in = freshRandomLib,
+        api_es_data_in = freshRandomLib
       ),
       genReplay = (c: Container, testName: String, r: GumboXResult.Type) => Some(
        st"""Replay Unit Test:

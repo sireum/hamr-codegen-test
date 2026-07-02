@@ -14,7 +14,8 @@ import prod_cons__JVM.util.Container
   def api_h_event_in: Option[art.Empty]
   def api_f_event_data_in: Option[ProdConsFlows.Container_i]
   def api_g_event_data_in: Option[ProdConsFlows.Container_i]
-  def api_e_data_in: ProdConsFlows.Container_i
+  def api_ep_data_in: ProdConsFlows.Container_i
+  def api_es_data_in: ProdConsFlows.Container_i
 }
 
 // container for incoming ports
@@ -22,14 +23,16 @@ import prod_cons__JVM.util.Container
   val api_h_event_in: Option[art.Empty],
   val api_f_event_data_in: Option[ProdConsFlows.Container_i],
   val api_g_event_data_in: Option[ProdConsFlows.Container_i],
-  val api_e_data_in: ProdConsFlows.Container_i) extends Consumer_p_consumer_PreState_Container
+  val api_ep_data_in: ProdConsFlows.Container_i,
+  val api_es_data_in: ProdConsFlows.Container_i) extends Consumer_p_consumer_PreState_Container
 
 // container for incoming ports and state variables
 @datatype class Consumer_p_consumer_PreState_Container_PS (
   val api_h_event_in: Option[art.Empty],
   val api_f_event_data_in: Option[ProdConsFlows.Container_i],
   val api_g_event_data_in: Option[ProdConsFlows.Container_i],
-  val api_e_data_in: ProdConsFlows.Container_i) extends Consumer_p_consumer_PreState_Container
+  val api_ep_data_in: ProdConsFlows.Container_i,
+  val api_es_data_in: ProdConsFlows.Container_i) extends Consumer_p_consumer_PreState_Container
 
 @sig trait Consumer_p_consumer_PostState_Container extends Container {
 }

@@ -71,7 +71,6 @@ system implementation fluid.imp
   --measured flow rate  
     ufr: port upstream_mon.Upstream_Flow_Rate->Upstream_Flow_Rate;
     dfr: port downstream_mon.Downstream_Flow_Rate->Downstream_Flow_Rate;
-    ufre: port upstream_mon.Upstream_Flow_Rate->Upstream_Flow_Rate;
   --alarms
     dno: port downstream_mon.Occlusion->Downstream_Occlusion;
     upo: port upstream_mon.Occlusion->Upstream_Occlusion;

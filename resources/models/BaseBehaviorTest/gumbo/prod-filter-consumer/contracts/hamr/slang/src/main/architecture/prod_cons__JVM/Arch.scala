@@ -83,10 +83,11 @@ object Arch {
     )
   }
   val s_i_Instance_p_consumer : prod_cons__JVM.ProdConsFlows.Consumer_p_consumer_Bridge = {
-    val e_data_in = Port[ProdConsFlows.Container_i] (id = portId"20", name = "s_i_Instance_p_consumer_e_data_in", mode = DataIn)
-    val f_event_data_in = Port[ProdConsFlows.Container_i] (id = portId"21", name = "s_i_Instance_p_consumer_f_event_data_in", mode = EventIn)
-    val g_event_data_in = Port[ProdConsFlows.Container_i] (id = portId"22", name = "s_i_Instance_p_consumer_g_event_data_in", mode = EventIn)
-    val h_event_in = Port[art.Empty] (id = portId"23", name = "s_i_Instance_p_consumer_h_event_in", mode = EventIn)
+    val ep_data_in = Port[ProdConsFlows.Container_i] (id = portId"20", name = "s_i_Instance_p_consumer_ep_data_in", mode = DataIn)
+    val es_data_in = Port[ProdConsFlows.Container_i] (id = portId"21", name = "s_i_Instance_p_consumer_es_data_in", mode = DataIn)
+    val f_event_data_in = Port[ProdConsFlows.Container_i] (id = portId"22", name = "s_i_Instance_p_consumer_f_event_data_in", mode = EventIn)
+    val g_event_data_in = Port[ProdConsFlows.Container_i] (id = portId"23", name = "s_i_Instance_p_consumer_g_event_data_in", mode = EventIn)
+    val h_event_in = Port[art.Empty] (id = portId"24", name = "s_i_Instance_p_consumer_h_event_in", mode = EventIn)
 
     prod_cons__JVM.ProdConsFlows.Consumer_p_consumer_Bridge(
       id = bridgeId"3",
@@ -94,7 +95,8 @@ object Arch {
       dispatchProtocol = Sporadic(min = 1),
       dispatchTriggers = None(),
 
-      e_data_in = e_data_in,
+      ep_data_in = ep_data_in,
+      es_data_in = es_data_in,
       f_event_data_in = f_event_data_in,
       g_event_data_in = g_event_data_in,
       h_event_in = h_event_in
@@ -114,11 +116,11 @@ object Arch {
                                                        Connection(from = s_i_Instance_p_producer.c_event_data_out, to = s_i_Instance_p_filters.c_event_data_in),
                                                        Connection(from = s_i_Instance_p_producer.d_event_out, to = s_i_Instance_p_filterp.d_event_in),
                                                        Connection(from = s_i_Instance_p_producer.d_event_out, to = s_i_Instance_p_filters.d_event_in),
-                                                       Connection(from = s_i_Instance_p_filterp.e_data_out, to = s_i_Instance_p_consumer.e_data_in),
+                                                       Connection(from = s_i_Instance_p_filterp.e_data_out, to = s_i_Instance_p_consumer.ep_data_in),
                                                        Connection(from = s_i_Instance_p_filterp.f_event_data_out, to = s_i_Instance_p_consumer.f_event_data_in),
                                                        Connection(from = s_i_Instance_p_filterp.g_event_data_out, to = s_i_Instance_p_consumer.g_event_data_in),
                                                        Connection(from = s_i_Instance_p_filterp.h_event_out, to = s_i_Instance_p_consumer.h_event_in),
-                                                       Connection(from = s_i_Instance_p_filters.e_data_out, to = s_i_Instance_p_consumer.e_data_in),
+                                                       Connection(from = s_i_Instance_p_filters.e_data_out, to = s_i_Instance_p_consumer.es_data_in),
                                                        Connection(from = s_i_Instance_p_filters.f_event_data_out, to = s_i_Instance_p_consumer.f_event_data_in),
                                                        Connection(from = s_i_Instance_p_filters.g_event_data_out, to = s_i_Instance_p_consumer.g_event_data_in),
                                                        Connection(from = s_i_Instance_p_filters.h_event_out, to = s_i_Instance_p_consumer.h_event_in))

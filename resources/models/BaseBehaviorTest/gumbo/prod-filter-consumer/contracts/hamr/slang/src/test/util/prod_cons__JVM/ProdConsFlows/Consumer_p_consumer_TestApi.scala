@@ -28,7 +28,8 @@ import prod_cons__JVM._
   }
 
   /** helper function to set the values of all input ports.
-   * @param e_data_in payload for data port e_data_in
+   * @param ep_data_in payload for data port ep_data_in
+   * @param es_data_in payload for data port es_data_in
    * @param f_event_data_in payloads for event data port f_event_data_in.
    *   ART currently supports single element event data queues so
    *   only the last element of f_event_data_in will be used
@@ -39,11 +40,13 @@ import prod_cons__JVM._
    *   ART currently supports single element event queues so at most
    *   one event will be placed in the queue.
    */
-  def put_concrete_inputs(e_data_in : ProdConsFlows.Container_i,
+  def put_concrete_inputs(ep_data_in : ProdConsFlows.Container_i,
+                          es_data_in : ProdConsFlows.Container_i,
                           f_event_data_in : ISZ[ProdConsFlows.Container_i],
                           g_event_data_in : ISZ[ProdConsFlows.Container_i],
                           h_event_in : Z): Unit = {
-    put_e_data_in(e_data_in)
+    put_ep_data_in(ep_data_in)
+    put_es_data_in(es_data_in)
     for(v <- f_event_data_in){
       put_f_event_data_in(v)
     }
@@ -57,8 +60,13 @@ import prod_cons__JVM._
 
 
   // setter for in DataPort
-  def put_e_data_in(value : ProdConsFlows.Container_i): Unit = {
-    Art.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.e_data_in_Id, ProdConsFlows.Container_i_Payload(value))
+  def put_ep_data_in(value : ProdConsFlows.Container_i): Unit = {
+    Art.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.ep_data_in_Id, ProdConsFlows.Container_i_Payload(value))
+  }
+
+  // setter for in DataPort
+  def put_es_data_in(value : ProdConsFlows.Container_i): Unit = {
+    Art.insertInInfrastructurePort(Arch.s_i_Instance_p_consumer.operational_api.es_data_in_Id, ProdConsFlows.Container_i_Payload(value))
   }
 
   // setter for in EventDataPort

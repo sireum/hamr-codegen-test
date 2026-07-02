@@ -78,11 +78,12 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     var testOptions = MicrokitBehaviorTests.baseOptions
 
     val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
-    assert (cands.size == 1, s"Found ${cands.size} JSON files under $sysmlDir")
+    val airs = cands.filter(p => !ops.StringOps(p.name).contains("_result"))
+    assert (airs.size == 1, s"Found ${airs.size} JSON files under ${sysmlDir.toUri}")
 
-    assert ((cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${(cands(0).up.up.up / "hamr").canon}")
+    assert ((airs(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${(airs(0).up.up.up / "hamr").canon}")
 
-    if (testName._value.contains("sysml_iso")) {
+    if (testName._value.contains("sysml_iso") || testName._value.contains("temp-control__9F67")) {
       testOptions = testOptions(
         scheduling = HamrCli.CodegenScheduling.UserLand,
         verusAttributeSyntax = T)
@@ -90,21 +91,21 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
 
     val mdir: Os.Path =
       if (testOptions.scheduling == HamrCli.CodegenScheduling.UserLand)
-        cands(0).up.up.up / "hamr" / "microkit_mcs"
-      else cands(0).up.up.up / "hamr" / "microkit"
+        airs(0).up.up.up / "hamr" / "microkit_mcs"
+      else airs(0).up.up.up / "hamr" / "microkit"
 
     assert (mdir.exists, mdir.value)
 
     testOptions = testOptions(
       runtimeMonitoring = !ops.StringOps(testName).contains("vms"),
       sel4OutputDir = Some(mdir.value),
-      workspaceRootDir = Some(cands(0).up.up.value))
+      workspaceRootDir = Some(airs(0).up.up.value))
 
     val clean = {
-      val aadlDir = cands(0).up.up.up / "aadl"
+      val aadlDir = airs(0).up.up.up / "aadl"
       var t = aadlDir / "bin" / "clean.cmd"
       if (!t.exists) {
-        val sysmlDir = cands(0).up.up.up / "sysml"
+        val sysmlDir = airs(0).up.up.up / "sysml"
         t = sysmlDir / "bin" / "clean.cmd"
       }
 
@@ -121,7 +122,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       phantomOptions = None(),
       logikaOptions = None(),
       clean,
-      airFile = Some(cands (0)))
+      airFile = Some(airs (0)))
   }
 }
 

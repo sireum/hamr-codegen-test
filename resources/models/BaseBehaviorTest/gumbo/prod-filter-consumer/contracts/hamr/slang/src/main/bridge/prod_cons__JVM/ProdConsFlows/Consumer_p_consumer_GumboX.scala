@@ -12,20 +12,23 @@ object Consumer_p_consumer_GumboX {
     * @param api_h_event_in incoming event port
     * @param api_f_event_data_in incoming event data port
     * @param api_g_event_data_in incoming event data port
-    * @param api_e_data_in incoming data port
+    * @param api_ep_data_in incoming data port
+    * @param api_es_data_in incoming data port
     */
   @strictpure def compute_CEP_Pre (
       api_h_event_in: Option[art.Empty],
       api_f_event_data_in: Option[ProdConsFlows.Container_i],
       api_g_event_data_in: Option[ProdConsFlows.Container_i],
-      api_e_data_in: ProdConsFlows.Container_i): B =
+      api_ep_data_in: ProdConsFlows.Container_i,
+      api_es_data_in: ProdConsFlows.Container_i): B =
     {
       // D-Inv-Guard: Datatype invariants for the types associated with consumer's state variables and incoming ports
       val r0 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_in)
       val r1 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_in)
-      val r2 = ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_in)
+      val r2 = ProdConsFlows.Container_i.D_Inv_Container_i(api_ep_data_in)
+      val r3 = ProdConsFlows.Container_i.D_Inv_Container_i(api_es_data_in)
 
-      r0 & r1 & r2
+      r0 & r1 & r2 & r3
     }
 
   /** CEP-Pre: Compute Entrypoint Pre-Condition for consumer via container
@@ -37,27 +40,31 @@ object Consumer_p_consumer_GumboX {
       api_h_event_in = pre.api_h_event_in,
       api_f_event_data_in = pre.api_f_event_data_in,
       api_g_event_data_in = pre.api_g_event_data_in,
-      api_e_data_in = pre.api_e_data_in)
+      api_ep_data_in = pre.api_ep_data_in,
+      api_es_data_in = pre.api_es_data_in)
 
   /** CEP-Post: Compute Entrypoint Post-Condition for consumer
     *
     * @param api_h_event_in incoming event port
     * @param api_f_event_data_in incoming event data port
     * @param api_g_event_data_in incoming event data port
-    * @param api_e_data_in incoming data port
+    * @param api_ep_data_in incoming data port
+    * @param api_es_data_in incoming data port
     */
   @strictpure def compute_CEP_Post (
       api_h_event_in: Option[art.Empty],
       api_f_event_data_in: Option[ProdConsFlows.Container_i],
       api_g_event_data_in: Option[ProdConsFlows.Container_i],
-      api_e_data_in: ProdConsFlows.Container_i): B =
+      api_ep_data_in: ProdConsFlows.Container_i,
+      api_es_data_in: ProdConsFlows.Container_i): B =
     {
       // D-Inv-Guard: Datatype invariants for the types associated with consumer's state variables and outgoing ports
       val r0 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_f_event_data_in)
       val r1 = ProdConsFlows.Container_i.D_Inv_Guard_Container_i(api_g_event_data_in)
-      val r2 = ProdConsFlows.Container_i.D_Inv_Container_i(api_e_data_in)
+      val r2 = ProdConsFlows.Container_i.D_Inv_Container_i(api_ep_data_in)
+      val r3 = ProdConsFlows.Container_i.D_Inv_Container_i(api_es_data_in)
 
-      r0 & r1 & r2
+      r0 & r1 & r2 & r3
     }
 
   /** CEP-Post: Compute Entrypoint Post-Condition for consumer via containers
@@ -72,5 +79,6 @@ object Consumer_p_consumer_GumboX {
       api_h_event_in = pre.api_h_event_in,
       api_f_event_data_in = pre.api_f_event_data_in,
       api_g_event_data_in = pre.api_g_event_data_in,
-      api_e_data_in = pre.api_e_data_in)
+      api_ep_data_in = pre.api_ep_data_in,
+      api_es_data_in = pre.api_es_data_in)
 }

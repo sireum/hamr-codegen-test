@@ -15,14 +15,16 @@ import prod_cons__JVM.ProdConsFlows.{Consumer_p_consumer => component}
   val dispatchProtocol: DispatchPropertyProtocol,
   val dispatchTriggers: Option[ISZ[Art.PortId]],
 
-  e_data_in: Port[ProdConsFlows.Container_i],
+  ep_data_in: Port[ProdConsFlows.Container_i],
+  es_data_in: Port[ProdConsFlows.Container_i],
   f_event_data_in: Port[ProdConsFlows.Container_i],
   g_event_data_in: Port[ProdConsFlows.Container_i],
   h_event_in: Port[art.Empty]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    dataIns = ISZ[art.UPort](e_data_in),
+    dataIns = ISZ[art.UPort](ep_data_in,
+                             es_data_in),
 
     dataOuts = ISZ[art.UPort](),
 
@@ -36,7 +38,8 @@ import prod_cons__JVM.ProdConsFlows.{Consumer_p_consumer => component}
   val initialization_api : Consumer_Initialization_Api = {
     val api = Consumer_Initialization_Api(
       id,
-      e_data_in.id,
+      ep_data_in.id,
+      es_data_in.id,
       f_event_data_in.id,
       g_event_data_in.id,
       h_event_in.id
@@ -48,7 +51,8 @@ import prod_cons__JVM.ProdConsFlows.{Consumer_p_consumer => component}
   val operational_api : Consumer_Operational_Api = {
     val api = Consumer_Operational_Api(
       id,
-      e_data_in.id,
+      ep_data_in.id,
+      es_data_in.id,
       f_event_data_in.id,
       g_event_data_in.id,
       h_event_in.id
@@ -61,7 +65,8 @@ import prod_cons__JVM.ProdConsFlows.{Consumer_p_consumer => component}
     Consumer_p_consumer_Bridge.EntryPoints(
       id,
 
-      e_data_in.id,
+      ep_data_in.id,
+      es_data_in.id,
       f_event_data_in.id,
       g_event_data_in.id,
       h_event_in.id,
@@ -79,7 +84,8 @@ object Consumer_p_consumer_Bridge {
 
   @datatype class EntryPoints(
     Consumer_p_consumer_BridgeId : Art.BridgeId,
-    e_data_in_Id : Art.PortId,
+    ep_data_in_Id : Art.PortId,
+    es_data_in_Id : Art.PortId,
     f_event_data_in_Id : Art.PortId,
     g_event_data_in_Id : Art.PortId,
     h_event_in_Id : Art.PortId,
@@ -87,7 +93,8 @@ object Consumer_p_consumer_Bridge {
     initialization_api: Consumer_Initialization_Api,
     operational_api: Consumer_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = IS(e_data_in_Id)
+    val dataInPortIds: ISZ[Art.PortId] = IS(ep_data_in_Id,
+                                            es_data_in_Id)
 
     val eventInPortIds: ISZ[Art.PortId] = IS(f_event_data_in_Id,
                                              g_event_data_in_Id,

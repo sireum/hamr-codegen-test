@@ -35,8 +35,9 @@ public
 			c8: port producer.d_event_out -> filters.d_event_in;
 			
 			
-			c9: port filterp.e_data_out -> consumer.e_data_in;
-			c10: port filters.e_data_out -> consumer.e_data_in;
+			-- data ports cannot fan-in, so each filter gets its own port on the consumer
+			c9: port filterp.e_data_out -> consumer.ep_data_in;
+			c10: port filters.e_data_out -> consumer.es_data_in;
 			
 			c11: port filterp.f_event_data_out -> consumer.f_event_data_in;
 			c12: port filters.f_event_data_out -> consumer.f_event_data_in;
@@ -183,7 +184,8 @@ public
 	
 	thread Consumer
 		features
-			e_data_in: in data port Container.i;
+			ep_data_in: in data port Container.i;
+			es_data_in: in data port Container.i;
 			
 			f_event_data_in: in event data port Container.i;
 			g_event_data_in: in event data port Container.i;

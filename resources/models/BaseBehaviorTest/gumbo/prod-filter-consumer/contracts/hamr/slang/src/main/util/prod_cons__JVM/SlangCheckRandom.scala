@@ -1970,9 +1970,10 @@ Aux_Types.scala
     var api_h_event_in: Option[art.Empty] = nextOption_artEmpty()
     var api_f_event_data_in: Option[ProdConsFlows.Container_i] = nextOptionProdConsFlowsContainer_i()
     var api_g_event_data_in: Option[ProdConsFlows.Container_i] = nextOptionProdConsFlowsContainer_i()
-    var api_e_data_in: ProdConsFlows.Container_i = nextProdConsFlowsContainer_i()
+    var api_ep_data_in: ProdConsFlows.Container_i = nextProdConsFlowsContainer_i()
+    var api_es_data_in: ProdConsFlows.Container_i = nextProdConsFlowsContainer_i()
 
-    var v: ProdConsFlows.Consumer_p_consumer_PreState_Container_P = ProdConsFlows.Consumer_p_consumer_PreState_Container_P(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+    var v: ProdConsFlows.Consumer_p_consumer_PreState_Container_P = ProdConsFlows.Consumer_p_consumer_PreState_Container_P(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
 
     if(get_Config_ProdConsFlowsConsumer_p_consumer_PreState_Container_P.attempts >= 0) {
      for(i <- 0 to get_Config_ProdConsFlowsConsumer_p_consumer_PreState_Container_P.attempts) {
@@ -1985,8 +1986,9 @@ Aux_Types.scala
         api_h_event_in = nextOption_artEmpty()
         api_f_event_data_in = nextOptionProdConsFlowsContainer_i()
         api_g_event_data_in = nextOptionProdConsFlowsContainer_i()
-        api_e_data_in = nextProdConsFlowsContainer_i()
-        v = ProdConsFlows.Consumer_p_consumer_PreState_Container_P(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+        api_ep_data_in = nextProdConsFlowsContainer_i()
+        api_es_data_in = nextProdConsFlowsContainer_i()
+        v = ProdConsFlows.Consumer_p_consumer_PreState_Container_P(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
      }
     } else {
      while(T) {
@@ -1999,8 +2001,9 @@ Aux_Types.scala
        api_h_event_in = nextOption_artEmpty()
        api_f_event_data_in = nextOptionProdConsFlowsContainer_i()
        api_g_event_data_in = nextOptionProdConsFlowsContainer_i()
-       api_e_data_in = nextProdConsFlowsContainer_i()
-       v = ProdConsFlows.Consumer_p_consumer_PreState_Container_P(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+       api_ep_data_in = nextProdConsFlowsContainer_i()
+       api_es_data_in = nextProdConsFlowsContainer_i()
+       v = ProdConsFlows.Consumer_p_consumer_PreState_Container_P(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
      }
     }
 
@@ -2017,9 +2020,10 @@ Aux_Types.scala
     var api_h_event_in: Option[art.Empty] = nextOption_artEmpty()
     var api_f_event_data_in: Option[ProdConsFlows.Container_i] = nextOptionProdConsFlowsContainer_i()
     var api_g_event_data_in: Option[ProdConsFlows.Container_i] = nextOptionProdConsFlowsContainer_i()
-    var api_e_data_in: ProdConsFlows.Container_i = nextProdConsFlowsContainer_i()
+    var api_ep_data_in: ProdConsFlows.Container_i = nextProdConsFlowsContainer_i()
+    var api_es_data_in: ProdConsFlows.Container_i = nextProdConsFlowsContainer_i()
 
-    var v: ProdConsFlows.Consumer_p_consumer_PreState_Container_PS = ProdConsFlows.Consumer_p_consumer_PreState_Container_PS(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+    var v: ProdConsFlows.Consumer_p_consumer_PreState_Container_PS = ProdConsFlows.Consumer_p_consumer_PreState_Container_PS(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
 
     if(get_Config_ProdConsFlowsConsumer_p_consumer_PreState_Container_PS.attempts >= 0) {
      for(i <- 0 to get_Config_ProdConsFlowsConsumer_p_consumer_PreState_Container_PS.attempts) {
@@ -2032,8 +2036,9 @@ Aux_Types.scala
         api_h_event_in = nextOption_artEmpty()
         api_f_event_data_in = nextOptionProdConsFlowsContainer_i()
         api_g_event_data_in = nextOptionProdConsFlowsContainer_i()
-        api_e_data_in = nextProdConsFlowsContainer_i()
-        v = ProdConsFlows.Consumer_p_consumer_PreState_Container_PS(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+        api_ep_data_in = nextProdConsFlowsContainer_i()
+        api_es_data_in = nextProdConsFlowsContainer_i()
+        v = ProdConsFlows.Consumer_p_consumer_PreState_Container_PS(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
      }
     } else {
      while(T) {
@@ -2046,8 +2051,9 @@ Aux_Types.scala
        api_h_event_in = nextOption_artEmpty()
        api_f_event_data_in = nextOptionProdConsFlowsContainer_i()
        api_g_event_data_in = nextOptionProdConsFlowsContainer_i()
-       api_e_data_in = nextProdConsFlowsContainer_i()
-       v = ProdConsFlows.Consumer_p_consumer_PreState_Container_PS(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+       api_ep_data_in = nextProdConsFlowsContainer_i()
+       api_es_data_in = nextProdConsFlowsContainer_i()
+       v = ProdConsFlows.Consumer_p_consumer_PreState_Container_PS(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
      }
     }
 

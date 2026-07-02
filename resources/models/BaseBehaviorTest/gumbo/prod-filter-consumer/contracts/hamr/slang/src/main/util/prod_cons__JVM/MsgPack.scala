@@ -327,7 +327,8 @@ object MsgPack {
       writer.writeOption(o.api_h_event_in, write_artEmpty _)
       writer.writeOption(o.api_f_event_data_in, writeProdConsFlowsContainer_i _)
       writer.writeOption(o.api_g_event_data_in, writeProdConsFlowsContainer_i _)
-      writeProdConsFlowsContainer_i(o.api_e_data_in)
+      writeProdConsFlowsContainer_i(o.api_ep_data_in)
+      writeProdConsFlowsContainer_i(o.api_es_data_in)
     }
 
     def writeProdConsFlowsConsumer_p_consumer_PreState_Container_PS(o: ProdConsFlows.Consumer_p_consumer_PreState_Container_PS): Unit = {
@@ -335,7 +336,8 @@ object MsgPack {
       writer.writeOption(o.api_h_event_in, write_artEmpty _)
       writer.writeOption(o.api_f_event_data_in, writeProdConsFlowsContainer_i _)
       writer.writeOption(o.api_g_event_data_in, writeProdConsFlowsContainer_i _)
-      writeProdConsFlowsContainer_i(o.api_e_data_in)
+      writeProdConsFlowsContainer_i(o.api_ep_data_in)
+      writeProdConsFlowsContainer_i(o.api_es_data_in)
     }
 
     def writeProdConsFlowsConsumer_p_consumer_PostState_Container(o: ProdConsFlows.Consumer_p_consumer_PostState_Container): Unit = {
@@ -367,8 +369,8 @@ object MsgPack {
         case o: ProdConsFlows.Producer_p_producer_PreState_Container_P => writeProdConsFlowsProducer_p_producer_PreState_Container_P(o)
         case o: ProdConsFlows.Producer_p_producer_PreState_Container_PS => writeProdConsFlowsProducer_p_producer_PreState_Container_PS(o)
         case o: ProdConsFlows.Consumer_p_consumer_PreState_Container_P => writeProdConsFlowsConsumer_p_consumer_PreState_Container_P(o)
-        case o: ProdConsFlows.Consumer_p_consumer_PreState_Container_PS => writeProdConsFlowsConsumer_p_consumer_PreState_Container_PS(o)
         case o: ProdConsFlows.Producer_p_producer_PostState_Container_P => writeProdConsFlowsProducer_p_producer_PostState_Container_P(o)
+        case o: ProdConsFlows.Consumer_p_consumer_PreState_Container_PS => writeProdConsFlowsConsumer_p_consumer_PreState_Container_PS(o)
         case o: ProdConsFlows.Producer_p_producer_PostState_Container_PS => writeProdConsFlowsProducer_p_producer_PostState_Container_PS(o)
         case o: ProdConsFlows.Consumer_p_consumer_PostState_Container_P => writeProdConsFlowsConsumer_p_consumer_PostState_Container_P(o)
         case o: ProdConsFlows.Consumer_p_consumer_PostState_Container_PS => writeProdConsFlowsConsumer_p_consumer_PostState_Container_PS(o)
@@ -411,8 +413,8 @@ object MsgPack {
         case o: ProdConsFlows.Producer_p_producer_PreState_Container_P => writeProdConsFlowsProducer_p_producer_PreState_Container_P(o)
         case o: ProdConsFlows.Producer_p_producer_PreState_Container_PS => writeProdConsFlowsProducer_p_producer_PreState_Container_PS(o)
         case o: ProdConsFlows.Consumer_p_consumer_PreState_Container_P => writeProdConsFlowsConsumer_p_consumer_PreState_Container_P(o)
-        case o: ProdConsFlows.Consumer_p_consumer_PreState_Container_PS => writeProdConsFlowsConsumer_p_consumer_PreState_Container_PS(o)
         case o: ProdConsFlows.Producer_p_producer_PostState_Container_P => writeProdConsFlowsProducer_p_producer_PostState_Container_P(o)
+        case o: ProdConsFlows.Consumer_p_consumer_PreState_Container_PS => writeProdConsFlowsConsumer_p_consumer_PreState_Container_PS(o)
         case o: ProdConsFlows.Producer_p_producer_PostState_Container_PS => writeProdConsFlowsProducer_p_producer_PostState_Container_PS(o)
         case o: ProdConsFlows.Consumer_p_consumer_PostState_Container_P => writeProdConsFlowsConsumer_p_consumer_PostState_Container_P(o)
         case o: ProdConsFlows.Consumer_p_consumer_PostState_Container_PS => writeProdConsFlowsConsumer_p_consumer_PostState_Container_PS(o)
@@ -964,8 +966,9 @@ object MsgPack {
       val api_h_event_in = reader.readOption(read_artEmpty _)
       val api_f_event_data_in = reader.readOption(readProdConsFlowsContainer_i _)
       val api_g_event_data_in = reader.readOption(readProdConsFlowsContainer_i _)
-      val api_e_data_in = readProdConsFlowsContainer_i()
-      return ProdConsFlows.Consumer_p_consumer_PreState_Container_P(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+      val api_ep_data_in = readProdConsFlowsContainer_i()
+      val api_es_data_in = readProdConsFlowsContainer_i()
+      return ProdConsFlows.Consumer_p_consumer_PreState_Container_P(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
     }
 
     def readProdConsFlowsConsumer_p_consumer_PreState_Container_PS(): ProdConsFlows.Consumer_p_consumer_PreState_Container_PS = {
@@ -980,8 +983,9 @@ object MsgPack {
       val api_h_event_in = reader.readOption(read_artEmpty _)
       val api_f_event_data_in = reader.readOption(readProdConsFlowsContainer_i _)
       val api_g_event_data_in = reader.readOption(readProdConsFlowsContainer_i _)
-      val api_e_data_in = readProdConsFlowsContainer_i()
-      return ProdConsFlows.Consumer_p_consumer_PreState_Container_PS(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+      val api_ep_data_in = readProdConsFlowsContainer_i()
+      val api_es_data_in = readProdConsFlowsContainer_i()
+      return ProdConsFlows.Consumer_p_consumer_PreState_Container_PS(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
     }
 
     def readProdConsFlowsConsumer_p_consumer_PostState_Container(): ProdConsFlows.Consumer_p_consumer_PostState_Container = {
@@ -1037,8 +1041,8 @@ object MsgPack {
         case Constants.ProdConsFlowsProducer_p_producer_PreState_Container_P => val r = readProdConsFlowsProducer_p_producer_PreState_Container_PT(T); return r
         case Constants.ProdConsFlowsProducer_p_producer_PreState_Container_PS => val r = readProdConsFlowsProducer_p_producer_PreState_Container_PST(T); return r
         case Constants.ProdConsFlowsConsumer_p_consumer_PreState_Container_P => val r = readProdConsFlowsConsumer_p_consumer_PreState_Container_PT(T); return r
-        case Constants.ProdConsFlowsConsumer_p_consumer_PreState_Container_PS => val r = readProdConsFlowsConsumer_p_consumer_PreState_Container_PST(T); return r
         case Constants.ProdConsFlowsProducer_p_producer_PostState_Container_P => val r = readProdConsFlowsProducer_p_producer_PostState_Container_PT(T); return r
+        case Constants.ProdConsFlowsConsumer_p_consumer_PreState_Container_PS => val r = readProdConsFlowsConsumer_p_consumer_PreState_Container_PST(T); return r
         case Constants.ProdConsFlowsProducer_p_producer_PostState_Container_PS => val r = readProdConsFlowsProducer_p_producer_PostState_Container_PST(T); return r
         case Constants.ProdConsFlowsConsumer_p_consumer_PostState_Container_P => val r = readProdConsFlowsConsumer_p_consumer_PostState_Container_PT(T); return r
         case Constants.ProdConsFlowsConsumer_p_consumer_PostState_Container_PS => val r = readProdConsFlowsConsumer_p_consumer_PostState_Container_PST(T); return r
@@ -1095,8 +1099,8 @@ object MsgPack {
         case Constants.ProdConsFlowsProducer_p_producer_PreState_Container_P => val r = readProdConsFlowsProducer_p_producer_PreState_Container_PT(T); return r
         case Constants.ProdConsFlowsProducer_p_producer_PreState_Container_PS => val r = readProdConsFlowsProducer_p_producer_PreState_Container_PST(T); return r
         case Constants.ProdConsFlowsConsumer_p_consumer_PreState_Container_P => val r = readProdConsFlowsConsumer_p_consumer_PreState_Container_PT(T); return r
-        case Constants.ProdConsFlowsConsumer_p_consumer_PreState_Container_PS => val r = readProdConsFlowsConsumer_p_consumer_PreState_Container_PST(T); return r
         case Constants.ProdConsFlowsProducer_p_producer_PostState_Container_P => val r = readProdConsFlowsProducer_p_producer_PostState_Container_PT(T); return r
+        case Constants.ProdConsFlowsConsumer_p_consumer_PreState_Container_PS => val r = readProdConsFlowsConsumer_p_consumer_PreState_Container_PST(T); return r
         case Constants.ProdConsFlowsProducer_p_producer_PostState_Container_PS => val r = readProdConsFlowsProducer_p_producer_PostState_Container_PST(T); return r
         case Constants.ProdConsFlowsConsumer_p_consumer_PostState_Container_P => val r = readProdConsFlowsConsumer_p_consumer_PostState_Container_PT(T); return r
         case Constants.ProdConsFlowsConsumer_p_consumer_PostState_Container_PS => val r = readProdConsFlowsConsumer_p_consumer_PostState_Container_PST(T); return r

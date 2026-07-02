@@ -10,7 +10,8 @@ import prod_cons__JVM._
 
 @sig trait Consumer_Api {
   def id: Art.BridgeId
-  def e_data_in_Id : Art.PortId
+  def ep_data_in_Id : Art.PortId
+  def es_data_in_Id : Art.PortId
   def f_event_data_in_Id : Art.PortId
   def g_event_data_in_Id : Art.PortId
   def h_event_in_Id : Art.PortId
@@ -31,31 +32,52 @@ import prod_cons__JVM._
 
 @datatype class Consumer_Initialization_Api (
   val id: Art.BridgeId,
-  val e_data_in_Id : Art.PortId,
+  val ep_data_in_Id : Art.PortId,
+  val es_data_in_Id : Art.PortId,
   val f_event_data_in_Id : Art.PortId,
   val g_event_data_in_Id : Art.PortId,
   val h_event_in_Id : Art.PortId) extends Consumer_Api
 
 @datatype class Consumer_Operational_Api (
   val id: Art.BridgeId,
-  val e_data_in_Id : Art.PortId,
+  val ep_data_in_Id : Art.PortId,
+  val es_data_in_Id : Art.PortId,
   val f_event_data_in_Id : Art.PortId,
   val g_event_data_in_Id : Art.PortId,
   val h_event_in_Id : Art.PortId) extends Consumer_Api {
 
   // Logika spec var representing port state for incoming data port
-  @spec var e_data_in: ProdConsFlows.Container_i = $
+  @spec var ep_data_in: ProdConsFlows.Container_i = $
 
-  def get_e_data_in() : Option[ProdConsFlows.Container_i] = {
+  def get_ep_data_in() : Option[ProdConsFlows.Container_i] = {
     Contract(
       Ensures(
-        Res == Some(e_data_in)
+        Res == Some(ep_data_in)
       )
     )
-    val value : Option[ProdConsFlows.Container_i] = Art.getValue(e_data_in_Id) match {
+    val value : Option[ProdConsFlows.Container_i] = Art.getValue(ep_data_in_Id) match {
       case Some(ProdConsFlows.Container_i_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port e_data_in.  Expecting 'ProdConsFlows.Container_i_Payload' but received ${v}")
+        Art.logError(id, s"Unexpected payload on port ep_data_in.  Expecting 'ProdConsFlows.Container_i_Payload' but received ${v}")
+        None[ProdConsFlows.Container_i]()
+      case _ => None[ProdConsFlows.Container_i]()
+    }
+    return value
+  }
+
+  // Logika spec var representing port state for incoming data port
+  @spec var es_data_in: ProdConsFlows.Container_i = $
+
+  def get_es_data_in() : Option[ProdConsFlows.Container_i] = {
+    Contract(
+      Ensures(
+        Res == Some(es_data_in)
+      )
+    )
+    val value : Option[ProdConsFlows.Container_i] = Art.getValue(es_data_in_Id) match {
+      case Some(ProdConsFlows.Container_i_Payload(v)) => Some(v)
+      case Some(v) =>
+        Art.logError(id, s"Unexpected payload on port es_data_in.  Expecting 'ProdConsFlows.Container_i_Payload' but received ${v}")
         None[ProdConsFlows.Container_i]()
       case _ => None[ProdConsFlows.Container_i]()
     }

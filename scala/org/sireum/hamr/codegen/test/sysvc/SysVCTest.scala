@@ -447,10 +447,10 @@ class SysVCTest extends TestSuite {
         val indVCsRs = VerusVCSerializer.genPropertyIndependenceVCs(
           propModId, vcs, nextRel, frames, assertionFns, resolvedComponentAliasMap, reporter).render
         assert(!reporter.hasError, s"Independence VC serialization for '${property.id}' failed: ${reporter.messages}")
-        val nbFnCount = countFns(indVCsRs, "pub proof fn vc_non_blocking")
-        val presFnCount = countFns(indVCsRs, "pub proof fn vc_preservation")
-        assert(nbFnCount == expectedDirected, s"Expected $expectedDirected Non-Blocking proof fns, got $nbFnCount")
-        assert(presFnCount == expectedDirected, s"Expected $expectedDirected Preservation proof fns, got $presFnCount")
+        val nbFnCount = countFns(indVCsRs, "pub proof fn vc_pre_assertions_preservation")
+        val presFnCount = countFns(indVCsRs, "pub proof fn vc_post_assertions_preservation")
+        assert(nbFnCount == expectedDirected, s"Expected $expectedDirected pre-assertions preservation proof fns, got $nbFnCount")
+        assert(presFnCount == expectedDirected, s"Expected $expectedDirected post-assertions preservation proof fns, got $presFnCount")
       }
 
       println(s"\nAll composition checks passed for '${composition.id}'")

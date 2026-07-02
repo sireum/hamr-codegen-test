@@ -31,10 +31,10 @@ class MicrokitTests extends CodegenTest {
 
   val sysVerifModels = testResources.modelsDir / "micro-examples" / "microkit" / "system-verification"
 
+  // temp-control is auto-discovered now that it has a .ci dir (see MicrokitTestUtil.getSysmlModels)
   val sysmlModels = MicrokitTestUtil.getSysmlModels(testResources.copy(modelsDir = testResources.modelsDir / "micro-examples" / "microkit")) :+
-    testResources.modelsDir / "isolette" / "sysml" :+
     //sysVerifModels / "fan-in" / "even_odd" / "sysml" :+
-    sysVerifModels / "temp-control" / "sysml"
+    testResources.modelsDir / "isolette" / "sysml"
 
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
     val t = ops.StringOps(aadlDir.up.value)
@@ -93,7 +93,7 @@ class MicrokitTests extends CodegenTest {
     var testOptions = baseOptions(runtimeMonitoring = !testName.value.contains("vms") && !testName.value.contains("aadl_datatypes"))
 
     testOptions =
-      if (testName.value.contains("sysml_iso"))
+      if (testName.value.contains("sysml_iso") || testName.value.contains("temp-control__9F67"))
         testOptions(
           scheduling = HamrCli.CodegenScheduling.UserLand,
           verusAttributeSyntax = T)
@@ -101,12 +101,13 @@ class MicrokitTests extends CodegenTest {
 
 
     val cands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" && p.ext.native == "json")
-    assert (cands.size <= 1, s"Found ${cands.size} JSON files under ${sysmlDir.toUri}")
+    val air = cands.filter(p => !ops.StringOps(p.name).contains("_result"))
+    assert (air.size == 1, s"Found ${air.size} JSON files under ${sysmlDir.toUri}")
 
     test(
       testName = testName,
       modelDir = sysmlDir,
-      airFile = if (cands.size == 1) Some(cands(0)) else None(),
+      airFile = if (air.size == 1) Some(air(0)) else None(),
       ops = testOptions,
       description = None(),
       modelUri = None(),
@@ -118,7 +119,7 @@ class MicrokitTests extends CodegenTest {
       test(
         testName = testName,
         modelDir = sysmlDir,
-        airFile = if (cands.size == 1) Some(cands(0)) else None(),
+        airFile = if (air.size == 1) Some(air(0)) else None(),
         ops = testOptions(scheduling = HamrCli.CodegenScheduling.UserLand),
         description = None(),
         modelUri = None(),

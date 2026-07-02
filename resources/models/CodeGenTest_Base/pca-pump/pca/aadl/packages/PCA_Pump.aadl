@@ -273,8 +273,10 @@ system implementation pca.imp
     dfr: port fluid.Downstream_Flow_Rate -> safety.Downstream_Flow_Rate
       ;--{Actual_Connection_Binding=>(reference(i_bus));};
       
-    -- simulation connections  
-    simulation_dfr: port operation.Downstream_Flow_Rate -> safety.Downstream_Flow_Rate;
+    -- simulation connections
+    -- disabled: data ports cannot fan-in and dfr above already connects the
+    -- fluid subsystem's measured flow rate to safety
+--    simulation_dfr: port operation.Downstream_Flow_Rate -> safety.Downstream_Flow_Rate;
     -- end of simulation connections
     
   --fault log

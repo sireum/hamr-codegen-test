@@ -18,26 +18,28 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
   }
 
   def testComputeCBV(o: Consumer_p_consumer_PreState_Container): GumboXResult.Type = {
-    return testComputeCB(o.api_h_event_in, o.api_f_event_data_in, o.api_g_event_data_in, o.api_e_data_in)
+    return testComputeCB(o.api_h_event_in, o.api_f_event_data_in, o.api_g_event_data_in, o.api_ep_data_in, o.api_es_data_in)
   }
 
   /** Contract-based test harness for the compute entry point
     * @param api_h_event_in incoming event port
     * @param api_f_event_data_in incoming event data port
     * @param api_g_event_data_in incoming event data port
-    * @param api_e_data_in incoming data port
+    * @param api_ep_data_in incoming data port
+    * @param api_es_data_in incoming data port
     */
   def testComputeCB(
       api_h_event_in: Option[art.Empty],
       api_f_event_data_in: Option[ProdConsFlows.Container_i],
       api_g_event_data_in: Option[ProdConsFlows.Container_i],
-      api_e_data_in: ProdConsFlows.Container_i): GumboXResult.Type = {
+      api_ep_data_in: ProdConsFlows.Container_i,
+      api_es_data_in: ProdConsFlows.Container_i): GumboXResult.Type = {
 
     // [SaveInLocal]: retrieve and save the current (input) values of GUMBO-declared local state variables as retrieved from the component state
     //   consumer does not have incoming ports or state variables
 
     // [CheckPre]: check/filter based on pre-condition.
-    val CEP_Pre_Result: B = prod_cons__JVM.ProdConsFlows.Consumer_p_consumer_GumboX.compute_CEP_Pre (api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+    val CEP_Pre_Result: B = prod_cons__JVM.ProdConsFlows.Consumer_p_consumer_GumboX.compute_CEP_Pre (api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
     if (!CEP_Pre_Result) {
       return GumboXResult.Pre_Condition_Unsat
     }
@@ -52,14 +54,16 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
     if (api_g_event_data_in.nonEmpty) {
       put_g_event_data_in(api_g_event_data_in.get)
     }
-    put_e_data_in(api_e_data_in)
+    put_ep_data_in(api_ep_data_in)
+    put_es_data_in(api_es_data_in)
 
     if (verbose) {
       println(st"""Pre State Values:
                   |  api_h_event_in = ${api_h_event_in.string}
                   |  api_f_event_data_in = ${api_f_event_data_in.string}
                   |  api_g_event_data_in = ${api_g_event_data_in.string}
-                  |  api_e_data_in = ${api_e_data_in.string}""".render)
+                  |  api_ep_data_in = ${api_ep_data_in.string}
+                  |  api_es_data_in = ${api_es_data_in.string}""".render)
     }
 
     // [InvokeEntryPoint]: invoke the entry point test method
@@ -69,7 +73,7 @@ import prod_cons__JVM.GumboXUtil.GumboXResult
     //   consumer does not have outgoing ports or state variables
 
     // [CheckPost]: invoke the oracle function
-    val postResult = prod_cons__JVM.ProdConsFlows.Consumer_p_consumer_GumboX.compute_CEP_Post(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_e_data_in)
+    val postResult = prod_cons__JVM.ProdConsFlows.Consumer_p_consumer_GumboX.compute_CEP_Post(api_h_event_in, api_f_event_data_in, api_g_event_data_in, api_ep_data_in, api_es_data_in)
     val result: GumboXResult.Type =
       if (!postResult) GumboXResult.Post_Condition_Fail
       else GumboXResult.Post_Condition_Pass
