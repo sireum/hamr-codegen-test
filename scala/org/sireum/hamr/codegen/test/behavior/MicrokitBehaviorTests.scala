@@ -22,7 +22,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
 
   override def ignores: ISZ[String] = super.ignores ++ ISZ(
     "case-transition-models",
-    "sys_assert_compositions"
+    "multi-composition"
   )
 
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
@@ -38,7 +38,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     assert (cands.size == 1, s"Found ${cands.size} JSON files under $aadlDir")
 
     assert (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem)) ||
-      (cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${cands(0).up.up.up / "hamr"}  $testName")
+      (cands(0).up.up.up / "hamr").exists, s"Directory doesn't exist: ${(cands(0).up.up.up / "hamr").toUri}  $testName")
 
     testOptions = testOptions(
       runtimeMonitoring = !ops.StringOps(testName).contains("vms"),
