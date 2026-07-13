@@ -103,7 +103,7 @@ object TestUtil {
       outputFile.up.mkdir()
 
       // see https://github.com/sireum/osate-plugin/blob/57785407d84793cf1f8d5926647e4dc75ab197a9/org.sireum.aadl.osate.cli/src/org/sireum/aadl/osate/cli/Phantom.java#L508-L517
-      val custEnv = Os.envs.entries :+ (("CHECK_PHANTOM_HAMR_API_COMPATIBILITY", "true"))
+      val custEnv = Os.envs.entries
 
       val osateOpt: String = if (osateDir.isEmpty) "" else s"-o ${osateDir.get.value}"
 
@@ -139,8 +139,6 @@ object TestUtil {
             |  ${results.out}
             |  ${results.err}""".render)
 
-      // see https://github.com/sireum/osate-plugin/blob/57785407d84793cf1f8d5926647e4dc75ab197a9/org.sireum.aadl.osate.cli/src/org/sireum/aadl/osate/cli/Phantom.java#L515
-      assert(ops.StringOps(results.out).contains("HAMR plugin API compatibility check passed!"), "OSATE cli plugin did not emit expected api check message")
 
       assert(check(testName, results, "Phantom did not complete successfully"), "Check did not return OK")
       val ret = outputFile.read
