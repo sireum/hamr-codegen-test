@@ -32,7 +32,8 @@ class MicrokitTests extends CodegenTest {
   val sysVerifModels = testResources.modelsDir / "micro-examples" / "microkit" / "system-verification"
 
   // temp-control is auto-discovered now that it has a .ci dir (see MicrokitTestUtil.getSysmlModels)
-  val sysmlModels = MicrokitTestUtil.getSysmlModels(testResources.copy(modelsDir = testResources.modelsDir / "micro-examples" / "microkit")) :+
+  val sysmlModels = MicrokitTestUtil.getSysmlModels(testResources.copy(modelsDir =
+    testResources.modelsDir / "micro-examples" / "microkit")) :+
     //sysVerifModels / "fan-in" / "even_odd" / "sysml" :+
     testResources.modelsDir / "isolette" / "sysml"
 
@@ -160,6 +161,7 @@ object MicrokitTests {
     verusAttributeSyntax = F,
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
+    sel4AuxCodeSymlink = F,
     workspaceRootDir = None(),
     //
     strictAadlMode = F,

@@ -65,8 +65,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
   }
 
   val sysmlModels = ISZ() :+
-    testResources.modelsDir / "isolette" / "sysml" :+
-    testResources.modelsDir / "micro-examples" / "microkit" / "system-verification"/ "temp-control" / "sysml"
+    testResources.modelsDir / "isolette" / "sysml"
 
   for (sysmlDir <- sysmlModels) {
     val t = ops.StringOps(sysmlDir.up.value)
@@ -124,6 +123,41 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       clean,
       airFile = Some(airs (0)))
   }
+
+  "temp-control" in {
+    val sysmlDir = testResources.modelsDir / "micro-examples" / "microkit" / "system-verification"/ "temp-control" / "sysml"
+
+    val outputDir = sysmlDir.up / "hamr" / "microkit_mcs"
+
+    val air = sysmlDir / ".slang" / "TempControlSystem_Instance.json"
+
+    val clean = sysmlDir / "bin" / "clean.cmd"
+
+    val r2u2 = outputDir / "r2u2" / "r2u2-lib"
+    val spec = outputDir / "r2u2" / "sensor-spec"
+
+    var testOptions = MicrokitBehaviorTests.baseOptions
+
+    testOptions = testOptions(
+      runtimeMonitoring = T,
+      sel4OutputDir = Some(outputDir.value),
+      sel4AuxCodeDirs = ISZ() :+ r2u2.value :+ spec.value,
+      sel4AuxCodeSymlink = T,
+      workspaceRootDir = Some(sysmlDir.value),
+      scheduling = HamrCli.CodegenScheduling.UserLand,
+      verusAttributeSyntax = T,
+      )
+
+    testAir(
+      testName = "temp-control",
+      testDescription = "",
+      testOptions = testOptions,
+      testModes = testModes - TestMode.phantom, // don't run phantom on sysml projects,
+      phantomOptions = None(),
+      logikaOptions = None(),
+      clean = () => proc"$clean $outputDir".run().ok,
+      airFile = Some(air))
+  }
 }
 
 object MicrokitBehaviorTests {
@@ -157,6 +191,7 @@ object MicrokitBehaviorTests {
     verusAttributeSyntax = F,
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
+    sel4AuxCodeSymlink = F,
     workspaceRootDir = None(),
     //
     strictAadlMode = F,

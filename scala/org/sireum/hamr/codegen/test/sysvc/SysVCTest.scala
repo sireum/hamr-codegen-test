@@ -71,6 +71,7 @@ class SysVCTest extends TestSuite {
     verusAttributeSyntax = F,
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
+    sel4AuxCodeSymlink = F,
     workspaceRootDir = Some(isoletteAadlDir.canon.value),
     strictAadlMode = F,
     ros2OutputWorkspaceDir = None(),

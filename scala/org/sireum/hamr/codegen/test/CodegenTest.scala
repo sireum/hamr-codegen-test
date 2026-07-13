@@ -353,6 +353,7 @@ object CodegenTest {
     verusAttributeSyntax = F,
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
+    sel4AuxCodeSymlink = F,
     workspaceRootDir = None(),
     //
     strictAadlMode = F,
