@@ -70,6 +70,39 @@ Run from this directory with `MICROROS_WS` set.
 | `make run` | Same as `make` |
 | `make stop` | Kill all running nodes |
 | `make clean` | Remove local build artifacts and copied packages from `MICROROS_WS` |
+| `make microros-config` | Apply `microros_apps/colcon.meta` to `MICROROS_WS` and rebuild the micro-ROS stack (see below) |
+
+## Firmware Configuration
+
+`microros_apps/colcon.meta` holds the build configuration the generated nodes need
+from the micro-ROS middleware.  It is **not** consumed from where it sits: it
+configures packages such as `rcl` and `rmw_microxrcedds`, which live in the firmware
+workspace and are built by step 4 above -- not by `make build`, which builds only the
+application packages.  Applying it is therefore a separate step:
+
+```bash
+make microros-config
+```
+
+Run it once after generating, and again whenever `colcon.meta` changes.  Two of its
+settings matter in ways that fail quietly if it is never applied:
+
+- `RCL_COMMAND_LINE_ENABLED=ON` -- the micro-ROS fork of `rcl` strips its
+  argument-parsing machinery by default.  Without this flag, the rcl arguments in each
+  node's `node_options` block (topic remap rules in particular) are parsed by nothing.
+- `RMW_UXRCE_MAX_PUBLISHERS` / `RMW_UXRCE_MAX_SUBSCRIPTIONS` -- these are derived from
+  the model's port counts and regenerated on every codegen run.  If the firmware's
+  pools are smaller than the nodes need, entity creation fails without a diagnostic,
+  so re-apply after adding ports.
+
+Entries outside the marked blocks in `colcon.meta` are derived from the model and are
+overwritten on each run; the marked blocks (build profile, transport and tuning) are
+preserved.  To override a derived value, restate its `-D` flag inside a marked block --
+colcon passes `cmake-args` through in order and CMake takes the last occurrence.
+
+Because `MICROROS_WS` is shared across projects, `make microros-config` backs up any
+`colcon.meta` already there to `colcon.meta.bak`.  If you maintain your own firmware
+configuration, merge the two rather than letting one replace the other.
 
 ## Manual Steps
 

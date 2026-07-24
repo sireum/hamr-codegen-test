@@ -8,11 +8,29 @@ MICROROS_PKG   := temp_control_mixed_u_ros_microros_pkg
 SOURCE_BASE  := source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(MICROROS_WS)/install/setup.bash
 SOURCE_LOCAL := source $(CURDIR)/install/setup.bash
 
-.PHONY: all build build-microros build-ros2 run stop clean check-ros2
+.PHONY: all build build-microros build-ros2 microros-config run stop clean check-ros2
 
 all: run
 
 build: check-ros2 build-microros build-ros2
+
+# Applies microros_apps/colcon.meta to the firmware workspace and rebuilds the
+# micro-ROS stack with it.  This is NOT part of `make build`: colcon.meta configures
+# the micro-ROS middleware (rcl, rmw_microxrcedds, ...), which lives in MICROROS_WS
+# and is built once, not the application packages built from here.
+#
+# Run this once after generating, and again whenever colcon.meta changes -- notably
+# after adding ports, since the RMW_UXRCE_MAX_* pool sizes are derived from the model.
+# Until it is run, RCL_COMMAND_LINE_ENABLED is off in the firmware and the rcl
+# arguments in each node's node_options block are silently ignored.
+#
+# MICROROS_WS is shared across projects, so any existing colcon.meta there is backed
+# up rather than discarded.
+microros-config: check-ros2
+	@test -f "$(MICROROS_WS)/colcon.meta" && cp "$(MICROROS_WS)/colcon.meta" "$(MICROROS_WS)/colcon.meta.bak" && echo "Backed up existing colcon.meta to colcon.meta.bak" || true
+	cp microros_apps/colcon.meta $(MICROROS_WS)/colcon.meta
+	cd $(MICROROS_WS) && bash -c "$(SOURCE_BASE); ros2 run micro_ros_setup build_firmware.sh"
+	@echo "Firmware rebuilt with microros_apps/colcon.meta. Re-run 'make build' to rebuild the app packages against it."
 
 check-ros2:
 	@test -n "$${ROS_DISTRO}" || { echo "ERROR: ROS_DISTRO is not set. Source a ROS2 installation first (e.g., source /opt/ros/jazzy/setup.bash)."; exit 1; }

@@ -128,11 +128,10 @@ trait  Ros2TestUtil {
       workspaceRootDir = if (config.workspaceRootDir.nonEmpty) config.workspaceRootDir else Some(modelDir.canon.value)
     )
 
-    // TODO: Currently hardcoded, since I'm just working on cpp and xml
+    // the node/launch languages come from the caller's config -- baseOptions supplies Cpp/Xml,
+    // so a test only reaches another backend by asking for it explicitly
     testOps = testOps.apply(
-      ros2OutputWorkspaceDir = Some(destDir.value),
-      ros2NodesLanguage = CodegenNodesCodeLanguage.Cpp,
-      ros2LaunchLanguage = CodegenLaunchCodeLanguage.Xml
+      ros2OutputWorkspaceDir = Some(destDir.value)
     )
 
     if (clearDestDir) {
