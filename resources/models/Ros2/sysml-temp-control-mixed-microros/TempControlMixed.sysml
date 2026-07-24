@@ -43,7 +43,7 @@ package TempControlMixed_uRos {
     attribute :>> Dispatch_Protocol = Periodic;
     attribute :>> Period = 1000 [ms];
 
-    attribute :>> RosNodeKind = microRos;
+    attribute :>> Ros_Node_Kind = microRos;
 
     language "GUMBO" /*{
       functions
@@ -70,7 +70,7 @@ package TempControlMixed_uRos {
     attribute :>> Dispatch_Protocol = Supported_Dispatch_Protocols::Sporadic;
     attribute :>> Period = 1000 [ms];
 
-    attribute :>> RosNodeKind = microRos;
+    attribute :>> Ros_Node_Kind = microRos;
 
     language "GUMBO" /*{
       state

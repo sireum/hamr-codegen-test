@@ -252,8 +252,8 @@ object Ros2Tests {
 
   def getAir(path: Os.Path): Os.Path = {
     val p = path / ".slang"
-    val ps = Os.Path.walk(path = p, includeDir = F, followLink = F, p => p.ext.native == "json")
-    assert (ps.size == 1, ps.size)
+    val ps = Os.Path.walk(path = p, includeDir = F, followLink = F, p => p.ext.native == "json" && !ops.StringOps(p.name).contains("_result"))
+    assert (ps.size == 1, s"Found ${ps.size} air files in $p")
     return ps(0)
   }
 }

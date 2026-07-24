@@ -7,14 +7,20 @@
 #include <rcl/rcl.h>
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
+#include <rcutils/logging_macros.h>
 #include "temp_control_mixed_u_ros_cpp_pkg_interfaces/msg/temperature.h"
 #include "temp_control_mixed_u_ros_cpp_pkg_interfaces/msg/empty.h"
 #include "temp_control_mixed_u_ros_microros_pkg/base_headers/enum_converter.h"
 #include "temp_control_mixed_u_ros_microros_pkg/base_headers/example_types.h"
 
-#define PRINT_INFO(fmt, ...) printf("[INFO] [tcp_tempSensor] " fmt "\n", ##__VA_ARGS__)
-#define PRINT_WARN(fmt, ...) printf("[WARN] [tcp_tempSensor] " fmt "\n", ##__VA_ARGS__)
-#define PRINT_ERROR(fmt, ...) printf("[ERROR] [tcp_tempSensor] " fmt "\n", ##__VA_ARGS__)
+// Logger name used by the PRINT_* macros.  It defaults to the node name and is
+// updated to the node's actual logger name (rcl_node_get_logger_name) during
+// tcp_tempSensor_base_init.
+extern const char * tcp_tempSensor_logger_name;
+
+#define PRINT_INFO(fmt, ...) RCUTILS_LOG_INFO_NAMED(tcp_tempSensor_logger_name, fmt, ##__VA_ARGS__)
+#define PRINT_WARN(fmt, ...) RCUTILS_LOG_WARN_NAMED(tcp_tempSensor_logger_name, fmt, ##__VA_ARGS__)
+#define PRINT_ERROR(fmt, ...) RCUTILS_LOG_ERROR_NAMED(tcp_tempSensor_logger_name, fmt, ##__VA_ARGS__)
 
 static inline const char* _MESSAGE_TO_STRING_Temperature(
         const temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__Temperature* msg, char* _buf, int _buf_size) {

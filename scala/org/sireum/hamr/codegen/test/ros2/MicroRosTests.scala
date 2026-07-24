@@ -21,6 +21,37 @@ class MicroRosTests extends TestSuite with Ros2TestUtil {
 
   val ros_base: Os.Path = resourceDir / "models" / "Ros2"
 
+  val urosDemoDir: Os.Path = Os.home / "devel" / "microros" / "uros_demo" / "sysml"
+
+  if (urosDemoDir.exists) {
+    "uros-demo-structure" in {
+      val testName = "structure"
+      val root = urosDemoDir / testName
+      val airFile = getAir(root)
+      assert(root.exists)
+
+      testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
+    }
+
+    "uros-demo-naming" in {
+      val testName = "naming"
+      val root = urosDemoDir / testName
+      val airFile = getAir(root)
+      assert(root.exists)
+
+      testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
+    }
+
+    "uros-demo-gumbo" in {
+      val testName = "gumbo"
+      val root = urosDemoDir / testName
+      val airFile = getAir(root)
+      assert(root.exists)
+
+      testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
+    }
+  }
+
   "sysml_temp_control_mixed_microros_lax" in {
     val testName = "sysml-temp-control-mixed-microros"
     val root = ros_base / testName

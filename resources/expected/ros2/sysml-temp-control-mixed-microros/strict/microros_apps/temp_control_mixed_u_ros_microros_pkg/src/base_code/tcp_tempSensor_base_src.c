@@ -8,6 +8,10 @@ void tcp_tempSensor_timeTriggered(tcp_tempSensor_base_t * self);
 // Static instance pointer for timer callback context (heap-free, MCU-compatible)
 static tcp_tempSensor_base_t * g_self = NULL;
 
+// Logger name used by the PRINT_* macros; updated to the node's actual logger
+// name once the node has been initialized
+const char * tcp_tempSensor_logger_name = "tcp_tempSensor";
+
 //=================================================
 //  C a l l b a c k   a n d   T i m e r
 //=================================================
@@ -34,6 +38,12 @@ void tcp_tempSensor_base_init(tcp_tempSensor_base_t * self)
     rclc_support_init(&self->support, 0, NULL, &self->allocator);
 
     rclc_node_init_default(&self->node, "tcp_tempSensor", "", &self->support);
+
+    // Retrieve the node's registered logger name for use by the PRINT_* macros
+    const char * logger_name = rcl_node_get_logger_name(&self->node);
+    if (logger_name != NULL) {
+        tcp_tempSensor_logger_name = logger_name;
+    }
 
     // Setting up connections
     rclc_publisher_init_default(

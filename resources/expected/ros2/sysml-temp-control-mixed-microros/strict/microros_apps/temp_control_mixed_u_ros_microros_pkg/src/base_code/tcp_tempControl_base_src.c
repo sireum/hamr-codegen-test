@@ -10,6 +10,10 @@ void tcp_tempControl_handle_setPoint(tcp_tempControl_base_t * self, const temp_c
 // Static instance pointer for subscription callback context (heap-free, MCU-compatible)
 static tcp_tempControl_base_t * g_self = NULL;
 
+// Logger name used by the PRINT_* macros; updated to the node's actual logger
+// name once the node has been initialized
+const char * tcp_tempControl_logger_name = "tcp_tempControl";
+
 //=================================================
 //  S u b s c r i p t i o n   C a l l b a c k s
 //=================================================
@@ -59,6 +63,12 @@ void tcp_tempControl_base_init(tcp_tempControl_base_t * self)
     rclc_support_init(&self->support, 0, NULL, &self->allocator);
 
     rclc_node_init_default(&self->node, "tcp_tempControl", "", &self->support);
+
+    // Retrieve the node's registered logger name for use by the PRINT_* macros
+    const char * logger_name = rcl_node_get_logger_name(&self->node);
+    if (logger_name != NULL) {
+        tcp_tempControl_logger_name = logger_name;
+    }
 
     // Setting up connections
     rclc_publisher_init_default(
