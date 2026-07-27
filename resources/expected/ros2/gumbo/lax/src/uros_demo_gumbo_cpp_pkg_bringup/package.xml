@@ -13,6 +13,7 @@
     <buildtool_depend>ament_cmake</buildtool_depend>
 
     <exec_depend>uros_demo_gumbo_cpp_pkg</exec_depend>
+              <exec_depend>seros_joy</exec_depend>
               <exec_depend>turtlesim</exec_depend>
 
     <!-- Additions within these tags will be preserved when re-running Codegen -->

@@ -3,7 +3,7 @@
 # Firmware configuration for the micro-ROS packages in this directory.
 {
     "names": {
-        # BUILD PROFILE -- additions within these tags will be preserved when re-running Codegen
+        # BUILD PROFILE - additions within these tags will be preserved when re-running Codegen
         # Build profile -- seeded for a host-Linux micro-ROS build.  Embedded
         # targets generally want -DBUILD_SHARED_LIBS=OFF throughout.
         #
@@ -30,7 +30,7 @@
                 "-DBUILD_SHARED_LIBS=ON"
             ]
         },
-        # BUILD PROFILE -- additions within these tags will be preserved when re-running Codegen
+        # BUILD PROFILE - additions within these tags will be preserved when re-running Codegen
         "rcl": {
             "cmake-args": [
                 "-DBUILD_TESTING=OFF",
@@ -64,7 +64,7 @@
                 "-DRMW_UXRCE_MAX_SUBSCRIPTIONS=1",
                 "-DRMW_UXRCE_MAX_SERVICES=0",
                 "-DRMW_UXRCE_MAX_CLIENTS=0",
-                # TRANSPORT AND TUNING -- additions within these tags will be preserved when re-running Codegen
+                # TRANSPORT AND TUNING - additions within these tags will be preserved when re-running Codegen
                 # Transport -- deployment configuration, seeded for a micro-ROS agent
                 # reachable over udp4 at 127.0.0.1:8888.
                 "-DRMW_UXRCE_TRANSPORT=udp",
@@ -75,7 +75,7 @@
                 # dropped without a diagnostic, so raise these if messages go missing.
                 "-DRMW_UXRCE_STREAM_HISTORY=32",
                 "-DRMW_UXRCE_MAX_HISTORY=10"
-                # TRANSPORT AND TUNING -- additions within these tags will be preserved when re-running Codegen
+                # TRANSPORT AND TUNING - additions within these tags will be preserved when re-running Codegen
             ]
         }
     }

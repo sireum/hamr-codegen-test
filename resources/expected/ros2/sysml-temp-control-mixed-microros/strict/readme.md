@@ -104,6 +104,29 @@ Because `MICROROS_WS` is shared across projects, `make microros-config` backs up
 `colcon.meta` already there to `colcon.meta.bak`.  If you maintain your own firmware
 configuration, merge the two rather than letting one replace the other.
 
+### On a host workspace this step is effectively a no-op
+
+A firmware workspace created for the **host** platform
+(`create_firmware_ws.sh host generic`) does not check out `rcl` at all -- on host,
+micro-ROS is `rmw_microxrcedds` and `rclc` layered over the ROS 2 distribution's own
+`rcl`, so there is no micro-ROS `rcl` to configure.  `make microros-config` will copy
+`colcon.meta` into place and rebuild successfully, but the `rcl` entry matches no
+package and is silently inert; `find_package(rcl)` keeps resolving to
+`/opt/ros/$ROS_DISTRO`.
+
+This is usually invisible, because the distribution's `rcl` is built with both
+argument parsing and logging enabled -- the very things the flags above turn on.  So
+remap rules and `/rosout` routing work on host whether or not this step is ever run.
+They stop working the moment the same model is deployed to an embedded target, where
+the micro-ROS `rcl` fork is used and ships with both features off.  Applying the
+configuration matters there, and an embedded workspace
+(`create_firmware_ws.sh <rtos> <board>`) does check `rcl` out, under
+`firmware/mcu_ws`.
+
+One setting to revisit when moving off host: `RCL_LOGGING_IMPLEMENTATION` is emitted
+as `rcl_logging_spdlog`, which suits a host build.  Embedded targets generally want
+`rcl_logging_noop`.
+
 ## Manual Steps
 
 The Makefile targets automate the following steps.

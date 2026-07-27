@@ -1,0 +1,31 @@
+<!-- Content between markers will be preserved if codegen is rerun -->
+
+<launch>
+    <!-- LAUNCH ARGUMENTS - additions within these tags will be preserved when re-running Codegen -->
+    <!-- Declare launch arguments here, then reference them from a node's parameters, e.g.
+             <arg name="log_file" default="uros-demo.txt"/>
+         with, inside that node's config block:
+             <param name="log_file_name" value="$(var log_file)"/> -->
+    <!-- LAUNCH ARGUMENTS - additions within these tags will be preserved when re-running Codegen -->
+
+
+    <!-- realized by `ros2 run seros_joy joy_linux_node` - no code is generated for it -->
+    <node pkg="seros_joy" exec="joy_linux_node" name="joy" namespace="uros_demo">
+        <!-- LAUNCH CONFIG proc_joy - additions within these tags will be preserved when re-running Codegen -->
+        <!-- LAUNCH CONFIG proc_joy - additions within these tags will be preserved when re-running Codegen -->
+    </node>
+
+
+    <!-- realized by `ros2 run turtlesim turtlesim_node` - no code is generated for it -->
+    <node pkg="turtlesim" exec="turtlesim_node" name="turtle" namespace="uros_demo">
+        <!-- LAUNCH CONFIG proc_turtle - additions within these tags will be preserved when re-running Codegen -->
+        <!-- LAUNCH CONFIG proc_turtle - additions within these tags will be preserved when re-running Codegen -->
+    </node>
+
+
+    <node pkg="uros_demo_gumbo_cpp_pkg" exec="proc_logger_exe" namespace="uros_demo">
+        <!-- LAUNCH CONFIG proc_logger - additions within these tags will be preserved when re-running Codegen -->
+        <!-- LAUNCH CONFIG proc_logger - additions within these tags will be preserved when re-running Codegen -->
+    </node>
+
+</launch>

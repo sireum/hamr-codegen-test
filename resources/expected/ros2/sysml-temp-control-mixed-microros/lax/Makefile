@@ -5,6 +5,11 @@ ROS2_PKG       := temp_control_mixed_u_ros_cpp_pkg
 INTERFACES_PKG := temp_control_mixed_u_ros_cpp_pkg_interfaces
 MICROROS_PKG   := temp_control_mixed_u_ros_microros_pkg
 
+# Extra rcl arguments appended to every `ros2 run` below, e.g.
+#   make run ROS_ARGS="--ros-args -p log_file_name:=uros-demo.txt"
+# Node parameters must be declared by the node before a value here takes effect.
+ROS_ARGS ?=
+
 SOURCE_BASE  := source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(MICROROS_WS)/install/setup.bash
 SOURCE_LOCAL := source $(CURDIR)/install/setup.bash
 
@@ -47,10 +52,10 @@ build-ros2:
 run: build
 	gnome-terminal --title="[agent] micro-XRCE-DDS" -- bash -c "$(SOURCE_BASE); ros2 run micro_ros_agent micro_ros_agent udp4 --port 8888; exec bash"
 	sleep 2
-	gnome-terminal --title="[microROS] tcp_tempSensor_exe" -- bash -c "$(SOURCE_BASE); RMW_IMPLEMENTATION=rmw_microxrcedds ros2 run $(MICROROS_PKG) tcp_tempSensor_exe; exec bash"
-	gnome-terminal --title="[microROS] tcp_tempControl_exe" -- bash -c "$(SOURCE_BASE); RMW_IMPLEMENTATION=rmw_microxrcedds ros2 run $(MICROROS_PKG) tcp_tempControl_exe; exec bash"
-	gnome-terminal --title="[ROS2] tcp_fan_exe" -- bash -c "$(SOURCE_BASE); $(SOURCE_LOCAL); ros2 run $(ROS2_PKG) tcp_fan_exe; exec bash"
-	gnome-terminal --title="[ROS2] tcp_opInterface_exe" -- bash -c "$(SOURCE_BASE); $(SOURCE_LOCAL); ros2 run $(ROS2_PKG) tcp_opInterface_exe; exec bash"
+	gnome-terminal --title="[microROS] tcp_tempSensor_exe" -- bash -c "$(SOURCE_BASE); RMW_IMPLEMENTATION=rmw_microxrcedds ros2 run $(MICROROS_PKG) tcp_tempSensor_exe $(ROS_ARGS); exec bash"
+	gnome-terminal --title="[microROS] tcp_tempControl_exe" -- bash -c "$(SOURCE_BASE); RMW_IMPLEMENTATION=rmw_microxrcedds ros2 run $(MICROROS_PKG) tcp_tempControl_exe $(ROS_ARGS); exec bash"
+	gnome-terminal --title="[ROS2] tcp_fan_exe" -- bash -c "$(SOURCE_BASE); $(SOURCE_LOCAL); ros2 run $(ROS2_PKG) tcp_fan_exe $(ROS_ARGS); exec bash"
+	gnome-terminal --title="[ROS2] tcp_opInterface_exe" -- bash -c "$(SOURCE_BASE); $(SOURCE_LOCAL); ros2 run $(ROS2_PKG) tcp_opInterface_exe $(ROS_ARGS); exec bash"
 	@echo "Nodes launched. Run 'make stop' to kill them."
 
 stop:

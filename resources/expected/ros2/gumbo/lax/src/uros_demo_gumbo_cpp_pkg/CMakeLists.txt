@@ -10,7 +10,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(uros_demo_gumbo_cpp_pkg_interfaces REQUIRED)
-find_package(sensor_msgs REQUIRED)
 find_package(rcl_interfaces REQUIRED)
 
 # Additions within these tags will be preserved when re-running Codegen
@@ -19,14 +18,10 @@ find_package(rcl_interfaces REQUIRED)
 
 include_directories(include)
 
-add_executable(proc_joy_exe src/base_code/proc_joy_runner.cpp src/user_code/proc_joy_src.cpp src/base_code/proc_joy_base_src.cpp)
-ament_target_dependencies(proc_joy_exe rclcpp uros_demo_gumbo_cpp_pkg_interfaces sensor_msgs rcl_interfaces)
-
 add_executable(proc_logger_exe src/base_code/proc_logger_runner.cpp src/user_code/proc_logger_src.cpp src/base_code/proc_logger_base_src.cpp)
-ament_target_dependencies(proc_logger_exe rclcpp uros_demo_gumbo_cpp_pkg_interfaces sensor_msgs rcl_interfaces)
+ament_target_dependencies(proc_logger_exe rclcpp uros_demo_gumbo_cpp_pkg_interfaces rcl_interfaces)
 
 install(TARGETS
-    proc_joy_exe
     proc_logger_exe
     DESTINATION lib/${PROJECT_NAME}
 )

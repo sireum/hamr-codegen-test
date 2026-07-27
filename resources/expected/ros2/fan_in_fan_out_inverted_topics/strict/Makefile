@@ -4,6 +4,11 @@ ROS2_PKG     := fan_in_fan_out_system_cpp_pkg
 SOURCE_ROS   := source /opt/ros/$${ROS_DISTRO}/setup.bash
 SOURCE_LOCAL := source $(CURDIR)/install/setup.bash
 
+# Extra rcl arguments appended to every `ros2 run` below, e.g.
+#   make run ROS_ARGS="--ros-args -p log_file_name:=uros-demo.txt"
+# Node parameters must be declared by the node before a value here takes effect.
+ROS_ARGS ?=
+
 .PHONY: all build run stop clean check-ros2
 
 all: run
@@ -16,12 +21,12 @@ build: check-ros2
 	bash -c "$(SOURCE_ROS); colcon build; $(SOURCE_LOCAL)"
 
 run: build
-	gnome-terminal --title="[ROS2] fanIn_producer1_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanIn_producer1_exe; exec bash"
-	gnome-terminal --title="[ROS2] fanIn_producer2_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanIn_producer2_exe; exec bash"
-	gnome-terminal --title="[ROS2] fanIn_consumer_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanIn_consumer_exe; exec bash"
-	gnome-terminal --title="[ROS2] fanOut_producer_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanOut_producer_exe; exec bash"
-	gnome-terminal --title="[ROS2] fanOut_consumer1_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanOut_consumer1_exe; exec bash"
-	gnome-terminal --title="[ROS2] fanOut_consumer2_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanOut_consumer2_exe; exec bash"
+	gnome-terminal --title="[ROS2] fanIn_producer1_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanIn_producer1_exe $(ROS_ARGS); exec bash"
+	gnome-terminal --title="[ROS2] fanIn_producer2_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanIn_producer2_exe $(ROS_ARGS); exec bash"
+	gnome-terminal --title="[ROS2] fanIn_consumer_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanIn_consumer_exe $(ROS_ARGS); exec bash"
+	gnome-terminal --title="[ROS2] fanOut_producer_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanOut_producer_exe $(ROS_ARGS); exec bash"
+	gnome-terminal --title="[ROS2] fanOut_consumer1_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanOut_consumer1_exe $(ROS_ARGS); exec bash"
+	gnome-terminal --title="[ROS2] fanOut_consumer2_exe" -- bash -c "source /opt/ros/$${ROS_DISTRO}/setup.bash && source $(CURDIR)/install/setup.bash && ros2 run $(ROS2_PKG) fanOut_consumer2_exe $(ROS_ARGS); exec bash"
 	@echo "Nodes launched. Run 'make stop' to kill them."
 
 stop:

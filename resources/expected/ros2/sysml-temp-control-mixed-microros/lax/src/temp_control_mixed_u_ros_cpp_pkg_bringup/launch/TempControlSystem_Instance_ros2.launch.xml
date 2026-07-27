@@ -1,0 +1,23 @@
+<!-- Content between markers will be preserved if codegen is rerun -->
+
+<launch>
+    <!-- LAUNCH ARGUMENTS - additions within these tags will be preserved when re-running Codegen -->
+    <!-- Declare launch arguments here, then reference them from a node's parameters, e.g.
+             <arg name="log_file" default="uros-demo.txt"/>
+         with, inside that node's config block:
+             <param name="log_file_name" value="$(var log_file)"/> -->
+    <!-- LAUNCH ARGUMENTS - additions within these tags will be preserved when re-running Codegen -->
+
+
+    <node pkg="temp_control_mixed_u_ros_cpp_pkg" exec="tcp_fan_exe">
+        <!-- LAUNCH CONFIG tcp_fan - additions within these tags will be preserved when re-running Codegen -->
+        <!-- LAUNCH CONFIG tcp_fan - additions within these tags will be preserved when re-running Codegen -->
+    </node>
+
+
+    <node pkg="temp_control_mixed_u_ros_cpp_pkg" exec="tcp_opInterface_exe">
+        <!-- LAUNCH CONFIG tcp_opInterface - additions within these tags will be preserved when re-running Codegen -->
+        <!-- LAUNCH CONFIG tcp_opInterface - additions within these tags will be preserved when re-running Codegen -->
+    </node>
+
+</launch>

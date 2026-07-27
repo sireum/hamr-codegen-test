@@ -22,6 +22,14 @@ extern const char * tcp_tempSensor_logger_name;
 #define PRINT_WARN(fmt, ...) RCUTILS_LOG_WARN_NAMED(tcp_tempSensor_logger_name, fmt, ##__VA_ARGS__)
 #define PRINT_ERROR(fmt, ...) RCUTILS_LOG_ERROR_NAMED(tcp_tempSensor_logger_name, fmt, ##__VA_ARGS__)
 
+// rcl/rclc report entity-creation failures by return code rather than by trapping,
+// and on an MCU the usual causes -- an exhausted RMW_UXRCE_MAX_* pool, an
+// unreachable agent -- are exactly the ones worth seeing.  Running on past one
+// leaves a node that spins normally but silently never publishes or receives, so
+// tcp_tempSensor_base_init stops at the first failure and hands the status back.
+// Expands to a return, so it is usable only in a function returning rcl_ret_t.
+#define RCL_CHECK(fn) do { rcl_ret_t rc_ = (fn); if (rc_ != RCL_RET_OK) { PRINT_ERROR("rcl call failed at %s:%d with status %d", __FILE__, __LINE__, (int) rc_); return rc_; } } while (0)
+
 static inline const char* _MESSAGE_TO_STRING_Temperature(
         const temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__Temperature* msg, char* _buf, int _buf_size) {
     snprintf(_buf, _buf_size, "Temperature{degrees: %f, unit: %s}",
@@ -59,7 +67,8 @@ typedef struct {
     rclc_executor_t executor;
 } tcp_tempSensor_base_t;
 
-void tcp_tempSensor_base_init(tcp_tempSensor_base_t * self);
+// Returns RCL_RET_OK, or the status of the first rcl/rclc call that failed.
+rcl_ret_t tcp_tempSensor_base_init(tcp_tempSensor_base_t * self);
 void tcp_tempSensor_base_spin(tcp_tempSensor_base_t * self);
 
 //=================================================

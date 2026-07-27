@@ -1,26 +1,16 @@
 <!-- Content between markers will be preserved if codegen is rerun -->
 
+<!-- Brings up the whole system on a host.  Launch UrosDemoSystem_Instance_ros2.launch.xml on its own when
+     the micro-ROS nodes run on hardware rather than on this machine. -->
+
 <launch>
-    <!-- micro-ROS agent: bridges rmw_microxrcedds nodes to the ROS2 DDS world -->
-    <executable cmd="micro_ros_agent udp4 --port 8888" output="screen"/>
+    <!-- LAUNCH ARGUMENTS - additions within these tags will be preserved when re-running Codegen -->
+    <!-- Declare launch arguments here, then reference them from a node's parameters, e.g.
+             <arg name="log_file" default="uros-demo.txt"/>
+         with, inside that node's config block:
+             <param name="log_file_name" value="$(var log_file)"/> -->
+    <!-- LAUNCH ARGUMENTS - additions within these tags will be preserved when re-running Codegen -->
 
-
-    <node pkg="uros_demo_gumbo_cpp_pkg" exec="proc_joy_exe" namespace="uros_demo">
-    </node>
-
-
-    <node pkg="uros_demo_gumbo_microros_pkg" exec="proc_ttj_exe" namespace="uros_demo">
-    </node>
-
-
-    <!-- realized by `ros2 run turtlesim turtlesim_node` -- no code is generated for it -->
-    <node pkg="turtlesim" exec="turtlesim_node" name="turtle" namespace="uros_demo">
-        <!-- Launch configuration for turtle -- additions here will be preserved when re-running Codegen -->
-        <!-- Launch configuration for turtle -- additions here will be preserved when re-running Codegen -->
-    </node>
-
-
-    <node pkg="uros_demo_gumbo_cpp_pkg" exec="proc_logger_exe" namespace="uros_demo">
-    </node>
-
+    <include file="$(find-pkg-share uros_demo_gumbo_cpp_pkg_bringup)/launch/UrosDemoSystem_Instance_ros2.launch.xml"/>
+    <include file="$(find-pkg-share uros_demo_gumbo_cpp_pkg_bringup)/launch/UrosDemoSystem_Instance_microros.launch.xml"/>
 </launch>

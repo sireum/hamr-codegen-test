@@ -116,6 +116,9 @@ trait  Ros2TestUtil {
 
     val destDir = getResultsDir(testName, strictModeString)
 
+    println(destDir)
+    destDir.removeAll()
+
     val filter: Os.Path => B = _ => true
 
     copy(testName, filter, strictModeString)
@@ -149,6 +152,10 @@ trait  Ros2TestUtil {
       slangCheckCallback = (_, _) => 0)
 
     failureReasons = failureReasons ++ (for (e <- reporter.errors) yield e.text)
+
+    if (verbose) {
+      reporter.printMessages()
+    }
 
     if (!reporter.hasError) {
       if (generateExpected) {

@@ -9,7 +9,14 @@ int main(int argc, char ** argv)
     (void)argc;
     (void)argv;
 
-    tcp_tempControl_base_init(&node);
+    // A failure here means the node could not create the entities it needs, so
+    // spinning would busy-wait forever on a node that can never publish or
+    // receive.  Exiting non-zero instead lets the launching layer notice.
+    rcl_ret_t init_status = tcp_tempControl_base_init(&node);
+    if (init_status != RCL_RET_OK) {
+        PRINT_ERROR("tcp_tempControl initialization failed with status %d; aborting", (int) init_status);
+        return 1;
+    }
 
     // Invoke initialize entry point
     tcp_tempControl_initialize(&node);

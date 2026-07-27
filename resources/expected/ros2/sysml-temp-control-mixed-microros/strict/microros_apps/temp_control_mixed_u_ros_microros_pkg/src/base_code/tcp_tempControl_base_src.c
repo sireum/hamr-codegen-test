@@ -14,7 +14,7 @@ static tcp_tempControl_base_t * g_self = NULL;
 // name once the node has been initialized
 const char * tcp_tempControl_logger_name = "tcp_tempControl";
 
-// NODE OPTIONS -- additions within these tags will be preserved when re-running Codegen
+// NODE OPTIONS - additions within these tags will be preserved when re-running Codegen
 // Add rcl arguments after "--ros-args", e.g. a remap rule binding one of this
 // node's topics to a preexisting node's topic:
 //     "-r", "some_port:=/some/other/topic"
@@ -23,7 +23,13 @@ const char * tcp_tempControl_logger_name = "tcp_tempControl";
 static const char * const node_options[] = {
     "--ros-args"
 };
-// NODE OPTIONS -- additions within these tags will be preserved when re-running Codegen
+// NODE OPTIONS - additions within these tags will be preserved when re-running Codegen
+
+// USER DECLARATIONS - additions within these tags will be preserved when re-running Codegen
+// Storage for message fields codegen could not size from the model, e.g. a sequence
+// or string field of a platform-provided type whose mirror declares no dimensions:
+//     static float joy_axes_buf[8];
+// USER DECLARATIONS - additions within these tags will be preserved when re-running Codegen
 
 //=================================================
 //  S u b s c r i p t i o n   C a l l b a c k s
@@ -65,21 +71,21 @@ static void tcp_tempControl_setPoint_subscription_callback(const void * msgin)
 //  I n i t i a l i z a t i o n
 //=================================================
 
-void tcp_tempControl_base_init(tcp_tempControl_base_t * self)
+rcl_ret_t tcp_tempControl_base_init(tcp_tempControl_base_t * self)
 {
     g_self = self;
 
     self->allocator = rcl_get_default_allocator();
 
     rcl_init_options_t init_options = rcl_get_zero_initialized_init_options();
-    rcl_init_options_init(&init_options, self->allocator);
+    RCL_CHECK(rcl_init_options_init(&init_options, self->allocator));
 
-    rclc_support_init_with_options(
+    RCL_CHECK(rclc_support_init_with_options(
         &self->support,
         (int) (sizeof(node_options) / sizeof(node_options[0])), node_options,
-        &init_options, &self->allocator);
+        &init_options, &self->allocator));
 
-    rclc_node_init_default(&self->node, "tcp_tempControl", "", &self->support);
+    RCL_CHECK(rclc_node_init_default(&self->node, "tcp_tempControl", "", &self->support));
 
     // Retrieve the node's registered logger name for use by the PRINT_* macros
     const char * logger_name = rcl_node_get_logger_name(&self->node);
@@ -88,42 +94,52 @@ void tcp_tempControl_base_init(tcp_tempControl_base_t * self)
     }
 
     // Setting up connections
-    rclc_publisher_init_default(
+    RCL_CHECK(rclc_publisher_init_default(
         &self->tcp_tempControl_fanCmd_publisher,
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(temp_control_mixed_u_ros_cpp_pkg_interfaces, msg, FanCmd),
-        "tcp_fan_fanCmd");
+        "tcp_fan_fanCmd"));
 
     // Setting up subscriptions
-    rclc_subscription_init_default(
+    RCL_CHECK(rclc_subscription_init_default(
         &self->tcp_tempControl_currentTemp_subscription,
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(temp_control_mixed_u_ros_cpp_pkg_interfaces, msg, Temperature),
-        "tcp_tempControl_currentTemp");
+        "tcp_tempControl_currentTemp"));
 
-    rclc_subscription_init_default(
+    RCL_CHECK(rclc_subscription_init_default(
         &self->tcp_tempControl_tempChanged_subscription,
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(temp_control_mixed_u_ros_cpp_pkg_interfaces, msg, Empty),
-        "tcp_tempControl_tempChanged");
+        "tcp_tempControl_tempChanged"));
 
-    rclc_subscription_init_default(
+    RCL_CHECK(rclc_subscription_init_default(
         &self->tcp_tempControl_fanAck_subscription,
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(temp_control_mixed_u_ros_cpp_pkg_interfaces, msg, FanAck),
-        "tcp_tempControl_fanAck");
+        "tcp_tempControl_fanAck"));
 
-    rclc_subscription_init_default(
+    RCL_CHECK(rclc_subscription_init_default(
         &self->tcp_tempControl_setPoint_subscription,
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(temp_control_mixed_u_ros_cpp_pkg_interfaces, msg, SetPoint),
-        "tcp_tempControl_setPoint");
+        "tcp_tempControl_setPoint"));
 
-    rclc_executor_init(&self->executor, &self->support.context, 4, &self->allocator);
-    rclc_executor_add_subscription(&self->executor, &self->tcp_tempControl_currentTemp_subscription, &self->tcp_tempControl_currentTemp_msg, tcp_tempControl_currentTemp_subscription_callback, ON_NEW_DATA);
-    rclc_executor_add_subscription(&self->executor, &self->tcp_tempControl_tempChanged_subscription, &self->tcp_tempControl_tempChanged_msg, tcp_tempControl_tempChanged_subscription_callback, ON_NEW_DATA);
-    rclc_executor_add_subscription(&self->executor, &self->tcp_tempControl_fanAck_subscription, &self->tcp_tempControl_fanAck_msg, tcp_tempControl_fanAck_subscription_callback, ON_NEW_DATA);
-    rclc_executor_add_subscription(&self->executor, &self->tcp_tempControl_setPoint_subscription, &self->tcp_tempControl_setPoint_msg, tcp_tempControl_setPoint_subscription_callback, ON_NEW_DATA);
+
+    // USER INIT - additions within these tags will be preserved when re-running Codegen
+    // Attach storage declared above to the corresponding message fields, e.g.:
+    //     self->proc_ttj_joy_msg.axes.data = joy_axes_buf;
+    //     self->proc_ttj_joy_msg.axes.capacity = 8;
+    //     self->proc_ttj_joy_msg.axes.size = 0;
+    // USER INIT - additions within these tags will be preserved when re-running Codegen
+
+    RCL_CHECK(rclc_executor_init(&self->executor, &self->support.context, 4, &self->allocator));
+    RCL_CHECK(rclc_executor_add_subscription(&self->executor, &self->tcp_tempControl_currentTemp_subscription, &self->tcp_tempControl_currentTemp_msg, tcp_tempControl_currentTemp_subscription_callback, ON_NEW_DATA));
+    RCL_CHECK(rclc_executor_add_subscription(&self->executor, &self->tcp_tempControl_tempChanged_subscription, &self->tcp_tempControl_tempChanged_msg, tcp_tempControl_tempChanged_subscription_callback, ON_NEW_DATA));
+    RCL_CHECK(rclc_executor_add_subscription(&self->executor, &self->tcp_tempControl_fanAck_subscription, &self->tcp_tempControl_fanAck_msg, tcp_tempControl_fanAck_subscription_callback, ON_NEW_DATA));
+    RCL_CHECK(rclc_executor_add_subscription(&self->executor, &self->tcp_tempControl_setPoint_subscription, &self->tcp_tempControl_setPoint_msg, tcp_tempControl_setPoint_subscription_callback, ON_NEW_DATA));
+
+    return RCL_RET_OK;
 }
 
 void tcp_tempControl_base_spin(tcp_tempControl_base_t * self)
