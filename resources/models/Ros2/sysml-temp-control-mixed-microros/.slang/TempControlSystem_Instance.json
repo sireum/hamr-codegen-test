@@ -12035,6 +12035,603 @@
       "type" : "GclLib",
       "containingPackage" : {
         "type" : "Name",
+        "name" : ["GUMBO_Mixed_Definitions"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/GUMBO_Mixed_Definitions.sysml"
+            },
+            "beginLine" : 1,
+            "beginColumn" : 8,
+            "endLine" : 1,
+            "endColumn" : 30,
+            "offset" : 8,
+            "length" : 23
+          }
+        }
+      },
+      "methods" : [
+        {
+          "type" : "GclBodyMethod",
+          "method" : {
+            "type" : "org.sireum.lang.ast.Stmt.Method",
+            "typeChecked" : false,
+            "purity" : {
+              "type" : "org.sireum.lang.ast.Purity",
+              "value" : "StrictPure"
+            },
+            "modifiers" : [],
+            "sig" : {
+              "type" : "org.sireum.lang.ast.MethodSig",
+              "purity" : {
+                "type" : "org.sireum.lang.ast.Purity",
+                "value" : "StrictPure"
+              },
+              "annotations" : [
+              ],
+              "id" : {
+                "type" : "org.sireum.lang.ast.Id",
+                "value" : "aboveAbsoluteZero",
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                      },
+                      "beginLine" : 6,
+                      "beginColumn" : 12,
+                      "endLine" : 6,
+                      "endColumn" : 12,
+                      "offset" : 98,
+                      "length" : 0
+                    }
+                  }
+                }
+              },
+              "rTypeParams" : [
+              ],
+              "typeParams" : [
+              ],
+              "hasParams" : true,
+              "params" : [
+                {
+                  "type" : "org.sireum.lang.ast.Param",
+                  "isHidden" : false,
+                  "id" : {
+                    "type" : "org.sireum.lang.ast.Id",
+                    "value" : "degrees",
+                    "attr" : {
+                      "type" : "org.sireum.lang.ast.Attr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                          },
+                          "beginLine" : 6,
+                          "beginColumn" : 30,
+                          "endLine" : 6,
+                          "endColumn" : 51,
+                          "offset" : 116,
+                          "length" : 21
+                        }
+                      }
+                    }
+                  },
+                  "tipe" : {
+                    "type" : "org.sireum.lang.ast.Type.Named",
+                    "name" : {
+                      "type" : "org.sireum.lang.ast.Name",
+                      "ids" : [
+                        {
+                          "type" : "org.sireum.lang.ast.Id",
+                          "value" : "Base_Types",
+                          "attr" : {
+                            "type" : "org.sireum.lang.ast.Attr",
+                            "posOpt" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/aadl.library\/Base_Types.sysml"
+                                },
+                                "beginLine" : 119,
+                                "beginColumn" : 2,
+                                "endLine" : 122,
+                                "endColumn" : 2,
+                                "offset" : 2851,
+                                "length" : 141
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type" : "org.sireum.lang.ast.Id",
+                          "value" : "Float_32",
+                          "attr" : {
+                            "type" : "org.sireum.lang.ast.Attr",
+                            "posOpt" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/aadl.library\/Base_Types.sysml"
+                                },
+                                "beginLine" : 119,
+                                "beginColumn" : 2,
+                                "endLine" : 122,
+                                "endColumn" : 2,
+                                "offset" : 2851,
+                                "length" : 141
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "attr" : {
+                        "type" : "org.sireum.lang.ast.Attr",
+                        "posOpt" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/aadl.library\/Base_Types.sysml"
+                            },
+                            "beginLine" : 119,
+                            "beginColumn" : 2,
+                            "endLine" : 122,
+                            "endColumn" : 2,
+                            "offset" : 2851,
+                            "length" : 141
+                          }
+                        }
+                      }
+                    },
+                    "rTypeOpt" : {
+                      "type" : "None"
+                    },
+                    "typeArgs" : [
+                    ],
+                    "attr" : {
+                      "type" : "org.sireum.lang.ast.TypedAttr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/aadl.library\/Base_Types.sysml"
+                          },
+                          "beginLine" : 119,
+                          "beginColumn" : 2,
+                          "endLine" : 122,
+                          "endColumn" : 2,
+                          "offset" : 2851,
+                          "length" : 141
+                        }
+                      },
+                      "typedOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "org.sireum.lang.ast.Typed.Name",
+                          "ids" : ["Base_Types", "Float_32"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
+                          "args" : [
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "returnType" : {
+                "type" : "org.sireum.lang.ast.Type.Named",
+                "name" : {
+                  "type" : "org.sireum.lang.ast.Name",
+                  "ids" : [
+                    {
+                      "type" : "org.sireum.lang.ast.Id",
+                      "value" : "Base_Types",
+                      "attr" : {
+                        "type" : "org.sireum.lang.ast.Attr",
+                        "posOpt" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/aadl.library\/Base_Types.sysml"
+                            },
+                            "beginLine" : 20,
+                            "beginColumn" : 2,
+                            "endLine" : 22,
+                            "endColumn" : 2,
+                            "offset" : 388,
+                            "length" : 68
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type" : "org.sireum.lang.ast.Id",
+                      "value" : "Boolean",
+                      "attr" : {
+                        "type" : "org.sireum.lang.ast.Attr",
+                        "posOpt" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/aadl.library\/Base_Types.sysml"
+                            },
+                            "beginLine" : 20,
+                            "beginColumn" : 2,
+                            "endLine" : 22,
+                            "endColumn" : 2,
+                            "offset" : 388,
+                            "length" : 68
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "attr" : {
+                    "type" : "org.sireum.lang.ast.Attr",
+                    "posOpt" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.library\/Base_Types.sysml"
+                        },
+                        "beginLine" : 20,
+                        "beginColumn" : 2,
+                        "endLine" : 22,
+                        "endColumn" : 2,
+                        "offset" : 388,
+                        "length" : 68
+                      }
+                    }
+                  }
+                },
+                "rTypeOpt" : {
+                  "type" : "None"
+                },
+                "typeArgs" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.TypedAttr",
+                  "posOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/aadl.library\/Base_Types.sysml"
+                      },
+                      "beginLine" : 20,
+                      "beginColumn" : 2,
+                      "endLine" : 22,
+                      "endColumn" : 2,
+                      "offset" : 388,
+                      "length" : 68
+                    }
+                  },
+                  "typedOpt" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "org.sireum.lang.ast.Typed.Name",
+                      "ids" : ["Base_Types", "Boolean"],
+                      "rTypeOpt" : {
+                        "type" : "None"
+                      },
+                      "args" : [
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "mcontract" : {
+              "type" : "org.sireum.lang.ast.MethodContract.Simple",
+              "readsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.Accesses",
+                "refs" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "requiresClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.Claims",
+                "claims" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "modifiesClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.Accesses",
+                "refs" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "ensuresClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.Claims",
+                "claims" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "infoFlowsClause" : {
+                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
+                "flows" : [
+                ],
+                "attr" : {
+                  "type" : "org.sireum.lang.ast.Attr",
+                  "posOpt" : {
+                    "type" : "None"
+                  }
+                }
+              },
+              "attr" : {
+                "type" : "org.sireum.lang.ast.Attr",
+                "posOpt" : {
+                  "type" : "None"
+                }
+              }
+            },
+            "bodyOpt" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "org.sireum.lang.ast.Body",
+                "stmts" : [
+                  {
+                    "type" : "org.sireum.lang.ast.Stmt.Return",
+                    "expOpt" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "org.sireum.lang.ast.Exp.Binary",
+                        "left" : {
+                          "type" : "org.sireum.lang.ast.Exp.Ident",
+                          "id" : {
+                            "type" : "org.sireum.lang.ast.Id",
+                            "value" : "degrees",
+                            "attr" : {
+                              "type" : "org.sireum.lang.ast.Attr",
+                              "posOpt" : {
+                                "type" : "Some",
+                                "value" : {
+                                  "type" : "Position",
+                                  "uriOpt" : {
+                                    "type" : "Some",
+                                    "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                                  },
+                                  "beginLine" : 7,
+                                  "beginColumn" : 10,
+                                  "endLine" : 7,
+                                  "endColumn" : 16,
+                                  "offset" : 182,
+                                  "length" : 7
+                                }
+                              }
+                            }
+                          },
+                          "attr" : {
+                            "type" : "org.sireum.lang.ast.ResolvedAttr",
+                            "posOpt" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                                },
+                                "beginLine" : 7,
+                                "beginColumn" : 10,
+                                "endLine" : 7,
+                                "endColumn" : 16,
+                                "offset" : 182,
+                                "length" : 7
+                              }
+                            },
+                            "resOpt" : {
+                              "type" : "None"
+                            },
+                            "typedOpt" : {
+                              "type" : "None"
+                            }
+                          }
+                        },
+                        "op" : ">",
+                        "right" : {
+                          "type" : "org.sireum.lang.ast.Exp.LitF32",
+                          "value" : -459.67,
+                          "attr" : {
+                            "type" : "org.sireum.lang.ast.Attr",
+                            "posOpt" : {
+                              "type" : "Some",
+                              "value" : {
+                                "type" : "Position",
+                                "uriOpt" : {
+                                  "type" : "Some",
+                                  "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                                },
+                                "beginLine" : 7,
+                                "beginColumn" : 21,
+                                "endLine" : 7,
+                                "endColumn" : 32,
+                                "offset" : 193,
+                                "length" : 11
+                              }
+                            }
+                          }
+                        },
+                        "attr" : {
+                          "type" : "org.sireum.lang.ast.ResolvedAttr",
+                          "posOpt" : {
+                            "type" : "Some",
+                            "value" : {
+                              "type" : "Position",
+                              "uriOpt" : {
+                                "type" : "Some",
+                                "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                              },
+                              "beginLine" : 7,
+                              "beginColumn" : 10,
+                              "endLine" : 7,
+                              "endColumn" : 32,
+                              "offset" : 182,
+                              "length" : 22
+                            }
+                          },
+                          "resOpt" : {
+                            "type" : "None"
+                          },
+                          "typedOpt" : {
+                            "type" : "None"
+                          }
+                        },
+                        "opPosOpt" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                            },
+                            "beginLine" : 7,
+                            "beginColumn" : 10,
+                            "endLine" : 7,
+                            "endColumn" : 32,
+                            "offset" : 182,
+                            "length" : 22
+                          }
+                        }
+                      }
+                    },
+                    "annotations" : [
+                    ],
+                    "attr" : {
+                      "type" : "org.sireum.lang.ast.TypedAttr",
+                      "posOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                          },
+                          "beginLine" : 6,
+                          "beginColumn" : 62,
+                          "endLine" : 6,
+                          "endColumn" : 80,
+                          "offset" : 148,
+                          "length" : 19
+                        }
+                      },
+                      "typedOpt" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "org.sireum.lang.ast.Typed.Name",
+                          "ids" : ["Base_Types", "Boolean"],
+                          "rTypeOpt" : {
+                            "type" : "None"
+                          },
+                          "args" : [
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ],
+                "undecls" : [
+                ]
+              }
+            },
+            "attr" : {
+              "type" : "org.sireum.lang.ast.ResolvedAttr",
+              "posOpt" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/GUMBO_Mixed_Definitions.sysml"
+                  },
+                  "beginLine" : 6,
+                  "beginColumn" : 8,
+                  "endLine" : 7,
+                  "endColumn" : 32,
+                  "offset" : 94,
+                  "length" : 110
+                }
+              },
+              "resOpt" : {
+                "type" : "None"
+              },
+              "typedOpt" : {
+                "type" : "None"
+              }
+            }
+          }
+        }
+      ],
+      "attr" : {
+        "type" : "Attr",
+        "posOpt" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/GUMBO_Mixed_Definitions.sysml"
+            },
+            "beginLine" : 4,
+            "beginColumn" : 6,
+            "endLine" : 7,
+            "endColumn" : 33,
+            "offset" : 75,
+            "length" : 130
+          }
+        }
+      }
+    },
+    {
+      "type" : "GclLib",
+      "containingPackage" : {
+        "type" : "Name",
         "name" : ["TempControlMixed_uRos"],
         "pos" : {
           "type" : "Some",
@@ -12903,603 +13500,6 @@
           }
         }
       }
-    },
-    {
-      "type" : "GclLib",
-      "containingPackage" : {
-        "type" : "Name",
-        "name" : ["GUMBO_Mixed_Definitions"],
-        "pos" : {
-          "type" : "Some",
-          "value" : {
-            "type" : "Position",
-            "uriOpt" : {
-              "type" : "Some",
-              "value" : "\/GUMBO_Mixed_Definitions.sysml"
-            },
-            "beginLine" : 1,
-            "beginColumn" : 8,
-            "endLine" : 1,
-            "endColumn" : 30,
-            "offset" : 8,
-            "length" : 23
-          }
-        }
-      },
-      "methods" : [
-        {
-          "type" : "GclBodyMethod",
-          "method" : {
-            "type" : "org.sireum.lang.ast.Stmt.Method",
-            "typeChecked" : false,
-            "purity" : {
-              "type" : "org.sireum.lang.ast.Purity",
-              "value" : "StrictPure"
-            },
-            "modifiers" : [],
-            "sig" : {
-              "type" : "org.sireum.lang.ast.MethodSig",
-              "purity" : {
-                "type" : "org.sireum.lang.ast.Purity",
-                "value" : "StrictPure"
-              },
-              "annotations" : [
-              ],
-              "id" : {
-                "type" : "org.sireum.lang.ast.Id",
-                "value" : "aboveAbsoluteZero",
-                "attr" : {
-                  "type" : "org.sireum.lang.ast.Attr",
-                  "posOpt" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                      },
-                      "beginLine" : 6,
-                      "beginColumn" : 12,
-                      "endLine" : 6,
-                      "endColumn" : 12,
-                      "offset" : 98,
-                      "length" : 0
-                    }
-                  }
-                }
-              },
-              "rTypeParams" : [
-              ],
-              "typeParams" : [
-              ],
-              "hasParams" : true,
-              "params" : [
-                {
-                  "type" : "org.sireum.lang.ast.Param",
-                  "isHidden" : false,
-                  "id" : {
-                    "type" : "org.sireum.lang.ast.Id",
-                    "value" : "degrees",
-                    "attr" : {
-                      "type" : "org.sireum.lang.ast.Attr",
-                      "posOpt" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                          },
-                          "beginLine" : 6,
-                          "beginColumn" : 30,
-                          "endLine" : 6,
-                          "endColumn" : 51,
-                          "offset" : 116,
-                          "length" : 21
-                        }
-                      }
-                    }
-                  },
-                  "tipe" : {
-                    "type" : "org.sireum.lang.ast.Type.Named",
-                    "name" : {
-                      "type" : "org.sireum.lang.ast.Name",
-                      "ids" : [
-                        {
-                          "type" : "org.sireum.lang.ast.Id",
-                          "value" : "Base_Types",
-                          "attr" : {
-                            "type" : "org.sireum.lang.ast.Attr",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/aadl.library\/Base_Types.sysml"
-                                },
-                                "beginLine" : 119,
-                                "beginColumn" : 2,
-                                "endLine" : 122,
-                                "endColumn" : 2,
-                                "offset" : 2851,
-                                "length" : 141
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "type" : "org.sireum.lang.ast.Id",
-                          "value" : "Float_32",
-                          "attr" : {
-                            "type" : "org.sireum.lang.ast.Attr",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/aadl.library\/Base_Types.sysml"
-                                },
-                                "beginLine" : 119,
-                                "beginColumn" : 2,
-                                "endLine" : 122,
-                                "endColumn" : 2,
-                                "offset" : 2851,
-                                "length" : 141
-                              }
-                            }
-                          }
-                        }
-                      ],
-                      "attr" : {
-                        "type" : "org.sireum.lang.ast.Attr",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/aadl.library\/Base_Types.sysml"
-                            },
-                            "beginLine" : 119,
-                            "beginColumn" : 2,
-                            "endLine" : 122,
-                            "endColumn" : 2,
-                            "offset" : 2851,
-                            "length" : 141
-                          }
-                        }
-                      }
-                    },
-                    "rTypeOpt" : {
-                      "type" : "None"
-                    },
-                    "typeArgs" : [
-                    ],
-                    "attr" : {
-                      "type" : "org.sireum.lang.ast.TypedAttr",
-                      "posOpt" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/aadl.library\/Base_Types.sysml"
-                          },
-                          "beginLine" : 119,
-                          "beginColumn" : 2,
-                          "endLine" : 122,
-                          "endColumn" : 2,
-                          "offset" : 2851,
-                          "length" : 141
-                        }
-                      },
-                      "typedOpt" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "org.sireum.lang.ast.Typed.Name",
-                          "ids" : ["Base_Types", "Float_32"],
-                          "rTypeOpt" : {
-                            "type" : "None"
-                          },
-                          "args" : [
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              ],
-              "returnType" : {
-                "type" : "org.sireum.lang.ast.Type.Named",
-                "name" : {
-                  "type" : "org.sireum.lang.ast.Name",
-                  "ids" : [
-                    {
-                      "type" : "org.sireum.lang.ast.Id",
-                      "value" : "Base_Types",
-                      "attr" : {
-                        "type" : "org.sireum.lang.ast.Attr",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/aadl.library\/Base_Types.sysml"
-                            },
-                            "beginLine" : 20,
-                            "beginColumn" : 2,
-                            "endLine" : 22,
-                            "endColumn" : 2,
-                            "offset" : 388,
-                            "length" : 68
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "type" : "org.sireum.lang.ast.Id",
-                      "value" : "Boolean",
-                      "attr" : {
-                        "type" : "org.sireum.lang.ast.Attr",
-                        "posOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/aadl.library\/Base_Types.sysml"
-                            },
-                            "beginLine" : 20,
-                            "beginColumn" : 2,
-                            "endLine" : 22,
-                            "endColumn" : 2,
-                            "offset" : 388,
-                            "length" : 68
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "attr" : {
-                    "type" : "org.sireum.lang.ast.Attr",
-                    "posOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/aadl.library\/Base_Types.sysml"
-                        },
-                        "beginLine" : 20,
-                        "beginColumn" : 2,
-                        "endLine" : 22,
-                        "endColumn" : 2,
-                        "offset" : 388,
-                        "length" : 68
-                      }
-                    }
-                  }
-                },
-                "rTypeOpt" : {
-                  "type" : "None"
-                },
-                "typeArgs" : [
-                ],
-                "attr" : {
-                  "type" : "org.sireum.lang.ast.TypedAttr",
-                  "posOpt" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/aadl.library\/Base_Types.sysml"
-                      },
-                      "beginLine" : 20,
-                      "beginColumn" : 2,
-                      "endLine" : 22,
-                      "endColumn" : 2,
-                      "offset" : 388,
-                      "length" : 68
-                    }
-                  },
-                  "typedOpt" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "org.sireum.lang.ast.Typed.Name",
-                      "ids" : ["Base_Types", "Boolean"],
-                      "rTypeOpt" : {
-                        "type" : "None"
-                      },
-                      "args" : [
-                      ]
-                    }
-                  }
-                }
-              }
-            },
-            "mcontract" : {
-              "type" : "org.sireum.lang.ast.MethodContract.Simple",
-              "readsClause" : {
-                "type" : "org.sireum.lang.ast.MethodContract.Accesses",
-                "refs" : [
-                ],
-                "attr" : {
-                  "type" : "org.sireum.lang.ast.Attr",
-                  "posOpt" : {
-                    "type" : "None"
-                  }
-                }
-              },
-              "requiresClause" : {
-                "type" : "org.sireum.lang.ast.MethodContract.Claims",
-                "claims" : [
-                ],
-                "attr" : {
-                  "type" : "org.sireum.lang.ast.Attr",
-                  "posOpt" : {
-                    "type" : "None"
-                  }
-                }
-              },
-              "modifiesClause" : {
-                "type" : "org.sireum.lang.ast.MethodContract.Accesses",
-                "refs" : [
-                ],
-                "attr" : {
-                  "type" : "org.sireum.lang.ast.Attr",
-                  "posOpt" : {
-                    "type" : "None"
-                  }
-                }
-              },
-              "ensuresClause" : {
-                "type" : "org.sireum.lang.ast.MethodContract.Claims",
-                "claims" : [
-                ],
-                "attr" : {
-                  "type" : "org.sireum.lang.ast.Attr",
-                  "posOpt" : {
-                    "type" : "None"
-                  }
-                }
-              },
-              "infoFlowsClause" : {
-                "type" : "org.sireum.lang.ast.MethodContract.InfoFlows",
-                "flows" : [
-                ],
-                "attr" : {
-                  "type" : "org.sireum.lang.ast.Attr",
-                  "posOpt" : {
-                    "type" : "None"
-                  }
-                }
-              },
-              "attr" : {
-                "type" : "org.sireum.lang.ast.Attr",
-                "posOpt" : {
-                  "type" : "None"
-                }
-              }
-            },
-            "bodyOpt" : {
-              "type" : "Some",
-              "value" : {
-                "type" : "org.sireum.lang.ast.Body",
-                "stmts" : [
-                  {
-                    "type" : "org.sireum.lang.ast.Stmt.Return",
-                    "expOpt" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "org.sireum.lang.ast.Exp.Binary",
-                        "left" : {
-                          "type" : "org.sireum.lang.ast.Exp.Ident",
-                          "id" : {
-                            "type" : "org.sireum.lang.ast.Id",
-                            "value" : "degrees",
-                            "attr" : {
-                              "type" : "org.sireum.lang.ast.Attr",
-                              "posOpt" : {
-                                "type" : "Some",
-                                "value" : {
-                                  "type" : "Position",
-                                  "uriOpt" : {
-                                    "type" : "Some",
-                                    "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                                  },
-                                  "beginLine" : 7,
-                                  "beginColumn" : 10,
-                                  "endLine" : 7,
-                                  "endColumn" : 16,
-                                  "offset" : 182,
-                                  "length" : 7
-                                }
-                              }
-                            }
-                          },
-                          "attr" : {
-                            "type" : "org.sireum.lang.ast.ResolvedAttr",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                                },
-                                "beginLine" : 7,
-                                "beginColumn" : 10,
-                                "endLine" : 7,
-                                "endColumn" : 16,
-                                "offset" : 182,
-                                "length" : 7
-                              }
-                            },
-                            "resOpt" : {
-                              "type" : "None"
-                            },
-                            "typedOpt" : {
-                              "type" : "None"
-                            }
-                          }
-                        },
-                        "op" : ">",
-                        "right" : {
-                          "type" : "org.sireum.lang.ast.Exp.LitF32",
-                          "value" : -459.67,
-                          "attr" : {
-                            "type" : "org.sireum.lang.ast.Attr",
-                            "posOpt" : {
-                              "type" : "Some",
-                              "value" : {
-                                "type" : "Position",
-                                "uriOpt" : {
-                                  "type" : "Some",
-                                  "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                                },
-                                "beginLine" : 7,
-                                "beginColumn" : 21,
-                                "endLine" : 7,
-                                "endColumn" : 32,
-                                "offset" : 193,
-                                "length" : 11
-                              }
-                            }
-                          }
-                        },
-                        "attr" : {
-                          "type" : "org.sireum.lang.ast.ResolvedAttr",
-                          "posOpt" : {
-                            "type" : "Some",
-                            "value" : {
-                              "type" : "Position",
-                              "uriOpt" : {
-                                "type" : "Some",
-                                "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                              },
-                              "beginLine" : 7,
-                              "beginColumn" : 10,
-                              "endLine" : 7,
-                              "endColumn" : 32,
-                              "offset" : 182,
-                              "length" : 22
-                            }
-                          },
-                          "resOpt" : {
-                            "type" : "None"
-                          },
-                          "typedOpt" : {
-                            "type" : "None"
-                          }
-                        },
-                        "opPosOpt" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                            },
-                            "beginLine" : 7,
-                            "beginColumn" : 10,
-                            "endLine" : 7,
-                            "endColumn" : 32,
-                            "offset" : 182,
-                            "length" : 22
-                          }
-                        }
-                      }
-                    },
-                    "annotations" : [
-                    ],
-                    "attr" : {
-                      "type" : "org.sireum.lang.ast.TypedAttr",
-                      "posOpt" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                          },
-                          "beginLine" : 6,
-                          "beginColumn" : 62,
-                          "endLine" : 6,
-                          "endColumn" : 80,
-                          "offset" : 148,
-                          "length" : 19
-                        }
-                      },
-                      "typedOpt" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "org.sireum.lang.ast.Typed.Name",
-                          "ids" : ["Base_Types", "Boolean"],
-                          "rTypeOpt" : {
-                            "type" : "None"
-                          },
-                          "args" : [
-                          ]
-                        }
-                      }
-                    }
-                  }
-                ],
-                "undecls" : [
-                ]
-              }
-            },
-            "attr" : {
-              "type" : "org.sireum.lang.ast.ResolvedAttr",
-              "posOpt" : {
-                "type" : "Some",
-                "value" : {
-                  "type" : "Position",
-                  "uriOpt" : {
-                    "type" : "Some",
-                    "value" : "\/GUMBO_Mixed_Definitions.sysml"
-                  },
-                  "beginLine" : 6,
-                  "beginColumn" : 8,
-                  "endLine" : 7,
-                  "endColumn" : 32,
-                  "offset" : 94,
-                  "length" : 110
-                }
-              },
-              "resOpt" : {
-                "type" : "None"
-              },
-              "typedOpt" : {
-                "type" : "None"
-              }
-            }
-          }
-        }
-      ],
-      "attr" : {
-        "type" : "Attr",
-        "posOpt" : {
-          "type" : "Some",
-          "value" : {
-            "type" : "Position",
-            "uriOpt" : {
-              "type" : "Some",
-              "value" : "\/GUMBO_Mixed_Definitions.sysml"
-            },
-            "beginLine" : 4,
-            "beginColumn" : 6,
-            "endLine" : 7,
-            "endColumn" : 33,
-            "offset" : 75,
-            "length" : 130
-          }
-        }
-      }
     }
   ],
   "dataComponents" : [
@@ -13585,7 +13585,7 @@
       "type" : "Component",
       "identifier" : {
         "type" : "Name",
-        "name" : ["degrees"],
+        "name" : [],
         "pos" : {
           "type" : "Some",
           "value" : {
@@ -13695,6 +13695,57 @@
           ],
           "uriFrag" : ""
         }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/aadl.library\/Base_Types.sysml"
+            },
+            "beginLine" : 20,
+            "beginColumn" : 2,
+            "endLine" : 22,
+            "endColumn" : 2,
+            "offset" : 388,
+            "length" : 68
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Boolean"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
       ],
       "connections" : [
       ],
@@ -14366,57 +14417,6 @@
             }
           }
         }
-      ],
-      "uriFrag" : ""
-    },
-    {
-      "type" : "Component",
-      "identifier" : {
-        "type" : "Name",
-        "name" : [],
-        "pos" : {
-          "type" : "Some",
-          "value" : {
-            "type" : "Position",
-            "uriOpt" : {
-              "type" : "Some",
-              "value" : "\/aadl.library\/Base_Types.sysml"
-            },
-            "beginLine" : 20,
-            "beginColumn" : 2,
-            "endLine" : 22,
-            "endColumn" : 2,
-            "offset" : 388,
-            "length" : 68
-          }
-        }
-      },
-      "category" : {
-        "type" : "ComponentCategory",
-        "value" : "Data"
-      },
-      "classifier" : {
-        "type" : "Some",
-        "value" : {
-          "type" : "Classifier",
-          "name" : "Base_Types::Boolean"
-        }
-      },
-      "features" : [
-      ],
-      "subComponents" : [
-      ],
-      "connections" : [
-      ],
-      "connectionInstances" : [
-      ],
-      "properties" : [
-      ],
-      "flows" : [
-      ],
-      "modes" : [
-      ],
-      "annexes" : [
       ],
       "uriFrag" : ""
     },
