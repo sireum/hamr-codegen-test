@@ -16,6 +16,13 @@
     </node>
 
 
+    <!-- realized by `ros2 run turtlesim turtlesim_node` - no code is generated for it -->
+    <node pkg="turtlesim" exec="turtlesim_node" name="turtle" namespace="uros_demo">
+        <!-- LAUNCH CONFIG proc_turtle - additions within these tags will be preserved when re-running Codegen -->
+        <!-- LAUNCH CONFIG proc_turtle - additions within these tags will be preserved when re-running Codegen -->
+    </node>
+
+
     <node pkg="uros_demo_naming_cpp_pkg" exec="proc_logger_exe" namespace="uros_demo">
         <!-- LAUNCH CONFIG proc_logger - additions within these tags will be preserved when re-running Codegen -->
         <!-- LAUNCH CONFIG proc_logger - additions within these tags will be preserved when re-running Codegen -->

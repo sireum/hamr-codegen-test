@@ -79,7 +79,7 @@ rcl_ret_t proc_ttj_base_init(proc_ttj_base_t * self)
         &self->proc_ttj_cmdVel_publisher,
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
-        "/turtle1/cmd_vel"));
+        "turtle1/cmd_vel"));
 
     // Setting up subscriptions
     RCL_CHECK(rclc_subscription_init_default(
