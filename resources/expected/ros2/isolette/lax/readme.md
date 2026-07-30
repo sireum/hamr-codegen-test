@@ -25,10 +25,22 @@
 
 | Target | Description |
 |---|---|
+| `make build` | Build the ROS2 packages |
+| `make launch` | Build, then bring the system up with `ros2 launch` (Python launch file) |
+| `make launch-py` | Same as `make launch` |
+| `make launch-xml` | Build, then bring the system up using the XML launch file instead |
 | `make` | Build and launch all nodes in separate terminals |
 | `make run` | Same as `make` |
 | `make stop` | Kill all running nodes |
 | `make clean` | Remove build artifacts |
+
+`make launch` and `make run` are alternatives: the launch targets start everything from
+one launch file in the foreground, `run` opens a terminal per node.  Set launch
+arguments with `LAUNCH_ARGS`:
+
+```bash
+make launch LAUNCH_ARGS="log_file:=run1.txt"
+```
 
 ## Manual Steps
 

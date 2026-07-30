@@ -34,10 +34,16 @@
         "rcl": {
             "cmake-args": [
                 "-DBUILD_TESTING=OFF",
+                # NOTE: this rcl block is only ever load-bearing on cross-compiled
+                # embedded targets, where micro_ros_setup overrides these defaults.  Its
+                # host config does not, so on host these restate values already in
+                # effect -- and if rcl is not rebuilt in the firmware workspace at all,
+                # the nodes just link the ROS distribution's librcl.
+                #
                 # Required for the rcl arguments in each node's node_options block
-                # (topic remap rules in particular) to be parsed: the micro-ROS fork
-                # of rcl makes its argument machinery compile-time removable and
-                # strips it by default.
+                # (topic remap rules in particular) to be parsed.  rcl defaults this
+                # ON; micro_ros_setup turns it OFF in its embedded configs to save
+                # footprint, and this puts it back.
                 "-DRCL_COMMAND_LINE_ENABLED=ON",
                 # Generated nodes log through rcutils, which reaches stderr without
                 # rcl logging.  Routing a node's own records to /rosout additionally

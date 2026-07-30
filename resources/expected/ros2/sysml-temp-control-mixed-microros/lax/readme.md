@@ -66,11 +66,24 @@ Run from this directory with `MICROROS_WS` set.
 
 | Target | Description |
 |---|---|
+| `make build` | Build the micro-ROS app in `MICROROS_WS` and the ROS2 packages here |
+| `make launch` | Build, then bring the system up with `ros2 launch` (Python launch file) |
+| `make launch-py` | Same as `make launch` |
+| `make launch-xml` | Build, then bring the system up using the XML launch file instead |
 | `make` | Build everything and launch all nodes in separate terminals |
 | `make run` | Same as `make` |
 | `make stop` | Kill all running nodes |
 | `make clean` | Remove local build artifacts and copied packages from `MICROROS_WS` |
 | `make microros-config` | Apply `microros_apps/colcon.meta` to `MICROROS_WS` and rebuild the micro-ROS stack (see below) |
+
+`make launch` and `make run` are alternatives: the launch targets start everything from
+one launch file in the foreground, `run` opens a terminal per node.  Set launch
+arguments with `LAUNCH_ARGS`, and pick a different launch file with `LAUNCH_FILE`:
+
+```bash
+make launch LAUNCH_ARGS="log_file:=run1.txt"
+make launch LAUNCH_FILE=TempControlSystem_Instance_ros2
+```
 
 ## Firmware Configuration
 
@@ -84,16 +97,22 @@ application packages.  Applying it is therefore a separate step:
 make microros-config
 ```
 
-Run it once after generating, and again whenever `colcon.meta` changes.  Two of its
-settings matter in ways that fail quietly if it is never applied:
+Run it once after generating, and again whenever `colcon.meta` changes.  Settings that
+fail quietly if it is never applied:
 
-- `RCL_COMMAND_LINE_ENABLED=ON` -- the micro-ROS fork of `rcl` strips its
-  argument-parsing machinery by default.  Without this flag, the rcl arguments in each
-  node's `node_options` block (topic remap rules in particular) are parsed by nothing.
 - `RMW_UXRCE_MAX_PUBLISHERS` / `RMW_UXRCE_MAX_SUBSCRIPTIONS` -- these are derived from
   the model's port counts and regenerated on every codegen run.  If the firmware's
   pools are smaller than the nodes need, entity creation fails without a diagnostic,
-  so re-apply after adding ports.
+  so re-apply after adding ports.  `RMW_UXRCE_TRANSPORT` and the agent address are in
+  the same package, so they apply on every target, host included.
+- `RCL_COMMAND_LINE_ENABLED=ON` -- **embedded targets only.**  It restores the rcl
+  argument parsing that `micro_ros_setup` disables in its cross-compiled configs;
+  without it the rcl arguments in each node's `node_options` block (topic remap rules
+  in particular) are parsed by nothing.  The option defaults to ON and the host config
+  does not touch it, so on host the rules are parsed regardless -- and if `rcl` is not
+  rebuilt in the firmware workspace at all, the nodes simply link the ROS
+  distribution's `librcl`.  The same reasoning covers `RCL_LOGGING_ENABLED` and
+  `RCL_LOGGING_IMPLEMENTATION`.
 
 Entries outside the marked blocks in `colcon.meta` are derived from the model and are
 overwritten on each run; the marked blocks (build profile, transport and tuning) are
