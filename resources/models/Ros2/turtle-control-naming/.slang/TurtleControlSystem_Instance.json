@@ -1,0 +1,5344 @@
+{
+  "type" : "Aadl",
+  "components" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["TurtleControlSystem_Instance"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/TurtleControl_Naming.sysml"
+            },
+            "beginLine" : 78,
+            "beginColumn" : 4,
+            "endLine" : 80,
+            "endColumn" : 4,
+            "offset" : 3655,
+            "length" : 87
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "System"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TurtleControl_Naming::TurtleControlSystem"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["TurtleControlSystem_Instance", "proc"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/TurtleControl_Naming.sysml"
+                },
+                "beginLine" : 79,
+                "beginColumn" : 8,
+                "endLine" : 79,
+                "endColumn" : 40,
+                "offset" : 3704,
+                "length" : 32
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TurtleControl_Naming::TurtleControlProcess"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 88,
+                    "beginColumn" : 8,
+                    "endLine" : 99,
+                    "endColumn" : 8,
+                    "offset" : 4064,
+                    "length" : 455
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TurtleControl_Naming::Encoder"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "mode"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 134,
+                        "beginColumn" : 8,
+                        "endLine" : 134,
+                        "endColumn" : 75,
+                        "offset" : 6297,
+                        "length" : 67
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TurtleControl_Naming::OperatingMode"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 134,
+                            "beginColumn" : 8,
+                            "endLine" : 134,
+                            "endColumn" : 75,
+                            "offset" : 6297,
+                            "length" : 67
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "speed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 135,
+                        "beginColumn" : 8,
+                        "endLine" : 135,
+                        "endColumn" : 72,
+                        "offset" : 6374,
+                        "length" : 64
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TurtleControl_Naming::WheelSpeed"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 135,
+                            "beginColumn" : 8,
+                            "endLine" : 135,
+                            "endColumn" : 72,
+                            "offset" : 6374,
+                            "length" : 64
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["HAMR_ROS::Ros_Topic_Name"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 95,
+                            "beginColumn" : 16,
+                            "endLine" : 95,
+                            "endColumn" : 54,
+                            "offset" : 4379,
+                            "length" : 38
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "speed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "overspeed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 136,
+                        "beginColumn" : 8,
+                        "endLine" : 136,
+                        "endColumn" : 38,
+                        "offset" : 6448,
+                        "length" : 30
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventPort"
+                  },
+                  "classifier" : {
+                    "type" : "None"
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 136,
+                            "beginColumn" : 8,
+                            "endLine" : 136,
+                            "endColumn" : 38,
+                            "offset" : 6448,
+                            "length" : 30
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "calibrate"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 140,
+                        "beginColumn" : 8,
+                        "endLine" : 142,
+                        "endColumn" : 8,
+                        "offset" : 6646,
+                        "length" : 82
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventPort"
+                  },
+                  "classifier" : {
+                    "type" : "None"
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 140,
+                            "beginColumn" : 8,
+                            "endLine" : 142,
+                            "endColumn" : 8,
+                            "offset" : 6646,
+                            "length" : 82
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "2",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "trim"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 144,
+                        "beginColumn" : 8,
+                        "endLine" : 148,
+                        "endColumn" : 8,
+                        "offset" : 6739,
+                        "length" : 121
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TurtleControl_Naming::TrimCommand"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 144,
+                            "beginColumn" : 8,
+                            "endLine" : 148,
+                            "endColumn" : 8,
+                            "offset" : 6739,
+                            "length" : 121
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "4",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["HAMR_ROS::Ros_Node_Kind"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 153,
+                        "beginColumn" : 8,
+                        "endLine" : 153,
+                        "endColumn" : 46,
+                        "offset" : 6965,
+                        "length" : 38
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "microRos"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 150,
+                        "beginColumn" : 8,
+                        "endLine" : 150,
+                        "endColumn" : 50,
+                        "offset" : 6871,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 151,
+                        "beginColumn" : 8,
+                        "endLine" : 151,
+                        "endColumn" : 39,
+                        "offset" : 6923,
+                        "length" : 31
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.000E+11",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["HAMR_ROS::Ros_Namespace"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 89,
+                        "beginColumn" : 12,
+                        "endLine" : 89,
+                        "endColumn" : 49,
+                        "offset" : 4101,
+                        "length" : 37
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "rover"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 101,
+                    "beginColumn" : 8,
+                    "endLine" : 107,
+                    "endColumn" : 8,
+                    "offset" : 4530,
+                    "length" : 283
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TurtleControl_Naming::Pilot"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "speed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 157,
+                        "beginColumn" : 8,
+                        "endLine" : 157,
+                        "endColumn" : 72,
+                        "offset" : 7051,
+                        "length" : 64
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TurtleControl_Naming::WheelSpeed"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 157,
+                            "beginColumn" : 8,
+                            "endLine" : 157,
+                            "endColumn" : 72,
+                            "offset" : 7051,
+                            "length" : 64
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "overspeed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 158,
+                        "beginColumn" : 8,
+                        "endLine" : 158,
+                        "endColumn" : 38,
+                        "offset" : 7125,
+                        "length" : 30
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventPort"
+                  },
+                  "classifier" : {
+                    "type" : "None"
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 158,
+                            "beginColumn" : 8,
+                            "endLine" : 158,
+                            "endColumn" : 38,
+                            "offset" : 7125,
+                            "length" : 30
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "pose"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 159,
+                        "beginColumn" : 8,
+                        "endLine" : 159,
+                        "endColumn" : 77,
+                        "offset" : 7165,
+                        "length" : 69
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "turtlesim::Pose"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 159,
+                            "beginColumn" : 8,
+                            "endLine" : 159,
+                            "endColumn" : 77,
+                            "offset" : 7165,
+                            "length" : 69
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "cmdVel"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 161,
+                        "beginColumn" : 8,
+                        "endLine" : 161,
+                        "endColumn" : 74,
+                        "offset" : 7245,
+                        "length" : 66
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "geometry_msgs::Twist"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 161,
+                            "beginColumn" : 8,
+                            "endLine" : 161,
+                            "endColumn" : 74,
+                            "offset" : 7245,
+                            "length" : 66
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "mode"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 162,
+                        "beginColumn" : 8,
+                        "endLine" : 162,
+                        "endColumn" : 67,
+                        "offset" : 7321,
+                        "length" : 59
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TurtleControl_Naming::OperatingMode"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 162,
+                            "beginColumn" : 8,
+                            "endLine" : 162,
+                            "endColumn" : 67,
+                            "offset" : 7321,
+                            "length" : 59
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "calibrate"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 165,
+                        "beginColumn" : 8,
+                        "endLine" : 165,
+                        "endColumn" : 38,
+                        "offset" : 7477,
+                        "length" : 30
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventPort"
+                  },
+                  "classifier" : {
+                    "type" : "None"
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 165,
+                            "beginColumn" : 8,
+                            "endLine" : 165,
+                            "endColumn" : 38,
+                            "offset" : 7477,
+                            "length" : 30
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "trim"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 166,
+                        "beginColumn" : 8,
+                        "endLine" : 166,
+                        "endColumn" : 73,
+                        "offset" : 7517,
+                        "length" : 65
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TurtleControl_Naming::TrimCommand"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/TurtleControl_Naming.sysml"
+                            },
+                            "beginLine" : 166,
+                            "beginColumn" : 8,
+                            "endLine" : 166,
+                            "endColumn" : 73,
+                            "offset" : 7517,
+                            "length" : 65
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["HAMR_ROS::Ros_Node_Kind"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 170,
+                        "beginColumn" : 8,
+                        "endLine" : 170,
+                        "endColumn" : 42,
+                        "offset" : 7646,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "ros2"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 168,
+                        "beginColumn" : 8,
+                        "endLine" : 168,
+                        "endColumn" : 50,
+                        "offset" : 7593,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["HAMR_ROS::Ros_Namespace"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 102,
+                        "beginColumn" : 12,
+                        "endLine" : 102,
+                        "endColumn" : 49,
+                        "offset" : 4563,
+                        "length" : 37
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "rover"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "turtle"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 114,
+                    "beginColumn" : 8,
+                    "endLine" : 114,
+                    "endColumn" : 47,
+                    "offset" : 5171,
+                    "length" : 39
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "turtlesim::turtlesim_node"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "turtle", "cmdVel"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/Turtlesim.sysml"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 8,
+                        "endLine" : 71,
+                        "endColumn" : 8,
+                        "offset" : 3317,
+                        "length" : 147
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "geometry_msgs::Twist"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/Turtlesim.sysml"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 8,
+                            "endLine" : 71,
+                            "endColumn" : 8,
+                            "offset" : 3317,
+                            "length" : 147
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["HAMR_ROS::Ros_Topic_Name"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/Turtlesim.sysml"
+                            },
+                            "beginLine" : 70,
+                            "beginColumn" : 12,
+                            "endLine" : 70,
+                            "endColumn" : 60,
+                            "offset" : 3406,
+                            "length" : 48
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "turtle1\/cmd_vel"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "turtle", "pose"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/Turtlesim.sysml"
+                        },
+                        "beginLine" : 73,
+                        "beginColumn" : 8,
+                        "endLine" : 77,
+                        "endColumn" : 8,
+                        "offset" : 3475,
+                        "length" : 128
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "turtlesim::Pose"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["Communication_Properties::Queue_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/Turtlesim.sysml"
+                            },
+                            "beginLine" : 73,
+                            "beginColumn" : 8,
+                            "endLine" : 77,
+                            "endColumn" : 8,
+                            "offset" : 3475,
+                            "length" : 128
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "1",
+                          "unit" : {
+                            "type" : "None"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["HAMR_ROS::Ros_Topic_Name"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/Turtlesim.sysml"
+                            },
+                            "beginLine" : 76,
+                            "beginColumn" : 12,
+                            "endLine" : 76,
+                            "endColumn" : 57,
+                            "offset" : 3548,
+                            "length" : 45
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "turtle1\/pose"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : ""
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["HAMR::Component_Provenance"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/Turtlesim.sysml"
+                        },
+                        "beginLine" : 42,
+                        "beginColumn" : 8,
+                        "endLine" : 42,
+                        "endColumn" : 75,
+                        "offset" : 1849,
+                        "length" : 67
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Platform_Provided"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/Turtlesim.sysml"
+                        },
+                        "beginLine" : 59,
+                        "beginColumn" : 8,
+                        "endLine" : 59,
+                        "endColumn" : 50,
+                        "offset" : 2858,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/Turtlesim.sysml"
+                        },
+                        "beginLine" : 60,
+                        "beginColumn" : 8,
+                        "endLine" : 60,
+                        "endColumn" : 38,
+                        "offset" : 2910,
+                        "length" : 30
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.60E+10",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "cSpeed"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 117,
+                    "beginColumn" : 8,
+                    "endLine" : 117,
+                    "endColumn" : 87,
+                    "offset" : 5244,
+                    "length" : 79
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 117,
+                        "beginColumn" : 55,
+                        "endLine" : 117,
+                        "endColumn" : 61,
+                        "offset" : 5291,
+                        "length" : 7
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "speed"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 117,
+                          "beginColumn" : 55,
+                          "endLine" : 117,
+                          "endColumn" : 61,
+                          "offset" : 5291,
+                          "length" : 7
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 117,
+                        "beginColumn" : 76,
+                        "endLine" : 117,
+                        "endColumn" : 80,
+                        "offset" : 5312,
+                        "length" : 5
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "speed"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 117,
+                          "beginColumn" : 76,
+                          "endLine" : 117,
+                          "endColumn" : 80,
+                          "offset" : 5312,
+                          "length" : 5
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "cOverspeed"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 118,
+                    "beginColumn" : 8,
+                    "endLine" : 118,
+                    "endColumn" : 91,
+                    "offset" : 5333,
+                    "length" : 83
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 118,
+                        "beginColumn" : 55,
+                        "endLine" : 118,
+                        "endColumn" : 61,
+                        "offset" : 5380,
+                        "length" : 7
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "overspeed"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 118,
+                          "beginColumn" : 55,
+                          "endLine" : 118,
+                          "endColumn" : 61,
+                          "offset" : 5380,
+                          "length" : 7
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 118,
+                        "beginColumn" : 76,
+                        "endLine" : 118,
+                        "endColumn" : 80,
+                        "offset" : 5401,
+                        "length" : 5
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "overspeed"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 118,
+                          "beginColumn" : 76,
+                          "endLine" : 118,
+                          "endColumn" : 80,
+                          "offset" : 5401,
+                          "length" : 5
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "cMode"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 119,
+                    "beginColumn" : 8,
+                    "endLine" : 119,
+                    "endColumn" : 88,
+                    "offset" : 5426,
+                    "length" : 80
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 119,
+                        "beginColumn" : 55,
+                        "endLine" : 119,
+                        "endColumn" : 59,
+                        "offset" : 5473,
+                        "length" : 5
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "mode"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 119,
+                          "beginColumn" : 55,
+                          "endLine" : 119,
+                          "endColumn" : 59,
+                          "offset" : 5473,
+                          "length" : 5
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 119,
+                        "beginColumn" : 76,
+                        "endLine" : 119,
+                        "endColumn" : 82,
+                        "offset" : 5494,
+                        "length" : 7
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "mode"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 119,
+                          "beginColumn" : 76,
+                          "endLine" : 119,
+                          "endColumn" : 82,
+                          "offset" : 5494,
+                          "length" : 7
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "cCalibrate"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 120,
+                    "beginColumn" : 8,
+                    "endLine" : 120,
+                    "endColumn" : 93,
+                    "offset" : 5516,
+                    "length" : 85
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 120,
+                        "beginColumn" : 55,
+                        "endLine" : 120,
+                        "endColumn" : 59,
+                        "offset" : 5563,
+                        "length" : 5
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "calibrate"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 120,
+                          "beginColumn" : 55,
+                          "endLine" : 120,
+                          "endColumn" : 59,
+                          "offset" : 5563,
+                          "length" : 5
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 120,
+                        "beginColumn" : 76,
+                        "endLine" : 120,
+                        "endColumn" : 82,
+                        "offset" : 5584,
+                        "length" : 7
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "calibrate"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 120,
+                          "beginColumn" : 76,
+                          "endLine" : 120,
+                          "endColumn" : 82,
+                          "offset" : 5584,
+                          "length" : 7
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "cTrim"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 121,
+                    "beginColumn" : 8,
+                    "endLine" : 121,
+                    "endColumn" : 88,
+                    "offset" : 5611,
+                    "length" : 80
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 121,
+                        "beginColumn" : 55,
+                        "endLine" : 121,
+                        "endColumn" : 59,
+                        "offset" : 5658,
+                        "length" : 5
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "trim"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 121,
+                          "beginColumn" : 55,
+                          "endLine" : 121,
+                          "endColumn" : 59,
+                          "offset" : 5658,
+                          "length" : 5
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 121,
+                        "beginColumn" : 76,
+                        "endLine" : 121,
+                        "endColumn" : 82,
+                        "offset" : 5679,
+                        "length" : 7
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "trim"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 121,
+                          "beginColumn" : 76,
+                          "endLine" : 121,
+                          "endColumn" : 82,
+                          "offset" : 5679,
+                          "length" : 7
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "cVel"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 126,
+                    "beginColumn" : 8,
+                    "endLine" : 126,
+                    "endColumn" : 79,
+                    "offset" : 5929,
+                    "length" : 71
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 126,
+                        "beginColumn" : 50,
+                        "endLine" : 126,
+                        "endColumn" : 54,
+                        "offset" : 5971,
+                        "length" : 5
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "cmdVel"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 126,
+                          "beginColumn" : 50,
+                          "endLine" : 126,
+                          "endColumn" : 54,
+                          "offset" : 5971,
+                          "length" : 5
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "turtle"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 126,
+                        "beginColumn" : 66,
+                        "endLine" : 126,
+                        "endColumn" : 71,
+                        "offset" : 5987,
+                        "length" : 6
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "turtle", "cmdVel"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 126,
+                          "beginColumn" : 66,
+                          "endLine" : 126,
+                          "endColumn" : 71,
+                          "offset" : 5987,
+                          "length" : 6
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance", "proc", "cPose"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/TurtleControl_Naming.sysml"
+                    },
+                    "beginLine" : 127,
+                    "beginColumn" : 8,
+                    "endLine" : 127,
+                    "endColumn" : 76,
+                    "offset" : 6010,
+                    "length" : 68
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "turtle"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 127,
+                        "beginColumn" : 50,
+                        "endLine" : 127,
+                        "endColumn" : 55,
+                        "offset" : 6052,
+                        "length" : 6
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "turtle", "pose"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 127,
+                          "beginColumn" : 50,
+                          "endLine" : 127,
+                          "endColumn" : 55,
+                          "offset" : 6052,
+                          "length" : 6
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 127,
+                        "beginColumn" : 66,
+                        "endLine" : 127,
+                        "endColumn" : 70,
+                        "offset" : 6068,
+                        "length" : 5
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "pose"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/TurtleControl_Naming.sysml"
+                          },
+                          "beginLine" : 127,
+                          "beginColumn" : 66,
+                          "endLine" : 127,
+                          "endColumn" : 70,
+                          "offset" : 6068,
+                          "length" : 5
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connectionInstances" : [
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance.proc.encoder.speed -> TurtleControlSystem_Instance.proc.pilot.speed"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 117,
+                      "beginColumn" : 55,
+                      "endLine" : 117,
+                      "endColumn" : 61,
+                      "offset" : 5291,
+                      "length" : 7
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "speed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 117,
+                        "beginColumn" : 55,
+                        "endLine" : 117,
+                        "endColumn" : 61,
+                        "offset" : 5291,
+                        "length" : 7
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 117,
+                      "beginColumn" : 76,
+                      "endLine" : 117,
+                      "endColumn" : 80,
+                      "offset" : 5312,
+                      "length" : 5
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "speed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 117,
+                        "beginColumn" : 76,
+                        "endLine" : 117,
+                        "endColumn" : 80,
+                        "offset" : 5312,
+                        "length" : 5
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "cSpeed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 117,
+                        "beginColumn" : 8,
+                        "endLine" : 117,
+                        "endColumn" : 87,
+                        "offset" : 5244,
+                        "length" : 79
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 8,
+                        "endLine" : 79,
+                        "endColumn" : 40,
+                        "offset" : 3704,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance.proc.encoder.overspeed -> TurtleControlSystem_Instance.proc.pilot.overspeed"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 118,
+                      "beginColumn" : 55,
+                      "endLine" : 118,
+                      "endColumn" : 61,
+                      "offset" : 5380,
+                      "length" : 7
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "overspeed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 118,
+                        "beginColumn" : 55,
+                        "endLine" : 118,
+                        "endColumn" : 61,
+                        "offset" : 5380,
+                        "length" : 7
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 118,
+                      "beginColumn" : 76,
+                      "endLine" : 118,
+                      "endColumn" : 80,
+                      "offset" : 5401,
+                      "length" : 5
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "overspeed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 118,
+                        "beginColumn" : 76,
+                        "endLine" : 118,
+                        "endColumn" : 80,
+                        "offset" : 5401,
+                        "length" : 5
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "cOverspeed"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 118,
+                        "beginColumn" : 8,
+                        "endLine" : 118,
+                        "endColumn" : 91,
+                        "offset" : 5333,
+                        "length" : 83
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 8,
+                        "endLine" : 79,
+                        "endColumn" : 40,
+                        "offset" : 3704,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance.proc.pilot.mode -> TurtleControlSystem_Instance.proc.encoder.mode"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 119,
+                      "beginColumn" : 55,
+                      "endLine" : 119,
+                      "endColumn" : 59,
+                      "offset" : 5473,
+                      "length" : 5
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "mode"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 119,
+                        "beginColumn" : 55,
+                        "endLine" : 119,
+                        "endColumn" : 59,
+                        "offset" : 5473,
+                        "length" : 5
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 119,
+                      "beginColumn" : 76,
+                      "endLine" : 119,
+                      "endColumn" : 82,
+                      "offset" : 5494,
+                      "length" : 7
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "mode"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 119,
+                        "beginColumn" : 76,
+                        "endLine" : 119,
+                        "endColumn" : 82,
+                        "offset" : 5494,
+                        "length" : 7
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "cMode"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 119,
+                        "beginColumn" : 8,
+                        "endLine" : 119,
+                        "endColumn" : 88,
+                        "offset" : 5426,
+                        "length" : 80
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 8,
+                        "endLine" : 79,
+                        "endColumn" : 40,
+                        "offset" : 3704,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance.proc.pilot.calibrate -> TurtleControlSystem_Instance.proc.encoder.calibrate"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 120,
+                      "beginColumn" : 55,
+                      "endLine" : 120,
+                      "endColumn" : 59,
+                      "offset" : 5563,
+                      "length" : 5
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "calibrate"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 120,
+                        "beginColumn" : 55,
+                        "endLine" : 120,
+                        "endColumn" : 59,
+                        "offset" : 5563,
+                        "length" : 5
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 120,
+                      "beginColumn" : 76,
+                      "endLine" : 120,
+                      "endColumn" : 82,
+                      "offset" : 5584,
+                      "length" : 7
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "calibrate"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 120,
+                        "beginColumn" : 76,
+                        "endLine" : 120,
+                        "endColumn" : 82,
+                        "offset" : 5584,
+                        "length" : 7
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "cCalibrate"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 120,
+                        "beginColumn" : 8,
+                        "endLine" : 120,
+                        "endColumn" : 93,
+                        "offset" : 5516,
+                        "length" : 85
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 8,
+                        "endLine" : 79,
+                        "endColumn" : 40,
+                        "offset" : 3704,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance.proc.pilot.trim -> TurtleControlSystem_Instance.proc.encoder.trim"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 121,
+                      "beginColumn" : 55,
+                      "endLine" : 121,
+                      "endColumn" : 59,
+                      "offset" : 5658,
+                      "length" : 5
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "trim"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 121,
+                        "beginColumn" : 55,
+                        "endLine" : 121,
+                        "endColumn" : 59,
+                        "offset" : 5658,
+                        "length" : 5
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 121,
+                      "beginColumn" : 76,
+                      "endLine" : 121,
+                      "endColumn" : 82,
+                      "offset" : 5679,
+                      "length" : 7
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "trim"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 121,
+                        "beginColumn" : 76,
+                        "endLine" : 121,
+                        "endColumn" : 82,
+                        "offset" : 5679,
+                        "length" : 7
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "cTrim"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 121,
+                        "beginColumn" : 8,
+                        "endLine" : 121,
+                        "endColumn" : 88,
+                        "offset" : 5611,
+                        "length" : 80
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 8,
+                        "endLine" : 79,
+                        "endColumn" : 40,
+                        "offset" : 3704,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance.proc.pilot.cmdVel -> TurtleControlSystem_Instance.proc.turtle.cmdVel"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 126,
+                      "beginColumn" : 50,
+                      "endLine" : 126,
+                      "endColumn" : 54,
+                      "offset" : 5971,
+                      "length" : 5
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "cmdVel"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 126,
+                        "beginColumn" : 50,
+                        "endLine" : 126,
+                        "endColumn" : 54,
+                        "offset" : 5971,
+                        "length" : 5
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "turtle"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 126,
+                      "beginColumn" : 66,
+                      "endLine" : 126,
+                      "endColumn" : 71,
+                      "offset" : 5987,
+                      "length" : 6
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "turtle", "cmdVel"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 126,
+                        "beginColumn" : 66,
+                        "endLine" : 126,
+                        "endColumn" : 71,
+                        "offset" : 5987,
+                        "length" : 6
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "cVel"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 126,
+                        "beginColumn" : 8,
+                        "endLine" : 126,
+                        "endColumn" : 79,
+                        "offset" : 5929,
+                        "length" : 71
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 8,
+                        "endLine" : 79,
+                        "endColumn" : 40,
+                        "offset" : 3704,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TurtleControlSystem_Instance.proc.turtle.pose -> TurtleControlSystem_Instance.proc.pilot.pose"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "turtle"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 127,
+                      "beginColumn" : 50,
+                      "endLine" : 127,
+                      "endColumn" : 55,
+                      "offset" : 6052,
+                      "length" : 6
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "turtle", "pose"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 127,
+                        "beginColumn" : 50,
+                        "endLine" : 127,
+                        "endColumn" : 55,
+                        "offset" : 6052,
+                        "length" : 6
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/TurtleControl_Naming.sysml"
+                      },
+                      "beginLine" : 127,
+                      "beginColumn" : 66,
+                      "endLine" : 127,
+                      "endColumn" : 70,
+                      "offset" : 6068,
+                      "length" : 5
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "pose"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 127,
+                        "beginColumn" : 66,
+                        "endLine" : 127,
+                        "endColumn" : 70,
+                        "offset" : 6068,
+                        "length" : 5
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc", "cPose"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 127,
+                        "beginColumn" : 8,
+                        "endLine" : 127,
+                        "endColumn" : 76,
+                        "offset" : 6010,
+                        "length" : 68
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TurtleControlSystem_Instance", "proc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/TurtleControl_Naming.sysml"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 8,
+                        "endLine" : 79,
+                        "endColumn" : 40,
+                        "offset" : 3704,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            }
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
+  ],
+  "annexLib" : [
+  ],
+  "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["mode"],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TurtleControl_Naming::OperatingMode"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Idle"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Run"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Fault"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["IEEE754_Precisiion"],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Data_Model::IEEE754_Precision"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Simple"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Double"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["rpm"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/aadl.library\/Base_Types.sysml"
+            },
+            "beginLine" : 119,
+            "beginColumn" : 2,
+            "endLine" : 122,
+            "endColumn" : 2,
+            "offset" : 2851,
+            "length" : 141
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Float_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["IEEE754_Precisiion"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Data_Model::IEEE754_Precision"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Enum"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Enumerators"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Simple"
+                },
+                {
+                  "type" : "ValueProp",
+                  "value" : "Double"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["speed"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/TurtleControl_Naming.sysml"
+            },
+            "beginLine" : 174,
+            "beginColumn" : 4,
+            "endLine" : 176,
+            "endColumn" : 4,
+            "offset" : 7711,
+            "length" : 75
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TurtleControl_Naming::WheelSpeed"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["rpm"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/TurtleControl_Naming.sysml"
+                },
+                "beginLine" : 175,
+                "beginColumn" : 8,
+                "endLine" : 175,
+                "endColumn" : 39,
+                "offset" : 7749,
+                "length" : 31
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["IEEE754_Precisiion"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Data_Model::IEEE754_Precision"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Double"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["trim"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/TurtleControl_Naming.sysml"
+            },
+            "beginLine" : 178,
+            "beginColumn" : 4,
+            "endLine" : 180,
+            "endColumn" : 4,
+            "offset" : 7793,
+            "length" : 81
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TurtleControl_Naming::TrimCommand"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["deltaRpm"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/TurtleControl_Naming.sysml"
+                },
+                "beginLine" : 179,
+                "beginColumn" : 8,
+                "endLine" : 179,
+                "endColumn" : 44,
+                "offset" : 7832,
+                "length" : 36
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["IEEE754_Precisiion"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Data_Model::IEEE754_Precision"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Double"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["pose"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/Turtlesim.sysml"
+            },
+            "beginLine" : 31,
+            "beginColumn" : 4,
+            "endLine" : 39,
+            "endColumn" : 4,
+            "offset" : 1427,
+            "length" : 371
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "turtlesim::Pose"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["x"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/Turtlesim.sysml"
+                },
+                "beginLine" : 34,
+                "beginColumn" : 8,
+                "endLine" : 34,
+                "endColumn" : 52,
+                "offset" : 1532,
+                "length" : 44
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["IEEE754_Precisiion"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Data_Model::IEEE754_Precision"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Double"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["y"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/Turtlesim.sysml"
+                },
+                "beginLine" : 35,
+                "beginColumn" : 8,
+                "endLine" : 35,
+                "endColumn" : 52,
+                "offset" : 1586,
+                "length" : 44
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["IEEE754_Precisiion"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Data_Model::IEEE754_Precision"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Double"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["theta"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/Turtlesim.sysml"
+                },
+                "beginLine" : 36,
+                "beginColumn" : 8,
+                "endLine" : 36,
+                "endColumn" : 52,
+                "offset" : 1640,
+                "length" : 44
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["IEEE754_Precisiion"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Data_Model::IEEE754_Precision"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Double"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["linear_velocity"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/Turtlesim.sysml"
+                },
+                "beginLine" : 37,
+                "beginColumn" : 8,
+                "endLine" : 37,
+                "endColumn" : 52,
+                "offset" : 1694,
+                "length" : 44
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["IEEE754_Precisiion"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Data_Model::IEEE754_Precision"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Double"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["angular_velocity"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/Turtlesim.sysml"
+                },
+                "beginLine" : 38,
+                "beginColumn" : 8,
+                "endLine" : 38,
+                "endColumn" : 52,
+                "offset" : 1748,
+                "length" : 44
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["IEEE754_Precisiion"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Data_Model::IEEE754_Precision"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Double"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["HAMR::Type_Provenance"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/Turtlesim.sysml"
+                },
+                "beginLine" : 32,
+                "beginColumn" : 8,
+                "endLine" : 32,
+                "endColumn" : 70,
+                "offset" : 1459,
+                "length" : 62
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Platform_Provided"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["cmdVel"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/RosMessages.sysml"
+            },
+            "beginLine" : 30,
+            "beginColumn" : 4,
+            "endLine" : 32,
+            "endColumn" : 4,
+            "offset" : 1338,
+            "length" : 101
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "geometry_msgs::Twist"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["HAMR::Type_Provenance"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/RosMessages.sysml"
+                },
+                "beginLine" : 31,
+                "beginColumn" : 8,
+                "endLine" : 31,
+                "endColumn" : 70,
+                "offset" : 1371,
+                "length" : 62
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Platform_Provided"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<!-- Content between markers will be preserved if codegen is rerun -->
+
+<launch>
+    <!-- LAUNCH ARGUMENTS - additions within these tags will be preserved when re-running Codegen -->
+    <!-- Declare launch arguments here, then reference them from a node's parameters, e.g.
+             <arg name="log_file" default="uros-demo.txt"/>
+         with, inside that node's config block:
+             <param name="log_file_name" value="$(var log_file)"/> -->
+    <!-- LAUNCH ARGUMENTS - additions within these tags will be preserved when re-running Codegen -->
+
+
+    <node pkg="turtle_control_naming_cpp_pkg" exec="proc_pilot_exe" namespace="rover">
+        <!-- LAUNCH CONFIG proc_pilot - additions within these tags will be preserved when re-running Codegen -->
+        <!-- LAUNCH CONFIG proc_pilot - additions within these tags will be preserved when re-running Codegen -->
+    </node>
+
+
+    <!-- realized by `ros2 run turtlesim turtlesim_node` - no code is generated for it -->
+    <node pkg="turtlesim" exec="turtlesim_node" name="turtle">
+        <!-- LAUNCH CONFIG proc_turtle - additions within these tags will be preserved when re-running Codegen -->
+        <!-- LAUNCH CONFIG proc_turtle - additions within these tags will be preserved when re-running Codegen -->
+    </node>
+
+</launch>

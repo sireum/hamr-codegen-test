@@ -69,4 +69,25 @@ class MicroRosTests extends TestSuite with Ros2TestUtil {
 
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = true, invertTopicBinding = false), T, verbose)
   }
+
+  // The staged models behind the "Code-Level Development for ROS 2" documentation.  Both are
+  // mixed rclcpp/micro-ROS systems; turtle-control-naming additionally carries model-level topic
+  // names, namespaces, and a platform-provided turtlesim component.
+  "turtle_control_structure_lax" in {
+    val testName = "turtle-control-structure"
+    val root = ros_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
+  }
+
+  "turtle_control_naming_lax" in {
+    val testName = "turtle-control-naming"
+    val root = ros_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
+  }
 }
