@@ -7,7 +7,7 @@ proc_logger::proc_logger() : proc_logger_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("proc_logger infrastructure set up");
+    LOG_INFO("proc_logger infrastructure set up");
 }
 
 int main(int argc, char **argv)

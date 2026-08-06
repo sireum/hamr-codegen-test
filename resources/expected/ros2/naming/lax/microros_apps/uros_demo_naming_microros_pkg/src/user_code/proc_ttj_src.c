@@ -8,7 +8,7 @@
 //=================================================
 void proc_ttj_initialize(proc_ttj_base_t * self)
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
 }
@@ -19,11 +19,11 @@ void proc_ttj_initialize(proc_ttj_base_t * self)
 void proc_ttj_handle_joy(proc_ttj_base_t * self, const sensor_msgs__msg__Joy * msg)
 {
     // Handle joy msg
-    PRINT_INFO("Received joy");
+    LOG_INFO("Received joy");
 
     // example publishing messages
     geometry_msgs__msg__Twist cmdVel = {0};
     put_cmdVel(self, &cmdVel);
-    PRINT_INFO("Sent cmdVel");
+    LOG_INFO("Sent cmdVel");
 }
 

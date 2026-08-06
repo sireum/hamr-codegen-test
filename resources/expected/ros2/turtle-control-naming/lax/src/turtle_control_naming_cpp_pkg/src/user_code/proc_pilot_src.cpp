@@ -8,7 +8,7 @@
 //=================================================
 void proc_pilot::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
     // Initialize the node's incoming data port values here
@@ -23,16 +23,16 @@ void proc_pilot::initialize()
 void proc_pilot::handle_speed(const turtle_control_naming_cpp_pkg_interfaces::msg::WheelSpeed::SharedPtr msg)
 {
     // Handle speed msg
-    PRINT_INFO("Received speed: %s", MESSAGE_TO_STRING(msg));
+    LOG_INFO("Received speed: %s", MESSAGE_TO_STRING(msg));
 
     // example receiving messages on data ports
     turtlesim::msg::Pose::SharedPtr pose = get_pose();
-    PRINT_INFO("Received pose");
+    LOG_INFO("Received pose");
 }
 
 void proc_pilot::handle_overspeed()
 {
     // Handle overspeed event
-    PRINT_INFO("Received overspeed");
+    LOG_INFO("Received overspeed");
 }
 

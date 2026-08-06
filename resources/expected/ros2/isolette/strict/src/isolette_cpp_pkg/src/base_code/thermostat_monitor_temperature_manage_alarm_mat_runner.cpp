@@ -7,7 +7,7 @@ thermostat_monitor_temperature_manage_alarm_mat::thermostat_monitor_temperature_
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("thermostat_monitor_temperature_manage_alarm_mat infrastructure set up");
+    LOG_INFO("thermostat_monitor_temperature_manage_alarm_mat infrastructure set up");
 }
 
 int main(int argc, char **argv)

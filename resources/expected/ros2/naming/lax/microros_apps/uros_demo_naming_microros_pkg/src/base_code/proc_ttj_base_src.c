@@ -9,7 +9,7 @@ void proc_ttj_handle_joy(proc_ttj_base_t * self, const sensor_msgs__msg__Joy * m
 // Static instance pointer for subscription callback context (heap-free, MCU-compatible)
 static proc_ttj_base_t * g_self = NULL;
 
-// Logger name used by the PRINT_* macros; updated to the node's actual logger
+// Logger name used by the LOG_* macros; updated to the node's actual logger
 // name once the node has been initialized
 const char * proc_ttj_logger_name = "proc_ttj";
 
@@ -30,6 +30,17 @@ static const char * const node_options[] = {
 //     static float joy_axes_buf[8];
 // USER DECLARATIONS - additions within these tags will be preserved when re-running Codegen
 
+static void proc_ttj_sendOutputs(proc_ttj_base_t * self)
+{
+    if (self->proc_ttj_cmdVel_out_hasValue) {
+        rcl_ret_t ret = rcl_publish(&self->proc_ttj_cmdVel_publisher, &self->proc_ttj_cmdVel_out, NULL);
+        if (ret != RCL_RET_OK) {
+            LOG_ERROR("Failed to publish cmdVel");
+        }
+        self->proc_ttj_cmdVel_out_hasValue = false;
+    }
+}
+
 //=================================================
 //  S u b s c r i p t i o n   C a l l b a c k s
 //=================================================
@@ -39,6 +50,7 @@ static void proc_ttj_joy_subscription_callback(const void * msgin)
     const sensor_msgs__msg__Joy * msg = (const sensor_msgs__msg__Joy *) msgin;
     if (g_self != NULL) {
         proc_ttj_handle_joy(g_self, msg);
+        proc_ttj_sendOutputs(g_self);
     }
 }
 
@@ -68,7 +80,7 @@ rcl_ret_t proc_ttj_base_init(proc_ttj_base_t * self)
 
     RCL_CHECK(rclc_node_init_default(&self->node, "proc_ttj", "uros_demo", &self->support));
 
-    // Retrieve the node's registered logger name for use by the PRINT_* macros
+    // Retrieve the node's registered logger name for use by the LOG_* macros
     const char * logger_name = rcl_node_get_logger_name(&self->node);
     if (logger_name != NULL) {
         proc_ttj_logger_name = logger_name;
@@ -87,6 +99,10 @@ rcl_ret_t proc_ttj_base_init(proc_ttj_base_t * self)
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Joy),
         "/uros_demo/joy"));
+
+
+    // Staged outputs start empty
+    self->proc_ttj_cmdVel_out_hasValue = false;
 
 
     // USER INIT - additions within these tags will be preserved when re-running Codegen
@@ -113,9 +129,7 @@ void proc_ttj_base_spin(proc_ttj_base_t * self)
 
 void put_cmdVel(proc_ttj_base_t * self, geometry_msgs__msg__Twist * msg)
 {
-    rcl_ret_t ret = rcl_publish(&self->proc_ttj_cmdVel_publisher, msg, NULL);
-    if (ret != RCL_RET_OK) {
-        PRINT_ERROR("Failed to publish cmdVel");
-    }
+    self->proc_ttj_cmdVel_out = *msg;
+    self->proc_ttj_cmdVel_out_hasValue = true;
 }
 

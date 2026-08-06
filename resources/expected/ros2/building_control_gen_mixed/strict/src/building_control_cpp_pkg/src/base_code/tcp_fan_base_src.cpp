@@ -34,13 +34,37 @@ tcp_fan_base::tcp_fan_base() : Node("tcp_fan")
 
 void tcp_fan_base::accept_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg)
 {
-    enqueue(infrastructureIn_fanCmd, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_fanCmd, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_fanCmd, applicationIn_fanCmd);
-        if (applicationIn_fanCmd.empty()) return;
-        handle_fanCmd_base(applicationIn_fanCmd.front());
-        applicationIn_fanCmd.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_fanCmd, applicationIn_fanCmd);
+            if (applicationIn_fanCmd.empty()) return;
+            dispatched = applicationIn_fanCmd.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_fanCmd until the handler returns, because get_fanCmd
+        // reads it from there.
+        handle_fanCmd_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_fanCmd.empty()) {
+                applicationIn_fanCmd.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
@@ -50,7 +74,7 @@ void tcp_fan_base::handle_fanCmd_base(MsgType msg)
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanCmd>(&msg)) {
         handle_fanCmd(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -59,12 +83,14 @@ void tcp_fan_base::sendOut_fanAck(MsgType msg)
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanAck>(&msg)) {
         tcp_fan_fanAck_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
 void tcp_fan_base::put_fanAck(building_control_cpp_pkg_interfaces::msg::FanAck msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_fanAck, msg);
 }
 
@@ -92,21 +118,38 @@ void tcp_fan_base::enqueue(std::queue<MsgType>& queue, MsgType val) {
 }
 
 void tcp_fan_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_fan_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (tcp_fan_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_fan_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_fan_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_fan_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

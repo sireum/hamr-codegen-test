@@ -18,7 +18,7 @@
             "beginColumn" : 4,
             "endLine" : 80,
             "endColumn" : 4,
-            "offset" : 3655,
+            "offset" : 3644,
             "length" : 87
           }
         }
@@ -54,7 +54,7 @@
                 "beginColumn" : 8,
                 "endLine" : 79,
                 "endColumn" : 40,
-                "offset" : 3704,
+                "offset" : 3693,
                 "length" : 32
               }
             }
@@ -90,7 +90,7 @@
                     "beginColumn" : 8,
                     "endLine" : 99,
                     "endColumn" : 8,
-                    "offset" : 4064,
+                    "offset" : 4053,
                     "length" : 455
                   }
                 }
@@ -120,11 +120,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 134,
+                        "beginLine" : 133,
                         "beginColumn" : 8,
-                        "endLine" : 134,
+                        "endLine" : 133,
                         "endColumn" : 75,
-                        "offset" : 6297,
+                        "offset" : 6191,
                         "length" : 67
                       }
                     }
@@ -158,11 +158,11 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 134,
+                            "beginLine" : 133,
                             "beginColumn" : 8,
-                            "endLine" : 134,
+                            "endLine" : 133,
                             "endColumn" : 75,
-                            "offset" : 6297,
+                            "offset" : 6191,
                             "length" : 67
                           }
                         }
@@ -195,11 +195,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 135,
+                        "beginLine" : 134,
                         "beginColumn" : 8,
-                        "endLine" : 135,
+                        "endLine" : 134,
                         "endColumn" : 72,
-                        "offset" : 6374,
+                        "offset" : 6268,
                         "length" : 64
                       }
                     }
@@ -233,11 +233,11 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 135,
+                            "beginLine" : 134,
                             "beginColumn" : 8,
-                            "endLine" : 135,
+                            "endLine" : 134,
                             "endColumn" : 72,
-                            "offset" : 6374,
+                            "offset" : 6268,
                             "length" : 64
                           }
                         }
@@ -271,7 +271,7 @@
                             "beginColumn" : 16,
                             "endLine" : 95,
                             "endColumn" : 54,
-                            "offset" : 4379,
+                            "offset" : 4368,
                             "length" : 38
                           }
                         }
@@ -301,11 +301,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 136,
+                        "beginLine" : 135,
                         "beginColumn" : 8,
-                        "endLine" : 136,
+                        "endLine" : 135,
                         "endColumn" : 38,
-                        "offset" : 6448,
+                        "offset" : 6342,
                         "length" : 30
                       }
                     }
@@ -335,11 +335,11 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 136,
+                            "beginLine" : 135,
                             "beginColumn" : 8,
-                            "endLine" : 136,
+                            "endLine" : 135,
                             "endColumn" : 38,
-                            "offset" : 6448,
+                            "offset" : 6342,
                             "length" : 30
                           }
                         }
@@ -348,77 +348,6 @@
                         {
                           "type" : "UnitProp",
                           "value" : "1",
-                          "unit" : {
-                            "type" : "None"
-                          }
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : ""
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "calibrate"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/TurtleControl_Naming.sysml"
-                        },
-                        "beginLine" : 140,
-                        "beginColumn" : 8,
-                        "endLine" : 142,
-                        "endColumn" : 8,
-                        "offset" : 6646,
-                        "length" : 82
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "EventPort"
-                  },
-                  "classifier" : {
-                    "type" : "None"
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Communication_Properties::Queue_Size"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/TurtleControl_Naming.sysml"
-                            },
-                            "beginLine" : 140,
-                            "beginColumn" : 8,
-                            "endLine" : 142,
-                            "endColumn" : 8,
-                            "offset" : 6646,
-                            "length" : 82
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "UnitProp",
-                          "value" : "2",
                           "unit" : {
                             "type" : "None"
                           }
@@ -443,12 +372,12 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 144,
+                        "beginLine" : 141,
                         "beginColumn" : 8,
-                        "endLine" : 148,
+                        "endLine" : 143,
                         "endColumn" : 8,
-                        "offset" : 6739,
-                        "length" : 121
+                        "offset" : 6654,
+                        "length" : 78
                       }
                     }
                   },
@@ -481,19 +410,19 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 144,
+                            "beginLine" : 141,
                             "beginColumn" : 8,
-                            "endLine" : 148,
+                            "endLine" : 143,
                             "endColumn" : 8,
-                            "offset" : 6739,
-                            "length" : 121
+                            "offset" : 6654,
+                            "length" : 78
                           }
                         }
                       },
                       "propertyValues" : [
                         {
                           "type" : "UnitProp",
-                          "value" : "4",
+                          "value" : "1",
                           "unit" : {
                             "type" : "None"
                           }
@@ -526,11 +455,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 153,
+                        "beginLine" : 148,
                         "beginColumn" : 8,
-                        "endLine" : 153,
+                        "endLine" : 148,
                         "endColumn" : 46,
-                        "offset" : 6965,
+                        "offset" : 6837,
                         "length" : 38
                       }
                     }
@@ -557,11 +486,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 150,
+                        "beginLine" : 145,
                         "beginColumn" : 8,
-                        "endLine" : 150,
+                        "endLine" : 145,
                         "endColumn" : 50,
-                        "offset" : 6871,
+                        "offset" : 6743,
                         "length" : 42
                       }
                     }
@@ -588,11 +517,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 151,
+                        "beginLine" : 146,
                         "beginColumn" : 8,
-                        "endLine" : 151,
+                        "endLine" : 146,
                         "endColumn" : 39,
-                        "offset" : 6923,
+                        "offset" : 6795,
                         "length" : 31
                       }
                     }
@@ -627,7 +556,7 @@
                         "beginColumn" : 12,
                         "endLine" : 89,
                         "endColumn" : 49,
-                        "offset" : 4101,
+                        "offset" : 4090,
                         "length" : 37
                       }
                     }
@@ -667,7 +596,7 @@
                     "beginColumn" : 8,
                     "endLine" : 107,
                     "endColumn" : 8,
-                    "offset" : 4530,
+                    "offset" : 4519,
                     "length" : 283
                   }
                 }
@@ -697,11 +626,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 157,
+                        "beginLine" : 152,
                         "beginColumn" : 8,
-                        "endLine" : 157,
+                        "endLine" : 152,
                         "endColumn" : 72,
-                        "offset" : 7051,
+                        "offset" : 6923,
                         "length" : 64
                       }
                     }
@@ -735,11 +664,11 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 157,
+                            "beginLine" : 152,
                             "beginColumn" : 8,
-                            "endLine" : 157,
+                            "endLine" : 152,
                             "endColumn" : 72,
-                            "offset" : 7051,
+                            "offset" : 6923,
                             "length" : 64
                           }
                         }
@@ -772,11 +701,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 158,
+                        "beginLine" : 153,
                         "beginColumn" : 8,
-                        "endLine" : 158,
+                        "endLine" : 153,
                         "endColumn" : 38,
-                        "offset" : 7125,
+                        "offset" : 6997,
                         "length" : 30
                       }
                     }
@@ -806,11 +735,11 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 158,
+                            "beginLine" : 153,
                             "beginColumn" : 8,
-                            "endLine" : 158,
+                            "endLine" : 153,
                             "endColumn" : 38,
-                            "offset" : 7125,
+                            "offset" : 6997,
                             "length" : 30
                           }
                         }
@@ -843,11 +772,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 159,
+                        "beginLine" : 154,
                         "beginColumn" : 8,
-                        "endLine" : 159,
+                        "endLine" : 154,
                         "endColumn" : 77,
-                        "offset" : 7165,
+                        "offset" : 7037,
                         "length" : 69
                       }
                     }
@@ -881,11 +810,11 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 159,
+                            "beginLine" : 154,
                             "beginColumn" : 8,
-                            "endLine" : 159,
+                            "endLine" : 154,
                             "endColumn" : 77,
-                            "offset" : 7165,
+                            "offset" : 7037,
                             "length" : 69
                           }
                         }
@@ -918,11 +847,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 161,
+                        "beginLine" : 156,
                         "beginColumn" : 8,
-                        "endLine" : 161,
+                        "endLine" : 156,
                         "endColumn" : 74,
-                        "offset" : 7245,
+                        "offset" : 7117,
                         "length" : 66
                       }
                     }
@@ -956,11 +885,11 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 161,
+                            "beginLine" : 156,
                             "beginColumn" : 8,
-                            "endLine" : 161,
+                            "endLine" : 156,
                             "endColumn" : 74,
-                            "offset" : 7245,
+                            "offset" : 7117,
                             "length" : 66
                           }
                         }
@@ -993,11 +922,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 162,
+                        "beginLine" : 157,
                         "beginColumn" : 8,
-                        "endLine" : 162,
+                        "endLine" : 157,
                         "endColumn" : 67,
-                        "offset" : 7321,
+                        "offset" : 7193,
                         "length" : 59
                       }
                     }
@@ -1031,83 +960,12 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 162,
+                            "beginLine" : 157,
                             "beginColumn" : 8,
-                            "endLine" : 162,
+                            "endLine" : 157,
                             "endColumn" : 67,
-                            "offset" : 7321,
+                            "offset" : 7193,
                             "length" : 59
-                          }
-                        }
-                      },
-                      "propertyValues" : [
-                        {
-                          "type" : "UnitProp",
-                          "value" : "1",
-                          "unit" : {
-                            "type" : "None"
-                          }
-                        }
-                      ],
-                      "appliesTo" : [
-                      ]
-                    }
-                  ],
-                  "uriFrag" : ""
-                },
-                {
-                  "type" : "FeatureEnd",
-                  "identifier" : {
-                    "type" : "Name",
-                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "calibrate"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/TurtleControl_Naming.sysml"
-                        },
-                        "beginLine" : 165,
-                        "beginColumn" : 8,
-                        "endLine" : 165,
-                        "endColumn" : 38,
-                        "offset" : 7477,
-                        "length" : 30
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  },
-                  "category" : {
-                    "type" : "FeatureCategory",
-                    "value" : "EventPort"
-                  },
-                  "classifier" : {
-                    "type" : "None"
-                  },
-                  "properties" : [
-                    {
-                      "type" : "Property",
-                      "name" : {
-                        "type" : "Name",
-                        "name" : ["Communication_Properties::Queue_Size"],
-                        "pos" : {
-                          "type" : "Some",
-                          "value" : {
-                            "type" : "Position",
-                            "uriOpt" : {
-                              "type" : "Some",
-                              "value" : "\/TurtleControl_Naming.sysml"
-                            },
-                            "beginLine" : 165,
-                            "beginColumn" : 8,
-                            "endLine" : 165,
-                            "endColumn" : 38,
-                            "offset" : 7477,
-                            "length" : 30
                           }
                         }
                       },
@@ -1139,12 +997,12 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 166,
+                        "beginLine" : 161,
                         "beginColumn" : 8,
-                        "endLine" : 166,
-                        "endColumn" : 73,
-                        "offset" : 7517,
-                        "length" : 65
+                        "endLine" : 161,
+                        "endColumn" : 68,
+                        "offset" : 7385,
+                        "length" : 60
                       }
                     }
                   },
@@ -1177,12 +1035,12 @@
                               "type" : "Some",
                               "value" : "\/TurtleControl_Naming.sysml"
                             },
-                            "beginLine" : 166,
+                            "beginLine" : 161,
                             "beginColumn" : 8,
-                            "endLine" : 166,
-                            "endColumn" : 73,
-                            "offset" : 7517,
-                            "length" : 65
+                            "endLine" : 161,
+                            "endColumn" : 68,
+                            "offset" : 7385,
+                            "length" : 60
                           }
                         }
                       },
@@ -1222,11 +1080,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 170,
+                        "beginLine" : 165,
                         "beginColumn" : 8,
-                        "endLine" : 170,
+                        "endLine" : 165,
                         "endColumn" : 42,
-                        "offset" : 7646,
+                        "offset" : 7509,
                         "length" : 34
                       }
                     }
@@ -1253,11 +1111,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 168,
+                        "beginLine" : 163,
                         "beginColumn" : 8,
-                        "endLine" : 168,
+                        "endLine" : 163,
                         "endColumn" : 50,
-                        "offset" : 7593,
+                        "offset" : 7456,
                         "length" : 42
                       }
                     }
@@ -1288,7 +1146,7 @@
                         "beginColumn" : 12,
                         "endLine" : 102,
                         "endColumn" : 49,
-                        "offset" : 4563,
+                        "offset" : 4552,
                         "length" : 37
                       }
                     }
@@ -1328,7 +1186,7 @@
                     "beginColumn" : 8,
                     "endLine" : 114,
                     "endColumn" : 47,
-                    "offset" : 5171,
+                    "offset" : 5160,
                     "length" : 39
                   }
                 }
@@ -1690,7 +1548,7 @@
                     "beginColumn" : 8,
                     "endLine" : 117,
                     "endColumn" : 87,
-                    "offset" : 5244,
+                    "offset" : 5233,
                     "length" : 79
                   }
                 }
@@ -1713,7 +1571,7 @@
                         "beginColumn" : 55,
                         "endLine" : 117,
                         "endColumn" : 61,
-                        "offset" : 5291,
+                        "offset" : 5280,
                         "length" : 7
                       }
                     }
@@ -1735,7 +1593,7 @@
                           "beginColumn" : 55,
                           "endLine" : 117,
                           "endColumn" : 61,
-                          "offset" : 5291,
+                          "offset" : 5280,
                           "length" : 7
                         }
                       }
@@ -1768,7 +1626,7 @@
                         "beginColumn" : 76,
                         "endLine" : 117,
                         "endColumn" : 80,
-                        "offset" : 5312,
+                        "offset" : 5301,
                         "length" : 5
                       }
                     }
@@ -1790,7 +1648,7 @@
                           "beginColumn" : 76,
                           "endLine" : 117,
                           "endColumn" : 80,
-                          "offset" : 5312,
+                          "offset" : 5301,
                           "length" : 5
                         }
                       }
@@ -1833,7 +1691,7 @@
                     "beginColumn" : 8,
                     "endLine" : 118,
                     "endColumn" : 91,
-                    "offset" : 5333,
+                    "offset" : 5322,
                     "length" : 83
                   }
                 }
@@ -1856,7 +1714,7 @@
                         "beginColumn" : 55,
                         "endLine" : 118,
                         "endColumn" : 61,
-                        "offset" : 5380,
+                        "offset" : 5369,
                         "length" : 7
                       }
                     }
@@ -1878,7 +1736,7 @@
                           "beginColumn" : 55,
                           "endLine" : 118,
                           "endColumn" : 61,
-                          "offset" : 5380,
+                          "offset" : 5369,
                           "length" : 7
                         }
                       }
@@ -1911,7 +1769,7 @@
                         "beginColumn" : 76,
                         "endLine" : 118,
                         "endColumn" : 80,
-                        "offset" : 5401,
+                        "offset" : 5390,
                         "length" : 5
                       }
                     }
@@ -1933,7 +1791,7 @@
                           "beginColumn" : 76,
                           "endLine" : 118,
                           "endColumn" : 80,
-                          "offset" : 5401,
+                          "offset" : 5390,
                           "length" : 5
                         }
                       }
@@ -1976,7 +1834,7 @@
                     "beginColumn" : 8,
                     "endLine" : 119,
                     "endColumn" : 88,
-                    "offset" : 5426,
+                    "offset" : 5415,
                     "length" : 80
                   }
                 }
@@ -1999,7 +1857,7 @@
                         "beginColumn" : 55,
                         "endLine" : 119,
                         "endColumn" : 59,
-                        "offset" : 5473,
+                        "offset" : 5462,
                         "length" : 5
                       }
                     }
@@ -2021,7 +1879,7 @@
                           "beginColumn" : 55,
                           "endLine" : 119,
                           "endColumn" : 59,
-                          "offset" : 5473,
+                          "offset" : 5462,
                           "length" : 5
                         }
                       }
@@ -2054,7 +1912,7 @@
                         "beginColumn" : 76,
                         "endLine" : 119,
                         "endColumn" : 82,
-                        "offset" : 5494,
+                        "offset" : 5483,
                         "length" : 7
                       }
                     }
@@ -2076,150 +1934,7 @@
                           "beginColumn" : 76,
                           "endLine" : 119,
                           "endColumn" : 82,
-                          "offset" : 5494,
-                          "length" : 7
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "In"
-                    }
-                  }
-                }
-              ],
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "isBiDirectional" : false,
-              "connectionInstances" : [
-              ],
-              "properties" : [
-              ],
-              "uriFrag" : ""
-            },
-            {
-              "type" : "Connection",
-              "name" : {
-                "type" : "Name",
-                "name" : ["TurtleControlSystem_Instance", "proc", "cCalibrate"],
-                "pos" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Position",
-                    "uriOpt" : {
-                      "type" : "Some",
-                      "value" : "\/TurtleControl_Naming.sysml"
-                    },
-                    "beginLine" : 120,
-                    "beginColumn" : 8,
-                    "endLine" : 120,
-                    "endColumn" : 93,
-                    "offset" : 5516,
-                    "length" : 85
-                  }
-                }
-              },
-              "src" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/TurtleControl_Naming.sysml"
-                        },
-                        "beginLine" : 120,
-                        "beginColumn" : 55,
-                        "endLine" : 120,
-                        "endColumn" : 59,
-                        "offset" : 5563,
-                        "length" : 5
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "calibrate"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/TurtleControl_Naming.sysml"
-                          },
-                          "beginLine" : 120,
-                          "beginColumn" : 55,
-                          "endLine" : 120,
-                          "endColumn" : 59,
-                          "offset" : 5563,
-                          "length" : 5
-                        }
-                      }
-                    }
-                  },
-                  "direction" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Direction",
-                      "value" : "Out"
-                    }
-                  }
-                }
-              ],
-              "dst" : [
-                {
-                  "type" : "EndPoint",
-                  "component" : {
-                    "type" : "Name",
-                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/TurtleControl_Naming.sysml"
-                        },
-                        "beginLine" : 120,
-                        "beginColumn" : 76,
-                        "endLine" : 120,
-                        "endColumn" : 82,
-                        "offset" : 5584,
-                        "length" : 7
-                      }
-                    }
-                  },
-                  "feature" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Name",
-                      "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "calibrate"],
-                      "pos" : {
-                        "type" : "Some",
-                        "value" : {
-                          "type" : "Position",
-                          "uriOpt" : {
-                            "type" : "Some",
-                            "value" : "\/TurtleControl_Naming.sysml"
-                          },
-                          "beginLine" : 120,
-                          "beginColumn" : 76,
-                          "endLine" : 120,
-                          "endColumn" : 82,
-                          "offset" : 5584,
+                          "offset" : 5483,
                           "length" : 7
                         }
                       }
@@ -2258,11 +1973,11 @@
                       "type" : "Some",
                       "value" : "\/TurtleControl_Naming.sysml"
                     },
-                    "beginLine" : 121,
+                    "beginLine" : 120,
                     "beginColumn" : 8,
-                    "endLine" : 121,
+                    "endLine" : 120,
                     "endColumn" : 88,
-                    "offset" : 5611,
+                    "offset" : 5505,
                     "length" : 80
                   }
                 }
@@ -2281,11 +1996,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 121,
+                        "beginLine" : 120,
                         "beginColumn" : 55,
-                        "endLine" : 121,
+                        "endLine" : 120,
                         "endColumn" : 59,
-                        "offset" : 5658,
+                        "offset" : 5552,
                         "length" : 5
                       }
                     }
@@ -2303,11 +2018,11 @@
                             "type" : "Some",
                             "value" : "\/TurtleControl_Naming.sysml"
                           },
-                          "beginLine" : 121,
+                          "beginLine" : 120,
                           "beginColumn" : 55,
-                          "endLine" : 121,
+                          "endLine" : 120,
                           "endColumn" : 59,
-                          "offset" : 5658,
+                          "offset" : 5552,
                           "length" : 5
                         }
                       }
@@ -2336,11 +2051,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 121,
+                        "beginLine" : 120,
                         "beginColumn" : 76,
-                        "endLine" : 121,
+                        "endLine" : 120,
                         "endColumn" : 82,
-                        "offset" : 5679,
+                        "offset" : 5573,
                         "length" : 7
                       }
                     }
@@ -2358,11 +2073,11 @@
                             "type" : "Some",
                             "value" : "\/TurtleControl_Naming.sysml"
                           },
-                          "beginLine" : 121,
+                          "beginLine" : 120,
                           "beginColumn" : 76,
-                          "endLine" : 121,
+                          "endLine" : 120,
                           "endColumn" : 82,
-                          "offset" : 5679,
+                          "offset" : 5573,
                           "length" : 7
                         }
                       }
@@ -2401,11 +2116,11 @@
                       "type" : "Some",
                       "value" : "\/TurtleControl_Naming.sysml"
                     },
-                    "beginLine" : 126,
+                    "beginLine" : 125,
                     "beginColumn" : 8,
-                    "endLine" : 126,
+                    "endLine" : 125,
                     "endColumn" : 79,
-                    "offset" : 5929,
+                    "offset" : 5823,
                     "length" : 71
                   }
                 }
@@ -2424,11 +2139,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 126,
+                        "beginLine" : 125,
                         "beginColumn" : 50,
-                        "endLine" : 126,
+                        "endLine" : 125,
                         "endColumn" : 54,
-                        "offset" : 5971,
+                        "offset" : 5865,
                         "length" : 5
                       }
                     }
@@ -2446,11 +2161,11 @@
                             "type" : "Some",
                             "value" : "\/TurtleControl_Naming.sysml"
                           },
-                          "beginLine" : 126,
+                          "beginLine" : 125,
                           "beginColumn" : 50,
-                          "endLine" : 126,
+                          "endLine" : 125,
                           "endColumn" : 54,
-                          "offset" : 5971,
+                          "offset" : 5865,
                           "length" : 5
                         }
                       }
@@ -2479,11 +2194,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 126,
+                        "beginLine" : 125,
                         "beginColumn" : 66,
-                        "endLine" : 126,
+                        "endLine" : 125,
                         "endColumn" : 71,
-                        "offset" : 5987,
+                        "offset" : 5881,
                         "length" : 6
                       }
                     }
@@ -2501,11 +2216,11 @@
                             "type" : "Some",
                             "value" : "\/TurtleControl_Naming.sysml"
                           },
-                          "beginLine" : 126,
+                          "beginLine" : 125,
                           "beginColumn" : 66,
-                          "endLine" : 126,
+                          "endLine" : 125,
                           "endColumn" : 71,
-                          "offset" : 5987,
+                          "offset" : 5881,
                           "length" : 6
                         }
                       }
@@ -2544,11 +2259,11 @@
                       "type" : "Some",
                       "value" : "\/TurtleControl_Naming.sysml"
                     },
-                    "beginLine" : 127,
+                    "beginLine" : 126,
                     "beginColumn" : 8,
-                    "endLine" : 127,
+                    "endLine" : 126,
                     "endColumn" : 76,
-                    "offset" : 6010,
+                    "offset" : 5904,
                     "length" : 68
                   }
                 }
@@ -2567,11 +2282,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 127,
+                        "beginLine" : 126,
                         "beginColumn" : 50,
-                        "endLine" : 127,
+                        "endLine" : 126,
                         "endColumn" : 55,
-                        "offset" : 6052,
+                        "offset" : 5946,
                         "length" : 6
                       }
                     }
@@ -2589,11 +2304,11 @@
                             "type" : "Some",
                             "value" : "\/TurtleControl_Naming.sysml"
                           },
-                          "beginLine" : 127,
+                          "beginLine" : 126,
                           "beginColumn" : 50,
-                          "endLine" : 127,
+                          "endLine" : 126,
                           "endColumn" : 55,
-                          "offset" : 6052,
+                          "offset" : 5946,
                           "length" : 6
                         }
                       }
@@ -2622,11 +2337,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 127,
+                        "beginLine" : 126,
                         "beginColumn" : 66,
-                        "endLine" : 127,
+                        "endLine" : 126,
                         "endColumn" : 70,
-                        "offset" : 6068,
+                        "offset" : 5962,
                         "length" : 5
                       }
                     }
@@ -2644,11 +2359,11 @@
                             "type" : "Some",
                             "value" : "\/TurtleControl_Naming.sysml"
                           },
-                          "beginLine" : 127,
+                          "beginLine" : 126,
                           "beginColumn" : 66,
-                          "endLine" : 127,
+                          "endLine" : 126,
                           "endColumn" : 70,
-                          "offset" : 6068,
+                          "offset" : 5962,
                           "length" : 5
                         }
                       }
@@ -2702,7 +2417,7 @@
                       "beginColumn" : 55,
                       "endLine" : 117,
                       "endColumn" : 61,
-                      "offset" : 5291,
+                      "offset" : 5280,
                       "length" : 7
                     }
                   }
@@ -2724,7 +2439,7 @@
                         "beginColumn" : 55,
                         "endLine" : 117,
                         "endColumn" : 61,
-                        "offset" : 5291,
+                        "offset" : 5280,
                         "length" : 7
                       }
                     }
@@ -2755,7 +2470,7 @@
                       "beginColumn" : 76,
                       "endLine" : 117,
                       "endColumn" : 80,
-                      "offset" : 5312,
+                      "offset" : 5301,
                       "length" : 5
                     }
                   }
@@ -2777,7 +2492,7 @@
                         "beginColumn" : 76,
                         "endLine" : 117,
                         "endColumn" : 80,
-                        "offset" : 5312,
+                        "offset" : 5301,
                         "length" : 5
                       }
                     }
@@ -2813,7 +2528,7 @@
                         "beginColumn" : 8,
                         "endLine" : 117,
                         "endColumn" : 87,
-                        "offset" : 5244,
+                        "offset" : 5233,
                         "length" : 79
                       }
                     }
@@ -2833,7 +2548,7 @@
                         "beginColumn" : 8,
                         "endLine" : 79,
                         "endColumn" : 40,
-                        "offset" : 3704,
+                        "offset" : 3693,
                         "length" : 32
                       }
                     }
@@ -2870,7 +2585,7 @@
                       "beginColumn" : 55,
                       "endLine" : 118,
                       "endColumn" : 61,
-                      "offset" : 5380,
+                      "offset" : 5369,
                       "length" : 7
                     }
                   }
@@ -2892,7 +2607,7 @@
                         "beginColumn" : 55,
                         "endLine" : 118,
                         "endColumn" : 61,
-                        "offset" : 5380,
+                        "offset" : 5369,
                         "length" : 7
                       }
                     }
@@ -2923,7 +2638,7 @@
                       "beginColumn" : 76,
                       "endLine" : 118,
                       "endColumn" : 80,
-                      "offset" : 5401,
+                      "offset" : 5390,
                       "length" : 5
                     }
                   }
@@ -2945,7 +2660,7 @@
                         "beginColumn" : 76,
                         "endLine" : 118,
                         "endColumn" : 80,
-                        "offset" : 5401,
+                        "offset" : 5390,
                         "length" : 5
                       }
                     }
@@ -2981,7 +2696,7 @@
                         "beginColumn" : 8,
                         "endLine" : 118,
                         "endColumn" : 91,
-                        "offset" : 5333,
+                        "offset" : 5322,
                         "length" : 83
                       }
                     }
@@ -3001,7 +2716,7 @@
                         "beginColumn" : 8,
                         "endLine" : 79,
                         "endColumn" : 40,
-                        "offset" : 3704,
+                        "offset" : 3693,
                         "length" : 32
                       }
                     }
@@ -3038,7 +2753,7 @@
                       "beginColumn" : 55,
                       "endLine" : 119,
                       "endColumn" : 59,
-                      "offset" : 5473,
+                      "offset" : 5462,
                       "length" : 5
                     }
                   }
@@ -3060,7 +2775,7 @@
                         "beginColumn" : 55,
                         "endLine" : 119,
                         "endColumn" : 59,
-                        "offset" : 5473,
+                        "offset" : 5462,
                         "length" : 5
                       }
                     }
@@ -3091,7 +2806,7 @@
                       "beginColumn" : 76,
                       "endLine" : 119,
                       "endColumn" : 82,
-                      "offset" : 5494,
+                      "offset" : 5483,
                       "length" : 7
                     }
                   }
@@ -3113,7 +2828,7 @@
                         "beginColumn" : 76,
                         "endLine" : 119,
                         "endColumn" : 82,
-                        "offset" : 5494,
+                        "offset" : 5483,
                         "length" : 7
                       }
                     }
@@ -3149,7 +2864,7 @@
                         "beginColumn" : 8,
                         "endLine" : 119,
                         "endColumn" : 88,
-                        "offset" : 5426,
+                        "offset" : 5415,
                         "length" : 80
                       }
                     }
@@ -3169,175 +2884,7 @@
                         "beginColumn" : 8,
                         "endLine" : 79,
                         "endColumn" : 40,
-                        "offset" : 3704,
-                        "length" : 32
-                      }
-                    }
-                  },
-                  "isParent" : true
-                }
-              ],
-              "properties" : [
-              ]
-            },
-            {
-              "type" : "ConnectionInstance",
-              "name" : {
-                "type" : "Name",
-                "name" : ["TurtleControlSystem_Instance.proc.pilot.calibrate -> TurtleControlSystem_Instance.proc.encoder.calibrate"],
-                "pos" : {
-                  "type" : "None"
-                }
-              },
-              "src" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["TurtleControlSystem_Instance", "proc", "pilot"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/TurtleControl_Naming.sysml"
-                      },
-                      "beginLine" : 120,
-                      "beginColumn" : 55,
-                      "endLine" : 120,
-                      "endColumn" : 59,
-                      "offset" : 5563,
-                      "length" : 5
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["TurtleControlSystem_Instance", "proc", "pilot", "calibrate"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/TurtleControl_Naming.sysml"
-                        },
-                        "beginLine" : 120,
-                        "beginColumn" : 55,
-                        "endLine" : 120,
-                        "endColumn" : 59,
-                        "offset" : 5563,
-                        "length" : 5
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "Out"
-                  }
-                }
-              },
-              "dst" : {
-                "type" : "EndPoint",
-                "component" : {
-                  "type" : "Name",
-                  "name" : ["TurtleControlSystem_Instance", "proc", "encoder"],
-                  "pos" : {
-                    "type" : "Some",
-                    "value" : {
-                      "type" : "Position",
-                      "uriOpt" : {
-                        "type" : "Some",
-                        "value" : "\/TurtleControl_Naming.sysml"
-                      },
-                      "beginLine" : 120,
-                      "beginColumn" : 76,
-                      "endLine" : 120,
-                      "endColumn" : 82,
-                      "offset" : 5584,
-                      "length" : 7
-                    }
-                  }
-                },
-                "feature" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Name",
-                    "name" : ["TurtleControlSystem_Instance", "proc", "encoder", "calibrate"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/TurtleControl_Naming.sysml"
-                        },
-                        "beginLine" : 120,
-                        "beginColumn" : 76,
-                        "endLine" : 120,
-                        "endColumn" : 82,
-                        "offset" : 5584,
-                        "length" : 7
-                      }
-                    }
-                  }
-                },
-                "direction" : {
-                  "type" : "Some",
-                  "value" : {
-                    "type" : "Direction",
-                    "value" : "In"
-                  }
-                }
-              },
-              "kind" : {
-                "type" : "ConnectionKind",
-                "value" : "Port"
-              },
-              "connectionRefs" : [
-                {
-                  "type" : "ConnectionReference",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["TurtleControlSystem_Instance", "proc", "cCalibrate"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/TurtleControl_Naming.sysml"
-                        },
-                        "beginLine" : 120,
-                        "beginColumn" : 8,
-                        "endLine" : 120,
-                        "endColumn" : 93,
-                        "offset" : 5516,
-                        "length" : 85
-                      }
-                    }
-                  },
-                  "context" : {
-                    "type" : "Name",
-                    "name" : ["TurtleControlSystem_Instance", "proc"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/TurtleControl_Naming.sysml"
-                        },
-                        "beginLine" : 79,
-                        "beginColumn" : 8,
-                        "endLine" : 79,
-                        "endColumn" : 40,
-                        "offset" : 3704,
+                        "offset" : 3693,
                         "length" : 32
                       }
                     }
@@ -3370,11 +2917,11 @@
                         "type" : "Some",
                         "value" : "\/TurtleControl_Naming.sysml"
                       },
-                      "beginLine" : 121,
+                      "beginLine" : 120,
                       "beginColumn" : 55,
-                      "endLine" : 121,
+                      "endLine" : 120,
                       "endColumn" : 59,
-                      "offset" : 5658,
+                      "offset" : 5552,
                       "length" : 5
                     }
                   }
@@ -3392,11 +2939,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 121,
+                        "beginLine" : 120,
                         "beginColumn" : 55,
-                        "endLine" : 121,
+                        "endLine" : 120,
                         "endColumn" : 59,
-                        "offset" : 5658,
+                        "offset" : 5552,
                         "length" : 5
                       }
                     }
@@ -3423,11 +2970,11 @@
                         "type" : "Some",
                         "value" : "\/TurtleControl_Naming.sysml"
                       },
-                      "beginLine" : 121,
+                      "beginLine" : 120,
                       "beginColumn" : 76,
-                      "endLine" : 121,
+                      "endLine" : 120,
                       "endColumn" : 82,
-                      "offset" : 5679,
+                      "offset" : 5573,
                       "length" : 7
                     }
                   }
@@ -3445,11 +2992,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 121,
+                        "beginLine" : 120,
                         "beginColumn" : 76,
-                        "endLine" : 121,
+                        "endLine" : 120,
                         "endColumn" : 82,
-                        "offset" : 5679,
+                        "offset" : 5573,
                         "length" : 7
                       }
                     }
@@ -3481,11 +3028,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 121,
+                        "beginLine" : 120,
                         "beginColumn" : 8,
-                        "endLine" : 121,
+                        "endLine" : 120,
                         "endColumn" : 88,
-                        "offset" : 5611,
+                        "offset" : 5505,
                         "length" : 80
                       }
                     }
@@ -3505,7 +3052,7 @@
                         "beginColumn" : 8,
                         "endLine" : 79,
                         "endColumn" : 40,
-                        "offset" : 3704,
+                        "offset" : 3693,
                         "length" : 32
                       }
                     }
@@ -3538,11 +3085,11 @@
                         "type" : "Some",
                         "value" : "\/TurtleControl_Naming.sysml"
                       },
-                      "beginLine" : 126,
+                      "beginLine" : 125,
                       "beginColumn" : 50,
-                      "endLine" : 126,
+                      "endLine" : 125,
                       "endColumn" : 54,
-                      "offset" : 5971,
+                      "offset" : 5865,
                       "length" : 5
                     }
                   }
@@ -3560,11 +3107,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 126,
+                        "beginLine" : 125,
                         "beginColumn" : 50,
-                        "endLine" : 126,
+                        "endLine" : 125,
                         "endColumn" : 54,
-                        "offset" : 5971,
+                        "offset" : 5865,
                         "length" : 5
                       }
                     }
@@ -3591,11 +3138,11 @@
                         "type" : "Some",
                         "value" : "\/TurtleControl_Naming.sysml"
                       },
-                      "beginLine" : 126,
+                      "beginLine" : 125,
                       "beginColumn" : 66,
-                      "endLine" : 126,
+                      "endLine" : 125,
                       "endColumn" : 71,
-                      "offset" : 5987,
+                      "offset" : 5881,
                       "length" : 6
                     }
                   }
@@ -3613,11 +3160,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 126,
+                        "beginLine" : 125,
                         "beginColumn" : 66,
-                        "endLine" : 126,
+                        "endLine" : 125,
                         "endColumn" : 71,
-                        "offset" : 5987,
+                        "offset" : 5881,
                         "length" : 6
                       }
                     }
@@ -3649,11 +3196,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 126,
+                        "beginLine" : 125,
                         "beginColumn" : 8,
-                        "endLine" : 126,
+                        "endLine" : 125,
                         "endColumn" : 79,
-                        "offset" : 5929,
+                        "offset" : 5823,
                         "length" : 71
                       }
                     }
@@ -3673,7 +3220,7 @@
                         "beginColumn" : 8,
                         "endLine" : 79,
                         "endColumn" : 40,
-                        "offset" : 3704,
+                        "offset" : 3693,
                         "length" : 32
                       }
                     }
@@ -3706,11 +3253,11 @@
                         "type" : "Some",
                         "value" : "\/TurtleControl_Naming.sysml"
                       },
-                      "beginLine" : 127,
+                      "beginLine" : 126,
                       "beginColumn" : 50,
-                      "endLine" : 127,
+                      "endLine" : 126,
                       "endColumn" : 55,
-                      "offset" : 6052,
+                      "offset" : 5946,
                       "length" : 6
                     }
                   }
@@ -3728,11 +3275,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 127,
+                        "beginLine" : 126,
                         "beginColumn" : 50,
-                        "endLine" : 127,
+                        "endLine" : 126,
                         "endColumn" : 55,
-                        "offset" : 6052,
+                        "offset" : 5946,
                         "length" : 6
                       }
                     }
@@ -3759,11 +3306,11 @@
                         "type" : "Some",
                         "value" : "\/TurtleControl_Naming.sysml"
                       },
-                      "beginLine" : 127,
+                      "beginLine" : 126,
                       "beginColumn" : 66,
-                      "endLine" : 127,
+                      "endLine" : 126,
                       "endColumn" : 70,
-                      "offset" : 6068,
+                      "offset" : 5962,
                       "length" : 5
                     }
                   }
@@ -3781,11 +3328,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 127,
+                        "beginLine" : 126,
                         "beginColumn" : 66,
-                        "endLine" : 127,
+                        "endLine" : 126,
                         "endColumn" : 70,
-                        "offset" : 6068,
+                        "offset" : 5962,
                         "length" : 5
                       }
                     }
@@ -3817,11 +3364,11 @@
                           "type" : "Some",
                           "value" : "\/TurtleControl_Naming.sysml"
                         },
-                        "beginLine" : 127,
+                        "beginLine" : 126,
                         "beginColumn" : 8,
-                        "endLine" : 127,
+                        "endLine" : 126,
                         "endColumn" : 76,
-                        "offset" : 6010,
+                        "offset" : 5904,
                         "length" : 68
                       }
                     }
@@ -3841,7 +3388,7 @@
                         "beginColumn" : 8,
                         "endLine" : 79,
                         "endColumn" : 40,
-                        "offset" : 3704,
+                        "offset" : 3693,
                         "length" : 32
                       }
                     }
@@ -4184,11 +3731,11 @@
               "type" : "Some",
               "value" : "\/TurtleControl_Naming.sysml"
             },
-            "beginLine" : 174,
+            "beginLine" : 169,
             "beginColumn" : 4,
-            "endLine" : 176,
+            "endLine" : 171,
             "endColumn" : 4,
-            "offset" : 7711,
+            "offset" : 7574,
             "length" : 75
           }
         }
@@ -4220,11 +3767,11 @@
                   "type" : "Some",
                   "value" : "\/TurtleControl_Naming.sysml"
                 },
-                "beginLine" : 175,
+                "beginLine" : 170,
                 "beginColumn" : 8,
-                "endLine" : 175,
+                "endLine" : 170,
                 "endColumn" : 39,
-                "offset" : 7749,
+                "offset" : 7612,
                 "length" : 31
               }
             }
@@ -4364,11 +3911,11 @@
               "type" : "Some",
               "value" : "\/TurtleControl_Naming.sysml"
             },
-            "beginLine" : 178,
+            "beginLine" : 173,
             "beginColumn" : 4,
-            "endLine" : 180,
+            "endLine" : 175,
             "endColumn" : 4,
-            "offset" : 7793,
+            "offset" : 7656,
             "length" : 81
           }
         }
@@ -4400,11 +3947,11 @@
                   "type" : "Some",
                   "value" : "\/TurtleControl_Naming.sysml"
                 },
-                "beginLine" : 179,
+                "beginLine" : 174,
                 "beginColumn" : 8,
-                "endLine" : 179,
+                "endLine" : 174,
                 "endColumn" : 44,
-                "offset" : 7832,
+                "offset" : 7695,
                 "length" : 36
               }
             }

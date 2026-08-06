@@ -7,7 +7,7 @@ thermostat_monitor_temperature_manage_monitor_mode_mmmt::thermostat_monitor_temp
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("thermostat_monitor_temperature_manage_monitor_mode_mmmt infrastructure set up");
+    LOG_INFO("thermostat_monitor_temperature_manage_monitor_mode_mmmt infrastructure set up");
 }
 
 int main(int argc, char **argv)

@@ -133,7 +133,7 @@ void producer_producer_base::sendOut_myBoolean(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Boolean>(&msg)) {
         producer_producer_myBoolean_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -142,7 +142,7 @@ void producer_producer_base::sendOut_myInteger(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
         producer_producer_myInteger_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -151,7 +151,7 @@ void producer_producer_base::sendOut_myFloat(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float64>(&msg)) {
         producer_producer_myFloat_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -160,7 +160,7 @@ void producer_producer_base::sendOut_myCharacter(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Character>(&msg)) {
         producer_producer_myCharacter_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -169,7 +169,7 @@ void producer_producer_base::sendOut_myString(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::String>(&msg)) {
         producer_producer_myString_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -178,7 +178,7 @@ void producer_producer_base::sendOut_myInt8(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer8>(&msg)) {
         producer_producer_myInt8_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -187,7 +187,7 @@ void producer_producer_base::sendOut_myInt16(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer16>(&msg)) {
         producer_producer_myInt16_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -196,7 +196,7 @@ void producer_producer_base::sendOut_myInt32(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer32>(&msg)) {
         producer_producer_myInt32_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -205,7 +205,7 @@ void producer_producer_base::sendOut_myInt64(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
         producer_producer_myInt64_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -214,7 +214,7 @@ void producer_producer_base::sendOut_myUInt8(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>(&msg)) {
         producer_producer_myUInt8_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -223,7 +223,7 @@ void producer_producer_base::sendOut_myUInt16(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>(&msg)) {
         producer_producer_myUInt16_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -232,7 +232,7 @@ void producer_producer_base::sendOut_myUInt32(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>(&msg)) {
         producer_producer_myUInt32_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -241,7 +241,7 @@ void producer_producer_base::sendOut_myUInt64(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>(&msg)) {
         producer_producer_myUInt64_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -250,7 +250,7 @@ void producer_producer_base::sendOut_myFloat32(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float32>(&msg)) {
         producer_producer_myFloat32_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -259,7 +259,7 @@ void producer_producer_base::sendOut_myFloat64(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float64>(&msg)) {
         producer_producer_myFloat64_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -268,7 +268,7 @@ void producer_producer_base::sendOut_myEnum(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>(&msg)) {
         producer_producer_myEnum_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -277,7 +277,7 @@ void producer_producer_base::sendOut_myStruct(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>(&msg)) {
         producer_producer_myStruct_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -286,7 +286,7 @@ void producer_producer_base::sendOut_myArray1(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>(&msg)) {
         producer_producer_myArray1_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -295,7 +295,7 @@ void producer_producer_base::sendOut_myArray2(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>(&msg)) {
         producer_producer_myArray2_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -304,113 +304,164 @@ void producer_producer_base::sendOut_myArray3(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(&msg)) {
         producer_producer_myArray3_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
 void producer_producer_base::put_myBoolean(datatypes_system_cpp_pkg_interfaces::msg::Boolean msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myBoolean, msg);
 }
 
 void producer_producer_base::put_myInteger(datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myInteger, msg);
 }
 
 void producer_producer_base::put_myFloat(datatypes_system_cpp_pkg_interfaces::msg::Float64 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myFloat, msg);
 }
 
 void producer_producer_base::put_myCharacter(datatypes_system_cpp_pkg_interfaces::msg::Character msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myCharacter, msg);
 }
 
 void producer_producer_base::put_myString(datatypes_system_cpp_pkg_interfaces::msg::String msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myString, msg);
 }
 
 void producer_producer_base::put_myInt8(datatypes_system_cpp_pkg_interfaces::msg::Integer8 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myInt8, msg);
 }
 
 void producer_producer_base::put_myInt16(datatypes_system_cpp_pkg_interfaces::msg::Integer16 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myInt16, msg);
 }
 
 void producer_producer_base::put_myInt32(datatypes_system_cpp_pkg_interfaces::msg::Integer32 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myInt32, msg);
 }
 
 void producer_producer_base::put_myInt64(datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myInt64, msg);
 }
 
 void producer_producer_base::put_myUInt8(datatypes_system_cpp_pkg_interfaces::msg::Unsigned8 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myUInt8, msg);
 }
 
 void producer_producer_base::put_myUInt16(datatypes_system_cpp_pkg_interfaces::msg::Unsigned16 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myUInt16, msg);
 }
 
 void producer_producer_base::put_myUInt32(datatypes_system_cpp_pkg_interfaces::msg::Unsigned32 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myUInt32, msg);
 }
 
 void producer_producer_base::put_myUInt64(datatypes_system_cpp_pkg_interfaces::msg::Unsigned64 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myUInt64, msg);
 }
 
 void producer_producer_base::put_myFloat32(datatypes_system_cpp_pkg_interfaces::msg::Float32 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myFloat32, msg);
 }
 
 void producer_producer_base::put_myFloat64(datatypes_system_cpp_pkg_interfaces::msg::Float64 msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myFloat64, msg);
 }
 
 void producer_producer_base::put_myEnum(datatypes_system_cpp_pkg_interfaces::msg::MyEnum msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myEnum, msg);
 }
 
 void producer_producer_base::put_myStruct(datatypes_system_cpp_pkg_interfaces::msg::MyStructi msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myStruct, msg);
 }
 
 void producer_producer_base::put_myArray1(datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myArray1, msg);
 }
 
 void producer_producer_base::put_myArray2(datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myArray2, msg);
 }
 
 void producer_producer_base::put_myArray3(datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_myArray3, msg);
 }
 
 void producer_producer_base::timeTriggeredCaller() {
-    receiveInputs();
+    // One dispatch at a time: the callback group is Reentrant, so a period shorter than
+    // the entry point would otherwise re-enter this concurrently.
+    std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        receiveInputs();
+    }
+
+    // Deliberately outside state_mutex_: timeTriggered is user code and calls
+    // put_<port>/get_<port>, which take that lock themselves.
     timeTriggered();
+
     sendOutputs();
 }
 
@@ -440,21 +491,38 @@ void producer_producer_base::enqueue(std::queue<MsgType>& queue, MsgType val) {
 }
 
 void producer_producer_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (producer_producer_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (producer_producer_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (producer_producer_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (producer_producer_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (producer_producer_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

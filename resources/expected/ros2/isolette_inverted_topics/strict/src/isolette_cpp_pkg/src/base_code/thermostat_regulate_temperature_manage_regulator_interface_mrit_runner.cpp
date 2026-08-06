@@ -7,7 +7,7 @@ thermostat_regulate_temperature_manage_regulator_interface_mrit::thermostat_regu
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("thermostat_regulate_temperature_manage_regulator_interface_mrit infrastructure set up");
+    LOG_INFO("thermostat_regulate_temperature_manage_regulator_interface_mrit infrastructure set up");
 }
 
 int main(int argc, char **argv)

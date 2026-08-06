@@ -16,14 +16,14 @@
 #include "temp_control_mixed_u_ros_microros_pkg/base_headers/enum_converter.h"
 #include "temp_control_mixed_u_ros_microros_pkg/base_headers/example_types.h"
 
-// Logger name used by the PRINT_* macros.  It defaults to the node name and is
+// Logger name used by the LOG_* macros.  It defaults to the node name and is
 // updated to the node's actual logger name (rcl_node_get_logger_name) during
 // tcp_tempControl_base_init.
 extern const char * tcp_tempControl_logger_name;
 
-#define PRINT_INFO(fmt, ...) RCUTILS_LOG_INFO_NAMED(tcp_tempControl_logger_name, fmt, ##__VA_ARGS__)
-#define PRINT_WARN(fmt, ...) RCUTILS_LOG_WARN_NAMED(tcp_tempControl_logger_name, fmt, ##__VA_ARGS__)
-#define PRINT_ERROR(fmt, ...) RCUTILS_LOG_ERROR_NAMED(tcp_tempControl_logger_name, fmt, ##__VA_ARGS__)
+#define LOG_INFO(fmt, ...) RCUTILS_LOG_INFO_NAMED(tcp_tempControl_logger_name, fmt, ##__VA_ARGS__)
+#define LOG_WARN(fmt, ...) RCUTILS_LOG_WARN_NAMED(tcp_tempControl_logger_name, fmt, ##__VA_ARGS__)
+#define LOG_ERROR(fmt, ...) RCUTILS_LOG_ERROR_NAMED(tcp_tempControl_logger_name, fmt, ##__VA_ARGS__)
 
 // rcl/rclc report entity-creation failures by return code rather than by trapping,
 // and on an MCU the usual causes -- an exhausted RMW_UXRCE_MAX_* pool, an
@@ -31,7 +31,7 @@ extern const char * tcp_tempControl_logger_name;
 // leaves a node that spins normally but silently never publishes or receives, so
 // tcp_tempControl_base_init stops at the first failure and hands the status back.
 // Expands to a return, so it is usable only in a function returning rcl_ret_t.
-#define RCL_CHECK(fn) do { rcl_ret_t rc_ = (fn); if (rc_ != RCL_RET_OK) { PRINT_ERROR("rcl call failed at %s:%d with status %d", __FILE__, __LINE__, (int) rc_); return rc_; } } while (0)
+#define RCL_CHECK(fn) do { rcl_ret_t rc_ = (fn); if (rc_ != RCL_RET_OK) { LOG_ERROR("rcl call failed at %s:%d with status %d", __FILE__, __LINE__, (int) rc_); return rc_; } } while (0)
 
 static inline const char* _MESSAGE_TO_STRING_FanCmd(
         const temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__FanCmd* msg, char* _buf, int _buf_size) {
@@ -40,7 +40,11 @@ static inline const char* _MESSAGE_TO_STRING_FanCmd(
     return _buf;
 }
 
-static char _MESSAGE_TO_STRING_buf[512];
+// Scratch buffer for the printers above, defined once in the node's base source.  It is
+// declared here rather than defined so that each translation unit including this header
+// shares one buffer instead of getting a copy.  Sharing is safe because the rclc executor
+// is single-threaded: no two expansions of MESSAGE_TO_STRING can be live at once.
+extern char _MESSAGE_TO_STRING_buf[512];
 #define MESSAGE_TO_STRING(msg) _Generic((msg), \
     temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__FanCmd*: _MESSAGE_TO_STRING_FanCmd((msg), _MESSAGE_TO_STRING_buf, sizeof(_MESSAGE_TO_STRING_buf)), \
     default: "(unknown type)")
@@ -59,6 +63,10 @@ typedef struct {
     //  C o m m u n i c a t i o n
     //=================================================
     rcl_publisher_t tcp_tempControl_fanCmd_publisher;
+    // fanCmd: the copy is required -- put_fanCmd is handed a pointer to a
+    // local in the entry point, and sendOutputs runs after that frame is gone
+    temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__FanCmd tcp_tempControl_fanCmd_out;
+    bool tcp_tempControl_fanCmd_out_hasValue;
 
     //=================================================
     //  S u b s c r i p t i o n s

@@ -7,7 +7,7 @@ fanOut_consumer2::fanOut_consumer2() : fanOut_consumer2_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("fanOut_consumer2 infrastructure set up");
+    LOG_INFO("fanOut_consumer2 infrastructure set up");
 }
 
 int main(int argc, char **argv)

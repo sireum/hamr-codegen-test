@@ -30,10 +30,15 @@ run: build
 	@echo "Nodes launched. Run 'make stop' to kill them."
 
 # Arguments passed to `ros2 launch`, e.g.
-#   make launch LAUNCH_ARGS="log_file:=run1.txt joystick_dev:=/dev/input/js0"
+#   make launch LAUNCH_ARGS="log_file:=run1.txt joystick_dev:=/dev/input/by-id/<pad>-joystick"
 # `ros2 launch --show-args $(BRINGUP_PKG) $(LAUNCH_FILE).launch.py` lists what the file
 # accepts.  Unlike ROS_ARGS above these are launch arguments, not rcl arguments: they are
 # declared by the launch file and reach a node through its parameters.
+#
+# Device arguments take a by-id path rather than /dev/input/jsN, which is assigned in
+# connection order and moves across replugs; `ls /dev/input/by-id` lists them.  Every
+# argument also needs a non-empty value -- `name:=` is rejected as malformed -- so an
+# argument whose value should be empty has to be changed in the launch file instead.
 LAUNCH_ARGS ?=
 
 # Which launch file to run.  Sys_i_Instance brings up the whole system on this host;

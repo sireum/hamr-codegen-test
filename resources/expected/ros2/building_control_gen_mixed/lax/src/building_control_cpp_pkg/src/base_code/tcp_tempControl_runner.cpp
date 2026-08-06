@@ -7,7 +7,7 @@ tcp_tempControl::tcp_tempControl() : tcp_tempControl_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("tcp_tempControl infrastructure set up");
+    LOG_INFO("tcp_tempControl infrastructure set up");
 }
 
 int main(int argc, char **argv)

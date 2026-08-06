@@ -7,7 +7,7 @@ producer_producer::producer_producer() : producer_producer_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("producer_producer infrastructure set up");
+    LOG_INFO("producer_producer infrastructure set up");
 }
 
 int main(int argc, char **argv)

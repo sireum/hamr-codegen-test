@@ -11,7 +11,9 @@ trait  Ros2TestUtil {
 
   def testModes: ISZ[TestMode.Type] = TestModeHelper.getEnvTestModes()
 
-  def generateExpected: B = F
+  // matches CodegenTest's hook, so regenerating does not mean editing this file and remembering
+  // to put it back
+  def generateExpected: B = F || Os.env("HAMR_REGEN_EXPECTED").nonEmpty
 
   val isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 

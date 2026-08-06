@@ -8,6 +8,7 @@
 #include <vector>
 #include <variant>
 #include <mutex>
+#include <utility>
 #include "isolette_cpp_pkg/base_headers/enum_converter.hpp"
 #include "isolette_cpp_pkg/base_headers/example_types.hpp"
 
@@ -49,9 +50,9 @@ protected:
     //=================================================
 
     #define MESSAGE_TO_STRING(message) _messageToString(message).c_str()
-    #define PRINT_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
-    #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
-    #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
+    #define LOG_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
+    #define LOG_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
+    #define LOG_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
     void put_lower_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg);
     void put_upper_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg);
@@ -134,7 +135,14 @@ private:
     void timeTriggeredCaller();
 
     // Used for thread locking
-    std::mutex mutex_;
+    // Guards the port queues.  Never held across the compute entry point -- user code
+    // calls put_<port>/get_<port>, which take it themselves.
+    std::mutex state_mutex_;
+
+    // Held for the length of a dispatch so dispatches do not overlap.  The callback
+    // group is Reentrant, so without this two arrivals on the same port could run the
+    // entry point concurrently.
+    std::mutex dispatch_mutex_;
 
     // Used by receiveInputs
     std::vector<std::tuple<std::queue<MsgType>*, std::queue<MsgType>*>> inDataPortTupleVector;

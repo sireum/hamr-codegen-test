@@ -13,14 +13,14 @@
 
 #include "uros_demo_naming_microros_pkg/base_headers/example_types.h"
 
-// Logger name used by the PRINT_* macros.  It defaults to the node name and is
+// Logger name used by the LOG_* macros.  It defaults to the node name and is
 // updated to the node's actual logger name (rcl_node_get_logger_name) during
 // proc_ttj_base_init.
 extern const char * proc_ttj_logger_name;
 
-#define PRINT_INFO(fmt, ...) RCUTILS_LOG_INFO_NAMED(proc_ttj_logger_name, fmt, ##__VA_ARGS__)
-#define PRINT_WARN(fmt, ...) RCUTILS_LOG_WARN_NAMED(proc_ttj_logger_name, fmt, ##__VA_ARGS__)
-#define PRINT_ERROR(fmt, ...) RCUTILS_LOG_ERROR_NAMED(proc_ttj_logger_name, fmt, ##__VA_ARGS__)
+#define LOG_INFO(fmt, ...) RCUTILS_LOG_INFO_NAMED(proc_ttj_logger_name, fmt, ##__VA_ARGS__)
+#define LOG_WARN(fmt, ...) RCUTILS_LOG_WARN_NAMED(proc_ttj_logger_name, fmt, ##__VA_ARGS__)
+#define LOG_ERROR(fmt, ...) RCUTILS_LOG_ERROR_NAMED(proc_ttj_logger_name, fmt, ##__VA_ARGS__)
 
 // rcl/rclc report entity-creation failures by return code rather than by trapping,
 // and on an MCU the usual causes -- an exhausted RMW_UXRCE_MAX_* pool, an
@@ -28,7 +28,7 @@ extern const char * proc_ttj_logger_name;
 // leaves a node that spins normally but silently never publishes or receives, so
 // proc_ttj_base_init stops at the first failure and hands the status back.
 // Expands to a return, so it is usable only in a function returning rcl_ret_t.
-#define RCL_CHECK(fn) do { rcl_ret_t rc_ = (fn); if (rc_ != RCL_RET_OK) { PRINT_ERROR("rcl call failed at %s:%d with status %d", __FILE__, __LINE__, (int) rc_); return rc_; } } while (0)
+#define RCL_CHECK(fn) do { rcl_ret_t rc_ = (fn); if (rc_ != RCL_RET_OK) { LOG_ERROR("rcl call failed at %s:%d with status %d", __FILE__, __LINE__, (int) rc_); return rc_; } } while (0)
 
 
 //=================================================
@@ -44,6 +44,10 @@ typedef struct {
     //  C o m m u n i c a t i o n
     //=================================================
     rcl_publisher_t proc_ttj_cmdVel_publisher;
+    // cmdVel: the copy is required -- put_cmdVel is handed a pointer to a
+    // local in the entry point, and sendOutputs runs after that frame is gone
+    geometry_msgs__msg__Twist proc_ttj_cmdVel_out;
+    bool proc_ttj_cmdVel_out_hasValue;
 
     //=================================================
     //  S u b s c r i p t i o n s

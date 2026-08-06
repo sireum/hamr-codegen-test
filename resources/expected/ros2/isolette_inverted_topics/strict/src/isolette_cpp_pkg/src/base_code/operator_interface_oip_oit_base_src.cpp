@@ -75,18 +75,34 @@ operator_interface_oip_oit_base::operator_interface_oip_oit_base() : Node("opera
 }
 
 void operator_interface_oip_oit_base::init_regulator_status(isolette_cpp_pkg_interfaces::msg::Status val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_regulator_status, val);
 }
 
 void operator_interface_oip_oit_base::init_monitor_status(isolette_cpp_pkg_interfaces::msg::Status val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_monitor_status, val);
 }
 
 void operator_interface_oip_oit_base::init_display_temperature(isolette_cpp_pkg_interfaces::msg::Tempimpl val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_display_temperature, val);
 }
 
 void operator_interface_oip_oit_base::init_alarm_control(isolette_cpp_pkg_interfaces::msg::OnOff val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_alarm_control, val);
 }
 
@@ -96,40 +112,60 @@ void operator_interface_oip_oit_base::init_alarm_control(isolette_cpp_pkg_interf
 
 void operator_interface_oip_oit_base::accept_regulator_status(isolette_cpp_pkg_interfaces::msg::Status msg)
 {
-    enqueue(infrastructureIn_regulator_status, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_regulator_status, msg);
+    }
 }
 
 void operator_interface_oip_oit_base::accept_monitor_status(isolette_cpp_pkg_interfaces::msg::Status msg)
 {
-    enqueue(infrastructureIn_monitor_status, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_monitor_status, msg);
+    }
 }
 
 void operator_interface_oip_oit_base::accept_display_temperature(isolette_cpp_pkg_interfaces::msg::Tempimpl msg)
 {
-    enqueue(infrastructureIn_display_temperature, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_display_temperature, msg);
+    }
 }
 
 void operator_interface_oip_oit_base::accept_alarm_control(isolette_cpp_pkg_interfaces::msg::OnOff msg)
 {
-    enqueue(infrastructureIn_alarm_control, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_alarm_control, msg);
+    }
 }
 
 isolette_cpp_pkg_interfaces::msg::Status operator_interface_oip_oit_base::get_regulator_status() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_regulator_status.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::Status>(msg);
 }
 
 isolette_cpp_pkg_interfaces::msg::Status operator_interface_oip_oit_base::get_monitor_status() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_monitor_status.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::Status>(msg);
 }
 
 isolette_cpp_pkg_interfaces::msg::Tempimpl operator_interface_oip_oit_base::get_display_temperature() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_display_temperature.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::Tempimpl>(msg);
 }
 
 isolette_cpp_pkg_interfaces::msg::OnOff operator_interface_oip_oit_base::get_alarm_control() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_alarm_control.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::OnOff>(msg);
 }
@@ -139,7 +175,7 @@ void operator_interface_oip_oit_base::sendOut_lower_desired_tempWstatus(MsgType 
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
         operator_interface_oip_oit_lower_desired_tempWstatus_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port lower_desired_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port lower_desired_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -148,7 +184,7 @@ void operator_interface_oip_oit_base::sendOut_upper_desired_tempWstatus(MsgType 
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
         operator_interface_oip_oit_upper_desired_tempWstatus_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port upper_desired_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port upper_desired_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -157,7 +193,7 @@ void operator_interface_oip_oit_base::sendOut_lower_alarm_tempWstatus(MsgType ms
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
         operator_interface_oip_oit_lower_alarm_tempWstatus_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port lower_alarm_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port lower_alarm_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -166,33 +202,52 @@ void operator_interface_oip_oit_base::sendOut_upper_alarm_tempWstatus(MsgType ms
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(&msg)) {
         operator_interface_oip_oit_upper_alarm_tempWstatus_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port upper_alarm_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port upper_alarm_tempWstatus.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
 void operator_interface_oip_oit_base::put_lower_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_lower_desired_tempWstatus, msg);
 }
 
 void operator_interface_oip_oit_base::put_upper_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_upper_desired_tempWstatus, msg);
 }
 
 void operator_interface_oip_oit_base::put_lower_alarm_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_lower_alarm_tempWstatus, msg);
 }
 
 void operator_interface_oip_oit_base::put_upper_alarm_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_upper_alarm_tempWstatus, msg);
 }
 
 void operator_interface_oip_oit_base::timeTriggeredCaller() {
-    receiveInputs();
+    // One dispatch at a time: the callback group is Reentrant, so a period shorter than
+    // the entry point would otherwise re-enter this concurrently.
+    std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        receiveInputs();
+    }
+
+    // Deliberately outside state_mutex_: timeTriggered is user code and calls
+    // put_<port>/get_<port>, which take that lock themselves.
     timeTriggered();
+
     sendOutputs();
 }
 
@@ -222,21 +277,38 @@ void operator_interface_oip_oit_base::enqueue(std::queue<MsgType>& queue, MsgTyp
 }
 
 void operator_interface_oip_oit_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (operator_interface_oip_oit_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (operator_interface_oip_oit_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (operator_interface_oip_oit_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (operator_interface_oip_oit_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (operator_interface_oip_oit_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

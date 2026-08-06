@@ -7,7 +7,7 @@ proc_pilot::proc_pilot() : proc_pilot_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("proc_pilot infrastructure set up");
+    LOG_INFO("proc_pilot infrastructure set up");
 }
 
 int main(int argc, char **argv)

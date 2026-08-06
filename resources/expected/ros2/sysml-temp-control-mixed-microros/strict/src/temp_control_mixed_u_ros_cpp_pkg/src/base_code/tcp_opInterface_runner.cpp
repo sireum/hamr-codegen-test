@@ -7,7 +7,7 @@ tcp_opInterface::tcp_opInterface() : tcp_opInterface_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("tcp_opInterface infrastructure set up");
+    LOG_INFO("tcp_opInterface infrastructure set up");
 }
 
 int main(int argc, char **argv)

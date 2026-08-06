@@ -10,7 +10,7 @@
     and put the turtlesim edges under generation-time checking.
 
         encoder --/rover/speed------------> pilot --/turtle1/cmd_vel--> turtle
-              <--/rover/proc_pilot_mode----/      <--/turtle1/pose-----/
+              <--/rover/proc_encoder_mode--/      <--/turtle1/pose-----/
 
     WHAT CHANGED FROM structure/
 
@@ -41,7 +41,7 @@
          governs both ends, so pilot.speed follows encoder.speed and
          pilot.cmdVel/pilot.pose follow the turtle's names.
 
-    4. overspeed, mode, calibrate and trim declare nothing anywhere,
+    4. overspeed, mode and trim declare nothing anywhere,
        so they keep their path-derived defaults.  Naming is per-port,
        not all-or-nothing.
 
@@ -117,7 +117,6 @@ package TurtleControl_Naming {
         connection cSpeed     : PortConnection connect encoder.speed     to pilot.speed;
         connection cOverspeed : PortConnection connect encoder.overspeed to pilot.overspeed;
         connection cMode      : PortConnection connect pilot.mode        to encoder.mode;
-        connection cCalibrate : PortConnection connect pilot.calibrate   to encoder.calibrate;
         connection cTrim      : PortConnection connect pilot.trim        to encoder.trim;
 
         // with turtle modeled, both turtlesim edges are explicit: datatype
@@ -135,16 +134,12 @@ package TurtleControl_Naming {
         out port speed     : EventDataPort { out :>> type : WheelSpeed; }
         out port overspeed : EventPort;
 
-        // Queued for this PERIODIC node -- arrivals cannot dispatch it, so each
-        // waits in a Queue_Size-deep queue and is consumed one per period.
-        in port calibrate : EventPort {
-            attribute :>> Queue_Size = 2;
-        }
-
+        // This node is PERIODIC, so an arrival here cannot dispatch it: the arrival
+        // waits and is consumed at the next period.  Only the AADL default
+        // Queue_Size of 1 is supported, so a second arrival within one period
+        // replaces the first.
         in port trim : EventDataPort {
             in :>> type : TrimCommand;
-
-            attribute :>> Queue_Size = 4;
         }
 
         attribute :>> Dispatch_Protocol = Periodic;
@@ -161,9 +156,9 @@ package TurtleControl_Naming {
         out port cmdVel : DataPort { out :>> type : geometry_msgs::Twist; }
         out port mode   : DataPort { out :>> type : OperatingMode; }
 
-        // Queue_Size is a property of the receiving end, so nothing is declared here
-        out port calibrate : EventPort;
-        out port trim      : EventDataPort { out :>> type : TrimCommand; }
+        // How an arrival is buffered is a property of the receiving end, so nothing
+        // about it is declared here
+        out port trim : EventDataPort { out :>> type : TrimCommand; }
 
         attribute :>> Dispatch_Protocol = Sporadic;
 

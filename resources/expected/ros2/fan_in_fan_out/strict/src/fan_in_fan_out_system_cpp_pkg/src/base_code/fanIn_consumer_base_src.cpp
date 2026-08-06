@@ -29,13 +29,37 @@ fanIn_consumer_base::fanIn_consumer_base() : Node("fanIn_consumer")
 
 void fanIn_consumer_base::accept_myInteger(fan_in_fan_out_system_cpp_pkg_interfaces::msg::Integer64 msg)
 {
-    enqueue(infrastructureIn_myInteger, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myInteger, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myInteger, applicationIn_myInteger);
-        if (applicationIn_myInteger.empty()) return;
-        handle_myInteger_base(applicationIn_myInteger.front());
-        applicationIn_myInteger.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myInteger, applicationIn_myInteger);
+            if (applicationIn_myInteger.empty()) return;
+            dispatched = applicationIn_myInteger.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myInteger until the handler returns, because get_myInteger
+        // reads it from there.
+        handle_myInteger_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myInteger.empty()) {
+                applicationIn_myInteger.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
@@ -45,7 +69,7 @@ void fanIn_consumer_base::handle_myInteger_base(MsgType msg)
     if (auto typedMsg = std::get_if<fan_in_fan_out_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
         handle_myInteger(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -73,21 +97,38 @@ void fanIn_consumer_base::enqueue(std::queue<MsgType>& queue, MsgType val) {
 }
 
 void fanIn_consumer_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (fanIn_consumer_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (fanIn_consumer_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (fanIn_consumer_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (fanIn_consumer_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (fanIn_consumer_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

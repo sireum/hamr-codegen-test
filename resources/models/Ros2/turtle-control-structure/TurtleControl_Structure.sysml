@@ -9,7 +9,7 @@
     turtlesim is the plant.
 
         encoder --speed/overspeed--> pilot --cmdVel--> (turtlesim)
-              <-- mode/calibrate/trim --/  <--pose----/
+              <-- mode/trim ----------/    <--pose----/
 
     This variant models STRUCTURE only: components, ports,
     connections, and the platform-provided payload types (see
@@ -36,15 +36,15 @@
       speed     -- event data (dispatches the sporadic pilot)
       overspeed -- event      (a bare alarm; also dispatches the pilot)
       mode      -- data       (a setting, sampled by the periodic encoder)
-      calibrate -- event      (queued for the periodic encoder, depth 2)
-      trim      -- event data (queued for the periodic encoder, depth 4)
+      trim      -- event data (waits for the periodic encoder's next dispatch)
       cmdVel    -- data       (a continuous command)
       pose      -- data       (sampled state; turtlesim publishes at 62.5 Hz
                                but pilot reads only the latest on dispatch)
 
-    The encoder is PERIODIC, so calibrate and trim cannot dispatch it.
-    Codegen gives each a statically allocated queue sized by its AADL
-    Queue_Size and consumes one entry per period.
+    The encoder is PERIODIC, so an arrival on trim cannot dispatch it.
+    Codegen holds the arrival until the next period and consumes it
+    there.  Only the AADL default Queue_Size of 1 is supported, so a
+    second arrival within one period replaces the first.
   ============================================================*/
 
 package TurtleControl_Structure {
@@ -63,7 +63,6 @@ package TurtleControl_Structure {
         connection cSpeed     : PortConnection connect encoder.speed     to pilot.speed;
         connection cOverspeed : PortConnection connect encoder.overspeed to pilot.overspeed;
         connection cMode      : PortConnection connect pilot.mode        to encoder.mode;
-        connection cCalibrate : PortConnection connect pilot.calibrate   to encoder.calibrate;
         connection cTrim      : PortConnection connect pilot.trim        to encoder.trim;
 
         // pilot.cmdVel and pilot.pose are unconnected: their peer is the stock
@@ -78,21 +77,14 @@ package TurtleControl_Structure {
         // missed update is superseded rather than lost.
         in port mode : DataPort { in :>> type : OperatingMode; }
 
-        // Discrete commands, so event ports rather than data ports: each one is
-        // an instruction to act, and skipping one is not the same as acting on
-        // the newer one.  Because this node is PERIODIC, arrivals cannot dispatch
-        // it -- they are held in a queue sized by Queue_Size and consumed one per
-        // period.  Queue_Size defaults to 1; both ports state one explicitly.
-        in port calibrate : EventPort {
-            attribute :>> Queue_Size = 2;
-        }
-
+        // A discrete command, so an event data port rather than a data port: it is
+        // an instruction to act, and skipping one is not the same as acting on the
+        // newer one.  Because this node is PERIODIC an arrival cannot dispatch it,
+        // so the arrival waits and is consumed at the next period.  Only the AADL
+        // default Queue_Size of 1 is supported, so a second arrival within one
+        // period replaces the first.
         in port trim : EventDataPort {
             in :>> type : TrimCommand;
-
-            // Trim adjustments are cumulative, so a deeper queue: four may be
-            // absorbed between periods before the oldest is dropped.
-            attribute :>> Queue_Size = 4;
         }
 
         // EventDataPort: each reading is a discrete message the pilot should
@@ -139,10 +131,9 @@ package TurtleControl_Structure {
         out port cmdVel : DataPort { out :>> type : geometry_msgs::Twist; }
         out port mode   : DataPort { out :>> type : OperatingMode; }
 
-        // The queued counterparts of encoder.calibrate and encoder.trim.  Queue_Size
-        // is a property of the RECEIVING end, so nothing is declared here.
-        out port calibrate : EventPort;
-        out port trim      : EventDataPort { out :>> type : TrimCommand; }
+        // The sending counterpart of encoder.trim.  How an arrival is buffered is
+        // a property of the RECEIVING end, so nothing about it is declared here.
+        out port trim : EventDataPort { out :>> type : TrimCommand; }
 
         attribute :>> Dispatch_Protocol = Sporadic;
 

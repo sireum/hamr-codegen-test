@@ -7,7 +7,7 @@ consumer_consumer::consumer_consumer() : consumer_consumer_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("consumer_consumer infrastructure set up");
+    LOG_INFO("consumer_consumer infrastructure set up");
 }
 
 int main(int argc, char **argv)

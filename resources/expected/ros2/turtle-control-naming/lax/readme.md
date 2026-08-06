@@ -86,10 +86,14 @@ make launch LAUNCH_FILE=TurtleControlSystem_Instance_ros2
 ## Firmware Configuration
 
 `microros_apps/colcon.meta` holds the build configuration the generated nodes need
-from the micro-ROS middleware.  It is **not** consumed from where it sits: it
-configures packages such as `rcl` and `rmw_microxrcedds`, which live in the firmware
-workspace and are built by step 4 above -- not by `make build`, which builds only the
-application packages.  Applying it is therefore a separate step:
+from the micro-ROS middleware -- `rmw_microxrcedds`, `microxrcedds_client` and the
+typesupport packages.  Those live in the firmware workspace and were built by step 4
+above, not by `make build`, which builds only the application packages.
+
+To have any effect it must be installed into that workspace, as
+`$MICROROS_WS/src/colcon.meta` -- the path `micro_ros_setup`'s host `build.sh` reads,
+via `colcon build --metas src`.  Sitting in `microros_apps/` it does nothing.
+Installing it is therefore a separate step:
 
 ```bash
 make microros-config
@@ -99,10 +103,13 @@ Run it once after generating, and again whenever `colcon.meta` changes.  Setting
 fail quietly if it is never applied:
 
 - `RMW_UXRCE_MAX_PUBLISHERS` / `RMW_UXRCE_MAX_SUBSCRIPTIONS` -- these are derived from
-  the model's port counts and regenerated on every codegen run.  If the firmware's
-  pools are smaller than the nodes need, entity creation fails without a diagnostic,
-  so re-apply after adding ports.  `RMW_UXRCE_TRANSPORT` and the agent address are in
-  the same package, so they apply on every target, host included.
+  the model's port counts and regenerated on every codegen run.  The publisher count
+  carries one extra beyond the model's ports when rcl logging is on, for the `/rosout`
+  publisher `rcl_node_init` creates per node.  If the firmware's pools are smaller than
+  the nodes need, entity creation fails: `rcl_publisher_init` reports `error not set`,
+  because the rmw returns NULL without setting an error.  Re-apply after adding ports.
+  `RMW_UXRCE_TRANSPORT` and the agent address are in the same package, so they apply on
+  every target, host included.
 - `RCL_COMMAND_LINE_ENABLED=ON` -- **embedded targets only.**  It restores the rcl
   argument parsing that `micro_ros_setup` disables in its cross-compiled configs;
   without it the rcl arguments in each node's `node_options` block (topic remap rules
@@ -117,19 +124,25 @@ overwritten on each run; the marked blocks (build profile, transport and tuning)
 preserved.  To override a derived value, restate its `-D` flag inside a marked block --
 colcon passes `cmake-args` through in order and CMake takes the last occurrence.
 
-Because `MICROROS_WS` is shared across projects, `make microros-config` backs up any
-`colcon.meta` already there to `colcon.meta.bak`.  If you maintain your own firmware
-configuration, merge the two rather than letting one replace the other.
+`create_firmware_ws.sh` seeds that same path with micro-ROS's stock profile, and
+`MICROROS_WS` is shared across projects, so `make microros-config` renames any
+`colcon.meta` already there to `colcon.meta.bak` rather than discarding it.  The stock
+profile it displaces sizes the `RMW_UXRCE_MAX_*` pools generously and enables
+`UCLIENT_PROFILE_MULTITHREAD`; the generated one sizes the pools from your model and
+turns multithreading off, since a generated node drives its XRCE session from a single
+thread.  If you maintain your own firmware configuration, merge the two rather than
+letting one replace the other.
 
-### On a host workspace this step is effectively a no-op
+### On a host workspace the `rcl` entry is inert
 
 A firmware workspace created for the **host** platform
 (`create_firmware_ws.sh host generic`) does not check out `rcl` at all -- on host,
 micro-ROS is `rmw_microxrcedds` and `rclc` layered over the ROS 2 distribution's own
-`rcl`, so there is no micro-ROS `rcl` to configure.  `make microros-config` will copy
-`colcon.meta` into place and rebuild successfully, but the `rcl` entry matches no
-package and is silently inert; `find_package(rcl)` keeps resolving to
-`/opt/ros/$ROS_DISTRO`.
+`rcl`, so there is no micro-ROS `rcl` to configure.  The `rcl` entry below therefore
+matches no package and is silently inert on host; `find_package(rcl)` keeps resolving
+to `/opt/ros/$ROS_DISTRO`.  The other entries -- `microxrcedds_client`,
+`rmw_microxrcedds`, and the typesupport packages -- do apply, since those are checked
+out and built there.
 
 This is usually invisible, because the distribution's `rcl` is built with both
 argument parsing and logging enabled -- the very things the flags above turn on.  So

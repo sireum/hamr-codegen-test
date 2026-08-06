@@ -8,7 +8,7 @@
 //=================================================
 void operator_interface_oip_oit::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
     // Initialize the node's incoming data port values here
@@ -35,13 +35,13 @@ void operator_interface_oip_oit::timeTriggered()
 
     // example receiving messages on data ports
     isolette_cpp_pkg_interfaces::msg::Status regulator_status = get_regulator_status();
-    PRINT_INFO("Received regulator_status: %s", MESSAGE_TO_STRING(regulator_status));
+    LOG_INFO("Received regulator_status: %s", MESSAGE_TO_STRING(regulator_status));
     isolette_cpp_pkg_interfaces::msg::Status monitor_status = get_monitor_status();
-    PRINT_INFO("Received monitor_status: %s", MESSAGE_TO_STRING(monitor_status));
+    LOG_INFO("Received monitor_status: %s", MESSAGE_TO_STRING(monitor_status));
     isolette_cpp_pkg_interfaces::msg::Tempimpl display_temperature = get_display_temperature();
-    PRINT_INFO("Received display_temperature: %s", MESSAGE_TO_STRING(display_temperature));
+    LOG_INFO("Received display_temperature: %s", MESSAGE_TO_STRING(display_temperature));
     isolette_cpp_pkg_interfaces::msg::OnOff alarm_control = get_alarm_control();
-    PRINT_INFO("Received alarm_control: %s", MESSAGE_TO_STRING(alarm_control));
+    LOG_INFO("Received alarm_control: %s", MESSAGE_TO_STRING(alarm_control));
 
     // Example publishing messages
     isolette_cpp_pkg_interfaces::msg::TempWstatusimpl lower_desired_tempWstatus = example_TempWstatusimpl();

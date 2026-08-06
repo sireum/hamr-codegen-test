@@ -9,10 +9,18 @@
         #
         # The UCLIENT_PROFILE_* transport enabled here must agree with
         # RMW_UXRCE_TRANSPORT below.
+        #
+        # MULTITHREAD adds internal locking to the XRCE session so that several
+        # threads may drive it concurrently.  Generated micro-ROS nodes never do:
+        # every node runs one rclc executor on one thread, and all port traffic is
+        # released through sendOutputs at dispatch completion.  micro_ros_setup's
+        # stock host profile turns this ON; it is off here because nothing in a
+        # generated node needs it and it is not free.
         "microxrcedds_client": {
             "cmake-args": [
                 "-DBUILD_SHARED_LIBS=ON",
-                "-DUCLIENT_PROFILE_UDP=ON"
+                "-DUCLIENT_PROFILE_UDP=ON",
+                "-DUCLIENT_PROFILE_MULTITHREAD=OFF"
             ]
         },
         "microcdr": {
@@ -65,8 +73,11 @@
                 # its own executable, so these hold the largest node's entities
                 # rather than the sum over nodes.  Generated nodes create no services
                 # or clients.  Undersizing them makes entity creation fail silently.
+                #
+                # The publisher count is the model's 1 plus 1 for the /rosout
+                # publisher rcl_node_init creates per node when RCL_LOGGING_ENABLED is ON.
                 "-DRMW_UXRCE_MAX_NODES=1",
-                "-DRMW_UXRCE_MAX_PUBLISHERS=1",
+                "-DRMW_UXRCE_MAX_PUBLISHERS=2",
                 "-DRMW_UXRCE_MAX_SUBSCRIPTIONS=1",
                 "-DRMW_UXRCE_MAX_SERVICES=0",
                 "-DRMW_UXRCE_MAX_CLIENTS=0",

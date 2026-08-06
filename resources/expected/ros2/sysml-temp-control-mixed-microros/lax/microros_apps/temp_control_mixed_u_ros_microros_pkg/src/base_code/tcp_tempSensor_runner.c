@@ -14,14 +14,14 @@ int main(int argc, char ** argv)
     // receive.  Exiting non-zero instead lets the launching layer notice.
     rcl_ret_t init_status = tcp_tempSensor_base_init(&node);
     if (init_status != RCL_RET_OK) {
-        PRINT_ERROR("tcp_tempSensor initialization failed with status %d; aborting", (int) init_status);
+        LOG_ERROR("tcp_tempSensor initialization failed with status %d; aborting", (int) init_status);
         return 1;
     }
 
     // Invoke initialize entry point
     tcp_tempSensor_initialize(&node);
 
-    PRINT_INFO("tcp_tempSensor infrastructure set up");
+    LOG_INFO("tcp_tempSensor infrastructure set up");
 
     tcp_tempSensor_base_spin(&node);
 

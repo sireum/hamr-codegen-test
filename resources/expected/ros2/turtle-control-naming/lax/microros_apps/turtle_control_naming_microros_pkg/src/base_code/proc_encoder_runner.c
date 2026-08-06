@@ -14,14 +14,14 @@ int main(int argc, char ** argv)
     // receive.  Exiting non-zero instead lets the launching layer notice.
     rcl_ret_t init_status = proc_encoder_base_init(&node);
     if (init_status != RCL_RET_OK) {
-        PRINT_ERROR("proc_encoder initialization failed with status %d; aborting", (int) init_status);
+        LOG_ERROR("proc_encoder initialization failed with status %d; aborting", (int) init_status);
         return 1;
     }
 
     // Invoke initialize entry point
     proc_encoder_initialize(&node);
 
-    PRINT_INFO("proc_encoder infrastructure set up");
+    LOG_INFO("proc_encoder infrastructure set up");
 
     proc_encoder_base_spin(&node);
 

@@ -7,7 +7,7 @@ operator_interface_oip_oit::operator_interface_oip_oit() : operator_interface_oi
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("operator_interface_oip_oit infrastructure set up");
+    LOG_INFO("operator_interface_oip_oit infrastructure set up");
 }
 
 int main(int argc, char **argv)

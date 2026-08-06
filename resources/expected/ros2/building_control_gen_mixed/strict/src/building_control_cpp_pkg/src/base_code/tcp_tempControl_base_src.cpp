@@ -45,6 +45,10 @@ tcp_tempControl_base::tcp_tempControl_base() : Node("tcp_tempControl")
 }
 
 void tcp_tempControl_base::init_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_currentTemp, val);
 }
 
@@ -54,49 +58,126 @@ void tcp_tempControl_base::init_currentTemp(building_control_cpp_pkg_interfaces:
 
 void tcp_tempControl_base::accept_currentTemp(building_control_cpp_pkg_interfaces::msg::Temperatureimpl msg)
 {
-    enqueue(infrastructureIn_currentTemp, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_currentTemp, msg);
+    }
 }
 
 void tcp_tempControl_base::accept_fanAck(building_control_cpp_pkg_interfaces::msg::FanAck msg)
 {
-    enqueue(infrastructureIn_fanAck, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_fanAck, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_fanAck, applicationIn_fanAck);
-        if (applicationIn_fanAck.empty()) return;
-        handle_fanAck_base(applicationIn_fanAck.front());
-        applicationIn_fanAck.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_fanAck, applicationIn_fanAck);
+            if (applicationIn_fanAck.empty()) return;
+            dispatched = applicationIn_fanAck.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_fanAck until the handler returns, because get_fanAck
+        // reads it from there.
+        handle_fanAck_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_fanAck.empty()) {
+                applicationIn_fanAck.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void tcp_tempControl_base::accept_setPoint(building_control_cpp_pkg_interfaces::msg::SetPointimpl msg)
 {
-    enqueue(infrastructureIn_setPoint, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_setPoint, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_setPoint, applicationIn_setPoint);
-        if (applicationIn_setPoint.empty()) return;
-        handle_setPoint_base(applicationIn_setPoint.front());
-        applicationIn_setPoint.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_setPoint, applicationIn_setPoint);
+            if (applicationIn_setPoint.empty()) return;
+            dispatched = applicationIn_setPoint.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_setPoint until the handler returns, because get_setPoint
+        // reads it from there.
+        handle_setPoint_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_setPoint.empty()) {
+                applicationIn_setPoint.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void tcp_tempControl_base::accept_tempChanged(building_control_cpp_pkg_interfaces::msg::Empty msg)
 {
-    enqueue(infrastructureIn_tempChanged, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_tempChanged, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_tempChanged, applicationIn_tempChanged);
-        if (applicationIn_tempChanged.empty()) return;
-        handle_tempChanged_base(applicationIn_tempChanged.front());
-        applicationIn_tempChanged.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_tempChanged, applicationIn_tempChanged);
+            if (applicationIn_tempChanged.empty()) return;
+            dispatched = applicationIn_tempChanged.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_tempChanged until the handler returns, because get_tempChanged
+        // reads it from there.
+        handle_tempChanged_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_tempChanged.empty()) {
+                applicationIn_tempChanged.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 building_control_cpp_pkg_interfaces::msg::Temperatureimpl tcp_tempControl_base::get_currentTemp() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_currentTemp.front();
     return std::get<building_control_cpp_pkg_interfaces::msg::Temperatureimpl>(msg);
 }
@@ -106,7 +187,7 @@ void tcp_tempControl_base::handle_fanAck_base(MsgType msg)
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanAck>(&msg)) {
         handle_fanAck(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port fanAck.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -115,7 +196,7 @@ void tcp_tempControl_base::handle_setPoint_base(MsgType msg)
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::SetPointimpl>(&msg)) {
         handle_setPoint(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port setPoint.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port setPoint.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -130,12 +211,14 @@ void tcp_tempControl_base::sendOut_fanCmd(MsgType msg)
     if (auto typedMsg = std::get_if<building_control_cpp_pkg_interfaces::msg::FanCmd>(&msg)) {
         tcp_tempControl_fanCmd_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port fanCmd.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
 void tcp_tempControl_base::put_fanCmd(building_control_cpp_pkg_interfaces::msg::FanCmd msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_fanCmd, msg);
 }
 
@@ -163,21 +246,38 @@ void tcp_tempControl_base::enqueue(std::queue<MsgType>& queue, MsgType val) {
 }
 
 void tcp_tempControl_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_tempControl_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (tcp_tempControl_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_tempControl_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_tempControl_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_tempControl_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

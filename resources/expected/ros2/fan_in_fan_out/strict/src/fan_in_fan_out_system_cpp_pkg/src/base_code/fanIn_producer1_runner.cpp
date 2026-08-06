@@ -7,7 +7,7 @@ fanIn_producer1::fanIn_producer1() : fanIn_producer1_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("fanIn_producer1 infrastructure set up");
+    LOG_INFO("fanIn_producer1 infrastructure set up");
 }
 
 int main(int argc, char **argv)

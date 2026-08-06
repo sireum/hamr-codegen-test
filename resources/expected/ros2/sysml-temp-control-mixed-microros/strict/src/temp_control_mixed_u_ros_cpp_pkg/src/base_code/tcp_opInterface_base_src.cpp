@@ -39,6 +39,10 @@ tcp_opInterface_base::tcp_opInterface_base() : Node("tcp_opInterface")
 }
 
 void tcp_opInterface_base::init_currentTemp(temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::Temperature val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_currentTemp, val);
 }
 
@@ -48,10 +52,15 @@ void tcp_opInterface_base::init_currentTemp(temp_control_mixed_u_ros_cpp_pkg_int
 
 void tcp_opInterface_base::accept_currentTemp(temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::Temperature msg)
 {
-    enqueue(infrastructureIn_currentTemp, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_currentTemp, msg);
+    }
 }
 
 temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::Temperature tcp_opInterface_base::get_currentTemp() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_currentTemp.front();
     return std::get<temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::Temperature>(msg);
 }
@@ -61,18 +70,31 @@ void tcp_opInterface_base::sendOut_setPoint(MsgType msg)
     if (auto typedMsg = std::get_if<temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::SetPoint>(&msg)) {
         tcp_opInterface_setPoint_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port setPoint.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port setPoint.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
 void tcp_opInterface_base::put_setPoint(temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::SetPoint msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_setPoint, msg);
 }
 
 void tcp_opInterface_base::timeTriggeredCaller() {
-    receiveInputs();
+    // One dispatch at a time: the callback group is Reentrant, so a period shorter than
+    // the entry point would otherwise re-enter this concurrently.
+    std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        receiveInputs();
+    }
+
+    // Deliberately outside state_mutex_: timeTriggered is user code and calls
+    // put_<port>/get_<port>, which take that lock themselves.
     timeTriggered();
+
     sendOutputs();
 }
 
@@ -102,21 +124,38 @@ void tcp_opInterface_base::enqueue(std::queue<MsgType>& queue, MsgType val) {
 }
 
 void tcp_opInterface_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_opInterface_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (tcp_opInterface_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_opInterface_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_opInterface_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (tcp_opInterface_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

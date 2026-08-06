@@ -80,18 +80,34 @@ thermostat_regulate_temperature_manage_regulator_interface_mrit_base::thermostat
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_current_tempWstatus, val);
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_lower_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_lower_desired_tempWstatus, val);
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_upper_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_upper_desired_tempWstatus, val);
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_regulator_mode(isolette_cpp_pkg_interfaces::msg::RegulatorMode val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_regulator_mode, val);
 }
 
@@ -101,40 +117,60 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::init_
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::accept_current_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
-    enqueue(infrastructureIn_current_tempWstatus, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_current_tempWstatus, msg);
+    }
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::accept_lower_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
-    enqueue(infrastructureIn_lower_desired_tempWstatus, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_lower_desired_tempWstatus, msg);
+    }
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::accept_upper_desired_tempWstatus(isolette_cpp_pkg_interfaces::msg::TempWstatusimpl msg)
 {
-    enqueue(infrastructureIn_upper_desired_tempWstatus, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_upper_desired_tempWstatus, msg);
+    }
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::accept_regulator_mode(isolette_cpp_pkg_interfaces::msg::RegulatorMode msg)
 {
-    enqueue(infrastructureIn_regulator_mode, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_regulator_mode, msg);
+    }
 }
 
 isolette_cpp_pkg_interfaces::msg::TempWstatusimpl thermostat_regulate_temperature_manage_regulator_interface_mrit_base::get_current_tempWstatus() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_current_tempWstatus.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(msg);
 }
 
 isolette_cpp_pkg_interfaces::msg::TempWstatusimpl thermostat_regulate_temperature_manage_regulator_interface_mrit_base::get_lower_desired_tempWstatus() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_lower_desired_tempWstatus.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(msg);
 }
 
 isolette_cpp_pkg_interfaces::msg::TempWstatusimpl thermostat_regulate_temperature_manage_regulator_interface_mrit_base::get_upper_desired_tempWstatus() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_upper_desired_tempWstatus.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::TempWstatusimpl>(msg);
 }
 
 isolette_cpp_pkg_interfaces::msg::RegulatorMode thermostat_regulate_temperature_manage_regulator_interface_mrit_base::get_regulator_mode() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_regulator_mode.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::RegulatorMode>(msg);
 }
@@ -144,7 +180,7 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Tempimpl>(&msg)) {
         thermostat_regulate_temperature_manage_regulator_interface_mrit_upper_desired_temp_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port upper_desired_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port upper_desired_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -153,7 +189,7 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Tempimpl>(&msg)) {
         thermostat_regulate_temperature_manage_regulator_interface_mrit_lower_desired_temp_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port lower_desired_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port lower_desired_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -162,7 +198,7 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Tempimpl>(&msg)) {
         thermostat_regulate_temperature_manage_regulator_interface_mrit_displayed_temp_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port displayed_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port displayed_temp.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -171,7 +207,7 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Status>(&msg)) {
         thermostat_regulate_temperature_manage_regulator_interface_mrit_regulator_status_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port regulator_status.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port regulator_status.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -180,38 +216,59 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendO
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::FailureFlagimpl>(&msg)) {
         thermostat_regulate_temperature_manage_regulator_interface_mrit_interface_failure_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port interface_failure.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port interface_failure.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::put_upper_desired_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_upper_desired_temp, msg);
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::put_lower_desired_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_lower_desired_temp, msg);
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::put_displayed_temp(isolette_cpp_pkg_interfaces::msg::Tempimpl msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_displayed_temp, msg);
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::put_regulator_status(isolette_cpp_pkg_interfaces::msg::Status msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_regulator_status, msg);
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::put_interface_failure(isolette_cpp_pkg_interfaces::msg::FailureFlagimpl msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_interface_failure, msg);
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::timeTriggeredCaller() {
-    receiveInputs();
+    // One dispatch at a time: the callback group is Reentrant, so a period shorter than
+    // the entry point would otherwise re-enter this concurrently.
+    std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        receiveInputs();
+    }
+
+    // Deliberately outside state_mutex_: timeTriggered is user code and calls
+    // put_<port>/get_<port>, which take that lock themselves.
     timeTriggered();
+
     sendOutputs();
 }
 
@@ -241,21 +298,38 @@ void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::enque
 }
 
 void thermostat_regulate_temperature_manage_regulator_interface_mrit_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (thermostat_regulate_temperature_manage_regulator_interface_mrit_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (thermostat_regulate_temperature_manage_regulator_interface_mrit_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (thermostat_regulate_temperature_manage_regulator_interface_mrit_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (thermostat_regulate_temperature_manage_regulator_interface_mrit_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (thermostat_regulate_temperature_manage_regulator_interface_mrit_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

@@ -17,9 +17,9 @@ protected:
     //=================================================
 
 
-    #define PRINT_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
-    #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
-    #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
+    #define LOG_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
+    #define LOG_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
+    #define LOG_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
 
 private:

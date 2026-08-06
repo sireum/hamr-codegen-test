@@ -7,7 +7,7 @@
 //=================================================
 void fanOut_consumer1::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
 }
@@ -18,6 +18,6 @@ void fanOut_consumer1::initialize()
 void fanOut_consumer1::handle_myInteger(const fan_in_fan_out_system_cpp_pkg_interfaces::msg::Integer64::SharedPtr msg)
 {
     // Handle myInteger msg
-    PRINT_INFO("Received myInteger: %s", MESSAGE_TO_STRING(msg));
+    LOG_INFO("Received myInteger: %s", MESSAGE_TO_STRING(msg));
 }
 

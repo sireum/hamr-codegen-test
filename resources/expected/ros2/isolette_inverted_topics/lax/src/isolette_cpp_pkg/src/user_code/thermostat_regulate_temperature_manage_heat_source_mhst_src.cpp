@@ -8,7 +8,7 @@
 //=================================================
 void thermostat_regulate_temperature_manage_heat_source_mhst::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
     // Initialize the node's incoming data port values here
@@ -35,13 +35,13 @@ void thermostat_regulate_temperature_manage_heat_source_mhst::timeTriggered()
 
     // example receiving messages on data ports
     isolette_cpp_pkg_interfaces::msg::TempWstatusimpl::SharedPtr current_tempWstatus = get_current_tempWstatus();
-    PRINT_INFO("Received current_tempWstatus: %s", MESSAGE_TO_STRING(current_tempWstatus));
+    LOG_INFO("Received current_tempWstatus: %s", MESSAGE_TO_STRING(current_tempWstatus));
     isolette_cpp_pkg_interfaces::msg::Tempimpl::SharedPtr lower_desired_temp = get_lower_desired_temp();
-    PRINT_INFO("Received lower_desired_temp: %s", MESSAGE_TO_STRING(lower_desired_temp));
+    LOG_INFO("Received lower_desired_temp: %s", MESSAGE_TO_STRING(lower_desired_temp));
     isolette_cpp_pkg_interfaces::msg::Tempimpl::SharedPtr upper_desired_temp = get_upper_desired_temp();
-    PRINT_INFO("Received upper_desired_temp: %s", MESSAGE_TO_STRING(upper_desired_temp));
+    LOG_INFO("Received upper_desired_temp: %s", MESSAGE_TO_STRING(upper_desired_temp));
     isolette_cpp_pkg_interfaces::msg::RegulatorMode::SharedPtr regulator_mode = get_regulator_mode();
-    PRINT_INFO("Received regulator_mode: %s", MESSAGE_TO_STRING(regulator_mode));
+    LOG_INFO("Received regulator_mode: %s", MESSAGE_TO_STRING(regulator_mode));
 
     // Example publishing messages
     isolette_cpp_pkg_interfaces::msg::OnOff heat_control = isolette_cpp_pkg_interfaces::msg::OnOff();

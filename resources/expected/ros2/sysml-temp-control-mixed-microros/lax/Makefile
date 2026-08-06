@@ -31,17 +31,30 @@ build: check-ros2 build-microros build-ros2
 # there; until then the rcl arguments in each node's node_options block are silently
 # ignored.  The host config does not disable it, so that part is moot on host.
 #
-# MICROROS_WS is shared across projects, so any existing colcon.meta there is backed
-# up rather than discarded.
+# It goes to $(MICROROS_WS)/src/colcon.meta, which is where the host firmware build
+# reads it from: micro_ros_setup's host build.sh runs `colcon build --metas src`, and
+# its create.sh seeds that same path with the stock profile.  A colcon.meta placed at
+# the workspace root is read by nothing.
 #
-# --cmake-force-configure is forwarded to colcon (build_firmware.sh passes anything
-# after -- straight through).  Without it a changed colcon.meta can leave the existing
-# CMake caches in place, so the target reports success while the new settings never
-# take effect -- the same silent-failure shape as an ignored remap rule.
+# MICROROS_WS is shared across projects and the stock profile is already at that path,
+# so any existing colcon.meta is backed up to colcon.meta.bak rather than discarded.
+# The backup is only taken when what is there is not already our own copy, otherwise
+# a second run of this target would overwrite the stock backup with the project profile.
+#
+# --cmake-force-configure is forwarded to colcon (build_firmware.sh shifts past -- and
+# the host config passes the remaining "$$@" to each colcon build).  Without it a changed
+# colcon.meta can leave the existing CMake caches in place, so the target reports success
+# while the new settings never take effect -- the same silent-failure shape as an ignored
+# remap rule.  Note the doubled --: `ros2 run` parses its own command line with argparse,
+# which swallows the first --, so a single one never reaches build_firmware.sh and its
+# getopts rejects --cmake-force-configure as an illegal option.
 microros-config: check-ros2
-	@test -f "$(MICROROS_WS)/colcon.meta" && cp "$(MICROROS_WS)/colcon.meta" "$(MICROROS_WS)/colcon.meta.bak" && echo "Backed up existing colcon.meta to colcon.meta.bak" || true
-	cp microros_apps/colcon.meta $(MICROROS_WS)/colcon.meta
-	cd $(MICROROS_WS) && bash -c "$(SOURCE_BASE); ros2 run micro_ros_setup build_firmware.sh -- --cmake-force-configure"
+	@if [ -f "$(MICROROS_WS)/src/colcon.meta" ] && ! cmp -s "$(MICROROS_WS)/src/colcon.meta" microros_apps/colcon.meta; then \
+	  cp "$(MICROROS_WS)/src/colcon.meta" "$(MICROROS_WS)/src/colcon.meta.bak"; \
+	  echo "Backed up existing src/colcon.meta to src/colcon.meta.bak"; \
+	fi
+	cp microros_apps/colcon.meta $(MICROROS_WS)/src/colcon.meta
+	cd $(MICROROS_WS) && bash -c "$(SOURCE_BASE); ros2 run micro_ros_setup build_firmware.sh -- -- --cmake-force-configure"
 	@echo "Firmware rebuilt with microros_apps/colcon.meta. Re-run 'make build' to rebuild the app packages against it."
 
 check-ros2:
@@ -73,10 +86,15 @@ run: build
 	@echo "Nodes launched. Run 'make stop' to kill them."
 
 # Arguments passed to `ros2 launch`, e.g.
-#   make launch LAUNCH_ARGS="log_file:=run1.txt joystick_dev:=/dev/input/js0"
+#   make launch LAUNCH_ARGS="log_file:=run1.txt joystick_dev:=/dev/input/by-id/<pad>-joystick"
 # `ros2 launch --show-args $(BRINGUP_PKG) $(LAUNCH_FILE).launch.py` lists what the file
 # accepts.  Unlike ROS_ARGS above these are launch arguments, not rcl arguments: they are
 # declared by the launch file and reach a node through its parameters.
+#
+# Device arguments take a by-id path rather than /dev/input/jsN, which is assigned in
+# connection order and moves across replugs; `ls /dev/input/by-id` lists them.  Every
+# argument also needs a non-empty value -- `name:=` is rejected as malformed -- so an
+# argument whose value should be empty has to be changed in the launch file instead.
 LAUNCH_ARGS ?=
 
 # Which launch file to run.  TempControlSystem_Instance brings up the whole system on this host;

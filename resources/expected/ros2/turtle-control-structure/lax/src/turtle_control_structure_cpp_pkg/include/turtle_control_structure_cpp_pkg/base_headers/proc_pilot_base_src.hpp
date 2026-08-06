@@ -40,13 +40,12 @@ protected:
     //=================================================
 
     #define MESSAGE_TO_STRING(message) _messageToString(*message).c_str()
-    #define PRINT_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
-    #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
-    #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
+    #define LOG_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
+    #define LOG_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
+    #define LOG_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
     void put_cmdVel(geometry_msgs::msg::Twist msg);
     void put_mode(turtle_control_structure_cpp_pkg_interfaces::msg::OperatingMode msg);
-    void put_calibrate();
     void put_trim(turtle_control_structure_cpp_pkg_interfaces::msg::TrimCommand msg);
 
     turtlesim::msg::Pose::SharedPtr get_pose();
@@ -80,7 +79,6 @@ private:
 
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr proc_pilot_cmdVel_publisher_;
     rclcpp::Publisher<turtle_control_structure_cpp_pkg_interfaces::msg::OperatingMode>::SharedPtr proc_pilot_mode_publisher_;
-    rclcpp::Publisher<turtle_control_structure_cpp_pkg_interfaces::msg::Empty>::SharedPtr proc_pilot_calibrate_publisher_;
     rclcpp::Publisher<turtle_control_structure_cpp_pkg_interfaces::msg::TrimCommand>::SharedPtr proc_pilot_trim_publisher_;
 
 };

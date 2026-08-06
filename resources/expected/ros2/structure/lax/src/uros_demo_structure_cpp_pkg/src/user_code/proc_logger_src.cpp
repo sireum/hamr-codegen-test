@@ -7,7 +7,7 @@
 //=================================================
 void proc_logger::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
 }
@@ -18,6 +18,9 @@ void proc_logger::initialize()
 void proc_logger::handle_rosout(const rcl_interfaces::msg::Log::SharedPtr msg)
 {
     // Handle rosout msg
-    PRINT_INFO("Received rosout");
+    // Deliberately does not log.  This node subscribes to /rosout, and a ROS node
+    // publishes its own log records there -- so logging here would feed this handler
+    // its own output and run away.  Write records to a file, a socket, or stdout;
+    // anything routed through the ROS logger comes back.
 }
 

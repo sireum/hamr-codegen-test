@@ -8,7 +8,7 @@
 //=================================================
 void heat_source_cpi_heat_controller::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
     // Initialize the node's incoming data port values here
@@ -26,7 +26,7 @@ void heat_source_cpi_heat_controller::timeTriggered()
 
     // example receiving messages on data ports
     isolette_cpp_pkg_interfaces::msg::OnOff heat_control = get_heat_control();
-    PRINT_INFO("Received heat_control: %s", MESSAGE_TO_STRING(heat_control));
+    LOG_INFO("Received heat_control: %s", MESSAGE_TO_STRING(heat_control));
 
     // Example publishing messages
     isolette_cpp_pkg_interfaces::msg::Heat heat_out = isolette_cpp_pkg_interfaces::msg::Heat();

@@ -124,260 +124,740 @@ consumer_consumer_base::consumer_consumer_base() : Node("consumer_consumer")
 
 void consumer_consumer_base::accept_myBoolean(datatypes_system_cpp_pkg_interfaces::msg::Boolean msg)
 {
-    enqueue(infrastructureIn_myBoolean, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myBoolean, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myBoolean, applicationIn_myBoolean);
-        if (applicationIn_myBoolean.empty()) return;
-        handle_myBoolean_base(applicationIn_myBoolean.front());
-        applicationIn_myBoolean.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myBoolean, applicationIn_myBoolean);
+            if (applicationIn_myBoolean.empty()) return;
+            dispatched = applicationIn_myBoolean.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myBoolean until the handler returns, because get_myBoolean
+        // reads it from there.
+        handle_myBoolean_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myBoolean.empty()) {
+                applicationIn_myBoolean.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myInteger(datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg)
 {
-    enqueue(infrastructureIn_myInteger, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myInteger, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myInteger, applicationIn_myInteger);
-        if (applicationIn_myInteger.empty()) return;
-        handle_myInteger_base(applicationIn_myInteger.front());
-        applicationIn_myInteger.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myInteger, applicationIn_myInteger);
+            if (applicationIn_myInteger.empty()) return;
+            dispatched = applicationIn_myInteger.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myInteger until the handler returns, because get_myInteger
+        // reads it from there.
+        handle_myInteger_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myInteger.empty()) {
+                applicationIn_myInteger.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myFloat(datatypes_system_cpp_pkg_interfaces::msg::Float64 msg)
 {
-    enqueue(infrastructureIn_myFloat, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myFloat, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myFloat, applicationIn_myFloat);
-        if (applicationIn_myFloat.empty()) return;
-        handle_myFloat_base(applicationIn_myFloat.front());
-        applicationIn_myFloat.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myFloat, applicationIn_myFloat);
+            if (applicationIn_myFloat.empty()) return;
+            dispatched = applicationIn_myFloat.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myFloat until the handler returns, because get_myFloat
+        // reads it from there.
+        handle_myFloat_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myFloat.empty()) {
+                applicationIn_myFloat.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myCharacter(datatypes_system_cpp_pkg_interfaces::msg::Character msg)
 {
-    enqueue(infrastructureIn_myCharacter, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myCharacter, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myCharacter, applicationIn_myCharacter);
-        if (applicationIn_myCharacter.empty()) return;
-        handle_myCharacter_base(applicationIn_myCharacter.front());
-        applicationIn_myCharacter.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myCharacter, applicationIn_myCharacter);
+            if (applicationIn_myCharacter.empty()) return;
+            dispatched = applicationIn_myCharacter.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myCharacter until the handler returns, because get_myCharacter
+        // reads it from there.
+        handle_myCharacter_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myCharacter.empty()) {
+                applicationIn_myCharacter.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myString(datatypes_system_cpp_pkg_interfaces::msg::String msg)
 {
-    enqueue(infrastructureIn_myString, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myString, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myString, applicationIn_myString);
-        if (applicationIn_myString.empty()) return;
-        handle_myString_base(applicationIn_myString.front());
-        applicationIn_myString.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myString, applicationIn_myString);
+            if (applicationIn_myString.empty()) return;
+            dispatched = applicationIn_myString.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myString until the handler returns, because get_myString
+        // reads it from there.
+        handle_myString_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myString.empty()) {
+                applicationIn_myString.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myInt8(datatypes_system_cpp_pkg_interfaces::msg::Integer8 msg)
 {
-    enqueue(infrastructureIn_myInt8, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myInt8, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myInt8, applicationIn_myInt8);
-        if (applicationIn_myInt8.empty()) return;
-        handle_myInt8_base(applicationIn_myInt8.front());
-        applicationIn_myInt8.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myInt8, applicationIn_myInt8);
+            if (applicationIn_myInt8.empty()) return;
+            dispatched = applicationIn_myInt8.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myInt8 until the handler returns, because get_myInt8
+        // reads it from there.
+        handle_myInt8_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myInt8.empty()) {
+                applicationIn_myInt8.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myInt16(datatypes_system_cpp_pkg_interfaces::msg::Integer16 msg)
 {
-    enqueue(infrastructureIn_myInt16, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myInt16, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myInt16, applicationIn_myInt16);
-        if (applicationIn_myInt16.empty()) return;
-        handle_myInt16_base(applicationIn_myInt16.front());
-        applicationIn_myInt16.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myInt16, applicationIn_myInt16);
+            if (applicationIn_myInt16.empty()) return;
+            dispatched = applicationIn_myInt16.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myInt16 until the handler returns, because get_myInt16
+        // reads it from there.
+        handle_myInt16_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myInt16.empty()) {
+                applicationIn_myInt16.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myInt32(datatypes_system_cpp_pkg_interfaces::msg::Integer32 msg)
 {
-    enqueue(infrastructureIn_myInt32, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myInt32, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myInt32, applicationIn_myInt32);
-        if (applicationIn_myInt32.empty()) return;
-        handle_myInt32_base(applicationIn_myInt32.front());
-        applicationIn_myInt32.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myInt32, applicationIn_myInt32);
+            if (applicationIn_myInt32.empty()) return;
+            dispatched = applicationIn_myInt32.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myInt32 until the handler returns, because get_myInt32
+        // reads it from there.
+        handle_myInt32_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myInt32.empty()) {
+                applicationIn_myInt32.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myInt64(datatypes_system_cpp_pkg_interfaces::msg::Integer64 msg)
 {
-    enqueue(infrastructureIn_myInt64, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myInt64, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myInt64, applicationIn_myInt64);
-        if (applicationIn_myInt64.empty()) return;
-        handle_myInt64_base(applicationIn_myInt64.front());
-        applicationIn_myInt64.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myInt64, applicationIn_myInt64);
+            if (applicationIn_myInt64.empty()) return;
+            dispatched = applicationIn_myInt64.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myInt64 until the handler returns, because get_myInt64
+        // reads it from there.
+        handle_myInt64_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myInt64.empty()) {
+                applicationIn_myInt64.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myUInt8(datatypes_system_cpp_pkg_interfaces::msg::Unsigned8 msg)
 {
-    enqueue(infrastructureIn_myUInt8, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myUInt8, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myUInt8, applicationIn_myUInt8);
-        if (applicationIn_myUInt8.empty()) return;
-        handle_myUInt8_base(applicationIn_myUInt8.front());
-        applicationIn_myUInt8.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myUInt8, applicationIn_myUInt8);
+            if (applicationIn_myUInt8.empty()) return;
+            dispatched = applicationIn_myUInt8.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myUInt8 until the handler returns, because get_myUInt8
+        // reads it from there.
+        handle_myUInt8_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myUInt8.empty()) {
+                applicationIn_myUInt8.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myUInt16(datatypes_system_cpp_pkg_interfaces::msg::Unsigned16 msg)
 {
-    enqueue(infrastructureIn_myUInt16, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myUInt16, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myUInt16, applicationIn_myUInt16);
-        if (applicationIn_myUInt16.empty()) return;
-        handle_myUInt16_base(applicationIn_myUInt16.front());
-        applicationIn_myUInt16.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myUInt16, applicationIn_myUInt16);
+            if (applicationIn_myUInt16.empty()) return;
+            dispatched = applicationIn_myUInt16.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myUInt16 until the handler returns, because get_myUInt16
+        // reads it from there.
+        handle_myUInt16_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myUInt16.empty()) {
+                applicationIn_myUInt16.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myUInt32(datatypes_system_cpp_pkg_interfaces::msg::Unsigned32 msg)
 {
-    enqueue(infrastructureIn_myUInt32, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myUInt32, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myUInt32, applicationIn_myUInt32);
-        if (applicationIn_myUInt32.empty()) return;
-        handle_myUInt32_base(applicationIn_myUInt32.front());
-        applicationIn_myUInt32.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myUInt32, applicationIn_myUInt32);
+            if (applicationIn_myUInt32.empty()) return;
+            dispatched = applicationIn_myUInt32.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myUInt32 until the handler returns, because get_myUInt32
+        // reads it from there.
+        handle_myUInt32_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myUInt32.empty()) {
+                applicationIn_myUInt32.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myUInt64(datatypes_system_cpp_pkg_interfaces::msg::Unsigned64 msg)
 {
-    enqueue(infrastructureIn_myUInt64, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myUInt64, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myUInt64, applicationIn_myUInt64);
-        if (applicationIn_myUInt64.empty()) return;
-        handle_myUInt64_base(applicationIn_myUInt64.front());
-        applicationIn_myUInt64.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myUInt64, applicationIn_myUInt64);
+            if (applicationIn_myUInt64.empty()) return;
+            dispatched = applicationIn_myUInt64.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myUInt64 until the handler returns, because get_myUInt64
+        // reads it from there.
+        handle_myUInt64_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myUInt64.empty()) {
+                applicationIn_myUInt64.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myFloat32(datatypes_system_cpp_pkg_interfaces::msg::Float32 msg)
 {
-    enqueue(infrastructureIn_myFloat32, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myFloat32, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myFloat32, applicationIn_myFloat32);
-        if (applicationIn_myFloat32.empty()) return;
-        handle_myFloat32_base(applicationIn_myFloat32.front());
-        applicationIn_myFloat32.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myFloat32, applicationIn_myFloat32);
+            if (applicationIn_myFloat32.empty()) return;
+            dispatched = applicationIn_myFloat32.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myFloat32 until the handler returns, because get_myFloat32
+        // reads it from there.
+        handle_myFloat32_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myFloat32.empty()) {
+                applicationIn_myFloat32.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myFloat64(datatypes_system_cpp_pkg_interfaces::msg::Float64 msg)
 {
-    enqueue(infrastructureIn_myFloat64, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myFloat64, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myFloat64, applicationIn_myFloat64);
-        if (applicationIn_myFloat64.empty()) return;
-        handle_myFloat64_base(applicationIn_myFloat64.front());
-        applicationIn_myFloat64.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myFloat64, applicationIn_myFloat64);
+            if (applicationIn_myFloat64.empty()) return;
+            dispatched = applicationIn_myFloat64.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myFloat64 until the handler returns, because get_myFloat64
+        // reads it from there.
+        handle_myFloat64_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myFloat64.empty()) {
+                applicationIn_myFloat64.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myEnum(datatypes_system_cpp_pkg_interfaces::msg::MyEnum msg)
 {
-    enqueue(infrastructureIn_myEnum, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myEnum, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myEnum, applicationIn_myEnum);
-        if (applicationIn_myEnum.empty()) return;
-        handle_myEnum_base(applicationIn_myEnum.front());
-        applicationIn_myEnum.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myEnum, applicationIn_myEnum);
+            if (applicationIn_myEnum.empty()) return;
+            dispatched = applicationIn_myEnum.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myEnum until the handler returns, because get_myEnum
+        // reads it from there.
+        handle_myEnum_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myEnum.empty()) {
+                applicationIn_myEnum.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myStruct(datatypes_system_cpp_pkg_interfaces::msg::MyStructi msg)
 {
-    enqueue(infrastructureIn_myStruct, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myStruct, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myStruct, applicationIn_myStruct);
-        if (applicationIn_myStruct.empty()) return;
-        handle_myStruct_base(applicationIn_myStruct.front());
-        applicationIn_myStruct.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myStruct, applicationIn_myStruct);
+            if (applicationIn_myStruct.empty()) return;
+            dispatched = applicationIn_myStruct.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myStruct until the handler returns, because get_myStruct
+        // reads it from there.
+        handle_myStruct_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myStruct.empty()) {
+                applicationIn_myStruct.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myArray1(datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim msg)
 {
-    enqueue(infrastructureIn_myArray1, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myArray1, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myArray1, applicationIn_myArray1);
-        if (applicationIn_myArray1.empty()) return;
-        handle_myArray1_base(applicationIn_myArray1.front());
-        applicationIn_myArray1.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myArray1, applicationIn_myArray1);
+            if (applicationIn_myArray1.empty()) return;
+            dispatched = applicationIn_myArray1.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myArray1 until the handler returns, because get_myArray1
+        // reads it from there.
+        handle_myArray1_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myArray1.empty()) {
+                applicationIn_myArray1.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myArray2(datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded msg)
 {
-    enqueue(infrastructureIn_myArray2, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myArray2, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myArray2, applicationIn_myArray2);
-        if (applicationIn_myArray2.empty()) return;
-        handle_myArray2_base(applicationIn_myArray2.front());
-        applicationIn_myArray2.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myArray2, applicationIn_myArray2);
+            if (applicationIn_myArray2.empty()) return;
+            dispatched = applicationIn_myArray2.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myArray2 until the handler returns, because get_myArray2
+        // reads it from there.
+        handle_myArray2_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myArray2.empty()) {
+                applicationIn_myArray2.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
 
 void consumer_consumer_base::accept_myArray3(datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim msg)
 {
-    enqueue(infrastructureIn_myArray3, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_myArray3, msg);
+    }
     std::thread([this]() {
-        std::lock_guard<std::mutex> lock(mutex_);
-        receiveInputs(infrastructureIn_myArray3, applicationIn_myArray3);
-        if (applicationIn_myArray3.empty()) return;
-        handle_myArray3_base(applicationIn_myArray3.front());
-        applicationIn_myArray3.pop();
+        // One dispatch at a time.  This is what the old single mutex_ achieved by being
+        // held for the whole lambda; it is kept separate so that the state lock can be
+        // released around the entry point.
+        std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+        MsgType dispatched;
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            receiveInputs(infrastructureIn_myArray3, applicationIn_myArray3);
+            if (applicationIn_myArray3.empty()) return;
+            dispatched = applicationIn_myArray3.front();
+        }
+
+        // Deliberately outside state_mutex_: the handler is user code and calls
+        // put_<port>/get_<port>, which take that lock themselves.  The value stays on
+        // applicationIn_myArray3 until the handler returns, because get_myArray3
+        // reads it from there.
+        handle_myArray3_base(dispatched);
+
+        {
+            std::lock_guard<std::mutex> lock(state_mutex_);
+            if (!applicationIn_myArray3.empty()) {
+                applicationIn_myArray3.pop();
+            }
+        }
+
         sendOutputs();
     }).detach();
 }
@@ -387,7 +867,7 @@ void consumer_consumer_base::handle_myBoolean_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Boolean>(&msg)) {
         handle_myBoolean(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myBoolean.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -396,7 +876,7 @@ void consumer_consumer_base::handle_myInteger_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
         handle_myInteger(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myInteger.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -405,7 +885,7 @@ void consumer_consumer_base::handle_myFloat_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float64>(&msg)) {
         handle_myFloat(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myFloat.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -414,7 +894,7 @@ void consumer_consumer_base::handle_myCharacter_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Character>(&msg)) {
         handle_myCharacter(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myCharacter.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -423,7 +903,7 @@ void consumer_consumer_base::handle_myString_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::String>(&msg)) {
         handle_myString(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myString.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -432,7 +912,7 @@ void consumer_consumer_base::handle_myInt8_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer8>(&msg)) {
         handle_myInt8(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -441,7 +921,7 @@ void consumer_consumer_base::handle_myInt16_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer16>(&msg)) {
         handle_myInt16(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -450,7 +930,7 @@ void consumer_consumer_base::handle_myInt32_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer32>(&msg)) {
         handle_myInt32(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -459,7 +939,7 @@ void consumer_consumer_base::handle_myInt64_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Integer64>(&msg)) {
         handle_myInt64(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -468,7 +948,7 @@ void consumer_consumer_base::handle_myUInt8_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned8>(&msg)) {
         handle_myUInt8(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myUInt8.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -477,7 +957,7 @@ void consumer_consumer_base::handle_myUInt16_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned16>(&msg)) {
         handle_myUInt16(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myUInt16.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -486,7 +966,7 @@ void consumer_consumer_base::handle_myUInt32_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned32>(&msg)) {
         handle_myUInt32(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myUInt32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -495,7 +975,7 @@ void consumer_consumer_base::handle_myUInt64_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Unsigned64>(&msg)) {
         handle_myUInt64(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myUInt64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -504,7 +984,7 @@ void consumer_consumer_base::handle_myFloat32_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float32>(&msg)) {
         handle_myFloat32(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myFloat32.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -513,7 +993,7 @@ void consumer_consumer_base::handle_myFloat64_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::Float64>(&msg)) {
         handle_myFloat64(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myFloat64.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -522,7 +1002,7 @@ void consumer_consumer_base::handle_myEnum_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyEnum>(&msg)) {
         handle_myEnum(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myEnum.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -531,7 +1011,7 @@ void consumer_consumer_base::handle_myStruct_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyStructi>(&msg)) {
         handle_myStruct(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myStruct.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -540,7 +1020,7 @@ void consumer_consumer_base::handle_myArray1_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayOneDim>(&msg)) {
         handle_myArray1(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myArray1.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -549,7 +1029,7 @@ void consumer_consumer_base::handle_myArray2_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayUnbounded>(&msg)) {
         handle_myArray2(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myArray2.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -558,7 +1038,7 @@ void consumer_consumer_base::handle_myArray3_base(MsgType msg)
     if (auto typedMsg = std::get_if<datatypes_system_cpp_pkg_interfaces::msg::MyArrayTwoDim>(&msg)) {
         handle_myArray3(*typedMsg);
     } else {
-        PRINT_ERROR("Receiving wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Receiving wrong type of variable on port myArray3.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
@@ -586,21 +1066,38 @@ void consumer_consumer_base::enqueue(std::queue<MsgType>& queue, MsgType val) {
 }
 
 void consumer_consumer_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (consumer_consumer_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (consumer_consumer_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (consumer_consumer_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (consumer_consumer_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (consumer_consumer_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

@@ -31,10 +31,6 @@ proc_pilot_base::proc_pilot_base() : Node("proc_pilot", "rover")
         "proc_encoder_mode",
         1);
 
-    proc_pilot_calibrate_publisher_ = this->create_publisher<turtle_control_naming_cpp_pkg_interfaces::msg::Empty>(
-        "proc_encoder_calibrate",
-        1);
-
     proc_pilot_trim_publisher_ = this->create_publisher<turtle_control_naming_cpp_pkg_interfaces::msg::TrimCommand>(
         "proc_encoder_trim",
         1);
@@ -72,13 +68,6 @@ void proc_pilot_base::put_cmdVel(geometry_msgs::msg::Twist msg)
 void proc_pilot_base::put_mode(turtle_control_naming_cpp_pkg_interfaces::msg::OperatingMode msg)
 {
     proc_pilot_mode_publisher_->publish(msg);
-}
-
-void proc_pilot_base::put_calibrate()
-{
-    turtle_control_naming_cpp_pkg_interfaces::msg::Empty msg = turtle_control_naming_cpp_pkg_interfaces::msg::Empty();
-
-    proc_pilot_calibrate_publisher_->publish(msg);
 }
 
 void proc_pilot_base::put_trim(turtle_control_naming_cpp_pkg_interfaces::msg::TrimCommand msg)

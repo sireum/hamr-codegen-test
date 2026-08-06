@@ -8,7 +8,7 @@
 //=================================================
 void tcp_fan::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
 }
@@ -19,6 +19,6 @@ void tcp_fan::initialize()
 void tcp_fan::handle_fanCmd(const building_control_cpp_pkg_interfaces::msg::FanCmd::SharedPtr msg)
 {
     // Handle fanCmd msg
-    PRINT_INFO("Received fanCmd: %s", MESSAGE_TO_STRING(msg));
+    LOG_INFO("Received fanCmd: %s", MESSAGE_TO_STRING(msg));
 }
 

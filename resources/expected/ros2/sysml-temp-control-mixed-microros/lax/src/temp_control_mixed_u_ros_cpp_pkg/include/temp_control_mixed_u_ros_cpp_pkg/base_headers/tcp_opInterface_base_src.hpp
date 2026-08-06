@@ -30,9 +30,9 @@ protected:
     //=================================================
 
     #define MESSAGE_TO_STRING(message) _messageToString(*message).c_str()
-    #define PRINT_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
-    #define PRINT_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
-    #define PRINT_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
+    #define LOG_INFO(...) RCLCPP_INFO(this->get_logger(), __VA_ARGS__)
+    #define LOG_WARN(...) RCLCPP_WARN(this->get_logger(), __VA_ARGS__)
+    #define LOG_ERROR(...) RCLCPP_ERROR(this->get_logger(), __VA_ARGS__)
 
     void put_setPoint(temp_control_mixed_u_ros_cpp_pkg_interfaces::msg::SetPoint msg);
 

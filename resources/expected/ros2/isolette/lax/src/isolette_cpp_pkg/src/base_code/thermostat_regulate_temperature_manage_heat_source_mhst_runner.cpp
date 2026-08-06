@@ -7,7 +7,7 @@ thermostat_regulate_temperature_manage_heat_source_mhst::thermostat_regulate_tem
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("thermostat_regulate_temperature_manage_heat_source_mhst infrastructure set up");
+    LOG_INFO("thermostat_regulate_temperature_manage_heat_source_mhst infrastructure set up");
 }
 
 int main(int argc, char **argv)

@@ -7,7 +7,7 @@ temperature_sensor_cpi_thermostat::temperature_sensor_cpi_thermostat() : tempera
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("temperature_sensor_cpi_thermostat infrastructure set up");
+    LOG_INFO("temperature_sensor_cpi_thermostat infrastructure set up");
 }
 
 int main(int argc, char **argv)

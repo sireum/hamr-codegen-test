@@ -9,7 +9,11 @@ void proc_encoder_timeTriggered(proc_encoder_base_t * self);
 // (heap-free, MCU-compatible)
 static proc_encoder_base_t * g_self = NULL;
 
-// Logger name used by the PRINT_* macros; updated to the node's actual logger
+// Shared scratch buffer for MESSAGE_TO_STRING; declared extern in the base header so
+// every translation unit including it uses this one rather than a copy of its own.
+char _MESSAGE_TO_STRING_buf[512];
+
+// Logger name used by the LOG_* macros; updated to the node's actual logger
 // name once the node has been initialized
 const char * proc_encoder_logger_name = "proc_encoder";
 
@@ -36,40 +40,26 @@ static const char * const node_options[] = {
 
 static void proc_encoder_mode_subscription_callback(const void * msgin)
 {
-    const turtle_control_naming_cpp_pkg_interfaces__msg__OperatingMode * msg = (const turtle_control_naming_cpp_pkg_interfaces__msg__OperatingMode *) msgin;
-    if (g_self != NULL) {
-        g_self->proc_encoder_mode_msg = *msg;
-    }
-}
-
-static void proc_encoder_calibrate_subscription_callback(const void * msgin)
-{
+    // Intentionally does nothing.  A data port latches its newest value, and the
+    // executor has already written that value into proc_encoder_mode_msg: it is the
+    // buffer handed to rclc_executor_add_subscription, so rcl_take fills it before
+    // this callback is invoked, and get_mode returns that same storage.
+    //
+    // The function exists because rclc requires a non-NULL callback to register the
+    // subscription, and the subscription is what makes the executor take at all.
     (void)msgin;
-    if (g_self != NULL) {
-        if (g_self->proc_encoder_calibrate_count < 2) {
-            g_self->proc_encoder_calibrate_count++;
-        } else {
-            // Queue full.  Discarding the oldest event and recording this one leaves the
-            // pending count unchanged, so there is nothing to do but report the loss.
-            PRINT_WARN("calibrate queue full (Queue_Size 2); dropped an event");
-        }
-    }
 }
 
 static void proc_encoder_trim_subscription_callback(const void * msgin)
 {
-    const turtle_control_naming_cpp_pkg_interfaces__msg__TrimCommand * msg = (const turtle_control_naming_cpp_pkg_interfaces__msg__TrimCommand *) msgin;
+    (void)msgin;
     if (g_self != NULL) {
-        if (g_self->proc_encoder_trim_count == 4) {
-            // Queue full.  AADL's default Overflow_Handling_Protocol is DropOldest, so the
-            // oldest entry is discarded to make room for this arrival.
-            g_self->proc_encoder_trim_head = (g_self->proc_encoder_trim_head + 1) % 4;
-            g_self->proc_encoder_trim_count--;
-            PRINT_WARN("trim queue full (Queue_Size 4); dropped oldest message");
+        if (g_self->proc_encoder_trim_pending) {
+            // An arrival is already waiting for the next dispatch.  Queue_Size is 1, so
+            // this one replaces it, matching AADL's default DropOldest overflow handling.
+            LOG_WARN("trim: overwrote an arrival that no dispatch had consumed");
         }
-        size_t proc_encoder_trim_tail = (g_self->proc_encoder_trim_head + g_self->proc_encoder_trim_count) % 4;
-        g_self->proc_encoder_trim_queue[proc_encoder_trim_tail] = *msg;
-        g_self->proc_encoder_trim_count++;
+        g_self->proc_encoder_trim_pending = true;
     }
 }
 
@@ -77,22 +67,30 @@ static void proc_encoder_trim_subscription_callback(const void * msgin)
 //  C a l l b a c k   a n d   T i m e r
 //=================================================
 
+static void proc_encoder_sendOutputs(proc_encoder_base_t * self)
+{
+    if (self->proc_encoder_speed_out_hasValue) {
+        rcl_ret_t ret = rcl_publish(&self->proc_encoder_speed_publisher, &self->proc_encoder_speed_out, NULL);
+        if (ret != RCL_RET_OK) {
+            LOG_ERROR("Failed to publish speed");
+        }
+        self->proc_encoder_speed_out_hasValue = false;
+    }
+    if (self->proc_encoder_overspeed_out_hasValue) {
+        turtle_control_naming_cpp_pkg_interfaces__msg__Empty msg;
+        turtle_control_naming_cpp_pkg_interfaces__msg__Empty__init(&msg);
+        rcl_ret_t ret = rcl_publish(&self->proc_encoder_overspeed_publisher, &msg, NULL);
+        if (ret != RCL_RET_OK) {
+            LOG_ERROR("Failed to publish overspeed");
+        }
+        self->proc_encoder_overspeed_out_hasValue = false;
+    }
+}
+
 static void proc_encoder_receiveInputs(proc_encoder_base_t * self)
 {
-    if (self->proc_encoder_calibrate_count > 0) {
-        self->proc_encoder_calibrate_count--;
-        self->proc_encoder_calibrate_hasEvent = true;
-    } else {
-        self->proc_encoder_calibrate_hasEvent = false;
-    }
-    if (self->proc_encoder_trim_count > 0) {
-        self->proc_encoder_trim_frozen = self->proc_encoder_trim_queue[self->proc_encoder_trim_head];
-        self->proc_encoder_trim_head = (self->proc_encoder_trim_head + 1) % 4;
-        self->proc_encoder_trim_count--;
-        self->proc_encoder_trim_hasEvent = true;
-    } else {
-        self->proc_encoder_trim_hasEvent = false;
-    }
+    self->proc_encoder_trim_hasEvent = self->proc_encoder_trim_pending;
+    self->proc_encoder_trim_pending = false;
 }
 
 static void period_timer_callback(rcl_timer_t * timer, int64_t last_call_time)
@@ -102,6 +100,7 @@ static void period_timer_callback(rcl_timer_t * timer, int64_t last_call_time)
     if (g_self != NULL) {
         proc_encoder_receiveInputs(g_self);
         proc_encoder_timeTriggered(g_self);
+        proc_encoder_sendOutputs(g_self);
     }
 }
 
@@ -125,7 +124,7 @@ rcl_ret_t proc_encoder_base_init(proc_encoder_base_t * self)
 
     RCL_CHECK(rclc_node_init_default(&self->node, "proc_encoder", "rover", &self->support));
 
-    // Retrieve the node's registered logger name for use by the PRINT_* macros
+    // Retrieve the node's registered logger name for use by the LOG_* macros
     const char * logger_name = rcl_node_get_logger_name(&self->node);
     if (logger_name != NULL) {
         proc_encoder_logger_name = logger_name;
@@ -152,12 +151,6 @@ rcl_ret_t proc_encoder_base_init(proc_encoder_base_t * self)
         "proc_encoder_mode"));
 
     RCL_CHECK(rclc_subscription_init_default(
-        &self->proc_encoder_calibrate_subscription,
-        &self->node,
-        ROSIDL_GET_MSG_TYPE_SUPPORT(turtle_control_naming_cpp_pkg_interfaces, msg, Empty),
-        "proc_encoder_calibrate"));
-
-    RCL_CHECK(rclc_subscription_init_default(
         &self->proc_encoder_trim_subscription,
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(turtle_control_naming_cpp_pkg_interfaces, msg, TrimCommand),
@@ -165,11 +158,13 @@ rcl_ret_t proc_encoder_base_init(proc_encoder_base_t * self)
 
 
     // Queued ports start empty
-    self->proc_encoder_calibrate_count = 0;
-    self->proc_encoder_calibrate_hasEvent = false;
-    self->proc_encoder_trim_head = 0;
-    self->proc_encoder_trim_count = 0;
+    self->proc_encoder_trim_pending = false;
     self->proc_encoder_trim_hasEvent = false;
+
+
+    // Staged outputs start empty
+    self->proc_encoder_speed_out_hasValue = false;
+    self->proc_encoder_overspeed_out_hasValue = false;
 
     // timeTriggered callback timer
     RCL_CHECK(rclc_timer_init_default(
@@ -185,10 +180,9 @@ rcl_ret_t proc_encoder_base_init(proc_encoder_base_t * self)
     //     self->proc_ttj_joy_msg.axes.size = 0;
     // USER INIT - additions within these tags will be preserved when re-running Codegen
 
-    RCL_CHECK(rclc_executor_init(&self->executor, &self->support.context, 4, &self->allocator));
+    RCL_CHECK(rclc_executor_init(&self->executor, &self->support.context, 3, &self->allocator));
     RCL_CHECK(rclc_executor_add_timer(&self->executor, &self->period_timer));
     RCL_CHECK(rclc_executor_add_subscription(&self->executor, &self->proc_encoder_mode_subscription, &self->proc_encoder_mode_msg, proc_encoder_mode_subscription_callback, ON_NEW_DATA));
-    RCL_CHECK(rclc_executor_add_subscription(&self->executor, &self->proc_encoder_calibrate_subscription, &self->proc_encoder_calibrate_msg, proc_encoder_calibrate_subscription_callback, ON_NEW_DATA));
     RCL_CHECK(rclc_executor_add_subscription(&self->executor, &self->proc_encoder_trim_subscription, &self->proc_encoder_trim_msg, proc_encoder_trim_subscription_callback, ON_NEW_DATA));
 
     return RCL_RET_OK;
@@ -205,20 +199,13 @@ void proc_encoder_base_spin(proc_encoder_base_t * self)
 
 void put_speed(proc_encoder_base_t * self, turtle_control_naming_cpp_pkg_interfaces__msg__WheelSpeed * msg)
 {
-    rcl_ret_t ret = rcl_publish(&self->proc_encoder_speed_publisher, msg, NULL);
-    if (ret != RCL_RET_OK) {
-        PRINT_ERROR("Failed to publish speed");
-    }
+    self->proc_encoder_speed_out = *msg;
+    self->proc_encoder_speed_out_hasValue = true;
 }
 
 void put_overspeed(proc_encoder_base_t * self)
 {
-    turtle_control_naming_cpp_pkg_interfaces__msg__Empty msg;
-    turtle_control_naming_cpp_pkg_interfaces__msg__Empty__init(&msg);
-    rcl_ret_t ret = rcl_publish(&self->proc_encoder_overspeed_publisher, &msg, NULL);
-    if (ret != RCL_RET_OK) {
-        PRINT_ERROR("Failed to publish overspeed");
-    }
+    self->proc_encoder_overspeed_out_hasValue = true;
 }
 
 //=================================================
@@ -234,13 +221,8 @@ turtle_control_naming_cpp_pkg_interfaces__msg__OperatingMode * get_mode(proc_enc
 //  Q u e u e d   P o r t   A c c e s s
 //=================================================
 
-bool has_calibrate(proc_encoder_base_t * self)
-{
-    return self->proc_encoder_calibrate_hasEvent;
-}
-
 turtle_control_naming_cpp_pkg_interfaces__msg__TrimCommand * get_trim(proc_encoder_base_t * self)
 {
-    return self->proc_encoder_trim_hasEvent ? &self->proc_encoder_trim_frozen : NULL;
+    return self->proc_encoder_trim_hasEvent ? &self->proc_encoder_trim_msg : NULL;
 }
 

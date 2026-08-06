@@ -8,7 +8,7 @@
 //=================================================
 void thermostat_regulate_temperature_manage_regulator_mode_mrmt::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
     // Initialize the node's incoming data port values here
@@ -32,11 +32,11 @@ void thermostat_regulate_temperature_manage_regulator_mode_mrmt::timeTriggered()
 
     // example receiving messages on data ports
     isolette_cpp_pkg_interfaces::msg::TempWstatusimpl::SharedPtr current_tempWstatus = get_current_tempWstatus();
-    PRINT_INFO("Received current_tempWstatus: %s", MESSAGE_TO_STRING(current_tempWstatus));
+    LOG_INFO("Received current_tempWstatus: %s", MESSAGE_TO_STRING(current_tempWstatus));
     isolette_cpp_pkg_interfaces::msg::FailureFlagimpl::SharedPtr interface_failure = get_interface_failure();
-    PRINT_INFO("Received interface_failure: %s", MESSAGE_TO_STRING(interface_failure));
+    LOG_INFO("Received interface_failure: %s", MESSAGE_TO_STRING(interface_failure));
     isolette_cpp_pkg_interfaces::msg::FailureFlagimpl::SharedPtr internal_failure = get_internal_failure();
-    PRINT_INFO("Received internal_failure: %s", MESSAGE_TO_STRING(internal_failure));
+    LOG_INFO("Received internal_failure: %s", MESSAGE_TO_STRING(internal_failure));
 
     // Example publishing messages
     isolette_cpp_pkg_interfaces::msg::RegulatorMode regulator_mode = isolette_cpp_pkg_interfaces::msg::RegulatorMode();

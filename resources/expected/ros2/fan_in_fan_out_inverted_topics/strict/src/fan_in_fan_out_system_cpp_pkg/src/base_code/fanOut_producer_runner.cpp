@@ -7,7 +7,7 @@ fanOut_producer::fanOut_producer() : fanOut_producer_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("fanOut_producer infrastructure set up");
+    LOG_INFO("fanOut_producer infrastructure set up");
 }
 
 int main(int argc, char **argv)

@@ -7,7 +7,7 @@
 //=================================================
 void fanOut_producer::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
 }

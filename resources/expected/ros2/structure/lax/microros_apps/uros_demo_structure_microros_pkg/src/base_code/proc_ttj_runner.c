@@ -14,14 +14,14 @@ int main(int argc, char ** argv)
     // receive.  Exiting non-zero instead lets the launching layer notice.
     rcl_ret_t init_status = proc_ttj_base_init(&node);
     if (init_status != RCL_RET_OK) {
-        PRINT_ERROR("proc_ttj initialization failed with status %d; aborting", (int) init_status);
+        LOG_ERROR("proc_ttj initialization failed with status %d; aborting", (int) init_status);
         return 1;
     }
 
     // Invoke initialize entry point
     proc_ttj_initialize(&node);
 
-    PRINT_INFO("proc_ttj infrastructure set up");
+    LOG_INFO("proc_ttj infrastructure set up");
 
     proc_ttj_base_spin(&node);
 

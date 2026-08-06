@@ -90,4 +90,16 @@ class MicroRosTests extends TestSuite with Ros2TestUtil {
 
     testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
   }
+
+  // Adds a logger node fed by infrastructure-provided rosout ports.  The only in-repo
+  // coverage of the rosout path: encoder.rosout drives micro-ROS logging enablement,
+  // logger.rosout generates the /rosout subscription.
+  "turtle_control_logging_lax" in {
+    val testName = "turtle-control-logging"
+    val root = ros_base / testName
+    val airFile = getAir(root)
+    assert (root.exists)
+
+    testRos(testName, airFile, airFile.up, baseOptions.apply(strictAadlMode = false, invertTopicBinding = false), T, verbose)
+  }
 }

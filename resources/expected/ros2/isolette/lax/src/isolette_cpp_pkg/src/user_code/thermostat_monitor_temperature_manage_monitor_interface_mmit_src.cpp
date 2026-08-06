@@ -8,7 +8,7 @@
 //=================================================
 void thermostat_monitor_temperature_manage_monitor_interface_mmit::initialize()
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
     // Initialize the node's incoming data port values here
@@ -35,13 +35,13 @@ void thermostat_monitor_temperature_manage_monitor_interface_mmit::timeTriggered
 
     // example receiving messages on data ports
     isolette_cpp_pkg_interfaces::msg::TempWstatusimpl::SharedPtr upper_alarm_tempWstatus = get_upper_alarm_tempWstatus();
-    PRINT_INFO("Received upper_alarm_tempWstatus: %s", MESSAGE_TO_STRING(upper_alarm_tempWstatus));
+    LOG_INFO("Received upper_alarm_tempWstatus: %s", MESSAGE_TO_STRING(upper_alarm_tempWstatus));
     isolette_cpp_pkg_interfaces::msg::TempWstatusimpl::SharedPtr lower_alarm_tempWstatus = get_lower_alarm_tempWstatus();
-    PRINT_INFO("Received lower_alarm_tempWstatus: %s", MESSAGE_TO_STRING(lower_alarm_tempWstatus));
+    LOG_INFO("Received lower_alarm_tempWstatus: %s", MESSAGE_TO_STRING(lower_alarm_tempWstatus));
     isolette_cpp_pkg_interfaces::msg::TempWstatusimpl::SharedPtr current_tempWstatus = get_current_tempWstatus();
-    PRINT_INFO("Received current_tempWstatus: %s", MESSAGE_TO_STRING(current_tempWstatus));
+    LOG_INFO("Received current_tempWstatus: %s", MESSAGE_TO_STRING(current_tempWstatus));
     isolette_cpp_pkg_interfaces::msg::MonitorMode::SharedPtr monitor_mode = get_monitor_mode();
-    PRINT_INFO("Received monitor_mode: %s", MESSAGE_TO_STRING(monitor_mode));
+    LOG_INFO("Received monitor_mode: %s", MESSAGE_TO_STRING(monitor_mode));
 
     // Example publishing messages
     isolette_cpp_pkg_interfaces::msg::Tempimpl upper_alarm_temp = example_Tempimpl();

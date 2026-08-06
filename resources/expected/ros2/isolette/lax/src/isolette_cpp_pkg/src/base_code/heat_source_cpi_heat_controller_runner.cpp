@@ -7,7 +7,7 @@ heat_source_cpi_heat_controller::heat_source_cpi_heat_controller() : heat_source
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("heat_source_cpi_heat_controller infrastructure set up");
+    LOG_INFO("heat_source_cpi_heat_controller infrastructure set up");
 }
 
 int main(int argc, char **argv)

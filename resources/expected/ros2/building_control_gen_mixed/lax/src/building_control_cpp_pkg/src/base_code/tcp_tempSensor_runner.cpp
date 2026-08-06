@@ -7,7 +7,7 @@ tcp_tempSensor::tcp_tempSensor() : tcp_tempSensor_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("tcp_tempSensor infrastructure set up");
+    LOG_INFO("tcp_tempSensor infrastructure set up");
 }
 
 int main(int argc, char **argv)

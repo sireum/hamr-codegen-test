@@ -7,7 +7,7 @@ thermostat_regulate_temperature_manage_regulator_mode_mrmt::thermostat_regulate_
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("thermostat_regulate_temperature_manage_regulator_mode_mrmt infrastructure set up");
+    LOG_INFO("thermostat_regulate_temperature_manage_regulator_mode_mrmt infrastructure set up");
 }
 
 int main(int argc, char **argv)

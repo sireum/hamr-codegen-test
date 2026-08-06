@@ -8,7 +8,11 @@ void tcp_tempSensor_timeTriggered(tcp_tempSensor_base_t * self);
 // Static instance pointer for timer callback context (heap-free, MCU-compatible)
 static tcp_tempSensor_base_t * g_self = NULL;
 
-// Logger name used by the PRINT_* macros; updated to the node's actual logger
+// Shared scratch buffer for MESSAGE_TO_STRING; declared extern in the base header so
+// every translation unit including it uses this one rather than a copy of its own.
+char _MESSAGE_TO_STRING_buf[512];
+
+// Logger name used by the LOG_* macros; updated to the node's actual logger
 // name once the node has been initialized
 const char * tcp_tempSensor_logger_name = "tcp_tempSensor";
 
@@ -33,12 +37,37 @@ static const char * const node_options[] = {
 //  C a l l b a c k   a n d   T i m e r
 //=================================================
 
+static void tcp_tempSensor_sendOutputs(tcp_tempSensor_base_t * self)
+{
+    if (self->tcp_tempSensor_currentTemp_out_hasValue) {
+        rcl_ret_t ret1 = rcl_publish(&self->tcp_tempSensor_currentTemp_publisher_1, &self->tcp_tempSensor_currentTemp_out, NULL);
+        if (ret1 != RCL_RET_OK) {
+            LOG_ERROR("Failed to publish currentTemp (1)");
+        }
+        rcl_ret_t ret2 = rcl_publish(&self->tcp_tempSensor_currentTemp_publisher_2, &self->tcp_tempSensor_currentTemp_out, NULL);
+        if (ret2 != RCL_RET_OK) {
+            LOG_ERROR("Failed to publish currentTemp (2)");
+        }
+        self->tcp_tempSensor_currentTemp_out_hasValue = false;
+    }
+    if (self->tcp_tempSensor_tempChanged_out_hasValue) {
+        temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__Empty msg;
+        temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__Empty__init(&msg);
+        rcl_ret_t ret = rcl_publish(&self->tcp_tempSensor_tempChanged_publisher, &msg, NULL);
+        if (ret != RCL_RET_OK) {
+            LOG_ERROR("Failed to publish tempChanged");
+        }
+        self->tcp_tempSensor_tempChanged_out_hasValue = false;
+    }
+}
+
 static void period_timer_callback(rcl_timer_t * timer, int64_t last_call_time)
 {
     (void)timer;
     (void)last_call_time;
     if (g_self != NULL) {
         tcp_tempSensor_timeTriggered(g_self);
+        tcp_tempSensor_sendOutputs(g_self);
     }
 }
 
@@ -62,7 +91,7 @@ rcl_ret_t tcp_tempSensor_base_init(tcp_tempSensor_base_t * self)
 
     RCL_CHECK(rclc_node_init_default(&self->node, "tcp_tempSensor", "", &self->support));
 
-    // Retrieve the node's registered logger name for use by the PRINT_* macros
+    // Retrieve the node's registered logger name for use by the LOG_* macros
     const char * logger_name = rcl_node_get_logger_name(&self->node);
     if (logger_name != NULL) {
         tcp_tempSensor_logger_name = logger_name;
@@ -86,6 +115,11 @@ rcl_ret_t tcp_tempSensor_base_init(tcp_tempSensor_base_t * self)
         &self->node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(temp_control_mixed_u_ros_cpp_pkg_interfaces, msg, Empty),
         "tcp_tempControl_tempChanged"));
+
+
+    // Staged outputs start empty
+    self->tcp_tempSensor_currentTemp_out_hasValue = false;
+    self->tcp_tempSensor_tempChanged_out_hasValue = false;
 
     // timeTriggered callback timer
     RCL_CHECK(rclc_timer_init_default(
@@ -118,23 +152,12 @@ void tcp_tempSensor_base_spin(tcp_tempSensor_base_t * self)
 
 void put_currentTemp(tcp_tempSensor_base_t * self, temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__Temperature * msg)
 {
-    rcl_ret_t ret1 = rcl_publish(&self->tcp_tempSensor_currentTemp_publisher_1, msg, NULL);
-    if (ret1 != RCL_RET_OK) {
-        PRINT_ERROR("Failed to publish currentTemp (1)");
-    }
-    rcl_ret_t ret2 = rcl_publish(&self->tcp_tempSensor_currentTemp_publisher_2, msg, NULL);
-    if (ret2 != RCL_RET_OK) {
-        PRINT_ERROR("Failed to publish currentTemp (2)");
-    }
+    self->tcp_tempSensor_currentTemp_out = *msg;
+    self->tcp_tempSensor_currentTemp_out_hasValue = true;
 }
 
 void put_tempChanged(tcp_tempSensor_base_t * self)
 {
-    temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__Empty msg;
-    temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__Empty__init(&msg);
-    rcl_ret_t ret = rcl_publish(&self->tcp_tempSensor_tempChanged_publisher, &msg, NULL);
-    if (ret != RCL_RET_OK) {
-        PRINT_ERROR("Failed to publish tempChanged");
-    }
+    self->tcp_tempSensor_tempChanged_out_hasValue = true;
 }
 

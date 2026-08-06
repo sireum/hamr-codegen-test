@@ -7,7 +7,7 @@ fanIn_consumer::fanIn_consumer() : fanIn_consumer_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("fanIn_consumer infrastructure set up");
+    LOG_INFO("fanIn_consumer infrastructure set up");
 }
 
 int main(int argc, char **argv)

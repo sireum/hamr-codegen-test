@@ -39,6 +39,10 @@ heat_source_cpi_heat_controller_base::heat_source_cpi_heat_controller_base() : N
 }
 
 void heat_source_cpi_heat_controller_base::init_heat_control(isolette_cpp_pkg_interfaces::msg::OnOff val) {
+    // Reachable from the initialize entry point.  That runs during construction, before
+    // the executor spins, so there is no contention -- the lock is taken anyway to keep
+    // one rule: anything user code can call takes state_mutex_.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(infrastructureIn_heat_control, val);
 }
 
@@ -48,10 +52,15 @@ void heat_source_cpi_heat_controller_base::init_heat_control(isolette_cpp_pkg_in
 
 void heat_source_cpi_heat_controller_base::accept_heat_control(isolette_cpp_pkg_interfaces::msg::OnOff msg)
 {
-    enqueue(infrastructureIn_heat_control, msg);
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        enqueue(infrastructureIn_heat_control, msg);
+    }
 }
 
 isolette_cpp_pkg_interfaces::msg::OnOff heat_source_cpi_heat_controller_base::get_heat_control() {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     MsgType msg = applicationIn_heat_control.front();
     return std::get<isolette_cpp_pkg_interfaces::msg::OnOff>(msg);
 }
@@ -61,18 +70,31 @@ void heat_source_cpi_heat_controller_base::sendOut_heat_out(MsgType msg)
     if (auto typedMsg = std::get_if<isolette_cpp_pkg_interfaces::msg::Heat>(&msg)) {
         heat_source_cpi_heat_controller_heat_out_publisher_->publish(*typedMsg);
     } else {
-        PRINT_ERROR("Sending out wrong type of variable on port heat_out.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
+        LOG_ERROR("Sending out wrong type of variable on port heat_out.\nThis shouldn't be possible.  If you are seeing this message, please notify this tool's current maintainer.");
     }
 }
 
 void heat_source_cpi_heat_controller_base::put_heat_out(isolette_cpp_pkg_interfaces::msg::Heat msg)
 {
+    // Called from the compute entry point, which runs without state_mutex_ held.
+    std::lock_guard<std::mutex> lock(state_mutex_);
     enqueue(applicationOut_heat_out, msg);
 }
 
 void heat_source_cpi_heat_controller_base::timeTriggeredCaller() {
-    receiveInputs();
+    // One dispatch at a time: the callback group is Reentrant, so a period shorter than
+    // the entry point would otherwise re-enter this concurrently.
+    std::lock_guard<std::mutex> dispatch(dispatch_mutex_);
+
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        receiveInputs();
+    }
+
+    // Deliberately outside state_mutex_: timeTriggered is user code and calls
+    // put_<port>/get_<port>, which take that lock themselves.
     timeTriggered();
+
     sendOutputs();
 }
 
@@ -102,21 +124,38 @@ void heat_source_cpi_heat_controller_base::enqueue(std::queue<MsgType>& queue, M
 }
 
 void heat_source_cpi_heat_controller_base::sendOutputs() {
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (heat_source_cpi_heat_controller_base::*)(MsgType)> port : outPortTupleVector) {
-        auto applicationQueue = std::get<0>(port);
-        if (applicationQueue->size() != 0) {
-            auto msg = applicationQueue->front();
-            applicationQueue->pop();
-            enqueue(*std::get<1>(port), msg);
+    // The queue work happens under state_mutex_; the publishing does not.  accept_<port>
+    // runs from a subscription callback, so the middleware already holds locks of its own
+    // when it takes state_mutex_.  Publishing while holding state_mutex_ would establish
+    // the reverse order and put this lock into a cycle with the middleware's.  No such
+    // cycle has been observed -- the lock-order inversions ThreadSanitizer reports here
+    // are internal to Fast DDS and involve neither of this node's mutexes -- so this is
+    // ordering hygiene rather than a fix for a diagnosed deadlock.  It also keeps the
+    // critical section off the wire.  Collect first, release, then publish.
+    std::vector<std::pair<void (heat_source_cpi_heat_controller_base::*)(MsgType), MsgType>> pending;
+    {
+        std::lock_guard<std::mutex> lock(state_mutex_);
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (heat_source_cpi_heat_controller_base::*)(MsgType)> port : outPortTupleVector) {
+            auto applicationQueue = std::get<0>(port);
+            if (applicationQueue->size() != 0) {
+                auto msg = applicationQueue->front();
+                applicationQueue->pop();
+                enqueue(*std::get<1>(port), msg);
+            }
+        }
+
+        for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (heat_source_cpi_heat_controller_base::*)(MsgType)> port : outPortTupleVector) {
+            auto infrastructureQueue = std::get<1>(port);
+            if (infrastructureQueue->size() != 0) {
+                auto msg = infrastructureQueue->front();
+                infrastructureQueue->pop();
+                pending.emplace_back(std::get<2>(port), msg);
+            }
         }
     }
 
-    for (std::tuple<std::queue<MsgType>*, std::queue<MsgType>*, void (heat_source_cpi_heat_controller_base::*)(MsgType)> port : outPortTupleVector) {
-        auto infrastructureQueue = std::get<1>(port);
-        if (infrastructureQueue->size() != 0) {
-            auto msg = infrastructureQueue->front();
-            infrastructureQueue->pop();
-            (this->*std::get<2>(port))(msg);
-        }
+    // Still one dispatch's worth of outputs, released together -- only the lock is gone.
+    for (auto& entry : pending) {
+        (this->*entry.first)(entry.second);
     }
 }

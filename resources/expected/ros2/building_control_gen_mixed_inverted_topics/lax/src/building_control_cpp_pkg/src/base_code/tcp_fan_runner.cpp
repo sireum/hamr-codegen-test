@@ -7,7 +7,7 @@ tcp_fan::tcp_fan() : tcp_fan_base()
     // Invoke initialize entry point
     initialize();
 
-    PRINT_INFO("tcp_fan infrastructure set up");
+    LOG_INFO("tcp_fan infrastructure set up");
 }
 
 int main(int argc, char **argv)

@@ -8,7 +8,7 @@
 //=================================================
 void tcp_tempSensor_initialize(tcp_tempSensor_base_t * self)
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
 }
@@ -23,6 +23,6 @@ void tcp_tempSensor_timeTriggered(tcp_tempSensor_base_t * self)
     // Example publishing messages
     temp_control_mixed_u_ros_cpp_pkg_interfaces__msg__Temperature currentTemp = example_Temperature();
     put_currentTemp(self, &currentTemp);
-    PRINT_INFO("Sent currentTemp: %s", MESSAGE_TO_STRING(&currentTemp));
+    LOG_INFO("Sent currentTemp: %s", MESSAGE_TO_STRING(&currentTemp));
     put_tempChanged(self);
 }

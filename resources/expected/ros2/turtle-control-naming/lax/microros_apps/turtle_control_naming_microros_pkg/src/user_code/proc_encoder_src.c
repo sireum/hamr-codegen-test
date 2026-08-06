@@ -8,7 +8,7 @@
 //=================================================
 void proc_encoder_initialize(proc_encoder_base_t * self)
 {
-    PRINT_INFO("Initialize Entry Point invoked");
+    LOG_INFO("Initialize Entry Point invoked");
 
     // Initialize the node
 }
@@ -24,17 +24,14 @@ void proc_encoder_timeTriggered(proc_encoder_base_t * self)
     turtle_control_naming_cpp_pkg_interfaces__msg__OperatingMode * mode = get_mode(self);
 
     // example receiving queued arrivals -- at most one per port per dispatch
-    if (has_calibrate(self)) {
-        PRINT_INFO("Received calibrate");
-    }
     turtle_control_naming_cpp_pkg_interfaces__msg__TrimCommand * trim = get_trim(self);
     if (trim != NULL) {
-        PRINT_INFO("Received trim");
+        LOG_INFO("Received trim");
     }
 
     // Example publishing messages
     turtle_control_naming_cpp_pkg_interfaces__msg__WheelSpeed speed = example_WheelSpeed();
     put_speed(self, &speed);
-    PRINT_INFO("Sent speed: %s", MESSAGE_TO_STRING(&speed));
+    LOG_INFO("Sent speed: %s", MESSAGE_TO_STRING(&speed));
     put_overspeed(self);
 }
