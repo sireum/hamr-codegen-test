@@ -65,7 +65,8 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
   }
 
   val sysmlModels = ISZ() :+
-    testResources.modelsDir / "isolette" / "sysml"
+    testResources.modelsDir / "isolette" / "sysml" :+
+    testResources.modelsDir / "micro-examples" / "microkit" / "gumbo-verus" / "structs_arrays" / "sysml"
 
   for (sysmlDir <- sysmlModels) {
     val t = ops.StringOps(sysmlDir.up.value)
@@ -88,10 +89,14 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
         verusAttributeSyntax = T)
     }
 
-    val mdir: Os.Path =
+    var mdir: Os.Path =
       if (testOptions.scheduling == HamrCli.CodegenScheduling.UserLand)
         airs(0).up.up.up / "hamr" / "microkit_mcs"
       else airs(0).up.up.up / "hamr" / "microkit"
+
+    if (testName.contains("057D")) { // sysml_micro-examples_gumbo-verus_structs_arrays__057D L120
+      mdir = airs(0).up.up.up / "hamr" / "microkit_sysml"
+    }
 
     assert (mdir.exists, mdir.value)
 
