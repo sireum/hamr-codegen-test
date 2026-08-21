@@ -121,12 +121,18 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
 
     assert(testOptions.workspaceRootDir.nonEmpty, "Currently requires workspaceRootDir to be populated")
 
+    cprintln(F, s"workspaceRootDir: ${Os.path(testOptions.workspaceRootDir.get).canon.toUri}")
+
     val slangOutputDir: Option[Os.Path] =
       if (testOptions.slangOutputDir.nonEmpty) Some(Os.path(testOptions.slangOutputDir.get))
       else None()
 
     if (slangOutputDir.nonEmpty) {
       cprintln(F, s"Slang Output Directory: ${slangOutputDir.get.canon.toUri}")
+    }
+
+    if (testOptions.sel4OutputDir.nonEmpty) {
+      cprintln(F, s"seL4 Output Diretory: ${Os.path(testOptions.sel4OutputDir.get).canon.toUri}")
     }
 
     if (verbose) {
