@@ -1295,6 +1295,9 @@
                     "compute" : {
                       "type" : "None"
                     },
+                    "monitor" : {
+                      "type" : "None"
+                    },
                     "compositions" : [
                     ],
                     "attr" : {
@@ -9641,6 +9644,9 @@
                         }
                       }
                     },
+                    "monitor" : {
+                      "type" : "None"
+                    },
                     "compositions" : [
                     ],
                     "attr" : {
@@ -14462,6 +14468,9 @@
             "compute" : {
               "type" : "None"
             },
+            "monitor" : {
+              "type" : "None"
+            },
             "compositions" : [
             ],
             "attr" : {
@@ -15153,6 +15162,9 @@
                 "compute" : {
                   "type" : "None"
                 },
+                "monitor" : {
+                  "type" : "None"
+                },
                 "compositions" : [
                 ],
                 "attr" : {
@@ -15728,6 +15740,9 @@
                   "type" : "None"
                 },
                 "compute" : {
+                  "type" : "None"
+                },
+                "monitor" : {
                   "type" : "None"
                 },
                 "compositions" : [
@@ -16511,6 +16526,9 @@
               "type" : "None"
             },
             "compute" : {
+              "type" : "None"
+            },
+            "monitor" : {
               "type" : "None"
             },
             "compositions" : [

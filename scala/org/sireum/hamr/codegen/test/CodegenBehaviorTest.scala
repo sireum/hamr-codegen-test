@@ -224,7 +224,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
       else hamrTestFile.up / "clean.cmd"
 
     assert (cleanCmd.exists, s"${cleanCmd} does not exists")
-    val clean = () => proc"${cleanCmd}".at(cleanCmd.up).run().ok
+    val clean = () => proc"${cleanCmd} $testName".at(cleanCmd.up).run().ok
 
     var overrideIgnore = F
     if (airFile.isEmpty && !ops.ISZOps(unitTestModes).contains(TestMode.phantom)) {
