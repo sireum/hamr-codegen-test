@@ -62,17 +62,18 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
            testModes: ISZ[TestMode.Type],
            phantomOptions: Option[String],
            logikaOptions: Option[String],
-           clean: () => B,
+           clean: (ISZ[(String, String)]) => B,
+           env: ISZ[(String, String)],
            airFile: Option[Os.Path] = None())(implicit position: org.scalactic.source.Position): Unit = {
     val tags: ISZ[org.scalatest.Tag] = ISZ()
 
     if (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, clean, airFile))
+        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, clean, env, airFile))
     }
     else if (!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, clean, airFile))
+        testAir(testName, testDescription, testOptions, testModes, phantomOptions, logikaOptions, clean, env, airFile))
     }
   }
 
@@ -82,7 +83,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
               testModes: ISZ[TestMode.Type],
               phantomOptions: Option[String],
               logikaOptions: Option[String],
-              clean: () => B,
+              clean: (ISZ[(String, String)]) => B,
+              env: ISZ[(String, String)],
               airFile: Option[Os.Path] = None()): Unit = {
 
     if (TestUtil.isCI && Os.env("SEL4_CAMKES_ENV").nonEmpty && !TestUtil.isSeL4(testOptions.platform)) {
@@ -101,7 +103,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     }
 
     println(s"Cleaning $testName")
-    val cleanResults = clean()
+    val cleanResults = clean(env)
     assert(cleanResults, "Cleaning failed")
 
     // FIXME: Output from individual unit tests were not grouping correctly in intellij's Test Results view.
@@ -224,7 +226,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
       else hamrTestFile.up / "clean.cmd"
 
     assert (cleanCmd.exists, s"${cleanCmd} does not exists")
-    val clean = () => proc"${cleanCmd} $testName".at(cleanCmd.up).run().ok
+    val clean = (env: ISZ[(String, String)]) => proc"${cleanCmd} $testName".at(cleanCmd.up).env(env).run().ok
 
     var overrideIgnore = F
     if (airFile.isEmpty && !ops.ISZOps(unitTestModes).contains(TestMode.phantom)) {
@@ -259,7 +261,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
             |  ${(ignoreReasons, "\n")}""".render
       ignoreTest(testName, testDescription)(position)
     } else {
-      test(testName, label, testOps, unitTestModes, phantomOptions, logikaOptions, clean, airFile)(position)
+      test(testName, label, testOps, unitTestModes, phantomOptions, logikaOptions, clean, ISZ(), airFile)(position)
     }
   }
 

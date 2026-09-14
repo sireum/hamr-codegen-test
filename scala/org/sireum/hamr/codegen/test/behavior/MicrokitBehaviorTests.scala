@@ -50,7 +50,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       val t = aadlDir / "bin" / "clean.cmd"
       assert (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem)) ||
         t.exists, s"$t doesn't exist")
-      () => proc"$t ${(aadlDir.up / "hamr" / "microkit").value}".run().ok
+      (env: ISZ[(String, String)]) => proc"$t ${(aadlDir.up / "hamr" / "microkit").value}".env(env).run().ok
     }
 
     test(
@@ -60,7 +60,8 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       testModes = testModes,
       phantomOptions = None(),
       logikaOptions = None(),
-      clean,
+      clean = clean,
+      env = ISZ(),
       airFile = Some(cands (0)))
   }
 
@@ -115,7 +116,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
 
       assert (t.exists, s"$t doesn't exist")
 
-      () => proc"$t $mdir".run().ok
+      (env: ISZ[(String, String)]) => proc"$t $mdir".env(env).run().ok
     }
 
     test(
@@ -125,7 +126,8 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       testModes = testModes - TestMode.phantom, // don't run phantom on sysml projects
       phantomOptions = None(),
       logikaOptions = None(),
-      clean,
+      clean = clean,
+      env = ISZ(),
       airFile = Some(airs (0)))
   }
 
@@ -160,7 +162,8 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
       testModes = testModes - TestMode.phantom, // don't run phantom on sysml projects,
       phantomOptions = None(),
       logikaOptions = None(),
-      clean = () => proc"$clean $outputDir".run().ok,
+      clean = (env: ISZ[(String, String)]) => proc"$clean $outputDir".env(env).run().ok,
+      env = ISZ(),
       airFile = Some(air))
   }
 }

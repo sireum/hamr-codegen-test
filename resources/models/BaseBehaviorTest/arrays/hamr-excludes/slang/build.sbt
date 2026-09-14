@@ -1,4 +1,6 @@
-// Example sbt build definitions -- the contents of this file will not be overwritten
+// This file will not be overwritten if HAMR codegen is rerun
+
+// Example sbt build definitions
 //
 // sbt can be obtained from https://www.scala-sbt.org/download.html
 //
@@ -42,19 +44,19 @@ lazy val PC_Sys_Impl_Instance = slangEmbeddedProject("PC_Sys_Impl_Instance", "."
 // to get the most recent versions of the following dependencies
 
 // versions.properties key: org.scala-lang%scala-library%
-val scalaVer = "2.13.16"
+val scalaVer = "2.13.18"
 
 // versions.properties key: org.scalatest%%scalatest%%
-val scalaTestVersion = "3.2.19"
+val scalaTestVersion = "3.2.20"
 
 // versions.properties key: org.sireum%%scalac-plugin%
-// https://github.com/sireum/scalac-plugin/tree/4.20250616.bc22305
-val sireumScalacVersion = "4.20250616.bc22305"
+// https://github.com/sireum/scalac-plugin/tree/4.20260224.4919e12
+val sireumScalacVersion = "4.20260224.4919e12"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/42c86446fd
-val kekinianVersion = "42c86446fd"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/d7ce8d3dcb
+val kekinianVersion = "d7ce8d3dcb"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"

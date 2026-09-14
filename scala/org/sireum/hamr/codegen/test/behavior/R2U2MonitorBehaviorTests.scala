@@ -69,7 +69,7 @@ class R2U2MonitorBehaviorTests extends CodegenBehaviorTest {
       val clean = {
         val c = modelDir / "aadl" / "bin" / "clean.cmd"
         assert(c.exists, s"${c.toUri} doesn't exist")
-        () => proc"$c ${sel4OutputDir.value}".run().ok
+        (env: ISZ[(String, String)]) => proc"$c ${sel4OutputDir.value}".env(env).run().ok
       }
 
       test(
@@ -79,7 +79,8 @@ class R2U2MonitorBehaviorTests extends CodegenBehaviorTest {
         testModes = testModes,
         phantomOptions = None(),
         logikaOptions = None(),
-        clean,
+        clean = clean,
+        env = ISZ(),
         airFile = Some(cands(0)))
     }
   }

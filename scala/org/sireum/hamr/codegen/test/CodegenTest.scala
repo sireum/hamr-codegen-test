@@ -153,6 +153,7 @@ trait CodegenTest extends CodegenTestSuite {
 
     val model: Aadl = TestUtil.getModel(airFile, phantomOptions, workspaceRoot, testingModes, testName, verbose)
 
+    println(s"Model Dir: ${workspaceRoot.toUri}")
     println(s"Result Dir: ${rootTestOutputDir.canon.toUri}")
 
     val store: Store = CodegenReporting.addCodegenReport(CodegenReporting.KEY_TOOL_REPORT,

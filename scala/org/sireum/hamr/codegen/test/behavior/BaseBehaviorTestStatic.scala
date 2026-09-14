@@ -16,13 +16,13 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
 
   val testDir = modelsDirs / "BaseBehaviorTest"
 
-  @pure def clean (p: Os.Path): () => B = {
+  @pure def clean (p: Os.Path): (ISZ[(String, String)]) => B = {
     val cleanCmd =
       if ((p / "bin" / "clean.cmd").exists) p / "bin" / "clean.cmd"
       else if ((p / "aadl" / "clean.cmd").exists) p / "aadl" / "clean.cmd"
       else p / "clean.cmd"
     assert (cleanCmd.exists, s"${cleanCmd} doesn't exist")
-    return () => proc"$cleanCmd".at(cleanCmd.up).run().ok
+    return (env: ISZ[(String, String)]) => proc"$cleanCmd".at(cleanCmd.up).console.env(env).run().ok
   }
 
   "temp_control_simple_temp" in {
@@ -53,6 +53,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       logikaOptions = logikaOptions,
       // include test modes from super (e.g. maybe from env var)
       testModes = testModes :+ TestMode.generated_unit_tests,
+      env = ISZ(),
       clean = clean(modelDir)
     )
   }
@@ -77,6 +78,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       phantomOptions = None(),
       logikaOptions = logikaOptions,
       testModes = testModes :+ TestMode.compile,
+      env = ISZ(("excludes", "excludes")),
       clean = clean(modelDir)
     )
   }
@@ -100,6 +102,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       phantomOptions = None(),
       logikaOptions = logikaOptions,
       testModes = testModes :+ TestMode.compile,
+      env = ISZ(),
       clean = clean(modelDir)
     )
   }
@@ -123,6 +126,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
         logikaOptions = logikaOptions,
         // include test modes from super (e.g. maybe from env var)
         testModes = testModes :+ TestMode.generated_unit_tests,
+        env = ISZ(),
         clean = clean(modelDir)
       )
     }
