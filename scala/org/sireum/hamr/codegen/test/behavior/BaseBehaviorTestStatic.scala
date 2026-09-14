@@ -22,7 +22,7 @@ class BaseBehaviorTestStatic extends CodegenBehaviorTest {
       else if ((p / "aadl" / "clean.cmd").exists) p / "aadl" / "clean.cmd"
       else p / "clean.cmd"
     assert (cleanCmd.exists, s"${cleanCmd} doesn't exist")
-    return (env: ISZ[(String, String)]) => proc"$cleanCmd".at(cleanCmd.up).console.env(env).run().ok
+    return (env: ISZ[(String, String)]) => proc"$cleanCmd".at(cleanCmd.up).env(env).run().ok
   }
 
   "temp_control_simple_temp" in {

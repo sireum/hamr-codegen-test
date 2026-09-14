@@ -8,7 +8,7 @@ import org.sireum.hamr.codegen.common.containers.{SireumProyekIveOption, SireumS
 import org.sireum.hamr.codegen.common.reporting.CodegenReporting
 import org.sireum.hamr.codegen.common.util.HamrCli
 import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugins
-import org.sireum.hamr.codegen.test.microkit.MicrokitTests
+import org.sireum.hamr.codegen.test.microkit.{MicrokitTestUtil, MicrokitTests}
 import org.sireum.hamr.ir
 import org.sireum.hamr.ir.JSON
 import org.sireum.message.Reporter
@@ -21,18 +21,10 @@ import org.sireum.test.TestSuite
 // output directory; otherwise a temp directory is used (its path is printed).
 class SysVCVerusGenTest extends TestSuite {
 
-  val resourcesDir: Os.Path = {
-    val base = Os.path(".")
-    if ((base / "hamr" / "codegen" / "jvm" / "src" / "test" / "resources").exists) {
-      base / "hamr" / "codegen" / "jvm" / "src" / "test" / "resources"
-    } else if ((base / "jvm" / "src" / "test" / "resources").exists) {
-      base / "jvm" / "src" / "test" / "resources"
-    } else {
-      halt(s"Couldn't locate resources directory from: ${base.canon}")
-    }
-  }
-
-  val isoletteAadlDir: Os.Path = resourcesDir / "models" / "INSPECTA-models" / "isolette" / "aadl"
+  // Resolve the Isolette via MicrokitTestUtil.testResources rather than computing the
+  // path locally: INSPECTA-models is gitignored and is cloned on demand by that lazy
+  // val, so a CI bucket that runs no Microkit suite would otherwise find nothing here.
+  val isoletteAadlDir: Os.Path = MicrokitTestUtil.testResources.modelsDir / "isolette" / "aadl"
 
   def loadModel(modelDir: Os.Path): ir.Aadl = {
     val cands = Os.Path.walk(modelDir, T, F, p => p.isFile && p.up.name.native == ".slang" && p.ext.native == "json")
