@@ -80,6 +80,9 @@ object R2U2MonitorTests {
   // aadl/<variant> holds that variant's single AADL package
   val variants: ISZ[String] = ISZ("rust", "c")
 
+  // the sel4 output directory of each model's SysMLv2 sibling, which has no per-language split
+  val sel4SysmlOutputDirName: String = "microkit_mcs_sysml"
+
   // the sel4 output directory committed under each model's hamr/
   @pure def sel4OutputDirName(variant: String): String = {
     return if (variant == string"rust") string"microkit_mcs" else string"microkit_mcs_c"

@@ -6,12 +6,23 @@ import org.sireum.hamr.codegen.test.CodegenTest.TestResources
 object MicrokitTestUtil {
   val isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 
+  // A model is discovered here when it carries a .ci directory, which is also INSPECTA-models'
+  // own CI entry point. r2u2_monitor is excluded on both counts: R2U2MonitorTests and
+  // R2U2MonitorBehaviorTests enumerate those models by hand, and their aadl/ holds one AADL
+  // package per component language -- aadl/rust and aadl/c, each with its own .slang AIR --
+  // rather than the single AIR the generic suites assume, so discovering them aborts
+  // MicrokitTests and MicrokitBehaviorTests while they are being constructed.
+  def isDiscoverableModel(p: Os.Path): B = {
+    return (p.up / ".ci").exists && !p.value.native.contains(".claude") &&
+      !p.value.native.contains("r2u2_monitor")
+  }
+
   def getAadlModels(tr: TestResources): ISZ[Os.Path] = {
-    return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "aadl" && (p.up / ".ci").exists && !p.value.native.contains(".claude"))
+    return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "aadl" && isDiscoverableModel(p))
   }
 
   def getSysmlModels(tr: TestResources): ISZ[Os.Path] = {
-    return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "sysml" && (p.up / ".ci").exists && !p.value.native.contains(".claude"))
+    return Os.Path.walk(tr.modelsDir, T, T, p => p.name.native == "sysml" && isDiscoverableModel(p))
   }
 
   lazy val resourcesDir: Os.Path = {

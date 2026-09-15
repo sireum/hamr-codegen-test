@@ -25,6 +25,11 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     "multi-composition"
   )
 
+  // The r2u2_monitor models are deliberately absent: MicrokitTestUtil.getAadlModels filters them
+  // out. They are the only models whose aadl/ holds a package per component language rather than
+  // a single AIR, and R2U2MonitorBehaviorTests already covers each variant -- including cleaning
+  // just that variant's output, which matters because both suites would otherwise regenerate the
+  // same committed hamr/microkit_mcs* trees in place, in parallel, from one CI bucket.
   for (aadlDir <- MicrokitTestUtil.getAadlModels(testResources)) {
     val t = ops.StringOps(aadlDir.up.value)
     var testName = ops.StringOps(t.substring(t.stringIndexOf("INSPECTA-models") + 16, t.s.size)).replaceAllLiterally(Os.fileSep, "_")

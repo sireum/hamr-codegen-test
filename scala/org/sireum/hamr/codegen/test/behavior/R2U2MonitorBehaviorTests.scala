@@ -4,6 +4,7 @@ import org.sireum._
 import org.sireum.hamr.codegen.common.types.TypeUtil
 import org.sireum.hamr.codegen.common.util.HamrCli
 import org.sireum.hamr.codegen.test.microkit.{MicrokitTestUtil, R2U2MonitorTests}
+import org.sireum.hamr.codegen.test.util.TestMode
 import org.sireum.hamr.codegen.test.{CodegenBehaviorTest, CodegenTest}
 
 // Behavior tests for the AADL models carrying GUMBO monitor subclauses.
@@ -17,8 +18,7 @@ import org.sireum.hamr.codegen.test.{CodegenBehaviorTest, CodegenTest}
 // Layout, per model:
 //   aadl/rust/<Pkg>.aadl   -> hamr/microkit_mcs     (Rust components)
 //   aadl/c/<Pkg>_C.aadl    -> hamr/microkit_mcs_c   (C components)
-//   sysml/                 -> hamr/microkit_mcs_sysml, produced by the model's own
-//                             run-hamr.cmd and never touched here
+//   sysml/                 -> hamr/microkit_mcs_sysml
 // Each variant directory holds one AADL package and its own .slang AIR, so the two
 // same-named 'Sys.i' system implementations never collide.
 class R2U2MonitorBehaviorTests extends CodegenBehaviorTest {
@@ -83,5 +83,51 @@ class R2U2MonitorBehaviorTests extends CodegenBehaviorTest {
         env = ISZ(),
         airFile = Some(cands(0)))
     }
+
+    // The SysMLv2 sibling of the same system. SysML has no per-language split -- one model, one
+    // recorded AIR -- so it contributes a single case per model rather than one per variant.
+    // Scheduling is not forced from the CLI the way it has to be for the AADL variants: the
+    // SysML model says 'attribute :>> Scheduling = MCS' itself, which is what the model's own
+    // sysml/bin/run-hamr.cmd relies on, and matching it here is what keeps regeneration faithful
+    // to the committed tree. The package name likewise mirrors that script's --package-name.
+    val sysmlDir = modelDir / "sysml"
+    val sysmlSel4OutputDir = hamrDir / R2U2MonitorTests.sel4SysmlOutputDirName
+
+    assert(sysmlDir.exists, s"Model directory does not exist: ${sysmlDir.toUri}")
+    assert(sysmlSel4OutputDir.exists, s"Output directory does not exist: ${sysmlSel4OutputDir.toUri}")
+
+    val sysmlCands = Os.Path.walk(sysmlDir, T, T, p => p.up.name.native == ".slang" &&
+      p.ext.native == "json" && !ops.StringOps(p.name).contains("_result"))
+    assert(sysmlCands.size == 1, s"Found ${sysmlCands.size} AIR files under ${sysmlDir.toUri}")
+
+    var sysmlTestName = s"sysml_micro-examples_microkit_r2u2_monitor_$modelDirName"
+
+    // add a small sha to resolve common prefixes in test names
+    sysmlTestName = s"${sysmlTestName}__${TypeUtil.stableTypeSig(sysmlTestName, 2)}"
+
+    val sysmlTestOptions = MicrokitBehaviorTests.baseOptions(
+      packageName = Some(modelDirName),
+      outputDir = Some(hamrDir.value),
+      sel4OutputDir = Some(sysmlSel4OutputDir.value),
+      workspaceRootDir = Some(sysmlDir.value))
+
+    // clean only the SysML output, leaving both AADL variants intact
+    val sysmlClean = {
+      val c = modelDir / "aadl" / "bin" / "clean.cmd"
+      assert(c.exists, s"${c.toUri} doesn't exist")
+      (env: ISZ[(String, String)]) => proc"$c ${sysmlSel4OutputDir.value}".env(env).run().ok
+    }
+
+    test(
+      testName = sysmlTestName,
+      testDescription = s"R2U2 monitor behavior for $modelDirName (SysMLv2)",
+      testOptions = sysmlTestOptions,
+      // the SysML AIR is recorded by the model's own run-hamr.cmd rather than produced by phantom
+      testModes = testModes - TestMode.phantom,
+      phantomOptions = None(),
+      logikaOptions = None(),
+      clean = sysmlClean,
+      env = ISZ(),
+      airFile = Some(sysmlCands(0)))
   }
 }
