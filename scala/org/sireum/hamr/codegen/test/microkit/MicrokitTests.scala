@@ -115,10 +115,10 @@ class MicrokitTests extends CodegenTest {
       expectedErrorReasons = ISZ())
 
     if (testName.value.contains("vms")) {
-      testName = s"user_land_$testName"
+      val userLandName = s"user_land_$testName"
 
       test(
-        testName = testName,
+        testName = userLandName,
         modelDir = sysmlDir,
         airFile = if (air.size == 1) Some(air(0)) else None(),
         ops = testOptions(scheduling = HamrCli.CodegenScheduling.UserLand),
@@ -126,6 +126,37 @@ class MicrokitTests extends CodegenTest {
         modelUri = None(),
         expectedErrorReasons = ISZ())
 
+      // Stage 2 of TestScheduler-design.md, the contract-free half: this model declares no
+      // GUMBO state variables and is built without runtime monitoring, so it exercises the
+      // path where GumboMonitorPlugin never runs -- no sv_ ports, no is_monitoring_enabled --
+      // and where D5 therefore does not demand --runtime-monitoring.
+      test(
+        testName = s"test_sched_$userLandName",
+        modelDir = sysmlDir,
+        airFile = if (air.size == 1) Some(air(0)) else None(),
+        ops = testOptions(
+          scheduling = HamrCli.CodegenScheduling.UserLand,
+          experimentalOptions =
+            testOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER),
+        description = None(),
+        modelUri = None(),
+        expectedErrorReasons = ISZ())
+    }
+
+    // Stage 2 of TestScheduler-design.md, the pilot: temp-control already carries three
+    // monitor bundles over three threads, so this also checks that adding a fourth variant
+    // leaves the existing ones untouched.
+    if (testName.value.contains("temp-control__9F67")) {
+      test(
+        testName = s"test_sched_$testName",
+        modelDir = sysmlDir,
+        airFile = if (air.size == 1) Some(air(0)) else None(),
+        ops = testOptions(
+          experimentalOptions =
+            testOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER),
+        description = None(),
+        modelUri = None(),
+        expectedErrorReasons = ISZ())
     }
   }
 }
