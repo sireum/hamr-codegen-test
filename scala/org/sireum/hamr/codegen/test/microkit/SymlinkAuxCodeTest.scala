@@ -11,6 +11,7 @@ import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.common.CommonUtil.Store
 import org.sireum.hamr.codegen.common.reporting.CodegenReporting
 import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugins
+import org.sireum.hamr.codegen.microkit.plugins.reporting.MicrokitReporterPlugin
 import org.sireum.hamr.codegen.test.util.TestUtil
 import org.sireum.hamr.ir.Aadl
 import org.sireum.message.Reporter
@@ -77,12 +78,14 @@ class SymlinkAuxCodeTest extends TestSuite {
     val r1 = runCodegen(auxRoot, resultsDir)
     r1.printMessages()
     assert(!r1.hasError, "round 1: codegen reported errors")
+    assert(r1.warnings.filter(m => m.kind == MicrokitReporterPlugin.reportSuspendedKind).isEmpty, "round 1: Microkit reporter parser failed")
     checkIntact(auxRoot, resultsDir, "round 1")
 
     // the destructive case: aux_code/* are now existing symlinks; re-run without cleanup
     val r2 = runCodegen(auxRoot, resultsDir)
     r2.printMessages()
     assert(!r2.hasError, "round 2: codegen reported errors")
+    assert(r2.warnings.filter(m => m.kind == MicrokitReporterPlugin.reportSuspendedKind).isEmpty, "round 2: Microkit reporter parser failed")
     checkIntact(auxRoot, resultsDir, "round 2")
 
     // dangling-link recovery: point the link into the void, then regen
@@ -91,6 +94,7 @@ class SymlinkAuxCodeTest extends TestSuite {
     val r3 = runCodegen(auxRoot, resultsDir)
     r3.printMessages()
     assert(!r3.hasError, "round 3: codegen reported errors")
+    assert(r3.warnings.filter(m => m.kind == MicrokitReporterPlugin.reportSuspendedKind).isEmpty, "round 3: Microkit reporter parser failed")
     checkIntact(auxRoot, resultsDir, "round 3")
   }
 }

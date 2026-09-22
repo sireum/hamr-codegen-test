@@ -9,6 +9,7 @@ import org.sireum.hamr.codegen.common.util.HamrCli
 import org.sireum.hamr.codegen.common.util._
 import org.sireum.hamr.codegen.common.util.test.{ETestResource, ITestResource, TestResult}
 import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugins
+import org.sireum.hamr.codegen.microkit.plugins.reporting.MicrokitReporterPlugin
 import org.sireum.hamr.codegen.test.util.TestModeHelper.getEnvTestModes
 import org.sireum.hamr.codegen.test.util.{CodegenTestSuite, TestMode, TestUtil}
 import org.sireum.hamr.ir._
@@ -186,6 +187,16 @@ trait CodegenTest extends CodegenTestSuite {
       r.reports(reporter.errors)
       r.printMessages()
       assert(!reporter.hasError, "Expecting no errors but codegen did not complete successfully")
+
+      // the Microkit reporter's parsers only warn when they fail (so users' codegen runs
+      // still succeed), but in tests a parse failure is a bug that must be fixed
+      val parseFailures = reporter.warnings.filter(m => m.kind == MicrokitReporterPlugin.reportSuspendedKind)
+      if (parseFailures.nonEmpty) {
+        val pr = Reporter.create
+        pr.reports(reporter.warnings)
+        pr.printMessages()
+      }
+      assert(parseFailures.isEmpty, "Microkit reporter parser failed, see the warnings above")
     }
     else {
       assert(reporter.hasError, "Expecting errors but codegen completed successfully")
