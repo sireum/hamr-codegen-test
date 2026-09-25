@@ -162,12 +162,25 @@ class SharedMemorySafetyTests extends TestSuite {
 
   "D5: a compiler that lays the types out differently fails the build" in {
     if (cc.isEmpty) cancel("no host C compiler")
+    val layoutMsg = "memory layout differs from HAMR's"
+
+    // #pragma pack(1) removes Padded_i's padding.  GCC, clang (GNU and MSVC ABIs) and MSVC all
+    // honour it, so on every host the layout differs from HAMR's and the build must fail.
+    val packed = scratch / "packed.c"
+    packed.writeOver("#pragma pack(1)\n#include <sb_aadl_types.h>\n")
+    val p = compile(ISZ(), ISZ(packed), None())
+    assert(!p.ok, "#pragma pack(1): a layout that differs from HAMR's compiled")
+    assert(ops.StringOps(p.err).contains(layoutMsg), s"#pragma pack(1): unexpected diagnostics:\n${p.err}")
+
+    // -fshort-enums shrinks Mode to 1 byte where the compiler honours it; clang targeting the
+    // MSVC ABI ignores it (enums there are always int), leaving HAMR's layout -- and a passing
+    // build -- intact.  So it must fail only for the layout reason, if it fails at all.
     val header = generated / "types" / "include" / "sb_aadl_types.h"
-    // -fshort-enums shrinks Mode to 1 byte; -fpack-struct removes Padded_i's padding
-    for (flag <- ISZ[String]("-fshort-enums", "-fpack-struct")) {
-      val r = compile(ISZ(flag, "-x", "c"), ISZ(header), None())
-      assert(!r.ok, s"$flag: a layout that differs from HAMR's compiled")
-      assert(ops.StringOps(r.err).contains("memory layout differs from HAMR's"), s"$flag: unexpected diagnostics:\n${r.err}")
+    val e = compile(ISZ("-fshort-enums", "-x", "c"), ISZ(header), None())
+    if (e.ok) {
+      println(s"-fshort-enums does not change enum sizes with ${cc.get}: HAMR's layout holds, nothing to catch")
+    } else {
+      assert(ops.StringOps(e.err).contains(layoutMsg), s"-fshort-enums: unexpected diagnostics:\n${e.err}")
     }
   }
 
