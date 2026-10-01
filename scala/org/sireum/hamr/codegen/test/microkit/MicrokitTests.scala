@@ -128,8 +128,8 @@ class MicrokitTests extends CodegenTest {
 
       // Stage 2 of TestScheduler-design.md, the contract-free half: this model declares no
       // GUMBO state variables and is built without runtime monitoring, so it exercises the
-      // path where GumboMonitorPlugin never runs -- no sv_ ports, no is_monitoring_enabled --
-      // and where D5 therefore does not demand --runtime-monitoring.
+      // path where neither StateVarPortsPlugin nor GumboMonitorPlugin runs -- no sv_ ports,
+      // no is_monitoring_enabled.
       test(
         testName = s"test_sched_$userLandName",
         modelDir = sysmlDir,
@@ -152,6 +152,21 @@ class MicrokitTests extends CodegenTest {
         modelDir = sysmlDir,
         airFile = if (air.size == 1) Some(air(0)) else None(),
         ops = testOptions(
+          experimentalOptions =
+            testOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER),
+        description = None(),
+        modelUri = None(),
+        expectedErrorReasons = ISZ())
+
+      // Stage 7 (D22): system testing without --runtime-monitoring.  The threads still get
+      // their sv_ state-variable ports, regions and is_monitoring_enabled() -- the test
+      // controller reads them -- but no monitor PD or monitor variant bundle is generated.
+      test(
+        testName = s"test_sched_no_rm_$testName",
+        modelDir = sysmlDir,
+        airFile = if (air.size == 1) Some(air(0)) else None(),
+        ops = testOptions(
+          runtimeMonitoring = F,
           experimentalOptions =
             testOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER),
         description = None(),

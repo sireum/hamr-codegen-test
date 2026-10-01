@@ -100,7 +100,8 @@ class CParserTest extends TestSuite {
       val cFileOpt = Parsers.parseC(f, root, reporter)
       root.removeAll()
 
-      reporter.printMessages()
+      // the warning is the expected outcome, checked below -- not printed, so a passing run
+      // shows no parse error
       assert(cFileOpt.isEmpty)
       assert(!reporter.hasError)
       assert(reporter.warnings.size == 1 && reporter.warnings(0).kind == String("CParser"))
