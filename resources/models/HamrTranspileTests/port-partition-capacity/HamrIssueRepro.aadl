@@ -1,0 +1,40 @@
+package HamrIssueRepro
+public
+  with Base_Types;
+
+  -- One thread with both event and data output ports.
+  thread Worker
+    features
+      request_event : in event port;
+      result_event : out event port;
+      sample_result : out data port Base_Types::Boolean;
+  end Worker;
+
+  thread implementation Worker.impl
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 10 ms;
+  end Worker.impl;
+
+  process Application end Application;
+
+  process implementation Application.impl
+    subcomponents
+      worker : thread Worker.impl;
+  end Application.impl;
+
+  processor NativeProcessor
+  end NativeProcessor;
+
+  system RootSystem end RootSystem;
+
+  system implementation RootSystem.impl
+    subcomponents
+      application : process Application.impl;
+      cpu : processor NativeProcessor;
+    properties
+      Actual_Processor_Binding => (reference(cpu))
+        applies to application;
+  end RootSystem.impl;
+
+end HamrIssueRepro;

@@ -386,6 +386,17 @@ object TestUtil {
 
           val cCompileResults = vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None(), "c-compile")
           _check(cCompileResults, "C Compilation failed")
+
+          // smoke test the bound checked Demo app, e.g. to catch sequence sizes that are too
+          // small for ART's needs. The app runs until killed so reaching the timeout is a pass
+          val demo = compileScript.up / "slang-build" / (if (Os.isWin) "Demo.exe" else "Demo")
+          if (keepGoing && demo.exists && performAction("C Demo run")) {
+            println("Running C Demo app ...")
+            val demoResults = vproc(s"${demo.string} -s roundRobin", demo.up, ISZ(), Some(5000), "c-demo-run")
+            if (demoResults.exitCode != -100) {
+              _check(demoResults, "C Demo app failed")
+            }
+          }
         }
       }
     }

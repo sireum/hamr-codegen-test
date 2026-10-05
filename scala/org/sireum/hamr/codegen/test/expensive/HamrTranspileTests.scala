@@ -48,6 +48,10 @@ class HamrTranspileTests extends CodegenTest with BeforeAndAfterAll {
     gen("building_control_gen_mixed", testResources.modelsDir, "BuildingControl_BuildingControlDemo_i_Instance.json", ISZ(linux)),
 
     gen("attestation-gate", testResources.modelsDir, "SysContext_top_Impl_Instance.json", ISZ(sel4)),
+
+    // https://github.com/sireum/hamr-codegen/issues/13 -- IS[Z,art.Art.PortId] is sized to the largest
+    // port partition (1 here) so ART must not concatenate the event and data out port id sequences
+    gen("port-partition-capacity", testResources.modelsDir, "HamrIssueRepro_RootSystem_impl_Instance.json", ISZ(linux)),
   )
 
   for (proj <- tests) {
