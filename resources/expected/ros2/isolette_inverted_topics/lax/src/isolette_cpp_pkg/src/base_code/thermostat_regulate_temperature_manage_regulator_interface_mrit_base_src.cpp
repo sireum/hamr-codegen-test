@@ -49,7 +49,7 @@ thermostat_regulate_temperature_manage_regulator_interface_mrit_base::thermostat
         1);
 
     // timeTriggered callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&thermostat_regulate_temperature_manage_regulator_interface_mrit_base::timeTriggered, this), cb_group_);
 
 }

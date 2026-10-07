@@ -38,7 +38,7 @@ temperature_sensor_cpi_thermostat_base::temperature_sensor_cpi_thermostat_base()
         1);
 
     // timeTriggered callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&temperature_sensor_cpi_thermostat_base::timeTriggered, this), cb_group_);
 
 }

@@ -87,7 +87,7 @@ producer_producer_base::producer_producer_base() : Node("producer_producer")
         1);
 
     // timeTriggeredCaller callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&producer_producer_base::timeTriggeredCaller, this), cb_group_);
 
     // Used by receiveInputs

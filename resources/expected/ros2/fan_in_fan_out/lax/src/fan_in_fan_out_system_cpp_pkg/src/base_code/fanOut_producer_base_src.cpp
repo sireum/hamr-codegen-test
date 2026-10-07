@@ -15,7 +15,7 @@ fanOut_producer_base::fanOut_producer_base() : Node("fanOut_producer")
         1);
 
     // timeTriggered callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&fanOut_producer_base::timeTriggered, this), cb_group_);
 
 }

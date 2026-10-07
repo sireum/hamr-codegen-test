@@ -125,7 +125,7 @@ rcl_ret_t tcp_tempSensor_base_init(tcp_tempSensor_base_t * self)
     RCL_CHECK(rclc_timer_init_default(
         &self->period_timer,
         &self->support,
-        RCL_MS_TO_NS(1000),
+        1000000000, // ns
         period_timer_callback));
 
     // USER INIT - additions within these tags will be preserved when re-running Codegen

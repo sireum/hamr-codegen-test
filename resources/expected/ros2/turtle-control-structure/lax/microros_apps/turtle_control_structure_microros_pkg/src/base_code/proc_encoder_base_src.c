@@ -170,7 +170,7 @@ rcl_ret_t proc_encoder_base_init(proc_encoder_base_t * self)
     RCL_CHECK(rclc_timer_init_default(
         &self->period_timer,
         &self->support,
-        RCL_MS_TO_NS(100),
+        100000000, // ns
         period_timer_callback));
 
     // USER INIT - additions within these tags will be preserved when re-running Codegen

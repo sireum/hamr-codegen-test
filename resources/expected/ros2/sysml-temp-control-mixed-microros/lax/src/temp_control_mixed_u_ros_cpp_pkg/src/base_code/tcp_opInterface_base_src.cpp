@@ -18,7 +18,7 @@ tcp_opInterface_base::tcp_opInterface_base() : Node("tcp_opInterface")
         1);
 
     // timeTriggered callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&tcp_opInterface_base::timeTriggered, this), cb_group_);
 
 }

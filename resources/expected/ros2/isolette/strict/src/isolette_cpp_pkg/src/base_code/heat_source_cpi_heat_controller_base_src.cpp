@@ -18,7 +18,7 @@ heat_source_cpi_heat_controller_base::heat_source_cpi_heat_controller_base() : N
         1);
 
     // timeTriggeredCaller callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&heat_source_cpi_heat_controller_base::timeTriggeredCaller, this), cb_group_);
 
     // Used by receiveInputs

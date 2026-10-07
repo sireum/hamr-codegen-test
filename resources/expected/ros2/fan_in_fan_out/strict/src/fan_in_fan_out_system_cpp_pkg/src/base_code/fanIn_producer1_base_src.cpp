@@ -11,7 +11,7 @@ fanIn_producer1_base::fanIn_producer1_base() : Node("fanIn_producer1")
         1);
 
     // timeTriggeredCaller callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&fanIn_producer1_base::timeTriggeredCaller, this), cb_group_);
 
     // Used by receiveInputs

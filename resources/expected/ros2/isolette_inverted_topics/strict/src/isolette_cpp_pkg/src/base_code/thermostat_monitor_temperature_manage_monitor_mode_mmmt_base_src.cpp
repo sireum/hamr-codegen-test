@@ -28,7 +28,7 @@ thermostat_monitor_temperature_manage_monitor_mode_mmmt_base::thermostat_monitor
         1);
 
     // timeTriggeredCaller callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&thermostat_monitor_temperature_manage_monitor_mode_mmmt_base::timeTriggeredCaller, this), cb_group_);
 
     // Used by receiveInputs

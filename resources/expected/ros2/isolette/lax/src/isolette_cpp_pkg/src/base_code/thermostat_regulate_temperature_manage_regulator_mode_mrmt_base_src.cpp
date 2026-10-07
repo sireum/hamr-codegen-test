@@ -32,7 +32,7 @@ thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::thermostat_regu
         1);
 
     // timeTriggered callback timer
-    periodTimer_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+    periodTimer_ = this->create_wall_timer(std::chrono::nanoseconds(1000000000),
         std::bind(&thermostat_regulate_temperature_manage_regulator_mode_mrmt_base::timeTriggered, this), cb_group_);
 
 }
