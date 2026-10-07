@@ -542,7 +542,7 @@ public
 			-- new process runs on A53
 			Actual_Processor_Binding => (reference(A1_Basecard.application_proc.Core0)) applies to SW;
 			CASE_Properties::OS => seL4 applies to A1_Basecard.application_proc.Core0;
-			Frame_Period => 500 ms applies to A1_Basecard.application_proc.Core0;
+			Frame_Period => 700 ms applies to A1_Basecard.application_proc.Core0;
 			Clock_Period => 2 ms applies to A1_Basecard.application_proc.Core0;
 			CASE_Scheduling::Max_Domain => 8 applies to A1_Basecard.application_proc.Core0;
 

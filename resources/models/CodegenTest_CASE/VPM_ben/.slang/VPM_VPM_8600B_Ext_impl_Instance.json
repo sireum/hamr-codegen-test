@@ -2783,7 +2783,7 @@
                       "propertyValues" : [
                         {
                           "type" : "UnitProp",
-                          "value" : "5.0E11",
+                          "value" : "7.0E11",
                           "unit" : {
                             "type" : "Some",
                             "value" : "ps"
