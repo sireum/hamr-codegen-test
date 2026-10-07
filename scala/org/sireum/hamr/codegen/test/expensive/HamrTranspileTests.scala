@@ -36,6 +36,9 @@ class HamrTranspileTests extends CodegenTest with BeforeAndAfterAll {
 
   val testResources: TestResources = CodegenTest.defaultTestLayout(getClass())
 
+  // also exercise the legacy scheduler build (one process per thread) for the Linux tests
+  override def runLegacy(testName: String): B = ops.StringOps(testName).endsWith("--Linux")
+
   val (linux, sel4, sel4_tb, sel4_only) = (CodegenHamrPlatform.Linux, CodegenHamrPlatform.SeL4, CodegenHamrPlatform.SeL4_TB, CodegenHamrPlatform.SeL4_Only)
 
   def gen(name: String, dir: Os.Path, json: String, platforms: ISZ[CodegenHamrPlatform.Type]): (String, Os.Path, Os.Path, ISZ[CodegenHamrPlatform.Type]) = {

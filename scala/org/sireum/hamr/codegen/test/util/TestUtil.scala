@@ -397,6 +397,28 @@ object TestUtil {
               _check(demoResults, "C Demo app failed")
             }
           }
+
+          // the legacy scheduler build runs each thread in its own process, connected by shared
+          // memory. It is not transpiled by default, so transpile, compile and run it here
+          if (keepGoing && testSuite.runLegacy(testName) && performAction("C legacy run")) {
+            if (Os.isWin) {
+              println("Skipping the legacy build on Windows: its System V IPC needs cygserver")
+            } else {
+              println("Transpiling legacy C project via script ...")
+              val transpileScript = fetch("transpile.cmd", slangOutDir.get)
+              _check(vproc(s"${transpileScript.string} --legacy", transpileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string)), None(), "trans-linux-legacy"),
+                "Legacy transpilation failed")
+              if (keepGoing) {
+                println("Compiling legacy C project via script ...")
+                _check(vproc(s"${compileScript.string} -b -r -l", compileScript.up, ISZ(("SIREUM_HOME", sireum.up.up.string), ("MAKE_ARGS", "-j4")), None(), "c-compile-legacy"),
+                  "Legacy C compilation failed")
+              }
+              if (keepGoing) {
+                println("Running legacy C apps ...")
+                keepGoing = runLegacyApps(testName, compileScript.up)
+              }
+            }
+          }
         }
       }
     }
@@ -543,6 +565,99 @@ object TestUtil {
     }
 
     return keepGoing // ie. no failure occurred
+  }
+
+  /** Runs a compiled legacy scheduler build the way the generated run.sh does, but headless:
+    * starts every component app, runs LegacyDemo twice (initialise, then start), lets the apps
+    * run, then stops them and removes the System V IPC objects they created. Unlike stop.sh it
+    * only touches the processes it started and the IPC objects that appeared during the run.
+    *
+    * @param binDir the C project's bin directory (holding run.sh and slang-build)
+    * @return T if every component app was still running when it was stopped
+    */
+  def runLegacyApps(testName: String, binDir: Os.Path): B = {
+    val buildDir = binDir / "slang-build"
+    val legacyDemo = buildDir / "LegacyDemo"
+    val apps = buildDir.list.filter(p => p.isFile && p.name != string"LegacyDemo" &&
+      !ops.StringOps(p.name).contains(".") && new java.io.File(p.value.native).canExecute)
+    if (!legacyDemo.exists || apps.isEmpty) {
+      println(s"$testName: legacy build has no LegacyDemo or component apps in ${buildDir.toUri}")
+      return F
+    }
+
+    val user = System.getProperty("user.name")
+    // ids of this user's shared memory segments ("m") or semaphores ("s"); the id is the second
+    // column of `ipcs` output on both Linux and macOS
+    def ipcIds(kind: Predef.String): scala.collection.immutable.Set[Predef.String] = {
+      val out = scala.sys.process.Process(Seq("ipcs", s"-$kind")).!!
+      out.split("\n").toSeq.map(_.trim.split("\\s+")).filter(cols =>
+        cols.length > 2 && cols(1).forall(_.isDigit) && cols.contains(user)).map(_(1)).toSet
+    }
+    // the apps' keys are the system's key base (see etc/ipc.c) plus a port id; stale objects with
+    // those keys, e.g. from a crashed earlier run, would make the apps abort
+    val ipcC = binDir.up / "etc" / "ipc.c"
+    val keyBase: Option[Long] =
+      if (!ipcC.exists) None()
+      else ipcC.readLines.elements.map(_.value.trim).collectFirst {
+        case l if l.startsWith("#define IPC_KEY_BASE_DEFAULT ") => l.split("\\s+")(2).toLong
+      } match { case scala.Some(v) => Some(v); case _ => None() }
+    if (keyBase.nonEmpty) {
+      def staleKeys(kind: Predef.String): Seq[Predef.String] = {
+        val out = scala.sys.process.Process(Seq("ipcs", s"-$kind")).!!
+        out.split("\n").toSeq.filter(_.contains(user)).flatMap(_.trim.split("\\s+").find(_.startsWith("0x")))
+          .filter(k => { val v = java.lang.Long.parseLong(k.substring(2), 16); v >= keyBase.get && v < keyBase.get + 0x10000 })
+      }
+      val stale = staleKeys("m") ++ staleKeys("s")
+      if (stale.nonEmpty) {
+        println(s"$testName: found System V IPC objects owned by $user with this system's keys (${stale.mkString(", ")}), " +
+          s"probably left by an earlier run. Remove them (e.g. ${(binDir / "stop.sh").value}, or ipcrm) and rerun")
+        return F
+      }
+    }
+
+    val shmBefore = ipcIds("m")
+    val semBefore = ipcIds("s")
+
+    val procs: ISZ[(Os.Path, Process, java.io.File)] = for (app <- apps) yield {
+      val log = new java.io.File((binDir / s"legacy-${app.name}.log").value.native)
+      val p = new ProcessBuilder(app.value.native).directory(new java.io.File(binDir.value.native))
+        .redirectInput(ProcessBuilder.Redirect.from(new java.io.File("/dev/null")))
+        .redirectErrorStream(true).redirectOutput(log).start()
+      (app, p, log)
+    }
+
+    var ok = T
+    try {
+      Thread.sleep(1000)
+      for (step <- ISZ("initialise", "start") if ok) {
+        val r = proc"${legacyDemo.string}".at(binDir).timeout(10000).run()
+        if (!r.ok) {
+          println(s"$testName: LegacyDemo ($step) failed with exit code ${r.exitCode}")
+          println(r.out)
+          println(r.err)
+          ok = F
+        }
+        Thread.sleep(1000)
+      }
+      if (ok) {
+        Thread.sleep(5000)
+      }
+      for ((app, p, log) <- procs if !p.isAlive) {
+        println(s"$testName: legacy app ${app.name} exited with code ${p.exitValue()}; output:")
+        println(new Predef.String(java.nio.file.Files.readAllBytes(log.toPath)))
+        ok = F
+      }
+    } finally {
+      for ((_, p, _) <- procs) {
+        p.destroy()
+        if (!p.waitFor(2, java.util.concurrent.TimeUnit.SECONDS)) {
+          p.destroyForcibly()
+        }
+      }
+      for (id <- ipcIds("m") -- shmBefore) scala.sys.process.Process(Seq("ipcrm", "-m", id)).!
+      for (id <- ipcIds("s") -- semBefore) scala.sys.process.Process(Seq("ipcrm", "-s", id)).!
+    }
+    return ok
   }
 
   def isLinux(platform: CodegenHamrPlatform.Type): Boolean = {
@@ -896,6 +1011,11 @@ object CodegenTestSuite {
 }
 
 trait CodegenTestSuite extends TestSuite with BeforeAndAfterAll {
+
+  /** Whether a Linux test should also transpile, compile and run the legacy scheduler build, in
+    * which each thread is its own process (see TestUtil.runLegacyApps). Only applies when C is
+    * compiled (testmodes=compile). */
+  def runLegacy(testName: String): B = F
 
   def add(key: String, time: Z): Unit = {
     var suiteResults: Map[String, ISZ[Z]] = CodegenTestSuite.taskMap.getOrElse(this.suiteName, Map.empty)

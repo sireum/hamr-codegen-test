@@ -209,7 +209,8 @@ class CodeGenTest_Base extends CodegenTest {
       platform = CodegenHamrPlatform.Linux
       test(s"$name--${platform}", modelDir, model,
         baseOptions(platform = platform,
-          maxStringSize = 300),
+          // the generated example code logs a whole Mission (10 Coordinate_Impls)
+          maxStringSize = 1024),
         None(), uri, ISZ())
 
       platform = CodegenHamrPlatform.SeL4_TB
