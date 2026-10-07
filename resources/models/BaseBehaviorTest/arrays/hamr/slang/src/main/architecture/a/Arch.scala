@@ -3,6 +3,7 @@
 package a
 
 import org.sireum._
+import org.sireum.S64._
 import art._
 import art.PortMode._
 import art.DispatchPropertyProtocol._
@@ -20,7 +21,7 @@ object Arch {
     a.Arrays.Producer_proc_producer_Bridge(
       id = bridgeId"0",
       name = "PC_Sys_Impl_Instance_proc_producer",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       coordinates = coordinates,
@@ -36,7 +37,7 @@ object Arch {
     a.Arrays.Consumer_proc_consumer_Bridge(
       id = bridgeId"1",
       name = "PC_Sys_Impl_Instance_proc_consumer",
-      dispatchProtocol = Sporadic(min = 1),
+      dispatchProtocol = Sporadic(min = s64"1000000"),
       dispatchTriggers = None(),
 
       coordinates = coordinates,

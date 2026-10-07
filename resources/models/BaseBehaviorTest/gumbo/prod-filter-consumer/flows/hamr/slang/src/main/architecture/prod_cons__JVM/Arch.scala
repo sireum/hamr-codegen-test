@@ -3,6 +3,7 @@
 package prod_cons__JVM
 
 import org.sireum._
+import org.sireum.S64._
 import art._
 import art.PortMode._
 import art.DispatchPropertyProtocol._
@@ -19,7 +20,7 @@ object Arch {
     prod_cons__JVM.ProdConsFlows.Producer_p_producer_Bridge(
       id = bridgeId"0",
       name = "s_i_Instance_p_producer",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       a_out = a_out,
@@ -35,7 +36,7 @@ object Arch {
     prod_cons__JVM.ProdConsFlows.Filter_p_p_filterp_Bridge(
       id = bridgeId"1",
       name = "s_i_Instance_p_filterp",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       a_in = a_in,
@@ -53,7 +54,7 @@ object Arch {
     prod_cons__JVM.ProdConsFlows.Filter_s_p_filters_Bridge(
       id = bridgeId"2",
       name = "s_i_Instance_p_filters",
-      dispatchProtocol = Sporadic(min = 1),
+      dispatchProtocol = Sporadic(min = s64"1000000"),
       dispatchTriggers = None(),
 
       a_in = a_in,
@@ -69,7 +70,7 @@ object Arch {
     prod_cons__JVM.ProdConsFlows.Consumer_p_consumer_Bridge(
       id = bridgeId"3",
       name = "s_i_Instance_p_consumer",
-      dispatchProtocol = Sporadic(min = 1),
+      dispatchProtocol = Sporadic(min = s64"1000000"),
       dispatchTriggers = None(),
 
       a_in = a_in,

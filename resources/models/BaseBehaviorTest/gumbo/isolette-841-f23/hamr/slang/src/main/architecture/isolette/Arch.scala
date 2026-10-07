@@ -3,6 +3,7 @@
 package isolette
 
 import org.sireum._
+import org.sireum.S64._
 import art._
 import art.PortMode._
 import art.DispatchPropertyProtocol._
@@ -26,7 +27,7 @@ object Arch {
     isolette.Regulate.Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_Bridge(
       id = bridgeId"0",
       name = "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_interface",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       upper_desired_tempWstatus = upper_desired_tempWstatus,
@@ -50,7 +51,7 @@ object Arch {
     isolette.Regulate.Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_Bridge(
       id = bridgeId"1",
       name = "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_heat_source",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       current_tempWstatus = current_tempWstatus,
@@ -69,7 +70,7 @@ object Arch {
     isolette.Regulate.Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_Bridge(
       id = bridgeId"2",
       name = "isolette_single_sensor_Instance_thermostat_regulate_temperature_manage_regulator_mode",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       current_tempWstatus = current_tempWstatus,
@@ -84,7 +85,7 @@ object Arch {
     isolette.Regulate.Detect_Regulator_Failure_impl_thermostat_regulate_temperature_detect_regulator_failure_Bridge(
       id = bridgeId"3",
       name = "isolette_single_sensor_Instance_thermostat_regulate_temperature_detect_regulator_failure",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       internal_failure = internal_failure
@@ -103,7 +104,7 @@ object Arch {
     isolette.Monitor.Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_Bridge(
       id = bridgeId"4",
       name = "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_interface",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       upper_alarm_tempWstatus = upper_alarm_tempWstatus,
@@ -126,7 +127,7 @@ object Arch {
     isolette.Monitor.Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_Bridge(
       id = bridgeId"5",
       name = "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_alarm",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       current_tempWstatus = current_tempWstatus,
@@ -145,7 +146,7 @@ object Arch {
     isolette.Monitor.Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_Bridge(
       id = bridgeId"6",
       name = "isolette_single_sensor_Instance_thermostat_monitor_temperature_manage_monitor_mode",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       current_tempWstatus = current_tempWstatus,
@@ -160,7 +161,7 @@ object Arch {
     isolette.Monitor.Detect_Monitor_Failure_impl_thermostat_monitor_temperature_detect_monitor_failure_Bridge(
       id = bridgeId"7",
       name = "isolette_single_sensor_Instance_thermostat_monitor_temperature_detect_monitor_failure",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       internal_failure = internal_failure
@@ -179,7 +180,7 @@ object Arch {
     isolette.Isolette.operator_interface_thread_impl_operator_interface_oip_oit_Bridge(
       id = bridgeId"8",
       name = "isolette_single_sensor_Instance_operator_interface_oip_oit",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       regulator_status = regulator_status,
@@ -199,7 +200,7 @@ object Arch {
     isolette.Devices.Temperature_Sensor_impl_temperature_sensor_cpi_thermostat_Bridge(
       id = bridgeId"9",
       name = "isolette_single_sensor_Instance_temperature_sensor_cpi_thermostat",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       air = air,
@@ -213,7 +214,7 @@ object Arch {
     isolette.Devices.Heat_Source_impl_heat_source_cpi_heat_controller_Bridge(
       id = bridgeId"10",
       name = "isolette_single_sensor_Instance_heat_source_cpi_heat_controller",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       heat_control = heat_control,

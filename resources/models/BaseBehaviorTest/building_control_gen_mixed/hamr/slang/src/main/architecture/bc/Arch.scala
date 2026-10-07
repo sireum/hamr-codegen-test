@@ -3,6 +3,7 @@
 package bc
 
 import org.sireum._
+import org.sireum.S64._
 import art._
 import art.PortMode._
 import art.DispatchPropertyProtocol._
@@ -19,7 +20,7 @@ object Arch {
     bc.BuildingControl.TempSensor_i_tcp_tempSensor_Bridge(
       id = bridgeId"0",
       name = "BuildingControlDemo_i_Instance_tcp_tempSensor",
-      dispatchProtocol = Periodic(period = 1000),
+      dispatchProtocol = Periodic(period = s64"1000000000"),
       dispatchTriggers = None(),
 
       currentTemp = currentTemp,
@@ -36,7 +37,7 @@ object Arch {
     bc.BuildingControl.TempControl_i_tcp_tempControl_Bridge(
       id = bridgeId"1",
       name = "BuildingControlDemo_i_Instance_tcp_tempControl",
-      dispatchProtocol = Sporadic(min = 1000),
+      dispatchProtocol = Sporadic(min = s64"1000000000"),
       dispatchTriggers = None(),
 
       currentTemp = currentTemp,
@@ -53,7 +54,7 @@ object Arch {
     bc.BuildingControl.Fan_i_tcp_fan_Bridge(
       id = bridgeId"2",
       name = "BuildingControlDemo_i_Instance_tcp_fan",
-      dispatchProtocol = Sporadic(min = 1000),
+      dispatchProtocol = Sporadic(min = s64"1000000000"),
       dispatchTriggers = None(),
 
       fanCmd = fanCmd,
