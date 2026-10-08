@@ -14,12 +14,12 @@
               "type" : "Some",
               "value" : "\/cet-ranges\/cet_ranges.aadl"
             },
-            "beginLine" : 53,
+            "beginLine" : 72,
             "beginColumn" : 3,
-            "endLine" : 60,
+            "endLine" : 82,
             "endColumn" : 13,
-            "offset" : 997,
-            "length" : 236
+            "offset" : 1644,
+            "length" : 326
           }
         }
       },
@@ -50,11 +50,11 @@
                   "type" : "Some",
                   "value" : "\/cet-ranges\/cet_ranges.aadl"
                 },
-                "beginLine" : 56,
+                "beginLine" : 75,
                 "beginColumn" : 7,
-                "endLine" : 56,
+                "endLine" : 75,
                 "endColumn" : 27,
-                "offset" : 1080,
+                "offset" : 1727,
                 "length" : 20
               }
             }
@@ -71,6 +71,282 @@
             }
           },
           "features" : [
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 24,
+                    "beginColumn" : 7,
+                    "endLine" : 24,
+                    "endColumn" : 49,
+                    "offset" : 599,
+                    "length" : 42
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "In"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "inp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "inp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "inp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.0"
+            },
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 25,
+                    "beginColumn" : 7,
+                    "endLine" : 25,
+                    "endColumn" : 51,
+                    "offset" : 648,
+                    "length" : 44
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "Out"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "outp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "outp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "outp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.1"
+            }
           ],
           "subComponents" : [
             {
@@ -86,11 +362,11 @@
                       "type" : "Some",
                       "value" : "\/cet-ranges\/cet_ranges.aadl"
                     },
-                    "beginLine" : 23,
+                    "beginLine" : 30,
                     "beginColumn" : 7,
-                    "endLine" : 23,
+                    "endLine" : 30,
                     "endColumn" : 30,
-                    "offset" : 517,
+                    "offset" : 762,
                     "length" : 23
                   }
                 }
@@ -107,6 +383,282 @@
                 }
               },
               "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "worker", "inp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 7,
+                        "endLine" : 11,
+                        "endColumn" : 49,
+                        "offset" : 291,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "ok", "worker", "inp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "ok", "worker", "inp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "ok", "worker", "inp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "worker", "outp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 12,
+                        "beginColumn" : 7,
+                        "endLine" : 12,
+                        "endColumn" : 51,
+                        "offset" : 340,
+                        "length" : 44
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "ok", "worker", "outp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "ok", "worker", "outp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "ok", "worker", "outp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                }
               ],
               "subComponents" : [
               ],
@@ -298,10 +850,310 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             }
           ],
           "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok", "co"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 33,
+                    "beginColumn" : 7,
+                    "endLine" : 33,
+                    "endColumn" : 37,
+                    "offset" : 843,
+                    "length" : 30
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "worker"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 30,
+                        "beginColumn" : 7,
+                        "endLine" : 30,
+                        "endColumn" : 30,
+                        "offset" : 762,
+                        "length" : 23
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "ok", "worker", "outp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/cet-ranges\/cet_ranges.aadl"
+                          },
+                          "beginLine" : 12,
+                          "beginColumn" : 7,
+                          "endLine" : 12,
+                          "endColumn" : 51,
+                          "offset" : 340,
+                          "length" : 44
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 75,
+                        "beginColumn" : 7,
+                        "endLine" : 75,
+                        "endColumn" : 27,
+                        "offset" : 1727,
+                        "length" : 20
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "ok", "outp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/cet-ranges\/cet_ranges.aadl"
+                          },
+                          "beginLine" : 25,
+                          "beginColumn" : 7,
+                          "endLine" : 25,
+                          "endColumn" : 51,
+                          "offset" : 648,
+                          "length" : 44
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "ok", "worker", "outp -> zero", "worker", "inp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok", "ci"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 32,
+                    "beginColumn" : 7,
+                    "endLine" : 32,
+                    "endColumn" : 35,
+                    "offset" : 808,
+                    "length" : 28
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 75,
+                        "beginColumn" : 7,
+                        "endLine" : 75,
+                        "endColumn" : 27,
+                        "offset" : 1727,
+                        "length" : 20
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "ok", "inp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/cet-ranges\/cet_ranges.aadl"
+                          },
+                          "beginLine" : 24,
+                          "beginColumn" : 7,
+                          "endLine" : 24,
+                          "endColumn" : 49,
+                          "offset" : 599,
+                          "length" : 42
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "ok", "worker"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 30,
+                        "beginColumn" : 7,
+                        "endLine" : 30,
+                        "endColumn" : 30,
+                        "offset" : 762,
+                        "length" : 23
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "ok", "worker", "inp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/cet-ranges\/cet_ranges.aadl"
+                          },
+                          "beginLine" : 11,
+                          "beginColumn" : 7,
+                          "endLine" : 11,
+                          "endColumn" : 49,
+                          "offset" : 291,
+                          "length" : 42
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "zero", "worker", "outp -> ok", "worker", "inp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.2"
+            }
           ],
           "connectionInstances" : [
           ],
@@ -377,7 +1229,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -392,11 +1244,11 @@
                   "type" : "Some",
                   "value" : "\/cet-ranges\/cet_ranges.aadl"
                 },
-                "beginLine" : 57,
+                "beginLine" : 76,
                 "beginColumn" : 7,
-                "endLine" : 57,
+                "endLine" : 76,
                 "endColumn" : 31,
-                "offset" : 1107,
+                "offset" : 1754,
                 "length" : 24
               }
             }
@@ -413,6 +1265,282 @@
             }
           },
           "features" : [
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 51,
+                    "beginColumn" : 7,
+                    "endLine" : 51,
+                    "endColumn" : 49,
+                    "offset" : 1240,
+                    "length" : 42
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "In"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "inp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "inp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "inp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.0"
+            },
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 52,
+                    "beginColumn" : 7,
+                    "endLine" : 52,
+                    "endColumn" : 51,
+                    "offset" : 1289,
+                    "length" : 44
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "Out"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "outp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "outp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "outp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.1"
+            }
           ],
           "subComponents" : [
             {
@@ -428,11 +1556,11 @@
                       "type" : "Some",
                       "value" : "\/cet-ranges\/cet_ranges.aadl"
                     },
-                    "beginLine" : 41,
+                    "beginLine" : 57,
                     "beginColumn" : 7,
-                    "endLine" : 41,
+                    "endLine" : 57,
                     "endColumn" : 32,
-                    "offset" : 848,
+                    "offset" : 1407,
                     "length" : 25
                   }
                 }
@@ -449,6 +1577,282 @@
                 }
               },
               "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "worker", "inp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 38,
+                        "beginColumn" : 7,
+                        "endLine" : 38,
+                        "endColumn" : 49,
+                        "offset" : 924,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "zero", "worker", "inp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "zero", "worker", "inp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "zero", "worker", "inp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "worker", "outp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 39,
+                        "beginColumn" : 7,
+                        "endLine" : 39,
+                        "endColumn" : 51,
+                        "offset" : 973,
+                        "length" : 44
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "zero", "worker", "outp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "zero", "worker", "outp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "zero", "worker", "outp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                }
               ],
               "subComponents" : [
               ],
@@ -640,10 +2044,310 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0"
             }
           ],
           "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero", "ci"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 59,
+                    "beginColumn" : 7,
+                    "endLine" : 59,
+                    "endColumn" : 35,
+                    "offset" : 1455,
+                    "length" : 28
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 76,
+                        "beginColumn" : 7,
+                        "endLine" : 76,
+                        "endColumn" : 31,
+                        "offset" : 1754,
+                        "length" : 24
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "zero", "inp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/cet-ranges\/cet_ranges.aadl"
+                          },
+                          "beginLine" : 51,
+                          "beginColumn" : 7,
+                          "endLine" : 51,
+                          "endColumn" : 49,
+                          "offset" : 1240,
+                          "length" : 42
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "worker"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 57,
+                        "beginColumn" : 7,
+                        "endLine" : 57,
+                        "endColumn" : 32,
+                        "offset" : 1407,
+                        "length" : 25
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "zero", "worker", "inp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/cet-ranges\/cet_ranges.aadl"
+                          },
+                          "beginLine" : 38,
+                          "beginColumn" : 7,
+                          "endLine" : 38,
+                          "endColumn" : 49,
+                          "offset" : 924,
+                          "length" : 42
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "ok", "worker", "outp -> zero", "worker", "inp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.2"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero", "co"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 60,
+                    "beginColumn" : 7,
+                    "endLine" : 60,
+                    "endColumn" : 37,
+                    "offset" : 1490,
+                    "length" : 30
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero", "worker"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 57,
+                        "beginColumn" : 7,
+                        "endLine" : 57,
+                        "endColumn" : 32,
+                        "offset" : 1407,
+                        "length" : 25
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "zero", "worker", "outp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/cet-ranges\/cet_ranges.aadl"
+                          },
+                          "beginLine" : 39,
+                          "beginColumn" : 7,
+                          "endLine" : 39,
+                          "endColumn" : 51,
+                          "offset" : 973,
+                          "length" : 44
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "zero"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/cet-ranges\/cet_ranges.aadl"
+                        },
+                        "beginLine" : 76,
+                        "beginColumn" : 7,
+                        "endLine" : 76,
+                        "endColumn" : 31,
+                        "offset" : 1754,
+                        "length" : 24
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "zero", "outp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/cet-ranges\/cet_ranges.aadl"
+                          },
+                          "beginLine" : 52,
+                          "beginColumn" : 7,
+                          "endLine" : 52,
+                          "endColumn" : 51,
+                          "offset" : 1289,
+                          "length" : 44
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "zero", "worker", "outp -> ok", "worker", "inp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.0"
+            }
           ],
           "connectionInstances" : [
           ],
@@ -719,7 +2423,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -734,11 +2438,11 @@
                   "type" : "Some",
                   "value" : "\/cet-ranges\/cet_ranges.aadl"
                 },
-                "beginLine" : 55,
+                "beginLine" : 74,
                 "beginColumn" : 7,
-                "endLine" : 55,
+                "endLine" : 74,
                 "endColumn" : 31,
-                "offset" : 1049,
+                "offset" : 1696,
                 "length" : 24
               }
             }
@@ -797,12 +2501,850 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/\/@componentInstance.2"
+          "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@componentInstance.2"
         }
       ],
       "connections" : [
+        {
+          "type" : "Connection",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_i_Instance", "c0"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/cet-ranges\/cet_ranges.aadl"
+                },
+                "beginLine" : 78,
+                "beginColumn" : 7,
+                "endLine" : 78,
+                "endColumn" : 37,
+                "offset" : 1801,
+                "length" : 30
+              }
+            }
+          },
+          "src" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 75,
+                    "beginColumn" : 7,
+                    "endLine" : 75,
+                    "endColumn" : 27,
+                    "offset" : 1727,
+                    "length" : 20
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "ok", "outp"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/cet-ranges\/cet_ranges.aadl"
+                      },
+                      "beginLine" : 25,
+                      "beginColumn" : 7,
+                      "endLine" : 25,
+                      "endColumn" : 51,
+                      "offset" : 648,
+                      "length" : 44
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "Out"
+                }
+              }
+            }
+          ],
+          "dst" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 76,
+                    "beginColumn" : 7,
+                    "endLine" : 76,
+                    "endColumn" : 31,
+                    "offset" : 1754,
+                    "length" : 24
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "zero", "inp"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/cet-ranges\/cet_ranges.aadl"
+                      },
+                      "beginLine" : 51,
+                      "beginColumn" : 7,
+                      "endLine" : 51,
+                      "endColumn" : 49,
+                      "offset" : 1240,
+                      "length" : 42
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "In"
+                }
+              }
+            }
+          ],
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "isBiDirectional" : false,
+          "connectionInstances" : [
+            {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "ok", "worker", "outp -> zero", "worker", "inp"],
+              "pos" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "properties" : [
+          ],
+          "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.1"
+        },
+        {
+          "type" : "Connection",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_i_Instance", "c1"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/cet-ranges\/cet_ranges.aadl"
+                },
+                "beginLine" : 79,
+                "beginColumn" : 7,
+                "endLine" : 79,
+                "endColumn" : 37,
+                "offset" : 1838,
+                "length" : 30
+              }
+            }
+          },
+          "src" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 76,
+                    "beginColumn" : 7,
+                    "endLine" : 76,
+                    "endColumn" : 31,
+                    "offset" : 1754,
+                    "length" : 24
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "zero", "outp"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/cet-ranges\/cet_ranges.aadl"
+                      },
+                      "beginLine" : 52,
+                      "beginColumn" : 7,
+                      "endLine" : 52,
+                      "endColumn" : 51,
+                      "offset" : 1289,
+                      "length" : 44
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "Out"
+                }
+              }
+            }
+          ],
+          "dst" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 75,
+                    "beginColumn" : 7,
+                    "endLine" : 75,
+                    "endColumn" : 27,
+                    "offset" : 1727,
+                    "length" : 20
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "ok", "inp"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/cet-ranges\/cet_ranges.aadl"
+                      },
+                      "beginLine" : 24,
+                      "beginColumn" : 7,
+                      "endLine" : 24,
+                      "endColumn" : 49,
+                      "offset" : 599,
+                      "length" : 42
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "In"
+                }
+              }
+            }
+          ],
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "isBiDirectional" : false,
+          "connectionInstances" : [
+            {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "zero", "worker", "outp -> ok", "worker", "inp"],
+              "pos" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "properties" : [
+          ],
+          "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.1"
+        }
       ],
       "connectionInstances" : [
+        {
+          "type" : "ConnectionInstance",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_i_Instance", "ok.worker.outp -> zero.worker.inp"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/cet-ranges\/cet_ranges.aadl"
+                },
+                "beginLine" : 33,
+                "beginColumn" : 7,
+                "endLine" : 33,
+                "endColumn" : 37,
+                "offset" : 843,
+                "length" : 30
+              }
+            }
+          },
+          "src" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "ok", "worker"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/cet-ranges\/cet_ranges.aadl"
+                  },
+                  "beginLine" : 30,
+                  "beginColumn" : 7,
+                  "endLine" : 30,
+                  "endColumn" : 30,
+                  "offset" : 762,
+                  "length" : 23
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok", "worker", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 12,
+                    "beginColumn" : 7,
+                    "endLine" : 12,
+                    "endColumn" : 51,
+                    "offset" : 340,
+                    "length" : 44
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "Out"
+              }
+            }
+          },
+          "dst" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "zero", "worker"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/cet-ranges\/cet_ranges.aadl"
+                  },
+                  "beginLine" : 57,
+                  "beginColumn" : 7,
+                  "endLine" : 57,
+                  "endColumn" : 32,
+                  "offset" : 1407,
+                  "length" : 25
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero", "worker", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 38,
+                    "beginColumn" : 7,
+                    "endLine" : 38,
+                    "endColumn" : 49,
+                    "offset" : 924,
+                    "length" : 42
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "In"
+              }
+            }
+          },
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "connectionRefs" : [
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok", "co"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 33,
+                    "beginColumn" : 7,
+                    "endLine" : 33,
+                    "endColumn" : 37,
+                    "offset" : 843,
+                    "length" : 30
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 75,
+                    "beginColumn" : 7,
+                    "endLine" : 75,
+                    "endColumn" : 27,
+                    "offset" : 1727,
+                    "length" : 20
+                  }
+                }
+              },
+              "isParent" : false
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "c0"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 78,
+                    "beginColumn" : 7,
+                    "endLine" : 78,
+                    "endColumn" : 37,
+                    "offset" : 1801,
+                    "length" : 30
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 72,
+                    "beginColumn" : 3,
+                    "endLine" : 82,
+                    "endColumn" : 13,
+                    "offset" : 1644,
+                    "length" : 326
+                  }
+                }
+              },
+              "isParent" : true
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero", "ci"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 59,
+                    "beginColumn" : 7,
+                    "endLine" : 59,
+                    "endColumn" : 35,
+                    "offset" : 1455,
+                    "length" : 28
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 76,
+                    "beginColumn" : 7,
+                    "endLine" : 76,
+                    "endColumn" : 31,
+                    "offset" : 1754,
+                    "length" : 24
+                  }
+                }
+              },
+              "isParent" : false
+            }
+          ],
+          "properties" : [
+          ]
+        },
+        {
+          "type" : "ConnectionInstance",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_i_Instance", "zero.worker.outp -> ok.worker.inp"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/cet-ranges\/cet_ranges.aadl"
+                },
+                "beginLine" : 60,
+                "beginColumn" : 7,
+                "endLine" : 60,
+                "endColumn" : 37,
+                "offset" : 1490,
+                "length" : 30
+              }
+            }
+          },
+          "src" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "zero", "worker"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/cet-ranges\/cet_ranges.aadl"
+                  },
+                  "beginLine" : 57,
+                  "beginColumn" : 7,
+                  "endLine" : 57,
+                  "endColumn" : 32,
+                  "offset" : 1407,
+                  "length" : 25
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero", "worker", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 39,
+                    "beginColumn" : 7,
+                    "endLine" : 39,
+                    "endColumn" : 51,
+                    "offset" : 973,
+                    "length" : 44
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "Out"
+              }
+            }
+          },
+          "dst" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "ok", "worker"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/cet-ranges\/cet_ranges.aadl"
+                  },
+                  "beginLine" : 30,
+                  "beginColumn" : 7,
+                  "endLine" : 30,
+                  "endColumn" : 30,
+                  "offset" : 762,
+                  "length" : 23
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok", "worker", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 11,
+                    "beginColumn" : 7,
+                    "endLine" : 11,
+                    "endColumn" : 49,
+                    "offset" : 291,
+                    "length" : 42
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "In"
+              }
+            }
+          },
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "connectionRefs" : [
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero", "co"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 60,
+                    "beginColumn" : 7,
+                    "endLine" : 60,
+                    "endColumn" : 37,
+                    "offset" : 1490,
+                    "length" : 30
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "zero"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 76,
+                    "beginColumn" : 7,
+                    "endLine" : 76,
+                    "endColumn" : 31,
+                    "offset" : 1754,
+                    "length" : 24
+                  }
+                }
+              },
+              "isParent" : false
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "c1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 79,
+                    "beginColumn" : 7,
+                    "endLine" : 79,
+                    "endColumn" : 37,
+                    "offset" : 1838,
+                    "length" : 30
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 72,
+                    "beginColumn" : 3,
+                    "endLine" : 82,
+                    "endColumn" : 13,
+                    "offset" : 1644,
+                    "length" : 326
+                  }
+                }
+              },
+              "isParent" : true
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok", "ci"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 32,
+                    "beginColumn" : 7,
+                    "endLine" : 32,
+                    "endColumn" : 35,
+                    "offset" : 808,
+                    "length" : 28
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "ok"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/cet-ranges\/cet_ranges.aadl"
+                    },
+                    "beginLine" : 75,
+                    "beginColumn" : 7,
+                    "endLine" : 75,
+                    "endColumn" : 27,
+                    "offset" : 1727,
+                    "length" : 20
+                  }
+                }
+              },
+              "isParent" : false
+            }
+          ],
+          "properties" : [
+          ]
+        }
       ],
       "properties" : [
       ],
@@ -839,11 +3381,146 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/cet-ranges\/instances\/cet_ranges_top_i_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [
   ],
   "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Integer_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 67,
+                "beginColumn" : 5,
+                "endLine" : 68,
+                "endColumn" : 54,
+                "offset" : 4661,
+                "length" : 158
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "32.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Number_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 79,
+                "beginColumn" : 4,
+                "endLine" : 79,
+                "endColumn" : 88,
+                "offset" : 3710,
+                "length" : 84
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Signed"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
   ]
 }

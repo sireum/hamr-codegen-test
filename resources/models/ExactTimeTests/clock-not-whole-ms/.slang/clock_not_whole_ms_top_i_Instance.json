@@ -14,11 +14,11 @@
               "type" : "Some",
               "value" : "\/clock-not-whole-ms\/clock_not_whole_ms.aadl"
             },
-            "beginLine" : 40,
+            "beginLine" : 50,
             "beginColumn" : 3,
-            "endLine" : 46,
+            "endLine" : 56,
             "endColumn" : 13,
-            "offset" : 745,
+            "offset" : 1078,
             "length" : 196
           }
         }
@@ -50,11 +50,11 @@
                   "type" : "Some",
                   "value" : "\/clock-not-whole-ms\/clock_not_whole_ms.aadl"
                 },
-                "beginLine" : 43,
+                "beginLine" : 53,
                 "beginColumn" : 7,
-                "endLine" : 43,
+                "endLine" : 53,
                 "endColumn" : 25,
-                "offset" : 828,
+                "offset" : 1161,
                 "length" : 18
               }
             }
@@ -71,6 +71,282 @@
             }
           },
           "features" : [
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/clock-not-whole-ms\/clock_not_whole_ms.aadl"
+                    },
+                    "beginLine" : 23,
+                    "beginColumn" : 7,
+                    "endLine" : 23,
+                    "endColumn" : 49,
+                    "offset" : 517,
+                    "length" : 42
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "In"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "inp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "inp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "inp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.0"
+            },
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/clock-not-whole-ms\/clock_not_whole_ms.aadl"
+                    },
+                    "beginLine" : 24,
+                    "beginColumn" : 7,
+                    "endLine" : 24,
+                    "endColumn" : 51,
+                    "offset" : 566,
+                    "length" : 44
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "Out"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "outp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "outp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "outp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.1"
+            }
           ],
           "subComponents" : [
             {
@@ -86,11 +362,11 @@
                       "type" : "Some",
                       "value" : "\/clock-not-whole-ms\/clock_not_whole_ms.aadl"
                     },
-                    "beginLine" : 22,
+                    "beginLine" : 29,
                     "beginColumn" : 7,
-                    "endLine" : 22,
+                    "endLine" : 29,
                     "endColumn" : 29,
-                    "offset" : 433,
+                    "offset" : 678,
                     "length" : 22
                   }
                 }
@@ -107,6 +383,282 @@
                 }
               },
               "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "worker", "inp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/clock-not-whole-ms\/clock_not_whole_ms.aadl"
+                        },
+                        "beginLine" : 10,
+                        "beginColumn" : 7,
+                        "endLine" : 10,
+                        "endColumn" : 49,
+                        "offset" : 211,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "inp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "inp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "inp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "worker", "outp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/clock-not-whole-ms\/clock_not_whole_ms.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 7,
+                        "endLine" : 11,
+                        "endColumn" : 51,
+                        "offset" : 260,
+                        "length" : 44
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "outp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "outp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "outp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                }
               ],
               "subComponents" : [
               ],
@@ -298,7 +850,7 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             }
           ],
           "connections" : [
@@ -411,7 +963,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -426,11 +978,11 @@
                   "type" : "Some",
                   "value" : "\/clock-not-whole-ms\/clock_not_whole_ms.aadl"
                 },
-                "beginLine" : 42,
+                "beginLine" : 52,
                 "beginColumn" : 7,
-                "endLine" : 42,
+                "endLine" : 52,
                 "endColumn" : 31,
-                "offset" : 797,
+                "offset" : 1130,
                 "length" : 24
               }
             }
@@ -593,7 +1145,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.1"
         }
       ],
       "connections" : [
@@ -635,11 +1187,146 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/clock-not-whole-ms\/instances\/clock_not_whole_ms_top_i_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [
   ],
   "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Integer_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 67,
+                "beginColumn" : 5,
+                "endLine" : 68,
+                "endColumn" : 54,
+                "offset" : 4661,
+                "length" : 158
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "32.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Number_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 79,
+                "beginColumn" : 4,
+                "endLine" : 79,
+                "endColumn" : 88,
+                "offset" : 3710,
+                "length" : 84
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Signed"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
   ]
 }

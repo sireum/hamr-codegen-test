@@ -1,11 +1,15 @@
 package cet_ranges
 public
+  with Base_Types;
   with CASE_Scheduling;
 
   -- D5: a Compute_Execution_Time low end of 0 is valid; a high end of 0 is an error (OSATE itself
   -- rejects low > high; that case is tested with patched AIR in ExactTimeResolveTests)
 
   thread ok_t
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end ok_t;
 
   thread implementation ok_t.i
@@ -16,14 +20,23 @@ public
   end ok_t.i;
 
   process ok_p
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end ok_p;
 
   process implementation ok_p.i
     subcomponents
       worker : thread ok_t.i;
+    connections
+      ci : port inp -> worker.inp;
+      co : port worker.outp -> outp;
   end ok_p.i;
 
   thread zero_t
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end zero_t;
 
   thread implementation zero_t.i
@@ -34,11 +47,17 @@ public
   end zero_t.i;
 
   process zero_p
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end zero_p;
 
   process implementation zero_p.i
     subcomponents
       worker : thread zero_t.i;
+    connections
+      ci : port inp -> worker.inp;
+      co : port worker.outp -> outp;
   end zero_p.i;
 
   processor proc
@@ -55,6 +74,9 @@ public
       proc : processor proc.i;
       ok : process ok_p.i;
       zero : process zero_p.i;
+    connections
+      c0 : port ok.outp -> zero.inp;
+      c1 : port zero.outp -> ok.inp;
     properties
       Actual_Processor_Binding => (reference (proc)) applies to ok, zero;
   end top.i;

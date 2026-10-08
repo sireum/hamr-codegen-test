@@ -1,10 +1,14 @@
 package two_instances
 public
+  with Base_Types;
   with CASE_Scheduling;
 
   -- D4: two instances of one declaration each get their own rounding warning, naming its path
 
   thread w_t
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end w_t;
 
   thread implementation w_t.i
@@ -14,11 +18,17 @@ public
   end w_t.i;
 
   process w_p
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end w_p;
 
   process implementation w_p.i
     subcomponents
       worker : thread w_t.i;
+    connections
+      ci : port inp -> worker.inp;
+      co : port worker.outp -> outp;
   end w_p.i;
 
   processor proc
@@ -35,6 +45,9 @@ public
       proc : processor proc.i;
       p1 : process w_p.i;
       p2 : process w_p.i;
+    connections
+      c0 : port p1.outp -> p2.inp;
+      c1 : port p2.outp -> p1.inp;
     properties
       Actual_Processor_Binding => (reference (proc)) applies to p1, p2;
   end top.i;

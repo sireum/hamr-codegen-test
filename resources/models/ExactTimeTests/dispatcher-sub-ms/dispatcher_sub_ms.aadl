@@ -1,10 +1,14 @@
 package dispatcher_sub_ms
 public
+  with Base_Types;
   with CASE_Scheduling;
 
   -- D7: a sub-ms Period is an error for the CAmkES 1 ms dispatcher calendar, not a modulo by zero
 
   thread a_t
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end a_t;
 
   thread implementation a_t.i
@@ -14,11 +18,17 @@ public
   end a_t.i;
 
   process a_p
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end a_p;
 
   process implementation a_p.i
     subcomponents
       worker : thread a_t.i;
+    connections
+      ci : port inp -> worker.inp;
+      co : port worker.outp -> outp;
   end a_p.i;
 
   processor proc

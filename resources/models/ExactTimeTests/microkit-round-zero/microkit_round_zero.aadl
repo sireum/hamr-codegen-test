@@ -1,10 +1,14 @@
 package microkit_round_zero
 public
+  with Base_Types;
   with CASE_Scheduling;
 
   -- D7: a Compute_Execution_Time that is 0 us in the domain schedule is an error
 
   thread a_t
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end a_t;
 
   thread implementation a_t.i
@@ -15,11 +19,17 @@ public
   end a_t.i;
 
   process a_p
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end a_p;
 
   process implementation a_p.i
     subcomponents
       worker : thread a_t.i;
+    connections
+      ci : port inp -> worker.inp;
+      co : port worker.outp -> outp;
     properties
       CASE_Scheduling::Domain => 2;
   end a_p.i;

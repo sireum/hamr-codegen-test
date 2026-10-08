@@ -14,12 +14,12 @@
               "type" : "Some",
               "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
             },
-            "beginLine" : 61,
+            "beginLine" : 80,
             "beginColumn" : 3,
-            "endLine" : 68,
+            "endLine" : 90,
             "endColumn" : 13,
-            "offset" : 1184,
-            "length" : 224
+            "offset" : 1831,
+            "length" : 306
           }
         }
       },
@@ -50,11 +50,11 @@
                   "type" : "Some",
                   "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
                 },
-                "beginLine" : 64,
+                "beginLine" : 83,
                 "beginColumn" : 7,
-                "endLine" : 64,
+                "endLine" : 83,
                 "endColumn" : 25,
-                "offset" : 1267,
+                "offset" : 1914,
                 "length" : 18
               }
             }
@@ -71,6 +71,282 @@
             }
           },
           "features" : [
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 24,
+                    "beginColumn" : 7,
+                    "endLine" : 24,
+                    "endColumn" : 49,
+                    "offset" : 595,
+                    "length" : 42
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "In"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "inp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "inp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "inp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.0"
+            },
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 25,
+                    "beginColumn" : 7,
+                    "endLine" : 25,
+                    "endColumn" : 51,
+                    "offset" : 644,
+                    "length" : 44
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "Out"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "outp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "outp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "outp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@featureInstance.1"
+            }
           ],
           "subComponents" : [
             {
@@ -86,11 +362,11 @@
                       "type" : "Some",
                       "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
                     },
-                    "beginLine" : 23,
+                    "beginLine" : 30,
                     "beginColumn" : 7,
-                    "endLine" : 23,
+                    "endLine" : 30,
                     "endColumn" : 29,
-                    "offset" : 511,
+                    "offset" : 756,
                     "length" : 22
                   }
                 }
@@ -107,6 +383,282 @@
                 }
               },
               "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "worker", "inp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 7,
+                        "endLine" : 11,
+                        "endColumn" : 49,
+                        "offset" : 287,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "inp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "inp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "inp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "worker", "outp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 12,
+                        "beginColumn" : 7,
+                        "endLine" : 12,
+                        "endColumn" : 51,
+                        "offset" : 336,
+                        "length" : 44
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "outp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "outp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "a", "worker", "outp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                }
               ],
               "subComponents" : [
               ],
@@ -298,10 +850,310 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0\/@componentInstance.0"
             }
           ],
           "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "co"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 33,
+                    "beginColumn" : 7,
+                    "endLine" : 33,
+                    "endColumn" : 37,
+                    "offset" : 836,
+                    "length" : 30
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "worker"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 30,
+                        "beginColumn" : 7,
+                        "endLine" : 30,
+                        "endColumn" : 29,
+                        "offset" : 756,
+                        "length" : 22
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "a", "worker", "outp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                          },
+                          "beginLine" : 12,
+                          "beginColumn" : 7,
+                          "endLine" : 12,
+                          "endColumn" : 51,
+                          "offset" : 336,
+                          "length" : 44
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 83,
+                        "beginColumn" : 7,
+                        "endLine" : 83,
+                        "endColumn" : 25,
+                        "offset" : 1914,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "a", "outp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                          },
+                          "beginLine" : 25,
+                          "beginColumn" : 7,
+                          "endLine" : 25,
+                          "endColumn" : 51,
+                          "offset" : 644,
+                          "length" : 44
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "a", "worker", "outp -> b", "worker", "inp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "ci"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 32,
+                    "beginColumn" : 7,
+                    "endLine" : 32,
+                    "endColumn" : 35,
+                    "offset" : 801,
+                    "length" : 28
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 83,
+                        "beginColumn" : 7,
+                        "endLine" : 83,
+                        "endColumn" : 25,
+                        "offset" : 1914,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "a", "inp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                          },
+                          "beginLine" : 24,
+                          "beginColumn" : 7,
+                          "endLine" : 24,
+                          "endColumn" : 49,
+                          "offset" : 595,
+                          "length" : 42
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "a", "worker"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 30,
+                        "beginColumn" : 7,
+                        "endLine" : 30,
+                        "endColumn" : 29,
+                        "offset" : 756,
+                        "length" : 22
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "a", "worker", "inp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                          },
+                          "beginLine" : 11,
+                          "beginColumn" : 7,
+                          "endLine" : 11,
+                          "endColumn" : 49,
+                          "offset" : 287,
+                          "length" : 42
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "b", "worker", "outp -> a", "worker", "inp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.2"
+            }
           ],
           "connectionInstances" : [
           ],
@@ -411,7 +1263,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/\/@componentInstance.0"
+          "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.0"
         },
         {
           "type" : "Component",
@@ -426,11 +1278,11 @@
                   "type" : "Some",
                   "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
                 },
-                "beginLine" : 65,
+                "beginLine" : 84,
                 "beginColumn" : 7,
-                "endLine" : 65,
+                "endLine" : 84,
                 "endColumn" : 25,
-                "offset" : 1292,
+                "offset" : 1939,
                 "length" : 18
               }
             }
@@ -447,6 +1299,282 @@
             }
           },
           "features" : [
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 53,
+                    "beginColumn" : 7,
+                    "endLine" : 53,
+                    "endColumn" : 49,
+                    "offset" : 1273,
+                    "length" : 42
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "In"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "inp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "inp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "inp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.0"
+            },
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 54,
+                    "beginColumn" : 7,
+                    "endLine" : 54,
+                    "endColumn" : 51,
+                    "offset" : 1322,
+                    "length" : 44
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "Out"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "DataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Integer_32"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "outp", "Data_Model::Number_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 88,
+                        "offset" : 3710,
+                        "length" : 84
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Signed"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "outp", "Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 5,
+                        "endLine" : 68,
+                        "endColumn" : 54,
+                        "offset" : 4661,
+                        "length" : 158
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "outp", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 27,
+                        "beginColumn" : 4,
+                        "endLine" : 30,
+                        "endColumn" : 36,
+                        "offset" : 1165,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Integer"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@featureInstance.1"
+            }
           ],
           "subComponents" : [
             {
@@ -462,11 +1590,11 @@
                       "type" : "Some",
                       "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
                     },
-                    "beginLine" : 43,
+                    "beginLine" : 59,
                     "beginColumn" : 7,
-                    "endLine" : 43,
+                    "endLine" : 59,
                     "endColumn" : 29,
-                    "offset" : 875,
+                    "offset" : 1434,
                     "length" : 22
                   }
                 }
@@ -483,6 +1611,282 @@
                 }
               },
               "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "worker", "inp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 40,
+                        "beginColumn" : 7,
+                        "endLine" : 40,
+                        "endColumn" : 49,
+                        "offset" : 964,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "b", "worker", "inp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "b", "worker", "inp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "b", "worker", "inp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "worker", "outp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 41,
+                        "beginColumn" : 7,
+                        "endLine" : 41,
+                        "endColumn" : 51,
+                        "offset" : 1013,
+                        "length" : 44
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "Base_Types::Integer_32"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "b", "worker", "outp", "Data_Model::Number_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 79,
+                            "beginColumn" : 4,
+                            "endLine" : 79,
+                            "endColumn" : 88,
+                            "offset" : 3710,
+                            "length" : 84
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Signed"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "b", "worker", "outp", "Memory_Properties::Data_Size"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                            },
+                            "beginLine" : 67,
+                            "beginColumn" : 5,
+                            "endLine" : 68,
+                            "endColumn" : 54,
+                            "offset" : 4661,
+                            "length" : 158
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "UnitProp",
+                          "value" : "32.0",
+                          "unit" : {
+                            "type" : "Some",
+                            "value" : "bits"
+                          }
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["top_i_Instance", "b", "worker", "outp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 27,
+                            "beginColumn" : 4,
+                            "endLine" : 30,
+                            "endColumn" : 36,
+                            "offset" : 1165,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Integer"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0\/@featureInstance.1"
+                }
               ],
               "subComponents" : [
               ],
@@ -674,10 +2078,310 @@
                   }
                 }
               ],
-              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/\/@componentInstance.1\/@componentInstance.0"
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.1\/@componentInstance.0"
             }
           ],
           "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b", "ci"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 61,
+                    "beginColumn" : 7,
+                    "endLine" : 61,
+                    "endColumn" : 35,
+                    "offset" : 1479,
+                    "length" : 28
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 84,
+                        "beginColumn" : 7,
+                        "endLine" : 84,
+                        "endColumn" : 25,
+                        "offset" : 1939,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "b", "inp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                          },
+                          "beginLine" : 53,
+                          "beginColumn" : 7,
+                          "endLine" : 53,
+                          "endColumn" : 49,
+                          "offset" : 1273,
+                          "length" : 42
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "worker"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 59,
+                        "beginColumn" : 7,
+                        "endLine" : 59,
+                        "endColumn" : 29,
+                        "offset" : 1434,
+                        "length" : 22
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "b", "worker", "inp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                          },
+                          "beginLine" : 40,
+                          "beginColumn" : 7,
+                          "endLine" : 40,
+                          "endColumn" : 49,
+                          "offset" : 964,
+                          "length" : 42
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "a", "worker", "outp -> b", "worker", "inp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.2"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b", "co"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 62,
+                    "beginColumn" : 7,
+                    "endLine" : 62,
+                    "endColumn" : 37,
+                    "offset" : 1514,
+                    "length" : 30
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b", "worker"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 59,
+                        "beginColumn" : 7,
+                        "endLine" : 59,
+                        "endColumn" : 29,
+                        "offset" : 1434,
+                        "length" : 22
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "b", "worker", "outp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                          },
+                          "beginLine" : 41,
+                          "beginColumn" : 7,
+                          "endLine" : 41,
+                          "endColumn" : 51,
+                          "offset" : 1013,
+                          "length" : 44
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["top_i_Instance", "b"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                        },
+                        "beginLine" : 84,
+                        "beginColumn" : 7,
+                        "endLine" : 84,
+                        "endColumn" : 25,
+                        "offset" : 1939,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["top_i_Instance", "b", "outp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                          },
+                          "beginLine" : 54,
+                          "beginColumn" : 7,
+                          "endLine" : 54,
+                          "endColumn" : 51,
+                          "offset" : 1322,
+                          "length" : 44
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "b", "worker", "outp -> a", "worker", "inp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.0"
+            }
           ],
           "connectionInstances" : [
           ],
@@ -787,7 +2491,7 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/\/@componentInstance.1"
+          "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.1"
         },
         {
           "type" : "Component",
@@ -802,11 +2506,11 @@
                   "type" : "Some",
                   "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
                 },
-                "beginLine" : 63,
+                "beginLine" : 82,
                 "beginColumn" : 7,
-                "endLine" : 63,
+                "endLine" : 82,
                 "endColumn" : 31,
-                "offset" : 1236,
+                "offset" : 1883,
                 "length" : 24
               }
             }
@@ -969,12 +2673,850 @@
               }
             }
           ],
-          "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/\/@componentInstance.2"
+          "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@componentInstance.2"
         }
       ],
       "connections" : [
+        {
+          "type" : "Connection",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_i_Instance", "c0"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                },
+                "beginLine" : 86,
+                "beginColumn" : 7,
+                "endLine" : 86,
+                "endColumn" : 33,
+                "offset" : 1980,
+                "length" : 26
+              }
+            }
+          },
+          "src" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 83,
+                    "beginColumn" : 7,
+                    "endLine" : 83,
+                    "endColumn" : 25,
+                    "offset" : 1914,
+                    "length" : 18
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "a", "outp"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                      },
+                      "beginLine" : 25,
+                      "beginColumn" : 7,
+                      "endLine" : 25,
+                      "endColumn" : 51,
+                      "offset" : 644,
+                      "length" : 44
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "Out"
+                }
+              }
+            }
+          ],
+          "dst" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 84,
+                    "beginColumn" : 7,
+                    "endLine" : 84,
+                    "endColumn" : 25,
+                    "offset" : 1939,
+                    "length" : 18
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "b", "inp"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                      },
+                      "beginLine" : 53,
+                      "beginColumn" : 7,
+                      "endLine" : 53,
+                      "endColumn" : 49,
+                      "offset" : 1273,
+                      "length" : 42
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "In"
+                }
+              }
+            }
+          ],
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "isBiDirectional" : false,
+          "connectionInstances" : [
+            {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "a", "worker", "outp -> b", "worker", "inp"],
+              "pos" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "properties" : [
+          ],
+          "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@connectionInstance.0\/@connectionReference.1"
+        },
+        {
+          "type" : "Connection",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_i_Instance", "c1"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                },
+                "beginLine" : 87,
+                "beginColumn" : 7,
+                "endLine" : 87,
+                "endColumn" : 33,
+                "offset" : 2013,
+                "length" : 26
+              }
+            }
+          },
+          "src" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 84,
+                    "beginColumn" : 7,
+                    "endLine" : 84,
+                    "endColumn" : 25,
+                    "offset" : 1939,
+                    "length" : 18
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "b", "outp"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                      },
+                      "beginLine" : 54,
+                      "beginColumn" : 7,
+                      "endLine" : 54,
+                      "endColumn" : 51,
+                      "offset" : 1322,
+                      "length" : 44
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "Out"
+                }
+              }
+            }
+          ],
+          "dst" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 83,
+                    "beginColumn" : 7,
+                    "endLine" : 83,
+                    "endColumn" : 25,
+                    "offset" : 1914,
+                    "length" : 18
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["top_i_Instance", "a", "inp"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                      },
+                      "beginLine" : 24,
+                      "beginColumn" : 7,
+                      "endLine" : 24,
+                      "endColumn" : 49,
+                      "offset" : 595,
+                      "length" : 42
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "In"
+                }
+              }
+            }
+          ],
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "isBiDirectional" : false,
+          "connectionInstances" : [
+            {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "b", "worker", "outp -> a", "worker", "inp"],
+              "pos" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "properties" : [
+          ],
+          "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0\/@connectionInstance.1\/@connectionReference.1"
+        }
       ],
       "connectionInstances" : [
+        {
+          "type" : "ConnectionInstance",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_i_Instance", "a.worker.outp -> b.worker.inp"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                },
+                "beginLine" : 33,
+                "beginColumn" : 7,
+                "endLine" : 33,
+                "endColumn" : 37,
+                "offset" : 836,
+                "length" : 30
+              }
+            }
+          },
+          "src" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "a", "worker"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                  },
+                  "beginLine" : 30,
+                  "beginColumn" : 7,
+                  "endLine" : 30,
+                  "endColumn" : 29,
+                  "offset" : 756,
+                  "length" : 22
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "worker", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 12,
+                    "beginColumn" : 7,
+                    "endLine" : 12,
+                    "endColumn" : 51,
+                    "offset" : 336,
+                    "length" : 44
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "Out"
+              }
+            }
+          },
+          "dst" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "b", "worker"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                  },
+                  "beginLine" : 59,
+                  "beginColumn" : 7,
+                  "endLine" : 59,
+                  "endColumn" : 29,
+                  "offset" : 1434,
+                  "length" : 22
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b", "worker", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 40,
+                    "beginColumn" : 7,
+                    "endLine" : 40,
+                    "endColumn" : 49,
+                    "offset" : 964,
+                    "length" : 42
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "In"
+              }
+            }
+          },
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "connectionRefs" : [
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "co"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 33,
+                    "beginColumn" : 7,
+                    "endLine" : 33,
+                    "endColumn" : 37,
+                    "offset" : 836,
+                    "length" : 30
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 83,
+                    "beginColumn" : 7,
+                    "endLine" : 83,
+                    "endColumn" : 25,
+                    "offset" : 1914,
+                    "length" : 18
+                  }
+                }
+              },
+              "isParent" : false
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "c0"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 86,
+                    "beginColumn" : 7,
+                    "endLine" : 86,
+                    "endColumn" : 33,
+                    "offset" : 1980,
+                    "length" : 26
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 80,
+                    "beginColumn" : 3,
+                    "endLine" : 90,
+                    "endColumn" : 13,
+                    "offset" : 1831,
+                    "length" : 306
+                  }
+                }
+              },
+              "isParent" : true
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b", "ci"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 61,
+                    "beginColumn" : 7,
+                    "endLine" : 61,
+                    "endColumn" : 35,
+                    "offset" : 1479,
+                    "length" : 28
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 84,
+                    "beginColumn" : 7,
+                    "endLine" : 84,
+                    "endColumn" : 25,
+                    "offset" : 1939,
+                    "length" : 18
+                  }
+                }
+              },
+              "isParent" : false
+            }
+          ],
+          "properties" : [
+          ]
+        },
+        {
+          "type" : "ConnectionInstance",
+          "name" : {
+            "type" : "Name",
+            "name" : ["top_i_Instance", "b.worker.outp -> a.worker.inp"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                },
+                "beginLine" : 62,
+                "beginColumn" : 7,
+                "endLine" : 62,
+                "endColumn" : 37,
+                "offset" : 1514,
+                "length" : 30
+              }
+            }
+          },
+          "src" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "b", "worker"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                  },
+                  "beginLine" : 59,
+                  "beginColumn" : 7,
+                  "endLine" : 59,
+                  "endColumn" : 29,
+                  "offset" : 1434,
+                  "length" : 22
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b", "worker", "outp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 41,
+                    "beginColumn" : 7,
+                    "endLine" : 41,
+                    "endColumn" : 51,
+                    "offset" : 1013,
+                    "length" : 44
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "Out"
+              }
+            }
+          },
+          "dst" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["top_i_Instance", "a", "worker"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                  },
+                  "beginLine" : 30,
+                  "beginColumn" : 7,
+                  "endLine" : 30,
+                  "endColumn" : 29,
+                  "offset" : 756,
+                  "length" : 22
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "worker", "inp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 11,
+                    "beginColumn" : 7,
+                    "endLine" : 11,
+                    "endColumn" : 49,
+                    "offset" : 287,
+                    "length" : 42
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "In"
+              }
+            }
+          },
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "connectionRefs" : [
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b", "co"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 62,
+                    "beginColumn" : 7,
+                    "endLine" : 62,
+                    "endColumn" : 37,
+                    "offset" : 1514,
+                    "length" : 30
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "b"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 84,
+                    "beginColumn" : 7,
+                    "endLine" : 84,
+                    "endColumn" : 25,
+                    "offset" : 1939,
+                    "length" : 18
+                  }
+                }
+              },
+              "isParent" : false
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "c1"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 87,
+                    "beginColumn" : 7,
+                    "endLine" : 87,
+                    "endColumn" : 33,
+                    "offset" : 2013,
+                    "length" : 26
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 80,
+                    "beginColumn" : 3,
+                    "endLine" : 90,
+                    "endColumn" : 13,
+                    "offset" : 1831,
+                    "length" : 306
+                  }
+                }
+              },
+              "isParent" : true
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a", "ci"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 32,
+                    "beginColumn" : 7,
+                    "endLine" : 32,
+                    "endColumn" : 35,
+                    "offset" : 801,
+                    "length" : 28
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["top_i_Instance", "a"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/microkit-sub-ms\/microkit_sub_ms.aadl"
+                    },
+                    "beginLine" : 83,
+                    "beginColumn" : 7,
+                    "endLine" : 83,
+                    "endColumn" : 25,
+                    "offset" : 1914,
+                    "length" : 18
+                  }
+                }
+              },
+              "isParent" : false
+            }
+          ],
+          "properties" : [
+          ]
+        }
       ],
       "properties" : [
       ],
@@ -1011,11 +3553,146 @@
           }
         }
       ],
-      "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/"
+      "uriFrag" : "platform:\/resource\/microkit-sub-ms\/instances\/microkit_sub_ms_top_i_Instance.aaxl2#\/0"
     }
   ],
   "annexLib" : [
   ],
   "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Integer_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 67,
+                "beginColumn" : 5,
+                "endLine" : 68,
+                "endColumn" : 54,
+                "offset" : 4661,
+                "length" : 158
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "32.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Number_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 79,
+                "beginColumn" : 4,
+                "endLine" : 79,
+                "endColumn" : 88,
+                "offset" : 3710,
+                "length" : 84
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Signed"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 27,
+                "beginColumn" : 4,
+                "endLine" : 30,
+                "endColumn" : 36,
+                "offset" : 1165,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Integer"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
   ]
 }

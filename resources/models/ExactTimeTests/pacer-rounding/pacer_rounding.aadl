@@ -1,11 +1,15 @@
 package pacer_rounding
 public
+  with Base_Types;
   with CASE_Scheduling;
 
   -- D7/D8: a 3 ms Clock_Period: entries round to ticks with warnings, including the pacer's
   -- own slots; a thread without Compute_Execution_Time gets the 50 ms default with a warning
 
   thread a_t
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end a_t;
 
   thread implementation a_t.i
@@ -16,16 +20,25 @@ public
   end a_t.i;
 
   process a_p
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end a_p;
 
   process implementation a_p.i
     subcomponents
       worker : thread a_t.i;
+    connections
+      ci : port inp -> worker.inp;
+      co : port worker.outp -> outp;
     properties
       CASE_Scheduling::Domain => 2;
   end a_p.i;
 
   thread b_t
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end b_t;
 
   thread implementation b_t.i
@@ -35,11 +48,17 @@ public
   end b_t.i;
 
   process b_p
+    features
+      inp : in data port Base_Types::Integer_32;
+      outp : out data port Base_Types::Integer_32;
   end b_p;
 
   process implementation b_p.i
     subcomponents
       worker : thread b_t.i;
+    connections
+      ci : port inp -> worker.inp;
+      co : port worker.outp -> outp;
     properties
       CASE_Scheduling::Domain => 3;
   end b_p.i;
@@ -62,6 +81,9 @@ public
       proc : processor proc.i;
       a : process a_p.i;
       b : process b_p.i;
+    connections
+      c0 : port a.outp -> b.inp;
+      c1 : port b.outp -> a.inp;
     properties
       Actual_Processor_Binding => (reference (proc)) applies to a, b;
   end top.i;
