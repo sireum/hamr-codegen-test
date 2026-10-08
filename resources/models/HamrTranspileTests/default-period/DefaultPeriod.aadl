@@ -1,0 +1,56 @@
+package DefaultPeriod
+public
+  with Base_Types;
+  -- hamr-codegen#12: components without a Period get the default period, 1 ms, in ns: a periodic
+  -- device (devices are periodic by default and the linter does not require their Period) and a
+  -- sporadic thread (whose minimum inter-arrival time comes from the default)
+
+  device Sensor
+    features
+      reading : out event data port Base_Types::Integer_32;
+  end Sensor;
+
+  device implementation Sensor.impl
+    properties
+      Dispatch_Protocol => Periodic;
+  end Sensor.impl;
+
+  thread Handler
+    features
+      reading : in event data port Base_Types::Integer_32;
+  end Handler;
+
+  thread implementation Handler.impl
+    properties
+      Dispatch_Protocol => Sporadic;
+  end Handler.impl;
+
+  process Application
+    features
+      reading : in event data port Base_Types::Integer_32;
+  end Application;
+
+  process implementation Application.impl
+    subcomponents
+      handler : thread Handler.impl;
+    connections
+      c1 : port reading -> handler.reading;
+  end Application.impl;
+
+  processor NativeProcessor end NativeProcessor;
+
+  system RootSystem end RootSystem;
+
+  system implementation RootSystem.impl
+    subcomponents
+      sensor : device Sensor.impl;
+      application : process Application.impl;
+      cpu : processor NativeProcessor;
+    connections
+      c1 : port sensor.reading -> application.reading;
+    properties
+      Actual_Processor_Binding => (reference(cpu)) applies to application;
+      Actual_Processor_Binding => (reference(cpu)) applies to sensor;
+  end RootSystem.impl;
+
+end DefaultPeriod;

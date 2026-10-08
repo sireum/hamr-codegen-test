@@ -116,7 +116,7 @@ class TimeUtilTests extends TestSuite {
 
   "format" in {
     val cases: Seq[(Long, Predef.String)] = Seq(
-      (999L, "999 ps"), (1500L, "1.5 ns"), (100000000L, "100 us"), (1500000000L, "1.5 ms"),
+      (0L, "0"), (999L, "999 ps"), (1500L, "1.5 ns"), (100000000L, "100 us"), (1500000000L, "1.5 ms"),
       (33300000000L, "33.3 ms"), (2000000000000L, "2 s"), (1234567L, "1234.567 ns"))
     for ((ps, expected) <- cases) {
       assert(TimeUtil.format(Z(ps)) == String(expected), s"$ps: ${TimeUtil.format(Z(ps))}")

@@ -1,0 +1,53 @@
+package LongPeriod
+public
+  -- hamr-codegen#12: times over 2^31 ns (2.1 s) must survive a 32-bit --bit-width build,
+  -- where Z is 32 bits in the transpiled C; ART keeps them in S64 (Art.Time)
+
+  thread Producer
+    features
+      out_event : out event port;
+  end Producer;
+
+  thread implementation Producer.impl
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 3 sec;
+  end Producer.impl;
+
+  thread Consumer
+    features
+      in_event : in event port;
+  end Consumer;
+
+  thread implementation Consumer.impl
+    properties
+      Dispatch_Protocol => Sporadic;
+      Period => 2500 ms;
+  end Consumer.impl;
+
+  process Application end Application;
+
+  process implementation Application.impl
+    subcomponents
+      producer : thread Producer.impl;
+      consumer : thread Consumer.impl;
+    connections
+      c1 : port producer.out_event -> consumer.in_event;
+  end Application.impl;
+
+  processor NativeProcessor
+    properties
+      Frame_Period => 3 sec;
+  end NativeProcessor;
+
+  system RootSystem end RootSystem;
+
+  system implementation RootSystem.impl
+    subcomponents
+      application : process Application.impl;
+      cpu : processor NativeProcessor;
+    properties
+      Actual_Processor_Binding => (reference(cpu)) applies to application;
+  end RootSystem.impl;
+
+end LongPeriod;

@@ -1,0 +1,70 @@
+package microkit_sub_ms
+public
+  with CASE_Scheduling;
+
+  -- D7: sub-ms Compute_Execution_Time: us domain entries and ns MCS timeslices; 1500 ns is
+  -- not a whole us, so domain scheduling rounds it with a warning, while MCS is exact
+
+  thread a_t
+  end a_t;
+
+  thread implementation a_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 1000 ms;
+      Compute_Execution_Time => 0 us .. 500 us;
+  end a_t.i;
+
+  process a_p
+  end a_p;
+
+  process implementation a_p.i
+    subcomponents
+      worker : thread a_t.i;
+    properties
+      CASE_Scheduling::Domain => 2;
+  end a_p.i;
+
+  thread b_t
+  end b_t;
+
+  thread implementation b_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 1000 ms;
+      Compute_Execution_Time => 0 ns .. 1500 ns;
+  end b_t.i;
+
+  process b_p
+  end b_p;
+
+  process implementation b_p.i
+    subcomponents
+      worker : thread b_t.i;
+    properties
+      CASE_Scheduling::Domain => 3;
+  end b_p.i;
+
+  processor proc
+  end proc;
+
+  processor implementation proc.i
+    properties
+      Frame_Period => 1000 ms;
+      Clock_Period => 2 ms;
+      CASE_Scheduling::Max_Domain => 10;
+  end proc.i;
+
+  system top
+  end top;
+
+  system implementation top.i
+    subcomponents
+      proc : processor proc.i;
+      a : process a_p.i;
+      b : process b_p.i;
+    properties
+      Actual_Processor_Binding => (reference (proc)) applies to a, b;
+  end top.i;
+
+end microkit_sub_ms;

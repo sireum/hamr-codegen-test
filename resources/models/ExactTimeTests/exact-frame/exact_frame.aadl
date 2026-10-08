@@ -1,0 +1,49 @@
+package exact_frame
+public
+  with CASE_Scheduling;
+
+  -- D7: entries that fill the Frame_Period exactly: a pad of 0 is omitted (200 + 40 = 240 ms;
+  -- the self-pacing schedule has no pacer slot)
+
+  thread a_t
+  end a_t;
+
+  thread implementation a_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 240 ms;
+      Compute_Execution_Time => 0 ms .. 40 ms;
+  end a_t.i;
+
+  process a_p
+  end a_p;
+
+  process implementation a_p.i
+    subcomponents
+      worker : thread a_t.i;
+    properties
+      CASE_Scheduling::Domain => 2;
+  end a_p.i;
+
+  processor proc
+  end proc;
+
+  processor implementation proc.i
+    properties
+      Frame_Period => 240 ms;
+      Clock_Period => 2 ms;
+      CASE_Scheduling::Max_Domain => 10;
+  end proc.i;
+
+  system top
+  end top;
+
+  system implementation top.i
+    subcomponents
+      proc : processor proc.i;
+      a : process a_p.i;
+    properties
+      Actual_Processor_Binding => (reference (proc)) applies to a;
+  end top.i;
+
+end exact_frame;

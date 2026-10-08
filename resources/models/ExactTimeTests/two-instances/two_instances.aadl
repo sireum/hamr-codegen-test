@@ -1,0 +1,42 @@
+package two_instances
+public
+  with CASE_Scheduling;
+
+  -- D4: two instances of one declaration each get their own rounding warning, naming its path
+
+  thread w_t
+  end w_t;
+
+  thread implementation w_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 1500 us;
+  end w_t.i;
+
+  process w_p
+  end w_p;
+
+  process implementation w_p.i
+    subcomponents
+      worker : thread w_t.i;
+  end w_p.i;
+
+  processor proc
+  end proc;
+
+  processor implementation proc.i
+  end proc.i;
+
+  system top
+  end top;
+
+  system implementation top.i
+    subcomponents
+      proc : processor proc.i;
+      p1 : process w_p.i;
+      p2 : process w_p.i;
+    properties
+      Actual_Processor_Binding => (reference (proc)) applies to p1, p2;
+  end top.i;
+
+end two_instances;

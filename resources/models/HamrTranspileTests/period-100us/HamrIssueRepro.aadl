@@ -1,0 +1,38 @@
+package HamrIssueRepro
+public
+
+  -- No behavior annex or external application code is needed.
+  thread Worker
+    features
+      request_event : in event port;
+      result_event : out event port;
+  end Worker;
+
+  thread implementation Worker.impl
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 100 us;
+  end Worker.impl;
+
+  process Application end Application;
+
+  process implementation Application.impl
+    subcomponents
+      worker : thread Worker.impl;
+  end Application.impl;
+
+  processor NativeProcessor
+  end NativeProcessor;
+
+  system RootSystem end RootSystem;
+
+  system implementation RootSystem.impl
+    subcomponents
+      application : process Application.impl;
+      cpu : processor NativeProcessor;
+    properties
+      Actual_Processor_Binding => (reference(cpu))
+        applies to application;
+  end RootSystem.impl;
+
+end HamrIssueRepro;

@@ -1,0 +1,45 @@
+package zero_times
+public
+  with CASE_Scheduling;
+
+  -- D5: zero time values are errors on every platform
+
+  thread a_t
+  end a_t;
+
+  thread implementation a_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 0 ms;
+  end a_t.i;
+
+  process a_p
+  end a_p;
+
+  process implementation a_p.i
+    subcomponents
+      worker : thread a_t.i;
+  end a_p.i;
+
+  processor proc
+  end proc;
+
+  processor implementation proc.i
+    properties
+      Frame_Period => 0 ms;
+      Clock_Period => 0 ms;
+      Slot_Time => 0 ms;
+  end proc.i;
+
+  system top
+  end top;
+
+  system implementation top.i
+    subcomponents
+      proc : processor proc.i;
+      a : process a_p.i;
+    properties
+      Actual_Processor_Binding => (reference (proc)) applies to a;
+  end top.i;
+
+end zero_times;

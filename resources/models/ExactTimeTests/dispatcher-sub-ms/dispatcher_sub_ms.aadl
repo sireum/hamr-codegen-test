@@ -1,0 +1,41 @@
+package dispatcher_sub_ms
+public
+  with CASE_Scheduling;
+
+  -- D7: a sub-ms Period is an error for the CAmkES 1 ms dispatcher calendar, not a modulo by zero
+
+  thread a_t
+  end a_t;
+
+  thread implementation a_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 100 us;
+  end a_t.i;
+
+  process a_p
+  end a_p;
+
+  process implementation a_p.i
+    subcomponents
+      worker : thread a_t.i;
+  end a_p.i;
+
+  processor proc
+  end proc;
+
+  processor implementation proc.i
+  end proc.i;
+
+  system top
+  end top;
+
+  system implementation top.i
+    subcomponents
+      proc : processor proc.i;
+      a : process a_p.i;
+    properties
+      Actual_Processor_Binding => (reference (proc)) applies to a;
+  end top.i;
+
+end dispatcher_sub_ms;

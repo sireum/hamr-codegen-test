@@ -25,6 +25,11 @@ trait CodegenTest extends CodegenTestSuite {
 
   def generateExpected: B = F || Os.env("HAMR_REGEN_EXPECTED").nonEmpty
 
+  // When T, a test that expects errors does not show codegen's console output, which would
+  // otherwise print the expected errors; it is shown in verbose mode, or if the errors are not
+  // the expected ones
+  def suppressExpectedErrors: B = F
+
   assert (!generateExpected || !TestUtil.isCI, "generateExpected must be false when pushed to github")
 
   def ignoreBuildDefChanges: B = F // temporarily ignore build.sbt and build.sc changes due to build.properties updates
@@ -64,9 +69,10 @@ trait CodegenTest extends CodegenTestSuite {
            ops: HamrCli.CodegenOption,
            description: Option[String],
            modelUri: Option[String],
-           expectedErrorReasons: ISZ[String] // empty if errors not expected
+           expectedErrorReasons: ISZ[String], // empty if errors not expected
+           expectedWarnings: ISZ[CodegenTest.ExpectedWarnings] = ISZ()
           )(implicit position: org.scalactic.source.Position): Unit = {
-    testPhantom(testName, modelDir, airFile, None(), ops, description, modelUri, expectedErrorReasons)(position)
+    testPhantom(testName, modelDir, airFile, None(), ops, description, modelUri, expectedErrorReasons, expectedWarnings)(position)
   }
 
   def testPhantom(testName: String,
@@ -76,17 +82,18 @@ trait CodegenTest extends CodegenTestSuite {
                   ops: HamrCli.CodegenOption,
                   description: Option[String],
                   modelUri: Option[String],
-                  expectedErrorReasons: ISZ[String] // empty if errors not expected
+                  expectedErrorReasons: ISZ[String], // empty if errors not expected
+                  expectedWarnings: ISZ[CodegenTest.ExpectedWarnings] = ISZ()
                  )(implicit position: org.scalactic.source.Position): Unit = {
     var tags: ISZ[org.scalatest.Tag] = ISZ()
 
     if (ignores.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerIgnoredTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-        testAir(testName, modelDir, airFile, phantomOptions, ops, description, modelUri, expectedErrorReasons))
+        testAir(testName, modelDir, airFile, phantomOptions, ops, description, modelUri, expectedErrorReasons, expectedWarnings))
     }
     else if (!filter || filters.elements.exists(elem => org.sireum.ops.StringOps(testName).contains(elem))) {
       registerTest(s"${testName} L${position.lineNumber}", tags.elements: _*)(
-        testAir(testName, modelDir, airFile, phantomOptions, ops, description, modelUri, expectedErrorReasons))
+        testAir(testName, modelDir, airFile, phantomOptions, ops, description, modelUri, expectedErrorReasons, expectedWarnings))
     }
   }
 
@@ -97,7 +104,8 @@ trait CodegenTest extends CodegenTestSuite {
               config: HamrCli.CodegenOption,
               description: Option[String],
               modelUri: Option[String],
-              expectedErrorReasons: ISZ[String] // empty if errors not expected
+              expectedErrorReasons: ISZ[String], // empty if errors not expected
+              expectedWarnings: ISZ[CodegenTest.ExpectedWarnings] = ISZ()
              ): Unit = {
 
     if (TestUtil.isCI && Os.env("SEL4_CAMKES_ENV").nonEmpty && !TestUtil.isSeL4(config.platform)) {
@@ -163,7 +171,12 @@ trait CodegenTest extends CodegenTestSuite {
     val plugins = ArsitPlugin.gumboEnhancedPlugins ++ MicrokitPlugins.defaultMicrokitPlugins
     // note transpiler will be run via the callback method and via the Slash scripts.
     // proyek ive will only be run via callback
-    val results = CodeGen.codeGen(model, T, testOps,
+    val captureOutput: B = suppressExpectedErrors && expectedErrorReasons.nonEmpty && !verbose
+    if (captureOutput) {
+      org.sireum.$internal.RuntimeConsole.beginCapture()
+    }
+    var capturedOutput: Array[Predef.String] = Array()
+    val results = try CodeGen.codeGen(model, T, testOps,
       plugins, store, reporter,
       if (TestUtil.shouldTranspile(testOps, testingModes)) TestUtil.transpile(testOps) _ else (SireumSlangTranspilersCOption, Reporter) => {
         println("Dummy transpiler");
@@ -180,7 +193,22 @@ trait CodegenTest extends CodegenTestSuite {
       if (TestUtil.shouldSlangCheck(testOps, testingModes)) TestUtil.slangcheck(testOps) _ else (SireumToolsSlangcheckGeneratorOption, Reporter) => {
         0
       }
-    )
+    ) finally {
+      if (captureOutput) {
+        capturedOutput = org.sireum.$internal.RuntimeConsole.endCapture()
+      }
+    }
+
+    def showCapturedOutput(): Unit = {
+      if (capturedOutput.nonEmpty) {
+        scala.Console.out.print(capturedOutput(0))
+        scala.Console.err.print(capturedOutput(1))
+        scala.Console.out.flush()
+        scala.Console.err.flush()
+      }
+    }
+
+    CodegenTest.checkExpectedWarnings(reporter, expectedWarnings)
 
     if (expectedErrorReasons.isEmpty) {
       val r  = Reporter.create
@@ -199,6 +227,11 @@ trait CodegenTest extends CodegenTestSuite {
       assert(parseFailures.isEmpty, "Microkit reporter parser failed, see the warnings above")
     }
     else {
+      val asExpected = reporter.hasError && reporter.errors.size == expectedErrorReasons.size &&
+        reporter.errors.elements.forall(m => org.sireum.ops.ISZOps(expectedErrorReasons).contains(m.text))
+      if (!asExpected) {
+        showCapturedOutput()
+      }
       assert(reporter.hasError, "Expecting errors but codegen completed successfully")
       assert(reporter.errors.size == expectedErrorReasons.size)
 
@@ -326,6 +359,24 @@ trait CodegenTest extends CodegenTestSuite {
 }
 
 object CodegenTest {
+
+  /** Expects exactly `count` warnings of message kind `kind` whose text contains `contains`
+    * ("" matches any text), e.g. ExpectedWarnings(TimeUtil.timeRoundingKind, "top.p1.worker", 1) */
+  case class ExpectedWarnings(kind: String, contains: String, count: Z)
+
+  def checkExpectedWarnings(reporter: Reporter, expected: ISZ[ExpectedWarnings]): Unit = {
+    for (e <- expected) {
+      val matching = reporter.warnings.filter(m => m.kind == e.kind && ops.StringOps(m.text).contains(e.contains))
+      if (matching.size != e.count) {
+        // print every message, errors included, to show what codegen reported instead
+        val r = Reporter.create
+        r.reports(reporter.messages)
+        r.printMessages()
+      }
+      assert(Z(matching.size) == e.count,
+        s"Expected ${e.count} '${e.kind}' warning(s) containing '${e.contains}' but found ${matching.size}: ${matching.map(m => m.text)}")
+    }
+  }
 
   case class TestResources(resultsDir: Os.Path,
                            expectedDir: Os.Path,

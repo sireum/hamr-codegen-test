@@ -1,0 +1,48 @@
+package clock_not_whole_ms
+public
+  with CASE_Scheduling;
+
+  -- D7: the CAmkES pacer needs a Clock_Period that is a whole number of ms; other platforms do not
+
+  thread a_t
+  end a_t;
+
+  thread implementation a_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 1000 ms;
+      Compute_Execution_Time => 0 ms .. 6 ms;
+  end a_t.i;
+
+  process a_p
+  end a_p;
+
+  process implementation a_p.i
+    subcomponents
+      worker : thread a_t.i;
+    properties
+      CASE_Scheduling::Domain => 2;
+  end a_p.i;
+
+  processor proc
+  end proc;
+
+  processor implementation proc.i
+    properties
+      Frame_Period => 1000 ms;
+      Clock_Period => 1500 us;
+      CASE_Scheduling::Max_Domain => 10;
+  end proc.i;
+
+  system top
+  end top;
+
+  system implementation top.i
+    subcomponents
+      proc : processor proc.i;
+      a : process a_p.i;
+    properties
+      Actual_Processor_Binding => (reference (proc)) applies to a;
+  end top.i;
+
+end clock_not_whole_ms;

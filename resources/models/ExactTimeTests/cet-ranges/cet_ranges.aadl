@@ -1,0 +1,62 @@
+package cet_ranges
+public
+  with CASE_Scheduling;
+
+  -- D5: a Compute_Execution_Time low end of 0 is valid; a high end of 0 is an error (OSATE itself
+  -- rejects low > high; that case is tested with patched AIR in ExactTimeResolveTests)
+
+  thread ok_t
+  end ok_t;
+
+  thread implementation ok_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 10 ms;
+      Compute_Execution_Time => 0 ms .. 5 ms;
+  end ok_t.i;
+
+  process ok_p
+  end ok_p;
+
+  process implementation ok_p.i
+    subcomponents
+      worker : thread ok_t.i;
+  end ok_p.i;
+
+  thread zero_t
+  end zero_t;
+
+  thread implementation zero_t.i
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 10 ms;
+      Compute_Execution_Time => 0 ms .. 0 ms;
+  end zero_t.i;
+
+  process zero_p
+  end zero_p;
+
+  process implementation zero_p.i
+    subcomponents
+      worker : thread zero_t.i;
+  end zero_p.i;
+
+  processor proc
+  end proc;
+
+  processor implementation proc.i
+  end proc.i;
+
+  system top
+  end top;
+
+  system implementation top.i
+    subcomponents
+      proc : processor proc.i;
+      ok : process ok_p.i;
+      zero : process zero_p.i;
+    properties
+      Actual_Processor_Binding => (reference (proc)) applies to ok, zero;
+  end top.i;
+
+end cet_ranges;
