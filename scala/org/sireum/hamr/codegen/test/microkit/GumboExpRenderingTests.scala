@@ -18,7 +18,10 @@ package org.sireum.hamr.codegen.test.microkit
 //
 // The model's AIR (sysml/.slang/Top_impl_Instance.json) is checked in; to regenerate it, run
 // `sireum hamr sysml codegen` on sysml/GumboExpRendering.sysml with the AADL/HAMR SysML
-// libraries on the sourcepath and `--system-name GumboExpRendering::Top_impl`.
+// libraries on the sourcepath and `--system-name GumboExpRendering::Top_impl`. That records
+// source positions as absolute file:/// URIs, which exist only on the machine that ran it and
+// fail the Microkit report's position checks elsewhere: rewrite them to the OSATE-style
+// `/sysml/GumboExpRendering.sysml` (resolved against workspaceRootDir) before checking it in.
 
 import org.sireum._
 import org.sireum.hamr.codegen.CodeGen
