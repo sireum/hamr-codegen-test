@@ -52,8 +52,8 @@ trait SlangEmbeddedModule extends ScalaModule {
 
 
   // refer to https://github.com/sireum/kekinian/releases to get the latest
-  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/fc2d799566
-  val kekinianVersion = "fc2d799566"
+  // Sireum Kekinian release: https://github.com/sireum/kekinian/tree/0be9f5b53b
+  val kekinianVersion = "0be9f5b53b"
 
 
   val inspectorVersion = "0.6-SNAPSHOT"

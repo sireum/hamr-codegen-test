@@ -17,9 +17,9 @@
 //   sbt assembly
 //
 // To skip running the unit tests while building the executable jar:
-//   sbt 'set test in assembly := {}' assembly
+//   sbt 'set assembly / test := {}' assembly
 // on Linux/Mac, or
-//   sbt "set test in assembly := {}" assembly
+//   sbt "set assembly / test := {}" assembly
 // on Windows
 //
 // Sireum IVE: Installation instructions available at https://sireum.org/getting-started/
@@ -55,8 +55,8 @@ val sireumScalacVersion = "4.20260224.4919e12"
 
 
 // refer to https://github.com/sireum/kekinian/releases to get the latest
-// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/fc2d799566
-val kekinianVersion = "fc2d799566"
+// Sireum Kekinian release: https://github.com/sireum/kekinian/tree/0be9f5b53b
+val kekinianVersion = "0be9f5b53b"
 
 
 val inspectorVersion = "0.6-SNAPSHOT"
@@ -103,11 +103,11 @@ val slangEmbeddedSettings = Seq(
 
   mainClass in (Compile, run) := Some("a.Demo"),
 
-  mainClass in assembly := Some("a.Demo"),
-  assemblyJarName in assembly := "PC_Sys_Impl_Instance.jar",
-  assemblyOption in assembly := (assemblyOption in assembly).value.copy(prependShellScript = Some(defaultUniversalScript(shebang = false))),
+  assembly / mainClass := Some("a.Demo"),
+  assembly / assemblyJarName := "PC_Sys_Impl_Instance.jar",
+  assembly / assemblyOption := (assembly / assemblyOption).value.withPrependShellScript(Some(defaultUniversalScript(shebang = false))),
 
-  assemblyMergeStrategy in assembly := {
+  assembly / assemblyMergeStrategy := {
     case PathList("META-INF", xs @ _*) => MergeStrategy.discard
     case x => MergeStrategy.first
   }
