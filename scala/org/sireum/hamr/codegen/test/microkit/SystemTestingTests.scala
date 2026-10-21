@@ -361,8 +361,9 @@ class SystemTestingTests extends TestSuite {
   "a monitor polls a pure event port a contract reads through its bool API" in {
     // the contract (GUMBOX) reads a pure event port as Option<payload>; the monitor's API
     // returns bool.  The poll must follow the port kind, not the getter's type, or the
-    // monitor crate does not compile (gumbo-verus/pure_event_port)
-    val dir = MicrokitTestUtil.resourcesDir / "models" / "INSPECTA-models" / "micro-examples" / "microkit" /
+    // monitor crate does not compile (gumbo-verus/pure_event_port).  Through testResources, which
+    // clones INSPECTA-models if it is not there yet -- this suite can run alone (CI's QEMU job)
+    val dir = MicrokitTestUtil.testResources.modelsDir / "micro-examples" / "microkit" /
       "gumbo-verus" / "pure_event_port" / "sysml"
     val model = TestUtil.getModel(Some(dir / ".slang" / "top_impl_Instance.json"), None(), dir, ISZ(), "pep", F)
     val out = scratch / "pure-event"
