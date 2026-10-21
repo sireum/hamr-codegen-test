@@ -12,7 +12,9 @@
 //
 // `ack` runs back from dst1 to src, which is dispatched first: a feedback edge, so src
 // receives in one frame what dst1 sent in the previous one.
-//   dst2  (C)    forwards what arrives on `val` to `fwd`; it forwards 77 as 78.
+//   dst2  (C)    forwards what arrives on `val` to `fwd`; it forwards 77 as 78.  It assumes
+//               what arrives is not 42, so a 42 from src gets dst2's dispatch -- the last in the
+//               hyperperiod -- rejected.
 //
 // `val` fans out to two consumers, one of them a C thread, and the composition's `Echoed`
 // assertion relates dst1's latch to src's `last`, so one fault in src breaks both a thread
@@ -128,6 +130,8 @@ package SystemTesting {
         port fwd: EventDataPort { out :>> type : Base_Types::Integer_32; }
         language "GUMBO" /*{
             compute
+                assume notFortyTwo "what arrives is not 42":
+                    HasEvent(val) implies (val != 42 [i32]);
                 guarantee forward "pass on what arrives":
                     HasEvent(val) implies MustSend(fwd, val);
                 guarantee quiet "nothing arrives, nothing is sent":
@@ -236,6 +240,14 @@ package SystemTesting {
                 property Arrived "src's event is there when src sent one" {
                     after dst1 "src's event, seen by the system before dst2 runs":
                         (s_last != 99 [i32]) implies HasEvent(s_val);
+                }
+
+                // dst2's input alias is latched at dst2's own dispatch, after dst1's: before it,
+                // the frame holds nothing dst2 received -- also after a rejected dispatch of dst2
+                // in the frame before, which received nothing
+                property NotYet "dst2 has received nothing before it runs" {
+                    after dst1 "dst2's input, before dst2 runs":
+                        not HasEvent(d2_val);
                 }
 
                 property Received "what dst2 receives is what src sent" {

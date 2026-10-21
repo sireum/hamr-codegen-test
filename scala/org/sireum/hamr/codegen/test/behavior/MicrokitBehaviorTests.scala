@@ -72,7 +72,8 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
 
   val sysmlModels = ISZ() :+
     testResources.modelsDir / "isolette" / "sysml" :+
-    testResources.modelsDir / "micro-examples" / "microkit" / "gumbo-verus" / "structs_arrays" / "sysml"
+    testResources.modelsDir / "micro-examples" / "microkit" / "gumbo-verus" / "structs_arrays" / "sysml" :+
+    testResources.modelsDir / "micro-examples" / "microkit" / "gumbo-verus" / "pure_event_port" / "sysml"
 
   for (sysmlDir <- sysmlModels) {
     val t = ops.StringOps(sysmlDir.up.value)
@@ -95,6 +96,14 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
         verusAttributeSyntax = T)
     }
 
+    // pure_event_port's model sets Scheduling = MCS itself; the option says so too, so its output
+    // goes to microkit_mcs as in the model's own .ci/ci.cmd.  Its behavior code uses the verus!
+    // macro syntax, so not the attribute syntax.
+    val isPureEventPort: B = testName._value.contains("pure_event_port")
+    if (isPureEventPort) {
+      testOptions = testOptions(scheduling = HamrCli.CodegenScheduling.UserLand)
+    }
+
 
     if (testName._value.contains("sysml_iso")) {
       // Adds the test_scheduler variant (TestScheduler-design.md) so the system tests in
@@ -115,7 +124,8 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     assert (mdir.exists, mdir.value)
 
     testOptions = testOptions(
-      runtimeMonitoring = !ops.StringOps(testName).contains("vms"),
+      // pure_event_port is generated without runtime monitoring, as its .ci/ci.cmd does
+      runtimeMonitoring = !ops.StringOps(testName).contains("vms") && !isPureEventPort,
       sel4OutputDir = Some(mdir.value),
       workspaceRootDir = Some(airs(0).up.up.value))
 

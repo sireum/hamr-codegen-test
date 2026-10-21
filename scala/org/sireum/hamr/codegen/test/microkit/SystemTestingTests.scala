@@ -48,7 +48,7 @@ class SystemTestingTests extends TestSuite {
   def runCodegen(out: Os.Path, runtimeMonitoring: B, model: Aadl): Reporter =
     runCodegenIn(out, sysmlDir, runtimeMonitoring, model)
 
-  def runCodegenIn(out: Os.Path, workspace: Os.Path, runtimeMonitoring: B, model: Aadl): Reporter = {
+  def runCodegenIn(out: Os.Path, workspace: Os.Path, runtimeMonitoring: B, model: Aadl, testScheduler: B = T): Reporter = {
     out.removeAll()
     val opts = MicrokitTests.baseOptions(
       workspaceRootDir = Some(workspace.canon.value),
@@ -60,7 +60,9 @@ class SystemTestingTests extends TestSuite {
       runtimeMonitoring = runtimeMonitoring,
       scheduling = HamrCli.CodegenScheduling.UserLand,
       verusAttributeSyntax = T,
-      experimentalOptions = MicrokitTests.baseOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER)
+      experimentalOptions =
+        if (testScheduler) MicrokitTests.baseOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER
+        else MicrokitTests.baseOptions.experimentalOptions)
     val reporter = Reporter.create
     val store: Store = CodegenReporting.addCodegenReport(CodegenReporting.KEY_TOOL_REPORT,
       CodegenReporting.emptyToolReport, Map.empty)
@@ -81,6 +83,14 @@ class SystemTestingTests extends TestSuite {
     }
     def component(c: ir.Component): ir.Component =
       c(features = c.features.map(feature _), subComponents = c.subComponents.map(component _))
+    return model(components = model.components.map(component _))
+  }
+
+  // The model without its GUMBO annexes -- for the model without thread contracts, its
+  // compositions.
+  def withoutAnnexes(model: Aadl): Aadl = {
+    def component(c: ir.Component): ir.Component =
+      c(annexes = ISZ(), subComponents = c.subComponents.map(component _))
     return model(components = model.components.map(component _))
   }
 
@@ -135,15 +145,77 @@ class SystemTestingTests extends TestSuite {
     }
   }
 
+  "a rejected dispatch puts back what its thread received, as well as its cursors" in {
+    // src's ack is a connected input nominal aliases (s_ack): latched at src's dispatch, so a
+    // rejected one (D36) must restore the latch, or a later frame's places see an event src
+    // never received
+    val observe = read("crates/test_controller/src/system_tests/observe.rs")
+    assert(observe.contains("self.saved_recv_d1p_dst_ack__srcp_src = self.recv_d1p_dst_ack__srcp_src.clone();"),
+      "mark_cursors does not save src's latched ack")
+    assert(observe.contains("self.recv_d1p_dst_ack__srcp_src = self.saved_recv_d1p_dst_ack__srcp_src.clone();"),
+      "rewind_cursors does not restore src's latched ack")
+  }
+
+  "the checks' switches are restored when a test ends, before the runner's normalization" in {
+    // normalization dispatches, and so rejects, as the build says -- not as the last test left
+    // the switches
+    val observe = read("crates/test_controller/src/system_tests/observe.rs")
+    val i = observe.stringIndexOf("pub(crate) fn end_test()")
+    assert(i >= 0, "no end_test")
+    val body = ops.StringOps(observe.substring(i, observe.s.size))
+    val end = body.stringIndexOf("\n}\n")
+    val endTest = ops.StringOps(body.substring(0, end))
+    assert(endTest.contains("GUMBO_ON = GUMBO_LIVE;") && endTest.contains("SYSVERIF_ON = SYSVERIF_LIVE;"),
+      "end_test does not restore the build's switches")
+  }
+
   "an output whose consumers have different queue sizes is rejected, not given clashing accessors" in {
     // src's val goes to dst1 with queue size 1, and here to dst2 with 2: two regions for one
-    // port, which the controller's accessors, named after the port, cannot tell apart
-    val r = runCodegen(scratch / "queue-sizes", F,
-      withQueueSize(loadModel(), ISZ("top_impl_Instance", "d2p", "dst", "val"), 2))
+    // port, which the controller's accessors, named after the port, cannot tell apart.  On the
+    // model without thread contracts, and without its compositions, which read both inputs:
+    // only there is a deeper queue allowed (see the next two tests)
+    val dir = modelDir / "compositions-only" / "sysml"
+    val model = TestUtil.getModel(Some(dir / ".slang" / "top_impl_Instance.json"), None(), dir, ISZ(), "sco", F)
+    val r = runCodegenIn(scratch / "queue-sizes", dir, F,
+      withQueueSize(withoutAnnexes(model), ISZ("top_impl_Instance", "d2p", "dst", "val"), 2))
     assert(r.hasError, "codegen accepted an output whose consumers have different queue sizes")
     assert(ops.ISZOps(r.messages).exists((m: org.sireum.message.Message) => m.isError &&
       ops.StringOps(m.text).contains("'srcp_src_val': its consumers have different queue sizes (")),
       "no error naming the port")
+  }
+
+  "a thread with contracts may not have an event queue deeper than one" in {
+    // the contracts and their run-time checks see one element per dispatch, which matches the
+    // thread only when its queue holds one -- for C threads as for Rust ones
+    val r = runCodegen(scratch / "deep-queue", F,
+      withQueueSize(loadModel(), ISZ("top_impl_Instance", "d2p", "dst", "val"), 2))
+    assert(r.hasError, "codegen accepted a deeper queue on a thread with contracts")
+    assert(ops.ISZOps(r.messages).exists((m: org.sireum.message.Message) => m.isError &&
+      ops.StringOps(m.text).contains("d2p_dst has GUMBO contracts, so its event ports must have single-element queues, but val has a Queue_Size of 2")),
+      "no error naming the thread and the port")
+  }
+
+  "without system testing or runtime monitoring, a deeper queue on a thread with contracts is a warning" in {
+    // nothing then reads the queue one element per dispatch at run time; a Verus proof of the
+    // thread does not read it that way
+    val r = runCodegenIn(scratch / "deep-queue-unchecked", sysmlDir, F,
+      withQueueSize(loadModel(), ISZ("top_impl_Instance", "d2p", "dst", "val"), 2), testScheduler = F)
+    assert(!r.hasError, "codegen rejected a deeper queue though no run-time checks were requested")
+    assert(ops.ISZOps(r.messages).exists((m: org.sireum.message.Message) => m.isWarning &&
+      ops.StringOps(m.text).contains("d2p_dst has GUMBO contracts, so its event ports must have single-element queues, but val has a Queue_Size of 2; this is an error when system testing or runtime monitoring is requested")),
+      "no warning naming the thread and the port")
+  }
+
+  "an event port a composition reads may not have a queue deeper than one, on a thread without contracts too" in {
+    // the system assertions see one element per dispatch as well: nominal reads dst2's val
+    val dir = modelDir / "compositions-only" / "sysml"
+    val model = TestUtil.getModel(Some(dir / ".slang" / "top_impl_Instance.json"), None(), dir, ISZ(), "sco", F)
+    val r = runCodegenIn(scratch / "deep-queue-composition", dir, F,
+      withQueueSize(model, ISZ("top_impl_Instance", "d2p", "dst", "val"), 2))
+    assert(r.hasError, "codegen accepted a deeper queue on a port a composition reads")
+    assert(ops.ISZOps(r.messages).exists((m: org.sireum.message.Message) => m.isError &&
+      ops.StringOps(m.text).contains("Composition nominal reads d2p_dst's val, so it must have a single-element queue, but it has a Queue_Size of 2")),
+      "no error naming the composition, the thread and the port")
   }
 
   "the scheduler on the host: stale expiries, late completions, parks, UNREACHABLE, saturated counts" in {
@@ -308,6 +380,80 @@ class SystemTestingTests extends TestSuite {
     }
   }
 
+  "with runtime monitoring, contracts without state variables still get the GUMBO and composition monitors" in {
+    // the monitors check a thread's contracts over its ports alone; they used to be gated on
+    // state variables, and a model with none got only the userland monitor, silently
+    val dir = modelDir / "stateless" / "sysml"
+    val model = TestUtil.getModel(Some(dir / ".slang" / "top_impl_Instance.json"), None(), dir, ISZ(), "sts", F)
+    val out = scratch / "stateless"
+    val r = runCodegenIn(out, dir, T, model)
+    assert(!r.hasError, "codegen failed")
+    val microkit = out / "microkit"
+    val monitors = ISZ[Predef.String]("gumbo_monitor", "sys_nominal_monitor", "sys_head_monitor")
+    for (m <- monitors) {
+      assert((microkit / "crates" / m).exists, s"no $m crate")
+      assert((microkit / s"$m.mk").exists, s"no $m variant")
+    }
+    assert((microkit / "crates" / "observers").exists, "no observers crate")
+    // every thread has an event output, so the match on Thread in note_dispatch covers them
+    // all: a catch-all arm would be unreachable, and rustc warns about it
+    val app = ops.StringOps((microkit / "crates" / "gumbo_monitor" / "src" / "component" /
+      "gumbo_monitor_process_gumbo_monitor_thread_app.rs").read)
+    val begin = app.stringIndexOf("pub fn note_dispatch(")
+    assert(begin >= 0, "no note_dispatch")
+    val noteDispatch = ops.StringOps(app.substring(begin, app.stringIndexOfFrom("\n}\n", begin)))
+    assert(noteDispatch.contains("observers::Thread::d2p_dst =>"), "note_dispatch does not cover every thread")
+    assert(!noteDispatch.contains("_ => {}"), "note_dispatch has an unreachable catch-all arm")
+    // Opt-in, as the QEMU tests: the monitor images must actually build
+    if (Os.env("HAMR_ST_QEMU").nonEmpty || Os.prop("HAMR_ST_QEMU").nonEmpty) {
+      for (m <- monitors) {
+        val build = Os.proc(ISZ[String]("make", "-C", microkit.value, s"CONFIG=$m.mk",
+          "RUST_MAKE_TARGET=build-release")).run()
+        assert(build.ok, s"the $m image does not build:\n${build.out}\n${build.err}")
+      }
+    }
+  }
+
+  "with runtime monitoring, compositions over threads without contracts still get their monitors" in {
+    // the system layer reads ports and state variables, not the threads' contracts; the
+    // sys-assert monitors used to be built on the GUMBO monitor's generated code, so a model
+    // with no thread contracts got no monitor at all, silently
+    val dir = modelDir / "compositions-only" / "sysml"
+    val model = TestUtil.getModel(Some(dir / ".slang" / "top_impl_Instance.json"), None(), dir, ISZ(), "sco", F)
+    val out = scratch / "compositions-only"
+    val r = runCodegenIn(out, dir, T, model)
+    assert(!r.hasError, "codegen failed")
+    val microkit = out / "microkit"
+    val crates = microkit / "crates"
+    val monitors = ISZ[Predef.String]("sys_nominal_monitor", "sys_head_monitor")
+    for (m <- monitors) {
+      assert((crates / m).exists, s"no $m crate")
+      assert((microkit / s"$m.mk").exists, s"no $m variant")
+      val app = ops.StringOps((crates / m / "src" / "component" / s"${m}_process_${m}_thread_app.rs").read)
+      assert(app.contains("pub fn sys_assert_monitor<"), s"$m has no sys_assert_monitor")
+      assert(!app.contains("gumbo_monitor"), s"$m refers to the GUMBO layer, which the model does not have")
+      assert(app.contains("begin_monitor_run(api);\n    self.sys_assert_monitor(api);"), s"$m's timeTriggered does not start the run and check")
+    }
+    // no thread contracts: no GUMBO monitor, and an observers crate with the system layer only
+    assert(!(crates / "gumbo_monitor").exists, "a GUMBO monitor for a model without thread contracts")
+    assert((crates / "observers").exists, "no observers crate")
+    assert(!(crates / "observers" / "src" / "components.rs").exists, "a component layer without thread contracts")
+    // the test controller hosts the system layer too
+    assert((crates / "test_controller" / "src" / "system_tests" / "observe.rs").exists, "the test controller hosts no checks")
+    // Opt-in, as the QEMU tests: each monitor image builds, validates the schedule, and runs
+    // clean -- the stub behaviour sends nothing, so every assertion holds
+    if (Os.env("HAMR_ST_QEMU").nonEmpty || Os.prop("HAMR_ST_QEMU").nonEmpty) {
+      val violations = List("SYS ASSERT VIOLATION", "SCHEDULE CONFORMANCE VIOLATION", "conformance check failed",
+        "panicked", "PANIC")
+      for (m <- monitors) {
+        val log = boot(microkit, s"$m.mk", 30)
+        val bad = log.split('\n').filter(l => violations.exists(v => l.contains(v)))
+        assert(bad.isEmpty, s"$m reported:\n${bad.take(12).mkString("\n")}")
+        assert(log.contains("Schedule conformance check passed"), s"$m: the schedule was not validated")
+      }
+    }
+  }
+
   "run-tests.cmd rejects a filter make would rewrite" in {
     // make expands `$` in the value it hashes and hands on, and the hash's echo reads `\`
     for (f <- ISZ[Predef.String]("a$b", "a\\c")) {
@@ -441,7 +587,7 @@ class SystemTestingTests extends TestSuite {
 
     // ---- default build: both layers live and on
     val d = runSystemTests(microkit, ISZ(), ISZ())
-    assert(d.has("DONE  matched=29 passed=20 failed=9 init=ok"), "unexpected totals")
+    assert(d.has("DONE  matched=33 passed=23 failed=10 init=ok"), "unexpected totals")
     passes(d, "checks::nominal_frame")
     // one FAIL for two violations: src's guarantee and the composition's assertion
     failsWith(d, "checks::thread_and_system_violation",
@@ -453,13 +599,26 @@ class SystemTestingTests extends TestSuite {
     // a negative test leaves nothing behind
     passes(d, "checks::nominal_after_negative")
     assert(!d("checks::nominal_after_negative").has("VIOLATION"), "a violation leaked into the next test")
-    // a broken assumption is information, and excuses the guarantee
-    passes(d, "checks::assumption_not_met_is_information",
-      "srcp_src assumption not met (CEP_Pre)", "srcp_src CEP_Post not checked: its assumption was not met")
+    // a broken assumption is a violation, and its dispatch is rejected: src does not run (D36)
+    passes(d, "checks::assumption_not_met_rejects_the_dispatch",
+      "expected violation: CEP_Pre srcp_src", "not dispatched at hp=")
+    assert(!d("checks::assumption_not_met_rejects_the_dispatch").has("CEP_Post srcp_src"),
+      "a rejected dispatch was checked for its guarantee")
+    failsWith(d, "checks::assumption_not_met_fails", "VIOLATION CEP_Pre srcp_src", "not dispatched at hp=")
     // the C thread's guarantee, through the second consumer's own cursor
     failsWith(d, "checks::c_thread_violation", "VIOLATION CEP_Post d2p_dst")
+    // src's first dispatch after its rejected ones: the ack it did not consume then is still
+    // there for it, and for its check -- the rejection put the check's cursor back
+    assert(!d("checks::c_thread_violation").has("CEP_Post srcp_src"),
+      "a rejected dispatch consumed an event its thread never received")
     // the violating dispatch is the command's last: still this test's
     failsWith(d, "checks::last_slot_violation_charged", "VIOLATION CEP_Post srcp_src")
+    // a rejected dispatch of a C thread, the hyperperiod's last: what its check latched for the
+    // system layers is put back, so the next frame's places before it see nothing it received
+    passes(d, "checks::rejected_last_dispatch_leaves_nothing_received",
+      "expected violation: CEP_Pre d2p_dst", "not dispatched at hp=", "system assertions resumed")
+    assert(!d("checks::rejected_last_dispatch_leaves_nothing_received").has("VIOLATION SysAssert"),
+      "a rejected dispatch left what it latched visible to the next frame")
     // a test's injection into an event port is not read back as its producer's output
     passes(d, "checks::injected_output_is_not_the_producers")
     assert(!d("checks::injected_output_is_not_the_producers").has("VIOLATION"),
@@ -486,6 +645,11 @@ class SystemTestingTests extends TestSuite {
       "expected violation CepPost(srcp_src) cannot be reported: the GUMBO checks are off")
     passes(d, "switched::suite_hides_gumbo")
     assert(!d("switched::suite_hides_gumbo").has("CEP_Post"), "gumbo = off still reported a CEP_Post")
+    // the normalization after a gumbo = off test checks, and rejects, as the build says: the
+    // rejection happens between the two tests, so its INFO line is in the first one's output --
+    // without it the second test's check would hold vacuously
+    passes(d, "switched::leaves_dst2_out_of_contract", "not dispatched at hp=")
+    passes(d, "switched::normalization_checks_as_the_build_says")
     passes(d, "toggles::next_suite_checks_again", "VIOLATION CEP_Post srcp_src")
     // same name as checks::nominal_frame, in another suite
     passes(d, "toggles::nominal_frame")
@@ -541,11 +705,153 @@ class SystemTestingTests extends TestSuite {
 
     // ---- a listing: the table, and nothing run
     val l = runSystemTests(microkit, ISZ("--list", "checks::"), ISZ())
-    assert(l.has("DONE  matched=16 passed=0 failed=0 init=ok list=1"), "unexpected listing totals")
-    assert(l.lines.count(_.startsWith("TEST | LIST  ")) == 29, "the table does not list every test")
-    assert(l.lines.count(x => x.startsWith("TEST | LIST  ") && x.endsWith("(not selected)")) == 13,
+    assert(l.has("DONE  matched=18 passed=0 failed=0 init=ok list=1"), "unexpected listing totals")
+    assert(l.lines.count(_.startsWith("TEST | LIST  ")) == 33, "the table does not list every test")
+    assert(l.lines.count(x => x.startsWith("TEST | LIST  ") && x.endsWith("(not selected)")) == 15,
       "the table does not mark the unselected tests")
     assert(!l.has("TEST | BEGIN"), "a listing ran a test")
+  }
+
+  "under QEMU: a monitor reports a thread that overran its slot instead of checking it mid-dispatch" in {
+    if (Os.env("HAMR_ST_QEMU").isEmpty && Os.prop("HAMR_ST_QEMU").isEmpty)
+      cancel("set the environment variable or system property HAMR_ST_QEMU to run (needs MICROKIT_SDK, sDDF, qemu-system-aarch64 and cargo)")
+
+    // The monitor variants' scheduler gives each slot a fixed time and does not wait for the
+    // thread.  A thread still running when the monitor's slot starts was read mid-dispatch and
+    // reported as breaking its contract; the scheduler now publishes whether it completed.
+    val out = scratch / "monitor-overrun"
+    val r = runCodegen(out, T)
+    assert(!r.hasError, "codegen failed")
+    val microkit = out / "microkit"
+    installFixtures(microkit)
+    // dst1 spins far past its 50 ms slot once, between receiving val and acknowledging it
+    val app = microkit / "crates" / "d1p_dst" / "src" / "component" / "d1p_dst_app.rs"
+    val original = app.read.value
+    val ack = "      self.latest = v;\n      api.put_ack(v);"
+    assert(original.contains(ack) && original.contains("pub struct d1p_dst {"), "the dst1 fixture changed")
+    app.writeOver(String(original
+      .replace("#[verus_verify]\npub struct d1p_dst {", "static mut DISPATCHES: u32 = 0;\n\n#[verus_verify]\npub struct d1p_dst {")
+      .replace(ack,
+        """      self.latest = v;
+          |      unsafe {
+          |        DISPATCHES += 1;
+          |        if DISPATCHES == 10 {
+          |          log_info("OVERRUN TEST: spinning past the slot");
+          |          let mut x: u64 = 0;
+          |          for i in 0..400_000_000u64 { x = core::hint::black_box(x.wrapping_add(i)); }
+          |          log_info("OVERRUN TEST: done spinning");
+          |        }
+          |      }
+          |      api.put_ack(v);""".stripMargin)))
+    val violations = List("CONTRACT VIOLATION", "SYS ASSERT VIOLATION", "panicked", "PANIC")
+    for (config <- List("gumbo_monitor.mk", "sys_head_monitor.mk")) {
+      val log = boot(microkit, config, 40)
+      assert(log.contains("OVERRUN TEST: done spinning"), s"$config: dst1 did not overrun")
+      assert(log.contains("*** OVERRUN: d1p_dst did not complete within its slot"), s"$config: the overrun was not reported")
+      val bad = log.split('\n').filter(l => violations.exists(v => l.contains(v)))
+      assert(bad.isEmpty, s"$config reported:\n${bad.take(12).mkString("\n")}")
+      if (config == "sys_head_monitor.mk")
+        assert(log.contains("system assertions of composition head resumed"), s"$config: the system assertions did not resume")
+    }
+  }
+
+  "under QEMU: a thread that faults or panics does not stop the monitors checking the others" in {
+    if (Os.env("HAMR_ST_QEMU").isEmpty && Os.prop("HAMR_ST_QEMU").isEmpty)
+      cancel("set the environment variable or system property HAMR_ST_QEMU to run (needs MICROKIT_SDK, sDDF, qemu-system-aarch64 and cargo)")
+
+    // A faulted thread is left suspended and never notifies back.  The monitor variants'
+    // scheduler counts each dispatch until it does, and a monitor treats any dispatch still
+    // counted as an overrun -- so one fault used to stop every check for the rest of the run.
+    // The faulted thread's _MON now answers its dispatches: no OVERRUN is reported, and the
+    // GUMBO layer goes on checking -- here it reports dst1, which no longer acknowledges what
+    // arrives -- and the system layer is never suspended.
+    val out = scratch / "monitor-fault"
+    val r = runCodegen(out, T)
+    assert(!r.hasError, "codegen failed")
+    val microkit = out / "microkit"
+    installFixtures(microkit)
+    val app = microkit / "crates" / "d1p_dst" / "src" / "component" / "d1p_dst_app.rs"
+    val original = app.read.value
+    val ack = "      self.latest = v;\n      api.put_ack(v);"
+    assert(original.contains(ack) && original.contains("pub struct d1p_dst {"), "the dst1 fixture changed")
+    // dst1 stops once, at its 10th dispatch, between receiving val and acknowledging it: with a
+    // fault, or with a panic, which the generated panic handler turns into one
+    def stopDst1(how: Predef.String): Unit =
+      app.writeOver(String(original
+        .replace("#[verus_verify]\npub struct d1p_dst {", "static mut DISPATCHES: u32 = 0;\n\n#[verus_verify]\npub struct d1p_dst {")
+        .replace(ack,
+          s"""      self.latest = v;
+             |      unsafe {
+             |        DISPATCHES += 1;
+             |        if DISPATCHES == 10 {
+             |          log_info("FAULT TEST: faulting");
+             |          $how
+             |        }
+             |      }
+             |      api.put_ack(v);""".stripMargin)))
+    // After the fault dst1 "completes" every dispatch doing nothing, so it no longer acknowledges
+    // what arrives: the checks that go on running report that again every hyperperiod -- dst1's
+    // own guarantee in the GUMBO layer, and head's Acks in the system layer.  Requiring several
+    // shows checking continues, not just the first run after the fault.
+    def countOf(text: Predef.String, s: Predef.String): Int = text.sliding(s.length).count(_ == s)
+    for (how <- List("core::ptr::write_volatile(8 as *mut u32, 1);", "panic!(\"FAULT TEST: panicking\");");
+         (config, evidence) <- List(
+           ("gumbo_monitor.mk", "CONTRACT VIOLATION: d1p_dst CEP_Post"),
+           ("sys_head_monitor.mk", "SYS ASSERT VIOLATION: property Acks"))) {
+      stopDst1(how)
+      val log = boot(microkit, config, 40)
+      assert(log.contains("FAULT TEST: faulting") && log.contains("d1p_dst_MON | FAULT in user PD"), s"$config: dst1 did not fault")
+      val after = log.substring(log.indexOf("FAULT in user PD"))
+      // the stopped thread taken for one still running is the failure; another thread's
+      // occasional overrun is a real one -- the violations now logged every frame are slow
+      // debug output, which can push a later slot past its end -- and checking resumes after it
+      assert(!log.contains("OVERRUN: d1p_dst"), s"$config: the stopped thread was taken for one still running:\n${log.split('\n').filter(_.contains("OVERRUN")).take(4).mkString("\n")}")
+      assert(countOf(after, evidence) >= 3, s"$config: checking did not go on after the fault (${countOf(after, evidence)} x '$evidence')")
+      assert(!after.contains("suspended"), s"$config: the system assertions were suspended after the fault")
+      // dst1's own panic is the one expected; any other is a monitor's
+      val panics = log.split('\n').filter(l => (l.contains("panicked") || l.contains("PANIC")) && !l.contains("FAULT TEST"))
+      assert(how.startsWith("panic") && panics.forall(_.contains("d1p_dst")) || panics.isEmpty,
+        s"$config: an unexpected panic:\n${panics.take(4).mkString("\n")}")
+    }
+
+    // The monitor variants compile _MON with the fault answer (MON_CFLAGS); the test variant
+    // must not link their objects, which share build/ with it: switching variant recompiles them.
+    // (system.mk's CFLAGS stamp guarantees it; sDDF's stamp, which the HAMR stamp's rule deletes,
+    // happens to as well, so this guards the outcome rather than either mechanism.)
+    val switched = Os.proc(ISZ[String]("make", "-C", microkit.value, "CONFIG=test_scheduler.mk", "RUST_MAKE_TARGET=build-release")).run()
+    assert(switched.ok, s"test_scheduler.mk did not build:\n${switched.out}\n${switched.err}")
+    assert(switched.out.value.contains("-o d1p_dst_MON.o") || switched.out.value.contains("d1p_dst_MON.c -o d1p_dst_MON.o"),
+      "switching to the test variant reused the monitor variant's _MON object")
+  }
+
+  "under QEMU: a thread that panics before the schedule starts fails the run at once, saying why" in {
+    if (Os.env("HAMR_ST_QEMU").isEmpty && Os.prop("HAMR_ST_QEMU").isEmpty)
+      cancel("set the environment variable or system property HAMR_ST_QEMU to run (needs MICROKIT_SDK, sDDF, qemu-system-aarch64 and cargo)")
+
+    // A thread that panics while initializing never reports ready, so the test scheduler never
+    // hands over and no DONE can come.  run-tests.cmd stops QEMU as soon as it sees the panic,
+    // instead of waiting out its timeout, and quotes it.
+    val out = scratch / "init-panic"
+    val r = runCodegen(out)
+    assert(!r.hasError, "codegen failed")
+    val microkit = out / "microkit"
+    installFixtures(microkit)
+    val app = microkit / "crates" / "d1p_dst" / "src" / "component" / "d1p_dst_app.rs"
+    val original = app.read.value
+    val init = """    log_info("initialize entrypoint invoked");"""
+    assert(original.contains(init), "the dst1 fixture changed")
+    app.writeOver(String(original.replace(init, init + "\n    panic!(\"INIT PANIC TEST\");")))
+    // built first, so the time below is QEMU's (and a relink), not a cold build's
+    val build = Os.proc(ISZ[String]("make", "-C", microkit.value, "CONFIG=test_scheduler.mk", "RUST_MAKE_TARGET=build-release")).run()
+    assert(build.ok, s"test_scheduler.mk did not build:\n${build.out}\n${build.err}")
+    val start = System.currentTimeMillis()
+    val run = Os.proc(ISZ[String](sireum.value, "slang", "run", (microkit / "bin" / "run-tests.cmd").value)).run()
+    val seconds = (System.currentTimeMillis() - start) / 1000
+    assert(!run.ok, "a run whose thread panicked during initialization passed")
+    val err = run.err.value
+    assert(err.contains("faulted or panicked") && err.contains("INIT PANIC TEST"),
+      s"the failure does not quote the panic:\n${err.take(2000)}")
+    assert(seconds < 240, s"run-tests.cmd waited ${seconds}s: it did not stop at the panic")
   }
 
   // Opt-in, as above.  With runtime monitoring and no injected faults (src's mode stays 0), the

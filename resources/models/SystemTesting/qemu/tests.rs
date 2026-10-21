@@ -11,7 +11,9 @@
 //!   99  src sends nothing (not a fault)
 //!   13  src sends 14 but remembers 13: breaks src's `echo` and the composition's `Echoed`
 //!   77  dst2 (C) forwards 78: breaks dst2's `forward`
-//!   -1  breaks src's assumption `nonNegative`: information, not a failure
+//!   -1  breaks src's assumption `nonNegative`: a violation, and src is not dispatched
+//!   42  src sends 42, which breaks dst2's assumption `notFortyTwo`: dst2, the hyperperiod's
+//!       last dispatch, is not dispatched
 //!   55  src spins past its watchdog, once
 //!   56  the same, once, for a second overrun test
 //!   57  the same, once, for a third
@@ -75,7 +77,17 @@ system_tests! {
       frame(5);
     }
 
-    fn assumption_not_met_is_information() {
+    // A broken assumption is a violation -- the sender, here the test, did not meet src's
+    // contract -- declared on purpose here.  src's dispatch is rejected: it does not run,
+    // so it does not adopt the mode it was given.
+    fn assumption_not_met_rejects_the_dispatch() {
+      observe::expect(Expect::CepPre(Thread::srcp_src));
+      frame(-1);
+      sys_assert!(inspect::get_srcp_src_sv_last() != Some(-1));
+    }
+
+    // FAILS: the same broken assumption, not declared
+    fn assumption_not_met_fails() {
       frame(-1);
     }
 
@@ -150,6 +162,15 @@ system_tests! {
       let _ = api::sstep(1);
     }
 
+    // dst2's dispatch, the hyperperiod's last, is rejected: it received nothing, so in the next
+    // frame, before dst2 runs, `NotYet` sees no event on dst2's input -- what the rejected
+    // dispatch's check latched was put back
+    fn rejected_last_dispatch_leaves_nothing_received() {
+      observe::expect(Expect::CepPre(Thread::d2p_dst));
+      frame(42);
+      frame(5);
+    }
+
     // an injection is in the frame it is made in: dst1 has already run in this hyperperiod,
     // so it receives the value in the next one, where src did not send it -- the controller
     // says so where it happens
@@ -175,6 +196,25 @@ system_tests! {
       let t = observe::take();
       sys_assert_eq!(count(&t, Kind::CepPost), 0);
       sys_assert!(t.contains(echoed()));
+    }
+
+    // This test and the next are an ordered pair: this one sets up what the next one checks,
+    // and SystemTestingTests checks the rejection between them (its INFO line is this test's).
+    // Selected or run alone, the next one holds vacuously.
+    //
+    // with GUMBO off nothing is rejected: src sends 42, and the test ends parked before dst2,
+    // which has not yet received it
+    fn leaves_dst2_out_of_contract() {
+      let _ = api::run_to_thread(inspect::channels::srcp_src_MON);
+      inspect::put_srcp_src_mode(42);
+      let _ = api::run_to_thread(inspect::channels::d2p_dst_MON);
+    }
+
+    // the runner's normalization before this test dispatches dst2 as the build says, not as
+    // the last test left the switches: dst2 is rejected, so it did not forward the 42.  (FAILS
+    // when GUMBO_CHECKS=off: then nothing is rejected.)
+    fn normalization_checks_as_the_build_says() {
+      sys_assert!(inspect::get_d2p_dst_fwd() != Some(42));
     }
   }
 
