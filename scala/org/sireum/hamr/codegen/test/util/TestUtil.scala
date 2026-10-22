@@ -757,8 +757,12 @@ object TestUtil {
 
   def isCI: B = Os.env("GITLAB_CI").nonEmpty || Os.env("GITHUB_ACTIONS").nonEmpty || Os.env("BUILD_ID").nonEmpty
 
+  // IVE is IntelliJ IDEA, whose macOS bundle identifier lost its ".ce" when JetBrains
+  // merged Community and Ultimate into one distribution; both are accepted so an
+  // older IVE still counts.
   def inIVE: B =
     Os.env("__CFBundleIdentifier") match {
+      case Some(string"com.jetbrains.intellij") => T
       case Some(string"com.jetbrains.intellij.ce") => T
       case _ => F
     }
