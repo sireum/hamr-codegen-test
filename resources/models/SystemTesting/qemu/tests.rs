@@ -371,6 +371,20 @@ system_tests! {
       sys_assert_eq!(inspect::get_d1p_dst_sv_gotCmd(), Some(false));
     }
 
+    // Some(7), None, then Some(7) again for dst2 in one batch: the last request is the one dst2
+    // applies, so it receives 7 -- and its checks, whose cursor follows the newest request too,
+    // see it arrive, so its `forward` holds and `quiet` is not wrongly expected.  src sends
+    // nothing, so `Sent` is the injection's -- declared.
+    fn some_none_some_in_one_batch() {
+      observe::expect(sent());
+      before_dst1(99);
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: Some(7) });
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: None });
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: Some(7) });
+      let _ = api::hstep(1);
+      sys_assert_eq!(inspect::get_d2p_dst_fwd(), Some(7));
+    }
+
     // dst2's dispatch is rejected (42 breaks notFortyTwo), which leaves the 42 pending for it.
     // Cleared, it is gone: in the next frame, where src sends nothing, dst2 receives nothing and
     // is not rejected again.  (Not for GUMBO_CHECKS=off, where nothing is rejected.)

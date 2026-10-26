@@ -30,6 +30,7 @@ import org.sireum.hamr.ir
 import org.sireum.hamr.ir.Aadl
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
+import org.sireum.hamr.codegen.microkit.plugins.testing.TestSchedulerPlugin
 
 class SystemTestingTests extends TestSuite {
 
@@ -221,7 +222,7 @@ class SystemTestingTests extends TestSuite {
       s0.substring(0, s0.indexOf("\n}\n") + 2)
     }
     def moves(fn: Predef.String, cursor: Predef.String): scala.Boolean =
-      body(fn).contains(s"if ((intmax_t) (cutoff - tc_obs_${cursor}_recv.numRecv) > 0) {\n    tc_obs_${cursor}_recv.numRecv = cutoff;")
+      body(fn).contains(s"tc_obs_${cursor}_recv.numRecv =\n    ((intmax_t) (cutoff - tc_obs_${cursor}_clr_base) > 0)")
     // val is src's output, read by dst1 and dst2: each clear moves only its own reader's cursor,
     // and the system value -- what the frame carried -- is left alone (D27)
     assert(moves("test_clear_d2p_dst_val", "srcp_src_val__d2p_dst"), "clearing d2p_dst.val does not move its checks cursor")
@@ -231,6 +232,28 @@ class SystemTestingTests extends TestSuite {
     // cmd is dst1's unconnected input: its system value is what dst1 received, so sys moves too
     assert(moves("test_clear_d1p_dst_cmd", "d1p_dst_cmd__d1p_dst"), "clearing d1p_dst.cmd does not move its checks cursor")
     assert(moves("test_clear_d1p_dst_cmd", "d1p_dst_cmd__sys"), "clearing an unconnected input does not move the system cursor")
+  }
+
+  // D39 review fixes
+
+  "a clear region holds 256 event inputs per page" in {
+    def kib(n: Int): Z = TestSchedulerPlugin.clearRegionKiBytes(Z(n))
+    assert(kib(1) == Z(4) && kib(256) == Z(4), "256 inputs do not fit one page")
+    assert(kib(257) == Z(8) && kib(512) == Z(8) && kib(513) == Z(12), "more than 256 inputs are not given another page")
+  }
+
+  "a clear moves the checks cursor as the consumer will move, within the window since its last read" in {
+    val ctrl = read("components/test_controller_process_test_controller_thread/src/test_controller_process_test_controller_thread.c")
+    val c = "srcp_src_val__d2p_dst"
+    // the window opens at the first request after a read, at the cursor's position then ...
+    assert(ctrl.contains(s"if (!tc_obs_${c}_clr_open) {\n    tc_obs_${c}_clr_base = tc_obs_${c}_recv.numRecv;\n    tc_obs_${c}_clr_open = true;"),
+      "the first clear after a read does not record where the cursor stood")
+    // ... every request in it takes the newest cutoff against that position, so it can move back
+    assert(ctrl.contains(s"tc_obs_${c}_recv.numRecv =\n    ((intmax_t) (cutoff - tc_obs_${c}_clr_base) > 0) ? cutoff : tc_obs_${c}_clr_base;"),
+      "a clear does not apply the newest cutoff against the window's base")
+    // ... a read closes it, and a rejected dispatch's rewind restores it with the cursor
+    assert(ctrl.contains(s"tc_obs_${c}_clr_open = false;\n  return "), "a read does not close the clear window")
+    assert(ctrl.contains(s"tc_obs_${c}_clr_open = tc_obs_${c}_mark_clr_open;"), "a rewind does not restore the clear window")
   }
 
   "a C thread's contracts are checked, from executable GUMBOX predicates" in {
@@ -762,7 +785,7 @@ class SystemTestingTests extends TestSuite {
 
     // ---- default build: both layers live and on
     val d = runSystemTests(microkit, ISZ(), ISZ())
-    assert(d.has("DONE  matched=42 passed=31 failed=11 init=ok"), "unexpected totals")
+    assert(d.has("DONE  matched=43 passed=32 failed=11 init=ok"), "unexpected totals")
     passes(d, "checks::nominal_frame")
     // one FAIL for two violations: src's guarantee and the composition's assertion
     failsWith(d, "checks::thread_and_system_violation",
@@ -852,6 +875,11 @@ class SystemTestingTests extends TestSuite {
     passes(d, "clearing::clearing_an_unconnected_input")
     clean("clearing::clearing_an_unconnected_input")
     // a rejected dispatch leaves its event pending; cleared, it is not rejected again
+    // Some, None, then Some again for one consumer in one batch: dst2 receives 7, and its checks
+    // see it arrive too -- no `quiet` violation
+    passes(d, "clearing::some_none_some_in_one_batch", "expected violation: SysAssert nominal/Sent")
+    assert(!d("clearing::some_none_some_in_one_batch").has("CEP_Post"),
+      "the checks did not see the event the consumer received")
     passes(d, "clearing::clearing_after_a_rejected_dispatch", "not dispatched at hp=")
     assert(d("clearing::clearing_after_a_rejected_dispatch").count("not dispatched at hp=") == 1,
       "dst2 was rejected again after its pending event was cleared")
@@ -914,8 +942,8 @@ class SystemTestingTests extends TestSuite {
     // ---- a listing: the table, and nothing run
     val l = runSystemTests(microkit, ISZ("--list", "checks::"), ISZ())
     assert(l.has("DONE  matched=18 passed=0 failed=0 init=ok list=1"), "unexpected listing totals")
-    assert(l.lines.count(_.startsWith("TEST | LIST  ")) == 42, "the table does not list every test")
-    assert(l.lines.count(x => x.startsWith("TEST | LIST  ") && x.endsWith("(not selected)")) == 24,
+    assert(l.lines.count(_.startsWith("TEST | LIST  ")) == 43, "the table does not list every test")
+    assert(l.lines.count(x => x.startsWith("TEST | LIST  ") && x.endsWith("(not selected)")) == 25,
       "the table does not mark the unselected tests")
     assert(!l.has("TEST | BEGIN"), "a listing ran a test")
   }
