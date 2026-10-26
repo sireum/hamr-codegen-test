@@ -121,6 +121,118 @@ class SystemTestingTests extends TestSuite {
   // The generated code
   // ------------------------------------------------------------------------------------------
 
+  // D39 stage 1: clearing a pending event
+
+  "an event input's setup field is an Option, and a data input's and a state variable's are not" in {
+    val inspect = read("crates/test_controller/src/system_tests/inspect.rs")
+    for (f <- Seq("pub val: Option<i32>,", "pub ping: Option<u8>,", "pub cmd: Option<i32>,", "pub ack: Option<i32>,"))
+      assert(inspect.contains(f), s"no '$f' in inspect.rs")
+    for (f <- Seq("pub mode: i32,", "pub sv_latest: i32,", "pub sv_gotCmd: bool,"))
+      assert(inspect.contains(f), s"no '$f' in inspect.rs")
+    // the container's event fields go through the setup batch's setters (D39 stage 2)
+    assert(inspect.contains(
+      "match s.val {\n    Some(v) => setup_some_d2p_dst_val(v),\n    None => setup_none_d2p_dst_val(),\n  }"),
+      "set_d2p_dst does not set val through the setup batch")
+    assert(inspect.contains("pub fn clear_d1p_dst_cmd() {"), "no clear_ for an unconnected event input")
+  }
+
+  "a consumer applies a clear request before anything in its dispatch reads a port" in {
+    for (t <- Seq("d1p_dst", "d2p_dst")) {
+      val bridge = read(s"components/$t/src/$t.c")
+      val dispatch = bridge.stringIndexOf("case PORT_FROM_MON:")
+      val apply = bridge.stringIndexOf("if (inj_clr_requests != NULL) {")
+      val compute = bridge.stringIndexOf(s"${t}_timeTriggered();")
+      assert(dispatch >= 0 && apply > dispatch && compute > apply,
+        s"$t's dispatch does not apply its clear requests before computing")
+      // the cursor moves forward only, and the comparison survives a wrap
+      assert(bridge.contains("if ((intmax_t) (cutoff - val_recv_queue.numRecv) > 0) {"), s"$t does not compare wrap-safely")
+      // the request's sequence number is read before its cutoff
+      val seq = bridge.stringIndexOf("inj_clr_applied[0] = inj_clr_requests[0];")
+      val fence = bridge.stringIndexOf("__atomic_thread_fence(__ATOMIC_ACQUIRE);")
+      val cutoff = bridge.stringIndexOf("sb_event_counter_t cutoff = inj_clr_requests[1];")
+      assert(seq >= 0 && fence > seq && cutoff > fence, s"$t reads the cutoff before the sequence number")
+    }
+  }
+
+  "the controller writes a clear request's cutoff before its sequence number" in {
+    val ctrl = read("components/test_controller_process_test_controller_thread/src/test_controller_process_test_controller_thread.c")
+    assert(ctrl.contains(
+      "void test_clear_d1p_dst_cmd(sb_event_counter_t cutoff) {\n  tc_inj_d1p_dst_clr[5] = cutoff;\n" +
+        "  __atomic_thread_fence(__ATOMIC_RELEASE);\n  tc_inj_d1p_dst_clr[4] = tc_inj_d1p_dst_clr[4] + 1;\n"),
+      "test_clear_d1p_dst_cmd is not cutoff, release fence, then sequence number")
+    assert(ctrl.contains("sb_event_counter_t test_sent_srcp_src_val(void) {\n  return tc_srcp_src_val_queue->numSent;\n}"),
+      "no test_sent_ for the val connection")
+  }
+
+  // D39 stage 2: setup batches
+
+  "a setup batch ends at every command and at each test's start" in {
+    val api = read("crates/test_controller/src/system_tests/api.rs")
+    val issue = api.stringIndexOf("fn issue(typ: u32")
+    val end = api.stringIndexOf("crate::system_tests::inspect::end_setup_batches();")
+    val exchange = api.stringIndexOf("let st = exchange(typ")
+    assert(issue >= 0 && end > issue && exchange > end, "issue() does not end the setup batches before exchanging")
+    val harness = read("crates/test_controller/src/system_tests/harness.rs")
+    val runnerEnd = harness.stringIndexOf("crate::system_tests::inspect::end_setup_batches();")
+    val begin = harness.stringIndexOf("line(format_args!(\"TEST | BEGIN {}\", name));")
+    assert(runnerEnd >= 0 && begin > runnerEnd, "the runner does not end the setup batches before a test begins")
+  }
+
+  "an explicit put_ ends its connection's batch, and the setters inject without ending it" in {
+    val inspect = read("crates/test_controller/src/system_tests/inspect.rs")
+    assert(inspect.contains("pub fn put_srcp_src_val(value: i32) {\n  end_setup_batch_srcp_src_val();\n  inject_srcp_src_val(value);\n}"),
+      "put_srcp_src_val does not end the batch before sending")
+    // the consumers of val: both are batched, and a None one is re-sent its cutoff after an injection
+    assert(inspect.contains("static mut SETUP_BATCH_srcp_src_val: Option<(u64, i32, &'static str)> = None;"), "no batch for val")
+    for (c <- Seq("d1p_dst_val", "d2p_dst_val"))
+      assert(inspect.contains(s"if SETUP_NONE_$c { test_clear_$c(sent); }"), s"$c is not re-sent its None cutoff")
+    // Some: the first injects once and records itself; a different value fails the test
+    assert(inspect.contains("inject_srcp_src_val(value.clone());\n        SETUP_BATCH_srcp_src_val = Some((s0, value, \"d2p_dst.val\"));"),
+      "the first Some on val does not inject and record the batch")
+    assert(inspect.contains("setup conflict on {}: {} set {:?} and d2p_dst.val set {:?}"), "a conflicting Some does not fail the test")
+    // a connection with one consumer is still a batch: cmd is d1p_dst's unconnected input
+    assert(inspect.contains("fn end_setup_batch_d1p_dst_cmd() {"), "no batch for an unconnected event input")
+    assert(inspect.contains("pub(crate) fn end_setup_batches() {"), "no end_setup_batches")
+  }
+
+  "the clear-request regions are read-only for their thread and mapped where the controller writes them" in {
+    val test = read("test_scheduler.meta.py")
+    val ctrl = read("components/test_controller_process_test_controller_thread/src/test_controller_process_test_controller_thread.c")
+    for (t <- Seq("srcp_src", "d1p_dst", "d2p_dst")) {
+      assert(test.contains(s"""$t.add_map(Map(inj_${t}_clr, """) &&
+        test.contains("""perms="r", setvar_vaddr="inj_clr_requests"))"""), s"$t does not map its clear region read-only")
+      // the controller's map and the address compiled into its bridge agree
+      val mapAt = test.stringIndexOf(s"test_controller_process_test_controller_thread.add_map(Map(inj_${t}_clr, 0x")
+      assert(mapAt >= 0, s"the controller does not map inj_${t}_clr")
+      val mapped = test.s.value.substring(mapAt.toInt).split(',')(1).trim.replace("_", "").toUpperCase
+      assert(ctrl.contains(s"*tc_inj_${t}_clr = (volatile sb_event_counter_t *) ${mapped.replace("0X", "0x")};"),
+        s"the controller's address for inj_${t}_clr is not the one it is mapped at ($mapped)")
+    }
+  }
+
+  // D39 stage 3: the checks see a clear
+
+  "a clear moves the cleared reader's checks cursor, and the system cursor only for an unconnected input" in {
+    val ctrl = read("components/test_controller_process_test_controller_thread/src/test_controller_process_test_controller_thread.c")
+    def body(fn: Predef.String): Predef.String = {
+      val i = ctrl.stringIndexOf(s"void $fn(sb_event_counter_t cutoff) {")
+      assert(i >= 0, s"no $fn")
+      val s0 = ctrl.s.value.substring(i.toInt)
+      s0.substring(0, s0.indexOf("\n}\n") + 2)
+    }
+    def moves(fn: Predef.String, cursor: Predef.String): scala.Boolean =
+      body(fn).contains(s"if ((intmax_t) (cutoff - tc_obs_${cursor}_recv.numRecv) > 0) {\n    tc_obs_${cursor}_recv.numRecv = cutoff;")
+    // val is src's output, read by dst1 and dst2: each clear moves only its own reader's cursor,
+    // and the system value -- what the frame carried -- is left alone (D27)
+    assert(moves("test_clear_d2p_dst_val", "srcp_src_val__d2p_dst"), "clearing d2p_dst.val does not move its checks cursor")
+    assert(!moves("test_clear_d2p_dst_val", "srcp_src_val__d1p_dst"), "clearing d2p_dst.val moves d1p_dst's cursor")
+    assert(!moves("test_clear_d2p_dst_val", "srcp_src_val__sys"), "clearing a connected input moves the system cursor")
+    assert(!moves("test_clear_d2p_dst_val", "srcp_src_val__srcp_src"), "clearing a consumer moves the producer's cursor")
+    // cmd is dst1's unconnected input: its system value is what dst1 received, so sys moves too
+    assert(moves("test_clear_d1p_dst_cmd", "d1p_dst_cmd__d1p_dst"), "clearing d1p_dst.cmd does not move its checks cursor")
+    assert(moves("test_clear_d1p_dst_cmd", "d1p_dst_cmd__sys"), "clearing an unconnected input does not move the system cursor")
+  }
+
   "a C thread's contracts are checked, from executable GUMBOX predicates" in {
     val components = read("crates/observers/src/components.rs")
     assert(components.contains("crate::Thread::d2p_dst => {"), "dst2 (C) has no checks")
@@ -480,6 +592,68 @@ class SystemTestingTests extends TestSuite {
   }
 
   // ------------------------------------------------------------------------------------------
+  // The host driver's verdict, from crafted serial output
+  // ------------------------------------------------------------------------------------------
+
+  /** Runs the generated run-tests.cmd with `console` standing in for the serial output
+    * (RUN_TESTS_TARGET_CMD), so its stop condition and verdict run without an SDK or QEMU.
+    * `later`, if given, is printed three seconds after `console` -- long enough for the driver
+    * to have stopped the run if it was going to stop it early.  Returns whether the run passed,
+    * and everything it printed. */
+  def verdict(args: ISZ[String], console: Predef.String, later: Predef.String = ""): (scala.Boolean, Predef.String) = {
+    val dir = Os.tempDirFix("hamr-st-console")
+    val first = dir / "first.txt"
+    val second = dir / "second.txt"
+    first.writeOver(console)
+    second.writeOver(later)
+    val target = s"cat '${first.value}'; sleep 3; cat '${second.value}'; sleep 600"
+    val r = Os.proc(ISZ[String](sireum.value, "slang", "run", (generated / "bin" / "run-tests.cmd").value) ++ args)
+      .env(ISZ[(String, String)]((String("RUN_TESTS_TARGET_CMD"), String(target)))).run()
+    dir.removeAll()
+    (r.ok, r.out.value + r.err.value)
+  }
+
+  val table: Predef.String = "TEST | LIST  nominal::a\nTEST | LIST  nominal::b\n"
+
+  "a test message that mentions DONE does not stop the run before the real DONE" in {
+    val (ok, out) = verdict(ISZ[String](),
+      console = table + "TEST | BEGIN nominal::a\nTEST | INFO  waiting for TEST | DONE  matched=1 passed=1 failed=0 init=ok\n",
+      later = "TEST | PASS  nominal::a\nTEST | BEGIN nominal::b\nTEST | PASS  nominal::b\n" +
+        "TEST | DONE  matched=2 passed=2 failed=0 init=ok\n")
+    assert(ok, s"the run was stopped at the INFO line, before the real DONE:\n$out")
+    assert(out.contains("OK: 2 of 2 tests passed"), out)
+  }
+
+  "a listing verdict fails a run that asked for tests" in {
+    val (ok, out) = verdict(ISZ[String](), table + "TEST | DONE  matched=2 passed=0 failed=0 init=ok list=1\n")
+    assert(!ok, s"a list=1 verdict passed a run that asked for tests:\n$out")
+    assert(out.contains("only listed the tests"), out)
+  }
+
+  "a run that asked for a listing fails if the image ran the tests" in {
+    val (ok, out) = verdict(ISZ[String]("--list"),
+      table + "TEST | BEGIN nominal::a\nTEST | PASS  nominal::a\nTEST | BEGIN nominal::b\nTEST | PASS  nominal::b\n" +
+        "TEST | DONE  matched=2 passed=2 failed=0 init=ok\n")
+    assert(!ok, s"--list passed a run that ran the tests:\n$out")
+    assert(out.contains("--list was requested"), out)
+  }
+
+  "a listing passes only when it is well formed" in {
+    val good = table + "TEST | DONE  matched=2 passed=0 failed=0 init=ok list=1\n"
+    val (ok, out) = verdict(ISZ[String]("--list"), good)
+    assert(ok && out.contains("OK: listed 2 test(s)"), s"a well-formed listing failed:\n$out")
+
+    def rejects(console: Predef.String, why: Predef.String): Unit = {
+      val (ok, out) = verdict(ISZ[String]("--list"), console)
+      assert(!ok, s"a listing that $why passed:\n$out")
+    }
+    rejects(table + "TEST | DONE  matched=2 passed=0 failed=1 init=ok list=1\n", "reports a failure")
+    rejects(table + "TEST | DONE  matched=2 passed=0 failed=0 init=failed list=1\n", "reports a broken initialization")
+    rejects("TEST | LIST  nominal::a\nTEST | DONE  matched=2 passed=0 failed=0 init=ok list=1\n",
+      "lost a line of its table")
+  }
+
+  // ------------------------------------------------------------------------------------------
   // Under QEMU
   // ------------------------------------------------------------------------------------------
 
@@ -588,7 +762,7 @@ class SystemTestingTests extends TestSuite {
 
     // ---- default build: both layers live and on
     val d = runSystemTests(microkit, ISZ(), ISZ())
-    assert(d.has("DONE  matched=33 passed=23 failed=10 init=ok"), "unexpected totals")
+    assert(d.has("DONE  matched=42 passed=31 failed=11 init=ok"), "unexpected totals")
     passes(d, "checks::nominal_frame")
     // one FAIL for two violations: src's guarantee and the composition's assertion
     failsWith(d, "checks::thread_and_system_violation",
@@ -658,6 +832,30 @@ class SystemTestingTests extends TestSuite {
     assert(d("toggles::off_then_on_within_a_test").count("VIOLATION CEP_Post") == 1, "off then on: expected one CEP_Post")
     passes(d, "toggles::reenable_gumbo")
     passes(d, "toggles::parks_only_while_live")
+    // D39: clearing what is pending for a consumer, and the setup batches
+    def clean(name: Predef.String): Unit =
+      assert(!d(name).has("VIOLATION"), s"$name reported a violation")
+    // one consumer cleared: the other receives, and the cleared one's checks see nothing arrive
+    passes(d, "clearing::clearing_one_consumer_leaves_the_other")
+    clean("clearing::clearing_one_consumer_leaves_the_other")
+    // every consumer cleared: what src sent is still what the frame carried (D27)
+    passes(d, "clearing::clearing_every_consumer_leaves_what_was_sent")
+    clean("clearing::clearing_every_consumer_leaves_what_was_sent")
+    // the result does not depend on the order of the setters; Sent is the injection's, declared
+    passes(d, "clearing::mixed_setup_none_first", "expected violation: SysAssert nominal/Sent")
+    passes(d, "clearing::mixed_setup_some_first", "expected violation: SysAssert nominal/Sent")
+    passes(d, "clearing::put_ends_the_setup_batch", "expected violation: SysAssert nominal/Sent")
+    failsWith(d, "clearing::conflicting_setup_fails",
+      "setup conflict on srcp_src_val: d1p_dst.val set 1 and d2p_dst.val set 2")
+    passes(d, "clearing::a_command_ends_the_setup_batch", "expected violation: SysAssert nominal/Sent")
+    // the system cursor of an unconnected input moves with its reader's: CmdFirst holds
+    passes(d, "clearing::clearing_an_unconnected_input")
+    clean("clearing::clearing_an_unconnected_input")
+    // a rejected dispatch leaves its event pending; cleared, it is not rejected again
+    passes(d, "clearing::clearing_after_a_rejected_dispatch", "not dispatched at hp=")
+    assert(d("clearing::clearing_after_a_rejected_dispatch").count("not dispatched at hp=") == 1,
+      "dst2 was rejected again after its pending event was cleared")
+
     // the watchdog
     // the system assertions stay suspended for the rest of the frame the overrun is in (the
     // aborted dispatch's output still reaches the consumers there) and resume in the next
@@ -696,6 +894,12 @@ class SystemTestingTests extends TestSuite {
     passes(g, "checks::c_thread_violation")
     failsWith(g, "toggles::reenable_gumbo", "(GUMBO_CHECKS=off); a test cannot turn them back on")
     passes(g, "toggles::parks_only_while_live")
+    // clearing works with the thread checks out of the build, and the system assertions still
+    // see an unconnected input as its reader received it
+    passes(g, "clearing::clearing_one_consumer_leaves_the_other")
+    passes(g, "clearing::clearing_an_unconnected_input")
+    assert(!g("clearing::clearing_an_unconnected_input").has("VIOLATION"),
+      "GUMBO_CHECKS=off: a cleared unconnected input was seen by the system assertions")
 
     // ---- both off: nothing tracked, no parks; command failures still fail a test
     val n = runSystemTests(microkit, ISZ(), ISZ(("GUMBO_CHECKS", "off"), ("SYSVERIF_CHECKS", "off")))
@@ -703,12 +907,15 @@ class SystemTestingTests extends TestSuite {
     passes(n, "checks::thread_and_system_violation")
     passes(n, "toggles::parks_only_while_live")
     failsWith(n, "watchdog::overrun_fails_the_test", "sstep failed: a thread overran its slot's watchdog")
+    // clearing needs no checks: what the consumers receive is the same
+    passes(n, "clearing::clearing_one_consumer_leaves_the_other")
+    passes(n, "clearing::clearing_every_consumer_leaves_what_was_sent")
 
     // ---- a listing: the table, and nothing run
     val l = runSystemTests(microkit, ISZ("--list", "checks::"), ISZ())
     assert(l.has("DONE  matched=18 passed=0 failed=0 init=ok list=1"), "unexpected listing totals")
-    assert(l.lines.count(_.startsWith("TEST | LIST  ")) == 33, "the table does not list every test")
-    assert(l.lines.count(x => x.startsWith("TEST | LIST  ") && x.endsWith("(not selected)")) == 15,
+    assert(l.lines.count(_.startsWith("TEST | LIST  ")) == 42, "the table does not list every test")
+    assert(l.lines.count(x => x.startsWith("TEST | LIST  ") && x.endsWith("(not selected)")) == 24,
       "the table does not mark the unselected tests")
     assert(!l.has("TEST | BEGIN"), "a listing ran a test")
   }

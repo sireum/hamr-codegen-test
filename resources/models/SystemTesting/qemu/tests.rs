@@ -43,6 +43,26 @@ fn sent() -> Expect {
   Expect::SysAssert(observe::sys::nominal::COMPOSITION, observe::sys::nominal::Sent)
 }
 
+/// Empty the test's own view of dst1's ack and dst2's fwd, so that what a test reads after
+/// stepping is what that step produced.
+fn drain() {
+  while inspect::get_d1p_dst_ack().is_some() {}
+  while inspect::get_d2p_dst_fwd().is_some() {}
+}
+
+/// dst1's whole pre-state: `val` as given, nothing pending on ping or cmd, `latest` set.
+fn dst1(val: Option<i32>, latest: i32) -> inspect::d1p_dst_PreState {
+  inspect::d1p_dst_PreState { val, ping: None, cmd: None, sv_latest: latest, sv_gotCmd: false }
+}
+
+/// Stop before dst1, after src has run with `mode`: where a test sets up both consumers of val.
+fn before_dst1(mode: i32) {
+  drain();
+  let _ = api::run_to_thread(inspect::channels::srcp_src_MON);
+  inspect::put_srcp_src_mode(mode);
+  let _ = api::run_to_thread(inspect::channels::d1p_dst_MON);
+}
+
 system_tests! {
   suite checks {
     fn nominal_frame() {
@@ -256,6 +276,110 @@ system_tests! {
       } else {
         sys_assert_eq!(after, before);
       }
+    }
+  }
+
+  // D39: setting an event input to "nothing pending", and the setup batches of a connection's
+  // consumers.  What each consumer received is read back through dst1's ack and dst2's fwd.
+  suite clearing {
+    // dst2 is cleared and dst1 is not: only dst1 receives what src sent.  dst2's checks, whose
+    // cursor moved with dst2's, see nothing arrive either, so its `quiet` holds.
+    fn clearing_one_consumer_leaves_the_other() {
+      before_dst1(5);
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: None });
+      let _ = api::hstep(1);
+      sys_assert_eq!(inspect::get_d1p_dst_ack(), Some(5));
+      sys_assert_eq!(inspect::get_d2p_dst_fwd(), None);
+    }
+
+    // every consumer of val cleared: neither receives what src sent, yet the frame still
+    // carries it -- `Sent` and `Arrived` read src's output, which a clear does not change (D27).
+    // dst1's latest is set to what src sent, so `Echoed` holds without dst1 latching it.
+    fn clearing_every_consumer_leaves_what_was_sent() {
+      before_dst1(5);
+      inspect::set_d1p_dst(dst1(None, 5));
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: None });
+      let _ = api::hstep(1);
+      sys_assert_eq!(inspect::get_d1p_dst_ack(), None);
+      sys_assert_eq!(inspect::get_d2p_dst_fwd(), None);
+    }
+
+    // None for dst1 and Some(7) for dst2, in either order: dst1 receives nothing, dst2 receives
+    // 7.  src sends nothing (99), so the setup's injection is an event on val that src did not
+    // send, which `Sent` rules out -- declared.
+    fn mixed_setup_none_first() {
+      observe::expect(sent());
+      before_dst1(99);
+      inspect::set_d1p_dst(dst1(None, 0));
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: Some(7) });
+      let _ = api::hstep(1);
+      sys_assert_eq!(inspect::get_d1p_dst_ack(), None);
+      sys_assert_eq!(inspect::get_d2p_dst_fwd(), Some(7));
+    }
+
+    fn mixed_setup_some_first() {
+      observe::expect(sent());
+      before_dst1(99);
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: Some(7) });
+      inspect::set_d1p_dst(dst1(None, 0));
+      let _ = api::hstep(1);
+      sys_assert_eq!(inspect::get_d1p_dst_ack(), None);
+      sys_assert_eq!(inspect::get_d2p_dst_fwd(), Some(7));
+    }
+
+    // an explicit put_ ends the batch: dst2's Some(1) after it starts a new batch and injects
+    // again, so dst2 receives 1 -- not the 2 the put_ sent
+    fn put_ends_the_setup_batch() {
+      observe::expect(sent());
+      before_dst1(99);
+      inspect::set_d1p_dst(dst1(Some(1), 0));
+      inspect::put_srcp_src_val(2);
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: Some(1) });
+      let _ = api::hstep(1);
+      sys_assert_eq!(inspect::get_d2p_dst_fwd(), Some(1));
+    }
+
+    // FAILS: the consumers of one connection cannot have different events pending
+    fn conflicting_setup_fails() {
+      observe::expect(sent());
+      before_dst1(99);
+      inspect::set_d1p_dst(dst1(Some(1), 0));
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: Some(2) });
+      let _ = api::hstep(1);
+    }
+
+    // a command between two setters ends the batch, even one that dispatches nothing: the
+    // second Some starts a new batch rather than conflicting with the first
+    fn a_command_ends_the_setup_batch() {
+      observe::expect(sent());
+      before_dst1(99);
+      inspect::set_d1p_dst(dst1(Some(1), 0));
+      let _ = api::info_state();
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: Some(2) });
+      let _ = api::hstep(1);
+      sys_assert_eq!(inspect::get_d2p_dst_fwd(), Some(2));
+    }
+
+    // a command injected into dst1's unconnected cmd, then cleared: dst1 receives nothing and
+    // notes nothing, and the assertions that read cmd as received -- CmdFirst and CmdSecond --
+    // see nothing either, because the system cursor moved with dst1's
+    fn clearing_an_unconnected_input() {
+      before_dst1(5);
+      inspect::put_d1p_dst_cmd(42);
+      inspect::clear_d1p_dst_cmd();
+      let _ = api::hstep(1);
+      sys_assert_eq!(inspect::get_d1p_dst_sv_gotCmd(), Some(false));
+    }
+
+    // dst2's dispatch is rejected (42 breaks notFortyTwo), which leaves the 42 pending for it.
+    // Cleared, it is gone: in the next frame, where src sends nothing, dst2 receives nothing and
+    // is not rejected again.  (Not for GUMBO_CHECKS=off, where nothing is rejected.)
+    fn clearing_after_a_rejected_dispatch() {
+      frame(42);
+      inspect::set_d2p_dst(inspect::d2p_dst_PreState { val: None });
+      frame(99);
+      let t = observe::take();
+      sys_assert_eq!(count(&t, Kind::CepPre), 1);
     }
   }
 
