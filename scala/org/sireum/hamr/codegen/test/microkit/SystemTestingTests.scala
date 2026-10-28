@@ -622,8 +622,13 @@ class SystemTestingTests extends TestSuite with TestScratch {
     * (RUN_TESTS_TARGET_CMD), so its stop condition and verdict run without an SDK or QEMU.
     * `later`, if given, is printed three seconds after `console` -- long enough for the driver
     * to have stopped the run if it was going to stop it early.  Returns whether the run passed,
-    * and everything it printed. */
+    * and everything it printed.  Cancelled on Windows: there is no Microkit SDK for it, so
+    * run-tests.cmd never runs there, and its POSIX shell driver does not survive Windows'
+    * command-line quoting. */
   def verdict(args: ISZ[String], console: Predef.String, later: Predef.String = ""): (scala.Boolean, Predef.String) = {
+    if (Os.isWin) {
+      cancel("run-tests.cmd needs a Microkit SDK, which is not available on Windows")
+    }
     val dir = Os.tempDirFix("hamr-st-console")
     val first = dir / "first.txt"
     val second = dir / "second.txt"
