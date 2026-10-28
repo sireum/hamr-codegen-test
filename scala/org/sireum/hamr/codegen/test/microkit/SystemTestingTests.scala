@@ -32,12 +32,12 @@ import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 import org.sireum.hamr.codegen.microkit.plugins.testing.TestSchedulerPlugin
 
-class SystemTestingTests extends TestSuite {
+class SystemTestingTests extends TestSuite with TestScratch {
 
   val modelDir: Os.Path = MicrokitTestUtil.resourcesDir / "models" / "SystemTesting"
   val sysmlDir: Os.Path = modelDir / "sysml"
   val fixtures: Os.Path = modelDir / "qemu"
-  val scratch: Os.Path = Os.tempDir() / "hamr-system-testing-test"
+  val scratch: Os.Path = scratchBase / "hamr-system-testing-test"
 
   def loadModel(): Aadl =
     TestUtil.getModel(Some(sysmlDir / ".slang" / "top_impl_Instance.json"), None(), sysmlDir, ISZ(), "st", F)

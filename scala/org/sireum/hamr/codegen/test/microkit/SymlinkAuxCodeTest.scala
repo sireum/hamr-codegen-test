@@ -17,9 +17,9 @@ import org.sireum.hamr.ir.Aadl
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 
-class SymlinkAuxCodeTest extends TestSuite {
+class SymlinkAuxCodeTest extends TestSuite with TestScratch {
 
-  val scratchRoot: Os.Path = Os.tempDir() / "hamr-symlink-aux-code-test"
+  val scratchRoot: Os.Path = scratchBase / "hamr-symlink-aux-code-test"
 
   def runCodegen(auxRoot: Os.Path, resultsDir: Os.Path): Reporter = {
     val tr = MicrokitTestUtil.testResources

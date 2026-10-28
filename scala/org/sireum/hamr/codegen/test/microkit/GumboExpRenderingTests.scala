@@ -34,11 +34,11 @@ import org.sireum.hamr.ir.Aadl
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 
-class GumboExpRenderingTests extends TestSuite {
+class GumboExpRenderingTests extends TestSuite with TestScratch {
 
   val modelDir: Os.Path = MicrokitTestUtil.resourcesDir / "models" / "GumboExpRendering"
   val sysmlDir: Os.Path = modelDir / "sysml"
-  val scratch: Os.Path = Os.tempDir() / "hamr-gumbo-exp-rendering-test"
+  val scratch: Os.Path = scratchBase / "hamr-gumbo-exp-rendering-test"
 
   def loadModel(): Aadl =
     TestUtil.getModel(Some(sysmlDir / ".slang" / "Top_impl_Instance.json"), None(), sysmlDir, ISZ(), "ger", F)

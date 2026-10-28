@@ -29,12 +29,12 @@ import org.sireum.hamr.ir.Aadl
 import org.sireum.message.Reporter
 import org.sireum.test.TestSuite
 
-class SharedMemorySafetyTests extends TestSuite {
+class SharedMemorySafetyTests extends TestSuite with TestScratch {
 
   val modelDir: Os.Path = MicrokitTestUtil.resourcesDir / "models" / "SharedMemorySafety"
   val sysmlDir: Os.Path = modelDir / "sysml"
   val harness: Os.Path = modelDir / "harness" / "harness.c"
-  val scratch: Os.Path = Os.tempDir() / "hamr-shared-memory-safety-test"
+  val scratch: Os.Path = scratchBase / "hamr-shared-memory-safety-test"
 
   val dataSize: String = "Memory_Properties::Data_Size"
 
