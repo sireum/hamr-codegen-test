@@ -238,6 +238,7 @@ object Ros2Tests {
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
     sel4AuxCodeSymlink = F,
+    systemTesting = F,
     workspaceRootDir = None(),
     // ros2 options
     strictAadlMode = F,

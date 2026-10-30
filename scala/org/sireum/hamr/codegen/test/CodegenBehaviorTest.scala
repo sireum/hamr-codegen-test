@@ -296,6 +296,7 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
     sel4AuxCodeSymlink = F,
+    systemTesting = F,
     workspaceRootDir = None(),
     //
     strictAadlMode = F,
@@ -410,6 +411,7 @@ object CodegenBehaviorTest {
           sel4OutputDir = canon(opts.sel4OutputDir),
           sel4AuxCodeDirs = opts.sel4AuxCodeDirs.map(s => canon(Some(s)).get),
           sel4AuxCodeSymlink = F,
+          systemTesting = opts.systemTesting,
           workspaceRootDir = aadlRoot,
           //
           strictAadlMode = opts.strictAadlMode,

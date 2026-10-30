@@ -108,8 +108,7 @@ class MicrokitBehaviorTests extends CodegenBehaviorTest {
     if (testName._value.contains("sysml_iso")) {
       // Adds the test_scheduler variant (TestScheduler-design.md) so the system tests in
       // crates/test_controller/src/system_tests/tests.rs run against isolette's real behavior code
-      testOptions = testOptions(
-        experimentalOptions = testOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER)
+      testOptions = testOptions(systemTesting = T)
     }
 
     var mdir: Os.Path =
@@ -223,6 +222,7 @@ object MicrokitBehaviorTests {
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
     sel4AuxCodeSymlink = F,
+    systemTesting = F,
     workspaceRootDir = None(),
     //
     strictAadlMode = F,

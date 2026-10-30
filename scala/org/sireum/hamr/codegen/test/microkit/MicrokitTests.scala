@@ -136,8 +136,7 @@ class MicrokitTests extends CodegenTest {
         airFile = if (air.size == 1) Some(air(0)) else None(),
         ops = testOptions(
           scheduling = HamrCli.CodegenScheduling.UserLand,
-          experimentalOptions =
-            testOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER),
+          systemTesting = T),
         description = None(),
         modelUri = None(),
         expectedErrorReasons = ISZ())
@@ -152,8 +151,7 @@ class MicrokitTests extends CodegenTest {
         modelDir = sysmlDir,
         airFile = if (air.size == 1) Some(air(0)) else None(),
         ops = testOptions(
-          experimentalOptions =
-            testOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER),
+          systemTesting = T),
         description = None(),
         modelUri = None(),
         expectedErrorReasons = ISZ())
@@ -167,8 +165,7 @@ class MicrokitTests extends CodegenTest {
         airFile = if (air.size == 1) Some(air(0)) else None(),
         ops = testOptions(
           runtimeMonitoring = F,
-          experimentalOptions =
-            testOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER),
+          systemTesting = T),
         description = None(),
         modelUri = None(),
         expectedErrorReasons = ISZ())
@@ -208,6 +205,7 @@ object MicrokitTests {
     sel4OutputDir = None(),
     sel4AuxCodeDirs = ISZ(),
     sel4AuxCodeSymlink = F,
+    systemTesting = F,
     workspaceRootDir = None(),
     //
     strictAadlMode = F,

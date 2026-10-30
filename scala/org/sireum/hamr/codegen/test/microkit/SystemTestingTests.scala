@@ -23,7 +23,7 @@ import org.sireum.hamr.codegen.CodeGen
 import org.sireum.hamr.codegen.arsit.plugin.ArsitPlugin
 import org.sireum.hamr.codegen.common.CommonUtil.Store
 import org.sireum.hamr.codegen.common.reporting.CodegenReporting
-import org.sireum.hamr.codegen.common.util.{ExperimentalOptions, HamrCli}
+import org.sireum.hamr.codegen.common.util.HamrCli
 import org.sireum.hamr.codegen.microkit.plugins.MicrokitPlugins
 import org.sireum.hamr.codegen.test.util.TestUtil
 import org.sireum.hamr.ir
@@ -61,9 +61,7 @@ class SystemTestingTests extends TestSuite with TestScratch {
       runtimeMonitoring = runtimeMonitoring,
       scheduling = HamrCli.CodegenScheduling.UserLand,
       verusAttributeSyntax = T,
-      experimentalOptions =
-        if (testScheduler) MicrokitTests.baseOptions.experimentalOptions :+ ExperimentalOptions.ENABLE_TEST_SCHEDULER
-        else MicrokitTests.baseOptions.experimentalOptions)
+      systemTesting = testScheduler)
     val reporter = Reporter.create
     val store: Store = CodegenReporting.addCodegenReport(CodegenReporting.KEY_TOOL_REPORT,
       CodegenReporting.emptyToolReport, Map.empty)
