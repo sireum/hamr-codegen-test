@@ -625,7 +625,8 @@ class SystemTestingTests extends TestSuite with TestScratch {
     * and everything it printed.  Cancelled on Windows: there is no Microkit SDK for it, so
     * run-tests.cmd never runs there, and its POSIX shell driver does not survive Windows'
     * command-line quoting. */
-  def verdict(args: ISZ[String], console: Predef.String, later: Predef.String = ""): (scala.Boolean, Predef.String) = {
+  def verdict(args: ISZ[String], console: Predef.String, later: Predef.String = "",
+              env: ISZ[(String, String)] = ISZ()): (scala.Boolean, Predef.String) = {
     if (Os.isWin) {
       cancel("run-tests.cmd needs a Microkit SDK, which is not available on Windows")
     }
@@ -636,7 +637,7 @@ class SystemTestingTests extends TestSuite with TestScratch {
     second.writeOver(later)
     val target = s"cat '${first.value}'; sleep 3; cat '${second.value}'; sleep 600"
     val r = Os.proc(ISZ[String](sireum.value, "slang", "run", (generated / "bin" / "run-tests.cmd").value) ++ args)
-      .env(ISZ[(String, String)]((String("RUN_TESTS_TARGET_CMD"), String(target)))).run()
+      .env(ISZ[(String, String)]((String("RUN_TESTS_TARGET_CMD"), String(target))) ++ env).run()
     dir.removeAll()
     (r.ok, r.out.value + r.err.value)
   }
@@ -650,6 +651,16 @@ class SystemTestingTests extends TestSuite with TestScratch {
         "TEST | DONE  matched=2 passed=2 failed=0 init=ok\n")
     assert(ok, s"the run was stopped at the INFO line, before the real DONE:\n$out")
     assert(out.contains("OK: 2 of 2 tests passed"), out)
+  }
+
+  "a run that reaches the QEMU bound says so, and QEMU_TIMEOUT sets the bound" in {
+    val (ok, out) = verdict(ISZ[String](), console = table + "TEST | BEGIN nominal::a\n",
+      env = ISZ[(String, String)]((String("QEMU_TIMEOUT"), String("5"))))
+    assert(!ok, s"a run with no DONE passed:\n$out")
+    assert(out.contains("the QEMU bound of 5 s was reached"), s"the verdict does not name the bound:\n$out")
+    val (badOk, badOut) = verdict(ISZ[String](), console = table,
+      env = ISZ[(String, String)]((String("QEMU_TIMEOUT"), String("soon"))))
+    assert(!badOk && badOut.contains("QEMU_TIMEOUT must be a positive number"), s"a malformed QEMU_TIMEOUT was accepted:\n$badOut")
   }
 
   "a listing verdict fails a run that asked for tests" in {
