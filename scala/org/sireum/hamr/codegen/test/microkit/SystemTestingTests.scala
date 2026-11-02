@@ -661,6 +661,21 @@ class SystemTestingTests extends TestSuite with TestScratch {
     assert(!badOk && badOut.contains("QEMU_TIMEOUT must be a positive number"), s"a malformed QEMU_TIMEOUT was accepted:\n$badOut")
   }
 
+  "the serial log is kept, with the components' own output, and SERIAL_LOG moves it" in {
+    val console = table + "consumer: consumed value=42\nTEST | DONE  matched=0 passed=0 failed=0 init=ok list=1\n"
+    val (_, out) = verdict(ISZ[String]("--list"), console)
+    val kept = generated / "build" / "system-tests" / "serial.log"
+    assert(kept.exists && ops.StringOps(kept.read).contains("consumer: consumed value=42"),
+      s"the serial log was not kept at $kept:\n$out")
+    assert(out.contains(s"Serial log: $kept"), s"the driver does not print where the log is:\n$out")
+    val elsewhere = Os.tempDirFix("hamr-st-serial") / "serial.log"
+    val (_, out2) = verdict(ISZ[String]("--list"), console,
+      env = ISZ[(String, String)]((String("SERIAL_LOG"), elsewhere.string)))
+    assert(elsewhere.exists && ops.StringOps(elsewhere.read).contains("consumer: consumed value=42"),
+      s"SERIAL_LOG did not move the log:\n$out2")
+    elsewhere.up.removeAll()
+  }
+
   "a listing verdict fails a run that asked for tests" in {
     val (ok, out) = verdict(ISZ[String](), table + "TEST | DONE  matched=2 passed=0 failed=0 init=ok list=1\n")
     assert(!ok, s"a list=1 verdict passed a run that asked for tests:\n$out")
