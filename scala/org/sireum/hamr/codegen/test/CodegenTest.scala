@@ -48,6 +48,9 @@ trait CodegenTest extends CodegenTestSuite {
     "uav_alt_extern--SeL4", // ignoring as has sel4 dataport with 512 elems so bigger than 4096
   )
 
+  val t: B = T
+  val f: B = F
+
   def smt2Timeout: Z = Os.env("SMT2_TIMEOUT") match {
     case Some(t) => Z(t).get
     case _ => 2 * 60000
