@@ -172,7 +172,8 @@ class CoverageReportTests extends TestSuite with TestScratch {
     // no-run carries the last run's failure forward
     (cov / "report").removeAll()
     val noRun = coverageReport(ISZ(c), ISZ("no-run"))
-    assert(status(cov) == String("tests-failed"), s"no-run did not carry the run's failure forward (status ${status(cov)}):\n${noRun.out}")
+    assert(status(cov) == String("tests-failed"), s"no-run did not carry the run's failure forward (status ${status(cov)}):\n${noRun.out}\n" +
+      s"${cov.string} has: ${st"${(for (f <- cov.list) yield f.name, ", ")}".render}\nThe run before it:\n${run.out}")
     assert(!ops.StringOps(noRun.out).contains("test result:"), "no-run ran the tests")
     assert((cov / "report" / "data.js").exists, "no-run did not rebuild the report")
 
