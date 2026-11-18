@@ -22,7 +22,7 @@ use crate::system_tests::api;
 use crate::system_tests::inspect;
 use crate::system_tests::observe;
 use crate::system_tests::observe::{Expect, Kind, Thread};
-use crate::{system_tests, sys_assert, sys_assert_eq};
+use crate::{system_tests, sys_assert, sys_assert_eq, sys_check_eq};
 
 /// One frame of src, dst1 and dst2, with src reading `mode`.
 fn frame(mode: i32) {
@@ -37,6 +37,12 @@ fn count(t: &observe::Taken, kind: Kind) -> usize {
 
 fn echoed() -> Expect {
   Expect::SysAssert(observe::sys::nominal::COMPOSITION, observe::sys::nominal::Echoed)
+}
+
+/// Whether src last remembered `mode`: a helper that returns a value, so it checks with
+/// `sys_check_eq!` (`sys_assert_eq!` returns from the function, which must return `()`).
+fn last_is(mode: i32) -> bool {
+  sys_check_eq!(inspect::get_srcp_src_sv_last(), Some(mode))
 }
 
 fn sent() -> Expect {
@@ -84,6 +90,32 @@ system_tests! {
     fn expected_but_absent() {
       observe::expect(Expect::CepPost(Thread::srcp_src));
       frame(5);
+    }
+
+    // Two identical expectations need two occurrences: each 13 frame breaks src's echo once
+    fn expected_twice_occurs_twice() {
+      observe::expect(Expect::CepPost(Thread::srcp_src));
+      observe::expect(Expect::CepPost(Thread::srcp_src));
+      observe::expect(echoed());
+      frame(13);
+      frame(13);
+    }
+
+    // FAILS: expected twice, but it occurs once
+    fn expected_twice_occurs_once() {
+      observe::expect(Expect::CepPost(Thread::srcp_src));
+      observe::expect(Expect::CepPost(Thread::srcp_src));
+      observe::expect(echoed());
+      frame(13);
+    }
+
+    // FAILS: sys_check_eq! in a value-returning helper records the failure and returns
+    // false rather than returning from the test, which goes on to its next assertion
+    fn sys_check_records_without_returning() {
+      frame(5);
+      sys_assert!(last_is(5));
+      let wrong = last_is(4);
+      sys_assert!(!wrong);
     }
 
     fn taken_violations_pass() {

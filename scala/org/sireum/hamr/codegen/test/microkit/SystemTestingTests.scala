@@ -814,7 +814,7 @@ class SystemTestingTests extends TestSuite with TestScratch {
 
     // ---- default build: both layers live and on
     val d = runSystemTests(microkit, ISZ(), ISZ())
-    assert(d.has("DONE  matched=43 passed=32 failed=11 init=ok"), "unexpected totals")
+    assert(d.has("DONE  matched=46 passed=33 failed=13 init=ok"), "unexpected totals")
     passes(d, "checks::nominal_frame")
     // one FAIL for two violations: src's guarantee and the composition's assertion
     failsWith(d, "checks::thread_and_system_violation",
@@ -822,6 +822,14 @@ class SystemTestingTests extends TestSuite with TestScratch {
     passes(d, "checks::expected_violations_pass",
       "expected violation: CEP_Post srcp_src", "expected violation: SysAssert nominal/Echoed")
     failsWith(d, "checks::expected_but_absent", "expected violation did not occur: CepPost(srcp_src)")
+    // identical expectations are each met by an occurrence of their own
+    passes(d, "checks::expected_twice_occurs_twice", "expected violation: CEP_Post srcp_src")
+    assert(d("checks::expected_twice_occurs_twice").count("expected violation: CEP_Post srcp_src") == 2,
+      "two identical expectations: expected two occurrences")
+    failsWith(d, "checks::expected_twice_occurs_once", "expected violation did not occur: CepPost(srcp_src)")
+    // sys_check_eq! records the failure and returns false; the test runs on
+    failsWith(d, "checks::sys_check_records_without_returning",
+      "inspect::get_srcp_src_sv_last() == Some(mode)")
     passes(d, "checks::taken_violations_pass")
     // a negative test leaves nothing behind
     passes(d, "checks::nominal_after_negative")
@@ -970,8 +978,8 @@ class SystemTestingTests extends TestSuite with TestScratch {
 
     // ---- a listing: the table, and nothing run
     val l = runSystemTests(microkit, ISZ("--list", "checks::"), ISZ())
-    assert(l.has("DONE  matched=18 passed=0 failed=0 init=ok list=1"), "unexpected listing totals")
-    assert(l.lines.count(_.startsWith("TEST | LIST  ")) == 43, "the table does not list every test")
+    assert(l.has("DONE  matched=21 passed=0 failed=0 init=ok list=1"), "unexpected listing totals")
+    assert(l.lines.count(_.startsWith("TEST | LIST  ")) == 46, "the table does not list every test")
     assert(l.lines.count(x => x.startsWith("TEST | LIST  ") && x.endsWith("(not selected)")) == 25,
       "the table does not mark the unselected tests")
     assert(!l.has("TEST | BEGIN"), "a listing ran a test")
