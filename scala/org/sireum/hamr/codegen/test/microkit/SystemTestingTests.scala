@@ -135,6 +135,32 @@ class SystemTestingTests extends TestSuite with TestScratch {
     assert(inspect.contains("pub fn clear_d1p_dst_cmd() {"), "no clear_ for an unconnected event input")
   }
 
+  "a setup field on a broadcast connection names the connection's other consumers" in {
+    val inspect = read("crates/test_controller/src/system_tests/inspect.rs")
+    for ((self, other) <- Seq(("d1p_dst", "d2p_dst"), ("d2p_dst", "d1p_dst"))) {
+      val note = s"/// One connection with `$other.val`: `Some(v)` is pending for"
+      assert(inspect.contains(s"pub struct ${self}_PreState {\n  $note"), s"${self}_PreState.val does not name $other")
+    }
+    // an unconnected input and a single-consumer one say nothing
+    assert(!inspect.contains("One connection with `d1p_dst.cmd`"))
+    assert(!inspect.contains("One connection with `srcp_src.ack`"))
+  }
+
+  "a data setup field on a fan-out says it sets the producer's output for every consumer" in {
+    import org.sireum.hamr.codegen.microkit.plugins.testing.{PreStateField, StaticContent, ThreadPreState}
+    def field(name: String): PreStateField = PreStateField(fieldName = name, rustTypeName = "SystemMode",
+      setter = "put_mm_out", accessor = "mm_out", isEvent = F)
+    val out = StaticContent.systemTests_inspect_rs(regions = ISZ(), injectables = ISZ(), channels = ISZ(),
+      preStates = ISZ(ThreadPreState("rx", ISZ(field("currentMode"))), ThreadPreState("tx", ISZ(field("mode"))),
+        ThreadPreState("solo", ISZ(field("mode")(accessor = "other_out")))), hasObserve = F).render
+    val s = ops.StringOps(out)
+    assert(s.contains("pub struct rx_PreState {\n  /// One connection with `tx.mode`: this sets the producer's\n" +
+      "  /// output, so they read the value too; there is no value for this consumer alone (D39).\n" +
+      "  pub currentMode: SystemMode,"), out.value)
+    assert(s.contains("/// One connection with `rx.currentMode`: this sets the producer's"))
+    assert(s.contains("pub struct solo_PreState {\n  pub mode: SystemMode,"))
+  }
+
   "a consumer applies a clear request before anything in its dispatch reads a port" in {
     for (t <- Seq("d1p_dst", "d2p_dst")) {
       val bridge = read(s"components/$t/src/$t.c")
