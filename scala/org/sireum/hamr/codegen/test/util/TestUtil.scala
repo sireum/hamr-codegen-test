@@ -505,7 +505,9 @@ object TestUtil {
         scheck(out(7) == string"unsat", s"ConnectionPreservation is ${out(7)}")
         scheck(out(9) == string"unsat", s"NoNewConnections is ${out(9)}")
 
-        keepGoing = accum
+        // conjoin rather than assign: the proof runs regardless of keepGoing, so a passing
+        // proof must not mask an earlier failure (e.g., tipe/compile/sbt)
+        keepGoing = keepGoing & accum
       }
     }
 
