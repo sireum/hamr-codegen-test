@@ -153,7 +153,8 @@ class SystemTestingTests extends TestSuite with TestScratch {
     val out = StaticContent.systemTests_inspect_rs(regions = ISZ(), injectables = ISZ(), channels = ISZ(),
       preStates = ISZ(ThreadPreState("rx", ISZ(field("currentMode"))), ThreadPreState("tx", ISZ(field("mode"))),
         ThreadPreState("solo", ISZ(field("mode")(accessor = "other_out")))), hasObserve = F).render
-    val s = ops.StringOps(out)
+    // ST.render ends lines with System.lineSeparator, so normalize CRLF for Windows
+    val s = ops.StringOps(ops.StringOps(out).replaceAllLiterally("\r\n", "\n"))
     assert(s.contains("pub struct rx_PreState {\n  /// One connection with `tx.mode`: this sets the producer's\n" +
       "  /// output, so they read the value too; there is no value for this consumer alone (D39).\n" +
       "  pub currentMode: SystemMode,"), out.value)
