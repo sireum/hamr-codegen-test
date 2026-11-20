@@ -274,6 +274,8 @@ trait CodegenBehaviorTest extends CodegenTestSuite {
     runtimeMonitoring = F,
     platform = HamrCli.CodegenHamrPlatform.JVM,
     outputDir = None(),
+    airOutput = None(),
+    airOutputFormat = HamrCli.CodegenAirOutputFormat.Json,
     parseableMessages = F,
     //
     slangOutputDir = None(),
@@ -389,6 +391,8 @@ object CodegenBehaviorTest {
           runtimeMonitoring = opts.runtimeMonitoring,
           platform = HamrCli.CodegenHamrPlatform.byName(opts.platform.name).get,
           outputDir = None(),
+          airOutput = None(),
+          airOutputFormat = HamrCli.CodegenAirOutputFormat.Json,
           parseableMessages = F,
 
           slangOutputDir = canon(opts.slangOutputDir),

@@ -216,6 +216,8 @@ object Ros2Tests {
     runtimeMonitoring = F,
     platform = HamrCli.CodegenHamrPlatform.Ros2,
     outputDir = None(),
+    airOutput = None(),
+    airOutputFormat = HamrCli.CodegenAirOutputFormat.Json,
     parseableMessages = F,
     //
     slangOutputDir = None(),

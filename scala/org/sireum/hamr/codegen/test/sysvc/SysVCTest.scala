@@ -46,6 +46,8 @@ class SysVCTest extends TestSuite {
     runtimeMonitoring = T,
     platform = HamrCli.CodegenHamrPlatform.Microkit,
     outputDir = None(),
+    airOutput = None(),
+    airOutputFormat = HamrCli.CodegenAirOutputFormat.Json,
     parseableMessages = F,
     slangOutputDir = None(),
     packageName = Some("isolette"),

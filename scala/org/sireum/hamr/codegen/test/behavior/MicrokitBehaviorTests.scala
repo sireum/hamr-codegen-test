@@ -200,6 +200,8 @@ object MicrokitBehaviorTests {
     runtimeMonitoring = F,
     platform = HamrCli.CodegenHamrPlatform.Microkit,
     outputDir = None(),
+    airOutput = None(),
+    airOutputFormat = HamrCli.CodegenAirOutputFormat.Json,
     parseableMessages = F,
     //
     slangOutputDir = None(),
